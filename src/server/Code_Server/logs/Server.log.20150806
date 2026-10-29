@@ -1,0 +1,554 @@
+INFO  2015-08-06 09:33:22,503 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:22,503 [OnlineUserNum.java,15] - online count: 1438824802, 0
+INFO  2015-08-06 09:33:24,756 [ObjectAccessor.java,76] - player logout delOnlineUser method|#close current login session sussess playerId:5
+INFO  2015-08-06 09:33:24,767 [SkillBookServices.java,145] - start************clearSkillBookByPlayer#playerId:5,startTime:1438824804767*********start
+INFO  2015-08-06 09:33:24,771 [SkillBookServices.java,133] - removePlayerIdFromMap#skillBookId:5903,playerId:5containsStatus:false
+INFO  2015-08-06 09:33:24,771 [SkillBookServices.java,133] - removePlayerIdFromMap#skillBookId:6302,playerId:5containsStatus:false
+INFO  2015-08-06 09:33:24,772 [SkillBookServices.java,174] - end************clearSkillBookByPlayer#playerId:5,endTime:1438824804772,cost:5*********end
+INFO  2015-08-06 09:33:24,772 [ObjectAccessor.java,76] - player logout delOnlineUser method|#close current login session sussess playerId:9
+INFO  2015-08-06 09:33:24,772 [SkillBookServices.java,145] - start************clearSkillBookByPlayer#playerId:9,startTime:1438824804772*********start
+INFO  2015-08-06 09:33:24,772 [SkillBookServices.java,174] - end************clearSkillBookByPlayer#playerId:9,endTime:1438824804772,cost:0*********end
+INFO  2015-08-06 09:33:24,774 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,774 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,781 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,781 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,794 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,794 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,802 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,802 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,809 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,809 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,816 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,816 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,823 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,823 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,830 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,830 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,833 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:2330,total update db count:0
+INFO  2015-08-06 09:33:24,833 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:24,838 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,838 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,844 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,844 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,851 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,852 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,858 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,858 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,867 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,867 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,877 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,877 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,897 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,897 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,921 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,921 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,936 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,936 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,948 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,948 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,959 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,960 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,970 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,970 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,979 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:24,980 [OnlineUserNum.java,15] - online count: 1438824804, 0
+INFO  2015-08-06 09:33:25,003 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,003 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,014 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,014 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,026 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,026 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,038 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,038 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,049 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,050 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,060 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,060 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,072 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,072 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,082 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,082 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,093 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,093 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,103 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,103 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,111 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,111 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,119 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,120 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,128 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,128 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,136 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,136 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,143 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,143 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,149 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,149 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,156 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,156 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,162 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,162 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,169 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,169 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,175 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,176 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,182 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,182 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,190 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,190 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,198 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,198 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,204 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,205 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,211 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,211 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,219 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,219 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,231 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,232 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,244 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,244 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,255 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,256 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,267 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,268 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,280 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,280 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,292 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,292 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,303 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,303 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,315 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,316 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,328 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,328 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,340 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,340 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,351 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,351 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,363 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,363 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,376 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,376 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,387 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,387 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,398 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,399 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,411 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,411 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,423 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,423 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,435 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,435 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,446 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,447 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,459 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,459 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,468 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,468 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,479 [OnlineUserNum.java,15] - online count: 1438824805, 0
+INFO  2015-08-06 09:33:25,531 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:698,total update db count:0
+INFO  2015-08-06 09:33:25,531 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:25,644 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:113,total update db count:0
+INFO  2015-08-06 09:33:25,644 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:25,725 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:81,total update db count:0
+INFO  2015-08-06 09:33:25,725 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:25,790 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:65,total update db count:0
+INFO  2015-08-06 09:33:25,790 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:25,864 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:73,total update db count:0
+INFO  2015-08-06 09:33:25,864 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:25,926 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:62,total update db count:0
+INFO  2015-08-06 09:33:25,926 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:25,990 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:64,total update db count:0
+INFO  2015-08-06 09:33:25,990 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,051 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:61,total update db count:0
+INFO  2015-08-06 09:33:26,051 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,109 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:57,total update db count:0
+INFO  2015-08-06 09:33:26,109 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,159 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:50,total update db count:0
+INFO  2015-08-06 09:33:26,160 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,209 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:49,total update db count:0
+INFO  2015-08-06 09:33:26,209 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,234 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:25,total update db count:0
+INFO  2015-08-06 09:33:26,234 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,263 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:29,total update db count:0
+INFO  2015-08-06 09:33:26,264 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,296 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:32,total update db count:0
+INFO  2015-08-06 09:33:26,296 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,323 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:27,total update db count:0
+INFO  2015-08-06 09:33:26,324 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,353 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:28,total update db count:0
+INFO  2015-08-06 09:33:26,353 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,377 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:24,total update db count:0
+INFO  2015-08-06 09:33:26,378 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,403 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:25,total update db count:0
+INFO  2015-08-06 09:33:26,403 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,428 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:25,total update db count:0
+INFO  2015-08-06 09:33:26,429 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,452 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:23,total update db count:0
+INFO  2015-08-06 09:33:26,452 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,478 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:26,total update db count:0
+INFO  2015-08-06 09:33:26,478 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,503 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:25,total update db count:0
+INFO  2015-08-06 09:33:26,503 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,530 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:27,total update db count:0
+INFO  2015-08-06 09:33:26,531 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,558 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:27,total update db count:0
+INFO  2015-08-06 09:33:26,559 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,582 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:23,total update db count:0
+INFO  2015-08-06 09:33:26,582 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,605 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:23,total update db count:0
+INFO  2015-08-06 09:33:26,605 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,629 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:24,total update db count:0
+INFO  2015-08-06 09:33:26,629 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,658 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:29,total update db count:0
+INFO  2015-08-06 09:33:26,658 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,690 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:32,total update db count:0
+INFO  2015-08-06 09:33:26,690 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,721 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:31,total update db count:0
+INFO  2015-08-06 09:33:26,721 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,751 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:30,total update db count:0
+INFO  2015-08-06 09:33:26,752 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,780 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:28,total update db count:0
+INFO  2015-08-06 09:33:26,780 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,809 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:29,total update db count:0
+INFO  2015-08-06 09:33:26,809 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,839 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:30,total update db count:0
+INFO  2015-08-06 09:33:26,839 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,869 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:30,total update db count:0
+INFO  2015-08-06 09:33:26,870 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,900 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:30,total update db count:0
+INFO  2015-08-06 09:33:26,900 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,927 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:27,total update db count:0
+INFO  2015-08-06 09:33:26,927 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,957 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:30,total update db count:0
+INFO  2015-08-06 09:33:26,957 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:26,984 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:27,total update db count:0
+INFO  2015-08-06 09:33:26,984 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,008 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:24,total update db count:0
+INFO  2015-08-06 09:33:27,008 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,031 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:23,total update db count:0
+INFO  2015-08-06 09:33:27,031 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,058 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:27,total update db count:0
+INFO  2015-08-06 09:33:27,058 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,084 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:26,total update db count:0
+INFO  2015-08-06 09:33:27,084 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,127 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:43,total update db count:0
+INFO  2015-08-06 09:33:27,127 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,157 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:30,total update db count:0
+INFO  2015-08-06 09:33:27,157 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,179 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:22,total update db count:0
+INFO  2015-08-06 09:33:27,179 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,200 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:21,total update db count:0
+INFO  2015-08-06 09:33:27,200 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,220 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:20,total update db count:0
+INFO  2015-08-06 09:33:27,221 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,241 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:20,total update db count:0
+INFO  2015-08-06 09:33:27,242 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,264 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:22,total update db count:0
+INFO  2015-08-06 09:33:27,264 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,286 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:22,total update db count:0
+INFO  2015-08-06 09:33:27,287 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,307 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:20,total update db count:0
+INFO  2015-08-06 09:33:27,308 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,331 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:23,total update db count:0
+INFO  2015-08-06 09:33:27,331 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,354 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:23,total update db count:0
+INFO  2015-08-06 09:33:27,354 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,377 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:23,total update db count:0
+INFO  2015-08-06 09:33:27,377 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,400 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:23,total update db count:0
+INFO  2015-08-06 09:33:27,400 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,423 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:23,total update db count:0
+INFO  2015-08-06 09:33:27,423 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,447 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:24,total update db count:0
+INFO  2015-08-06 09:33:27,447 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,472 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:24,total update db count:0
+INFO  2015-08-06 09:33:27,472 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,496 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:24,total update db count:0
+INFO  2015-08-06 09:33:27,496 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,522 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:26,total update db count:0
+INFO  2015-08-06 09:33:27,522 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,552 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:30,total update db count:0
+INFO  2015-08-06 09:33:27,552 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,579 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:27,total update db count:0
+INFO  2015-08-06 09:33:27,579 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,603 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:24,total update db count:0
+INFO  2015-08-06 09:33:27,603 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,626 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:23,total update db count:0
+INFO  2015-08-06 09:33:27,626 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,650 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:24,total update db count:0
+INFO  2015-08-06 09:33:27,650 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,672 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:22,total update db count:0
+INFO  2015-08-06 09:33:27,673 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:33:27,701 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:28,total update db count:0
+INFO  2015-08-06 09:36:42,606 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:36:42,688 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:82,total update db count:0
+INFO  2015-08-06 09:37:42,480 [OnlineUserNum.java,15] - online count: 1438825062, 0
+INFO  2015-08-06 09:42:42,495 [OnlineUserNum.java,15] - online count: 1438825362, 0
+INFO  2015-08-06 09:46:42,493 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:46:42,557 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:64,total update db count:0
+INFO  2015-08-06 09:47:42,464 [OnlineUserNum.java,15] - online count: 1438825662, 0
+INFO  2015-08-06 09:52:42,484 [OnlineUserNum.java,15] - online count: 1438825962, 0
+INFO  2015-08-06 09:56:42,414 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 09:56:42,466 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:52,total update db count:0
+INFO  2015-08-06 09:57:42,420 [OnlineUserNum.java,15] - online count: 1438826262, 0
+INFO  2015-08-06 10:02:42,435 [OnlineUserNum.java,15] - online count: 1438826562, 0
+INFO  2015-08-06 10:06:42,445 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 10:06:42,561 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:116,total update db count:0
+INFO  2015-08-06 10:07:42,449 [OnlineUserNum.java,15] - online count: 1438826862, 0
+INFO  2015-08-06 10:12:42,464 [OnlineUserNum.java,15] - online count: 1438827162, 0
+INFO  2015-08-06 10:16:42,475 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 10:16:42,523 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:48,total update db count:0
+INFO  2015-08-06 10:17:42,479 [OnlineUserNum.java,15] - online count: 1438827462, 0
+INFO  2015-08-06 10:22:42,494 [OnlineUserNum.java,15] - online count: 1438827762, 0
+INFO  2015-08-06 10:26:42,504 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 10:26:42,610 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:106,total update db count:0
+INFO  2015-08-06 10:27:42,510 [OnlineUserNum.java,15] - online count: 1438828062, 0
+INFO  2015-08-06 10:32:42,525 [OnlineUserNum.java,15] - online count: 1438828362, 0
+INFO  2015-08-06 10:36:42,535 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 10:36:42,624 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:89,total update db count:0
+INFO  2015-08-06 10:37:42,539 [OnlineUserNum.java,15] - online count: 1438828662, 0
+INFO  2015-08-06 10:42:56,561 [XMLTemplateService.java,962] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/skill.xml
+INFO  2015-08-06 10:42:56,632 [XMLTemplateService.java,991] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/equip.xml
+INFO  2015-08-06 10:42:56,692 [XMLTemplateService.java,1035] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/disciple.xml
+INFO  2015-08-06 10:42:57,673 [XMLTemplateService.java,1107] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/fate.xml
+INFO  2015-08-06 10:42:57,707 [XMLTemplateService.java,1136] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/career_group.xml
+INFO  2015-08-06 10:42:57,839 [XMLTemplateService.java,1318] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/kindSelecter.xml
+INFO  2015-08-06 10:42:57,843 [XMLTemplateService.java,1374] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/discipleSelecter.xml
+INFO  2015-08-06 10:42:57,854 [XMLTemplateService.java,1441] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/levelUp.xml
+INFO  2015-08-06 10:42:57,858 [XMLTemplateService.java,1617] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/disciple_exp_level.xml
+INFO  2015-08-06 10:42:57,865 [XMLTemplateService.java,1638] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/user_level.xml
+INFO  2015-08-06 10:42:57,870 [XMLTemplateService.java,1660] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/user_level_config.xml
+INFO  2015-08-06 10:42:57,893 [XMLTemplateService.java,1689] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/treasureSelecter.xml
+INFO  2015-08-06 10:42:57,917 [XMLTemplateService.java,1852] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/tools.xml
+INFO  2015-08-06 10:42:57,925 [XMLTemplateService.java,1852] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/tools.xml
+INFO  2015-08-06 10:42:57,934 [XMLTemplateService.java,1988] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/levelSilvers.xml
+INFO  2015-08-06 10:42:57,938 [XMLTemplateService.java,2003] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/skillSelecter.xml
+INFO  2015-08-06 10:42:57,948 [XMLTemplateService.java,2173] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/equipSelecter.xml
+INFO  2015-08-06 10:42:57,957 [XMLTemplateService.java,1018] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/equip_level_base.xml
+INFO  2015-08-06 10:42:57,961 [XMLTemplateService.java,2370] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/FightEndGeneral.xml
+INFO  2015-08-06 10:42:58,086 [XMLTemplateService.java,2407] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/FightEndNpc.xml
+INFO  2015-08-06 10:42:58,136 [XMLTemplateService.java,2453] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/FightEndNpcLevel.xml
+INFO  2015-08-06 10:42:58,147 [XMLTemplateService.java,2319] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/FightEndRankReward.xml
+INFO  2015-08-06 10:42:58,177 [XMLTemplateService.java,2482] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/continue_loging.xml
+INFO  2015-08-06 10:42:58,181 [XMLTemplateService.java,2572] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/soulSelecter.xml
+INFO  2015-08-06 10:42:58,188 [XMLTemplateService.java,2647] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/Title.xml
+INFO  2015-08-06 10:42:58,194 [XMLTemplateService.java,2725] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/VisitRewardSelecter.xml
+INFO  2015-08-06 10:42:58,197 [XMLTemplateService.java,2767] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/rechargeConfig.xml
+INFO  2015-08-06 10:42:58,201 [XMLTemplateService.java,2792] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/adventuresConfig.xml
+INFO  2015-08-06 10:42:58,208 [XMLTemplateService.java,2943] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/usePowerReward.xml
+INFO  2015-08-06 10:42:58,212 [XMLTemplateService.java,2984] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/adventuresContinueLogin.xml
+INFO  2015-08-06 10:42:58,216 [XMLTemplateService.java,3014] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/skillBookConfig.xml
+INFO  2015-08-06 10:42:58,235 [XMLTemplateService.java,3053] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/skillBookNpcConfig.xml
+INFO  2015-08-06 10:42:58,238 [XMLTemplateService.java,3078] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/skillBookSnatchConfig.xml
+INFO  2015-08-06 10:42:58,241 [XMLTemplateService.java,3108] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/skillbookSelecter.xml
+INFO  2015-08-06 10:42:58,650 [XMLTemplateService.java,1883] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/cdkeys.xml
+INFO  2015-08-06 10:42:58,655 [XMLTemplateService.java,1905] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/guideConfiger.xml
+INFO  2015-08-06 10:42:58,665 [XMLTemplateService.java,3219] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/inviteConfig.xml
+INFO  2015-08-06 10:42:58,668 [XMLTemplateService.java,3242] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/worldbossConfig.xml
+INFO  2015-08-06 10:42:58,671 [XMLTemplateService.java,1931] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/chargeRebateConfig.xml
+INFO  2015-08-06 10:42:58,675 [XMLTemplateService.java,1962] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/fortuneComeConfig.xml
+INFO  2015-08-06 10:42:58,678 [XMLTemplateService.java,3271] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/ServerConfig.xml
+INFO  2015-08-06 10:42:58,682 [XMLTemplateService.java,3332] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/TesterList.xml
+INFO  2015-08-06 10:42:58,689 [XMLTemplateService.java,3349] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/giveSoulSelecter.xml
+INFO  2015-08-06 10:42:58,698 [XMLTemplateService.java,3424] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/giveSoulStage.xml
+INFO  2015-08-06 10:42:58,708 [XMLTemplateService.java,3480] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/adventuresConfig.xml
+INFO  2015-08-06 10:42:58,716 [XMLTemplateService.java,3504] - load platActiveCodeCtrl config file path :C:\const\project\onepiece\Code_Server\server/xml/platActiveCodeCtrl.xml
+INFO  2015-08-06 10:42:58,724 [XMLTemplateService.java,3521] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/worldbossLvlHp.xml
+INFO  2015-08-06 10:42:58,736 [XMLTemplateService.java,3540] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/luckyStarConfig.xml
+INFO  2015-08-06 10:42:58,744 [XMLTemplateService.java,3304] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/platInitReward.xml
+INFO  2015-08-06 10:42:58,753 [XMLTemplateService.java,3607] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/quickCareerConfig.xml
+INFO  2015-08-06 10:42:58,760 [XMLTemplateService.java,3627] - load Diamond config file path :C:\const\project\onepiece\Code_Server\server/xml/Diamond.xml
+INFO  2015-08-06 10:42:58,770 [XMLTemplateService.java,3678] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/DiamondConfig.xml
+INFO  2015-08-06 10:42:58,779 [XMLTemplateService.java,3694] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/DiamondAdditionConfig.xml
+INFO  2015-08-06 10:42:58,795 [XMLTemplateService.java,3845] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/GuildBase.xml
+INFO  2015-08-06 10:42:58,802 [XMLTemplateService.java,3872] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/GuildLvl.xml
+INFO  2015-08-06 10:42:58,812 [XMLTemplateService.java,3913] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/GuildProps.xml
+INFO  2015-08-06 10:42:58,819 [XMLTemplateService.java,3939] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/GuildBuildInfo.xml
+INFO  2015-08-06 10:42:58,826 [XMLTemplateService.java,3736] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/deepWaterConfig.xml
+INFO  2015-08-06 10:42:58,837 [XMLTemplateService.java,3965] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/GuildShopSell.xml
+INFO  2015-08-06 10:42:58,849 [XMLTemplateService.java,4017] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/GuildNPC.xml
+INFO  2015-08-06 10:42:58,863 [XMLTemplateService.java,4059] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/GoddessRebateConfig.xml
+INFO  2015-08-06 10:42:58,960 [Environment.java,514] - Hibernate 3.2.6
+INFO  2015-08-06 10:42:58,967 [Environment.java,547] - hibernate.properties not found
+INFO  2015-08-06 10:42:58,974 [Environment.java,681] - Bytecode provider name : cglib
+INFO  2015-08-06 10:42:58,982 [Environment.java,598] - using JDK 1.4 java.sql.Timestamp handling
+INFO  2015-08-06 10:42:59,088 [Configuration.java,1466] - configuring from file: hibernate_lo_01.cfg.xml
+INFO  2015-08-06 10:42:59,232 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Player.hbm.xml
+INFO  2015-08-06 10:42:59,380 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Player -> player
+INFO  2015-08-06 10:42:59,441 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Disciple.hbm.xml
+INFO  2015-08-06 10:42:59,478 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Disciple -> disciple
+INFO  2015-08-06 10:42:59,481 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Equip.hbm.xml
+INFO  2015-08-06 10:42:59,512 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Equip -> equip
+INFO  2015-08-06 10:42:59,516 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Skill.hbm.xml
+INFO  2015-08-06 10:42:59,546 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Skill -> skill
+INFO  2015-08-06 10:42:59,548 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Career.hbm.xml
+INFO  2015-08-06 10:42:59,575 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Career -> career
+INFO  2015-08-06 10:42:59,577 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Bag.hbm.xml
+INFO  2015-08-06 10:42:59,602 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Bag -> bag
+INFO  2015-08-06 10:42:59,604 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Soul.hbm.xml
+INFO  2015-08-06 10:42:59,630 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Soul -> soul
+INFO  2015-08-06 10:42:59,632 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Battle.hbm.xml
+INFO  2015-08-06 10:42:59,663 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Battle -> battle
+INFO  2015-08-06 10:42:59,667 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Mapping.hbm.xml
+INFO  2015-08-06 10:42:59,692 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Mapping -> mapping
+INFO  2015-08-06 10:42:59,695 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/UserStats.hbm.xml
+INFO  2015-08-06 10:42:59,731 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.UserStats -> stats
+INFO  2015-08-06 10:42:59,737 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/TeamBuffer.hbm.xml
+INFO  2015-08-06 10:42:59,772 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.TeamBuffer -> teambuffer
+INFO  2015-08-06 10:42:59,774 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/PayInfo.hbm.xml
+INFO  2015-08-06 10:42:59,808 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.PayInfo -> wBuyPropPay
+INFO  2015-08-06 10:42:59,811 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Recharge.hbm.xml
+INFO  2015-08-06 10:42:59,844 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Recharge -> pay
+INFO  2015-08-06 10:42:59,848 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Title.hbm.xml
+INFO  2015-08-06 10:42:59,876 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Title -> title
+INFO  2015-08-06 10:42:59,879 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/AdventureFightStats.hbm.xml
+INFO  2015-08-06 10:42:59,914 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.AdventureFightStats -> adventurefightstats
+INFO  2015-08-06 10:42:59,917 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/AdventureFightRank.hbm.xml
+INFO  2015-08-06 10:42:59,947 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.AdventureFightRank -> adventurefightrank
+INFO  2015-08-06 10:42:59,950 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Challenge.hbm.xml
+INFO  2015-08-06 10:42:59,988 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Challenge -> challenge
+INFO  2015-08-06 10:42:59,990 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Reward.hbm.xml
+INFO  2015-08-06 10:43:00,012 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Reward -> rewards
+INFO  2015-08-06 10:43:00,014 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/SkillBook.hbm.xml
+INFO  2015-08-06 10:43:00,036 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.SkillBook -> skillbook
+INFO  2015-08-06 10:43:00,038 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Cdkey.hbm.xml
+INFO  2015-08-06 10:43:00,061 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Cdkey -> cdkey
+INFO  2015-08-06 10:43:00,063 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/SysMsgInfo.hbm.xml
+INFO  2015-08-06 10:43:00,087 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.SysMsgInfo -> sysmsginfo
+INFO  2015-08-06 10:43:00,089 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/InviteStatus.hbm.xml
+INFO  2015-08-06 10:43:00,109 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.InviteStatus -> invitestatus
+INFO  2015-08-06 10:43:00,111 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/WorldBoss.hbm.xml
+INFO  2015-08-06 10:43:00,134 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.WorldBoss -> worldboss
+INFO  2015-08-06 10:43:00,137 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/WorldBossRank.hbm.xml
+INFO  2015-08-06 10:43:00,154 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.WorldBossRank -> worldbossrank
+INFO  2015-08-06 10:43:00,156 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/ActiveCodeEntity.hbm.xml
+INFO  2015-08-06 10:43:00,174 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.ActiveCodeEntity -> activecode
+INFO  2015-08-06 10:43:00,176 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/PlayerFrom.hbm.xml
+INFO  2015-08-06 10:43:00,195 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.PlayerFrom -> playerfrom
+INFO  2015-08-06 10:43:00,197 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/RelationShip.hbm.xml
+INFO  2015-08-06 10:43:00,212 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.RelationShip -> relationship
+INFO  2015-08-06 10:43:00,216 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Handbook.hbm.xml
+INFO  2015-08-06 10:43:00,230 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Handbook -> handbook
+INFO  2015-08-06 10:43:00,232 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Leagua.hbm.xml
+INFO  2015-08-06 10:43:00,254 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Leagua -> leagua
+INFO  2015-08-06 10:43:00,259 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/LeaguaApply.hbm.xml
+INFO  2015-08-06 10:43:00,275 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.LeaguaApply -> leaguaapply
+INFO  2015-08-06 10:43:00,278 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/LeaguaMedal.hbm.xml
+INFO  2015-08-06 10:43:00,294 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.LeaguaMedal -> leaguamedal
+INFO  2015-08-06 10:43:00,296 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/LeaguaMedalChangeInfo.hbm.xml
+INFO  2015-08-06 10:43:00,309 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.LeaguaMedalChangeInfo -> leaguamedalchangeinfo
+INFO  2015-08-06 10:43:00,311 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/LeaguaMembers.hbm.xml
+INFO  2015-08-06 10:43:00,326 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.LeaguaMembers -> leaguamembers
+INFO  2015-08-06 10:43:00,329 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/ActivityInfo.hbm.xml
+INFO  2015-08-06 10:43:00,342 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.ActivityInfo -> activityinfo
+INFO  2015-08-06 10:43:00,343 [Configuration.java,1547] - Configured SessionFactory: null
+INFO  2015-08-06 10:43:00,423 [C3P0ConnectionProvider.java,81] - C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1:3306/dzm
+INFO  2015-08-06 10:43:00,424 [C3P0ConnectionProvider.java,82] - Connection properties: {useUnicode=true, user=root, password=****, characterEncoding=UTF-8}
+INFO  2015-08-06 10:43:00,425 [C3P0ConnectionProvider.java,85] - autocommit mode: false
+INFO  2015-08-06 10:43:00,454 [MLog.java,80] - MLog clients using log4j logging.
+INFO  2015-08-06 10:43:00,827 [C3P0Registry.java,204] - Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+INFO  2015-08-06 10:43:00,910 [AbstractPoolBackedDataSource.java,462] - Initializing c3p0 pool... com.mchange.v2.c3p0.PoolBackedDataSource@e1265bcf [ connectionPoolDataSource -> com.mchange.v2.c3p0.WrapperConnectionPoolDataSource@1c7c953 [ acquireIncrement -> 1, acquireRetryAttempts -> 3, acquireRetryDelay -> 2000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, debugUnreturnedConnectionStackTraces -> false, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge75j9b8w4yz18inlny|1ed56fe5, idleConnectionTestPeriod -> 60, initialPoolSize -> 7, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 42, maxStatements -> 50, maxStatementsPerConnection -> 0, minPoolSize -> 7, nestedDataSource -> com.mchange.v2.c3p0.DriverManagerDataSource@95f82dbc [ description -> null, driverClass -> null, factoryClassLocation -> null, identityToken -> 1hge75j9b8w4yz18inlny|4fbf1942, jdbcUrl -> jdbc:mysql://127.0.0.1:3306/dzm, properties -> {useUnicode=true, user=******, password=******, characterEncoding=UTF-8} ], preferredTestQuery -> null, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false; userOverrides: {} ], dataSourceName -> null, factoryClassLocation -> null, identityToken -> 1hge75j9b8w4yz18inlny|65ef6939, numHelperThreads -> 3 ]
+INFO  2015-08-06 10:43:01,420 [SettingsFactory.java,89] - RDBMS: MySQL, version: 5.5.40
+INFO  2015-08-06 10:43:01,427 [SettingsFactory.java,90] - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.0.8 ( Revision: ${svn.Revision} )
+INFO  2015-08-06 10:43:01,484 [Dialect.java,152] - Using dialect: org.hibernate.dialect.MySQLDialect
+INFO  2015-08-06 10:43:01,491 [TransactionFactoryFactory.java,31] - Using default transaction strategy (direct JDBC transactions)
+INFO  2015-08-06 10:43:01,495 [TransactionManagerLookupFactory.java,33] - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+INFO  2015-08-06 10:43:01,496 [SettingsFactory.java,143] - Automatic flush during beforeCompletion(): disabled
+INFO  2015-08-06 10:43:01,497 [SettingsFactory.java,147] - Automatic session close at end of transaction: disabled
+INFO  2015-08-06 10:43:01,497 [SettingsFactory.java,154] - JDBC batch size: 15
+INFO  2015-08-06 10:43:01,498 [SettingsFactory.java,157] - JDBC batch updates for versioned data: disabled
+INFO  2015-08-06 10:43:01,500 [SettingsFactory.java,162] - Scrollable result sets: enabled
+INFO  2015-08-06 10:43:01,501 [SettingsFactory.java,170] - JDBC3 getGeneratedKeys(): enabled
+INFO  2015-08-06 10:43:01,501 [SettingsFactory.java,178] - Connection release mode: auto
+INFO  2015-08-06 10:43:01,503 [SettingsFactory.java,202] - Maximum outer join fetch depth: 2
+INFO  2015-08-06 10:43:01,504 [SettingsFactory.java,205] - Default batch fetch size: 1
+INFO  2015-08-06 10:43:01,504 [SettingsFactory.java,209] - Generate SQL with comments: disabled
+INFO  2015-08-06 10:43:01,505 [SettingsFactory.java,213] - Order SQL updates by primary key: disabled
+INFO  2015-08-06 10:43:01,505 [SettingsFactory.java,217] - Order SQL inserts for batching: disabled
+INFO  2015-08-06 10:43:01,506 [SettingsFactory.java,386] - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+INFO  2015-08-06 10:43:01,510 [ASTQueryTranslatorFactory.java,24] - Using ASTQueryTranslatorFactory
+INFO  2015-08-06 10:43:01,511 [SettingsFactory.java,225] - Query language substitutions: {}
+INFO  2015-08-06 10:43:01,512 [SettingsFactory.java,230] - JPA-QL strict compliance: disabled
+INFO  2015-08-06 10:43:01,512 [SettingsFactory.java,235] - Second-level cache: enabled
+INFO  2015-08-06 10:43:01,513 [SettingsFactory.java,239] - Query cache: disabled
+INFO  2015-08-06 10:43:01,514 [SettingsFactory.java,373] - Cache provider: org.hibernate.cache.NoCacheProvider
+INFO  2015-08-06 10:43:01,514 [SettingsFactory.java,254] - Optimize cache for minimal puts: disabled
+INFO  2015-08-06 10:43:01,515 [SettingsFactory.java,263] - Structured second-level cache entries: disabled
+INFO  2015-08-06 10:43:01,523 [SettingsFactory.java,290] - Statistics: disabled
+INFO  2015-08-06 10:43:01,524 [SettingsFactory.java,294] - Deleted entity synthetic identifier rollback: disabled
+INFO  2015-08-06 10:43:01,524 [SettingsFactory.java,309] - Default entity-mode: pojo
+INFO  2015-08-06 10:43:01,525 [SettingsFactory.java,313] - Named query checking : enabled
+INFO  2015-08-06 10:43:01,569 [SessionFactoryImpl.java,161] - building session factory
+INFO  2015-08-06 10:43:02,492 [SessionFactoryObjectFactory.java,82] - Not binding factory to JNDI, no JNDI name configured
+WARN  2015-08-06 10:43:02,523 [ConfigurationFactory.java,134] - No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/C:/const/project/onepiece/Code_Server/server/OnePiece.jar!/ehcache-failsafe.xml
+INFO  2015-08-06 10:43:02,697 [FightEndRankingServices.java,99] - =======Init FightEnd Date [20150805] Ranking Info Start!=======
+INFO  2015-08-06 10:43:03,071 [FightEndRankingServices.java,132] - =======Init FightEnd Date [20150805] Ranking Info Over!=======
+INFO  2015-08-06 10:43:03,072 [FightEndRankingServices.java,283] - synchronization FightEndRanking Date [20150805] [5] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-06 10:43:03,072 [FightEndRankingServices.java,283] - synchronization FightEndRanking Date [20150805] [6] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-06 10:43:03,073 [FightEndRankingServices.java,283] - synchronization FightEndRanking Date [20150805] [7] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-06 10:43:03,074 [FightEndRankingServices.java,283] - synchronization FightEndRanking Date [20150805] [8] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-06 10:43:03,075 [FightEndRankingServices.java,148] - =======Init FightEnd Date [20150806] Ranking Info Start!=======
+INFO  2015-08-06 10:43:03,086 [FightEndRankingServices.java,363] - synchronization FightEndRanking Date [20150806] [5] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-06 10:43:03,090 [FightEndRankingServices.java,363] - synchronization FightEndRanking Date [20150806] [6] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-06 10:43:03,094 [FightEndRankingServices.java,363] - synchronization FightEndRanking Date [20150806] [7] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-06 10:43:03,097 [FightEndRankingServices.java,363] - synchronization FightEndRanking Date [20150806] [8] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-06 10:43:03,098 [FightEndRankingServices.java,177] - =======Init FightEnd Date [20150806] Ranking Info Over!=======
+INFO  2015-08-06 10:43:03,106 [XMLTemplateService.java,3197] - load item config file path :C:\const\project\onepiece\Code_Server\server/xml/persistNames.xml
+INFO  2015-08-06 10:43:03,154 [LeaguaServices.java,2223] - start loading leagua info from db to ram......
+INFO  2015-08-06 10:43:03,183 [LeaguaServices.java,2305] - end loading leagua info from db to ram......
+INFO  2015-08-06 10:43:04,144 [UpdateChecker.java,98] - New update(s) found: 2.4.7 [http://www.terracotta.org/confluence/display/release/Release+Notes+Ehcache+Core+2.4]. Please check http://ehcache.org for the latest version.
+INFO  2015-08-06 10:44:03,270 [OnlineUserNum.java,15] - online count: 1438829043, 0
+INFO  2015-08-06 10:44:41,405 [LoginHandler.java,115] - login handler received: test8, pswd, 1
+INFO  2015-08-06 10:44:41,422 [LoginHandler.java,172] - login handler equip equipSize: 0 ,costTime: 0 
+INFO  2015-08-06 10:44:41,463 [SkillBookServices.java,44] - start************#playerId:5,startTime:1438829081463*********start
+INFO  2015-08-06 10:44:41,468 [SkillBookServices.java,72] - end************playerId:5,endTime:1438829081468,cost:5*********end
+INFO  2015-08-06 10:44:41,487 [ObjectAccessor.java,27] - add online session,playerid:5
+INFO  2015-08-06 10:44:41,488 [ClientSession.java,36] - player login setSession method|#playerId:5#client ip:/192.168.31.183:1638#current online player count:1
+INFO  2015-08-06 10:44:41,493 [LoginHandler.java,526] - player login info: 5, 1438658091, 6, 3, 817, 1438829081, ios_91, win32Device
+INFO  2015-08-06 10:44:41,496 [LoginHandler.java,527] - login handler ret send: test8, 83, {}
+INFO  2015-08-06 10:44:42,031 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-06 10:44:42,040 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 6, {}
+INFO  2015-08-06 10:44:42,045 [UserDiscipleInfoHandler.java,49] - user disciple info received: 5, 1, {}
+INFO  2015-08-06 10:44:42,050 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 5, 2, {}
+INFO  2015-08-06 10:44:42,134 [UserToolInfoHandler.java,40] - user tool info handler received: 5, 1, {}
+INFO  2015-08-06 10:44:42,139 [UserToolInfoHandler.java,85] - user tool info handler ret send: 5, 2, {}
+INFO  2015-08-06 10:44:42,305 [UserSoulInfoHandler.java,38] - user soul info handler received: 5, 1, {}
+INFO  2015-08-06 10:44:42,305 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 5, 0, {}
+INFO  2015-08-06 10:44:42,391 [UserSkillInfoHandler.java,48] - user skill info handler received: 5, 1, {}
+INFO  2015-08-06 10:44:42,396 [UserSkillInfoHandler.java,90] - user skill info handler ret send: 5, 2, {}
+INFO  2015-08-06 10:44:42,482 [UserCareerInfoHandler.java,48] - user career info handler received: 5, 1, {}
+INFO  2015-08-06 10:44:42,484 [UserCareerInfoHandler.java,121] - user career info handler ret send: 5, 2, {}
+INFO  2015-08-06 10:44:42,489 [GetShopListHandler.java,45] - get shop list handler received: 5, 1, {}
+INFO  2015-08-06 10:44:42,490 [GetShopListHandler.java,46] - get shop list handler received: 5, 1, {}
+INFO  2015-08-06 10:44:42,494 [GetShopListHandler.java,92] - get shop list handler ret send: 5, 1, {}
+INFO  2015-08-06 10:44:42,495 [GetShopListHandler.java,93] - get shop list handler ret send: 5, 1, {}
+INFO  2015-08-06 10:44:42,580 [UserEquipInfoHandler.java,48] - user equip info handler received: 5, 1, {}
+INFO  2015-08-06 10:44:42,588 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 5, 5, {}
+INFO  2015-08-06 10:44:42,674 [UserBattleArrayHandler.java,47] - user battle array handler received: 5, 1, {}
+INFO  2015-08-06 10:44:42,681 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 5, 5, {}
+INFO  2015-08-06 10:44:42,765 [UserMarketInfoHandler.java,33] - user market info handler received: 5, 1, {}
+INFO  2015-08-06 10:44:42,769 [UserMarketInfoHandler.java,89] - user market info handler ret send: 5, 1, {}
+INFO  2015-08-06 10:44:42,855 [TitleInfoHandler.java,38] - title info handler received: 5, 1, {}
+INFO  2015-08-06 10:44:42,858 [TitleInfoHandler.java,95] - title info handler ret send: 5, 0, {}
+INFO  2015-08-06 10:44:44,544 [BoardCastInfoHandler.java,51] - board cast info handler received: 5, 1, {}
+INFO  2015-08-06 10:44:44,545 [BoardCastInfoHandler.java,79] - board cast info handler ret send: 5, 0, {}
+INFO  2015-08-06 10:44:44,627 [AdventureInfoHandler.java,61] - adventure info handler received: 1, {}, {}
+INFO  2015-08-06 10:44:44,634 [AdventureInfoHandler.java,307] - adventure info handler ret send: test8, 7, {}
+INFO  2015-08-06 10:44:49,275 [AdventureContinueLoginHandler.java,61] - getInfo received: 5, 1
+INFO  2015-08-06 10:44:49,281 [AdventureContinueLoginHandler.java,81] - getInfo Send: PlayerId:5, Cost:3
+INFO  2015-08-06 10:44:54,823 [UserBattleHandler.java,56] - user battle handler received: 5, 1, 0
+INFO  2015-08-06 10:44:54,839 [UserBattleHandler.java,302] - user battle handler ret send: 5, 16, {}
+INFO  2015-08-06 10:44:55,960 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-06 10:44:55,963 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 3, {}
+INFO  2015-08-06 10:45:30,683 [SessionHandler.java,73] - player logout sessionClosed method|playerId:5#client ip:/192.168.31.183:1638#Current playerCount:1
+INFO  2015-08-06 10:45:30,684 [ObjectAccessor.java,32] - remove online session,playerid:5
+INFO  2015-08-06 10:45:30,686 [SessionHandler.java,84] - player logout info: 5, 1438658091, 6, 3, 832, 1438829130,ios_91,win32Device
+INFO  2015-08-06 10:45:30,687 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:5
+INFO  2015-08-06 10:49:03,270 [OnlineUserNum.java,15] - online count: 1438829343, 0
+INFO  2015-08-06 10:54:03,286 [OnlineUserNum.java,15] - online count: 1438829643, 0
+INFO  2015-08-06 10:58:03,298 [DataLander.java,33] - start landing data to database
+INFO  2015-08-06 10:58:03,488 [DataLander.java,90] - end landing data to database,total update player count:1,cost Time:190,total update db count:10
+INFO  2015-08-06 10:59:03,303 [OnlineUserNum.java,15] - online count: 1438829943, 0
+INFO  2015-08-06 11:04:03,320 [OnlineUserNum.java,15] - online count: 1438830243, 0

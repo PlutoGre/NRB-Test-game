@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<Guides>
+		<Guide id="1"	type="GBuyEquip"	itemId="8"		price="289"	count="1"/>
+		<Guide id="2"	type="GBuyExp"		itemId="0"		price="289"	count="1680"/>
+		<Guide id="3"	type="GToBattle"	itemId="100"	price="0"	count="0"/>
+		<Guide id="4"	type="GToEquip"		itemId="300"	price="0"	count="0"/>
+		<Guide id="5"	type="GToBuy"		itemId="300"	price="0"	count="0"/>
+	</Guides>
+</root>

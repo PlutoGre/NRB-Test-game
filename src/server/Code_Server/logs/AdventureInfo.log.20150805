@@ -1,0 +1,18 @@
+INFO  2015-08-05 19:32:00,352 [AdventureContinueLoginHandler.java,61] - getInfo received: 5, 1
+INFO  2015-08-05 19:32:00,371 [AdventureContinueLoginHandler.java,81] - getInfo Send: PlayerId:5, Cost:10
+INFO  2015-08-05 19:32:02,057 [AdventureContinueLoginHandler.java,111] - getReward received: PlayerId:5, Version:1,rewardId:2
+INFO  2015-08-05 19:32:02,140 [AdventureContinueLoginHandler.java,247] - gerReward Send: PlayerId:5,Cost:82
+INFO  2015-08-05 19:41:35,517 [AdventureContinueLoginHandler.java,61] - getInfo received: 9, 1
+INFO  2015-08-05 19:41:35,521 [AdventureContinueLoginHandler.java,81] - getInfo Send: PlayerId:9, Cost:4
+INFO  2015-08-05 19:41:37,045 [AdventureContinueLoginHandler.java,111] - getReward received: PlayerId:9, Version:1,rewardId:2
+INFO  2015-08-05 19:41:37,066 [AdventureContinueLoginHandler.java,247] - gerReward Send: PlayerId:9,Cost:21
+INFO  2015-08-05 19:51:37,674 [AdventureLevelUpRewardInfoHandler.java,48] - adventure level up reward info handler received: 5, 1, {}
+INFO  2015-08-05 19:51:37,683 [AdventureLevelUpRewardInfoHandler.java,74] - adventure level up reward info handler ret send: 5, 8, {}
+INFO  2015-08-05 19:51:45,704 [AdventureLevelUpGetRewardInfoHandler.java,51] - adventure level up get reward info handler received: 5, 1, 1
+INFO  2015-08-05 19:51:45,707 [AdventureLevelUpGetRewardInfoHandler.java,95] - adventure level up get reward info handler ret send: 5, 2, {}
+INFO  2015-08-05 19:51:47,067 [AdventureLevelUpGetRewardInfoHandler.java,51] - adventure level up get reward info handler received: 5, 1, 2
+INFO  2015-08-05 19:51:47,069 [AdventureLevelUpGetRewardInfoHandler.java,95] - adventure level up get reward info handler ret send: 5, 0, {}
+INFO  2015-08-05 19:51:48,438 [GetAdventureBoundlessHoleHandler.java,50] - get adventure boundless hole handler received: 5, 1, {}
+INFO  2015-08-05 19:51:48,449 [GetAdventureBoundlessHoleHandler.java,76] - get adventure boundless hole handler ret send: 5, 10, {}
+INFO  2015-08-05 19:51:50,217 [AddBoundlessHoleHandler.java,50] - add boundless hole handler received: 5, 1, {}
+INFO  2015-08-05 19:51:50,231 [AddBoundlessHoleHandler.java,112] - add boundless hole handler ret send: 5, 12, {}

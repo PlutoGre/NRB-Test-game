@@ -1,0 +1,107 @@
+INFO  2015-08-03 10:15:50,741 [UserToolInfoHandler.java,40] - user tool info handler received: 3, 1, {}
+INFO  2015-08-03 10:15:50,744 [UserToolInfoHandler.java,85] - user tool info handler ret send: 3, 3, {}
+INFO  2015-08-03 10:40:54,294 [UserToolInfoHandler.java,40] - user tool info handler received: 3, 1, {}
+INFO  2015-08-03 10:40:54,298 [UserToolInfoHandler.java,85] - user tool info handler ret send: 3, 4, {}
+INFO  2015-08-03 10:55:27,922 [UserToolInfoHandler.java,40] - user tool info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:27,928 [UserToolInfoHandler.java,85] - user tool info handler ret send: 3, 6, {}
+INFO  2015-08-03 10:56:21,754 [UserToolInfoHandler.java,40] - user tool info handler received: 2, 1, {}
+INFO  2015-08-03 10:56:21,759 [UserToolInfoHandler.java,85] - user tool info handler ret send: 2, 5, {}
+INFO  2015-08-03 11:17:51,335 [UserToolInfoHandler.java,40] - user tool info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:51,340 [UserToolInfoHandler.java,85] - user tool info handler ret send: 3, 5, {}
+INFO  2015-08-03 11:18:35,236 [UserToolInfoHandler.java,40] - user tool info handler received: 2, 1, {}
+INFO  2015-08-03 11:18:35,238 [UserToolInfoHandler.java,85] - user tool info handler ret send: 2, 2, {}
+INFO  2015-08-03 11:32:50,338 [UserToolInfoHandler.java,40] - user tool info handler received: 2, 1, {}
+INFO  2015-08-03 11:32:50,340 [UserToolInfoHandler.java,85] - user tool info handler ret send: 2, 2, {}
+INFO  2015-08-03 12:09:08,276 [UserToolInfoHandler.java,40] - user tool info handler received: 2, 1, {}
+INFO  2015-08-03 12:09:08,278 [UserToolInfoHandler.java,85] - user tool info handler ret send: 2, 2, {}
+INFO  2015-08-03 12:16:01,647 [UserToolInfoHandler.java,40] - user tool info handler received: 2, 1, {}
+INFO  2015-08-03 12:16:01,649 [UserToolInfoHandler.java,85] - user tool info handler ret send: 2, 2, {}
+INFO  2015-08-03 12:17:36,934 [UserToolInfoHandler.java,40] - user tool info handler received: 2, 1, {}
+INFO  2015-08-03 12:17:36,936 [UserToolInfoHandler.java,85] - user tool info handler ret send: 2, 2, {}
+INFO  2015-08-03 12:18:27,465 [UserToolInfoHandler.java,40] - user tool info handler received: 2, 1, {}
+INFO  2015-08-03 12:18:27,466 [UserToolInfoHandler.java,85] - user tool info handler ret send: 2, 1, {}
+INFO  2015-08-03 12:19:15,123 [UserToolInfoHandler.java,40] - user tool info handler received: 2, 1, {}
+INFO  2015-08-03 12:19:15,126 [UserToolInfoHandler.java,85] - user tool info handler ret send: 2, 2, {}
+INFO  2015-08-03 13:12:52,570 [UserToolInfoHandler.java,40] - user tool info handler received: 2, 1, {}
+INFO  2015-08-03 13:12:52,574 [UserToolInfoHandler.java,85] - user tool info handler ret send: 2, 4, {}
+INFO  2015-08-03 13:28:11,444 [UserToolInfoHandler.java,40] - user tool info handler received: 4, 1, {}
+INFO  2015-08-03 13:28:11,445 [UserToolInfoHandler.java,85] - user tool info handler ret send: 4, 1, {}
+INFO  2015-08-03 13:28:37,392 [UserToolInfoHandler.java,40] - user tool info handler received: 4, 1, {}
+INFO  2015-08-03 13:28:37,397 [UserToolInfoHandler.java,85] - user tool info handler ret send: 4, 3, {}
+INFO  2015-08-03 13:29:56,938 [UserToolInfoHandler.java,40] - user tool info handler received: 4, 1, {}
+INFO  2015-08-03 13:29:56,941 [UserToolInfoHandler.java,85] - user tool info handler ret send: 4, 3, {}
+INFO  2015-08-03 13:32:33,969 [UserToolInfoHandler.java,40] - user tool info handler received: 5, 1, {}
+INFO  2015-08-03 13:32:33,971 [UserToolInfoHandler.java,85] - user tool info handler ret send: 5, 2, {}
+INFO  2015-08-03 13:36:25,022 [UserToolInfoHandler.java,40] - user tool info handler received: 5, 1, {}
+INFO  2015-08-03 13:36:25,025 [UserToolInfoHandler.java,85] - user tool info handler ret send: 5, 3, {}
+INFO  2015-08-03 13:38:19,942 [UserToolInfoHandler.java,40] - user tool info handler received: 5, 1, {}
+INFO  2015-08-03 13:38:19,944 [UserToolInfoHandler.java,85] - user tool info handler ret send: 5, 2, {}
+INFO  2015-08-03 13:57:32,145 [UserToolInfoHandler.java,40] - user tool info handler received: 2, 1, {}
+INFO  2015-08-03 13:57:32,148 [UserToolInfoHandler.java,85] - user tool info handler ret send: 2, 3, {}
+INFO  2015-08-03 14:01:30,841 [UserToolInfoHandler.java,40] - user tool info handler received: 2, 1, {}
+INFO  2015-08-03 14:01:30,842 [UserToolInfoHandler.java,85] - user tool info handler ret send: 2, 1, {}
+INFO  2015-08-03 14:01:51,779 [UseToolHandler.java,83] - use tool handler received: 2, 3503001, {}
+INFO  2015-08-03 14:01:51,838 [UseToolHandler.java,332] - use tool handler ret send: 2, 58, {}
+INFO  2015-08-03 14:05:27,368 [UserToolInfoHandler.java,40] - user tool info handler received: 1, 1, {}
+INFO  2015-08-03 14:05:27,375 [UserToolInfoHandler.java,85] - user tool info handler ret send: 1, 6, {}
+INFO  2015-08-03 14:05:58,256 [UseToolHandler.java,83] - use tool handler received: 1, 3503001, {}
+INFO  2015-08-03 14:05:58,320 [UseToolHandler.java,332] - use tool handler ret send: 1, 61, {}
+INFO  2015-08-03 14:06:37,714 [UseToolHandler.java,83] - use tool handler received: 1, 3501003, {}
+INFO  2015-08-03 14:06:37,745 [UseToolHandler.java,332] - use tool handler ret send: 1, 31, {}
+INFO  2015-08-03 14:12:25,986 [UserToolInfoHandler.java,40] - user tool info handler received: 2, 1, {}
+INFO  2015-08-03 14:12:25,988 [UserToolInfoHandler.java,85] - user tool info handler ret send: 2, 1, {}
+INFO  2015-08-03 14:30:56,027 [UseToolHandler.java,83] - use tool handler received: 2, 3503001, {}
+INFO  2015-08-03 14:30:56,067 [UseToolHandler.java,332] - use tool handler ret send: 2, 40, {}
+INFO  2015-08-03 14:31:01,594 [UseToolHandler.java,83] - use tool handler received: 2, 3501003, {}
+INFO  2015-08-03 14:31:01,626 [UseToolHandler.java,332] - use tool handler ret send: 2, 32, {}
+INFO  2015-08-03 14:31:34,583 [UserToolInfoHandler.java,40] - user tool info handler received: 1, 1, {}
+INFO  2015-08-03 14:31:34,585 [UserToolInfoHandler.java,85] - user tool info handler ret send: 1, 2, {}
+INFO  2015-08-03 14:39:30,038 [UserToolInfoHandler.java,40] - user tool info handler received: 2, 1, {}
+INFO  2015-08-03 14:39:30,044 [UserToolInfoHandler.java,85] - user tool info handler ret send: 2, 5, {}
+INFO  2015-08-03 14:39:43,246 [UseToolHandler.java,83] - use tool handler received: 2, 3503001, {}
+INFO  2015-08-03 14:39:43,360 [UseToolHandler.java,332] - use tool handler ret send: 2, 113, {}
+INFO  2015-08-03 14:39:50,401 [UseToolHandler.java,83] - use tool handler received: 2, 3501001, {}
+INFO  2015-08-03 14:39:50,405 [UseToolHandler.java,332] - use tool handler ret send: 2, 3, {}
+INFO  2015-08-03 14:39:54,965 [UseToolHandler.java,83] - use tool handler received: 2, 3501002, {}
+INFO  2015-08-03 14:39:54,978 [UseToolHandler.java,332] - use tool handler ret send: 2, 13, {}
+INFO  2015-08-03 14:40:11,639 [UseToolHandler.java,83] - use tool handler received: 2, 3501003, {}
+INFO  2015-08-03 14:40:11,652 [UseToolHandler.java,332] - use tool handler ret send: 2, 13, {}
+INFO  2015-08-03 14:40:19,014 [UseToolHandler.java,83] - use tool handler received: 2, 3501003, {}
+INFO  2015-08-03 14:40:19,028 [UseToolHandler.java,332] - use tool handler ret send: 2, 14, {}
+INFO  2015-08-03 15:04:16,555 [UserToolInfoHandler.java,40] - user tool info handler received: 2, 1, {}
+INFO  2015-08-03 15:04:16,560 [UserToolInfoHandler.java,85] - user tool info handler ret send: 2, 5, {}
+INFO  2015-08-03 15:04:43,892 [UseToolHandler.java,83] - use tool handler received: 2, 3001001, {}
+INFO  2015-08-03 15:04:43,897 [UseToolHandler.java,382] - lucky star type: 4, 0, 0, 0, 0, 0
+INFO  2015-08-03 15:04:43,898 [UseToolHandler.java,388] - -------------------->TreasureInfo    ReadyGo     :LuckyOne ---600---,LuckyTwo ---600---, treasureWorth---0---,playerLevel---1---,LuckPool---405.0----
+INFO  2015-08-03 15:04:43,898 [UseToolHandler.java,435] - ---------------------->RewardPoolNo:----1----
+INFO  2015-08-03 15:04:43,899 [UseToolHandler.java,478] - -------------------->TreasureInfo     After    :LuckyOne ---605---,LuckyTwo ---605---, treasureWorth---0---,playerLevel---1---,luckPool---400.0---
+INFO  2015-08-03 15:04:43,913 [UseToolHandler.java,698] - lucky star rewardInfo: 12001, 2002, 920
+INFO  2015-08-03 15:04:43,914 [UseToolHandler.java,332] - use tool handler ret send: 2, 21, {}
+INFO  2015-08-03 15:44:44,068 [UserToolInfoHandler.java,40] - user tool info handler received: 2, 1, {}
+INFO  2015-08-03 15:44:44,069 [UserToolInfoHandler.java,85] - user tool info handler ret send: 2, 1, {}
+INFO  2015-08-03 16:52:36,991 [UserToolInfoHandler.java,40] - user tool info handler received: 2, 1, {}
+INFO  2015-08-03 16:52:36,994 [UserToolInfoHandler.java,85] - user tool info handler ret send: 2, 3, {}
+INFO  2015-08-03 16:54:27,140 [UserToolInfoHandler.java,40] - user tool info handler received: 3, 1, {}
+INFO  2015-08-03 16:54:27,142 [UserToolInfoHandler.java,85] - user tool info handler ret send: 3, 1, {}
+INFO  2015-08-03 16:54:49,710 [UserToolInfoHandler.java,40] - user tool info handler received: 3, 1, {}
+INFO  2015-08-03 16:54:49,712 [UserToolInfoHandler.java,85] - user tool info handler ret send: 3, 2, {}
+INFO  2015-08-03 16:56:07,014 [UserToolInfoHandler.java,40] - user tool info handler received: 3, 1, {}
+INFO  2015-08-03 16:56:07,016 [UserToolInfoHandler.java,85] - user tool info handler ret send: 3, 2, {}
+INFO  2015-08-03 16:57:18,233 [UseToolHandler.java,83] - use tool handler received: 3, 3503001, {}
+INFO  2015-08-03 16:57:18,308 [UseToolHandler.java,332] - use tool handler ret send: 3, 74, {}
+INFO  2015-08-03 16:58:13,191 [UserToolInfoHandler.java,40] - user tool info handler received: 3, 1, {}
+INFO  2015-08-03 16:58:13,197 [UserToolInfoHandler.java,85] - user tool info handler ret send: 3, 5, {}
+INFO  2015-08-03 16:58:39,573 [UserToolInfoHandler.java,40] - user tool info handler received: 4, 1, {}
+INFO  2015-08-03 16:58:39,575 [UserToolInfoHandler.java,85] - user tool info handler ret send: 4, 2, {}
+INFO  2015-08-03 16:59:02,743 [UserToolInfoHandler.java,40] - user tool info handler received: 4, 1, {}
+INFO  2015-08-03 16:59:02,746 [UserToolInfoHandler.java,85] - user tool info handler ret send: 4, 2, {}
+INFO  2015-08-03 17:00:10,545 [UserToolInfoHandler.java,40] - user tool info handler received: 4, 1, {}
+INFO  2015-08-03 17:00:10,547 [UserToolInfoHandler.java,85] - user tool info handler ret send: 4, 2, {}
+INFO  2015-08-03 17:11:55,690 [UserToolInfoHandler.java,40] - user tool info handler received: 3, 1, {}
+INFO  2015-08-03 17:11:55,691 [UserToolInfoHandler.java,85] - user tool info handler ret send: 3, 1, {}
+INFO  2015-08-03 17:36:29,983 [UserToolInfoHandler.java,40] - user tool info handler received: 1, 1, {}
+INFO  2015-08-03 17:36:29,986 [UserToolInfoHandler.java,85] - user tool info handler ret send: 1, 2, {}
+INFO  2015-08-03 19:48:26,062 [UserToolInfoHandler.java,40] - user tool info handler received: 2, 1, {}
+INFO  2015-08-03 19:48:26,065 [UserToolInfoHandler.java,85] - user tool info handler ret send: 2, 2, {}
+INFO  2015-08-03 19:49:29,561 [UseToolHandler.java,83] - use tool handler received: 2, 2501001, {}
+INFO  2015-08-03 19:49:29,566 [UseToolHandler.java,332] - use tool handler ret send: 2, 4, {}

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    
+	<!-- <include
+	    android:id="@+id/game_card_payment_header"
+	    android:layout_alignParentTop="true" 
+	    layout="@layout/wdj_payment_relative_header" /> -->
+	
+	<TextView
+	    android:id="@+id/game_card_payment_wandoujia_support"
+	    android:layout_width="match_parent"
+	    android:layout_height="@dimen/wandoujia_payment_prompt_height"
+	    android:layout_alignParentBottom="true"
+	    android:textSize="14sp"
+	    android:textColor="#AAAAAA"
+	    android:gravity="center"
+	    android:text="@string/wandoujia_payment_prompt" />
+	
+	<ScrollView
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"
+	    android:layout_above="@id/game_card_payment_wandoujia_support"
+	    android:layout_marginLeft="@dimen/wandoujia_game_card_purchase_page_margin_left"
+	    android:layout_marginRight="@dimen/wandoujia_game_card_purchase_page_margin_right"
+	    android:scrollbarStyle="outsideInset" >
+
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:paddingTop="28dip" >
+	        
+	        <TextView
+	            android:id="@+id/game_card_remind_view"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_alignParentTop="true"
+	            android:text="@string/game_card_remind_text"
+	            android:textColor="@color/wandou_font_color_grey"
+	            android:textSize="14sp" />
+
+	        <TextView
+	            android:id="@+id/game_card_type_label"
+	            android:layout_width="wrap_content"
+	            android:layout_height="@dimen/wandoujia_game_card_type_label_height"
+	            android:layout_alignParentLeft="true"
+	            android:layout_below="@id/game_card_remind_view"
+	            android:gravity="center_vertical"
+	            android:text="@string/game_card_type_label"
+	            android:textColor="#777777"
+	            android:textSize="16sp" />
+
+	        <Spinner
+	            android:id="@+id/game_card_selector"
+	            android:layout_width="wrap_content"
+	            android:layout_height="@dimen/wandoujia_game_card_type_label_height"
+	            android:layout_alignTop="@id/game_card_type_label"
+	            android:layout_marginLeft="@dimen/wandoujia_game_card_selector_margin_left"
+	            android:layout_toRightOf="@id/game_card_type_label" />
+
+	        <EditText
+	            android:id="@+id/game_card_value_input"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@id/game_card_type_label"
+	            android:layout_marginTop="30dip"
+	            android:hint="@string/game_card_value_input_hint"
+	            android:textColor="#222222"
+	            android:textColorHint="#777777"
+	            android:textSize="16sp"
+	            android:inputType="number" />
+
+	        <EditText
+	            android:id="@+id/game_card_no_input"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@id/game_card_value_input"
+	            android:layout_marginTop="20dip"
+	            android:hint="@string/game_card_no_input_hint"
+	            android:textColor="#222222"
+	            android:textColorHint="#777777"
+	            android:textSize="16sp"
+	            android:inputType="number" />
+
+	        <EditText
+	            android:id="@+id/game_card_password_input"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@id/game_card_no_input"
+	            android:layout_marginTop="20dip"
+	            android:hint="@string/game_card_password_input_hint"
+	            android:textColor="#222222"
+	            android:textColorHint="#777777"
+	            android:textSize="16sp"
+	            android:inputType="number" />
+
+	        <Button
+	            android:id="@+id/game_card_back_to_button"
+	            android:layout_width="@dimen/wandoujia_payment_button_width"
+	            android:layout_height="@dimen/wandoujia_payment_button_height"
+	            android:layout_alignParentLeft="true"
+	            android:layout_below="@id/game_card_password_input"
+	            android:layout_marginTop="32dip"
+	            android:background="@drawable/wdj_grey_button_drawable"
+	            android:gravity="center"
+	            android:text="@string/payment_back_to_text"
+	            android:textColor="#222222"
+	            android:textSize="18sp" />
+
+	        <Button
+	            android:id="@+id/game_card_purchase_at_once_button"
+	            android:layout_width="@dimen/wandoujia_payment_button_width"
+	            android:layout_height="@dimen/wandoujia_payment_button_height"
+	            android:layout_alignParentRight="true"
+	            android:layout_alignTop="@id/game_card_back_to_button"
+	            android:background="@drawable/wdj_payment_general_button_background"
+	            android:gravity="center"
+	            android:text="@string/payment_at_once_text"
+	            android:textColor="#FFFFFF"
+	            android:textSize="18sp" />
+	    </RelativeLayout>
+	</ScrollView>
+</RelativeLayout>

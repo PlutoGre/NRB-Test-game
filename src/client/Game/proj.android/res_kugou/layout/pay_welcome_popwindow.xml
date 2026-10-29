@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/pay_welcome_bg"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dip"
+        android:src="@drawable/pay_kugou_logo" />
+
+    <TextView
+        android:id="@+id/pay_welcom_tips_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="30dip"
+        android:text="酷狗游戏-欢迎您回来！"
+        android:textColor="@android:color/white"
+        android:textSize="16dip" />
+
+</LinearLayout>

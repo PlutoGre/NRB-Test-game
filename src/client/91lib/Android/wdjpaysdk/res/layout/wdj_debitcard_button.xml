@@ -1,0 +1,47 @@
+ <!-- box start -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bankcard_button"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dip"
+    android:layout_weight="1"
+    android:background="@drawable/wdj_card_button_grey_normal" >
+
+    <RelativeLayout
+        android:id="@id/box_layout"
+         android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/wdj_card_button"
+        android:padding="5dip" >
+
+        <TextView
+            android:id="@+id/alipay_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/debitcard"
+            android:textColor="@color/black"
+            android:textSize="@dimen/small_text_size" />
+
+        <TextView
+            android:id="@+id/alipay_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/alipay_text1"
+            android:text="@string/debitcard_note"
+            android:textColor="@color/black_grey"
+            android:textSize="@dimen/xsmall_text_size" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="32dip"
+        android:layout_height="32dip"
+        android:layout_alignBottom="@+id/box_layout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="right|center_vertical"
+        android:src="@drawable/wdj_array_right" >
+    </ImageView>
+
+</RelativeLayout>
+            <!-- box end -->

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" 
+    android:background="@drawable/egamewebfee_login_bg">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        >
+
+        <LinearLayout
+            android:id="@+id/login_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" 
+            >
+
+            <EditText
+                android:id="@+id/account"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:hint="请输入账号"
+                android:imeOptions="actionNext"
+                android:singleLine="true" 
+                android:background="@drawable/egamewebfee_login_et_bg"/>
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dip"
+                android:hint="请输入密码"
+                android:imeOptions="actionDone"
+                android:password="true"
+                android:singleLine="true" 
+                android:background="@drawable/egamewebfee_login_et_bg"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dip" >
+
+                <Button
+                    android:id="@+id/login"
+                    android:layout_width="110dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="登录" 
+                    android:background="@drawable/egamewebfee_btn_login_selector"/>
+
+                <Button
+                    android:id="@+id/register"
+                    android:layout_width="110dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dip"
+                    android:singleLine="true"
+                    android:text="注册" 
+                    android:background="@drawable/egamewebfee_btn_reg_selector"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="5dip" >
+                
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/egamewebfee_forget_pwd" />
+                
+                <TextView
+                    android:id="@+id/forget_password"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text=" 找回密码"
+                    android:textSize="17sp"
+                    android:textColor="@android:color/background_dark" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/forget_pwd_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+             >
+
+            <EditText
+                android:id="@+id/forget_account"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:hint="请输入绑定的手机号"
+                android:singleLine="true" 
+                android:background="@drawable/egamewebfee_login_et_bg"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="10dip" >
+
+                <Button
+                    android:id="@+id/get_pwd"
+                    android:layout_width="115dip"
+                    android:layout_height="wrap_content"
+                    android:text="找回密码" 
+                    android:background="@drawable/egamewebfee_btn_login_selector"/>
+
+                <Button
+                    android:id="@+id/get_cancel"
+                    android:layout_width="115dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dip"
+                    android:singleLine="true"
+                    android:text="取消" 
+                    android:background="@drawable/egamewebfee_btn_login_selector"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/register_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+             >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ellipsize="marquee"
+                android:text="轻松注册帐号与帅哥美女一起游戏人生吧~"
+                android:textColor="#363636" 
+                android:textSize="14sp" >
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp" >
+
+                <RadioGroup
+                    android:id="@+id/gender_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radio_gril"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="女"
+                        android:textColor="#363636" 
+                        android:button="@drawable/egamewebfee_radio_button"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_boy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dip"
+                        android:button="@drawable/egamewebfee_radio_button"
+                        android:checked="true"
+                        android:textColor="#363636"
+                        android:text="男" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/register_phone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:hint="请输入手机号"
+                android:imeOptions="actionNext"
+                android:inputType="phone" 
+                android:background="@drawable/egamewebfee_login_et_bg"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="手机号只用来登录,将被完全保密,请放心填写"
+                android:textColor="#363636"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/get_check_code"
+                android:layout_width="140dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="免费获取验证码" 
+                android:background="@drawable/egamewebfee_btn_login_selector"/>
+
+            <EditText
+                android:id="@+id/register_code"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:hint="请输入您收到的验证码"
+                android:imeOptions="actionDone"
+                android:background="@drawable/egamewebfee_login_et_bg"
+                android:visibility="invisible"
+                 />
+
+            <Button
+                android:id="@+id/register_done"
+                android:layout_width="140dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="完成注册"
+                android:visibility="invisible" 
+                android:background="@drawable/egamewebfee_btn_login_selector"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

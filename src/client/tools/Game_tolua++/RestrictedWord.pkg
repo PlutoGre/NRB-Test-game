@@ -1,0 +1,9 @@
+$#include "RestrictedWord.h"
+
+class RestrictedWord
+{
+	static RestrictedWord* getInstance(){return RestrictedWord::Get();}
+
+	bool isStringOK(const std::string& str);
+};
+

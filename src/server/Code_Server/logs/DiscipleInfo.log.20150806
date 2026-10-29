@@ -1,0 +1,2 @@
+INFO  2015-08-06 10:44:42,045 [UserDiscipleInfoHandler.java,49] - user disciple info received: 5, 1, {}
+INFO  2015-08-06 10:44:42,050 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 5, 2, {}

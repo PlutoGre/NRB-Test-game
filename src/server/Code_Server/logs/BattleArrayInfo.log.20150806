@@ -1,0 +1,4 @@
+INFO  2015-08-06 10:44:42,674 [UserBattleArrayHandler.java,47] - user battle array handler received: 5, 1, {}
+INFO  2015-08-06 10:44:42,681 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 5, 5, {}
+INFO  2015-08-06 10:44:54,823 [UserBattleHandler.java,56] - user battle handler received: 5, 1, 0
+INFO  2015-08-06 10:44:54,839 [UserBattleHandler.java,302] - user battle handler ret send: 5, 16, {}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.oldmountain.dzm.entity">
+	<class name="Title" table="title" dynamic-update="true" dynamic-insert="true">
+		<id name="playerid" column="playerid">
+			<generator class="assigned" />
+		</id>
+		<property name="careertypeid" column="careertypeid" type="int"></property>
+		<property name="careertypenum" column="careertypenum" type="int"></property>
+		<property name="viptypeid" column="viptypeid" type="int"></property>
+		<property name="viptypenum" column="viptypenum" type="float"></property>
+		<property name="challengetypeid" column="challengetypeid" type="int"></property>
+		<property name="challengetypenum" column="challengetypenum" type="int"></property>
+		<property name="chiptypeid" column="chiptypeid" type="int"></property>
+		<property name="chiptypenum" column="chiptypenum" type="int"></property>
+		<property name="fighttypeid" column="fighttypeid" type="int"></property>
+		<property name="fighttypenum" column="fighttypenum" type="int"></property>
+		<property name="battletypeid" column="battletypeid" type="int"></property>
+		<property name="battletypenum" column="battletypenum" type="int"></property>
+		<property name="friendtypeid" column="friendtypeid" type="int"></property>
+		<property name="friendtypenum" column="friendtypenum" type="int"></property>
+		<property name="fightrankid" column="fightrankid" type="int"></property>
+		<property name="fightranknum" column="fightranknum" type="float"></property>
+		<property name="fightranktime" column="fightranktime" type="int"></property>
+		<property name="battlerankid" column="battlerankid" type="int"></property>
+		<property name="battleranknum" column="battleranknum" type="float"></property>
+		<property name="battleranktime" column="battleranktime" type="int"></property>
+	</class>
+</hibernate-mapping>

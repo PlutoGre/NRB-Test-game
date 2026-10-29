@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<SkillBooks>
+	<item quality="1" normal="23" surplusTwo="14" surplusOne="9"/>
+	<item quality="2" normal="38" surplusTwo="14" surplusOne="14"/>
+	<item quality="3" normal="38" surplusTwo="23" surplusOne="14"/>
+	<item quality="4" normal="30" surplusTwo="25" surplusOne="20"/>
+</SkillBooks>
+</root>

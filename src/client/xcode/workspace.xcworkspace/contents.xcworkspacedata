@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:../libOS/iOS/libOS/libOS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../scripting/lua/proj.ios/liblua/liblua.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../91lib/iOS/lib91/lib91.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../protobuf-2.5.0rc1/proj.ios/protobuf/protobuf.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../jsoncpp-src-0.5.0/makefiles/iOS/JsonCpp/JsonCpp.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../cocos2dx/proj.ios/cocos2dx.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:Game/Game.xcodeproj">
+   </FileRef>
+</Workspace>

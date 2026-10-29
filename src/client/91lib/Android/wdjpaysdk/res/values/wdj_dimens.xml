@@ -1,0 +1,86 @@
+<resources>
+
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="xsmall_text_size">14dip</dimen>
+    <dimen name="small_text_size">16dip</dimen>
+    <dimen name="normal_text_size">18dip</dimen>
+    <dimen name="large_text_size">20dip</dimen>
+    <dimen name="xlarge_text_size">22dip</dimen>
+    <dimen name="search_box_height">38dip</dimen>
+    
+    
+    
+    <dimen name="text_size_xmicro">10dip</dimen>
+    <dimen name="text_size_micro">12dip</dimen>
+    <dimen name="text_size_small">14dip</dimen>
+    <dimen name="text_size_normal">16dip</dimen>
+    <dimen name="text_size_big">18dip</dimen>
+    <dimen name="text_size_large">22dip</dimen>
+    <dimen name="text_size_huge">24dip</dimen>
+    <dimen name="login_normal_textSize">20dip</dimen>
+    
+    <dimen name="account_top_margin">20dip</dimen>
+    <dimen name="account_image_margin">10dip</dimen>
+    <dimen name="account_label_margin">10dip</dimen>
+    
+    
+    <dimen name="xsmall_margin">4dip</dimen>
+    <dimen name="small_margin">8dip</dimen>
+    <dimen name="large_margin">18dip</dimen>
+    <dimen name="xlarge_margin">20dip</dimen>
+    <dimen name="normal_margin">12dip</dimen>
+    
+    <dimen name="large_button_height">40dip</dimen>
+    <dimen name="login_width">320dip</dimen>
+	
+    <!-- Payment fragments dimens -->
+    <dimen name="game_icon_width">60dip</dimen>
+    <dimen name="game_icon_height">60dip</dimen>
+    <dimen name="game_icon_margin_top">22dip</dimen>
+    <dimen name="game_icon_margin_left">16dip</dimen>
+    
+    <dimen name="game_purchase_item_name_margin_left">12dip</dimen>
+    <dimen name="game_purchase_item_name_margin_top">2dip</dimen>
+    
+    <dimen name="game_purchase_item_price_margin_bottom">5dip</dimen>
+    
+    <dimen name="payment_icon_width">60dip</dimen>
+    <dimen name="payment_icon_height">60dip</dimen>
+    
+    <dimen name="payment_button_width">60dip</dimen>
+    <dimen name="payment_button_height">30dip</dimen>
+    <dimen name="payment_button_margin_right">9dip</dimen>
+    
+    <dimen name="payment_title_margin_left">12dip</dimen>
+    <dimen name="payment_title_margin_top">8dip</dimen>
+    
+    <dimen name="payment_description_margin_bottom">5dip</dimen>
+    
+    <dimen name="payment_list_divider_margin_top">22dip</dimen>
+    
+    <dimen name="wandoujia_payment_prompt_height">36dip</dimen>
+    
+    <dimen name="wandoujia_payment_list_margin_left">16dip</dimen>
+    <dimen name="wandoujia_payment_list_margin_right">16dip</dimen>
+    
+    <dimen name="wandoujia_payment_dialog_width">344dip</dimen>
+    
+    <dimen name="wandoujia_payment_dialog_padding_left">8dip</dimen>
+    <dimen name="wandoujia_payment_dialog_padding_right">8dip</dimen>
+    <dimen name="wandoujia_payment_dialog_padding_top">8dip</dimen>
+    <dimen name="wandoujia_payment_dialog_padding_bottom">8dip</dimen>
+    
+    <dimen name="wandoujia_game_card_type_label_height">40dip</dimen>
+    <dimen name="wandoujia_game_card_selector_margin_left">10dip</dimen>
+    
+    <dimen name="wandoujia_game_card_purchase_page_margin_left">25dip</dimen>
+    <dimen name="wandoujia_game_card_purchase_page_margin_right">25dip</dimen>
+    
+    <dimen name="wandoujia_recharge_card_purchase_page_margin_left">25dip</dimen>
+    <dimen name="wandoujia_recharge_card_purchase_page_margin_right">25dip</dimen>
+    
+    <dimen name="wandoujia_payment_button_width">140dip</dimen>
+    <dimen name="wandoujia_payment_button_height">46dip</dimen>
+</resources>

@@ -1,0 +1,2 @@
+INFO  2015-08-06 10:44:42,765 [UserMarketInfoHandler.java,33] - user market info handler received: 5, 1, {}
+INFO  2015-08-06 10:44:42,769 [UserMarketInfoHandler.java,89] - user market info handler ret send: 5, 1, {}

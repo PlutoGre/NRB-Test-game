@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<TeamBuffsBoldnesss>
+		<TeamBuffsBoldness quality="1" soulCourage="4" discipleCourage="72"/>
+		<TeamBuffsBoldness quality="2" soulCourage="3" discipleCourage="27"/>
+		<TeamBuffsBoldness quality="3" soulCourage="2" discipleCourage="6"/>
+		<TeamBuffsBoldness quality="4" soulCourage="1" discipleCourage="1"/>
+	</TeamBuffsBoldnesss>
+</root>

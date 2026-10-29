@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_weight="1"
+        layout="@layout/pay_common_title_bar" />
+
+    <include
+        android:layout_weight="1"
+        layout="@layout/pay_common_tips_bar" />
+
+    <LinearLayout
+        android:id="@+id/pay_layout_modiy_user_password"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="@drawable/pay_common_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/pay_go_to_the_charge_button"
+            android:layout_width="230dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/kgpaysdk_green_button_bg_selector"
+            android:shadowColor="#ff000fff"
+            android:text="快速充值"
+            android:visibility="gone"
+            android:textColor="#ffffffff" />
+
+        <Button
+            android:id="@+id/pay_go_to_change_login_button"
+            android:layout_width="230dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip"
+            android:background="@drawable/kgpaysdk_green_button_bg_selector"
+            android:shadowColor="#ff000fff"
+            android:text="切换帐号"
+            android:textColor="#ffffffff" />
+
+        <Button
+            android:id="@+id/pay_go_to_set_user_password_button"
+            android:layout_width="230dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip"
+            android:background="@drawable/kgpaysdk_green_button_bg_selector"
+            android:shadowColor="#ff000fff"
+            android:text="修改密码"
+            android:textColor="#ffffffff" />
+        
+        <Button
+            android:id="@+id/pay_go_to_buy_history"
+            android:layout_width="230dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip"
+            android:background="@drawable/kgpaysdk_green_button_bg_selector"
+            android:shadowColor="#ff000fff"
+            android:text="消费记录"
+            android:textColor="#ffffffff" />
+        
+        <Button
+            android:id="@+id/pay_go_to_bind_phone"
+            android:layout_width="230dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip"
+            android:background="@drawable/kgpaysdk_green_button_bg_selector"
+            android:shadowColor="#ff000fff"
+            android:text="绑定手机"
+            android:textColor="#ffffffff" />
+    </LinearLayout>
+
+    <include
+        android:layout_weight="1"
+        layout="@layout/pay_bottom_bar" />
+
+</LinearLayout>

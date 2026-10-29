@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configs>
+	<tenCoolTime>600</tenCoolTime>
+	<tenCostGold>10</tenCostGold>
+	<hundredCoolTime>86400</hundredCoolTime>
+	<hundredCostGold>100</hundredCostGold>
+	<wanliCoolTime>259200</wanliCoolTime>
+	<wanliCostGold>300</wanliCostGold>
+	<!-- 抽取船员高级奖池所需运气值 -->
+	<pool1>0</pool1>
+	<pool2>0</pool2>
+	<pool3>1700</pool3>
+	<pool4>2700</pool4>
+	<pool5>4200</pool5>
+	<pool6>5100</pool6>
+	<!-- 抽船员不同品质转化魂魄数 -->
+	<soulcount1>18</soulcount1>
+	<soulcount2>9</soulcount2>
+	<soulcount3>3</soulcount3>
+	<soulcount4>1</soulcount4>
+	<!-- 开宝箱进入高级奖池所需运气值 -->
+	<treasurePoolNeed1>0</treasurePoolNeed1>
+	<treasurePoolNeed2>870</treasurePoolNeed2>
+	<treasurePoolNeed3>1470</treasurePoolNeed3>
+	<treasurePoolNeed4>8970</treasurePoolNeed4>
+	<!-- 高级奖池回落额度 -->
+	<treasureClearCount2>500</treasureClearCount2>
+	<treasureClearCount3>900</treasureClearCount3>
+	<!-- 不同投入点宝箱运气值影响系数 -->
+	<careerLuckyProportion>1</careerLuckyProportion>
+	<fightEndLuckyProportion>0.1</fightEndLuckyProportion>
+	<emptyLuckPoolProportion>0.1</emptyLuckPoolProportion>
+	<!-- 深海探宝花费及次数限制costType: 1贝里 2钻石 countLimit:每日最多可抽取次数-->
+	<DeepWaterConfigs>
+		<DeepWaterConfig	typeid="1"  costType="1"	price="1000000"	countLimit="5"/>
+		<DeepWaterConfig	typeid="2"  costType="2"	price="1000"		countLimit="30"/>
+		<DeepWaterConfig	typeid="3"  costType="2"	price="6000"		countLimit="30"/>
+	</DeepWaterConfigs>
+</Configs>

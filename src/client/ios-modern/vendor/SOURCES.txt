@@ -1,0 +1,15 @@
+Pinned source dependencies for ARM64 iOS builds
+
+curl 8.23.0
+https://curl.se/download/curl-8.23.0.tar.xz
+SHA256 8dadd7d2536a314f982ad05a651b713f426bf7d02cc2c76cffb9796f2218e6c5
+License: curl license, see COPYING in the source archive.
+
+libwebp 1.6.0
+https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.6.0.tar.gz
+SHA256 e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564
+License: BSD-style, see COPYING and PATENTS in the source archive.
+
+Fetched from the projects' HTTPS distribution endpoints. prepare.py and CMake
+check these hashes before use. Dependency archives remain source code; no
+prebuilt architecture-specific vendor libraries are distributed by this port.

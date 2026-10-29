@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_weight="1"
+        layout="@layout/pay_common_title_bar" />
+
+    <include
+        android:layout_weight="1"
+        layout="@layout/pay_common_tips_bar" />
+
+    <LinearLayout
+        android:id="@+id/pay_layout_user_register"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="@drawable/pay_common_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dip"
+            android:layout_marginTop="20dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="帐号："
+                android:textColor="#ff666666"
+                android:textSize="16dip" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <EditText
+                    android:id="@+id/pay_login_username"
+                    android:layout_width="215dip"
+                    android:layout_height="35dip"
+                    android:background="@drawable/pay_sp_bg"
+                    android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:hint="限4-20位字母/数字"
+                    android:maxLength="20"
+                    android:paddingRight="30dip"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="16dip" >
+                </EditText>
+
+                <ImageView
+                    android:id="@+id/pay_login_username_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|right"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:src="@drawable/pay_text_clear"
+                    android:visibility="invisible" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/pay_login_username_check"
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_marginLeft="5dip" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/pay_hidden_view"
+            android:layout_width="fill_parent"
+            android:layout_height="1px" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dip"
+            android:layout_marginTop="10dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="密码："
+                android:textColor="#ff666666"
+                android:textSize="16dip" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <EditText
+                    android:id="@+id/pay_login_password"
+                    android:layout_width="215dip"
+                    android:layout_height="35dip"
+                    android:background="@drawable/pay_sp_bg"
+                    android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:hint="限6-16位字母/数字"
+                    android:maxLength="16"
+                    android:paddingRight="30dip"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="16dip" />
+
+                <ImageView
+                    android:id="@+id/pay_login_password_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|right"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:src="@drawable/pay_text_clear"
+                    android:visibility="invisible" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/pay_login_password_check"
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_marginLeft="5dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="手机号码："
+                android:textColor="#ff666666"
+                android:textSize="16dip" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <EditText
+                    android:id="@+id/pay_register_phone_number"
+                    android:layout_width="180dip"
+                    android:layout_height="35dip"
+                    android:background="@drawable/pay_sp_bg"
+                    android:maxLength="11"
+                    android:paddingRight="30dip"
+                    android:phoneNumber="true"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/pay_register_phone_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|right"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:src="@drawable/pay_text_clear"
+                    android:visibility="invisible" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/pay_register_phone_check"
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_marginLeft="5dip" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/pay_register_tips"
+            android:layout_width="250dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/pay_yello_bg"
+            android:padding="5dip"
+            android:textColor="#ff000000"
+            android:textSize="16dip" />
+
+        <Button
+            android:id="@+id/pay_summit_register_button"
+            android:layout_width="250dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/kgpaysdk_green_button_bg_selector"
+            android:shadowColor="#ff000fff"
+            android:text="提交注册"
+            android:textColor="#ffffffff" />
+
+        <Button
+            android:id="@+id/pay_cancel_register_button"
+            android:layout_width="250dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/kgpaysdk_white_button_bg_selector"
+            android:shadowColor="#ffffffff"
+            android:text="取消"
+            android:textColor="#ff000000" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <CheckBox
+                android:id="@+id/pay_agree_kugou_license"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:checked="true"
+                android:text="同意"
+                android:textColor="#ff000000"
+                android:textSize="16dip" />
+
+            <TextView
+                android:id="@+id/pay_agree_kugou_license_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="《酷狗游戏通行证用户协议》"
+                android:textColor="#ff3333ff"
+                android:textSize="16dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.kugou.pay.android.widget.LoadingView
+        android:id="@+id/pay_loading"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="@drawable/pay_common_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+    <include
+        android:layout_weight="1"
+        layout="@layout/pay_bottom_bar" />
+
+</LinearLayout>

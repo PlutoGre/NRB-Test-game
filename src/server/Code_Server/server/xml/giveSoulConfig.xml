@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<!--id表示活动开启的id,递增就行 ,时间这个格式就行-->
+	<GiveSoulConfigs>
+		<GiveSoulConfig id="1" beginTime="2012-06-10_12:00:00" endTime="2012-07-11_12:00:00" />
+		<GiveSoulConfig id="2" beginTime="2012-04-10_12:00:00" endTime="2012-07-11_12:00:00" />
+		<GiveSoulConfig id="3" beginTime="2012-04-10_12:00:00" endTime="2012-07-11_12:00:00" />
+	</GiveSoulConfigs>
+</root>

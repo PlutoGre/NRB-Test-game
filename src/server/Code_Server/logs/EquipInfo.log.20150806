@@ -1,0 +1,2 @@
+INFO  2015-08-06 10:44:42,580 [UserEquipInfoHandler.java,48] - user equip info handler received: 5, 1, {}
+INFO  2015-08-06 10:44:42,588 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 5, 5, {}

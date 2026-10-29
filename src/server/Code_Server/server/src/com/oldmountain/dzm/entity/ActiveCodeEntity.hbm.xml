@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.oldmountain.dzm.entity">
+	<class name="ActiveCodeEntity" table="activecode" dynamic-update="true" dynamic-insert="true">
+		<id name="active_code" column="active_code">
+			<generator class="assigned" />
+		</id>
+		<property name="create_time" column="create_time" type="int"></property>
+		<property name="used_time" column="used_time" type="int"></property>
+		<property name="playerid" column="playerid" type="string"></property>
+		<property name="status" column="status" type="int"></property>
+	</class>
+</hibernate-mapping>

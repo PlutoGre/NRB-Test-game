@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<peony>
+	<connection>
+		<address>0.0.0.0</address>
+		<port>25524</port>
+	</connection> 
+	<PoolSize>5</PoolSize>
+    <FightEndRankSortSize>101</FightEndRankSortSize>
+    <CanUseGm>1</CanUseGm>
+	<Platform>lo</Platform>
+	<ServerId>01</ServerId>
+	<ResourceVersion>1.78.6</ResourceVersion>
+</peony>

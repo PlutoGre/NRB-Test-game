@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<Pools>
+		<Pool id="1" pool="1" reward_type="12001" reward_id="2002" reward_count="10" rate="100"/>
+		<Pool id="2" pool="1" reward_type="11001" reward_id="1001" reward_count="20" rate="0"/>
+		<Pool id="3" pool="2" reward_type="32001" reward_id="0" reward_count="1" rate="0"/>
+		<Pool id="4" pool="2" reward_type="32002" reward_id="0" reward_count="1" rate="70"/>
+		<Pool id="5" pool="2" reward_type="32003" reward_id="0" reward_count="1" rate="30"/>
+		<Pool id="6" pool="3" reward_type="61001" reward_id="2503001" reward_count="1" rate="30"/>
+		<Pool id="7" pool="3" reward_type="11001" reward_id="1001" reward_count="20" rate="0"/>
+		<Pool id="8" pool="3" reward_type="32002" reward_id="0" reward_count="1" rate="20"/>
+		<Pool id="9" pool="3" reward_type="32003" reward_id="0" reward_count="1" rate="20"/>
+		<Pool id="10" pool="3" reward_type="12001" reward_id="2002" reward_count="10" rate="20"/>
+		<Pool id="11" pool="3" reward_type="61001" reward_id="1503002" reward_count="1" rate="10"/>
+	</Pools>
+</root>

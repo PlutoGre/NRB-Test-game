@@ -1,0 +1,144 @@
+name: iOS unsigned build
+
+on:
+  workflow_dispatch:
+    inputs:
+      server_host:
+        description: LAN fallback host; enter Quick Tunnel HTTPS URL in the app after installation
+        required: true
+        default: '192.168.1.100'
+        type: string
+      web_port:
+        description: Resource server port
+        required: true
+        default: '18081'
+        type: string
+      game_port:
+        description: Game TCP port
+        required: true
+        default: '25524'
+        type: string
+      resource_version:
+        description: Resource version matching the server deployment
+        required: true
+        default: '1.78.6'
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ios-unsigned-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: macos-15
+    timeout-minutes: 45
+    env:
+      SERVER_HOST: ${{ inputs.server_host }}
+      WEB_PORT: ${{ inputs.web_port }}
+      GAME_PORT: ${{ inputs.game_port }}
+      RESOURCE_VERSION: ${{ inputs.resource_version }}
+    steps:
+      - name: Download repository
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Install Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Restore source package
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib
+          import zipfile
+          source = Path('source')
+          parts = sorted(source.glob('onepiece-ios-source.zip.[0-9][0-9][0-9]'))
+          if not parts:
+              raise SystemExit('Upload the source folder, including all ZIP parts, first.')
+          expected = (source / 'onepiece-ios-source.zip.sha256').read_text().split()[0]
+          archive = Path('onepiece-ios-source.zip')
+          with archive.open('wb') as output:
+              for part in parts:
+                  output.write(part.read_bytes())
+          if hashlib.sha256(archive.read_bytes()).hexdigest() != expected:
+              raise SystemExit('Source checksum mismatch: check that every part was uploaded.')
+          destination = Path('work').resolve()
+          with zipfile.ZipFile(archive) as package:
+              for member in package.infolist():
+                  target = (destination / member.filename).resolve()
+                  if not target.is_relative_to(destination):
+                      raise SystemExit('Invalid archive path')
+              package.extractall(destination)
+          PY
+
+      - name: Prepare build tools and record environment
+        shell: bash
+        run: |
+          python -m pip install 'cmake>=3.24,<4'
+          mkdir -p outputs
+          {
+            sw_vers
+            xcodebuild -version
+            cmake --version
+            python --version
+          } > outputs/environment.txt 2>&1
+          cat outputs/environment.txt
+
+      - name: Prepare client sources and assets
+        working-directory: work/src/client/ios-modern
+        run: python prepare.py --host "$SERVER_HOST" --web-port "$WEB_PORT" --game-port "$GAME_PORT" --resource-version "$RESOURCE_VERSION"
+
+      - name: Compile unsigned iPhone client
+        working-directory: work/src/client/ios-modern
+        run: python build.py --action build --sdk iphoneos --bundle-id org.onepiece.local
+
+      - name: Package unsigned app
+        shell: bash
+        run: |
+          tar -czf outputs/onepiece-unsigned-iphoneos-app.tar.gz \
+            -C work/src/client/ios-modern/generated/build-iphoneos/DerivedData/Build/Products/Debug-iphoneos \
+            OnePiece.app
+          python - <<'PY'
+          from pathlib import Path
+          import zipfile
+          products = Path('work/src/client/ios-modern/generated/build-iphoneos/DerivedData/Build/Products/Debug-iphoneos')
+          app = products / 'OnePiece.app'
+          with zipfile.ZipFile('outputs/onepiece-unsigned-for-resigning.ipa', 'w', zipfile.ZIP_DEFLATED) as archive:
+              for path in sorted(app.rglob('*')):
+                  if path.is_file():
+                      archive.write(path, 'Payload/' + path.relative_to(products).as_posix())
+          Path('outputs/UNSIGNED-NOT-INSTALLABLE.txt').write_text(
+              'This IPA is unsigned. It requires valid signing/re-signing before installation. '
+              'A successful compile is not an iPhone gameplay verification.\n', encoding='utf-8')
+          PY
+
+      - name: Save unsigned app
+        uses: actions/upload-artifact@v7
+        with:
+          name: ios-unsigned-app
+          path: |
+            outputs/onepiece-unsigned-iphoneos-app.tar.gz
+            outputs/onepiece-unsigned-for-resigning.ipa
+            outputs/UNSIGNED-NOT-INSTALLABLE.txt
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 0
+
+      - name: Save build logs even on failure
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: ios-build-logs
+          path: |
+            outputs/environment.txt
+            work/src/client/ios-modern/generated/build-iphoneos/build.log
+            work/src/client/ios-modern/generated/build-iphoneos/result.json
+          if-no-files-found: warn
+          retention-days: 7

@@ -1,0 +1,310 @@
+INFO  2015-08-04 11:10:10,153 [UserBasicInfoHandler.java,48] - user basic info handler received: 1, 1, {}
+INFO  2015-08-04 11:10:10,172 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 1, 12, {}
+INFO  2015-08-04 11:10:10,583 [UserSoulInfoHandler.java,38] - user soul info handler received: 1, 1, {}
+INFO  2015-08-04 11:10:10,584 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 1, 0, {}
+INFO  2015-08-04 11:10:10,715 [UserCareerInfoHandler.java,48] - user career info handler received: 1, 1, {}
+INFO  2015-08-04 11:10:10,722 [UserCareerInfoHandler.java,121] - user career info handler ret send: 1, 7, {}
+INFO  2015-08-04 11:10:23,384 [UserBasicInfoHandler.java,48] - user basic info handler received: 1, 1, {}
+INFO  2015-08-04 11:10:23,391 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 1, 7, {}
+INFO  2015-08-04 11:12:29,059 [UserBasicInfoHandler.java,48] - user basic info handler received: 4, 1, {}
+INFO  2015-08-04 11:12:29,066 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 4, 7, {}
+INFO  2015-08-04 11:12:29,389 [UserSoulInfoHandler.java,38] - user soul info handler received: 4, 1, {}
+INFO  2015-08-04 11:12:29,390 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 4, 0, {}
+INFO  2015-08-04 11:12:29,553 [UserCareerInfoHandler.java,48] - user career info handler received: 4, 1, {}
+INFO  2015-08-04 11:12:29,555 [UserCareerInfoHandler.java,121] - user career info handler ret send: 4, 2, {}
+INFO  2015-08-04 11:13:12,207 [UserBasicInfoHandler.java,48] - user basic info handler received: 4, 1, {}
+INFO  2015-08-04 11:13:12,216 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 4, 9, {}
+INFO  2015-08-04 11:14:52,615 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-04 11:14:52,622 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 7, {}
+INFO  2015-08-04 11:14:53,026 [UserSoulInfoHandler.java,38] - user soul info handler received: 5, 1, {}
+INFO  2015-08-04 11:14:53,027 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 5, 1, {}
+INFO  2015-08-04 11:14:53,188 [UserCareerInfoHandler.java,48] - user career info handler received: 5, 1, {}
+INFO  2015-08-04 11:14:53,189 [UserCareerInfoHandler.java,121] - user career info handler ret send: 5, 1, {}
+INFO  2015-08-04 11:17:30,609 [UserBasicInfoHandler.java,48] - user basic info handler received: 6, 1, {}
+INFO  2015-08-04 11:17:30,622 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 6, 13, {}
+INFO  2015-08-04 11:17:30,949 [UserSoulInfoHandler.java,38] - user soul info handler received: 6, 1, {}
+INFO  2015-08-04 11:17:30,950 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 6, 1, {}
+INFO  2015-08-04 11:17:31,113 [UserCareerInfoHandler.java,48] - user career info handler received: 6, 1, {}
+INFO  2015-08-04 11:17:31,114 [UserCareerInfoHandler.java,121] - user career info handler ret send: 6, 1, {}
+INFO  2015-08-04 11:17:41,138 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-04 11:17:41,147 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 9, {}
+INFO  2015-08-04 11:17:41,631 [UserSoulInfoHandler.java,38] - user soul info handler received: 5, 1, {}
+INFO  2015-08-04 11:17:41,632 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 5, 1, {}
+INFO  2015-08-04 11:17:41,794 [UserCareerInfoHandler.java,48] - user career info handler received: 5, 1, {}
+INFO  2015-08-04 11:17:41,795 [UserCareerInfoHandler.java,121] - user career info handler ret send: 5, 1, {}
+INFO  2015-08-04 11:19:53,053 [UserBasicInfoHandler.java,48] - user basic info handler received: 7, 1, {}
+INFO  2015-08-04 11:19:53,056 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 7, 3, {}
+INFO  2015-08-04 11:19:53,297 [UserSoulInfoHandler.java,38] - user soul info handler received: 7, 1, {}
+INFO  2015-08-04 11:19:53,297 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 7, 0, {}
+INFO  2015-08-04 11:19:53,457 [UserCareerInfoHandler.java,48] - user career info handler received: 7, 1, {}
+INFO  2015-08-04 11:19:53,457 [UserCareerInfoHandler.java,121] - user career info handler ret send: 7, 0, {}
+INFO  2015-08-04 11:20:11,781 [UserBasicInfoHandler.java,48] - user basic info handler received: 8, 1, {}
+INFO  2015-08-04 11:20:11,784 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 8, 3, {}
+INFO  2015-08-04 11:20:12,025 [UserSoulInfoHandler.java,38] - user soul info handler received: 8, 1, {}
+INFO  2015-08-04 11:20:12,025 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 8, 0, {}
+INFO  2015-08-04 11:20:12,185 [UserCareerInfoHandler.java,48] - user career info handler received: 8, 1, {}
+INFO  2015-08-04 11:20:12,185 [UserCareerInfoHandler.java,121] - user career info handler ret send: 8, 0, {}
+INFO  2015-08-04 11:22:13,101 [UserBasicInfoHandler.java,48] - user basic info handler received: 8, 1, {}
+INFO  2015-08-04 11:22:13,109 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 8, 8, {}
+INFO  2015-08-04 11:22:13,354 [UserSoulInfoHandler.java,38] - user soul info handler received: 8, 1, {}
+INFO  2015-08-04 11:22:13,355 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 8, 1, {}
+INFO  2015-08-04 11:22:13,516 [UserCareerInfoHandler.java,48] - user career info handler received: 8, 1, {}
+INFO  2015-08-04 11:22:13,517 [UserCareerInfoHandler.java,121] - user career info handler ret send: 8, 1, {}
+INFO  2015-08-04 11:22:15,926 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-04 11:22:15,934 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 8, {}
+INFO  2015-08-04 11:22:16,258 [UserSoulInfoHandler.java,38] - user soul info handler received: 5, 1, {}
+INFO  2015-08-04 11:22:16,259 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 5, 1, {}
+INFO  2015-08-04 11:22:16,420 [UserCareerInfoHandler.java,48] - user career info handler received: 5, 1, {}
+INFO  2015-08-04 11:22:16,421 [UserCareerInfoHandler.java,121] - user career info handler ret send: 5, 1, {}
+INFO  2015-08-04 11:22:27,769 [UserBasicInfoHandler.java,48] - user basic info handler received: 8, 1, {}
+INFO  2015-08-04 11:22:27,776 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 8, 7, {}
+INFO  2015-08-04 11:22:34,357 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-04 11:22:34,368 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 11, {}
+INFO  2015-08-04 11:28:28,975 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-04 11:28:28,983 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 7, {}
+INFO  2015-08-04 11:28:29,386 [UserSoulInfoHandler.java,38] - user soul info handler received: 5, 1, {}
+INFO  2015-08-04 11:28:29,386 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 5, 0, {}
+INFO  2015-08-04 11:28:29,548 [UserCareerInfoHandler.java,48] - user career info handler received: 5, 1, {}
+INFO  2015-08-04 11:28:29,549 [UserCareerInfoHandler.java,121] - user career info handler ret send: 5, 1, {}
+INFO  2015-08-04 11:52:16,149 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-04 11:52:16,158 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 9, {}
+INFO  2015-08-04 12:22:15,239 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-04 12:22:15,250 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 11, {}
+INFO  2015-08-04 12:49:16,787 [UserBasicInfoHandler.java,48] - user basic info handler received: 7, 1, {}
+INFO  2015-08-04 12:49:16,795 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 7, 8, {}
+INFO  2015-08-04 12:49:17,038 [UserSoulInfoHandler.java,38] - user soul info handler received: 7, 1, {}
+INFO  2015-08-04 12:49:17,039 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 7, 1, {}
+INFO  2015-08-04 12:49:17,200 [UserCareerInfoHandler.java,48] - user career info handler received: 7, 1, {}
+INFO  2015-08-04 12:49:17,201 [UserCareerInfoHandler.java,121] - user career info handler ret send: 7, 1, {}
+INFO  2015-08-04 12:51:10,629 [UserBasicInfoHandler.java,48] - user basic info handler received: 7, 1, {}
+INFO  2015-08-04 12:51:10,639 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 7, 9, {}
+INFO  2015-08-04 12:51:10,882 [UserSoulInfoHandler.java,38] - user soul info handler received: 7, 1, {}
+INFO  2015-08-04 12:51:10,883 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 7, 1, {}
+INFO  2015-08-04 12:51:11,044 [UserCareerInfoHandler.java,48] - user career info handler received: 7, 1, {}
+INFO  2015-08-04 12:51:11,045 [UserCareerInfoHandler.java,121] - user career info handler ret send: 7, 1, {}
+INFO  2015-08-04 12:51:22,740 [UserBasicInfoHandler.java,48] - user basic info handler received: 7, 1, {}
+INFO  2015-08-04 12:51:22,749 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 7, 8, {}
+INFO  2015-08-04 12:52:15,200 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-04 12:52:15,209 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 9, {}
+INFO  2015-08-04 12:57:36,932 [AddPowerHandler.java,59] - add power handler received: getAdventurePower: 7, 1, {}
+INFO  2015-08-04 12:57:36,933 [AddPowerHandler.java,100] - add power handler ret send: getAdventurePower: 7, 0, {}
+INFO  2015-08-04 13:09:07,702 [AddPowerHandler.java,118] - add power handler received: 7, 3, {}
+INFO  2015-08-04 13:09:07,716 [AddPowerHandler.java,191] - add power handler ret send: 7, 13, {}
+INFO  2015-08-04 13:10:44,815 [UserBasicInfoHandler.java,48] - user basic info handler received: 7, 1, {}
+INFO  2015-08-04 13:10:44,825 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 7, 10, {}
+INFO  2015-08-04 13:13:11,214 [AddPowerHandler.java,59] - add power handler received: getAdventurePower: 7, 1, {}
+INFO  2015-08-04 13:13:11,216 [AddPowerHandler.java,100] - add power handler ret send: getAdventurePower: 7, 2, {}
+INFO  2015-08-04 13:18:59,430 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-04 13:18:59,446 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 15, {}
+INFO  2015-08-04 13:19:23,350 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-04 13:19:23,358 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 8, {}
+INFO  2015-08-04 13:19:24,002 [UserSoulInfoHandler.java,38] - user soul info handler received: 5, 1, {}
+INFO  2015-08-04 13:19:24,003 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 5, 1, {}
+INFO  2015-08-04 13:19:24,138 [UserCareerInfoHandler.java,48] - user career info handler received: 5, 1, {}
+INFO  2015-08-04 13:19:24,149 [UserCareerInfoHandler.java,121] - user career info handler ret send: 5, 11, {}
+INFO  2015-08-04 13:22:15,794 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-04 13:22:15,807 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 12, {}
+INFO  2015-08-04 13:22:28,780 [UserBasicInfoHandler.java,48] - user basic info handler received: 9, 1, {}
+INFO  2015-08-04 13:22:28,792 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 9, 12, {}
+INFO  2015-08-04 13:22:29,119 [UserSoulInfoHandler.java,38] - user soul info handler received: 9, 1, {}
+INFO  2015-08-04 13:22:29,120 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 9, 1, {}
+INFO  2015-08-04 13:22:29,281 [UserCareerInfoHandler.java,48] - user career info handler received: 9, 1, {}
+INFO  2015-08-04 13:22:29,282 [UserCareerInfoHandler.java,121] - user career info handler ret send: 9, 1, {}
+INFO  2015-08-04 13:23:57,336 [UserBasicInfoHandler.java,48] - user basic info handler received: 9, 1, {}
+INFO  2015-08-04 13:23:57,346 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 9, 9, {}
+INFO  2015-08-04 13:23:57,593 [UserSoulInfoHandler.java,38] - user soul info handler received: 9, 1, {}
+INFO  2015-08-04 13:23:57,594 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 9, 1, {}
+INFO  2015-08-04 13:23:57,757 [UserCareerInfoHandler.java,48] - user career info handler received: 9, 1, {}
+INFO  2015-08-04 13:23:57,758 [UserCareerInfoHandler.java,121] - user career info handler ret send: 9, 1, {}
+INFO  2015-08-04 13:23:58,826 [UserBasicInfoHandler.java,48] - user basic info handler received: 9, 1, {}
+INFO  2015-08-04 13:23:58,839 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 9, 13, {}
+INFO  2015-08-04 13:26:22,755 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-04 13:26:22,765 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 10, {}
+INFO  2015-08-04 13:33:03,279 [AddPowerHandler.java,59] - add power handler received: getAdventurePower: 9, 1, {}
+INFO  2015-08-04 13:33:03,280 [AddPowerHandler.java,100] - add power handler ret send: getAdventurePower: 9, 1, {}
+INFO  2015-08-04 13:53:57,882 [UserBasicInfoHandler.java,48] - user basic info handler received: 9, 1, {}
+INFO  2015-08-04 13:53:57,893 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 9, 10, {}
+INFO  2015-08-04 14:05:35,273 [UserBasicInfoHandler.java,48] - user basic info handler received: 7, 1, {}
+INFO  2015-08-04 14:05:35,292 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 7, 18, {}
+INFO  2015-08-04 14:05:35,749 [UserSoulInfoHandler.java,38] - user soul info handler received: 7, 1, {}
+INFO  2015-08-04 14:05:35,751 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 7, 1, {}
+INFO  2015-08-04 14:05:35,805 [UserCareerInfoHandler.java,48] - user career info handler received: 7, 1, {}
+INFO  2015-08-04 14:05:35,819 [UserCareerInfoHandler.java,121] - user career info handler ret send: 7, 13, {}
+INFO  2015-08-04 14:19:59,390 [UserBasicInfoHandler.java,48] - user basic info handler received: 10, 1, {}
+INFO  2015-08-04 14:19:59,397 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 10, 7, {}
+INFO  2015-08-04 14:19:59,801 [UserSoulInfoHandler.java,38] - user soul info handler received: 10, 1, {}
+INFO  2015-08-04 14:19:59,802 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 10, 1, {}
+INFO  2015-08-04 14:19:59,963 [UserCareerInfoHandler.java,48] - user career info handler received: 10, 1, {}
+INFO  2015-08-04 14:19:59,964 [UserCareerInfoHandler.java,121] - user career info handler ret send: 10, 1, {}
+INFO  2015-08-04 14:21:10,319 [UserBasicInfoHandler.java,48] - user basic info handler received: 7, 1, {}
+INFO  2015-08-04 14:21:10,330 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 7, 10, {}
+INFO  2015-08-04 14:21:33,454 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-04 14:21:33,461 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 6, {}
+INFO  2015-08-04 14:21:33,784 [UserSoulInfoHandler.java,38] - user soul info handler received: 5, 1, {}
+INFO  2015-08-04 14:21:33,785 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 5, 0, {}
+INFO  2015-08-04 14:21:33,947 [UserCareerInfoHandler.java,48] - user career info handler received: 5, 1, {}
+INFO  2015-08-04 14:21:33,949 [UserCareerInfoHandler.java,121] - user career info handler ret send: 5, 2, {}
+INFO  2015-08-04 14:21:44,223 [AddPowerHandler.java,59] - add power handler received: getAdventurePower: 5, 1, {}
+INFO  2015-08-04 14:21:44,224 [AddPowerHandler.java,100] - add power handler ret send: getAdventurePower: 5, 1, {}
+INFO  2015-08-04 14:22:15,646 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-04 14:22:15,653 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 6, {}
+INFO  2015-08-04 14:40:03,606 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-04 14:40:03,616 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 9, {}
+INFO  2015-08-04 14:40:04,098 [UserSoulInfoHandler.java,38] - user soul info handler received: 5, 1, {}
+INFO  2015-08-04 14:40:04,102 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 5, 2, {}
+INFO  2015-08-04 14:40:04,239 [UserCareerInfoHandler.java,48] - user career info handler received: 5, 1, {}
+INFO  2015-08-04 14:40:04,249 [UserCareerInfoHandler.java,121] - user career info handler ret send: 5, 9, {}
+INFO  2015-08-04 14:40:10,694 [AddPowerHandler.java,59] - add power handler received: getAdventurePower: 5, 1, {}
+INFO  2015-08-04 14:40:10,695 [AddPowerHandler.java,100] - add power handler ret send: getAdventurePower: 5, 0, {}
+INFO  2015-08-04 14:43:52,616 [UserBasicInfoHandler.java,48] - user basic info handler received: 7, 1, {}
+INFO  2015-08-04 14:43:52,626 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 7, 10, {}
+INFO  2015-08-04 14:46:14,903 [AddPowerHandler.java,59] - add power handler received: getAdventurePower: 7, 1, {}
+INFO  2015-08-04 14:46:14,903 [AddPowerHandler.java,100] - add power handler ret send: getAdventurePower: 7, 0, {}
+INFO  2015-08-04 14:51:10,624 [UserBasicInfoHandler.java,48] - user basic info handler received: 7, 1, {}
+INFO  2015-08-04 14:51:10,632 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 7, 8, {}
+INFO  2015-08-04 14:52:51,372 [UserBasicInfoHandler.java,48] - user basic info handler received: 9, 1, {}
+INFO  2015-08-04 14:52:51,382 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 9, 10, {}
+INFO  2015-08-04 14:52:51,628 [UserSoulInfoHandler.java,38] - user soul info handler received: 9, 1, {}
+INFO  2015-08-04 14:52:51,629 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 9, 1, {}
+INFO  2015-08-04 14:52:51,791 [UserCareerInfoHandler.java,48] - user career info handler received: 9, 1, {}
+INFO  2015-08-04 14:52:51,793 [UserCareerInfoHandler.java,121] - user career info handler ret send: 9, 2, {}
+INFO  2015-08-04 14:56:28,934 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-04 14:56:28,942 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 8, {}
+INFO  2015-08-04 14:56:29,265 [UserSoulInfoHandler.java,38] - user soul info handler received: 5, 1, {}
+INFO  2015-08-04 14:56:29,266 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 5, 0, {}
+INFO  2015-08-04 14:56:29,507 [UserCareerInfoHandler.java,48] - user career info handler received: 5, 1, {}
+INFO  2015-08-04 14:56:29,509 [UserCareerInfoHandler.java,121] - user career info handler ret send: 5, 2, {}
+INFO  2015-08-04 14:57:19,926 [AddPowerHandler.java,59] - add power handler received: getAdventurePower: 5, 1, {}
+INFO  2015-08-04 14:57:19,927 [AddPowerHandler.java,100] - add power handler ret send: getAdventurePower: 5, 1, {}
+INFO  2015-08-04 14:58:34,016 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-04 14:58:34,025 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 9, {}
+INFO  2015-08-04 14:58:34,481 [UserSoulInfoHandler.java,38] - user soul info handler received: 5, 1, {}
+INFO  2015-08-04 14:58:34,482 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 5, 1, {}
+INFO  2015-08-04 14:58:34,593 [UserCareerInfoHandler.java,48] - user career info handler received: 5, 1, {}
+INFO  2015-08-04 14:58:34,598 [UserCareerInfoHandler.java,121] - user career info handler ret send: 5, 5, {}
+INFO  2015-08-04 14:58:54,365 [AddPowerHandler.java,59] - add power handler received: getAdventurePower: 5, 1, {}
+INFO  2015-08-04 14:58:54,367 [AddPowerHandler.java,100] - add power handler ret send: getAdventurePower: 5, 1, {}
+INFO  2015-08-04 15:02:28,567 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-04 15:02:28,581 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 13, {}
+INFO  2015-08-04 15:02:29,060 [UserSoulInfoHandler.java,38] - user soul info handler received: 5, 1, {}
+INFO  2015-08-04 15:02:29,061 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 5, 1, {}
+INFO  2015-08-04 15:02:29,268 [UserCareerInfoHandler.java,48] - user career info handler received: 5, 1, {}
+INFO  2015-08-04 15:02:29,277 [UserCareerInfoHandler.java,121] - user career info handler ret send: 5, 9, {}
+INFO  2015-08-04 15:02:57,242 [UserBasicInfoHandler.java,48] - user basic info handler received: 9, 1, {}
+INFO  2015-08-04 15:02:57,253 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 9, 10, {}
+INFO  2015-08-04 15:02:57,498 [UserSoulInfoHandler.java,38] - user soul info handler received: 9, 1, {}
+INFO  2015-08-04 15:02:57,499 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 9, 1, {}
+INFO  2015-08-04 15:02:57,662 [UserCareerInfoHandler.java,48] - user career info handler received: 9, 1, {}
+INFO  2015-08-04 15:02:57,664 [UserCareerInfoHandler.java,121] - user career info handler ret send: 9, 1, {}
+INFO  2015-08-04 15:03:15,369 [UserBasicInfoHandler.java,48] - user basic info handler received: 9, 1, {}
+INFO  2015-08-04 15:03:15,376 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 9, 7, {}
+INFO  2015-08-04 15:03:15,620 [UserSoulInfoHandler.java,38] - user soul info handler received: 9, 1, {}
+INFO  2015-08-04 15:03:15,621 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 9, 1, {}
+INFO  2015-08-04 15:03:49,422 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-04 15:03:49,432 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 9, {}
+INFO  2015-08-04 15:03:49,810 [UserSoulInfoHandler.java,38] - user soul info handler received: 5, 1, {}
+INFO  2015-08-04 15:03:49,811 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 5, 1, {}
+INFO  2015-08-04 15:03:50,000 [UserCareerInfoHandler.java,48] - user career info handler received: 5, 1, {}
+INFO  2015-08-04 15:03:50,005 [UserCareerInfoHandler.java,121] - user career info handler ret send: 5, 5, {}
+INFO  2015-08-04 15:03:57,387 [AddPowerHandler.java,59] - add power handler received: getAdventurePower: 5, 1, {}
+INFO  2015-08-04 15:03:57,388 [AddPowerHandler.java,100] - add power handler ret send: getAdventurePower: 5, 1, {}
+INFO  2015-08-04 15:04:23,986 [UserBasicInfoHandler.java,48] - user basic info handler received: 9, 1, {}
+INFO  2015-08-04 15:04:23,989 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 9, 3, {}
+INFO  2015-08-04 15:04:24,231 [UserSoulInfoHandler.java,38] - user soul info handler received: 9, 1, {}
+INFO  2015-08-04 15:04:24,231 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 9, 0, {}
+INFO  2015-08-04 15:04:24,391 [UserCareerInfoHandler.java,48] - user career info handler received: 9, 1, {}
+INFO  2015-08-04 15:04:24,391 [UserCareerInfoHandler.java,121] - user career info handler ret send: 9, 0, {}
+INFO  2015-08-04 15:05:08,824 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-04 15:05:08,830 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 6, {}
+INFO  2015-08-04 15:05:09,105 [UserSoulInfoHandler.java,38] - user soul info handler received: 5, 1, {}
+INFO  2015-08-04 15:05:09,106 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 5, 1, {}
+INFO  2015-08-04 15:05:09,287 [UserCareerInfoHandler.java,48] - user career info handler received: 5, 1, {}
+INFO  2015-08-04 15:05:09,290 [UserCareerInfoHandler.java,121] - user career info handler ret send: 5, 3, {}
+INFO  2015-08-04 15:06:07,171 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-04 15:06:07,181 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 9, {}
+INFO  2015-08-04 15:06:07,564 [UserSoulInfoHandler.java,38] - user soul info handler received: 5, 1, {}
+INFO  2015-08-04 15:06:07,565 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 5, 1, {}
+INFO  2015-08-04 15:06:07,673 [UserCareerInfoHandler.java,48] - user career info handler received: 5, 1, {}
+INFO  2015-08-04 15:06:07,678 [UserCareerInfoHandler.java,121] - user career info handler ret send: 5, 5, {}
+INFO  2015-08-04 15:06:53,827 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-04 15:06:53,838 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 10, {}
+INFO  2015-08-04 15:06:54,226 [UserSoulInfoHandler.java,38] - user soul info handler received: 5, 1, {}
+INFO  2015-08-04 15:06:54,227 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 5, 1, {}
+INFO  2015-08-04 15:06:54,423 [UserCareerInfoHandler.java,48] - user career info handler received: 5, 1, {}
+INFO  2015-08-04 15:06:54,429 [UserCareerInfoHandler.java,121] - user career info handler ret send: 5, 6, {}
+INFO  2015-08-04 15:09:27,164 [UserBasicInfoHandler.java,48] - user basic info handler received: 9, 1, {}
+INFO  2015-08-04 15:09:27,177 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 9, 13, {}
+INFO  2015-08-04 15:10:57,733 [UserBasicInfoHandler.java,48] - user basic info handler received: 9, 1, {}
+INFO  2015-08-04 15:10:57,749 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 9, 15, {}
+INFO  2015-08-04 15:10:58,002 [UserSoulInfoHandler.java,38] - user soul info handler received: 9, 1, {}
+INFO  2015-08-04 15:10:58,003 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 9, 1, {}
+INFO  2015-08-04 15:10:58,062 [UserCareerInfoHandler.java,48] - user career info handler received: 9, 1, {}
+INFO  2015-08-04 15:10:58,070 [UserCareerInfoHandler.java,121] - user career info handler ret send: 9, 7, {}
+INFO  2015-08-04 15:11:33,325 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-04 15:11:33,336 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 10, {}
+INFO  2015-08-04 15:11:33,712 [UserSoulInfoHandler.java,38] - user soul info handler received: 5, 1, {}
+INFO  2015-08-04 15:11:33,714 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 5, 1, {}
+INFO  2015-08-04 15:11:33,907 [UserCareerInfoHandler.java,48] - user career info handler received: 5, 1, {}
+INFO  2015-08-04 15:11:33,913 [UserCareerInfoHandler.java,121] - user career info handler ret send: 5, 6, {}
+INFO  2015-08-04 15:11:43,935 [AddPowerHandler.java,59] - add power handler received: getAdventurePower: 5, 1, {}
+INFO  2015-08-04 15:11:43,936 [AddPowerHandler.java,100] - add power handler ret send: getAdventurePower: 5, 1, {}
+INFO  2015-08-04 15:14:38,487 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-04 15:14:38,491 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 4, {}
+INFO  2015-08-04 15:14:38,763 [UserSoulInfoHandler.java,38] - user soul info handler received: 5, 1, {}
+INFO  2015-08-04 15:14:38,763 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 5, 0, {}
+INFO  2015-08-04 15:14:38,862 [UserCareerInfoHandler.java,48] - user career info handler received: 5, 1, {}
+INFO  2015-08-04 15:14:38,866 [UserCareerInfoHandler.java,121] - user career info handler ret send: 5, 4, {}
+INFO  2015-08-04 15:16:13,255 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-04 15:16:13,259 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 4, {}
+INFO  2015-08-04 15:16:13,582 [UserSoulInfoHandler.java,38] - user soul info handler received: 5, 1, {}
+INFO  2015-08-04 15:16:13,582 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 5, 0, {}
+INFO  2015-08-04 15:16:13,744 [UserCareerInfoHandler.java,48] - user career info handler received: 5, 1, {}
+INFO  2015-08-04 15:16:13,746 [UserCareerInfoHandler.java,121] - user career info handler ret send: 5, 2, {}
+INFO  2015-08-04 15:20:17,213 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-04 15:20:17,222 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 9, {}
+INFO  2015-08-04 15:20:17,599 [UserSoulInfoHandler.java,38] - user soul info handler received: 5, 1, {}
+INFO  2015-08-04 15:20:17,600 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 5, 0, {}
+INFO  2015-08-04 15:20:17,790 [UserCareerInfoHandler.java,48] - user career info handler received: 5, 1, {}
+INFO  2015-08-04 15:20:17,796 [UserCareerInfoHandler.java,121] - user career info handler ret send: 5, 5, {}
+INFO  2015-08-04 15:22:15,357 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-04 15:22:15,368 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 11, {}
+INFO  2015-08-04 15:26:37,431 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-04 15:26:37,442 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 10, {}
+INFO  2015-08-04 15:26:40,803 [UserBasicInfoHandler.java,48] - user basic info handler received: 9, 1, {}
+INFO  2015-08-04 15:26:40,814 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 9, 11, {}
+INFO  2015-08-04 15:27:09,093 [AddPowerHandler.java,118] - add power handler received: 5, 3, {}
+INFO  2015-08-04 15:27:09,096 [AddPowerHandler.java,191] - add power handler ret send: 5, 2, {}
+INFO  2015-08-04 15:34:34,928 [AddPowerHandler.java,59] - add power handler received: getAdventurePower: 5, 1, {}
+INFO  2015-08-04 15:34:34,928 [AddPowerHandler.java,100] - add power handler ret send: getAdventurePower: 5, 0, {}
+INFO  2015-08-04 20:07:53,389 [UserBasicInfoHandler.java,48] - user basic info handler received: 9, 1, {}
+INFO  2015-08-04 20:07:53,401 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 9, 11, {}
+INFO  2015-08-05 19:31:15,041 [UserBasicInfoHandler.java,48] - user basic info handler received: 9, 1, {}
+INFO  2015-08-05 19:31:15,057 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 9, 13, {}
+INFO  2015-08-05 19:31:15,308 [UserSoulInfoHandler.java,38] - user soul info handler received: 9, 1, {}
+INFO  2015-08-05 19:31:15,310 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 9, 1, {}
+INFO  2015-08-05 19:31:15,448 [UserCareerInfoHandler.java,48] - user career info handler received: 9, 1, {}
+INFO  2015-08-05 19:31:15,458 [UserCareerInfoHandler.java,121] - user career info handler ret send: 9, 9, {}
+INFO  2015-08-05 19:31:55,454 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-05 19:31:55,463 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 9, {}
+INFO  2015-08-05 19:31:55,844 [UserSoulInfoHandler.java,38] - user soul info handler received: 5, 1, {}
+INFO  2015-08-05 19:31:55,846 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 5, 2, {}
+INFO  2015-08-05 19:31:56,041 [UserCareerInfoHandler.java,48] - user career info handler received: 5, 1, {}
+INFO  2015-08-05 19:31:56,048 [UserCareerInfoHandler.java,121] - user career info handler ret send: 5, 6, {}
+INFO  2015-08-05 19:32:33,743 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-05 19:32:33,750 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 7, {}
+INFO  2015-08-05 19:37:54,998 [UserBasicInfoHandler.java,48] - user basic info handler received: 9, 1, {}
+INFO  2015-08-05 19:37:55,001 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 9, 3, {}
+INFO  2015-08-05 19:37:55,242 [UserSoulInfoHandler.java,38] - user soul info handler received: 9, 1, {}
+INFO  2015-08-05 19:37:55,242 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 9, 0, {}
+INFO  2015-08-05 19:37:55,403 [UserCareerInfoHandler.java,48] - user career info handler received: 9, 1, {}
+INFO  2015-08-05 19:37:55,404 [UserCareerInfoHandler.java,121] - user career info handler ret send: 9, 1, {}
+INFO  2015-08-05 19:49:08,649 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-05 19:49:08,652 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 3, {}
+INFO  2015-08-05 19:51:33,807 [AddPowerHandler.java,59] - add power handler received: getAdventurePower: 5, 1, {}
+INFO  2015-08-05 19:51:33,809 [AddPowerHandler.java,100] - add power handler ret send: getAdventurePower: 5, 0, {}
+INFO  2015-08-05 19:52:15,619 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-05 19:52:15,628 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 9, {}
+INFO  2015-08-05 20:02:33,691 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-05 20:02:33,694 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 3, {}
+INFO  2015-08-05 20:22:15,666 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-05 20:22:15,669 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 3, {}

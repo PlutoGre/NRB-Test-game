@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="account_email">邮箱/手机号</string>
+    <string name="account_pwd">密码</string>
+    <string name="account_capcha">验证码</string>
+    <string name="account_login">登录</string>
+    <string name="account_register">注册</string>
+    <string name="account_savepwd">记住登录</string>
+
+</resources>

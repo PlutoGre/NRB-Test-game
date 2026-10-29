@@ -1,0 +1,37 @@
+
+	class CCReViSvItemData : public CCObject
+	{
+		CCReViSvItemData();
+		CCPoint		m_ptPosition;
+		unsigned int	m_iIdx;
+	};
+
+	class CCReViSvItemNodeFacade
+	{
+		virtual void initItemView() = 0;
+		virtual void refreshItemView(CCReViSvItemData* pItem) = 0;
+	};
+	
+	class CCReViScrollViewFacade
+	{
+		CCReViScrollViewFacade(CCScrollView* pView);
+		virtual ~CCReViScrollViewFacade();
+		
+		bool	init(unsigned int iNum = 4, unsigned int iSize = 4);
+
+		unsigned int getMaxDynamicControledItemViewsNum();
+
+		void	addItem(CCReViSvItemData* item, CCReViSvItemNodeFacade* node = NULL);
+		void	insertItemAtIdx(CCReViSvItemData* item, int idx, CCReViSvItemNodeFacade* node = NULL);
+		void	removeItem(CCReViSvItemData* item);
+		void	removeItemAtIdx(int idx);
+		void	clearAllItems();
+
+		void	setDynamicItemsStartPosition(unsigned int idx);
+
+		CCReViSvItemNodeFacade* findItemNodeByItemData(CCReViSvItemData* pItem);
+
+		CCReViSvItemNodeFacade* findItemNodeByIndex(unsigned int index);
+	};
+
+

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.oldmountain.dzm.entity">
+	<class name="Equip" table="equip" dynamic-update="true" dynamic-insert="true">
+		<id name="id" column="id">
+			<generator class="native" />
+		</id>
+		<property name="playerid" column="playerid" type="int"></property>
+		<property name="itemid" column="itemid" type="int"></property>
+		<property name="type" column="type" type="int"></property>
+		<property name="level" column="level" type="int"></property>
+		<property name="health" column="health" type="float"></property>
+		<property name="attack" column="attack" type="float"/>
+		<property name="defence" column="defence" type="float"></property>
+		<property name="refinexp" column="refinexp" type="int"></property>
+		<property name="refinelevel" column="refinelevel" type="int"></property>
+		<property name="battleid" column="battleid" type="int"></property>
+		<property name="expiretime" column="expire_time" type="int"></property>
+		<property name="diamondInfo" column="diamondinfo" type="string"/>
+	</class>
+</hibernate-mapping>

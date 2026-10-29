@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"  
+    android:id="@+id/thidrlogin_dialog"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:background="@drawable/thirdlogin_dialog_bg" 
+    android:layout_height="match_parent"> <!--    android:background="@drawable/thirdlogin_dialog_bg"    -->
+    	<LinearLayout 
+    android:orientation="vertical"  
+    android:layout_gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	>    
+    	
+    	<ImageView 
+    	android:id="@+id/image"
+    	android:src="@drawable/third_qq"
+    	android:scaleType="fitXY"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	/>  
+    <LinearLayout
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_gravity="center_horizontal"
+    	android:layout_height="wrap_content"> 
+    	<TableLayout 
+    		android:id="@+id/loginInfo"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:stretchColumns="1">
+    		<TableRow>
+    			<TextView 
+    				android:text="账号:"    				
+    				android:textStyle="bold"
+    				android:textColor="#000"
+    				android:gravity="right"    
+    				android:padding="5dip"  					
+    			/>
+    			<EditText 
+    				android:id="@+id/username"
+    				android:inputType="textPersonName"
+    				android:singleLine="true"
+    			/>
+    		</TableRow>
+    		<TableRow>
+    			<TextView 
+    				android:text="密码:"    				
+    				android:textStyle="bold"
+    				android:textColor="#000000"
+    				android:gravity="right"    
+    				android:padding="5dip" 				
+    			/>
+    			<EditText 
+    				android:id="@+id/password"
+    				android:singleLine="true"
+    				android:password="true"
+    				android:inputType="textPassword"/>
+    		</TableRow>
+    	</TableLayout>    	
+    </LinearLayout>
+    <RelativeLayout 
+    	android:id="@+id/loginSet"    
+    	android:layout_gravity="center_horizontal"
+    	android:layout_height="wrap_content" 
+    	android:layout_width="fill_parent">
+        <CheckBox         	
+        	android:id="@+id/rememberPassword" 
+        	android:layout_width="wrap_content" 
+        	android:layout_height="wrap_content"
+        	android:text="记住密码" 
+        	android:textColor="#000000"
+        	android:checked="true"
+        	android:layout_marginLeft="5dip"
+        	/>
+        <CheckBox 
+        	android:id="@+id/autoLogin" 
+        	android:layout_width="wrap_content" 
+        	android:text="自动登录" 
+        	android:textColor="#000000"
+        	android:layout_height="wrap_content" 
+        	android:layout_marginRight="5dip"
+        	android:layout_alignParentTop="true" 
+        	android:layout_alignParentRight="true"/>    	
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+    <Button 
+    	android:id="@+id/login_bt"
+    	android:text="登  录 "
+    	android:paddingTop="3dip"
+    	android:paddingBottom="3dip"
+    	android:paddingLeft="40dip"
+    	android:paddingRight="40dip"    	
+    	android:layout_width="wrap_content"    
+    	android:layout_height="wrap_content"    	
+    	android:layout_gravity="center_horizontal" 
+    	/>
+    
+    <Button 
+    	android:id="@+id/login_regeit"
+    	android:text="注  册"
+    	android:paddingTop="3dip"
+    	android:paddingBottom="3dip"
+    	android:paddingLeft="40dip"
+    	android:paddingRight="40dip"    	
+    	android:layout_width="wrap_content"    
+    	android:layout_height="wrap_content"    	
+    	android:layout_gravity="center_horizontal" 
+    	/>
+	</LinearLayout>
+	
+<RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+   <TextView
+    android:id="@+id/txtlogin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="用以下方式登录："
+    android:textColor="@color/appBlack"
+    android:textAppearance="?android:attr/textAppearanceMedium" />
+<RelativeLayout 
+    android:id="@+id/firstlogo"
+    android:layout_below="@+id/txtlogin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+    		
+    <ImageButton
+        android:id="@+id/imageButtonqq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/thirdloginqq" />
+
+	<ImageButton
+    android:id="@+id/imageButtonweibo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@+id/imageButtonqq"
+    android:background="@android:color/transparent"
+    android:src="@drawable/thirdloginweibo" />
+	<ImageButton
+    android:id="@+id/imageButtonrenren"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@+id/imageButtonweibo"
+    android:background="@android:color/transparent"
+    android:src="@drawable/thirdloginrenren" />
+	
+	
+	 <ImageButton
+    android:id="@+id/imageButtondouban"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/imageButtonqq"
+    android:paddingLeft="10dp"
+    android:background="@android:color/transparent"
+    android:src="@drawable/third_doubanlogin" />
+
+<ImageButton
+    android:id="@+id/imageButtontaobao"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@+id/imageButtondouban"
+    android:layout_toRightOf="@+id/imageButtonweibo"
+    android:background="@android:color/transparent"
+    android:src="@drawable/third_taobaologin" />
+
+	</RelativeLayout>
+ 
+
+<TextView
+    android:id="@+id/show"
+    android:textColor="@color/appBlack"
+    android:layout_below="@+id/firstlogo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="数据："
+    android:textAppearance="?android:attr/textAppearanceSmall" />
+</RelativeLayout>   	
+
+</LinearLayout>
+
+</RelativeLayout>

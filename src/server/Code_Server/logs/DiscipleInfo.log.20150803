@@ -1,0 +1,70 @@
+INFO  2015-08-03 10:15:50,731 [UserDiscipleInfoHandler.java,49] - user disciple info received: 3, 1, {}
+INFO  2015-08-03 10:15:50,735 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 3, 4, {}
+INFO  2015-08-03 10:40:54,202 [UserDiscipleInfoHandler.java,49] - user disciple info received: 3, 1, {}
+INFO  2015-08-03 10:40:54,207 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 3, 4, {}
+INFO  2015-08-03 10:55:27,819 [UserDiscipleInfoHandler.java,49] - user disciple info received: 3, 1, {}
+INFO  2015-08-03 10:55:27,826 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 3, 6, {}
+INFO  2015-08-03 10:56:21,492 [UserDiscipleInfoHandler.java,49] - user disciple info received: 2, 1, {}
+INFO  2015-08-03 10:56:21,497 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 2, 5, {}
+INFO  2015-08-03 11:17:51,236 [UserDiscipleInfoHandler.java,49] - user disciple info received: 3, 1, {}
+INFO  2015-08-03 11:17:51,241 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 3, 5, {}
+INFO  2015-08-03 11:18:34,347 [UserDiscipleInfoHandler.java,49] - user disciple info received: 2, 1, {}
+INFO  2015-08-03 11:18:34,347 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 2, 0, {}
+INFO  2015-08-03 11:32:50,166 [UserDiscipleInfoHandler.java,49] - user disciple info received: 2, 1, {}
+INFO  2015-08-03 11:32:50,172 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 2, 4, {}
+INFO  2015-08-03 12:09:08,028 [UserDiscipleInfoHandler.java,49] - user disciple info received: 2, 1, {}
+INFO  2015-08-03 12:09:08,029 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 2, 1, {}
+INFO  2015-08-03 12:16:01,082 [UserDiscipleInfoHandler.java,49] - user disciple info received: 2, 1, {}
+INFO  2015-08-03 12:16:01,083 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 2, 1, {}
+INFO  2015-08-03 12:17:36,687 [UserDiscipleInfoHandler.java,49] - user disciple info received: 2, 1, {}
+INFO  2015-08-03 12:17:36,688 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 2, 0, {}
+INFO  2015-08-03 12:18:27,224 [UserDiscipleInfoHandler.java,49] - user disciple info received: 2, 1, {}
+INFO  2015-08-03 12:18:27,225 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 2, 1, {}
+INFO  2015-08-03 12:19:14,798 [UserDiscipleInfoHandler.java,49] - user disciple info received: 2, 1, {}
+INFO  2015-08-03 12:19:14,799 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 2, 1, {}
+INFO  2015-08-03 13:12:52,302 [UserDiscipleInfoHandler.java,49] - user disciple info received: 2, 1, {}
+INFO  2015-08-03 13:12:52,309 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 2, 6, {}
+INFO  2015-08-03 13:28:11,203 [UserDiscipleInfoHandler.java,49] - user disciple info received: 4, 1, {}
+INFO  2015-08-03 13:28:11,203 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 4, 0, {}
+INFO  2015-08-03 13:29:56,856 [UserDiscipleInfoHandler.java,49] - user disciple info received: 4, 1, {}
+INFO  2015-08-03 13:29:56,857 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 4, 0, {}
+INFO  2015-08-03 13:32:33,808 [UserDiscipleInfoHandler.java,49] - user disciple info received: 5, 1, {}
+INFO  2015-08-03 13:32:33,808 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 5, 0, {}
+INFO  2015-08-03 13:38:19,781 [UserDiscipleInfoHandler.java,49] - user disciple info received: 5, 1, {}
+INFO  2015-08-03 13:38:19,782 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 5, 1, {}
+INFO  2015-08-03 13:57:31,824 [UserDiscipleInfoHandler.java,49] - user disciple info received: 2, 1, {}
+INFO  2015-08-03 13:57:31,825 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 2, 1, {}
+INFO  2015-08-03 14:01:30,600 [UserDiscipleInfoHandler.java,49] - user disciple info received: 2, 1, {}
+INFO  2015-08-03 14:01:30,601 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 2, 1, {}
+INFO  2015-08-03 14:05:27,110 [UserDiscipleInfoHandler.java,49] - user disciple info received: 1, 1, {}
+INFO  2015-08-03 14:05:27,111 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 1, 0, {}
+INFO  2015-08-03 14:12:25,745 [UserDiscipleInfoHandler.java,49] - user disciple info received: 2, 1, {}
+INFO  2015-08-03 14:12:25,745 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 2, 0, {}
+INFO  2015-08-03 14:31:34,261 [UserDiscipleInfoHandler.java,49] - user disciple info received: 1, 1, {}
+INFO  2015-08-03 14:31:34,262 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 1, 0, {}
+INFO  2015-08-03 14:39:29,938 [UserDiscipleInfoHandler.java,49] - user disciple info received: 2, 1, {}
+INFO  2015-08-03 14:39:29,946 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 2, 8, {}
+INFO  2015-08-03 15:04:16,293 [UserDiscipleInfoHandler.java,49] - user disciple info received: 2, 1, {}
+INFO  2015-08-03 15:04:16,302 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 2, 8, {}
+INFO  2015-08-03 15:25:39,886 [RecruitDiscipleHandler.java,50] - recruit disciple handler received: 2, 160, {}
+INFO  2015-08-03 15:25:39,909 [RecruitDiscipleHandler.java,117] - recruit disciple handler ret send: 2, 22, {}
+INFO  2015-08-03 15:44:43,907 [UserDiscipleInfoHandler.java,49] - user disciple info received: 2, 1, {}
+INFO  2015-08-03 15:44:43,907 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 2, 0, {}
+INFO  2015-08-03 16:52:36,744 [UserDiscipleInfoHandler.java,49] - user disciple info received: 2, 1, {}
+INFO  2015-08-03 16:52:36,745 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 2, 1, {}
+INFO  2015-08-03 16:54:26,888 [UserDiscipleInfoHandler.java,49] - user disciple info received: 3, 1, {}
+INFO  2015-08-03 16:54:26,888 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 3, 0, {}
+INFO  2015-08-03 16:56:06,932 [UserDiscipleInfoHandler.java,49] - user disciple info received: 3, 1, {}
+INFO  2015-08-03 16:56:06,934 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 3, 2, {}
+INFO  2015-08-03 16:58:12,930 [UserDiscipleInfoHandler.java,49] - user disciple info received: 3, 1, {}
+INFO  2015-08-03 16:58:12,937 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 3, 6, {}
+INFO  2015-08-03 16:58:39,332 [UserDiscipleInfoHandler.java,49] - user disciple info received: 4, 1, {}
+INFO  2015-08-03 16:58:39,333 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 4, 1, {}
+INFO  2015-08-03 17:00:10,463 [UserDiscipleInfoHandler.java,49] - user disciple info received: 4, 1, {}
+INFO  2015-08-03 17:00:10,464 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 4, 1, {}
+INFO  2015-08-03 17:11:55,609 [UserDiscipleInfoHandler.java,49] - user disciple info received: 3, 1, {}
+INFO  2015-08-03 17:11:55,610 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 3, 0, {}
+INFO  2015-08-03 17:36:29,739 [UserDiscipleInfoHandler.java,49] - user disciple info received: 1, 1, {}
+INFO  2015-08-03 17:36:29,740 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 1, 1, {}
+INFO  2015-08-03 19:48:25,893 [UserDiscipleInfoHandler.java,49] - user disciple info received: 2, 1, {}
+INFO  2015-08-03 19:48:25,896 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 2, 3, {}

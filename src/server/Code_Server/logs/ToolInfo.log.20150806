@@ -1,0 +1,2 @@
+INFO  2015-08-06 10:44:42,134 [UserToolInfoHandler.java,40] - user tool info handler received: 5, 1, {}
+INFO  2015-08-06 10:44:42,139 [UserToolInfoHandler.java,85] - user tool info handler ret send: 5, 2, {}

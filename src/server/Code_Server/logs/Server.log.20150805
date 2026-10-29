@@ -1,0 +1,856 @@
+INFO  2015-08-05 19:31:00,855 [XMLTemplateService.java,962] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/skill.xml
+INFO  2015-08-05 19:31:00,988 [XMLTemplateService.java,991] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/equip.xml
+INFO  2015-08-05 19:31:01,083 [XMLTemplateService.java,1035] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/disciple.xml
+INFO  2015-08-05 19:31:01,553 [XMLTemplateService.java,962] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/skill.xml
+INFO  2015-08-05 19:31:01,649 [XMLTemplateService.java,991] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/equip.xml
+INFO  2015-08-05 19:31:01,731 [XMLTemplateService.java,1035] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/disciple.xml
+INFO  2015-08-05 19:31:02,549 [XMLTemplateService.java,1107] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/fate.xml
+INFO  2015-08-05 19:31:02,599 [XMLTemplateService.java,1136] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/career_group.xml
+INFO  2015-08-05 19:31:02,834 [XMLTemplateService.java,1318] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/kindSelecter.xml
+INFO  2015-08-05 19:31:02,840 [XMLTemplateService.java,1374] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/discipleSelecter.xml
+INFO  2015-08-05 19:31:02,860 [XMLTemplateService.java,1441] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/levelUp.xml
+INFO  2015-08-05 19:31:02,865 [XMLTemplateService.java,1617] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/disciple_exp_level.xml
+INFO  2015-08-05 19:31:02,876 [XMLTemplateService.java,1638] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/user_level.xml
+INFO  2015-08-05 19:31:02,883 [XMLTemplateService.java,1660] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/user_level_config.xml
+INFO  2015-08-05 19:31:02,917 [XMLTemplateService.java,1689] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/treasureSelecter.xml
+INFO  2015-08-05 19:31:02,987 [XMLTemplateService.java,1852] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/tools.xml
+INFO  2015-08-05 19:31:03,049 [XMLTemplateService.java,1852] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/tools.xml
+INFO  2015-08-05 19:31:03,062 [XMLTemplateService.java,1988] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/levelSilvers.xml
+INFO  2015-08-05 19:31:03,068 [XMLTemplateService.java,2003] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/skillSelecter.xml
+INFO  2015-08-05 19:31:03,081 [XMLTemplateService.java,2173] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/equipSelecter.xml
+INFO  2015-08-05 19:31:03,092 [XMLTemplateService.java,1018] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/equip_level_base.xml
+INFO  2015-08-05 19:31:03,094 [XMLTemplateService.java,1107] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/fate.xml
+INFO  2015-08-05 19:31:03,098 [XMLTemplateService.java,2370] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/FightEndGeneral.xml
+INFO  2015-08-05 19:31:03,143 [XMLTemplateService.java,1136] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/career_group.xml
+INFO  2015-08-05 19:31:03,288 [XMLTemplateService.java,2407] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/FightEndNpc.xml
+INFO  2015-08-05 19:31:03,367 [XMLTemplateService.java,1318] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/kindSelecter.xml
+INFO  2015-08-05 19:31:03,371 [XMLTemplateService.java,2453] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/FightEndNpcLevel.xml
+INFO  2015-08-05 19:31:03,373 [XMLTemplateService.java,1374] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/discipleSelecter.xml
+INFO  2015-08-05 19:31:03,392 [XMLTemplateService.java,1441] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/levelUp.xml
+INFO  2015-08-05 19:31:03,392 [XMLTemplateService.java,2319] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/FightEndRankReward.xml
+INFO  2015-08-05 19:31:03,397 [XMLTemplateService.java,1617] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/disciple_exp_level.xml
+INFO  2015-08-05 19:31:03,424 [XMLTemplateService.java,1638] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/user_level.xml
+INFO  2015-08-05 19:31:03,430 [XMLTemplateService.java,1660] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/user_level_config.xml
+INFO  2015-08-05 19:31:03,433 [XMLTemplateService.java,2482] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/continue_loging.xml
+INFO  2015-08-05 19:31:03,438 [XMLTemplateService.java,2572] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/soulSelecter.xml
+INFO  2015-08-05 19:31:03,448 [XMLTemplateService.java,2647] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/Title.xml
+INFO  2015-08-05 19:31:03,457 [XMLTemplateService.java,2725] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/VisitRewardSelecter.xml
+INFO  2015-08-05 19:31:03,461 [XMLTemplateService.java,2767] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/rechargeConfig.xml
+INFO  2015-08-05 19:31:03,465 [XMLTemplateService.java,2792] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/adventuresConfig.xml
+INFO  2015-08-05 19:31:03,476 [XMLTemplateService.java,2943] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/usePowerReward.xml
+INFO  2015-08-05 19:31:03,481 [XMLTemplateService.java,2984] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/adventuresContinueLogin.xml
+INFO  2015-08-05 19:31:03,486 [XMLTemplateService.java,3014] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/skillBookConfig.xml
+INFO  2015-08-05 19:31:03,507 [XMLTemplateService.java,1689] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/treasureSelecter.xml
+INFO  2015-08-05 19:31:03,518 [XMLTemplateService.java,3053] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/skillBookNpcConfig.xml
+INFO  2015-08-05 19:31:03,522 [XMLTemplateService.java,3078] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/skillBookSnatchConfig.xml
+INFO  2015-08-05 19:31:03,526 [XMLTemplateService.java,3108] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/skillbookSelecter.xml
+INFO  2015-08-05 19:31:03,607 [XMLTemplateService.java,1852] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/tools.xml
+INFO  2015-08-05 19:31:03,625 [XMLTemplateService.java,1852] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/tools.xml
+INFO  2015-08-05 19:31:03,635 [XMLTemplateService.java,1988] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/levelSilvers.xml
+INFO  2015-08-05 19:31:03,641 [XMLTemplateService.java,2003] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/skillSelecter.xml
+INFO  2015-08-05 19:31:03,653 [XMLTemplateService.java,2173] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/equipSelecter.xml
+INFO  2015-08-05 19:31:03,663 [XMLTemplateService.java,1883] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/cdkeys.xml
+INFO  2015-08-05 19:31:03,666 [XMLTemplateService.java,1018] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/equip_level_base.xml
+INFO  2015-08-05 19:31:03,668 [XMLTemplateService.java,1905] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/guideConfiger.xml
+INFO  2015-08-05 19:31:03,671 [XMLTemplateService.java,2370] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/FightEndGeneral.xml
+INFO  2015-08-05 19:31:03,691 [XMLTemplateService.java,3219] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/inviteConfig.xml
+INFO  2015-08-05 19:31:03,695 [XMLTemplateService.java,3242] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/worldbossConfig.xml
+INFO  2015-08-05 19:31:03,698 [XMLTemplateService.java,1931] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/chargeRebateConfig.xml
+INFO  2015-08-05 19:31:03,702 [XMLTemplateService.java,1962] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/fortuneComeConfig.xml
+INFO  2015-08-05 19:31:03,706 [XMLTemplateService.java,3271] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/ServerConfig.xml
+INFO  2015-08-05 19:31:03,710 [XMLTemplateService.java,3332] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/TesterList.xml
+INFO  2015-08-05 19:31:03,713 [XMLTemplateService.java,3349] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/giveSoulSelecter.xml
+INFO  2015-08-05 19:31:03,717 [XMLTemplateService.java,3424] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/giveSoulStage.xml
+INFO  2015-08-05 19:31:03,721 [XMLTemplateService.java,3480] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/adventuresConfig.xml
+INFO  2015-08-05 19:31:03,726 [XMLTemplateService.java,3504] - load platActiveCodeCtrl config file path :C:\const\project\OnePiece\Code_Server\server/xml/platActiveCodeCtrl.xml
+INFO  2015-08-05 19:31:03,729 [XMLTemplateService.java,3521] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/worldbossLvlHp.xml
+INFO  2015-08-05 19:31:03,737 [XMLTemplateService.java,3540] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/luckyStarConfig.xml
+INFO  2015-08-05 19:31:03,740 [XMLTemplateService.java,3304] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/platInitReward.xml
+INFO  2015-08-05 19:31:03,744 [XMLTemplateService.java,3607] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/quickCareerConfig.xml
+INFO  2015-08-05 19:31:03,747 [XMLTemplateService.java,3627] - load Diamond config file path :C:\const\project\OnePiece\Code_Server\server/xml/Diamond.xml
+INFO  2015-08-05 19:31:03,753 [XMLTemplateService.java,3678] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/DiamondConfig.xml
+INFO  2015-08-05 19:31:03,757 [XMLTemplateService.java,3694] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/DiamondAdditionConfig.xml
+INFO  2015-08-05 19:31:03,765 [XMLTemplateService.java,3845] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/GuildBase.xml
+INFO  2015-08-05 19:31:03,772 [XMLTemplateService.java,3872] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/GuildLvl.xml
+INFO  2015-08-05 19:31:03,776 [XMLTemplateService.java,3913] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/GuildProps.xml
+INFO  2015-08-05 19:31:03,779 [XMLTemplateService.java,3939] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/GuildBuildInfo.xml
+INFO  2015-08-05 19:31:03,782 [XMLTemplateService.java,3736] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/deepWaterConfig.xml
+INFO  2015-08-05 19:31:03,787 [XMLTemplateService.java,3965] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/GuildShopSell.xml
+INFO  2015-08-05 19:31:03,793 [XMLTemplateService.java,4017] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/GuildNPC.xml
+INFO  2015-08-05 19:31:03,799 [XMLTemplateService.java,4059] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/GoddessRebateConfig.xml
+INFO  2015-08-05 19:31:03,847 [Environment.java,514] - Hibernate 3.2.6
+INFO  2015-08-05 19:31:03,851 [Environment.java,547] - hibernate.properties not found
+INFO  2015-08-05 19:31:03,854 [XMLTemplateService.java,2407] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/FightEndNpc.xml
+INFO  2015-08-05 19:31:03,854 [Environment.java,681] - Bytecode provider name : cglib
+INFO  2015-08-05 19:31:03,858 [Environment.java,598] - using JDK 1.4 java.sql.Timestamp handling
+INFO  2015-08-05 19:31:03,913 [XMLTemplateService.java,2453] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/FightEndNpcLevel.xml
+INFO  2015-08-05 19:31:03,920 [Configuration.java,1466] - configuring from file: hibernate_lo_01.cfg.xml
+INFO  2015-08-05 19:31:03,933 [XMLTemplateService.java,2319] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/FightEndRankReward.xml
+INFO  2015-08-05 19:31:03,972 [XMLTemplateService.java,2482] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/continue_loging.xml
+INFO  2015-08-05 19:31:03,977 [XMLTemplateService.java,2572] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/soulSelecter.xml
+INFO  2015-08-05 19:31:03,986 [XMLTemplateService.java,2647] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/Title.xml
+INFO  2015-08-05 19:31:03,994 [XMLTemplateService.java,2725] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/VisitRewardSelecter.xml
+INFO  2015-08-05 19:31:03,998 [XMLTemplateService.java,2767] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/rechargeConfig.xml
+INFO  2015-08-05 19:31:04,002 [XMLTemplateService.java,2792] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/adventuresConfig.xml
+INFO  2015-08-05 19:31:04,004 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Player.hbm.xml
+INFO  2015-08-05 19:31:04,012 [XMLTemplateService.java,2943] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/usePowerReward.xml
+INFO  2015-08-05 19:31:04,017 [XMLTemplateService.java,2984] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/adventuresContinueLogin.xml
+INFO  2015-08-05 19:31:04,021 [XMLTemplateService.java,3014] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/skillBookConfig.xml
+INFO  2015-08-05 19:31:04,049 [XMLTemplateService.java,3053] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/skillBookNpcConfig.xml
+INFO  2015-08-05 19:31:04,052 [XMLTemplateService.java,3078] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/skillBookSnatchConfig.xml
+INFO  2015-08-05 19:31:04,056 [XMLTemplateService.java,3108] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/skillbookSelecter.xml
+INFO  2015-08-05 19:31:04,101 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Player -> player
+INFO  2015-08-05 19:31:04,151 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Disciple.hbm.xml
+INFO  2015-08-05 19:31:04,180 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Disciple -> disciple
+INFO  2015-08-05 19:31:04,186 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Equip.hbm.xml
+INFO  2015-08-05 19:31:04,195 [XMLTemplateService.java,1883] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/cdkeys.xml
+INFO  2015-08-05 19:31:04,199 [XMLTemplateService.java,1905] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/guideConfiger.xml
+INFO  2015-08-05 19:31:04,208 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Equip -> equip
+INFO  2015-08-05 19:31:04,210 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Skill.hbm.xml
+INFO  2015-08-05 19:31:04,229 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Skill -> skill
+INFO  2015-08-05 19:31:04,230 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Career.hbm.xml
+INFO  2015-08-05 19:31:04,238 [XMLTemplateService.java,3219] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/inviteConfig.xml
+INFO  2015-08-05 19:31:04,242 [XMLTemplateService.java,3242] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/worldbossConfig.xml
+INFO  2015-08-05 19:31:04,245 [XMLTemplateService.java,1931] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/chargeRebateConfig.xml
+INFO  2015-08-05 19:31:04,249 [XMLTemplateService.java,1962] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/fortuneComeConfig.xml
+INFO  2015-08-05 19:31:04,249 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Career -> career
+INFO  2015-08-05 19:31:04,250 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Bag.hbm.xml
+INFO  2015-08-05 19:31:04,253 [XMLTemplateService.java,3271] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/ServerConfig.xml
+INFO  2015-08-05 19:31:04,258 [XMLTemplateService.java,3332] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/TesterList.xml
+INFO  2015-08-05 19:31:04,261 [XMLTemplateService.java,3349] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/giveSoulSelecter.xml
+INFO  2015-08-05 19:31:04,265 [XMLTemplateService.java,3424] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/giveSoulStage.xml
+INFO  2015-08-05 19:31:04,266 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Bag -> bag
+INFO  2015-08-05 19:31:04,266 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Soul.hbm.xml
+INFO  2015-08-05 19:31:04,268 [XMLTemplateService.java,3480] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/adventuresConfig.xml
+INFO  2015-08-05 19:31:04,271 [XMLTemplateService.java,3504] - load platActiveCodeCtrl config file path :C:\const\project\OnePiece\Code_Server\server/xml/platActiveCodeCtrl.xml
+INFO  2015-08-05 19:31:04,274 [XMLTemplateService.java,3521] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/worldbossLvlHp.xml
+INFO  2015-08-05 19:31:04,278 [XMLTemplateService.java,3540] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/luckyStarConfig.xml
+INFO  2015-08-05 19:31:04,279 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Soul -> soul
+INFO  2015-08-05 19:31:04,280 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Battle.hbm.xml
+INFO  2015-08-05 19:31:04,281 [XMLTemplateService.java,3304] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/platInitReward.xml
+INFO  2015-08-05 19:31:04,285 [XMLTemplateService.java,3607] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/quickCareerConfig.xml
+INFO  2015-08-05 19:31:04,287 [XMLTemplateService.java,3627] - load Diamond config file path :C:\const\project\OnePiece\Code_Server\server/xml/Diamond.xml
+INFO  2015-08-05 19:31:04,291 [XMLTemplateService.java,3678] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/DiamondConfig.xml
+INFO  2015-08-05 19:31:04,294 [XMLTemplateService.java,3694] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/DiamondAdditionConfig.xml
+INFO  2015-08-05 19:31:04,295 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Battle -> battle
+INFO  2015-08-05 19:31:04,296 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Mapping.hbm.xml
+INFO  2015-08-05 19:31:04,299 [XMLTemplateService.java,3845] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/GuildBase.xml
+INFO  2015-08-05 19:31:04,302 [XMLTemplateService.java,3872] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/GuildLvl.xml
+INFO  2015-08-05 19:31:04,305 [XMLTemplateService.java,3913] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/GuildProps.xml
+INFO  2015-08-05 19:31:04,307 [XMLTemplateService.java,3939] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/GuildBuildInfo.xml
+INFO  2015-08-05 19:31:04,309 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Mapping -> mapping
+INFO  2015-08-05 19:31:04,310 [XMLTemplateService.java,3736] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/deepWaterConfig.xml
+INFO  2015-08-05 19:31:04,313 [XMLTemplateService.java,3965] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/GuildShopSell.xml
+INFO  2015-08-05 19:31:04,316 [XMLTemplateService.java,4017] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/GuildNPC.xml
+INFO  2015-08-05 19:31:04,320 [XMLTemplateService.java,4059] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/GoddessRebateConfig.xml
+INFO  2015-08-05 19:31:04,321 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/UserStats.hbm.xml
+INFO  2015-08-05 19:31:04,347 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.UserStats -> stats
+INFO  2015-08-05 19:31:04,349 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/TeamBuffer.hbm.xml
+INFO  2015-08-05 19:31:04,364 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.TeamBuffer -> teambuffer
+INFO  2015-08-05 19:31:04,365 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/PayInfo.hbm.xml
+INFO  2015-08-05 19:31:04,379 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.PayInfo -> wBuyPropPay
+INFO  2015-08-05 19:31:04,381 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Recharge.hbm.xml
+INFO  2015-08-05 19:31:04,396 [Environment.java,514] - Hibernate 3.2.6
+INFO  2015-08-05 19:31:04,398 [Environment.java,547] - hibernate.properties not found
+INFO  2015-08-05 19:31:04,399 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Recharge -> pay
+INFO  2015-08-05 19:31:04,400 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Title.hbm.xml
+INFO  2015-08-05 19:31:04,401 [Environment.java,681] - Bytecode provider name : cglib
+INFO  2015-08-05 19:31:04,404 [Environment.java,598] - using JDK 1.4 java.sql.Timestamp handling
+INFO  2015-08-05 19:31:04,417 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Title -> title
+INFO  2015-08-05 19:31:04,418 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/AdventureFightStats.hbm.xml
+INFO  2015-08-05 19:31:04,433 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.AdventureFightStats -> adventurefightstats
+INFO  2015-08-05 19:31:04,435 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/AdventureFightRank.hbm.xml
+INFO  2015-08-05 19:31:04,448 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.AdventureFightRank -> adventurefightrank
+INFO  2015-08-05 19:31:04,449 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Challenge.hbm.xml
+INFO  2015-08-05 19:31:04,453 [Configuration.java,1466] - configuring from file: hibernate_lo_01.cfg.xml
+INFO  2015-08-05 19:31:04,459 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Challenge -> challenge
+INFO  2015-08-05 19:31:04,460 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Reward.hbm.xml
+INFO  2015-08-05 19:31:04,470 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Reward -> rewards
+INFO  2015-08-05 19:31:04,471 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/SkillBook.hbm.xml
+INFO  2015-08-05 19:31:04,480 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.SkillBook -> skillbook
+INFO  2015-08-05 19:31:04,480 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Cdkey.hbm.xml
+INFO  2015-08-05 19:31:04,490 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Cdkey -> cdkey
+INFO  2015-08-05 19:31:04,491 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/SysMsgInfo.hbm.xml
+INFO  2015-08-05 19:31:04,500 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.SysMsgInfo -> sysmsginfo
+INFO  2015-08-05 19:31:04,501 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/InviteStatus.hbm.xml
+INFO  2015-08-05 19:31:04,508 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Player.hbm.xml
+INFO  2015-08-05 19:31:04,509 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.InviteStatus -> invitestatus
+INFO  2015-08-05 19:31:04,510 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/WorldBoss.hbm.xml
+INFO  2015-08-05 19:31:04,520 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.WorldBoss -> worldboss
+INFO  2015-08-05 19:31:04,521 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/WorldBossRank.hbm.xml
+INFO  2015-08-05 19:31:04,531 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.WorldBossRank -> worldbossrank
+INFO  2015-08-05 19:31:04,532 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/ActiveCodeEntity.hbm.xml
+INFO  2015-08-05 19:31:04,541 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.ActiveCodeEntity -> activecode
+INFO  2015-08-05 19:31:04,542 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/PlayerFrom.hbm.xml
+INFO  2015-08-05 19:31:04,551 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.PlayerFrom -> playerfrom
+INFO  2015-08-05 19:31:04,551 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/RelationShip.hbm.xml
+INFO  2015-08-05 19:31:04,559 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.RelationShip -> relationship
+INFO  2015-08-05 19:31:04,559 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Handbook.hbm.xml
+INFO  2015-08-05 19:31:04,567 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Handbook -> handbook
+INFO  2015-08-05 19:31:04,568 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Leagua.hbm.xml
+INFO  2015-08-05 19:31:04,577 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Leagua -> leagua
+INFO  2015-08-05 19:31:04,578 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/LeaguaApply.hbm.xml
+INFO  2015-08-05 19:31:04,580 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Player -> player
+INFO  2015-08-05 19:31:04,586 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.LeaguaApply -> leaguaapply
+INFO  2015-08-05 19:31:04,588 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/LeaguaMedal.hbm.xml
+INFO  2015-08-05 19:31:04,595 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.LeaguaMedal -> leaguamedal
+INFO  2015-08-05 19:31:04,596 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/LeaguaMedalChangeInfo.hbm.xml
+INFO  2015-08-05 19:31:04,604 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.LeaguaMedalChangeInfo -> leaguamedalchangeinfo
+INFO  2015-08-05 19:31:04,605 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/LeaguaMembers.hbm.xml
+INFO  2015-08-05 19:31:04,613 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.LeaguaMembers -> leaguamembers
+INFO  2015-08-05 19:31:04,615 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/ActivityInfo.hbm.xml
+INFO  2015-08-05 19:31:04,620 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Disciple.hbm.xml
+INFO  2015-08-05 19:31:04,622 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.ActivityInfo -> activityinfo
+INFO  2015-08-05 19:31:04,622 [Configuration.java,1547] - Configured SessionFactory: null
+INFO  2015-08-05 19:31:04,643 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Disciple -> disciple
+INFO  2015-08-05 19:31:04,644 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Equip.hbm.xml
+INFO  2015-08-05 19:31:04,659 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Equip -> equip
+INFO  2015-08-05 19:31:04,660 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Skill.hbm.xml
+INFO  2015-08-05 19:31:04,668 [C3P0ConnectionProvider.java,81] - C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1:3306/dzm
+INFO  2015-08-05 19:31:04,669 [C3P0ConnectionProvider.java,82] - Connection properties: {useUnicode=true, user=root, password=****, characterEncoding=UTF-8}
+INFO  2015-08-05 19:31:04,669 [C3P0ConnectionProvider.java,85] - autocommit mode: false
+INFO  2015-08-05 19:31:04,674 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Skill -> skill
+INFO  2015-08-05 19:31:04,675 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Career.hbm.xml
+INFO  2015-08-05 19:31:04,684 [MLog.java,80] - MLog clients using log4j logging.
+INFO  2015-08-05 19:31:04,688 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Career -> career
+INFO  2015-08-05 19:31:04,689 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Bag.hbm.xml
+INFO  2015-08-05 19:31:04,702 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Bag -> bag
+INFO  2015-08-05 19:31:04,703 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Soul.hbm.xml
+INFO  2015-08-05 19:31:04,715 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Soul -> soul
+INFO  2015-08-05 19:31:04,715 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Battle.hbm.xml
+INFO  2015-08-05 19:31:04,730 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Battle -> battle
+INFO  2015-08-05 19:31:04,731 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Mapping.hbm.xml
+INFO  2015-08-05 19:31:04,744 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Mapping -> mapping
+INFO  2015-08-05 19:31:04,745 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/UserStats.hbm.xml
+INFO  2015-08-05 19:31:04,764 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.UserStats -> stats
+INFO  2015-08-05 19:31:04,766 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/TeamBuffer.hbm.xml
+INFO  2015-08-05 19:31:04,783 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.TeamBuffer -> teambuffer
+INFO  2015-08-05 19:31:04,784 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/PayInfo.hbm.xml
+INFO  2015-08-05 19:31:04,830 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.PayInfo -> wBuyPropPay
+INFO  2015-08-05 19:31:04,831 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Recharge.hbm.xml
+INFO  2015-08-05 19:31:04,860 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Recharge -> pay
+INFO  2015-08-05 19:31:04,862 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Title.hbm.xml
+INFO  2015-08-05 19:31:04,875 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Title -> title
+INFO  2015-08-05 19:31:04,876 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/AdventureFightStats.hbm.xml
+INFO  2015-08-05 19:31:04,890 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.AdventureFightStats -> adventurefightstats
+INFO  2015-08-05 19:31:04,892 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/AdventureFightRank.hbm.xml
+INFO  2015-08-05 19:31:04,894 [C3P0Registry.java,204] - Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+INFO  2015-08-05 19:31:04,902 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.AdventureFightRank -> adventurefightrank
+INFO  2015-08-05 19:31:04,903 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Challenge.hbm.xml
+INFO  2015-08-05 19:31:04,913 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Challenge -> challenge
+INFO  2015-08-05 19:31:04,914 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Reward.hbm.xml
+INFO  2015-08-05 19:31:04,924 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Reward -> rewards
+INFO  2015-08-05 19:31:04,924 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/SkillBook.hbm.xml
+INFO  2015-08-05 19:31:04,933 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.SkillBook -> skillbook
+INFO  2015-08-05 19:31:04,933 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Cdkey.hbm.xml
+INFO  2015-08-05 19:31:04,941 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Cdkey -> cdkey
+INFO  2015-08-05 19:31:04,942 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/SysMsgInfo.hbm.xml
+INFO  2015-08-05 19:31:04,952 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.SysMsgInfo -> sysmsginfo
+INFO  2015-08-05 19:31:04,953 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/InviteStatus.hbm.xml
+INFO  2015-08-05 19:31:04,955 [AbstractPoolBackedDataSource.java,462] - Initializing c3p0 pool... com.mchange.v2.c3p0.PoolBackedDataSource@978ec928 [ connectionPoolDataSource -> com.mchange.v2.c3p0.WrapperConnectionPoolDataSource@f16db861 [ acquireIncrement -> 1, acquireRetryAttempts -> 3, acquireRetryDelay -> 2000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, debugUnreturnedConnectionStackTraces -> false, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge75j9a1ydffyo107irkl|3369d7a, idleConnectionTestPeriod -> 60, initialPoolSize -> 7, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 42, maxStatements -> 50, maxStatementsPerConnection -> 0, minPoolSize -> 7, nestedDataSource -> com.mchange.v2.c3p0.DriverManagerDataSource@91fe3df6 [ description -> null, driverClass -> null, factoryClassLocation -> null, identityToken -> 1hge75j9a1ydffyo107irkl|786d2928, jdbcUrl -> jdbc:mysql://127.0.0.1:3306/dzm, properties -> {useUnicode=true, user=******, password=******, characterEncoding=UTF-8} ], preferredTestQuery -> null, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false; userOverrides: {} ], dataSourceName -> null, factoryClassLocation -> null, identityToken -> 1hge75j9a1ydffyo107irkl|5773b097, numHelperThreads -> 3 ]
+INFO  2015-08-05 19:31:04,967 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.InviteStatus -> invitestatus
+INFO  2015-08-05 19:31:04,967 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/WorldBoss.hbm.xml
+INFO  2015-08-05 19:31:04,974 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.WorldBoss -> worldboss
+INFO  2015-08-05 19:31:04,976 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/WorldBossRank.hbm.xml
+INFO  2015-08-05 19:31:04,984 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.WorldBossRank -> worldbossrank
+INFO  2015-08-05 19:31:04,985 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/ActiveCodeEntity.hbm.xml
+INFO  2015-08-05 19:31:04,994 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.ActiveCodeEntity -> activecode
+INFO  2015-08-05 19:31:04,995 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/PlayerFrom.hbm.xml
+INFO  2015-08-05 19:31:05,004 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.PlayerFrom -> playerfrom
+INFO  2015-08-05 19:31:05,004 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/RelationShip.hbm.xml
+INFO  2015-08-05 19:31:05,013 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.RelationShip -> relationship
+INFO  2015-08-05 19:31:05,013 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Handbook.hbm.xml
+INFO  2015-08-05 19:31:05,020 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Handbook -> handbook
+INFO  2015-08-05 19:31:05,021 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Leagua.hbm.xml
+INFO  2015-08-05 19:31:05,029 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Leagua -> leagua
+INFO  2015-08-05 19:31:05,030 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/LeaguaApply.hbm.xml
+INFO  2015-08-05 19:31:05,037 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.LeaguaApply -> leaguaapply
+INFO  2015-08-05 19:31:05,038 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/LeaguaMedal.hbm.xml
+INFO  2015-08-05 19:31:05,045 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.LeaguaMedal -> leaguamedal
+INFO  2015-08-05 19:31:05,046 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/LeaguaMedalChangeInfo.hbm.xml
+INFO  2015-08-05 19:31:05,054 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.LeaguaMedalChangeInfo -> leaguamedalchangeinfo
+INFO  2015-08-05 19:31:05,068 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/LeaguaMembers.hbm.xml
+INFO  2015-08-05 19:31:05,075 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.LeaguaMembers -> leaguamembers
+INFO  2015-08-05 19:31:05,076 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/ActivityInfo.hbm.xml
+INFO  2015-08-05 19:31:05,084 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.ActivityInfo -> activityinfo
+INFO  2015-08-05 19:31:05,085 [Configuration.java,1547] - Configured SessionFactory: null
+INFO  2015-08-05 19:31:05,134 [C3P0ConnectionProvider.java,81] - C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1:3306/dzm
+INFO  2015-08-05 19:31:05,135 [C3P0ConnectionProvider.java,82] - Connection properties: {useUnicode=true, user=root, password=****, characterEncoding=UTF-8}
+INFO  2015-08-05 19:31:05,135 [C3P0ConnectionProvider.java,85] - autocommit mode: false
+INFO  2015-08-05 19:31:05,151 [MLog.java,80] - MLog clients using log4j logging.
+INFO  2015-08-05 19:31:05,171 [SettingsFactory.java,89] - RDBMS: MySQL, version: 5.5.40
+INFO  2015-08-05 19:31:05,177 [SettingsFactory.java,90] - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.0.8 ( Revision: ${svn.Revision} )
+INFO  2015-08-05 19:31:05,191 [Dialect.java,152] - Using dialect: org.hibernate.dialect.MySQLDialect
+INFO  2015-08-05 19:31:05,194 [TransactionFactoryFactory.java,31] - Using default transaction strategy (direct JDBC transactions)
+INFO  2015-08-05 19:31:05,196 [TransactionManagerLookupFactory.java,33] - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+INFO  2015-08-05 19:31:05,196 [SettingsFactory.java,143] - Automatic flush during beforeCompletion(): disabled
+INFO  2015-08-05 19:31:05,196 [SettingsFactory.java,147] - Automatic session close at end of transaction: disabled
+INFO  2015-08-05 19:31:05,196 [SettingsFactory.java,154] - JDBC batch size: 15
+INFO  2015-08-05 19:31:05,196 [SettingsFactory.java,157] - JDBC batch updates for versioned data: disabled
+INFO  2015-08-05 19:31:05,197 [SettingsFactory.java,162] - Scrollable result sets: enabled
+INFO  2015-08-05 19:31:05,197 [SettingsFactory.java,170] - JDBC3 getGeneratedKeys(): enabled
+INFO  2015-08-05 19:31:05,197 [SettingsFactory.java,178] - Connection release mode: auto
+INFO  2015-08-05 19:31:05,197 [SettingsFactory.java,202] - Maximum outer join fetch depth: 2
+INFO  2015-08-05 19:31:05,197 [SettingsFactory.java,205] - Default batch fetch size: 1
+INFO  2015-08-05 19:31:05,198 [SettingsFactory.java,209] - Generate SQL with comments: disabled
+INFO  2015-08-05 19:31:05,198 [SettingsFactory.java,213] - Order SQL updates by primary key: disabled
+INFO  2015-08-05 19:31:05,198 [SettingsFactory.java,217] - Order SQL inserts for batching: disabled
+INFO  2015-08-05 19:31:05,198 [SettingsFactory.java,386] - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+INFO  2015-08-05 19:31:05,199 [ASTQueryTranslatorFactory.java,24] - Using ASTQueryTranslatorFactory
+INFO  2015-08-05 19:31:05,199 [SettingsFactory.java,225] - Query language substitutions: {}
+INFO  2015-08-05 19:31:05,199 [SettingsFactory.java,230] - JPA-QL strict compliance: disabled
+INFO  2015-08-05 19:31:05,199 [SettingsFactory.java,235] - Second-level cache: enabled
+INFO  2015-08-05 19:31:05,199 [SettingsFactory.java,239] - Query cache: disabled
+INFO  2015-08-05 19:31:05,200 [SettingsFactory.java,373] - Cache provider: org.hibernate.cache.NoCacheProvider
+INFO  2015-08-05 19:31:05,200 [SettingsFactory.java,254] - Optimize cache for minimal puts: disabled
+INFO  2015-08-05 19:31:05,200 [SettingsFactory.java,263] - Structured second-level cache entries: disabled
+INFO  2015-08-05 19:31:05,202 [SettingsFactory.java,290] - Statistics: disabled
+INFO  2015-08-05 19:31:05,202 [SettingsFactory.java,294] - Deleted entity synthetic identifier rollback: disabled
+INFO  2015-08-05 19:31:05,203 [SettingsFactory.java,309] - Default entity-mode: pojo
+INFO  2015-08-05 19:31:05,203 [SettingsFactory.java,313] - Named query checking : enabled
+INFO  2015-08-05 19:31:05,222 [SessionFactoryImpl.java,161] - building session factory
+INFO  2015-08-05 19:31:05,322 [C3P0Registry.java,204] - Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+INFO  2015-08-05 19:31:05,376 [AbstractPoolBackedDataSource.java,462] - Initializing c3p0 pool... com.mchange.v2.c3p0.PoolBackedDataSource@476df15a [ connectionPoolDataSource -> com.mchange.v2.c3p0.WrapperConnectionPoolDataSource@cdcfc1ef [ acquireIncrement -> 1, acquireRetryAttempts -> 3, acquireRetryDelay -> 2000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, debugUnreturnedConnectionStackTraces -> false, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge75j9a1ydfgbs1nhw28b|3369d7a, idleConnectionTestPeriod -> 60, initialPoolSize -> 7, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 42, maxStatements -> 50, maxStatementsPerConnection -> 0, minPoolSize -> 7, nestedDataSource -> com.mchange.v2.c3p0.DriverManagerDataSource@41dd6628 [ description -> null, driverClass -> null, factoryClassLocation -> null, identityToken -> 1hge75j9a1ydfgbs1nhw28b|786d2928, jdbcUrl -> jdbc:mysql://127.0.0.1:3306/dzm, properties -> {useUnicode=true, user=******, password=******, characterEncoding=UTF-8} ], preferredTestQuery -> null, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false; userOverrides: {} ], dataSourceName -> null, factoryClassLocation -> null, identityToken -> 1hge75j9a1ydfgbs1nhw28b|5773b097, numHelperThreads -> 3 ]
+INFO  2015-08-05 19:31:05,563 [SettingsFactory.java,89] - RDBMS: MySQL, version: 5.5.40
+INFO  2015-08-05 19:31:05,563 [SettingsFactory.java,90] - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.0.8 ( Revision: ${svn.Revision} )
+INFO  2015-08-05 19:31:05,577 [Dialect.java,152] - Using dialect: org.hibernate.dialect.MySQLDialect
+INFO  2015-08-05 19:31:05,580 [TransactionFactoryFactory.java,31] - Using default transaction strategy (direct JDBC transactions)
+INFO  2015-08-05 19:31:05,582 [TransactionManagerLookupFactory.java,33] - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+INFO  2015-08-05 19:31:05,582 [SettingsFactory.java,143] - Automatic flush during beforeCompletion(): disabled
+INFO  2015-08-05 19:31:05,582 [SettingsFactory.java,147] - Automatic session close at end of transaction: disabled
+INFO  2015-08-05 19:31:05,582 [SettingsFactory.java,154] - JDBC batch size: 15
+INFO  2015-08-05 19:31:05,582 [SettingsFactory.java,157] - JDBC batch updates for versioned data: disabled
+INFO  2015-08-05 19:31:05,583 [SettingsFactory.java,162] - Scrollable result sets: enabled
+INFO  2015-08-05 19:31:05,583 [SettingsFactory.java,170] - JDBC3 getGeneratedKeys(): enabled
+INFO  2015-08-05 19:31:05,583 [SettingsFactory.java,178] - Connection release mode: auto
+INFO  2015-08-05 19:31:05,583 [SettingsFactory.java,202] - Maximum outer join fetch depth: 2
+INFO  2015-08-05 19:31:05,584 [SettingsFactory.java,205] - Default batch fetch size: 1
+INFO  2015-08-05 19:31:05,584 [SettingsFactory.java,209] - Generate SQL with comments: disabled
+INFO  2015-08-05 19:31:05,584 [SettingsFactory.java,213] - Order SQL updates by primary key: disabled
+INFO  2015-08-05 19:31:05,584 [SettingsFactory.java,217] - Order SQL inserts for batching: disabled
+INFO  2015-08-05 19:31:05,584 [SettingsFactory.java,386] - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+INFO  2015-08-05 19:31:05,586 [ASTQueryTranslatorFactory.java,24] - Using ASTQueryTranslatorFactory
+INFO  2015-08-05 19:31:05,586 [SettingsFactory.java,225] - Query language substitutions: {}
+INFO  2015-08-05 19:31:05,586 [SettingsFactory.java,230] - JPA-QL strict compliance: disabled
+INFO  2015-08-05 19:31:05,586 [SettingsFactory.java,235] - Second-level cache: enabled
+INFO  2015-08-05 19:31:05,586 [SettingsFactory.java,239] - Query cache: disabled
+INFO  2015-08-05 19:31:05,586 [SettingsFactory.java,373] - Cache provider: org.hibernate.cache.NoCacheProvider
+INFO  2015-08-05 19:31:05,587 [SettingsFactory.java,254] - Optimize cache for minimal puts: disabled
+INFO  2015-08-05 19:31:05,587 [SettingsFactory.java,263] - Structured second-level cache entries: disabled
+INFO  2015-08-05 19:31:05,590 [SettingsFactory.java,290] - Statistics: disabled
+INFO  2015-08-05 19:31:05,590 [SettingsFactory.java,294] - Deleted entity synthetic identifier rollback: disabled
+INFO  2015-08-05 19:31:05,590 [SettingsFactory.java,309] - Default entity-mode: pojo
+INFO  2015-08-05 19:31:05,590 [SettingsFactory.java,313] - Named query checking : enabled
+INFO  2015-08-05 19:31:05,608 [SessionFactoryImpl.java,161] - building session factory
+INFO  2015-08-05 19:31:05,671 [SessionFactoryObjectFactory.java,82] - Not binding factory to JNDI, no JNDI name configured
+WARN  2015-08-05 19:31:05,687 [ConfigurationFactory.java,134] - No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/C:/const/project/onepiece/Code_Server/server/lib/ehcache-core-2.4.2.jar!/ehcache-failsafe.xml
+INFO  2015-08-05 19:31:05,787 [FightEndRankingServices.java,99] - =======Init FightEnd Date [20150804] Ranking Info Start!=======
+INFO  2015-08-05 19:31:06,005 [FightEndRankingServices.java,132] - =======Init FightEnd Date [20150804] Ranking Info Over!=======
+INFO  2015-08-05 19:31:06,006 [FightEndRankingServices.java,283] - synchronization FightEndRanking Date [20150804] [5] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-05 19:31:06,006 [FightEndRankingServices.java,283] - synchronization FightEndRanking Date [20150804] [6] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-05 19:31:06,006 [FightEndRankingServices.java,283] - synchronization FightEndRanking Date [20150804] [7] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-05 19:31:06,006 [FightEndRankingServices.java,283] - synchronization FightEndRanking Date [20150804] [8] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-05 19:31:06,006 [FightEndRankingServices.java,148] - =======Init FightEnd Date [20150805] Ranking Info Start!=======
+INFO  2015-08-05 19:31:06,013 [FightEndRankingServices.java,363] - synchronization FightEndRanking Date [20150805] [5] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-05 19:31:06,015 [FightEndRankingServices.java,363] - synchronization FightEndRanking Date [20150805] [6] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-05 19:31:06,017 [FightEndRankingServices.java,363] - synchronization FightEndRanking Date [20150805] [7] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-05 19:31:06,019 [FightEndRankingServices.java,363] - synchronization FightEndRanking Date [20150805] [8] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-05 19:31:06,019 [FightEndRankingServices.java,177] - =======Init FightEnd Date [20150805] Ranking Info Over!=======
+INFO  2015-08-05 19:31:06,023 [XMLTemplateService.java,3197] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/persistNames.xml
+INFO  2015-08-05 19:31:06,044 [LeaguaServices.java,2223] - start loading leagua info from db to ram......
+INFO  2015-08-05 19:31:06,049 [SessionFactoryObjectFactory.java,82] - Not binding factory to JNDI, no JNDI name configured
+INFO  2015-08-05 19:31:06,058 [LeaguaServices.java,2305] - end loading leagua info from db to ram......
+WARN  2015-08-05 19:31:06,066 [ConfigurationFactory.java,134] - No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/C:/const/project/onepiece/Code_Server/server/lib/ehcache-core-2.4.2.jar!/ehcache-failsafe.xml
+INFO  2015-08-05 19:31:06,158 [FightEndRankingServices.java,99] - =======Init FightEnd Date [20150804] Ranking Info Start!=======
+INFO  2015-08-05 19:31:06,318 [FightEndRankingServices.java,132] - =======Init FightEnd Date [20150804] Ranking Info Over!=======
+INFO  2015-08-05 19:31:06,318 [FightEndRankingServices.java,283] - synchronization FightEndRanking Date [20150804] [5] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-05 19:31:06,318 [FightEndRankingServices.java,283] - synchronization FightEndRanking Date [20150804] [6] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-05 19:31:06,318 [FightEndRankingServices.java,283] - synchronization FightEndRanking Date [20150804] [7] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-05 19:31:06,318 [FightEndRankingServices.java,283] - synchronization FightEndRanking Date [20150804] [8] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-05 19:31:06,318 [FightEndRankingServices.java,148] - =======Init FightEnd Date [20150805] Ranking Info Start!=======
+INFO  2015-08-05 19:31:06,324 [FightEndRankingServices.java,363] - synchronization FightEndRanking Date [20150805] [5] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-05 19:31:06,325 [FightEndRankingServices.java,363] - synchronization FightEndRanking Date [20150805] [6] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-05 19:31:06,327 [FightEndRankingServices.java,363] - synchronization FightEndRanking Date [20150805] [7] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-05 19:31:06,328 [FightEndRankingServices.java,363] - synchronization FightEndRanking Date [20150805] [8] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-05 19:31:06,328 [FightEndRankingServices.java,177] - =======Init FightEnd Date [20150805] Ranking Info Over!=======
+INFO  2015-08-05 19:31:06,332 [XMLTemplateService.java,3197] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/persistNames.xml
+INFO  2015-08-05 19:31:06,352 [LeaguaServices.java,2223] - start loading leagua info from db to ram......
+INFO  2015-08-05 19:31:06,363 [LeaguaServices.java,2305] - end loading leagua info from db to ram......
+INFO  2015-08-05 19:31:06,396 [ServerShutDown.java,29] - start report to online user......
+INFO  2015-08-05 19:31:06,396 [ServerShutDown.java,44] - report to online user finished
+INFO  2015-08-05 19:31:06,396 [ServerShutDown.java,46] - start unbinding mina......
+INFO  2015-08-05 19:31:07,255 [UpdateChecker.java,98] - New update(s) found: 2.4.7 [http://www.terracotta.org/confluence/display/release/Release+Notes+Ehcache+Core+2.4]. Please check http://ehcache.org for the latest version.
+INFO  2015-08-05 19:31:13,553 [LoginHandler.java,115] - login handler received: ext, pswd, 1
+INFO  2015-08-05 19:31:13,619 [LoginHandler.java,172] - login handler equip equipSize: 0 ,costTime: 0 
+INFO  2015-08-05 19:31:13,758 [SkillBookServices.java,44] - start************#playerId:9,startTime:1438774273758*********start
+INFO  2015-08-05 19:31:13,787 [SkillBookServices.java,72] - end************playerId:9,endTime:1438774273787,cost:29*********end
+INFO  2015-08-05 19:31:13,854 [ObjectAccessor.java,27] - add online session,playerid:9
+INFO  2015-08-05 19:31:13,857 [ClientSession.java,36] - player login setSession method|#playerId:9#client ip:/192.168.31.207:54788#current online player count:1
+INFO  2015-08-05 19:31:13,882 [LoginHandler.java,526] - player login info: 9, 1438665748, 1, 3, 90, 1438774273, ios_91, win32Device
+INFO  2015-08-05 19:31:13,886 [LoginHandler.java,527] - login handler ret send: ext, 316, {}
+INFO  2015-08-05 19:31:15,041 [UserBasicInfoHandler.java,48] - user basic info handler received: 9, 1, {}
+INFO  2015-08-05 19:31:15,057 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 9, 13, {}
+INFO  2015-08-05 19:31:15,161 [UserDiscipleInfoHandler.java,49] - user disciple info received: 9, 1, {}
+INFO  2015-08-05 19:31:15,172 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 9, 8, {}
+INFO  2015-08-05 19:31:15,272 [UserToolInfoHandler.java,40] - user tool info handler received: 9, 1, {}
+INFO  2015-08-05 19:31:15,281 [UserToolInfoHandler.java,85] - user tool info handler ret send: 9, 6, {}
+INFO  2015-08-05 19:31:15,308 [UserSoulInfoHandler.java,38] - user soul info handler received: 9, 1, {}
+INFO  2015-08-05 19:31:15,310 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 9, 1, {}
+INFO  2015-08-05 19:31:15,331 [UserSkillInfoHandler.java,48] - user skill info handler received: 9, 1, {}
+INFO  2015-08-05 19:31:15,340 [UserSkillInfoHandler.java,90] - user skill info handler ret send: 9, 7, {}
+INFO  2015-08-05 19:31:15,448 [UserCareerInfoHandler.java,48] - user career info handler received: 9, 1, {}
+INFO  2015-08-05 19:31:15,458 [UserCareerInfoHandler.java,121] - user career info handler ret send: 9, 9, {}
+INFO  2015-08-05 19:31:15,478 [GetShopListHandler.java,45] - get shop list handler received: 9, 1, {}
+INFO  2015-08-05 19:31:15,478 [GetShopListHandler.java,46] - get shop list handler received: 9, 1, {}
+INFO  2015-08-05 19:31:15,488 [GetShopListHandler.java,92] - get shop list handler ret send: 9, 7, {}
+INFO  2015-08-05 19:31:15,489 [GetShopListHandler.java,93] - get shop list handler ret send: 9, 7, {}
+INFO  2015-08-05 19:31:15,587 [UserEquipInfoHandler.java,48] - user equip info handler received: 9, 1, {}
+INFO  2015-08-05 19:31:15,605 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 9, 16, {}
+INFO  2015-08-05 19:31:15,622 [UserBattleArrayHandler.java,47] - user battle array handler received: 9, 1, {}
+INFO  2015-08-05 19:31:15,638 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 9, 14, {}
+INFO  2015-08-05 19:31:15,737 [UserMarketInfoHandler.java,33] - user market info handler received: 9, 1, {}
+INFO  2015-08-05 19:31:15,742 [UserMarketInfoHandler.java,89] - user market info handler ret send: 9, 2, {}
+INFO  2015-08-05 19:31:15,842 [TitleInfoHandler.java,38] - title info handler received: 9, 1, {}
+INFO  2015-08-05 19:31:15,845 [TitleInfoHandler.java,95] - title info handler ret send: 9, 1, {}
+INFO  2015-08-05 19:31:16,259 [BoardCastInfoHandler.java,51] - board cast info handler received: 9, 1, {}
+INFO  2015-08-05 19:31:16,260 [BoardCastInfoHandler.java,79] - board cast info handler ret send: 9, 0, {}
+INFO  2015-08-05 19:31:17,065 [AdventureInfoHandler.java,61] - adventure info handler received: 1, {}, {}
+INFO  2015-08-05 19:31:17,095 [AdventureInfoHandler.java,307] - adventure info handler ret send: ext, 29, {}
+INFO  2015-08-05 19:31:32,666 [XMLTemplateService.java,962] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/skill.xml
+INFO  2015-08-05 19:31:32,821 [XMLTemplateService.java,991] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/equip.xml
+INFO  2015-08-05 19:31:32,948 [XMLTemplateService.java,1035] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/disciple.xml
+INFO  2015-08-05 19:31:34,658 [XMLTemplateService.java,1107] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/fate.xml
+INFO  2015-08-05 19:31:34,698 [XMLTemplateService.java,1136] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/career_group.xml
+INFO  2015-08-05 19:31:34,942 [XMLTemplateService.java,1318] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/kindSelecter.xml
+INFO  2015-08-05 19:31:34,948 [XMLTemplateService.java,1374] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/discipleSelecter.xml
+INFO  2015-08-05 19:31:34,969 [XMLTemplateService.java,1441] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/levelUp.xml
+INFO  2015-08-05 19:31:34,975 [XMLTemplateService.java,1617] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/disciple_exp_level.xml
+INFO  2015-08-05 19:31:34,983 [XMLTemplateService.java,1638] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/user_level.xml
+INFO  2015-08-05 19:31:34,991 [XMLTemplateService.java,1660] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/user_level_config.xml
+INFO  2015-08-05 19:31:35,033 [XMLTemplateService.java,1689] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/treasureSelecter.xml
+INFO  2015-08-05 19:31:35,077 [XMLTemplateService.java,1852] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/tools.xml
+INFO  2015-08-05 19:31:35,133 [XMLTemplateService.java,1852] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/tools.xml
+INFO  2015-08-05 19:31:35,147 [XMLTemplateService.java,1988] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/levelSilvers.xml
+INFO  2015-08-05 19:31:35,155 [XMLTemplateService.java,2003] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/skillSelecter.xml
+INFO  2015-08-05 19:31:35,173 [XMLTemplateService.java,2173] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/equipSelecter.xml
+INFO  2015-08-05 19:31:35,185 [XMLTemplateService.java,1018] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/equip_level_base.xml
+INFO  2015-08-05 19:31:35,192 [XMLTemplateService.java,2370] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/FightEndGeneral.xml
+INFO  2015-08-05 19:31:35,374 [XMLTemplateService.java,2407] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/FightEndNpc.xml
+INFO  2015-08-05 19:31:35,441 [XMLTemplateService.java,2453] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/FightEndNpcLevel.xml
+INFO  2015-08-05 19:31:35,463 [XMLTemplateService.java,2319] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/FightEndRankReward.xml
+INFO  2015-08-05 19:31:35,508 [XMLTemplateService.java,2482] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/continue_loging.xml
+INFO  2015-08-05 19:31:35,514 [XMLTemplateService.java,2572] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/soulSelecter.xml
+INFO  2015-08-05 19:31:35,524 [XMLTemplateService.java,2647] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/Title.xml
+INFO  2015-08-05 19:31:35,532 [XMLTemplateService.java,2725] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/VisitRewardSelecter.xml
+INFO  2015-08-05 19:31:35,538 [XMLTemplateService.java,2767] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/rechargeConfig.xml
+INFO  2015-08-05 19:31:35,544 [XMLTemplateService.java,2792] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/adventuresConfig.xml
+INFO  2015-08-05 19:31:35,556 [XMLTemplateService.java,2943] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/usePowerReward.xml
+INFO  2015-08-05 19:31:35,561 [XMLTemplateService.java,2984] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/adventuresContinueLogin.xml
+INFO  2015-08-05 19:31:35,567 [XMLTemplateService.java,3014] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/skillBookConfig.xml
+INFO  2015-08-05 19:31:35,599 [XMLTemplateService.java,3053] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/skillBookNpcConfig.xml
+INFO  2015-08-05 19:31:35,603 [XMLTemplateService.java,3078] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/skillBookSnatchConfig.xml
+INFO  2015-08-05 19:31:35,608 [XMLTemplateService.java,3108] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/skillbookSelecter.xml
+INFO  2015-08-05 19:31:35,720 [XMLTemplateService.java,1883] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/cdkeys.xml
+INFO  2015-08-05 19:31:35,724 [XMLTemplateService.java,1905] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/guideConfiger.xml
+INFO  2015-08-05 19:31:35,744 [XMLTemplateService.java,3219] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/inviteConfig.xml
+INFO  2015-08-05 19:31:35,749 [XMLTemplateService.java,3242] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/worldbossConfig.xml
+INFO  2015-08-05 19:31:35,753 [XMLTemplateService.java,1931] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/chargeRebateConfig.xml
+INFO  2015-08-05 19:31:35,758 [XMLTemplateService.java,1962] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/fortuneComeConfig.xml
+INFO  2015-08-05 19:31:35,763 [XMLTemplateService.java,3271] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/ServerConfig.xml
+INFO  2015-08-05 19:31:35,767 [XMLTemplateService.java,3332] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/TesterList.xml
+INFO  2015-08-05 19:31:35,771 [XMLTemplateService.java,3349] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/giveSoulSelecter.xml
+INFO  2015-08-05 19:31:35,778 [XMLTemplateService.java,3424] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/giveSoulStage.xml
+INFO  2015-08-05 19:31:35,784 [XMLTemplateService.java,3480] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/adventuresConfig.xml
+INFO  2015-08-05 19:31:35,789 [XMLTemplateService.java,3504] - load platActiveCodeCtrl config file path :C:\const\project\OnePiece\Code_Server\server/xml/platActiveCodeCtrl.xml
+INFO  2015-08-05 19:31:35,793 [XMLTemplateService.java,3521] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/worldbossLvlHp.xml
+INFO  2015-08-05 19:31:35,801 [XMLTemplateService.java,3540] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/luckyStarConfig.xml
+INFO  2015-08-05 19:31:35,807 [XMLTemplateService.java,3304] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/platInitReward.xml
+INFO  2015-08-05 19:31:35,812 [XMLTemplateService.java,3607] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/quickCareerConfig.xml
+INFO  2015-08-05 19:31:35,815 [XMLTemplateService.java,3627] - load Diamond config file path :C:\const\project\OnePiece\Code_Server\server/xml/Diamond.xml
+INFO  2015-08-05 19:31:35,820 [XMLTemplateService.java,3678] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/DiamondConfig.xml
+INFO  2015-08-05 19:31:35,824 [XMLTemplateService.java,3694] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/DiamondAdditionConfig.xml
+INFO  2015-08-05 19:31:35,832 [XMLTemplateService.java,3845] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/GuildBase.xml
+INFO  2015-08-05 19:31:35,835 [XMLTemplateService.java,3872] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/GuildLvl.xml
+INFO  2015-08-05 19:31:35,841 [XMLTemplateService.java,3913] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/GuildProps.xml
+INFO  2015-08-05 19:31:35,844 [XMLTemplateService.java,3939] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/GuildBuildInfo.xml
+INFO  2015-08-05 19:31:35,847 [XMLTemplateService.java,3736] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/deepWaterConfig.xml
+INFO  2015-08-05 19:31:35,851 [XMLTemplateService.java,3965] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/GuildShopSell.xml
+INFO  2015-08-05 19:31:35,856 [XMLTemplateService.java,4017] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/GuildNPC.xml
+INFO  2015-08-05 19:31:35,862 [XMLTemplateService.java,4059] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/GoddessRebateConfig.xml
+INFO  2015-08-05 19:31:35,904 [Environment.java,514] - Hibernate 3.2.6
+INFO  2015-08-05 19:31:35,908 [Environment.java,547] - hibernate.properties not found
+INFO  2015-08-05 19:31:35,911 [Environment.java,681] - Bytecode provider name : cglib
+INFO  2015-08-05 19:31:35,915 [Environment.java,598] - using JDK 1.4 java.sql.Timestamp handling
+INFO  2015-08-05 19:31:35,964 [Configuration.java,1466] - configuring from file: hibernate_lo_01.cfg.xml
+INFO  2015-08-05 19:31:36,028 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Player.hbm.xml
+INFO  2015-08-05 19:31:36,112 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Player -> player
+INFO  2015-08-05 19:31:36,153 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Disciple.hbm.xml
+INFO  2015-08-05 19:31:36,175 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Disciple -> disciple
+INFO  2015-08-05 19:31:36,177 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Equip.hbm.xml
+INFO  2015-08-05 19:31:36,194 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Equip -> equip
+INFO  2015-08-05 19:31:36,196 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Skill.hbm.xml
+INFO  2015-08-05 19:31:36,213 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Skill -> skill
+INFO  2015-08-05 19:31:36,215 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Career.hbm.xml
+INFO  2015-08-05 19:31:36,237 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Career -> career
+INFO  2015-08-05 19:31:36,239 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Bag.hbm.xml
+INFO  2015-08-05 19:31:36,255 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Bag -> bag
+INFO  2015-08-05 19:31:36,256 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Soul.hbm.xml
+INFO  2015-08-05 19:31:36,270 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Soul -> soul
+INFO  2015-08-05 19:31:36,271 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Battle.hbm.xml
+INFO  2015-08-05 19:31:36,288 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Battle -> battle
+INFO  2015-08-05 19:31:36,290 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Mapping.hbm.xml
+INFO  2015-08-05 19:31:36,303 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Mapping -> mapping
+INFO  2015-08-05 19:31:36,304 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/UserStats.hbm.xml
+INFO  2015-08-05 19:31:36,326 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.UserStats -> stats
+INFO  2015-08-05 19:31:36,329 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/TeamBuffer.hbm.xml
+INFO  2015-08-05 19:31:36,348 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.TeamBuffer -> teambuffer
+INFO  2015-08-05 19:31:36,349 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/PayInfo.hbm.xml
+INFO  2015-08-05 19:31:36,367 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.PayInfo -> wBuyPropPay
+INFO  2015-08-05 19:31:36,368 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Recharge.hbm.xml
+INFO  2015-08-05 19:31:36,386 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Recharge -> pay
+INFO  2015-08-05 19:31:36,387 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Title.hbm.xml
+INFO  2015-08-05 19:31:36,406 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Title -> title
+INFO  2015-08-05 19:31:36,407 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/AdventureFightStats.hbm.xml
+INFO  2015-08-05 19:31:36,428 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.AdventureFightStats -> adventurefightstats
+INFO  2015-08-05 19:31:36,430 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/AdventureFightRank.hbm.xml
+INFO  2015-08-05 19:31:36,443 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.AdventureFightRank -> adventurefightrank
+INFO  2015-08-05 19:31:36,445 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Challenge.hbm.xml
+INFO  2015-08-05 19:31:36,461 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Challenge -> challenge
+INFO  2015-08-05 19:31:36,462 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Reward.hbm.xml
+INFO  2015-08-05 19:31:36,479 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Reward -> rewards
+INFO  2015-08-05 19:31:36,480 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/SkillBook.hbm.xml
+INFO  2015-08-05 19:31:36,493 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.SkillBook -> skillbook
+INFO  2015-08-05 19:31:36,494 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Cdkey.hbm.xml
+INFO  2015-08-05 19:31:36,505 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Cdkey -> cdkey
+INFO  2015-08-05 19:31:36,506 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/SysMsgInfo.hbm.xml
+INFO  2015-08-05 19:31:36,516 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.SysMsgInfo -> sysmsginfo
+INFO  2015-08-05 19:31:36,517 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/InviteStatus.hbm.xml
+INFO  2015-08-05 19:31:36,526 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.InviteStatus -> invitestatus
+INFO  2015-08-05 19:31:36,527 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/WorldBoss.hbm.xml
+INFO  2015-08-05 19:31:36,540 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.WorldBoss -> worldboss
+INFO  2015-08-05 19:31:36,541 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/WorldBossRank.hbm.xml
+INFO  2015-08-05 19:31:36,553 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.WorldBossRank -> worldbossrank
+INFO  2015-08-05 19:31:36,554 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/ActiveCodeEntity.hbm.xml
+INFO  2015-08-05 19:31:36,564 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.ActiveCodeEntity -> activecode
+INFO  2015-08-05 19:31:36,566 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/PlayerFrom.hbm.xml
+INFO  2015-08-05 19:31:36,578 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.PlayerFrom -> playerfrom
+INFO  2015-08-05 19:31:36,579 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/RelationShip.hbm.xml
+INFO  2015-08-05 19:31:36,588 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.RelationShip -> relationship
+INFO  2015-08-05 19:31:36,588 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Handbook.hbm.xml
+INFO  2015-08-05 19:31:36,597 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Handbook -> handbook
+INFO  2015-08-05 19:31:36,597 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/Leagua.hbm.xml
+INFO  2015-08-05 19:31:36,607 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.Leagua -> leagua
+INFO  2015-08-05 19:31:36,610 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/LeaguaApply.hbm.xml
+INFO  2015-08-05 19:31:36,623 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.LeaguaApply -> leaguaapply
+INFO  2015-08-05 19:31:36,625 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/LeaguaMedal.hbm.xml
+INFO  2015-08-05 19:31:36,636 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.LeaguaMedal -> leaguamedal
+INFO  2015-08-05 19:31:36,638 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/LeaguaMedalChangeInfo.hbm.xml
+INFO  2015-08-05 19:31:36,647 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.LeaguaMedalChangeInfo -> leaguamedalchangeinfo
+INFO  2015-08-05 19:31:36,649 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/LeaguaMembers.hbm.xml
+INFO  2015-08-05 19:31:36,657 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.LeaguaMembers -> leaguamembers
+INFO  2015-08-05 19:31:36,659 [Configuration.java,559] - Reading mappings from resource : com/oldmountain/dzm/entity/ActivityInfo.hbm.xml
+INFO  2015-08-05 19:31:36,670 [HbmBinder.java,300] - Mapping class: com.oldmountain.dzm.entity.ActivityInfo -> activityinfo
+INFO  2015-08-05 19:31:36,670 [Configuration.java,1547] - Configured SessionFactory: null
+INFO  2015-08-05 19:31:36,730 [C3P0ConnectionProvider.java,81] - C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://127.0.0.1:3306/dzm
+INFO  2015-08-05 19:31:36,730 [C3P0ConnectionProvider.java,82] - Connection properties: {useUnicode=true, user=root, password=****, characterEncoding=UTF-8}
+INFO  2015-08-05 19:31:36,731 [C3P0ConnectionProvider.java,85] - autocommit mode: false
+INFO  2015-08-05 19:31:36,749 [MLog.java,80] - MLog clients using log4j logging.
+INFO  2015-08-05 19:31:36,950 [C3P0Registry.java,204] - Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+INFO  2015-08-05 19:31:37,015 [AbstractPoolBackedDataSource.java,462] - Initializing c3p0 pool... com.mchange.v2.c3p0.PoolBackedDataSource@4532c5e7 [ connectionPoolDataSource -> com.mchange.v2.c3p0.WrapperConnectionPoolDataSource@8695e4e1 [ acquireIncrement -> 1, acquireRetryAttempts -> 3, acquireRetryDelay -> 2000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, debugUnreturnedConnectionStackTraces -> false, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge75j9a1ydg4pd130mn6|39a569f0, idleConnectionTestPeriod -> 60, initialPoolSize -> 7, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 42, maxStatements -> 50, maxStatementsPerConnection -> 0, minPoolSize -> 7, nestedDataSource -> com.mchange.v2.c3p0.DriverManagerDataSource@5addb409 [ description -> null, driverClass -> null, factoryClassLocation -> null, identityToken -> 1hge75j9a1ydg4pd130mn6|30df3bd5, jdbcUrl -> jdbc:mysql://127.0.0.1:3306/dzm, properties -> {useUnicode=true, user=******, password=******, characterEncoding=UTF-8} ], preferredTestQuery -> null, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false; userOverrides: {} ], dataSourceName -> null, factoryClassLocation -> null, identityToken -> 1hge75j9a1ydg4pd130mn6|530e3b65, numHelperThreads -> 3 ]
+INFO  2015-08-05 19:31:37,213 [SettingsFactory.java,89] - RDBMS: MySQL, version: 5.5.40
+INFO  2015-08-05 19:31:37,213 [SettingsFactory.java,90] - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.0.8 ( Revision: ${svn.Revision} )
+INFO  2015-08-05 19:31:37,227 [Dialect.java,152] - Using dialect: org.hibernate.dialect.MySQLDialect
+INFO  2015-08-05 19:31:37,231 [TransactionFactoryFactory.java,31] - Using default transaction strategy (direct JDBC transactions)
+INFO  2015-08-05 19:31:37,233 [TransactionManagerLookupFactory.java,33] - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+INFO  2015-08-05 19:31:37,233 [SettingsFactory.java,143] - Automatic flush during beforeCompletion(): disabled
+INFO  2015-08-05 19:31:37,233 [SettingsFactory.java,147] - Automatic session close at end of transaction: disabled
+INFO  2015-08-05 19:31:37,233 [SettingsFactory.java,154] - JDBC batch size: 15
+INFO  2015-08-05 19:31:37,233 [SettingsFactory.java,157] - JDBC batch updates for versioned data: disabled
+INFO  2015-08-05 19:31:37,234 [SettingsFactory.java,162] - Scrollable result sets: enabled
+INFO  2015-08-05 19:31:37,234 [SettingsFactory.java,170] - JDBC3 getGeneratedKeys(): enabled
+INFO  2015-08-05 19:31:37,234 [SettingsFactory.java,178] - Connection release mode: auto
+INFO  2015-08-05 19:31:37,235 [SettingsFactory.java,202] - Maximum outer join fetch depth: 2
+INFO  2015-08-05 19:31:37,235 [SettingsFactory.java,205] - Default batch fetch size: 1
+INFO  2015-08-05 19:31:37,235 [SettingsFactory.java,209] - Generate SQL with comments: disabled
+INFO  2015-08-05 19:31:37,235 [SettingsFactory.java,213] - Order SQL updates by primary key: disabled
+INFO  2015-08-05 19:31:37,235 [SettingsFactory.java,217] - Order SQL inserts for batching: disabled
+INFO  2015-08-05 19:31:37,236 [SettingsFactory.java,386] - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+INFO  2015-08-05 19:31:37,237 [ASTQueryTranslatorFactory.java,24] - Using ASTQueryTranslatorFactory
+INFO  2015-08-05 19:31:37,237 [SettingsFactory.java,225] - Query language substitutions: {}
+INFO  2015-08-05 19:31:37,238 [SettingsFactory.java,230] - JPA-QL strict compliance: disabled
+INFO  2015-08-05 19:31:37,238 [SettingsFactory.java,235] - Second-level cache: enabled
+INFO  2015-08-05 19:31:37,238 [SettingsFactory.java,239] - Query cache: disabled
+INFO  2015-08-05 19:31:37,238 [SettingsFactory.java,373] - Cache provider: org.hibernate.cache.NoCacheProvider
+INFO  2015-08-05 19:31:37,238 [SettingsFactory.java,254] - Optimize cache for minimal puts: disabled
+INFO  2015-08-05 19:31:37,238 [SettingsFactory.java,263] - Structured second-level cache entries: disabled
+INFO  2015-08-05 19:31:37,242 [SettingsFactory.java,290] - Statistics: disabled
+INFO  2015-08-05 19:31:37,242 [SettingsFactory.java,294] - Deleted entity synthetic identifier rollback: disabled
+INFO  2015-08-05 19:31:37,242 [SettingsFactory.java,309] - Default entity-mode: pojo
+INFO  2015-08-05 19:31:37,242 [SettingsFactory.java,313] - Named query checking : enabled
+INFO  2015-08-05 19:31:37,261 [SessionFactoryImpl.java,161] - building session factory
+INFO  2015-08-05 19:31:38,512 [SessionFactoryObjectFactory.java,82] - Not binding factory to JNDI, no JNDI name configured
+WARN  2015-08-05 19:31:38,562 [ConfigurationFactory.java,134] - No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/C:/const/project/onepiece/Code_Server/server/lib/ehcache-core-2.4.2.jar!/ehcache-failsafe.xml
+INFO  2015-08-05 19:31:38,887 [FightEndRankingServices.java,99] - =======Init FightEnd Date [20150804] Ranking Info Start!=======
+INFO  2015-08-05 19:31:39,500 [FightEndRankingServices.java,132] - =======Init FightEnd Date [20150804] Ranking Info Over!=======
+INFO  2015-08-05 19:31:39,500 [FightEndRankingServices.java,283] - synchronization FightEndRanking Date [20150804] [5] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-05 19:31:39,501 [FightEndRankingServices.java,283] - synchronization FightEndRanking Date [20150804] [6] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-05 19:31:39,501 [FightEndRankingServices.java,283] - synchronization FightEndRanking Date [20150804] [7] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-05 19:31:39,501 [FightEndRankingServices.java,283] - synchronization FightEndRanking Date [20150804] [8] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-05 19:31:39,502 [FightEndRankingServices.java,148] - =======Init FightEnd Date [20150805] Ranking Info Start!=======
+INFO  2015-08-05 19:31:39,521 [FightEndRankingServices.java,363] - synchronization FightEndRanking Date [20150805] [5] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-05 19:31:39,527 [FightEndRankingServices.java,363] - synchronization FightEndRanking Date [20150805] [6] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-05 19:31:39,535 [FightEndRankingServices.java,363] - synchronization FightEndRanking Date [20150805] [7] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-05 19:31:39,541 [FightEndRankingServices.java,363] - synchronization FightEndRanking Date [20150805] [8] Battle Ranking Info,Count [0],Total Cost Time:0Second!
+INFO  2015-08-05 19:31:39,541 [FightEndRankingServices.java,177] - =======Init FightEnd Date [20150805] Ranking Info Over!=======
+INFO  2015-08-05 19:31:39,556 [XMLTemplateService.java,3197] - load item config file path :C:\const\project\OnePiece\Code_Server\server/xml/persistNames.xml
+INFO  2015-08-05 19:31:39,627 [LeaguaServices.java,2223] - start loading leagua info from db to ram......
+INFO  2015-08-05 19:31:39,671 [LeaguaServices.java,2305] - end loading leagua info from db to ram......
+INFO  2015-08-05 19:31:40,559 [UpdateChecker.java,98] - New update(s) found: 2.4.7 [http://www.terracotta.org/confluence/display/release/Release+Notes+Ehcache+Core+2.4]. Please check http://ehcache.org for the latest version.
+INFO  2015-08-05 19:31:54,075 [LoginHandler.java,115] - login handler received: test8, pswd, 1
+INFO  2015-08-05 19:31:54,124 [LoginHandler.java,172] - login handler equip equipSize: 0 ,costTime: 0 
+INFO  2015-08-05 19:31:54,248 [SkillBookServices.java,44] - start************#playerId:5,startTime:1438774314248*********start
+INFO  2015-08-05 19:31:54,258 [SkillBookServices.java,72] - end************playerId:5,endTime:1438774314258,cost:10*********end
+INFO  2015-08-05 19:31:54,313 [ObjectAccessor.java,27] - add online session,playerid:5
+INFO  2015-08-05 19:31:54,314 [ClientSession.java,36] - player login setSession method|#playerId:5#client ip:/192.168.31.183:39651#current online player count:1
+INFO  2015-08-05 19:31:54,354 [LoginHandler.java,526] - player login info: 5, 1438658091, 5, 3, 648, 1438774314, ios_91, win32Device
+INFO  2015-08-05 19:31:54,355 [LoginHandler.java,527] - login handler ret send: test8, 269, {}
+INFO  2015-08-05 19:31:55,454 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-05 19:31:55,463 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 9, {}
+INFO  2015-08-05 19:31:55,480 [UserDiscipleInfoHandler.java,49] - user disciple info received: 5, 1, {}
+INFO  2015-08-05 19:31:55,488 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 5, 7, {}
+INFO  2015-08-05 19:31:55,501 [UserToolInfoHandler.java,40] - user tool info handler received: 5, 1, {}
+INFO  2015-08-05 19:31:55,507 [UserToolInfoHandler.java,85] - user tool info handler ret send: 5, 4, {}
+INFO  2015-08-05 19:31:55,844 [UserSoulInfoHandler.java,38] - user soul info handler received: 5, 1, {}
+INFO  2015-08-05 19:31:55,846 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 5, 2, {}
+INFO  2015-08-05 19:31:55,940 [UserSkillInfoHandler.java,48] - user skill info handler received: 5, 1, {}
+INFO  2015-08-05 19:31:55,945 [UserSkillInfoHandler.java,90] - user skill info handler ret send: 5, 4, {}
+INFO  2015-08-05 19:31:56,041 [UserCareerInfoHandler.java,48] - user career info handler received: 5, 1, {}
+INFO  2015-08-05 19:31:56,048 [UserCareerInfoHandler.java,121] - user career info handler ret send: 5, 6, {}
+INFO  2015-08-05 19:31:56,145 [GetShopListHandler.java,45] - get shop list handler received: 5, 1, {}
+INFO  2015-08-05 19:31:56,145 [GetShopListHandler.java,46] - get shop list handler received: 5, 1, {}
+INFO  2015-08-05 19:31:56,151 [GetShopListHandler.java,92] - get shop list handler ret send: 5, 5, {}
+INFO  2015-08-05 19:31:56,151 [GetShopListHandler.java,93] - get shop list handler ret send: 5, 5, {}
+INFO  2015-08-05 19:31:56,246 [UserEquipInfoHandler.java,48] - user equip info handler received: 5, 1, {}
+INFO  2015-08-05 19:31:56,260 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 5, 13, {}
+INFO  2015-08-05 19:31:56,355 [UserBattleArrayHandler.java,47] - user battle array handler received: 5, 1, {}
+INFO  2015-08-05 19:31:56,370 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 5, 13, {}
+INFO  2015-08-05 19:31:56,381 [UserMarketInfoHandler.java,33] - user market info handler received: 5, 1, {}
+INFO  2015-08-05 19:31:56,384 [UserMarketInfoHandler.java,89] - user market info handler ret send: 5, 2, {}
+INFO  2015-08-05 19:31:56,475 [TitleInfoHandler.java,38] - title info handler received: 5, 1, {}
+INFO  2015-08-05 19:31:56,476 [TitleInfoHandler.java,95] - title info handler ret send: 5, 0, {}
+INFO  2015-08-05 19:31:56,807 [BoardCastInfoHandler.java,51] - board cast info handler received: 5, 1, {}
+INFO  2015-08-05 19:31:56,808 [BoardCastInfoHandler.java,79] - board cast info handler ret send: 5, 1, {}
+INFO  2015-08-05 19:31:57,612 [AdventureInfoHandler.java,61] - adventure info handler received: 1, {}, {}
+INFO  2015-08-05 19:31:57,624 [AdventureInfoHandler.java,307] - adventure info handler ret send: test8, 11, {}
+INFO  2015-08-05 19:32:00,352 [AdventureContinueLoginHandler.java,61] - getInfo received: 5, 1
+INFO  2015-08-05 19:32:00,371 [AdventureContinueLoginHandler.java,81] - getInfo Send: PlayerId:5, Cost:10
+INFO  2015-08-05 19:32:02,057 [AdventureContinueLoginHandler.java,111] - getReward received: PlayerId:5, Version:1,rewardId:2
+INFO  2015-08-05 19:32:02,140 [AdventureContinueLoginHandler.java,247] - gerReward Send: PlayerId:5,Cost:82
+INFO  2015-08-05 19:32:06,486 [GoddessRebateHandler.java,69] - fortune come handler received: 5, 1, {}
+INFO  2015-08-05 19:32:06,497 [GoddessRebateHandler.java,113] - godness rebate get info: 5, 10, 1
+INFO  2015-08-05 19:32:33,023 [UserBattleHandler.java,56] - user battle handler received: 5, 1, 0
+INFO  2015-08-05 19:32:33,103 [UserBattleHandler.java,302] - user battle handler ret send: 5, 80, {}
+INFO  2015-08-05 19:32:33,743 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-05 19:32:33,750 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 7, {}
+INFO  2015-08-05 19:32:39,837 [OnlineUserNum.java,15] - online count: 1438774359, 1
+INFO  2015-08-05 19:33:13,937 [UserBattleHandler.java,56] - user battle handler received: 5, 1, 0
+INFO  2015-08-05 19:33:13,944 [UserBattleHandler.java,251] - lucky star drop: 1, 0, 0, 0, 0
+INFO  2015-08-05 19:33:13,974 [UserBattleHandler.java,302] - user battle handler ret send: 5, 37, {}
+INFO  2015-08-05 19:37:39,852 [OnlineUserNum.java,15] - online count: 1438774659, 1
+INFO  2015-08-05 19:37:51,873 [SkillBookInfoHandler.java,58] - getSkillBookInfo received: 5, 1, {}
+INFO  2015-08-05 19:37:51,878 [SkillBookInfoHandler.java,90] - getSkillBookInfo ret send: 5, Cost:5, {}
+INFO  2015-08-05 19:37:54,598 [LoginHandler.java,115] - login handler received: ext, pswd, 1
+INFO  2015-08-05 19:37:54,607 [LoginHandler.java,172] - login handler equip equipSize: 0 ,costTime: 0 
+INFO  2015-08-05 19:37:54,624 [SkillBookServices.java,44] - start************#playerId:9,startTime:1438774674624*********start
+INFO  2015-08-05 19:37:54,626 [SkillBookServices.java,72] - end************playerId:9,endTime:1438774674626,cost:2*********end
+INFO  2015-08-05 19:37:54,636 [ObjectAccessor.java,27] - add online session,playerid:9
+INFO  2015-08-05 19:37:54,636 [ClientSession.java,36] - player login setSession method|#playerId:9#client ip:/192.168.31.207:56089#current online player count:2
+INFO  2015-08-05 19:37:54,637 [LoginHandler.java,526] - player login info: 9, 1438665748, 1, 3, 90, 1438774674, ios_91, win32Device
+INFO  2015-08-05 19:37:54,637 [LoginHandler.java,527] - login handler ret send: ext, 37, {}
+INFO  2015-08-05 19:37:54,998 [UserBasicInfoHandler.java,48] - user basic info handler received: 9, 1, {}
+INFO  2015-08-05 19:37:55,001 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 9, 3, {}
+INFO  2015-08-05 19:37:55,081 [UserDiscipleInfoHandler.java,49] - user disciple info received: 9, 1, {}
+INFO  2015-08-05 19:37:55,081 [UserDiscipleInfoHandler.java,77] - user disciple info handler ret send: 9, 0, {}
+INFO  2015-08-05 19:37:55,161 [UserToolInfoHandler.java,40] - user tool info handler received: 9, 1, {}
+INFO  2015-08-05 19:37:55,161 [UserToolInfoHandler.java,85] - user tool info handler ret send: 9, 0, {}
+INFO  2015-08-05 19:37:55,242 [UserSoulInfoHandler.java,38] - user soul info handler received: 9, 1, {}
+INFO  2015-08-05 19:37:55,242 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 9, 0, {}
+INFO  2015-08-05 19:37:55,323 [UserSkillInfoHandler.java,48] - user skill info handler received: 9, 1, {}
+INFO  2015-08-05 19:37:55,323 [UserSkillInfoHandler.java,90] - user skill info handler ret send: 9, 0, {}
+INFO  2015-08-05 19:37:55,403 [UserCareerInfoHandler.java,48] - user career info handler received: 9, 1, {}
+INFO  2015-08-05 19:37:55,404 [UserCareerInfoHandler.java,121] - user career info handler ret send: 9, 1, {}
+INFO  2015-08-05 19:37:55,484 [GetShopListHandler.java,45] - get shop list handler received: 9, 1, {}
+INFO  2015-08-05 19:37:55,484 [GetShopListHandler.java,46] - get shop list handler received: 9, 1, {}
+INFO  2015-08-05 19:37:55,484 [GetShopListHandler.java,92] - get shop list handler ret send: 9, 0, {}
+INFO  2015-08-05 19:37:55,485 [GetShopListHandler.java,93] - get shop list handler ret send: 9, 0, {}
+INFO  2015-08-05 19:37:55,565 [UserEquipInfoHandler.java,48] - user equip info handler received: 9, 1, {}
+INFO  2015-08-05 19:37:55,566 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 9, 1, {}
+INFO  2015-08-05 19:37:55,646 [UserBattleArrayHandler.java,47] - user battle array handler received: 9, 1, {}
+INFO  2015-08-05 19:37:55,647 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 9, 1, {}
+INFO  2015-08-05 19:37:55,727 [UserMarketInfoHandler.java,33] - user market info handler received: 9, 1, {}
+INFO  2015-08-05 19:37:55,728 [UserMarketInfoHandler.java,89] - user market info handler ret send: 9, 1, {}
+INFO  2015-08-05 19:37:55,808 [TitleInfoHandler.java,38] - title info handler received: 9, 1, {}
+INFO  2015-08-05 19:37:55,808 [TitleInfoHandler.java,95] - title info handler ret send: 9, 0, {}
+INFO  2015-08-05 19:37:55,968 [BoardCastInfoHandler.java,51] - board cast info handler received: 9, 1, {}
+INFO  2015-08-05 19:37:55,968 [BoardCastInfoHandler.java,79] - board cast info handler ret send: 9, 0, {}
+INFO  2015-08-05 19:37:56,928 [AdventureInfoHandler.java,61] - adventure info handler received: 1, {}, {}
+INFO  2015-08-05 19:37:56,929 [AdventureInfoHandler.java,307] - adventure info handler ret send: ext, 1, {}
+INFO  2015-08-05 19:37:59,169 [UserBattleHandler.java,56] - user battle handler received: 5, 1, 0
+INFO  2015-08-05 19:37:59,171 [UserBattleHandler.java,302] - user battle handler ret send: 5, 2, {}
+INFO  2015-08-05 19:38:11,736 [BuyToolHandler.java,57] - buy tool handler received: 9, 3501002, 1
+INFO  2015-08-05 19:38:11,736 [BuyToolHandler.java,58] - buy tool handler received: 9, 3501002, 1
+INFO  2015-08-05 19:38:11,778 [BuyToolHandler.java,118] - Gold Cost Info: 1438774691 , 9 , 3501002 , 1 , 2420, 2400 , 20
+INFO  2015-08-05 19:38:11,782 [BuyToolHandler.java,139] - buy tool handler ret send: 9, 46, {}
+INFO  2015-08-05 19:38:11,782 [BuyToolHandler.java,140] - buy tool handler ret send: 9, 46, {}
+INFO  2015-08-05 19:40:01,905 [BuyToolHandler.java,57] - buy tool handler received: 9, 3502001, 1
+INFO  2015-08-05 19:40:01,905 [BuyToolHandler.java,58] - buy tool handler received: 9, 3502001, 1
+INFO  2015-08-05 19:40:01,941 [BuyToolHandler.java,118] - Gold Cost Info: 1438774801 , 9 , 3502001 , 1 , 2400, 2312 , 88
+INFO  2015-08-05 19:40:01,942 [BuyToolHandler.java,139] - buy tool handler ret send: 9, 36, {}
+INFO  2015-08-05 19:40:01,942 [BuyToolHandler.java,140] - buy tool handler ret send: 9, 36, {}
+INFO  2015-08-05 19:40:03,958 [UserBattleHandler.java,56] - user battle handler received: 5, 1, 0
+INFO  2015-08-05 19:40:03,981 [UserBattleHandler.java,302] - user battle handler ret send: 5, 21, {}
+INFO  2015-08-05 19:41:35,517 [AdventureContinueLoginHandler.java,61] - getInfo received: 9, 1
+INFO  2015-08-05 19:41:35,521 [AdventureContinueLoginHandler.java,81] - getInfo Send: PlayerId:9, Cost:4
+INFO  2015-08-05 19:41:37,045 [AdventureContinueLoginHandler.java,111] - getReward received: PlayerId:9, Version:1,rewardId:2
+INFO  2015-08-05 19:41:37,066 [AdventureContinueLoginHandler.java,247] - gerReward Send: PlayerId:9,Cost:21
+INFO  2015-08-05 19:41:41,147 [UserBattleHandler.java,56] - user battle handler received: 5, 1, 0
+INFO  2015-08-05 19:41:41,155 [UserBattleHandler.java,302] - user battle handler ret send: 5, 8, {}
+INFO  2015-08-05 19:42:34,325 [BuyToolHandler.java,57] - buy tool handler received: 9, 5001032, 1
+INFO  2015-08-05 19:42:34,325 [BuyToolHandler.java,58] - buy tool handler received: 9, 5001032, 1
+INFO  2015-08-05 19:42:34,942 [BuyToolHandler.java,118] - Gold Cost Info: 1438774954 , 9 , 5001032 , 1 , 2312, 1937 , 375
+INFO  2015-08-05 19:42:34,943 [BuyToolHandler.java,139] - buy tool handler ret send: 9, 618, {}
+INFO  2015-08-05 19:42:34,943 [BuyToolHandler.java,140] - buy tool handler ret send: 9, 618, {}
+INFO  2015-08-05 19:42:39,867 [OnlineUserNum.java,15] - online count: 1438774959, 2
+INFO  2015-08-05 19:42:49,427 [BuyToolHandler.java,57] - buy tool handler received: 9, 5001032, 1
+INFO  2015-08-05 19:42:49,427 [BuyToolHandler.java,58] - buy tool handler received: 9, 5001032, 1
+INFO  2015-08-05 19:42:49,436 [BuyToolHandler.java,118] - Gold Cost Info: 1438774969 , 9 , 5001032 , 1 , 1937, 1562 , 375
+INFO  2015-08-05 19:42:49,437 [BuyToolHandler.java,139] - buy tool handler ret send: 9, 9, {}
+INFO  2015-08-05 19:42:49,438 [BuyToolHandler.java,140] - buy tool handler ret send: 9, 9, {}
+INFO  2015-08-05 19:43:05,843 [BuyToolHandler.java,57] - buy tool handler received: 9, 5001032, 1
+INFO  2015-08-05 19:43:05,843 [BuyToolHandler.java,58] - buy tool handler received: 9, 5001032, 1
+INFO  2015-08-05 19:43:05,854 [BuyToolHandler.java,118] - Gold Cost Info: 1438774985 , 9 , 5001032 , 1 , 1562, 1187 , 375
+INFO  2015-08-05 19:43:05,856 [BuyToolHandler.java,139] - buy tool handler ret send: 9, 11, {}
+INFO  2015-08-05 19:43:05,856 [BuyToolHandler.java,140] - buy tool handler ret send: 9, 11, {}
+INFO  2015-08-05 19:46:39,877 [DataLander.java,33] - start landing data to database
+INFO  2015-08-05 19:46:40,151 [DataLander.java,90] - end landing data to database,total update player count:2,cost Time:274,total update db count:22
+INFO  2015-08-05 19:47:39,882 [OnlineUserNum.java,15] - online count: 1438775259, 2
+INFO  2015-08-05 19:48:25,991 [UserBattleHandler.java,56] - user battle handler received: 5, 1, 0
+INFO  2015-08-05 19:48:26,000 [UserBattleHandler.java,302] - user battle handler ret send: 5, 9, {}
+INFO  2015-08-05 19:49:08,649 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-05 19:49:08,652 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 3, {}
+INFO  2015-08-05 19:49:59,081 [UpgradeEquipHandler.java,46] - upgrade equip handler received: 5, 15, {}
+INFO  2015-08-05 19:49:59,095 [UpgradeEquipHandler.java,190] - upgrade equip handler ret send: 5, 13, {}
+INFO  2015-08-05 19:50:03,016 [UpgradeEquipHandler.java,46] - upgrade equip handler received: 5, 24, {}
+INFO  2015-08-05 19:50:03,018 [UpgradeEquipHandler.java,190] - upgrade equip handler ret send: 5, 2, {}
+INFO  2015-08-05 19:50:18,379 [UserBattleHandler.java,56] - user battle handler received: 5, 1, 0
+INFO  2015-08-05 19:50:18,388 [UserBattleHandler.java,302] - user battle handler ret send: 5, 9, {}
+INFO  2015-08-05 19:51:08,722 [UserBattleHandler.java,56] - user battle handler received: 5, 1, 0
+INFO  2015-08-05 19:51:08,728 [UserBattleHandler.java,251] - lucky star drop: 1, 0, 0, 0, 0
+INFO  2015-08-05 19:51:08,742 [UserBattleHandler.java,302] - user battle handler ret send: 5, 20, {}
+INFO  2015-08-05 19:51:16,346 [SkillBookInfoHandler.java,58] - getSkillBookInfo received: 5, 1, {}
+INFO  2015-08-05 19:51:16,347 [SkillBookInfoHandler.java,90] - getSkillBookInfo ret send: 5, Cost:1, {}
+INFO  2015-08-05 19:51:33,807 [AddPowerHandler.java,59] - add power handler received: getAdventurePower: 5, 1, {}
+INFO  2015-08-05 19:51:33,809 [AddPowerHandler.java,100] - add power handler ret send: getAdventurePower: 5, 0, {}
+INFO  2015-08-05 19:51:37,673 [AdventureLevelUpRewardInfoHandler.java,47] - adventure level up reward info handler received: 5, 1, {}
+INFO  2015-08-05 19:51:37,674 [AdventureLevelUpRewardInfoHandler.java,48] - adventure level up reward info handler received: 5, 1, {}
+INFO  2015-08-05 19:51:37,682 [AdventureLevelUpRewardInfoHandler.java,73] - adventure level up reward info handler ret send: 5, 8, {}
+INFO  2015-08-05 19:51:37,683 [AdventureLevelUpRewardInfoHandler.java,74] - adventure level up reward info handler ret send: 5, 8, {}
+INFO  2015-08-05 19:51:45,703 [AdventureLevelUpGetRewardInfoHandler.java,50] - adventure level up get reward info handler received: 5, 1, 1
+INFO  2015-08-05 19:51:45,704 [AdventureLevelUpGetRewardInfoHandler.java,51] - adventure level up get reward info handler received: 5, 1, 1
+INFO  2015-08-05 19:51:45,706 [AdventureLevelUpGetRewardInfoHandler.java,94] - adventure level up get reward info handler ret send: 5, 2, {}
+INFO  2015-08-05 19:51:45,707 [AdventureLevelUpGetRewardInfoHandler.java,95] - adventure level up get reward info handler ret send: 5, 2, {}
+INFO  2015-08-05 19:51:47,067 [AdventureLevelUpGetRewardInfoHandler.java,50] - adventure level up get reward info handler received: 5, 1, 2
+INFO  2015-08-05 19:51:47,067 [AdventureLevelUpGetRewardInfoHandler.java,51] - adventure level up get reward info handler received: 5, 1, 2
+INFO  2015-08-05 19:51:47,068 [AdventureLevelUpGetRewardInfoHandler.java,94] - adventure level up get reward info handler ret send: 5, 0, {}
+INFO  2015-08-05 19:51:47,069 [AdventureLevelUpGetRewardInfoHandler.java,95] - adventure level up get reward info handler ret send: 5, 0, {}
+INFO  2015-08-05 19:51:48,437 [GetAdventureBoundlessHoleHandler.java,49] - get adventure boundless hole handler received: 5, 1, {}
+INFO  2015-08-05 19:51:48,438 [GetAdventureBoundlessHoleHandler.java,50] - get adventure boundless hole handler received: 5, 1, {}
+INFO  2015-08-05 19:51:48,448 [GetAdventureBoundlessHoleHandler.java,75] - get adventure boundless hole handler ret send: 5, 10, {}
+INFO  2015-08-05 19:51:48,449 [GetAdventureBoundlessHoleHandler.java,76] - get adventure boundless hole handler ret send: 5, 10, {}
+INFO  2015-08-05 19:51:50,217 [AddBoundlessHoleHandler.java,49] - add boundless hole handler received: 5, 1, {}
+INFO  2015-08-05 19:51:50,217 [AddBoundlessHoleHandler.java,50] - add boundless hole handler received: 5, 1, {}
+INFO  2015-08-05 19:51:50,230 [AddBoundlessHoleHandler.java,111] - add boundless hole handler ret send: 5, 12, {}
+INFO  2015-08-05 19:51:50,231 [AddBoundlessHoleHandler.java,112] - add boundless hole handler ret send: 5, 12, {}
+INFO  2015-08-05 19:51:53,685 [FortuneComeHandler.java,42] - fortune come handler received: 5, 1, {}
+INFO  2015-08-05 19:51:53,686 [FortuneComeHandler.java,116] - fortune come handler ret send: 5, 1, {}
+INFO  2015-08-05 19:52:12,729 [UserBattleHandler.java,56] - user battle handler received: 5, 1, 0
+INFO  2015-08-05 19:52:12,738 [UserBattleHandler.java,302] - user battle handler ret send: 5, 9, {}
+INFO  2015-08-05 19:52:15,619 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-05 19:52:15,628 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 9, {}
+INFO  2015-08-05 19:52:39,860 [OnlineUserNum.java,15] - online count: 1438775559, 2
+INFO  2015-08-05 19:53:12,880 [UserBattleHandler.java,56] - user battle handler received: 5, 1, 0
+INFO  2015-08-05 19:53:12,881 [UserBattleHandler.java,251] - lucky star drop: 1, 0, 0, 0, 0
+INFO  2015-08-05 19:53:12,890 [UserBattleHandler.java,302] - user battle handler ret send: 5, 10, {}
+INFO  2015-08-05 19:56:39,869 [DataLander.java,33] - start landing data to database
+INFO  2015-08-05 19:56:40,002 [DataLander.java,90] - end landing data to database,total update player count:1,cost Time:133,total update db count:13
+INFO  2015-08-05 19:57:39,875 [OnlineUserNum.java,15] - online count: 1438775859, 2
+INFO  2015-08-05 19:58:38,954 [UserBattleHandler.java,56] - user battle handler received: 5, 1, 0
+INFO  2015-08-05 19:58:38,960 [UserBattleHandler.java,251] - lucky star drop: 1, 0, 0, 0, 1
+INFO  2015-08-05 19:58:38,967 [UserBattleHandler.java,302] - user battle handler ret send: 5, 13, {}
+INFO  2015-08-05 20:01:27,169 [UserBattleHandler.java,56] - user battle handler received: 5, 1, 0
+INFO  2015-08-05 20:01:27,171 [UserBattleHandler.java,302] - user battle handler ret send: 5, 2, {}
+INFO  2015-08-05 20:02:21,348 [UpgradeSkillHandler.java,48] - upgrade skill handler received: 5, 40, {}
+INFO  2015-08-05 20:02:21,359 [UpgradeSkillHandler.java,197] - upgrade skill handler ret send: 5, 10, {}
+INFO  2015-08-05 20:02:26,165 [TeamBuffInfoHandler.java,57] - team buff info handler received: 5, 1, {}
+INFO  2015-08-05 20:02:26,170 [TeamBuffInfoHandler.java,104] - team buff info handler ret send: 5, 2, {}
+INFO  2015-08-05 20:02:33,691 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-05 20:02:33,694 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 3, {}
+INFO  2015-08-05 20:02:35,631 [SessionHandler.java,73] - player logout sessionClosed method|playerId:9#client ip:/192.168.31.207:56089#Current playerCount:2
+INFO  2015-08-05 20:02:35,632 [ObjectAccessor.java,32] - remove online session,playerid:9
+INFO  2015-08-05 20:02:35,634 [SessionHandler.java,84] - player logout info: 9, 1438665748, 1, 3, 90, 1438776155,ios_91,win32Device
+INFO  2015-08-05 20:02:35,635 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:9
+INFO  2015-08-05 20:02:39,890 [OnlineUserNum.java,15] - online count: 1438776159, 1
+INFO  2015-08-05 20:06:39,900 [DataLander.java,33] - start landing data to database
+INFO  2015-08-05 20:06:40,009 [DataLander.java,90] - end landing data to database,total update player count:1,cost Time:109,total update db count:9
+INFO  2015-08-05 20:07:39,905 [OnlineUserNum.java,15] - online count: 1438776459, 1
+INFO  2015-08-05 20:12:39,919 [OnlineUserNum.java,15] - online count: 1438776759, 1
+INFO  2015-08-05 20:16:39,930 [DataLander.java,33] - start landing data to database
+INFO  2015-08-05 20:16:39,982 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:52,total update db count:0
+INFO  2015-08-05 20:17:39,934 [OnlineUserNum.java,15] - online count: 1438777059, 1
+INFO  2015-08-05 20:22:15,666 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-05 20:22:15,669 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 3, {}
+INFO  2015-08-05 20:22:39,950 [OnlineUserNum.java,15] - online count: 1438777359, 1
+INFO  2015-08-05 20:26:39,959 [DataLander.java,33] - start landing data to database
+INFO  2015-08-05 20:26:40,044 [DataLander.java,90] - end landing data to database,total update player count:1,cost Time:85,total update db count:0
+INFO  2015-08-05 20:27:39,965 [OnlineUserNum.java,15] - online count: 1438777659, 1
+INFO  2015-08-05 20:32:39,980 [OnlineUserNum.java,15] - online count: 1438777959, 1
+INFO  2015-08-05 20:36:39,990 [DataLander.java,33] - start landing data to database
+INFO  2015-08-05 20:36:40,052 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:62,total update db count:0
+INFO  2015-08-05 20:37:39,995 [OnlineUserNum.java,15] - online count: 1438778259, 1
+INFO  2015-08-05 20:42:30,503 [SessionHandler.java,73] - player logout sessionClosed method|playerId:5#client ip:/192.168.31.183:39651#Current playerCount:2
+INFO  2015-08-05 20:42:30,504 [ObjectAccessor.java,32] - remove online session,playerid:5
+INFO  2015-08-05 20:42:30,504 [SessionHandler.java,84] - player logout info: 5, 1438658091, 6, 3, 817, 1438778550,ios_91,win32Device
+INFO  2015-08-05 20:42:30,504 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:5
+INFO  2015-08-05 20:42:40,010 [OnlineUserNum.java,15] - online count: 1438778560, 0
+INFO  2015-08-05 20:46:40,007 [DataLander.java,33] - start landing data to database
+INFO  2015-08-05 20:46:40,663 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:656,total update db count:0
+INFO  2015-08-05 20:47:39,987 [OnlineUserNum.java,15] - online count: 1438778859, 0
+INFO  2015-08-05 20:52:40,003 [OnlineUserNum.java,15] - online count: 1438779160, 0
+INFO  2015-08-05 20:56:40,013 [DataLander.java,33] - start landing data to database
+INFO  2015-08-05 20:56:40,089 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:76,total update db count:0
+INFO  2015-08-05 20:57:40,018 [OnlineUserNum.java,15] - online count: 1438779460, 0
+INFO  2015-08-05 21:02:40,033 [OnlineUserNum.java,15] - online count: 1438779760, 0
+INFO  2015-08-05 21:06:40,031 [DataLander.java,33] - start landing data to database
+INFO  2015-08-05 21:06:40,125 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:94,total update db count:0
+INFO  2015-08-05 21:07:39,925 [OnlineUserNum.java,15] - online count: 1438780059, 0
+INFO  2015-08-05 21:12:39,940 [OnlineUserNum.java,15] - online count: 1438780359, 0
+INFO  2015-08-05 21:16:39,950 [DataLander.java,33] - start landing data to database
+INFO  2015-08-05 21:16:40,031 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:81,total update db count:0
+INFO  2015-08-05 21:17:39,955 [OnlineUserNum.java,15] - online count: 1438780659, 0
+INFO  2015-08-05 21:22:39,969 [OnlineUserNum.java,15] - online count: 1438780959, 0
+INFO  2015-08-05 21:26:39,967 [DataLander.java,33] - start landing data to database
+INFO  2015-08-05 21:26:40,077 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:110,total update db count:0
+INFO  2015-08-05 21:27:39,945 [OnlineUserNum.java,15] - online count: 1438781259, 0
+INFO  2015-08-05 21:32:39,960 [OnlineUserNum.java,15] - online count: 1438781559, 0
+INFO  2015-08-05 21:36:39,971 [DataLander.java,33] - start landing data to database
+INFO  2015-08-05 21:36:40,050 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:79,total update db count:0
+INFO  2015-08-05 21:37:39,976 [OnlineUserNum.java,15] - online count: 1438781859, 0
+INFO  2015-08-05 21:42:39,990 [OnlineUserNum.java,15] - online count: 1438782159, 0
+INFO  2015-08-05 21:46:40,000 [DataLander.java,33] - start landing data to database
+INFO  2015-08-05 21:46:40,077 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:77,total update db count:0
+INFO  2015-08-05 21:47:40,005 [OnlineUserNum.java,15] - online count: 1438782460, 0
+INFO  2015-08-05 21:52:40,020 [OnlineUserNum.java,15] - online count: 1438782760, 0
+INFO  2015-08-05 21:56:40,030 [DataLander.java,33] - start landing data to database
+INFO  2015-08-05 21:56:40,092 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:62,total update db count:0
+INFO  2015-08-05 21:57:40,036 [OnlineUserNum.java,15] - online count: 1438783060, 0
+INFO  2015-08-05 22:02:40,051 [OnlineUserNum.java,15] - online count: 1438783360, 0

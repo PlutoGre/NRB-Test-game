@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="35dip"
+    android:background="@drawable/pay_common_title_bar_background" >
+
+    <ImageButton
+        android:id="@+id/kgpaysdk_layer_back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dip"
+        android:background="@drawable/kgpaysdk_transparent"
+        android:src="@drawable/kgpaysdk_layer_back_button_selector" />
+
+    <TextView
+        android:id="@+id/kgpaysdk_layer_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:shadowColor="#ff000000"
+        android:shadowRadius="1.0"
+        android:singleLine="true"
+        android:text="标题"
+        android:textColor="#ffffffff"
+        android:textSize="16dip" />
+
+    <ImageButton
+        android:id="@+id/kgpaysdk_layer_help_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dip"
+        android:background="@drawable/kgpaysdk_transparent"
+        android:src="@drawable/kgpaysdk_title_help_button_selector" />
+
+</RelativeLayout>

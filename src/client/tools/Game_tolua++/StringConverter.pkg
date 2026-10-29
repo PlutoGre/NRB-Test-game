@@ -1,0 +1,34 @@
+#include "cocos2d.h"
+#include <string>
+#include <ios>
+
+class StringConverter
+{
+public:
+
+    static std::string toString(float val, unsigned short precision = 6,  unsigned short width = 0, char fill = ' ',std::ios::fmtflags flags = std::ios::fmtflags(0) );
+    static std::string toString(int val, unsigned short width = 0,char fill = ' ',std::ios::fmtflags flags = std::ios::fmtflags(0) );
+    static std::string toString(unsigned int val,unsigned short width = 0, char fill = ' ',std::ios::fmtflags flags = std::ios::fmtflags(0) );
+    static std::string toString(unsigned long val,unsigned short width = 0, char fill = ' ',std::ios::fmtflags flags = std::ios::fmtflags(0) );
+    static std::string toString(long val,unsigned short width = 0, char fill = ' ',std::ios::fmtflags flags = std::ios::fmtflags(0) );
+		static std::string toString(int64_t val,unsigned short width = 0, char fill = ' ',std::ios::fmtflags flags = std::ios::fmtflags(0) );
+		static std::string toString(bool val, bool yesNo = false);
+		static std::string toString(const CCRect& val);
+		static std::string toString(const CCSize& val);
+		static std::string toString(const CCPoint& val);
+		static std::string toString(const ccColor3B& val);
+		/*
+    static float parseReal(const std::string& val, float defaultValue = 0);
+    static int parseInt(const std::string& val, int defaultValue = 0);
+    static unsigned int parseUnsignedInt(const std::string& val, unsigned int defaultValue = 0);
+    static long parseLong(const std::string& val, long defaultValue = 0);
+    static unsigned long parseUnsignedLong(const std::string& val, unsigned long defaultValue = 0);
+    static size_t parseSizeT(const std::string& val, size_t defaultValue = 0);
+    static bool parseBool(const std::string& val, bool defaultValue = 0);
+    */
+		static CCRect parseRect(const std::string& val);
+		static CCPoint parsePoint(const std::string& val);
+		static CCSize parseSize(const std::string& val);
+		static ccColor3B parseColor3B(const std::string& val);
+};
+

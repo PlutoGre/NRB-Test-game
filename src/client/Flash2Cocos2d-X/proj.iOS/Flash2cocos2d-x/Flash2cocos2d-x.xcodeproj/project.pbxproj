@@ -1,0 +1,341 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF1165A116D1D95500A90AC8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1165A016D1D95500A90AC8 /* Foundation.framework */; };
+		CF1165A616D1D95500A90AC8 /* Flash2cocos2d_x.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CF1165A516D1D95500A90AC8 /* Flash2cocos2d_x.h */; };
+		CF1165A816D1D95500A90AC8 /* Flash2cocos2d_x.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1165A716D1D95500A90AC8 /* Flash2cocos2d_x.m */; };
+		CF1165D516D1D9DE00A90AC8 /* CBone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF1165B516D1D9DE00A90AC8 /* CBone.cpp */; };
+		CF1165D616D1D9DE00A90AC8 /* CArmature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF1165B616D1D9DE00A90AC8 /* CArmature.cpp */; };
+		CF1165D716D1D9DE00A90AC8 /* CConnectionData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF1165B816D1D9DE00A90AC8 /* CConnectionData.cpp */; };
+		CF1165D816D1D9DE00A90AC8 /* CAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF1165B916D1D9DE00A90AC8 /* CAnimation.cpp */; };
+		CF1165D916D1D9DE00A90AC8 /* CFrameNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF1165BA16D1D9DE00A90AC8 /* CFrameNode.cpp */; };
+		CF1165DA16D1D9DE00A90AC8 /* CTween.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF1165BC16D1D9DE00A90AC8 /* CTween.cpp */; };
+		CF1165DB16D1D9DE00A90AC8 /* CBaseNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF1165BD16D1D9DE00A90AC8 /* CBaseNode.cpp */; };
+		CF1165DC16D1D9DE00A90AC8 /* CTweenNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF1165BE16D1D9DE00A90AC8 /* CTweenNode.cpp */; };
+		CF1165DD16D1D9DE00A90AC8 /* CArmatureAniData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF1165C316D1D9DE00A90AC8 /* CArmatureAniData.cpp */; };
+		CF1165DE16D1D9DE00A90AC8 /* CBoneAniData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF1165C516D1D9DE00A90AC8 /* CBoneAniData.cpp */; };
+		CF1165DF16D1D9DE00A90AC8 /* CEventFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF1165C916D1D9DE00A90AC8 /* CEventFrame.cpp */; };
+		CF1165E016D1D9DE00A90AC8 /* CFrameNodeList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF1165CB16D1D9DE00A90AC8 /* CFrameNodeList.cpp */; };
+		CF1165E116D1D9DE00A90AC8 /* CMathHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF1165CD16D1D9DE00A90AC8 /* CMathHelper.cpp */; };
+		CF1165E216D1D9DE00A90AC8 /* CProcessBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF1165CF16D1D9DE00A90AC8 /* CProcessBase.cpp */; };
+		CF1165E316D1D9DE00A90AC8 /* CXLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF1165D316D1D9DE00A90AC8 /* CXLog.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CF11659B16D1D95500A90AC8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				CF1165A616D1D95500A90AC8 /* Flash2cocos2d_x.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CF11659D16D1D95500A90AC8 /* libFlash2cocos2d-x.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libFlash2cocos2d-x.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF1165A016D1D95500A90AC8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CF1165A416D1D95500A90AC8 /* Flash2cocos2d-x-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Flash2cocos2d-x-Prefix.pch"; sourceTree = "<group>"; };
+		CF1165A516D1D95500A90AC8 /* Flash2cocos2d_x.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Flash2cocos2d_x.h; sourceTree = "<group>"; };
+		CF1165A716D1D95500A90AC8 /* Flash2cocos2d_x.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Flash2cocos2d_x.m; sourceTree = "<group>"; };
+		CF1165B416D1D9DE00A90AC8 /* CBone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBone.h; path = ../../../CBone.h; sourceTree = "<group>"; };
+		CF1165B516D1D9DE00A90AC8 /* CBone.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CBone.cpp; path = ../../../CBone.cpp; sourceTree = "<group>"; };
+		CF1165B616D1D9DE00A90AC8 /* CArmature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CArmature.cpp; path = ../../../CArmature.cpp; sourceTree = "<group>"; };
+		CF1165B716D1D9DE00A90AC8 /* CProcessBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CProcessBase.h; path = ../../../CProcessBase.h; sourceTree = "<group>"; };
+		CF1165B816D1D9DE00A90AC8 /* CConnectionData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CConnectionData.cpp; path = ../../../CConnectionData.cpp; sourceTree = "<group>"; };
+		CF1165B916D1D9DE00A90AC8 /* CAnimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CAnimation.cpp; path = ../../../CAnimation.cpp; sourceTree = "<group>"; };
+		CF1165BA16D1D9DE00A90AC8 /* CFrameNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFrameNode.cpp; path = ../../../CFrameNode.cpp; sourceTree = "<group>"; };
+		CF1165BB16D1D9DE00A90AC8 /* CFrameNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CFrameNode.h; path = ../../../CFrameNode.h; sourceTree = "<group>"; };
+		CF1165BC16D1D9DE00A90AC8 /* CTween.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CTween.cpp; path = ../../../CTween.cpp; sourceTree = "<group>"; };
+		CF1165BD16D1D9DE00A90AC8 /* CBaseNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CBaseNode.cpp; path = ../../../CBaseNode.cpp; sourceTree = "<group>"; };
+		CF1165BE16D1D9DE00A90AC8 /* CTweenNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CTweenNode.cpp; path = ../../../CTweenNode.cpp; sourceTree = "<group>"; };
+		CF1165BF16D1D9DE00A90AC8 /* CBaseNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBaseNode.h; path = ../../../CBaseNode.h; sourceTree = "<group>"; };
+		CF1165C016D1D9DE00A90AC8 /* CCFlash2Cocos2d-x.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CCFlash2Cocos2d-x.h"; path = "../../../CCFlash2Cocos2d-x.h"; sourceTree = "<group>"; };
+		CF1165C116D1D9DE00A90AC8 /* CAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CAnimation.h; path = ../../../CAnimation.h; sourceTree = "<group>"; };
+		CF1165C216D1D9DE00A90AC8 /* CArmature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CArmature.h; path = ../../../CArmature.h; sourceTree = "<group>"; };
+		CF1165C316D1D9DE00A90AC8 /* CArmatureAniData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CArmatureAniData.cpp; path = ../../../CArmatureAniData.cpp; sourceTree = "<group>"; };
+		CF1165C416D1D9DE00A90AC8 /* CArmatureAniData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CArmatureAniData.h; path = ../../../CArmatureAniData.h; sourceTree = "<group>"; };
+		CF1165C516D1D9DE00A90AC8 /* CBoneAniData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CBoneAniData.cpp; path = ../../../CBoneAniData.cpp; sourceTree = "<group>"; };
+		CF1165C616D1D9DE00A90AC8 /* CBoneAniData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBoneAniData.h; path = ../../../CBoneAniData.h; sourceTree = "<group>"; };
+		CF1165C716D1D9DE00A90AC8 /* CConnectionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CConnectionData.h; path = ../../../CConnectionData.h; sourceTree = "<group>"; };
+		CF1165C816D1D9DE00A90AC8 /* CConstValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CConstValue.h; path = ../../../CConstValue.h; sourceTree = "<group>"; };
+		CF1165C916D1D9DE00A90AC8 /* CEventFrame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CEventFrame.cpp; path = ../../../CEventFrame.cpp; sourceTree = "<group>"; };
+		CF1165CA16D1D9DE00A90AC8 /* CEventFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CEventFrame.h; path = ../../../CEventFrame.h; sourceTree = "<group>"; };
+		CF1165CB16D1D9DE00A90AC8 /* CFrameNodeList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFrameNodeList.cpp; path = ../../../CFrameNodeList.cpp; sourceTree = "<group>"; };
+		CF1165CC16D1D9DE00A90AC8 /* CFrameNodeList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CFrameNodeList.h; path = ../../../CFrameNodeList.h; sourceTree = "<group>"; };
+		CF1165CD16D1D9DE00A90AC8 /* CMathHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CMathHelper.cpp; path = ../../../CMathHelper.cpp; sourceTree = "<group>"; };
+		CF1165CE16D1D9DE00A90AC8 /* CMathHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMathHelper.h; path = ../../../CMathHelper.h; sourceTree = "<group>"; };
+		CF1165CF16D1D9DE00A90AC8 /* CProcessBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CProcessBase.cpp; path = ../../../CProcessBase.cpp; sourceTree = "<group>"; };
+		CF1165D016D1D9DE00A90AC8 /* CTextureData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTextureData.h; path = ../../../CTextureData.h; sourceTree = "<group>"; };
+		CF1165D116D1D9DE00A90AC8 /* CTween.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTween.h; path = ../../../CTween.h; sourceTree = "<group>"; };
+		CF1165D216D1D9DE00A90AC8 /* CTweenNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTweenNode.h; path = ../../../CTweenNode.h; sourceTree = "<group>"; };
+		CF1165D316D1D9DE00A90AC8 /* CXLog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CXLog.cpp; path = ../../../CXLog.cpp; sourceTree = "<group>"; };
+		CF1165D416D1D9DE00A90AC8 /* CXLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CXLog.h; path = ../../../CXLog.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF11659A16D1D95500A90AC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF1165A116D1D95500A90AC8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF11659216D1D95500A90AC8 = {
+			isa = PBXGroup;
+			children = (
+				CF1165A216D1D95500A90AC8 /* Flash2cocos2d-x */,
+				CF11659F16D1D95500A90AC8 /* Frameworks */,
+				CF11659E16D1D95500A90AC8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF11659E16D1D95500A90AC8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF11659D16D1D95500A90AC8 /* libFlash2cocos2d-x.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF11659F16D1D95500A90AC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF1165A016D1D95500A90AC8 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF1165A216D1D95500A90AC8 /* Flash2cocos2d-x */ = {
+			isa = PBXGroup;
+			children = (
+				CF1165B416D1D9DE00A90AC8 /* CBone.h */,
+				CF1165B516D1D9DE00A90AC8 /* CBone.cpp */,
+				CF1165B616D1D9DE00A90AC8 /* CArmature.cpp */,
+				CF1165B716D1D9DE00A90AC8 /* CProcessBase.h */,
+				CF1165B816D1D9DE00A90AC8 /* CConnectionData.cpp */,
+				CF1165B916D1D9DE00A90AC8 /* CAnimation.cpp */,
+				CF1165BA16D1D9DE00A90AC8 /* CFrameNode.cpp */,
+				CF1165BB16D1D9DE00A90AC8 /* CFrameNode.h */,
+				CF1165BC16D1D9DE00A90AC8 /* CTween.cpp */,
+				CF1165BD16D1D9DE00A90AC8 /* CBaseNode.cpp */,
+				CF1165BE16D1D9DE00A90AC8 /* CTweenNode.cpp */,
+				CF1165BF16D1D9DE00A90AC8 /* CBaseNode.h */,
+				CF1165C016D1D9DE00A90AC8 /* CCFlash2Cocos2d-x.h */,
+				CF1165C116D1D9DE00A90AC8 /* CAnimation.h */,
+				CF1165C216D1D9DE00A90AC8 /* CArmature.h */,
+				CF1165C316D1D9DE00A90AC8 /* CArmatureAniData.cpp */,
+				CF1165C416D1D9DE00A90AC8 /* CArmatureAniData.h */,
+				CF1165C516D1D9DE00A90AC8 /* CBoneAniData.cpp */,
+				CF1165C616D1D9DE00A90AC8 /* CBoneAniData.h */,
+				CF1165C716D1D9DE00A90AC8 /* CConnectionData.h */,
+				CF1165C816D1D9DE00A90AC8 /* CConstValue.h */,
+				CF1165C916D1D9DE00A90AC8 /* CEventFrame.cpp */,
+				CF1165CA16D1D9DE00A90AC8 /* CEventFrame.h */,
+				CF1165CB16D1D9DE00A90AC8 /* CFrameNodeList.cpp */,
+				CF1165CC16D1D9DE00A90AC8 /* CFrameNodeList.h */,
+				CF1165CD16D1D9DE00A90AC8 /* CMathHelper.cpp */,
+				CF1165CE16D1D9DE00A90AC8 /* CMathHelper.h */,
+				CF1165CF16D1D9DE00A90AC8 /* CProcessBase.cpp */,
+				CF1165D016D1D9DE00A90AC8 /* CTextureData.h */,
+				CF1165D116D1D9DE00A90AC8 /* CTween.h */,
+				CF1165D216D1D9DE00A90AC8 /* CTweenNode.h */,
+				CF1165D316D1D9DE00A90AC8 /* CXLog.cpp */,
+				CF1165D416D1D9DE00A90AC8 /* CXLog.h */,
+				CF1165A516D1D95500A90AC8 /* Flash2cocos2d_x.h */,
+				CF1165A716D1D95500A90AC8 /* Flash2cocos2d_x.m */,
+				CF1165A316D1D95500A90AC8 /* Supporting Files */,
+			);
+			path = "Flash2cocos2d-x";
+			sourceTree = "<group>";
+		};
+		CF1165A316D1D95500A90AC8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CF1165A416D1D95500A90AC8 /* Flash2cocos2d-x-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF11659C16D1D95500A90AC8 /* Flash2cocos2d-x */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF1165AB16D1D95500A90AC8 /* Build configuration list for PBXNativeTarget "Flash2cocos2d-x" */;
+			buildPhases = (
+				CF11659916D1D95500A90AC8 /* Sources */,
+				CF11659A16D1D95500A90AC8 /* Frameworks */,
+				CF11659B16D1D95500A90AC8 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Flash2cocos2d-x";
+			productName = "Flash2cocos2d-x";
+			productReference = CF11659D16D1D95500A90AC8 /* libFlash2cocos2d-x.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF11659416D1D95500A90AC8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = fish;
+			};
+			buildConfigurationList = CF11659716D1D95500A90AC8 /* Build configuration list for PBXProject "Flash2cocos2d-x" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF11659216D1D95500A90AC8;
+			productRefGroup = CF11659E16D1D95500A90AC8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF11659C16D1D95500A90AC8 /* Flash2cocos2d-x */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF11659916D1D95500A90AC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF1165A816D1D95500A90AC8 /* Flash2cocos2d_x.m in Sources */,
+				CF1165D516D1D9DE00A90AC8 /* CBone.cpp in Sources */,
+				CF1165D616D1D9DE00A90AC8 /* CArmature.cpp in Sources */,
+				CF1165D716D1D9DE00A90AC8 /* CConnectionData.cpp in Sources */,
+				CF1165D816D1D9DE00A90AC8 /* CAnimation.cpp in Sources */,
+				CF1165D916D1D9DE00A90AC8 /* CFrameNode.cpp in Sources */,
+				CF1165DA16D1D9DE00A90AC8 /* CTween.cpp in Sources */,
+				CF1165DB16D1D9DE00A90AC8 /* CBaseNode.cpp in Sources */,
+				CF1165DC16D1D9DE00A90AC8 /* CTweenNode.cpp in Sources */,
+				CF1165DD16D1D9DE00A90AC8 /* CArmatureAniData.cpp in Sources */,
+				CF1165DE16D1D9DE00A90AC8 /* CBoneAniData.cpp in Sources */,
+				CF1165DF16D1D9DE00A90AC8 /* CEventFrame.cpp in Sources */,
+				CF1165E016D1D9DE00A90AC8 /* CFrameNodeList.cpp in Sources */,
+				CF1165E116D1D9DE00A90AC8 /* CMathHelper.cpp in Sources */,
+				CF1165E216D1D9DE00A90AC8 /* CProcessBase.cpp in Sources */,
+				CF1165E316D1D9DE00A90AC8 /* CXLog.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CF1165A916D1D95500A90AC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CF1165AA16D1D95500A90AC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF1165AC16D1D95500A90AC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LIBRARY = "libstdc++";
+				DSTROOT = /tmp/Flash2cocos2d_x.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Flash2cocos2d-x/Flash2cocos2d-x-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CF1165AD16D1D95500A90AC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LIBRARY = "libstdc++";
+				DSTROOT = /tmp/Flash2cocos2d_x.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Flash2cocos2d-x/Flash2cocos2d-x-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF11659716D1D95500A90AC8 /* Build configuration list for PBXProject "Flash2cocos2d-x" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF1165A916D1D95500A90AC8 /* Debug */,
+				CF1165AA16D1D95500A90AC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF1165AB16D1D95500A90AC8 /* Build configuration list for PBXNativeTarget "Flash2cocos2d-x" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF1165AC16D1D95500A90AC8 /* Debug */,
+				CF1165AD16D1D95500A90AC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF11659416D1D95500A90AC8 /* Project object */;
+}

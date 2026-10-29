@@ -1,0 +1,6 @@
+INFO  2015-08-04 14:45:02,336 [TeamBuffInfoHandler.java,57] - team buff info handler received: 7, 1, {}
+INFO  2015-08-04 14:45:02,342 [TeamBuffInfoHandler.java,104] - team buff info handler ret send: 7, 2, {}
+INFO  2015-08-04 15:32:33,733 [TeamBuffInfoHandler.java,57] - team buff info handler received: 5, 1, {}
+INFO  2015-08-04 15:32:33,741 [TeamBuffInfoHandler.java,104] - team buff info handler ret send: 5, 7, {}
+INFO  2015-08-04 15:34:01,476 [TeamBuffInfoHandler.java,130] - team buff info handler received: upgradeTeamBuffInfo : test8, 1
+INFO  2015-08-04 15:34:01,478 [TeamBuffInfoHandler.java,324] - team buff info handler ret send: upgradeTeamBuffInfo : test8, 2, {}

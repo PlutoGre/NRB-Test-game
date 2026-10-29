@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<GuildLvls>
+		<GuildLvl lvl="1" guildMaxMember="5" guildXp="1000" shopXp="800" shopWin="3" shoppingCD="240" bankXp="0" bankStorage="0" totemBuff="0.01" totemHp="50" totemXp="80" hpAltar="120" atcAltar="60" defAltar="40" willAltar="160" altarXp="1300"/>
+		<GuildLvl lvl="2" guildMaxMember="9" guildXp="1700" shopXp="1360" shopWin="4" shoppingCD="220" bankXp="0" bankStorage="0" totemBuff="0.02" totemHp="130" totemXp="136" hpAltar="180" atcAltar="90" defAltar="60" willAltar="240" altarXp="2100"/>
+		<GuildLvl lvl="3" guildMaxMember="13" guildXp="2700" shopXp="2160" shopWin="5" shoppingCD="200" bankXp="0" bankStorage="0" totemBuff="0.03" totemHp="240" totemXp="216" hpAltar="240" atcAltar="120" defAltar="80" willAltar="320" altarXp="3400"/>
+		<GuildLvl lvl="4" guildMaxMember="17" guildXp="4400" shopXp="3520" shopWin="6" shoppingCD="180" bankXp="0" bankStorage="0" totemBuff="0.04" totemHp="380" totemXp="352" hpAltar="300" atcAltar="150" defAltar="100" willAltar="400" altarXp="9000"/>
+		<GuildLvl lvl="5" guildMaxMember="21" guildXp="11600" shopXp="9280" shopWin="7" shoppingCD="160" bankXp="0" bankStorage="0" totemBuff="0.05" totemHp="540" totemXp="928" hpAltar="360" atcAltar="180" defAltar="120" willAltar="480" altarXp="23200"/>
+		<GuildLvl lvl="6" guildMaxMember="25" guildXp="30000" shopXp="24000" shopWin="8" shoppingCD="140" bankXp="0" bankStorage="0" totemBuff="0.06" totemHp="720" totemXp="2400" hpAltar="420" atcAltar="210" defAltar="140" willAltar="560" altarXp="61000"/>
+		<GuildLvl lvl="7" guildMaxMember="30" guildXp="0" shopXp="0" shopWin="9" shoppingCD="120" bankXp="0" bankStorage="0" totemBuff="0.07" totemHp="1000" totemXp="0" hpAltar="480" atcAltar="240" defAltar="160" willAltar="640" altarXp="0"/>
+	</GuildLvls>
+</root>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.oldmountain.dzm.entity">
+	<class name="AdventureFightRank" table="adventurefightrank" dynamic-update="true" dynamic-insert="true">
+        <id name="id" column="id">
+            <generator class="native" />
+        </id>
+		<property name="playerId" column="playerId" type="int"/>
+		<property name="playerName" column="playerName" type="string"/>
+		<property name="playerLevel" column="playerLevel" type="int"/>
+		<property name="barrierCount" column="barrierCount" type="int"/>
+		<property name="passBarrier" column="passBarrier" type="int"/>
+		<property name="obtainStar" column="obtainStar" type="int"/>
+		<property name="continueInRankAmount" column="continueInRankAmount" type="int"/>
+		<property name="rankTime" column="rankTime" type="int"/>
+	</class>
+</hibernate-mapping>

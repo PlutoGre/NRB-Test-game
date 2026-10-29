@@ -1,0 +1,26 @@
+message OPBackStageFetchLucky
+{
+	required int32 version 	= 1 [default = 1];
+	required string name = 2;
+}
+ 
+message OPBackStageFetchLuckyRet
+{
+	required int32 servertime = 1;
+	required int32 userid = 2;
+	required string name = 3;
+	required int32 registertime = 4;
+	required int32 lastlogin = 5;
+	required int32 level = 6;
+	required int64 silvercoins = 7;
+	required int32 goldcoins = 8;
+	required int32 thisLuckPool = 9;
+	required int32 nextLuckPool = 10;
+	required int32 luckOne = 11;
+	required int32 luckTwo = 12;
+	required int32 treasureWorth = 13;
+	required int32 thisDisciple = 14;
+	required int32 nextDisciple = 15;
+	required int32 discipleLucky = 16;
+	
+}

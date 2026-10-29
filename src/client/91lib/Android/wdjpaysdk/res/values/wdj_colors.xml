@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- common colors -->
+    <color name="dark_green">#338800</color>
+    <color name="green">#66aa00</color>
+    <color name="red">#ff0000</color>
+    <color name="black">#333333</color>
+    <color name="grey">#cccccc</color>
+    <color name="light_grey">#dddddd</color>
+    <color name="xlight_grey">#f0eeee</color>
+    <color name="orange">#c66a46</color>
+    <color name="white">#f7f7f7</color>
+    <color name="blue">#0000FF</color>
+    <color name="black_grey">#727272</color>
+    <color name="dark_grey">#9e9e9e</color>
+    <color name="ade_grey">#d5d5d5</color>
+	<color name="card">#E5EADD</color>
+	
+	<color name="wandou_green">#66AA00</color>
+	<color name="wandou_light_green">#e5eadd</color>
+	<color name="wandou_semi_transparent">#C0000000</color>
+	
+	<color name="wandou_font_color_black">#222222</color>
+	<color name="wandou_font_color_white">#FFFFFF</color>
+	<color name="wandou_font_color_grey">#777777</color>
+	<color name="wandou_font_hint_color_grey">#AAAAAA</color>
+</resources>

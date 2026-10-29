@@ -1,0 +1,7 @@
+$#include "ScriptMathToLua.h"
+
+class ScriptMathToLua 
+{
+	static bool compareSilverCoins(unsigned int _coins);
+	static void modifySilverCoins(long long _coins);
+};

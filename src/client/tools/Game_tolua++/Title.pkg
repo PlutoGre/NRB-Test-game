@@ -1,0 +1,44 @@
+$#include "Title.h"
+
+class Title
+{
+	static unsigned int getTypeByItemID(unsigned int itemid); 
+	static unsigned int getItemIDByType( unsigned int itemid, unsigned int level = 1 );
+
+	Title(unsigned int id,bool isViewTeam=false);
+	bool mIsViewTeam;
+	unsigned int		id();
+	unsigned int		itemID();
+	unsigned int		startime();
+
+	const std::string&	name();
+	unsigned int		buffType();
+	unsigned int		time();
+	std::string			levelupCondition();
+	std::string			getNextLevelUpCondition();
+	std::string			describe();
+	const std::string&	iconPic();
+	const std::string&	namePic();
+	unsigned int		quantity();
+
+	unsigned int		getlefttime();
+	std::string	getLeftTimeString();
+
+	ccColor3B getFrameColor();
+	CCSprite* getFrameNormalSpirte(std::string ext="");
+	CCSprite* getFrameSelectedSpirte(std::string ext="");
+	CCSprite* getFrameDisabledSpirte(std::string ext="");
+
+	std::string	getTitleBuffPic();
+
+	std::string	getNextQuantityString();
+	std::string	getQuantityString();
+
+	bool				hasNextTitle();
+	unsigned int		getNextTitleItemID();
+	unsigned int		nextQuantity();
+	unsigned int		level();
+	unsigned int		type();
+
+	bool				hasGet();
+};

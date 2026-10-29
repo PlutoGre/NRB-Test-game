@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configs>
+	<DiamondOpenStatus>1</DiamondOpenStatus><!-- 功能开关，0为关闭，1为开启 -->
+	<DiamondRemoveToolsId>5002002</DiamondRemoveToolsId><!-- 拆除宝石消耗道具id -->
+	<DiamondOpenToolsId>5002001</DiamondOpenToolsId><!-- 打孔道具id -->
+	<DiamondOpenLevel>1</DiamondOpenLevel><!-- 功能开放等级，大于等于 -->
+	<hole_1_consume>1</hole_1_consume><!-- 开孔消耗道具数量 -->
+	<hole_2_consume>3</hole_2_consume>
+	<hole_3_consume>8</hole_3_consume>
+	<hole_4_consume>18</hole_4_consume>
+</Configs>

@@ -1,0 +1,791 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		220245EF17AAC5C400818175 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55DEFD0C16D7776F00E75F8C /* Foundation.framework */; };
+		2202523517AACA2800818175 /* libPlatform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2202523417AACA2800818175 /* libPlatform.cpp */; };
+		2202523617AACA2800818175 /* libPlatform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2202523417AACA2800818175 /* libPlatform.cpp */; };
+		2202523717AACA2800818175 /* libPlatform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2202523417AACA2800818175 /* libPlatform.cpp */; };
+		2202523B17AACA3900818175 /* libTBObj.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2202523817AACA3900818175 /* libTBObj.mm */; };
+		2202523C17AACA3900818175 /* libTB.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2202523A17AACA3900818175 /* libTB.mm */; };
+		22368F0817B4E11E00E2ADDE /* libPlatform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2202523417AACA2800818175 /* libPlatform.cpp */; };
+		22368F0A17B4E11E00E2ADDE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55DEFD0C16D7776F00E75F8C /* Foundation.framework */; };
+		22368F1317B4E17100E2ADDE /* lib91Debug.mm in Sources */ = {isa = PBXBuildFile; fileRef = 22368F1017B4E17100E2ADDE /* lib91Debug.mm */; };
+		22368F1417B4E17100E2ADDE /* lib91DebugObj.mm in Sources */ = {isa = PBXBuildFile; fileRef = 22368F1217B4E17100E2ADDE /* lib91DebugObj.mm */; };
+		225173F017B10F13005F18F3 /* libPlatform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2202523417AACA2800818175 /* libPlatform.cpp */; };
+		225173F417B10F13005F18F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55DEFD0C16D7776F00E75F8C /* Foundation.framework */; };
+		225173FF17B11228005F18F3 /* libIToolsObj.mm in Sources */ = {isa = PBXBuildFile; fileRef = 225173FC17B11228005F18F3 /* libIToolsObj.mm */; };
+		2251740017B11228005F18F3 /* libITools.mm in Sources */ = {isa = PBXBuildFile; fileRef = 225173FD17B11228005F18F3 /* libITools.mm */; };
+		556A1C34178C162300780030 /* libPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 556A1C31178C162300780030 /* libPP.mm */; };
+		556A1C35178C162300780030 /* libPPObj.mm in Sources */ = {isa = PBXBuildFile; fileRef = 556A1C33178C162300780030 /* libPPObj.mm */; };
+		55AEAAB517A41E3B00D5C0B9 /* libPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 556A1C31178C162300780030 /* libPP.mm */; };
+		55AEAAB617A41E3B00D5C0B9 /* libPPObj.mm in Sources */ = {isa = PBXBuildFile; fileRef = 556A1C33178C162300780030 /* libPPObj.mm */; };
+		55AEAABA17A41E3B00D5C0B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55DEFD0C16D7776F00E75F8C /* Foundation.framework */; };
+		55DEFD0D16D7776F00E75F8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55DEFD0C16D7776F00E75F8C /* Foundation.framework */; };
+		55DEFD3716D7779900E75F8C /* lib91.mm in Sources */ = {isa = PBXBuildFile; fileRef = 55DEFD3616D7779900E75F8C /* lib91.mm */; };
+		55ED209A16E5CCBA003F1988 /* lib91Obj.mm in Sources */ = {isa = PBXBuildFile; fileRef = 55ED209916E5CCBA003F1988 /* lib91Obj.mm */; };
+		55EF463C179516DE003D540C /* libAG.mm in Sources */ = {isa = PBXBuildFile; fileRef = 55EF4639179516DE003D540C /* libAG.mm */; };
+		55EF463D179516DE003D540C /* libAGObj.mm in Sources */ = {isa = PBXBuildFile; fileRef = 55EF463B179516DE003D540C /* libAGObj.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		220245F017AAC5C400818175 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22368F0B17B4E11E00E2ADDE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		225173F517B10F13005F18F3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55AEAABB17A41E3B00D5C0B9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55DEFD0716D7776F00E75F8C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		220245F417AAC5C400818175 /* liblib91_tb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblib91_tb.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2202522F17AACA1000818175 /* libTB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libTB.h; path = ../../../include/libTB.h; sourceTree = "<group>"; };
+		2202523417AACA2800818175 /* libPlatform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libPlatform.cpp; path = ../../../include/libPlatform.cpp; sourceTree = "<group>"; };
+		2202523817AACA3900818175 /* libTBObj.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = libTBObj.mm; path = ../../libTBObj.mm; sourceTree = "<group>"; };
+		2202523917AACA3900818175 /* libTBObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libTBObj.h; path = ../../libTBObj.h; sourceTree = "<group>"; };
+		2202523A17AACA3900818175 /* libTB.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = libTB.mm; path = ../../libTB.mm; sourceTree = "<group>"; };
+		22368F0F17B4E11E00E2ADDE /* liblib91_debug.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblib91_debug.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		22368F1017B4E17100E2ADDE /* lib91Debug.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = lib91Debug.mm; path = ../../lib91Debug.mm; sourceTree = "<group>"; };
+		22368F1117B4E17100E2ADDE /* lib91DebugObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lib91DebugObj.h; path = ../../lib91DebugObj.h; sourceTree = "<group>"; };
+		22368F1217B4E17100E2ADDE /* lib91DebugObj.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = lib91DebugObj.mm; path = ../../lib91DebugObj.mm; sourceTree = "<group>"; };
+		22368F1517B4E1BB00E2ADDE /* lib91Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lib91Debug.h; path = ../../../include/lib91Debug.h; sourceTree = "<group>"; };
+		225173F917B10F13005F18F3 /* liblib91_ITools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblib91_ITools.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		225173FB17B11215005F18F3 /* libITools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libITools.h; path = ../../../include/libITools.h; sourceTree = "<group>"; };
+		225173FC17B11228005F18F3 /* libIToolsObj.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = libIToolsObj.mm; path = ../../libIToolsObj.mm; sourceTree = "<group>"; };
+		225173FD17B11228005F18F3 /* libITools.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = libITools.mm; path = ../../libITools.mm; sourceTree = "<group>"; };
+		225173FE17B11228005F18F3 /* libIToolsObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libIToolsObj.h; path = ../../libIToolsObj.h; sourceTree = "<group>"; };
+		556A1C2E178C161100780030 /* libPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libPlatform.h; path = ../../../include/libPlatform.h; sourceTree = "<group>"; };
+		556A1C2F178C161100780030 /* libPP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libPP.h; path = ../../../include/libPP.h; sourceTree = "<group>"; };
+		556A1C31178C162300780030 /* libPP.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = libPP.mm; path = ../../libPP.mm; sourceTree = "<group>"; };
+		556A1C32178C162300780030 /* libPPObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libPPObj.h; path = ../../libPPObj.h; sourceTree = "<group>"; };
+		556A1C33178C162300780030 /* libPPObj.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = libPPObj.mm; path = ../../libPPObj.mm; sourceTree = "<group>"; };
+		55AEAABF17A41E3B00D5C0B9 /* liblib91_pp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblib91_pp.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		55DEFD0916D7776F00E75F8C /* liblib91.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblib91.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		55DEFD0C16D7776F00E75F8C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		55DEFD1016D7776F00E75F8C /* lib91-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "lib91-Prefix.pch"; sourceTree = "<group>"; };
+		55DEFD3616D7779900E75F8C /* lib91.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = lib91.mm; path = ../../lib91.mm; sourceTree = "<group>"; };
+		55ED209216E5AC7E003F1988 /* lib91Obj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lib91Obj.h; path = ../../lib91Obj.h; sourceTree = "<group>"; };
+		55ED209916E5CCBA003F1988 /* lib91Obj.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = lib91Obj.mm; path = ../../lib91Obj.mm; sourceTree = "<group>"; };
+		55EF4636179516BD003D540C /* libAG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libAG.h; path = ../../../include/libAG.h; sourceTree = "<group>"; };
+		55EF4639179516DE003D540C /* libAG.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = libAG.mm; path = ../../libAG.mm; sourceTree = "<group>"; };
+		55EF463A179516DE003D540C /* libAGObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libAGObj.h; path = ../../libAGObj.h; sourceTree = "<group>"; };
+		55EF463B179516DE003D540C /* libAGObj.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = libAGObj.mm; path = ../../libAGObj.mm; sourceTree = "<group>"; };
+		6A4F00B5175CA16100D76663 /* lib91.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lib91.h; path = ../../../include/lib91.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		220245EE17AAC5C400818175 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				220245EF17AAC5C400818175 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22368F0917B4E11E00E2ADDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22368F0A17B4E11E00E2ADDE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		225173F317B10F13005F18F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				225173F417B10F13005F18F3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55AEAAB917A41E3B00D5C0B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55AEAABA17A41E3B00D5C0B9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55DEFD0616D7776F00E75F8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55DEFD0D16D7776F00E75F8C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		220245E417AAC58100818175 /* tb */ = {
+			isa = PBXGroup;
+			children = (
+				2202523817AACA3900818175 /* libTBObj.mm */,
+				2202523917AACA3900818175 /* libTBObj.h */,
+				2202523A17AACA3900818175 /* libTB.mm */,
+				2202522F17AACA1000818175 /* libTB.h */,
+			);
+			name = tb;
+			sourceTree = "<group>";
+		};
+		22368EFF17B4E0FD00E2ADDE /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				22368F1017B4E17100E2ADDE /* lib91Debug.mm */,
+				22368F1517B4E1BB00E2ADDE /* lib91Debug.h */,
+				22368F1117B4E17100E2ADDE /* lib91DebugObj.h */,
+				22368F1217B4E17100E2ADDE /* lib91DebugObj.mm */,
+			);
+			name = debug;
+			sourceTree = "<group>";
+		};
+		225173FA17B11065005F18F3 /* itools */ = {
+			isa = PBXGroup;
+			children = (
+				225173FC17B11228005F18F3 /* libIToolsObj.mm */,
+				225173FD17B11228005F18F3 /* libITools.mm */,
+				225173FE17B11228005F18F3 /* libIToolsObj.h */,
+				225173FB17B11215005F18F3 /* libITools.h */,
+			);
+			name = itools;
+			sourceTree = "<group>";
+		};
+		556A1C36178C162C00780030 /* 91 */ = {
+			isa = PBXGroup;
+			children = (
+				6A4F00B5175CA16100D76663 /* lib91.h */,
+				55DEFD3616D7779900E75F8C /* lib91.mm */,
+				55ED209216E5AC7E003F1988 /* lib91Obj.h */,
+				55ED209916E5CCBA003F1988 /* lib91Obj.mm */,
+			);
+			name = 91;
+			sourceTree = "<group>";
+		};
+		556A1C37178C164200780030 /* pp */ = {
+			isa = PBXGroup;
+			children = (
+				556A1C31178C162300780030 /* libPP.mm */,
+				556A1C32178C162300780030 /* libPPObj.h */,
+				556A1C33178C162300780030 /* libPPObj.mm */,
+				556A1C2F178C161100780030 /* libPP.h */,
+			);
+			name = pp;
+			sourceTree = "<group>";
+		};
+		55DEFCFE16D7776F00E75F8C = {
+			isa = PBXGroup;
+			children = (
+				55DEFD0E16D7776F00E75F8C /* lib91 */,
+				55DEFD0B16D7776F00E75F8C /* Frameworks */,
+				55DEFD0A16D7776F00E75F8C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		55DEFD0A16D7776F00E75F8C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55DEFD0916D7776F00E75F8C /* liblib91.a */,
+				55AEAABF17A41E3B00D5C0B9 /* liblib91_pp.a */,
+				220245F417AAC5C400818175 /* liblib91_tb.a */,
+				225173F917B10F13005F18F3 /* liblib91_ITools.a */,
+				22368F0F17B4E11E00E2ADDE /* liblib91_debug.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55DEFD0B16D7776F00E75F8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55DEFD0C16D7776F00E75F8C /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55DEFD0E16D7776F00E75F8C /* lib91 */ = {
+			isa = PBXGroup;
+			children = (
+				22368EFF17B4E0FD00E2ADDE /* debug */,
+				225173FA17B11065005F18F3 /* itools */,
+				220245E417AAC58100818175 /* tb */,
+				55EF4638179516C2003D540C /* AppleGarden */,
+				556A1C37178C164200780030 /* pp */,
+				556A1C36178C162C00780030 /* 91 */,
+				556A1C2E178C161100780030 /* libPlatform.h */,
+				2202523417AACA2800818175 /* libPlatform.cpp */,
+				55DEFD0F16D7776F00E75F8C /* Supporting Files */,
+			);
+			path = lib91;
+			sourceTree = "<group>";
+		};
+		55DEFD0F16D7776F00E75F8C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55DEFD1016D7776F00E75F8C /* lib91-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55EF4638179516C2003D540C /* AppleGarden */ = {
+			isa = PBXGroup;
+			children = (
+				55EF4639179516DE003D540C /* libAG.mm */,
+				55EF463A179516DE003D540C /* libAGObj.h */,
+				55EF463B179516DE003D540C /* libAGObj.mm */,
+				55EF4636179516BD003D540C /* libAG.h */,
+			);
+			name = AppleGarden;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		220245E917AAC5C400818175 /* lib91_tb */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 220245F117AAC5C400818175 /* Build configuration list for PBXNativeTarget "lib91_tb" */;
+			buildPhases = (
+				220245EA17AAC5C400818175 /* Sources */,
+				220245EE17AAC5C400818175 /* Frameworks */,
+				220245F017AAC5C400818175 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lib91_tb;
+			productName = lib91;
+			productReference = 220245F417AAC5C400818175 /* liblib91_tb.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		22368F0017B4E11E00E2ADDE /* lib91_debug */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22368F0C17B4E11E00E2ADDE /* Build configuration list for PBXNativeTarget "lib91_debug" */;
+			buildPhases = (
+				22368F0117B4E11E00E2ADDE /* Sources */,
+				22368F0917B4E11E00E2ADDE /* Frameworks */,
+				22368F0B17B4E11E00E2ADDE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lib91_debug;
+			productName = lib91;
+			productReference = 22368F0F17B4E11E00E2ADDE /* liblib91_debug.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		225173EE17B10F13005F18F3 /* lib_ITools */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 225173F617B10F13005F18F3 /* Build configuration list for PBXNativeTarget "lib_ITools" */;
+			buildPhases = (
+				225173EF17B10F13005F18F3 /* Sources */,
+				225173F317B10F13005F18F3 /* Frameworks */,
+				225173F517B10F13005F18F3 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lib_ITools;
+			productName = lib91;
+			productReference = 225173F917B10F13005F18F3 /* liblib91_ITools.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		55AEAAB017A41E3B00D5C0B9 /* lib91_pp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55AEAABC17A41E3B00D5C0B9 /* Build configuration list for PBXNativeTarget "lib91_pp" */;
+			buildPhases = (
+				55AEAAB117A41E3B00D5C0B9 /* Sources */,
+				55AEAAB917A41E3B00D5C0B9 /* Frameworks */,
+				55AEAABB17A41E3B00D5C0B9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lib91_pp;
+			productName = lib91;
+			productReference = 55AEAABF17A41E3B00D5C0B9 /* liblib91_pp.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		55DEFD0816D7776F00E75F8C /* lib91 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55DEFD2E16D7776F00E75F8C /* Build configuration list for PBXNativeTarget "lib91" */;
+			buildPhases = (
+				55DEFD0516D7776F00E75F8C /* Sources */,
+				55DEFD0616D7776F00E75F8C /* Frameworks */,
+				55DEFD0716D7776F00E75F8C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lib91;
+			productName = lib91;
+			productReference = 55DEFD0916D7776F00E75F8C /* liblib91.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55DEFD0016D7776F00E75F8C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = youai;
+			};
+			buildConfigurationList = 55DEFD0316D7776F00E75F8C /* Build configuration list for PBXProject "lib91" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 55DEFCFE16D7776F00E75F8C;
+			productRefGroup = 55DEFD0A16D7776F00E75F8C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55DEFD0816D7776F00E75F8C /* lib91 */,
+				55AEAAB017A41E3B00D5C0B9 /* lib91_pp */,
+				220245E917AAC5C400818175 /* lib91_tb */,
+				225173EE17B10F13005F18F3 /* lib_ITools */,
+				22368F0017B4E11E00E2ADDE /* lib91_debug */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		220245EA17AAC5C400818175 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2202523717AACA2800818175 /* libPlatform.cpp in Sources */,
+				2202523B17AACA3900818175 /* libTBObj.mm in Sources */,
+				2202523C17AACA3900818175 /* libTB.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22368F0117B4E11E00E2ADDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22368F0817B4E11E00E2ADDE /* libPlatform.cpp in Sources */,
+				22368F1317B4E17100E2ADDE /* lib91Debug.mm in Sources */,
+				22368F1417B4E17100E2ADDE /* lib91DebugObj.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		225173EF17B10F13005F18F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				225173F017B10F13005F18F3 /* libPlatform.cpp in Sources */,
+				225173FF17B11228005F18F3 /* libIToolsObj.mm in Sources */,
+				2251740017B11228005F18F3 /* libITools.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55AEAAB117A41E3B00D5C0B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55AEAAB517A41E3B00D5C0B9 /* libPP.mm in Sources */,
+				55AEAAB617A41E3B00D5C0B9 /* libPPObj.mm in Sources */,
+				2202523617AACA2800818175 /* libPlatform.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55DEFD0516D7776F00E75F8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55DEFD3716D7779900E75F8C /* lib91.mm in Sources */,
+				55ED209A16E5CCBA003F1988 /* lib91Obj.mm in Sources */,
+				556A1C34178C162300780030 /* libPP.mm in Sources */,
+				556A1C35178C162300780030 /* libPPObj.mm in Sources */,
+				55EF463C179516DE003D540C /* libAG.mm in Sources */,
+				55EF463D179516DE003D540C /* libAGObj.mm in Sources */,
+				2202523517AACA2800818175 /* libPlatform.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		220245F217AAC5C400818175 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				DSTROOT = /tmp/lib91.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../SDK/framework5\"",
+					"\"$(SRCROOT)/../SDK/framework5/framework\"",
+					"\"$(SRCROOT)/../TBSDK\"",
+				);
+				GCC_CHAR_IS_UNSIGNED_CHAR = NO;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "lib91/lib91-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../libOS/include\"";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = lib91_tb;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		220245F317AAC5C400818175 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				DSTROOT = /tmp/lib91.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../SDK/framework5\"",
+					"\"$(SRCROOT)/../SDK/framework5/framework\"",
+					"\"$(SRCROOT)/../TBSDK\"",
+				);
+				GCC_CHAR_IS_UNSIGNED_CHAR = NO;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "lib91/lib91-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../libOS/include\"";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = lib91_tb;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		22368F0D17B4E11E00E2ADDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				DSTROOT = /tmp/lib91.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../SDK/framework5\"",
+					"\"$(SRCROOT)/../SDK/framework5/framework\"",
+					"\"$(SRCROOT)/../PPSDK\"",
+				);
+				GCC_CHAR_IS_UNSIGNED_CHAR = NO;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "lib91/lib91-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../libOS/include\"";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = lib91_debug;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		22368F0E17B4E11E00E2ADDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				DSTROOT = /tmp/lib91.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../SDK/framework5\"",
+					"\"$(SRCROOT)/../SDK/framework5/framework\"",
+					"\"$(SRCROOT)/../PPSDK\"",
+				);
+				GCC_CHAR_IS_UNSIGNED_CHAR = NO;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "lib91/lib91-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../libOS/include\"";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = lib91_debug;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		225173F717B10F13005F18F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				DSTROOT = /tmp/lib91.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../IToolsSDK\"",
+				);
+				GCC_CHAR_IS_UNSIGNED_CHAR = NO;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "lib91/lib91-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../libOS/include\"";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = lib91_ITools;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		225173F817B10F13005F18F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				DSTROOT = /tmp/lib91.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../IToolsSDK\"",
+				);
+				GCC_CHAR_IS_UNSIGNED_CHAR = NO;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "lib91/lib91-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../libOS/include\"";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = lib91_ITools;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		55AEAABD17A41E3B00D5C0B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				DSTROOT = /tmp/lib91.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../SDK/framework5\"",
+					"\"$(SRCROOT)/../SDK/framework5/framework\"",
+					"\"$(SRCROOT)/../PPSDK\"",
+				);
+				GCC_CHAR_IS_UNSIGNED_CHAR = NO;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "lib91/lib91-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../libOS/include\"";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = lib91_pp;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		55AEAABE17A41E3B00D5C0B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				DSTROOT = /tmp/lib91.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../SDK/framework5\"",
+					"\"$(SRCROOT)/../SDK/framework5/framework\"",
+					"\"$(SRCROOT)/../PPSDK\"",
+				);
+				GCC_CHAR_IS_UNSIGNED_CHAR = NO;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "lib91/lib91-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../libOS/include\"";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = lib91_pp;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		55DEFD2C16D7776F00E75F8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		55DEFD2D16D7776F00E75F8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55DEFD2F16D7776F00E75F8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				DSTROOT = /tmp/lib91.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../SDK/framework5\"",
+					"\"$(SRCROOT)/../SDK/framework5/framework\"",
+					"\"$(SRCROOT)/../PPSDK\"",
+				);
+				GCC_CHAR_IS_UNSIGNED_CHAR = NO;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "lib91/lib91-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../libOS/include\"";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		55DEFD3016D7776F00E75F8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				DSTROOT = /tmp/lib91.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../SDK/framework5\"",
+					"\"$(SRCROOT)/../SDK/framework5/framework\"",
+					"\"$(SRCROOT)/../PPSDK\"",
+				);
+				GCC_CHAR_IS_UNSIGNED_CHAR = NO;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "lib91/lib91-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../libOS/include\"";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		220245F117AAC5C400818175 /* Build configuration list for PBXNativeTarget "lib91_tb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				220245F217AAC5C400818175 /* Debug */,
+				220245F317AAC5C400818175 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22368F0C17B4E11E00E2ADDE /* Build configuration list for PBXNativeTarget "lib91_debug" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22368F0D17B4E11E00E2ADDE /* Debug */,
+				22368F0E17B4E11E00E2ADDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		225173F617B10F13005F18F3 /* Build configuration list for PBXNativeTarget "lib_ITools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				225173F717B10F13005F18F3 /* Debug */,
+				225173F817B10F13005F18F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55AEAABC17A41E3B00D5C0B9 /* Build configuration list for PBXNativeTarget "lib91_pp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55AEAABD17A41E3B00D5C0B9 /* Debug */,
+				55AEAABE17A41E3B00D5C0B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55DEFD0316D7776F00E75F8C /* Build configuration list for PBXProject "lib91" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55DEFD2C16D7776F00E75F8C /* Debug */,
+				55DEFD2D16D7776F00E75F8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55DEFD2E16D7776F00E75F8C /* Build configuration list for PBXNativeTarget "lib91" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55DEFD2F16D7776F00E75F8C /* Debug */,
+				55DEFD3016D7776F00E75F8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55DEFD0016D7776F00E75F8C /* Project object */;
+}

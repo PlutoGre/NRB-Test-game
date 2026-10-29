@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#252525" >
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_10" />
+
+    <TextView
+        android:id="@+id/an_message_tv"
+        android:layout_width="fill_parent"
+        android:layout_toRightOf="@id/progressBar1"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/size_10"
+        android:text="正在连接..."
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_16" />
+
+</RelativeLayout>

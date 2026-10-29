@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<GuildShopSpells>
+		<ShopSpell id="1" itemType="61001" propId="5002001" count="1" price="10" shopType="1" dropPriority="0" shopLvl="1" buyPermission="1" rate="1"/>
+		<ShopSpell id="2" itemType="61001" propId="5002002" count="1" price="10" shopType="1" dropPriority="0" shopLvl="1" buyPermission="1" rate="1"/>
+		<ShopSpell id="3" itemType="61001" propId="5001011" count="10" price="20" shopType="1" dropPriority="0" shopLvl="1" buyPermission="1" rate="1"/>
+		<ShopSpell id="4" itemType="61001" propId="5001012" count="10" price="20" shopType="1" dropPriority="0" shopLvl="1" buyPermission="1" rate="1"/>
+		<ShopSpell id="5" itemType="61001" propId="5001013" count="10" price="20" shopType="1" dropPriority="0" shopLvl="1" buyPermission="1" rate="1"/>
+		<ShopSpell id="6" itemType="61001" propId="5001021" count="5" price="100" shopType="1" dropPriority="0" shopLvl="2" buyPermission="1" rate="1"/>
+		<ShopSpell id="7" itemType="61001" propId="5001022" count="5" price="100" shopType="1" dropPriority="0" shopLvl="2" buyPermission="1" rate="1"/>
+		<ShopSpell id="8" itemType="61001" propId="5001023" count="5" price="100" shopType="1" dropPriority="0" shopLvl="2" buyPermission="1" rate="1"/>
+		<ShopSpell id="9" itemType="61001" propId="5001031" count="1" price="500" shopType="1" dropPriority="0" shopLvl="5" buyPermission="2" rate="1"/>
+		<ShopSpell id="10" itemType="61001" propId="5001032" count="1" price="500" shopType="1" dropPriority="0" shopLvl="3" buyPermission="2" rate="1"/>
+		<ShopSpell id="11" itemType="61001" propId="5001033" count="1" price="500" shopType="1" dropPriority="0" shopLvl="4" buyPermission="2" rate="1"/>
+		<ShopSpell id="12" itemType="61001" propId="1501003" count="5" price="80" shopType="1" dropPriority="0" shopLvl="5" buyPermission="1" rate="5"/>
+		<ShopSpell id="13" itemType="61001" propId="1501002" count="1" price="500" shopType="1" dropPriority="0" shopLvl="5" buyPermission="1" rate="1"/>
+		<ShopSpell id="14" itemType="41001" propId="20" count="1" price="2000" shopType="1" dropPriority="0" shopLvl="3" buyPermission="1" rate="20"/>
+		<ShopSpell id="15" itemType="41002" propId="32" count="1" price="600" shopType="1" dropPriority="0" shopLvl="2" buyPermission="1" rate="20"/>
+		<ShopSpell id="16" itemType="51002" propId="10" count="1" price="2000" shopType="1" dropPriority="0" shopLvl="1" buyPermission="1" rate="1"/>
+		<ShopSpell id="17" itemType="51002" propId="8" count="1" price="5000" shopType="1" dropPriority="0" shopLvl="5" buyPermission="1" rate="5"/>
+		<ShopSpell id="18" itemType="51001" propId="4" count="1" price="80000" shopType="1" dropPriority="0" shopLvl="7" buyPermission="2" rate="20"/>
+		<ShopSpell id="19" itemType="52001" propId="41" count="1" price="50000" shopType="1" dropPriority="0" shopLvl="4" buyPermission="1" rate="10"/>
+		<ShopSpell id="20" itemType="52002" propId="44" count="1" price="4000" shopType="1" dropPriority="0" shopLvl="2" buyPermission="1" rate="5"/>
+		<ShopSpell id="21" itemType="53003" propId="81" count="1" price="50000" shopType="1" dropPriority="0" shopLvl="6" buyPermission="2" rate="10"/>
+		<ShopSpell id="22" itemType="32001" propId="15" count="6" price="2000" shopType="1" dropPriority="0" shopLvl="5" buyPermission="2" rate="5"/>
+		<ShopSpell id="23" itemType="32001" propId="11" count="6" price="2000" shopType="1" dropPriority="0" shopLvl="4" buyPermission="2" rate="5"/>
+		<ShopSpell id="24" itemType="32001" propId="7" count="4" price="3500" shopType="1" dropPriority="0" shopLvl="7" buyPermission="4" rate="20"/>
+		<ShopSpell id="25" itemType="32001" propId="4" count="5" price="3000" shopType="1" dropPriority="0" shopLvl="6" buyPermission="3" rate="10"/>
+		<ShopSpell id="26" itemType="32001" propId="39" count="10" price="600" shopType="1" dropPriority="0" shopLvl="3" buyPermission="1" rate="5"/>
+		<ShopSpell id="27" itemType="32001" propId="23" count="10" price="1000" shopType="1" dropPriority="0" shopLvl="4" buyPermission="1" rate="5"/>
+		<ShopSpell id="28" itemType="32002" propId="61" count="5" price="600" shopType="1" dropPriority="0" shopLvl="2" buyPermission="1" rate="2"/>
+		<ShopSpell id="29" itemType="32002" propId="62" count="5" price="600" shopType="1" dropPriority="0" shopLvl="1" buyPermission="1" rate="2"/>
+		<ShopSpell id="30" itemType="32002" propId="63" count="5" price="1000" shopType="1" dropPriority="0" shopLvl="4" buyPermission="1" rate="2"/>
+		<ShopSpell id="31" itemType="32002" propId="64" count="5" price="600" shopType="1" dropPriority="0" shopLvl="2" buyPermission="1" rate="2"/>
+		<ShopSpell id="32" itemType="61001" propId="1502001" count="20" price="10" shopType="1" dropPriority="0" shopLvl="6" buyPermission="1" rate="1"/>
+		<ShopSpell id="33" itemType="61001" propId="1502001" count="30" price="10" shopType="1" dropPriority="0" shopLvl="6" buyPermission="3" rate="1"/>
+		<ShopSpell id="34" itemType="61001" propId="1501002" count="1" price="50" shopType="2" dropPriority="0" shopLvl="3" buyPermission="1" rate="1"/>
+		<ShopSpell id="35" itemType="61001" propId="1501002" count="1" price="50" shopType="2" dropPriority="0" shopLvl="3" buyPermission="1" rate="1"/>
+	</GuildShopSpells>
+</root>

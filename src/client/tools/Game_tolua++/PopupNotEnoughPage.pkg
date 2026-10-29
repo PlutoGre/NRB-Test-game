@@ -1,0 +1,12 @@
+$#include "PopupNotEnoughPage.h"
+
+enum Popup_Not_Enough_type
+{
+	PowerNotEnough,
+	VitalityNotEnough,
+};
+class PopupNotEnoughPage
+{
+	static void Pop_NotEnough_Box(Popup_Not_Enough_type _type);
+};
+

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingBottom="@dimen/size_20" >
+
+            <RelativeLayout
+                android:id="@+id/line1"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/size_48"
+                android:layout_marginLeft="@dimen/size_10"
+                android:layout_marginRight="@dimen/size_10"
+                android:layout_marginTop="@dimen/size_10"
+                android:background="@drawable/anzhi_textview_normal" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_48"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/white" >
+
+                    <TextView
+                        android:id="@+id/nam_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/size_10"
+                        android:text="账号:"
+                        android:textColor="#494949"
+                        android:textSize="@dimen/font_18" />
+
+                    <RelativeLayout
+                        android:id="@+id/imageView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/size_10"
+                        android:background="@drawable/anzhi_button_bg_gray"
+                        android:visibility="gone" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="1dip"
+                            android:src="@drawable/anzhi_qietu_android_22" />
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/autocomplete"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5dip"
+                        android:layout_toLeftOf="@id/imageView11"
+                        android:layout_toRightOf="@id/nam_TV"
+                        android:background="@null"
+                        android:completionThreshold="1"
+                        android:hint="请输入游戏账号"
+                        android:paddingRight="5dip"
+                        android:singleLine="true"
+                        android:textColor="#494949"
+                        android:textColorHint="#d0d0d0"
+                        android:textSize="@dimen/font_18" >
+
+                        <requestFocus />
+                    </EditText>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/size_48"
+                android:layout_below="@id/line1"
+                android:layout_marginBottom="@dimen/size_10"
+                android:layout_marginLeft="@dimen/size_10"
+                android:layout_marginRight="@dimen/size_10"
+                android:layout_marginTop="@dimen/size_10"
+                android:background="@drawable/anzhi_textview_normal" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_48"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/white" >
+
+                    <TextView
+                        android:id="@+id/pwd_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/size_10"
+                        android:text="密码:"
+                        android:textColor="#494949"
+                        android:textSize="@dimen/font_18" />
+
+                    <EditText
+                        android:id="@+id/pwdid"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dip"
+                        android:layout_toRightOf="@id/pwd_TV"
+                        android:background="@null"
+                        android:hint="请输入密码"
+                        android:paddingRight="5dip"
+                        android:password="true"
+                        android:singleLine="true"
+                        android:inputType="textPassword"
+                        android:textColor="#494949"
+                        android:layout_centerVertical="true"
+                        android:textColorHint="#d0d0d0"
+                        android:textSize="@dimen/font_18" >
+
+                        <requestFocus />
+                    </EditText>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/guanggao_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayout1"
+                android:layout_margin="@dimen/size_10" >
+
+                <CheckBox
+                    android:id="@+id/agree_pwd_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/anzhi_checkbox"
+                    android:checked="true"
+                    android:text="自动登录"
+                    android:textColor="#EB9100"
+                    android:textSize="@dimen/font_18" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/right_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/guanggao_layout"
+                android:layout_margin="@dimen/size_10" >
+
+                <Button
+                    android:id="@+id/loginbutton"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/size_40"
+                    android:layout_marginRight="@dimen/size_40"
+                    android:background="@drawable/anzhi_button_bg"
+                    android:text="登录"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/font_18" />
+
+                <!--
+                     <Button
+                    android:id="@+id/registertextview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dip"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/anzhi_button_bg_gray"
+                    android:text="注册"
+                    android:textColor="#545454"
+                    android:textSize="@dimen/font_18" />
+                -->
+            </LinearLayout>
+
+            <!--
+                 <TextView
+                android:id="@+id/guangfang_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/right_layout"
+                android:layout_marginRight="@dimen/size_10"
+                android:layout_marginTop="@dimen/size_20"
+                android:textColor="#EB9100"
+                android:textSize="@dimen/font_18" />
+            -->
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

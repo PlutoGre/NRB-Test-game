@@ -1,0 +1,7 @@
+$#include "DiscipleHandInfoPage.h"
+
+class DiscipleHandInfoPage
+{
+	static void showDisciplePage(unsigned int id,bool isItem);
+};
+

@@ -1,0 +1,8 @@
+INFO  2015-08-06 10:44:42,031 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-06 10:44:42,040 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 6, {}
+INFO  2015-08-06 10:44:42,305 [UserSoulInfoHandler.java,38] - user soul info handler received: 5, 1, {}
+INFO  2015-08-06 10:44:42,305 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 5, 0, {}
+INFO  2015-08-06 10:44:42,482 [UserCareerInfoHandler.java,48] - user career info handler received: 5, 1, {}
+INFO  2015-08-06 10:44:42,484 [UserCareerInfoHandler.java,121] - user career info handler ret send: 5, 2, {}
+INFO  2015-08-06 10:44:55,960 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-06 10:44:55,963 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 3, {}

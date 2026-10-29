@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="WandouGreenTheme" parent="android:Theme.Holo.Light">
+        <item name="android:editTextBackground">@drawable/edit_text_holo_light</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/btn_check_holo_light</item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/btn_radio_holo_light</item>
+        <item name="android:buttonStyle">@style/ButtonWandouGreenTheme</item>
+        <item name="android:imageButtonStyle">@style/ImageButtonWandouGreenTheme</item>
+        <item name="android:dropDownSpinnerStyle">@style/SpinnerWandouGreenTheme</item>
+    </style>
+
+    <style name="WandouGreenTheme.Dialog" parent="android:Theme.Holo.Light.Dialog">
+        <item name="android:editTextBackground">@drawable/edit_text_holo_light</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/btn_check_holo_light</item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/btn_radio_holo_light</item>
+        <item name="android:buttonStyle">@style/ButtonWandouGreenTheme</item>
+        <item name="android:imageButtonStyle">@style/ImageButtonWandouGreenTheme</item>
+        <item name="android:dropDownSpinnerStyle">@style/SpinnerWandouGreenTheme</item>
+    </style>
+</resources>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#dfdfdf"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/charge_money"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dip"
+        android:paddingTop="10dip"
+        android:text="本次充值金额："
+        android:textColor="#000000"
+        android:textSize="14dip" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/egamewebfee_titlebar"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dip"
+        android:text="请选择充值卡面额"
+        android:textColor="#000000"
+        android:textSize="14dip" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="3dip"
+        android:paddingBottom="3dip"
+        android:text="请确认您选择的'充值卡实际面额'和实际的充值卡面额一致，否则会导致消费不成功或余额丢失"
+        android:textColor="#ff0000"
+        android:textSize="14dip" />
+
+    <Button
+        android:id="@+id/card_ten"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/egamewebfee_list_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dip"
+        android:text="10元"
+        android:textColor="#000000"
+        android:textSize="14dip" />
+
+    <Button
+        android:id="@+id/card_twenty"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/egamewebfee_list_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dip"
+        android:text="20元"
+        android:textColor="#000000"
+        android:textSize="14dip" />
+
+    <Button
+        android:id="@+id/card_thirty"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/egamewebfee_list_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dip"
+        android:text="30元"
+        android:textColor="#000000"
+        android:textSize="14dip" />
+
+    <Button
+        android:id="@+id/card_fifty"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/egamewebfee_list_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dip"
+        android:text="50元"
+        android:textColor="#000000"
+        android:textSize="14dip" />
+
+    <Button
+        android:id="@+id/card_hundred"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/egamewebfee_list_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dip"
+        android:text="100元"
+        android:textColor="#000000"
+        android:textSize="14dip" />
+
+    <Button
+        android:id="@+id/card_three_hundred"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/egamewebfee_list_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dip"
+        android:text="300元"
+        android:textColor="#000000"
+        android:textSize="14dip" />
+
+    <Button
+        android:id="@+id/card_five_hundred"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/egamewebfee_list_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dip"
+        android:text="500元"
+        android:textColor="#000000"
+        android:textSize="14dip" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/egamewebfee_titlebar"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dip"
+        android:text="请输入卡号和密码"
+        android:textColor="#000000"
+        android:textSize="14dip" />
+
+    <EditText
+        android:id="@+id/card_number"
+        android:layout_width="fill_parent"
+        android:layout_height="35dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/egamewebfee_input_bg"
+        android:hint="请输入充值卡号"
+        android:inputType="number"
+        android:singleLine="true"
+        android:textColor="#000"
+        android:textSize="14dip" />
+
+    <EditText
+        android:id="@+id/card_pwd"
+        android:layout_width="fill_parent"
+        android:layout_height="35dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/egamewebfee_input_bg"
+        android:hint="请输入充值卡密码"
+        android:inputType="number"
+        android:singleLine="true"
+        android:textColor="#000"
+        android:textSize="14dip" />
+
+    <Button
+        android:id="@+id/card_confim"
+        android:layout_width="130dip"
+        android:layout_height="30dip"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dip"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/egamewebfee_btn_green_selector"
+        android:gravity="center"
+        android:text="确认支付"
+        android:textColor="#4a8737"
+        android:textSize="14dip" />
+
+</LinearLayout>

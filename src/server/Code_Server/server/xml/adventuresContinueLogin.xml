@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<continueLogins>
+		<item id="1" dayCount="1" rewards="61001:2501001:1,61001:2503001:1,11001:1002:1000"/>
+		<item id="2" dayCount="2" rewards="61001:1503001:1,61001:2502001:1,11001:1002:5000"/>
+		<item id="3" dayCount="3" rewards="61001:3001002:5,61001:3002001:5,11001:1002:20000"/>
+		<item id="4" dayCount="4" rewards="61001:1101001:1,61001:3002002:5,61001:2501001:2"/>
+		<item id="5" dayCount="5" rewards="61001:3001004:5,61001:3002003:5,61001:1502001:30"/>
+		<item id="6" dayCount="6" rewards="41002:34:1,61001:3002003:5,11001:1002:50000"/>
+		<item id="7" dayCount="7" rewards="31001:41:1,61001:1502001:30,61001:1503001:2"/>
+	</continueLogins>
+</root>

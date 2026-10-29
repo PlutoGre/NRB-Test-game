@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+	
+	<!-- <include layout="@layout/wdj_payment_relative_header" /> -->
+	
+	<ViewStub 
+	    android:id="@+id/stub_balance_payment"
+	    android:inflatedId="@+id/balance_payment_view"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="@dimen/wandoujia_payment_list_margin_left"
+	    android:layout_marginRight="@dimen/wandoujia_payment_list_margin_right"
+	    android:layout="@layout/wdj_balance_payment_view_layout" />
+	
+	<!-- Payments list part, which locates between purchase information and prompt at the bottom. -->
+	<ScrollView
+	    android:id="@+id/payment_scroll_list"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="@dimen/wandoujia_payment_list_margin_left"
+	    android:layout_marginRight="@dimen/wandoujia_payment_list_margin_right"
+	    android:scrollbarStyle="outsideOverlay" >
+	    
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:animateLayoutChanges="true" >
+	        
+	        <TextView
+	            android:id="@+id/balance_not_enough_prompt"
+	            android:layout_width="match_parent"
+	            android:layout_height="60dip"
+	            android:textColor="@color/wandou_font_color_grey"
+	            android:textSize="14sp"
+	            android:gravity="center_vertical"
+	            android:drawableBottom="@drawable/wdj_payment_list_divider_drawable"
+	            android:visibility="gone" />
+	        
+	        <include
+	            android:id="@+id/alipay_in_wandoujia_payment"
+	            layout="@layout/wdj_payment_list_item_layout" />
+	        
+	        <Button
+	            android:id="@+id/show_the_other_payment_view"
+	            android:layout_width="match_parent"
+	            android:layout_height="70dip"
+	            android:text="@string/show_the_other_payment_text"
+	            android:textSize="18sp"
+	            android:background="@drawable/show_more_payment_choice_button_background"
+	            android:visibility="gone"
+	            android:gravity="bottom|left" />
+	        
+	        <include
+	            android:id="@+id/union_pay_in_wandoujia_payment"
+	            layout="@layout/wdj_payment_list_item_layout" />
+	        
+	        <include
+	            android:id="@+id/credit_card_in_wandoujia_payment"
+	            layout="@layout/wdj_payment_list_item_layout" />
+	        
+	        <include
+	            android:id="@+id/recharge_card_in_wandoujia_payment"
+	            layout="@layout/wdj_payment_list_item_layout" />
+	        
+	        <include
+	            android:id="@+id/game_card_in_wandoujia_payment"
+	            layout="@layout/wdj_payment_list_item_layout" />
+	        
+	        <!-- The prompt indicate it is wandoujia who supports this payment. -->
+			<TextView
+			    android:id="@+id/wandoujia_payment_prompt"
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/wandoujia_payment_prompt_height"
+			    android:textSize="14sp"
+			    android:textColor="#AAAAAA"
+			    android:gravity="center"
+			    android:text="@string/wandoujia_payment_prompt" />
+	    </LinearLayout>
+	</ScrollView>
+</LinearLayout>

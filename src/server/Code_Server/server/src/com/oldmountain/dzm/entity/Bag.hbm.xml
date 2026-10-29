@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.oldmountain.dzm.entity">
+	<class name="Bag" table="bag" dynamic-update="true" dynamic-insert="true">
+		<id name="id" column="id">
+			<generator class="native" />
+		</id>
+		<property name="playerid" column="playerid" type="int"></property>
+		<property name="itemid" column="itemid" type="int"></property>
+		<property name="count" column="count" type="int"></property>
+		<property name="source" column="source" type="int"></property>
+		<property name="createtime" column="create_time" type="int"></property>
+	</class>
+</hibernate-mapping>

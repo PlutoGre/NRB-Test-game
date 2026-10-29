@@ -1,0 +1,2 @@
+INFO  2015-08-06 10:44:42,490 [GetShopListHandler.java,46] - get shop list handler received: 5, 1, {}
+INFO  2015-08-06 10:44:42,495 [GetShopListHandler.java,93] - get shop list handler ret send: 5, 1, {}

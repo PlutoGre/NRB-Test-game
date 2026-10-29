@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7585E6F6-0BC7-4AA8-BE41-E3ACD6857878}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>encryption_aes</RootNamespace>
+    <ProjectName>Utility</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Configuration).win32\</OutDir>
+    <TargetName>Utility</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Configuration).win32\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_UTILITY_USE_;REGISTER_FAC_AND_MAKE_DEFAULT;WIN32;_DEBUG;_WINDOWS;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)protobuf-2.5.0rc1\src\;$(SolutionDir)jsoncpp-src-0.5.0\include;$(SolutionDir)Game\Classes;$(SolutionDir)Game\Protobuf;$(SolutionDir)tinyxml;$(SolutionDir)extensions;$(SolutionDir)cocos2dx;$(SolutionDir)cocos2dx\include;$(SolutionDir)cocos2dx\kazmath\include;$(SolutionDir)cocos2dx\platform\third_party\win32;$(SolutionDir)cocos2dx\platform\win32;$(SolutionDir)cocos2dx\platform\third_party\win32\OGLES;$(SolutionDir)Flash2Cocos2d-X;$(SolutionDir)CocosDenshion\include;$(SolutionDir)protobuf-2.5.0rc1\src;$(SolutionDir)scripting\lua\cocos2dx_support;$(SolutionDir)scripting\lua\lua;$(SolutionDir)scripting\lua\tolua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>winsock2.h;</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ws2_32.lib;libprotobuf.lib;libExtensions.lib;opengl32.lib;glew32.lib;libcocos2d.lib;json.lib;libCocosDenshion.lib;tinyxml.lib;libcurl_imp.lib;libzlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_UTILITY_USE_;WIN32;_WINDOWS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ForcedIncludeFiles>winsock2.h;</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>$(SolutionDir)protobuf-2.5.0rc1\src\;$(SolutionDir)jsoncpp-src-0.5.0\include;$(SolutionDir)Game\Classes;$(SolutionDir)Game\Protobuf;$(SolutionDir)tinyxml;$(SolutionDir)extensions;$(SolutionDir)cocos2dx;$(SolutionDir)cocos2dx\include;$(SolutionDir)cocos2dx\kazmath\include;$(SolutionDir)cocos2dx\platform\third_party\win32;$(SolutionDir)cocos2dx\platform\win32;$(SolutionDir)cocos2dx\platform\third_party\win32\OGLES;$(SolutionDir)Flash2Cocos2d-X;$(SolutionDir)CocosDenshion\include;$(SolutionDir)protobuf-2.5.0rc1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>ws2_32.lib;libprotobuf.lib;libExtensions.lib;opengl32.lib;glew32.lib;libcocos2d.lib;json.lib;libCocosDenshion.lib;flash2cocos2d-x.lib;tinyxml.lib;libcurl_imp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\Game\Protobuf\playerInfo.proto" />
+    <None Include="..\Game\Protobuf\protobufTest.proto" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Game\Classes\AES.h" />
+    <ClInclude Include="..\Game\Classes\AsyncSocket.h" />
+    <ClInclude Include="..\Game\Classes\Concurrency.h" />
+    <ClInclude Include="..\Game\Classes\GameMaths.h" />
+    <ClInclude Include="..\Game\Classes\GamePackets.h" />
+    <ClInclude Include="..\Game\Classes\IoSocket.h" />
+    <ClInclude Include="..\Game\Classes\PacketBase.h" />
+    <ClInclude Include="..\Game\Classes\PacketManager.h" />
+    <ClInclude Include="..\Game\Classes\SocketBase.h" />
+    <ClInclude Include="..\Game\Classes\StringConverter.h" />
+    <ClInclude Include="..\Game\Classes\ThreadSocket.h" />
+    <ClInclude Include="..\Game\Protobuf\ActiveCode.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\AddArenaNum.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\AddBoundlessHole.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\AddFriend.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\AddInviteKey.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\AddPower.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\AddPowerForCareer.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\AddTeachExp.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\AddVitality.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\AdventureInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\AdventureLevelUpGetReward.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\AdventureLevelUpReward.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\AdventureTeacherInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\BoardCastInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\BuyPackage.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\BuyTools.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\CdkeyReward.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\ChallengeOpponent.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\ChallengePlayer.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\ChangeBattlePosition.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\ChangeDisciple.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\ChangeEquip.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\ChangeName.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\ChangeSetting.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\ChangeSkill.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\ChargeRebate.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\Chat.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\ChatPush.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\ChatSendMsgInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\ContinueLogin.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\DailyLogin.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\DealTrainStatus.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\DisposeFriendsInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\DisposeSysMsgInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\ErrorReporter.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\ExchangeGift.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\ExchangeIntegral.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\FightEndAddYestAttr.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\FightEndBattle.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\FightEndGetReward.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\FightEndInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\FightEndRankInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\FightEndTempAddStepAttr.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\FortuneCome.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\GetAdventureBoundlessHole.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\GetAdventureContinueLogin.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\GetAdventurePowerInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\GetArenaOpponentList.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\GetArenaReward.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\GetInviteReward.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\GetSkillBookLoot.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\GuideBuyTool.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\GuideRecord.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\HandbookInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\Heartbeat.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\InlaidStoneInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\Instruction.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\Login.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\MarketRecruitDisciple.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\OP.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\PieceSkillBook.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\playerInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\PlayerLogout.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\protobufTest.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\PunchStoneInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\QuickCareerBattle.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\RecordReadMsgTime.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\RecruitDisciple.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\RefineEquip.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\RefreshArenaScore.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\RemoveStoneInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\ResetCareerCount.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\RewardAdventureContinueLogin.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\RewardContinueLogin.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\SellEquip.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\SendFriendMessage.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\ServerDisconnect.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\ShakeLantern.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\ShopList.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\ShopPurchase.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\ShowUserBattle.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\SkillBookInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\SnatchFragment.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\SnatchSkillBook.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\SwallowDisciple.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\TeamBuffInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\TitleInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\TrainDisciple.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UpdateCareer.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UpdateTitle.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UpdateUserInfoByGM.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UpgradeDisciple.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UpgradeEquip.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UpgradeRole.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UpgradeSkill.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UpgradeStoneInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UpgradeTeamBuffInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UpgradeZhangMenJue.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UserArenaInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UserBasicInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UserBattle.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UserBattleArray.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UserCareerInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UserChatInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UserDiscipleInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UserEquipInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UserFriendsInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UserInviteStatus.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UserMainInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UserMarketInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UserRewardInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UserSkillInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UserSoulInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UserSysMsgInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UserToolInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UserUpgrade.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\UseTool.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\WorldBossFight.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\WorldBossInfo.pb.h" />
+    <ClInclude Include="..\Game\Protobuf\WorldBossRefresh.pb.h" />
+    <ClInclude Include="pressureTest.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Game\Classes\AES.cpp" />
+    <ClCompile Include="..\Game\Classes\AsyncSocket.cpp" />
+    <ClCompile Include="..\Game\Classes\Concurrency.cpp" />
+    <ClCompile Include="..\Game\Classes\GameMaths.cpp" />
+    <ClCompile Include="..\Game\Classes\GamePackets.cpp" />
+    <ClCompile Include="..\Game\Classes\IoSocket.cpp" />
+    <ClCompile Include="..\Game\Classes\PacketBase.cpp" />
+    <ClCompile Include="..\Game\Classes\PacketManager.cpp" />
+    <ClCompile Include="..\Game\Classes\SocketBase.cpp" />
+    <ClCompile Include="..\Game\Classes\StringConverter.cpp" />
+    <ClCompile Include="..\Game\Classes\ThreadSocket.cpp" />
+    <ClCompile Include="..\Game\Protobuf\ActiveCode.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\AddArenaNum.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\AddBoundlessHole.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\AddFriend.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\AddInviteKey.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\AddPower.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\AddPowerForCareer.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\AddTeachExp.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\AddVitality.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\AdventureInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\AdventureLevelUpGetReward.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\AdventureLevelUpReward.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\AdventureTeacherInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\BoardCastInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\BuyPackage.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\BuyTools.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\CdkeyReward.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\ChallengeOpponent.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\ChallengePlayer.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\ChangeBattlePosition.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\ChangeDisciple.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\ChangeEquip.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\ChangeName.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\ChangeSetting.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\ChangeSkill.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\ChargeRebate.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\Chat.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\ChatPush.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\ChatSendMsgInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\ContinueLogin.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\DailyLogin.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\DealTrainStatus.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\DisposeFriendsInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\DisposeSysMsgInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\ErrorReporter.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\ExchangeGift.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\ExchangeIntegral.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\FightEndAddYestAttr.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\FightEndBattle.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\FightEndGetReward.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\FightEndInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\FightEndRankInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\FightEndTempAddStepAttr.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\FortuneCome.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\GetAdventureBoundlessHole.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\GetAdventureContinueLogin.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\GetAdventurePowerInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\GetArenaOpponentList.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\GetArenaReward.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\GetInviteReward.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\GetSkillBookLoot.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\GuideBuyTool.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\GuideRecord.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\HandbookInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\Heartbeat.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\InlaidStoneInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\Instruction.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\Login.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\MarketRecruitDisciple.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\OP.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\PieceSkillBook.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\playerInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\PlayerLogout.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\protobufTest.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\PunchStoneInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\QuickCareerBattle.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\RecordReadMsgTime.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\RecruitDisciple.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\RefineEquip.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\RefreshArenaScore.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\RemoveStoneInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\ResetCareerCount.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\RewardAdventureContinueLogin.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\RewardContinueLogin.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\SellEquip.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\SendFriendMessage.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\ServerDisconnect.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\ShakeLantern.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\ShopList.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\ShopPurchase.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\ShowUserBattle.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\SkillBookInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\SnatchFragment.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\SnatchSkillBook.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\SwallowDisciple.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\TeamBuffInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\TitleInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\TrainDisciple.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UpdateCareer.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UpdateTitle.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UpdateUserInfoByGM.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UpgradeDisciple.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UpgradeEquip.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UpgradeRole.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UpgradeSkill.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UpgradeStoneInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UpgradeTeamBuffInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UpgradeZhangMenJue.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UserArenaInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UserBasicInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UserBattle.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UserBattleArray.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UserCareerInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UserChatInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UserDiscipleInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UserEquipInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UserFriendsInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UserInviteStatus.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UserMainInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UserMarketInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UserRewardInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UserSkillInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UserSoulInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UserSysMsgInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UserToolInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UserUpgrade.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\UseTool.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\WorldBossFight.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\WorldBossInfo.pb.cc" />
+    <ClCompile Include="..\Game\Protobuf\WorldBossRefresh.pb.cc" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="pressureTest.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

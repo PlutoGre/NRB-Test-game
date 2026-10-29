@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="wandoujia_payment_dialog_width">420dip</dimen>
+    
+    <dimen name="wandoujia_payment_dialog_padding_left">90dip</dimen>
+    <dimen name="wandoujia_payment_dialog_padding_right">90dip</dimen>
+    <dimen name="wandoujia_payment_dialog_padding_top">8dip</dimen>
+    <dimen name="wandoujia_payment_dialog_padding_bottom">8dip</dimen>
+    
+    <dimen name="wandoujia_payment_button_width">170dip</dimen>
+    <dimen name="wandoujia_payment_button_height">46dip</dimen>
+</resources>

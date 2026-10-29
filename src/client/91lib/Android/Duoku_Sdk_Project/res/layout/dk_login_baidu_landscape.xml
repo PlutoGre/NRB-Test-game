@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/userloginroot"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/dk_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/dk_login_title"
+        style="@style/tabbar_top_style"
+        android:layout_gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/dk_btn_back_login_baidu"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/dk_ic_back_ab" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text="@string/dk_tv_string_login_with_bd_account"
+                android:textColor="@color/dk_gamesdk_white"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/dk_bg"
+        android:scrollbars="none" 
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="15dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dk_account_text"
+                    android:textColor="@color/dk_color_333333"
+                    android:textSize="16sp" 
+                    android:layout_gravity="center_vertical"/>
+
+                <EditText
+                    android:id="@+id/dk_account_input_edit_login_baidu"
+                    android:layout_width="fill_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/dk_edittext_selector"
+                    android:gravity="center_vertical"
+                    android:hint="@string/dk_account_hint" 
+                    android:textColorHint="@color/dk_color_999999"
+                    android:singleLine="true"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16sp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dk_password"
+                    android:textColor="@color/dk_color_333333"
+                    android:textSize="16sp" 
+                    android:layout_gravity="center_vertical"/>
+
+                <EditText
+                    android:id="@+id/dk_pwd_input_edit_login_baidu"
+                    android:layout_width="fill_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/dk_edittext_selector"
+                    android:gravity="center_vertical"
+                    android:hint="@string/dk_pwd_login_hint"
+                    android:password="true" 
+                    android:textColorHint="@color/dk_color_999999"
+                    android:singleLine="true"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dk_bd_verify_input"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16sp"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dk_tv_string_verifycode"
+                    android:textColor="@color/dk_color_333333"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/dk_verify_input_login_baidu_edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/dk_edittext_selector"
+                    android:gravity="center_vertical"
+                    android:hint="@string/dk_et_string_verifycode_hint" 
+                    android:textColorHint="@color/dk_color_999999"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dk_bd_verify_get"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16sp"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/dk_verifycode_img"
+                    android:layout_width="80dp"
+                    android:layout_height="44dp" />
+
+                <Button
+                    android:id="@+id/dk_verify_input_login_baidu"
+                    android:layout_width="88dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="16dp"
+                    android:gravity="center"
+                    android:text="@string/dk_btn_string_change_verify_code"
+                    android:textColor="@color/dk_color_333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <CheckBox
+                    android:id="@+id/dk_user_login_checkbox_login_baidu"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:button="@drawable/dk_login_checkbox_selector"
+                    android:checked="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:gravity="center"
+                    android:text="@string/dk_remember_login_state"
+                    android:textColor="@color/dk_color_666666"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/dk_btn_login"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/dk_login_btn_selector"
+                    android:gravity="center"
+                    android:text="@string/dk_login"
+                    android:textColor="@color/dk_gamesdk_white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            
+            <!-- <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                >
+                <ImageView 
+                    android:layout_width="16dp"
+                	android:layout_height="16dp"
+                	android:background="@drawable/dk_ic_baidu_gray"
+                    />
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/dk_color_999999"
+                    android:textSize="12sp"
+                    android:text="百度旗下移动娱乐平台"
+                    android:layout_marginLeft="6dp"
+                    />
+                
+            </LinearLayout> -->
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

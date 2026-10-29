@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+	<Kinds>
+		<kind type="1" required="10" rewards="61001:2501001:1,51003:21:1,11001:1002:50000"/>
+		<kind type="2" required="10" rewards="61001:2501001:3,52003:54:1,11001:1002:80000"/>
+		<kind type="3" required="10" rewards="61001:2501001:5,53004:89:1,11001:1001:300"/>
+		<kind type="4" required="20000" rewards="61001:2501001:10,41001:17:1,11001:1001:2000"/>
+	</Kinds>
+</root>

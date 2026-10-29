@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.youai.dreamonepiece.platform.qihoo360"
+    android:versionCode="3"
+    android:versionName="1.3" 
+    android:installLocation="preferExternal">
+
+    <!-- 发布通过Android Tools修改package name -->
+    
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="16" />
+    
+    <uses-feature android:glEsVersion="0x00020000" />
+    
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+	<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	
+	<!-- -->
+	<!-- 360快捷支付必须的权限 -->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+	<!-- -->
+
+
+    
+    <supports-screens android:largeScreens="true"
+                      android:smallScreens="true"
+                      android:anyDensity="true"
+                      android:normalScreens="true"
+                      android:xlargeScreens="true"/>
+
+    <!-- android:debuggable="true" ADT&NDK自动处理了 -->
+    
+    <!-- 发布修改icon -->
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" 
+        android:largeHeap="true" 
+        android:vmSafeMode="false" 
+        android:allowClearUserData="true"
+        android:debuggable="false">
+        
+        <!-- 发布指定平台：
+        0   defaultplatform.DefaultActivity
+        1	nd91.Nd91Activity
+        2	uc.UcActivity
+        3	qihoo360.Qihoo360Activity
+        4	dangle.DangLeActivity
+        5	mi.XiaoMiActivity
+        6	wandoujia.WanDouJiaActivity
+        7   DK.DuokuActivity
+        14  renren.RenRenActivity
+        22 thirdlogin.ThirdLoginActivity
+         -->
+         
+       <activity
+            android:name="com.youai.dreamonepiece.platform.qihoo360.Qihoo360Activity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" 
+            android:launchMode="singleTop" 
+            android:screenOrientation="portrait">
+                
+             <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+        </activity>
+        
+		<!-- begin 360 -->
+		
+		<!-- 添加360SDK必需的activity：com.qihoopay.insdk.activity.ContainerActivity -->
+        <activity
+            android:name="com.qihoopay.insdk.activity.ContainerActivity"
+            android:configChanges="fontScale|orientation|keyboardHidden|locale|navigation|screenSize|uiMode"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <!-- 添加360SDK必需的activity：com.qihoopay.insdk.activity.RemoteContainerActivity -->
+       <!-- <activity
+            android:name="com.qihoopay.insdk.activity.RemoteContainerActivity"
+            android:configChanges="fontScale|orientation|keyboardHidden|locale|navigation|screenSize|uiMode"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:process=":remote" >
+        </activity>-->
+		<!--  添加 360SDK 必需的 activity：com.qihoopp.qcoinpay.QcoinActivity -->
+		<activity
+			android:name="com.qihoopp.qcoinpay.QcoinActivity"
+			android:configChanges="fontScale|orientation|keyboardHidden|locale|navigation|screenSize|uiMode"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar"
+			android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+		</activity>
+        
+        <!-- 添加360SDK必需的meta-data：QHOPENSDK_APPID。 -->
+        <meta-data
+            android:name="QHOPENSDK_APPID"
+            android:value="200608711" >
+        </meta-data>
+
+        <!-- 添加360SDK必需的meta-data：QHOPENSDK_APPKEY。此处value为app_key。请在360应用开放平台http://open.app.360.cn/?from=open_dt注册申请app_key和app_secret -->
+        <meta-data
+            android:name="QHOPENSDK_APPKEY"
+            android:value="72a64bf3abdf4ece1ceeeac90609a1b6" >
+        </meta-data>
+
+        <!-- 添加360SDK必需的meta-data：QHOPENSDK_PRIVATEKEY。此处value为private_key，其生成算法为md5(app_secret +”#”+ app_key)，全小写，详细算法请看开发文档附录。 -->
+        <meta-data
+            android:name="QHOPENSDK_PRIVATEKEY"
+            android:value="34e2bbead513a4c00774e3eeb8d72cc4" >
+        </meta-data>
+
+        <!-- 添加360SDK可选的meta-data：QHOPENSDK_CHANNEL。此处value由应用方自定义，请以字母开头，不支持纯数字，用于标识应用方的子渠道。 -->
+        <meta-data
+            android:name="QHOPENSDK_CHANNEL"
+            android:value="360Android" >
+        </meta-data>
+		<!-- Start 快捷支付   -->
+		<activity
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:name="cn.paypalm.jar.game360.InitialAct"
+            android:screenOrientation="behind"
+            android:theme="@style/FloatingWindowStyle"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:name="cn.paypalm.jar.game360.UserMessageAct"
+            android:screenOrientation="behind"
+            android:theme="@style/FloatingWindowStyle"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:name="cn.paypalm.jar.game360.BankcardPayAct"
+            android:screenOrientation="behind"
+            android:theme="@style/FloatingWindowStyle"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:name="cn.paypalm.jar.game360.SuccessAct"
+            android:screenOrientation="behind"
+            android:theme="@style/FloatingWindowStyle"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:name="cn.paypalm.jar.game360.BankcardAgreement"
+            android:screenOrientation="behind"
+            android:theme="@style/FloatingWindowStyle"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+		<!--  快捷支付 End  -->
+		 <!-- Start 银联支付 -->
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="hanxin_303310048990001_1_1" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.PayMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.PayUserCreditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.PayUserDebitActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.PayOnUserTelActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.PayResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.PayResultLoseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.RegisterResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.UserProtocalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.OnUserCardManageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.OnUserUserManageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.changePswActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.changeTelActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.OnUserBindCardCreditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.OnUserBindCardDebitActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.OnUserBindCardPanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.OnUserBindCardResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.SupportActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.GetpassActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.AuthBindCardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.AboutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 银联支付 End -->
+		<!-- end 360 -->
+
+    </application>
+
+</manifest>

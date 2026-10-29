@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<TeamBuffs>
+		<TeamBuff id="1" name="生命修行" increaseType="1" unlockLevel="5" initLevel="0" increaseLevel="6" icon="members/m1.jpg" smallIcon="members/m1.jpg"/>
+		<TeamBuff id="2" name="攻击修行" increaseType="2" unlockLevel="20" initLevel="0" increaseLevel="3" icon="members/m2.jpg" smallIcon="members/m2.jpg"/>
+		<TeamBuff id="3" name="防御修行" increaseType="3" unlockLevel="15" initLevel="0" increaseLevel="2" icon="members/m3.jpg" smallIcon="members/m3.jpg"/>
+		<TeamBuff id="4" name="意志修行" increaseType="4" unlockLevel="10" initLevel="0" increaseLevel="8" icon="members/m4.jpg" smallIcon="members/m4.jpg"/>
+	</TeamBuffs>
+</root>

@@ -1,0 +1,946 @@
+INFO  2015-08-03 10:15:50,545 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:15:50,721 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 175, {}
+INFO  2015-08-03 10:15:50,835 [UserSoulInfoHandler.java,38] - user soul info handler received: 3, 1, {}
+INFO  2015-08-03 10:15:50,836 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 3, 0, {}
+INFO  2015-08-03 10:15:51,015 [UserCareerInfoHandler.java,48] - user career info handler received: 3, 1, {}
+INFO  2015-08-03 10:15:51,019 [UserCareerInfoHandler.java,121] - user career info handler ret send: 3, 4, {}
+INFO  2015-08-03 10:15:57,434 [AddPowerHandler.java,59] - add power handler received: getAdventurePower: 3, 1, {}
+INFO  2015-08-03 10:15:57,435 [AddPowerHandler.java,100] - add power handler ret send: getAdventurePower: 3, 1, {}
+INFO  2015-08-03 10:16:02,526 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:16:02,529 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 3, {}
+INFO  2015-08-03 10:29:05,653 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:29:05,663 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:35:02,140 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:35:02,149 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:40:54,107 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:40:54,114 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:40:54,387 [UserSoulInfoHandler.java,38] - user soul info handler received: 3, 1, {}
+INFO  2015-08-03 10:40:54,388 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 3, 0, {}
+INFO  2015-08-03 10:40:54,493 [UserCareerInfoHandler.java,48] - user career info handler received: 3, 1, {}
+INFO  2015-08-03 10:40:54,497 [UserCareerInfoHandler.java,121] - user career info handler ret send: 3, 4, {}
+INFO  2015-08-03 10:54:42,528 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:42,539 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 11, {}
+INFO  2015-08-03 10:54:42,699 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:42,715 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 16, {}
+INFO  2015-08-03 10:54:42,876 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:42,886 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:54:43,046 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:43,055 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:43,296 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:43,311 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 15, {}
+INFO  2015-08-03 10:54:43,471 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:43,482 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 11, {}
+INFO  2015-08-03 10:54:43,642 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:43,653 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 11, {}
+INFO  2015-08-03 10:54:43,814 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:43,825 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 11, {}
+INFO  2015-08-03 10:54:43,986 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:44,000 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 14, {}
+INFO  2015-08-03 10:54:44,161 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:44,171 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:54:44,332 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:44,343 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:54:44,503 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:44,513 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:54:44,674 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:44,685 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 11, {}
+INFO  2015-08-03 10:54:44,925 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:44,933 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:54:45,094 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:45,105 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 11, {}
+INFO  2015-08-03 10:54:45,266 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:45,276 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:54:45,437 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:45,448 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 11, {}
+INFO  2015-08-03 10:54:45,608 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:45,619 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 11, {}
+INFO  2015-08-03 10:54:45,859 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:45,872 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 11, {}
+INFO  2015-08-03 10:54:46,112 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:46,120 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:54:46,441 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:46,451 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:46,691 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:46,698 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:54:46,938 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:46,945 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:54:47,105 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:47,114 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:47,274 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:47,281 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:54:47,441 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:47,447 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 6, {}
+INFO  2015-08-03 10:54:47,607 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:47,617 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:54:47,779 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:47,789 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:54:47,950 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:47,960 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:54:48,121 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:48,131 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:48,292 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:48,302 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:54:48,463 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:48,473 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:54:48,634 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:48,645 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 11, {}
+INFO  2015-08-03 10:54:48,885 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:48,901 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 15, {}
+INFO  2015-08-03 10:54:49,141 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:49,151 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:54:49,312 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:49,321 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:49,482 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:49,493 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 11, {}
+INFO  2015-08-03 10:54:49,654 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:49,664 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:49,905 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:49,914 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:50,077 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:50,087 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:50,248 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:50,256 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:54:50,496 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:50,506 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:50,666 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:50,676 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:54:50,836 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:50,846 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:51,007 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:51,017 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:54:51,258 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:51,265 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:54:51,506 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:51,514 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:54:51,754 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:51,761 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:54:52,001 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:52,010 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:52,251 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:52,260 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:52,501 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:52,508 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:54:52,749 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:52,758 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:52,998 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:53,005 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:54:53,246 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:53,252 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 6, {}
+INFO  2015-08-03 10:54:53,412 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:53,421 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:53,582 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:53,591 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:54:53,753 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:53,763 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:54:53,924 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:53,931 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:54:54,092 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:54,101 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:54,263 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:54,273 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:54,514 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:54,523 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:54,764 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:54,773 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:55,014 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:55,021 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:54:55,262 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:55,273 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 11, {}
+INFO  2015-08-03 10:54:55,514 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:55,523 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:55,764 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:55,775 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 11, {}
+INFO  2015-08-03 10:54:56,016 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:56,027 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:54:56,268 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:56,275 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:54:56,436 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:56,445 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:56,605 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:56,614 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:56,775 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:56,785 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:56,947 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:56,961 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 13, {}
+INFO  2015-08-03 10:54:57,122 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:57,130 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:54:57,291 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:57,358 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:57,599 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:57,608 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:57,849 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:57,858 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:58,099 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:58,108 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:58,349 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:58,356 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:54:58,596 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:58,611 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 13, {}
+INFO  2015-08-03 10:54:58,851 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:58,860 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:59,101 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:59,110 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:59,351 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:59,360 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:54:59,601 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:59,609 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:54:59,850 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:54:59,858 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:00,098 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:00,107 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:00,347 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:00,357 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:00,597 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:00,606 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:00,847 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:00,854 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:55:01,094 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:01,103 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:01,263 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:01,273 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:55:01,433 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:01,442 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:01,603 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:01,613 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:55:01,773 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:01,783 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:55:01,943 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:01,952 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:02,112 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:02,119 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:55:02,279 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:02,288 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:02,449 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:02,458 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:02,618 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:02,626 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:02,787 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:02,795 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:02,956 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:02,964 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:03,125 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:03,134 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:03,294 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:03,304 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:55:03,465 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:03,474 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:03,634 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:03,641 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:55:03,801 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:03,810 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:03,970 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:03,979 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:04,140 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:04,149 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:04,310 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:04,320 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:55:04,481 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:04,490 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:04,651 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:04,659 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:04,820 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:04,828 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:04,988 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:04,997 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:05,157 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:05,169 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 12, {}
+INFO  2015-08-03 10:55:05,329 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:05,340 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:55:05,501 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:05,509 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:05,749 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:05,759 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:55:06,000 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:06,009 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:06,250 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:06,259 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:27,796 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:27,805 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:28,021 [UserSoulInfoHandler.java,38] - user soul info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:28,023 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 3, 2, {}
+INFO  2015-08-03 10:55:28,211 [UserCareerInfoHandler.java,48] - user career info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:28,216 [UserCareerInfoHandler.java,121] - user career info handler ret send: 3, 5, {}
+INFO  2015-08-03 10:55:29,044 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:29,052 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:29,212 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:29,222 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:29,382 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:29,390 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:29,551 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:29,562 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 11, {}
+INFO  2015-08-03 10:55:29,722 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:29,732 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:55:29,930 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:29,940 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:55:30,181 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:30,189 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:30,430 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:30,438 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:30,679 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:30,688 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:30,849 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:30,861 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 11, {}
+INFO  2015-08-03 10:55:31,101 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:31,112 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:55:31,353 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:31,363 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:55:31,604 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:31,614 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:55:31,854 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:31,864 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:55:32,105 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:32,113 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:32,354 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:32,364 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:55:32,525 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:32,535 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:55:32,775 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:32,785 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:55:33,026 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:33,037 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 11, {}
+INFO  2015-08-03 10:55:33,278 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:33,288 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:55:33,529 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:33,536 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:55:33,856 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:33,863 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:55:34,104 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:34,112 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:34,352 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:34,358 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 6, {}
+INFO  2015-08-03 10:55:34,598 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:34,604 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 6, {}
+INFO  2015-08-03 10:55:34,844 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:34,849 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 5, {}
+INFO  2015-08-03 10:55:35,090 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:35,095 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 5, {}
+INFO  2015-08-03 10:55:35,255 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:35,260 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 5, {}
+INFO  2015-08-03 10:55:35,420 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:35,430 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:55:35,670 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:35,680 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:55:35,920 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:35,935 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 15, {}
+INFO  2015-08-03 10:55:36,176 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:36,184 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:36,424 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:36,434 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:55:36,675 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:36,684 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:36,925 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:36,933 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:37,173 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:37,187 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 13, {}
+INFO  2015-08-03 10:55:37,428 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:37,438 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:55:37,679 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:37,687 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:37,927 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:37,939 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 12, {}
+INFO  2015-08-03 10:55:38,180 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:38,190 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:55:38,431 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:38,440 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:38,680 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:38,687 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:55:38,928 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:38,936 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:39,177 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:39,184 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:55:39,425 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:39,434 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:39,675 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:39,685 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:55:39,925 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:39,932 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:55:40,173 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:40,182 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:40,423 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:40,432 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:40,674 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:40,683 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:40,924 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:40,932 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:55:41,172 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:41,180 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:41,420 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:41,429 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:41,670 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:41,679 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:41,919 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:41,926 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:55:42,166 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:42,174 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:42,414 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:42,421 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:55:42,581 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:42,590 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:42,750 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:42,759 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:42,920 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:42,929 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:43,089 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:43,098 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:43,339 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:43,347 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:43,588 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:43,600 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 12, {}
+INFO  2015-08-03 10:55:43,841 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:43,848 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:55:44,089 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:44,096 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:55:44,256 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:44,263 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:55:44,423 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:44,429 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 6, {}
+INFO  2015-08-03 10:55:44,589 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:44,595 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 6, {}
+INFO  2015-08-03 10:55:44,755 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:44,763 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:44,924 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:44,932 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:45,093 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:45,102 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:45,263 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:45,272 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:45,433 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:45,440 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:55:45,600 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:45,609 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:45,770 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:45,779 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:46,019 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:46,027 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:46,268 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:46,275 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:55:46,435 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:46,445 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:55:46,685 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:46,693 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:46,934 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:46,943 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:47,184 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:47,191 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:55:47,431 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:47,440 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:47,680 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:47,689 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:47,929 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:47,938 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:48,178 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:48,185 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:55:48,426 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:48,436 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:55:48,676 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:48,685 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:48,925 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:48,934 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:49,174 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:49,183 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:49,423 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:49,432 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:49,673 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:49,680 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:55:49,921 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:49,929 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:50,170 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:50,179 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:50,420 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:50,429 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:50,669 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:50,678 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:50,919 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:50,928 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:51,168 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:51,175 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:55:51,415 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:51,424 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:51,664 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:51,672 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:51,913 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:51,921 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:52,161 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:52,168 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:55:52,409 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:52,418 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:52,658 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:52,667 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:52,907 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:52,916 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:53,157 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:53,165 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:53,406 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:53,415 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:53,655 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:53,664 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:53,904 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:53,913 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:54,153 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:54,164 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 11, {}
+INFO  2015-08-03 10:55:54,404 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:54,414 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 10:55:54,655 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:54,666 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:54,907 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:54,915 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:55,156 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:55,163 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:55:55,403 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:55,412 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:55,653 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:55,661 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:55,901 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:55,908 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:55:56,149 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:56,158 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:56,398 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:56,406 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 10:55:56,647 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:56,656 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:56,897 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:56,906 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:57,147 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:57,156 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 10:55:57,396 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:57,403 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 10:55:57,643 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 10:55:57,649 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 6, {}
+INFO  2015-08-03 10:56:21,467 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 10:56:21,478 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 9, {}
+INFO  2015-08-03 10:56:21,774 [UserSoulInfoHandler.java,38] - user soul info handler received: 2, 1, {}
+INFO  2015-08-03 10:56:21,775 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 2, 1, {}
+INFO  2015-08-03 10:56:21,965 [UserCareerInfoHandler.java,48] - user career info handler received: 2, 1, {}
+INFO  2015-08-03 10:56:21,969 [UserCareerInfoHandler.java,121] - user career info handler ret send: 2, 3, {}
+INFO  2015-08-03 10:56:29,630 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 10:56:29,640 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 10, {}
+INFO  2015-08-03 10:59:05,652 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 10:59:05,662 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 9, {}
+INFO  2015-08-03 11:17:51,133 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:51,143 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:17:51,437 [UserSoulInfoHandler.java,38] - user soul info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:51,439 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 3, 1, {}
+INFO  2015-08-03 11:17:51,549 [UserCareerInfoHandler.java,48] - user career info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:51,554 [UserCareerInfoHandler.java,121] - user career info handler ret send: 3, 5, {}
+INFO  2015-08-03 11:17:52,446 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:52,454 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 11:17:52,615 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:52,623 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 11:17:52,864 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:52,874 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:17:53,115 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:53,127 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 11, {}
+INFO  2015-08-03 11:17:53,325 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:53,335 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:17:53,495 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:53,505 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:17:53,666 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:53,676 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:17:53,917 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:53,927 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:17:54,088 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:54,098 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:17:54,259 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:54,270 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:17:54,430 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:54,441 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:17:54,601 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:54,611 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:17:54,852 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:54,862 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:17:55,103 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:55,113 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:17:55,354 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:55,362 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 11:17:55,603 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:55,613 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:17:55,854 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:55,864 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:17:56,105 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:56,113 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 11:17:56,354 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:56,364 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:17:56,525 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:56,536 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 11, {}
+INFO  2015-08-03 11:17:56,776 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:56,787 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 11, {}
+INFO  2015-08-03 11:17:57,027 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:57,038 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 11, {}
+INFO  2015-08-03 11:17:57,278 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:57,288 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:17:57,448 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:57,456 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 11:17:57,616 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:57,626 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:17:57,787 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:57,797 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:17:57,958 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:57,968 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:17:58,128 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:58,138 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:17:58,299 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:58,309 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:17:58,470 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:58,479 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:17:58,640 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:58,650 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:17:58,810 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:58,820 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:17:58,981 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:58,991 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:17:59,152 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:59,162 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:17:59,323 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:59,334 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 11, {}
+INFO  2015-08-03 11:17:59,495 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:59,504 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:17:59,665 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:59,675 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:17:59,836 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:17:59,847 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 11, {}
+INFO  2015-08-03 11:18:00,089 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:00,099 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:18:00,340 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:00,349 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 11:18:00,590 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:00,597 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 11:18:00,758 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:00,769 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:18:00,929 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:00,943 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 14, {}
+INFO  2015-08-03 11:18:01,104 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:01,113 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:18:01,354 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:01,363 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:18:01,604 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:01,614 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:18:01,854 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:01,864 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:18:02,104 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:02,114 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:18:02,355 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:02,365 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:18:02,606 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:02,614 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 11:18:02,774 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:02,783 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:18:09,359 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:09,369 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:18:09,610 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:09,619 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:18:09,860 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:09,867 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 11:18:10,108 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:10,118 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:18:10,358 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:10,367 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:18:10,608 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:10,617 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:18:10,858 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:10,865 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 11:18:11,106 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:11,116 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:18:11,356 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:11,365 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:18:11,606 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:11,616 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:18:11,857 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:11,872 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 15, {}
+INFO  2015-08-03 11:18:12,112 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:12,122 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:18:12,362 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:12,374 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 12, {}
+INFO  2015-08-03 11:18:12,615 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:12,623 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 11:18:12,864 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:12,873 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:18:13,114 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:13,125 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:18:13,366 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:13,376 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:18:13,537 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:13,546 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 11:18:13,707 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:13,715 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 11:18:13,876 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:13,886 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:18:14,046 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:14,063 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:18:14,224 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:14,231 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 11:18:14,471 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:14,480 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:18:14,641 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:14,650 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 11:18:14,811 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:14,820 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:18:14,980 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:14,989 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:18:15,150 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:15,158 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 11:18:15,319 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:15,327 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 11:18:15,488 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:15,496 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 11:18:15,657 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:15,665 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 11:18:15,826 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:15,833 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 11:18:15,994 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:16,003 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:18:16,163 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:16,171 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 11:18:16,332 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:16,341 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:18:16,501 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:16,511 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 10, {}
+INFO  2015-08-03 11:18:16,672 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:16,681 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 8, {}
+INFO  2015-08-03 11:18:16,921 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:16,930 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:18:17,170 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:17,177 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 6, {}
+INFO  2015-08-03 11:18:17,337 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:17,346 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:18:17,507 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:17,516 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:18:17,757 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:17,766 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:18:18,006 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 11:18:18,015 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 11:18:34,340 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 11:18:34,346 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 6, {}
+INFO  2015-08-03 11:18:35,238 [UserSoulInfoHandler.java,38] - user soul info handler received: 2, 1, {}
+INFO  2015-08-03 11:18:35,239 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 2, 0, {}
+INFO  2015-08-03 11:18:35,400 [UserCareerInfoHandler.java,48] - user career info handler received: 2, 1, {}
+INFO  2015-08-03 11:18:35,403 [UserCareerInfoHandler.java,121] - user career info handler ret send: 2, 1, {}
+INFO  2015-08-03 11:25:56,032 [AddPowerHandler.java,59] - add power handler received: getAdventurePower: 2, 1, {}
+INFO  2015-08-03 11:25:56,033 [AddPowerHandler.java,100] - add power handler ret send: getAdventurePower: 2, 0, {}
+INFO  2015-08-03 11:29:05,071 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 11:29:05,075 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 3, {}
+INFO  2015-08-03 11:32:50,070 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 11:32:50,077 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 7, {}
+INFO  2015-08-03 11:32:50,348 [UserSoulInfoHandler.java,38] - user soul info handler received: 2, 1, {}
+INFO  2015-08-03 11:32:50,349 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 2, 0, {}
+INFO  2015-08-03 11:32:50,527 [UserCareerInfoHandler.java,48] - user career info handler received: 2, 1, {}
+INFO  2015-08-03 11:32:50,529 [UserCareerInfoHandler.java,121] - user career info handler ret send: 2, 2, {}
+INFO  2015-08-03 11:45:16,596 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 11:45:16,599 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 3, {}
+INFO  2015-08-03 12:09:07,939 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 12:09:07,947 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 8, {}
+INFO  2015-08-03 12:09:08,358 [UserSoulInfoHandler.java,38] - user soul info handler received: 2, 1, {}
+INFO  2015-08-03 12:09:08,359 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 2, 1, {}
+INFO  2015-08-03 12:09:08,521 [UserCareerInfoHandler.java,48] - user career info handler received: 2, 1, {}
+INFO  2015-08-03 12:09:08,523 [UserCareerInfoHandler.java,121] - user career info handler ret send: 2, 2, {}
+INFO  2015-08-03 12:10:47,832 [AddPowerHandler.java,59] - add power handler received: getAdventurePower: 2, 1, {}
+INFO  2015-08-03 12:10:47,833 [AddPowerHandler.java,100] - add power handler ret send: getAdventurePower: 2, 0, {}
+INFO  2015-08-03 12:10:50,877 [AddPowerHandler.java,118] - add power handler received: 2, 1, {}
+INFO  2015-08-03 12:10:50,877 [AddPowerHandler.java,191] - add power handler ret send: 2, 0, {}
+INFO  2015-08-03 12:12:52,754 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 12:12:52,758 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 4, {}
+INFO  2015-08-03 12:13:37,578 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 12:13:37,584 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 5, {}
+INFO  2015-08-03 12:16:00,995 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 12:16:01,002 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 7, {}
+INFO  2015-08-03 12:16:01,809 [UserSoulInfoHandler.java,38] - user soul info handler received: 2, 1, {}
+INFO  2015-08-03 12:16:01,809 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 2, 0, {}
+INFO  2015-08-03 12:16:01,971 [UserCareerInfoHandler.java,48] - user career info handler received: 2, 1, {}
+INFO  2015-08-03 12:16:01,974 [UserCareerInfoHandler.java,121] - user career info handler ret send: 2, 2, {}
+INFO  2015-08-03 12:16:10,865 [AddPowerHandler.java,59] - add power handler received: getAdventurePower: 2, 1, {}
+INFO  2015-08-03 12:16:10,865 [AddPowerHandler.java,100] - add power handler ret send: getAdventurePower: 2, 0, {}
+INFO  2015-08-03 12:17:36,600 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 12:17:36,606 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 6, {}
+INFO  2015-08-03 12:17:37,016 [UserSoulInfoHandler.java,38] - user soul info handler received: 2, 1, {}
+INFO  2015-08-03 12:17:37,017 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 2, 1, {}
+INFO  2015-08-03 12:17:37,178 [UserCareerInfoHandler.java,48] - user career info handler received: 2, 1, {}
+INFO  2015-08-03 12:17:37,180 [UserCareerInfoHandler.java,121] - user career info handler ret send: 2, 2, {}
+INFO  2015-08-03 12:18:27,137 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 12:18:27,143 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 6, {}
+INFO  2015-08-03 12:18:27,467 [UserSoulInfoHandler.java,38] - user soul info handler received: 2, 1, {}
+INFO  2015-08-03 12:18:27,467 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 2, 0, {}
+INFO  2015-08-03 12:18:27,628 [UserCareerInfoHandler.java,48] - user career info handler received: 2, 1, {}
+INFO  2015-08-03 12:18:27,629 [UserCareerInfoHandler.java,121] - user career info handler ret send: 2, 1, {}
+INFO  2015-08-03 12:18:47,319 [AddPowerHandler.java,59] - add power handler received: getAdventurePower: 2, 1, {}
+INFO  2015-08-03 12:18:47,319 [AddPowerHandler.java,100] - add power handler ret send: getAdventurePower: 2, 0, {}
+INFO  2015-08-03 12:19:14,711 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 12:19:14,718 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 7, {}
+INFO  2015-08-03 12:19:15,207 [UserSoulInfoHandler.java,38] - user soul info handler received: 2, 1, {}
+INFO  2015-08-03 12:19:15,208 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 2, 1, {}
+INFO  2015-08-03 12:19:15,371 [UserCareerInfoHandler.java,48] - user career info handler received: 2, 1, {}
+INFO  2015-08-03 12:19:15,375 [UserCareerInfoHandler.java,121] - user career info handler ret send: 2, 4, {}
+INFO  2015-08-03 13:12:52,278 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 13:12:52,289 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 10, {}
+INFO  2015-08-03 13:12:52,591 [UserSoulInfoHandler.java,38] - user soul info handler received: 2, 1, {}
+INFO  2015-08-03 13:12:52,592 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 2, 0, {}
+INFO  2015-08-03 13:12:52,785 [UserCareerInfoHandler.java,48] - user career info handler received: 2, 1, {}
+INFO  2015-08-03 13:12:52,791 [UserCareerInfoHandler.java,121] - user career info handler ret send: 2, 6, {}
+INFO  2015-08-03 13:12:59,170 [AddPowerHandler.java,59] - add power handler received: getAdventurePower: 2, 1, {}
+INFO  2015-08-03 13:12:59,172 [AddPowerHandler.java,100] - add power handler ret send: getAdventurePower: 2, 2, {}
+INFO  2015-08-03 13:13:02,423 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 13:13:02,426 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 3, {}
+INFO  2015-08-03 13:28:11,195 [UserBasicInfoHandler.java,48] - user basic info handler received: 4, 1, {}
+INFO  2015-08-03 13:28:11,202 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 4, 7, {}
+INFO  2015-08-03 13:28:11,526 [UserSoulInfoHandler.java,38] - user soul info handler received: 4, 1, {}
+INFO  2015-08-03 13:28:11,528 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 4, 2, {}
+INFO  2015-08-03 13:28:11,690 [UserCareerInfoHandler.java,48] - user career info handler received: 4, 1, {}
+INFO  2015-08-03 13:28:11,691 [UserCareerInfoHandler.java,121] - user career info handler ret send: 4, 1, {}
+INFO  2015-08-03 13:29:56,764 [UserBasicInfoHandler.java,48] - user basic info handler received: 4, 1, {}
+INFO  2015-08-03 13:29:56,775 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 4, 11, {}
+INFO  2015-08-03 13:29:57,021 [UserSoulInfoHandler.java,38] - user soul info handler received: 4, 1, {}
+INFO  2015-08-03 13:29:57,022 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 4, 1, {}
+INFO  2015-08-03 13:29:57,185 [UserCareerInfoHandler.java,48] - user career info handler received: 4, 1, {}
+INFO  2015-08-03 13:29:57,186 [UserCareerInfoHandler.java,121] - user career info handler ret send: 4, 1, {}
+INFO  2015-08-03 13:30:00,259 [UserBasicInfoHandler.java,48] - user basic info handler received: 4, 1, {}
+INFO  2015-08-03 13:30:00,270 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 4, 10, {}
+INFO  2015-08-03 13:30:53,733 [AddPowerHandler.java,59] - add power handler received: getAdventurePower: 4, 1, {}
+INFO  2015-08-03 13:30:53,734 [AddPowerHandler.java,100] - add power handler ret send: getAdventurePower: 4, 1, {}
+INFO  2015-08-03 13:32:33,722 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-03 13:32:33,727 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 5, {}
+INFO  2015-08-03 13:32:34,051 [UserSoulInfoHandler.java,38] - user soul info handler received: 5, 1, {}
+INFO  2015-08-03 13:32:34,051 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 5, 0, {}
+INFO  2015-08-03 13:32:34,216 [UserCareerInfoHandler.java,48] - user career info handler received: 5, 1, {}
+INFO  2015-08-03 13:32:34,218 [UserCareerInfoHandler.java,121] - user career info handler ret send: 5, 0, {}
+INFO  2015-08-03 13:38:19,692 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-03 13:38:19,701 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 9, {}
+INFO  2015-08-03 13:38:20,025 [UserSoulInfoHandler.java,38] - user soul info handler received: 5, 1, {}
+INFO  2015-08-03 13:38:20,026 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 5, 1, {}
+INFO  2015-08-03 13:38:20,187 [UserCareerInfoHandler.java,48] - user career info handler received: 5, 1, {}
+INFO  2015-08-03 13:38:20,188 [UserCareerInfoHandler.java,121] - user career info handler ret send: 5, 1, {}
+INFO  2015-08-03 13:38:21,880 [UserBasicInfoHandler.java,48] - user basic info handler received: 5, 1, {}
+INFO  2015-08-03 13:38:21,887 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 5, 7, {}
+INFO  2015-08-03 13:39:42,366 [AddPowerHandler.java,59] - add power handler received: getAdventurePower: 5, 1, {}
+INFO  2015-08-03 13:39:42,367 [AddPowerHandler.java,100] - add power handler ret send: getAdventurePower: 5, 1, {}
+INFO  2015-08-03 13:57:31,736 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 13:57:31,743 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 7, {}
+INFO  2015-08-03 13:57:32,148 [UserSoulInfoHandler.java,38] - user soul info handler received: 2, 1, {}
+INFO  2015-08-03 13:57:32,150 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 2, 1, {}
+INFO  2015-08-03 13:57:32,312 [UserCareerInfoHandler.java,48] - user career info handler received: 2, 1, {}
+INFO  2015-08-03 13:57:32,315 [UserCareerInfoHandler.java,121] - user career info handler ret send: 2, 3, {}
+INFO  2015-08-03 13:57:51,378 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 13:57:51,386 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 8, {}
+INFO  2015-08-03 14:01:30,511 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 14:01:30,519 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 8, {}
+INFO  2015-08-03 14:01:30,843 [UserSoulInfoHandler.java,38] - user soul info handler received: 2, 1, {}
+INFO  2015-08-03 14:01:30,843 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 2, 0, {}
+INFO  2015-08-03 14:01:31,005 [UserCareerInfoHandler.java,48] - user career info handler received: 2, 1, {}
+INFO  2015-08-03 14:01:31,007 [UserCareerInfoHandler.java,121] - user career info handler ret send: 2, 2, {}
+INFO  2015-08-03 14:05:27,079 [UserBasicInfoHandler.java,48] - user basic info handler received: 1, 1, {}
+INFO  2015-08-03 14:05:27,093 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 1, 14, {}
+INFO  2015-08-03 14:05:27,470 [UserSoulInfoHandler.java,38] - user soul info handler received: 1, 1, {}
+INFO  2015-08-03 14:05:27,471 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 1, 0, {}
+INFO  2015-08-03 14:05:27,668 [UserCareerInfoHandler.java,48] - user career info handler received: 1, 1, {}
+INFO  2015-08-03 14:05:27,673 [UserCareerInfoHandler.java,121] - user career info handler ret send: 1, 5, {}
+INFO  2015-08-03 14:06:09,870 [AddPowerHandler.java,59] - add power handler received: getAdventurePower: 1, 1, {}
+INFO  2015-08-03 14:06:09,873 [AddPowerHandler.java,100] - add power handler ret send: getAdventurePower: 1, 2, {}
+INFO  2015-08-03 14:07:05,052 [UserBasicInfoHandler.java,48] - user basic info handler received: 1, 1, {}
+INFO  2015-08-03 14:07:05,061 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 1, 9, {}
+INFO  2015-08-03 14:12:25,656 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 14:12:25,664 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 8, {}
+INFO  2015-08-03 14:12:25,989 [UserSoulInfoHandler.java,38] - user soul info handler received: 2, 1, {}
+INFO  2015-08-03 14:12:25,989 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 2, 0, {}
+INFO  2015-08-03 14:12:26,151 [UserCareerInfoHandler.java,48] - user career info handler received: 2, 1, {}
+INFO  2015-08-03 14:12:26,152 [UserCareerInfoHandler.java,121] - user career info handler ret send: 2, 1, {}
+INFO  2015-08-03 14:18:35,206 [AddPowerHandler.java,59] - add power handler received: getAdventurePower: 2, 1, {}
+INFO  2015-08-03 14:18:35,207 [AddPowerHandler.java,100] - add power handler ret send: getAdventurePower: 2, 1, {}
+INFO  2015-08-03 14:30:09,897 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 14:30:09,905 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 8, {}
+INFO  2015-08-03 14:31:34,254 [UserBasicInfoHandler.java,48] - user basic info handler received: 1, 1, {}
+INFO  2015-08-03 14:31:34,261 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 1, 7, {}
+INFO  2015-08-03 14:31:34,585 [UserSoulInfoHandler.java,38] - user soul info handler received: 1, 1, {}
+INFO  2015-08-03 14:31:34,586 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 1, 0, {}
+INFO  2015-08-03 14:31:34,747 [UserCareerInfoHandler.java,48] - user career info handler received: 1, 1, {}
+INFO  2015-08-03 14:31:34,748 [UserCareerInfoHandler.java,121] - user career info handler ret send: 1, 1, {}
+INFO  2015-08-03 14:32:00,042 [AddPowerHandler.java,59] - add power handler received: getAdventurePower: 1, 1, {}
+INFO  2015-08-03 14:32:00,042 [AddPowerHandler.java,100] - add power handler ret send: getAdventurePower: 1, 0, {}
+INFO  2015-08-03 14:39:29,912 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 14:39:29,924 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 10, {}
+INFO  2015-08-03 14:39:30,302 [UserSoulInfoHandler.java,38] - user soul info handler received: 2, 1, {}
+INFO  2015-08-03 14:39:30,303 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 2, 1, {}
+INFO  2015-08-03 14:39:30,416 [UserCareerInfoHandler.java,48] - user career info handler received: 2, 1, {}
+INFO  2015-08-03 14:39:30,422 [UserCareerInfoHandler.java,121] - user career info handler ret send: 2, 6, {}
+INFO  2015-08-03 14:40:27,289 [AddPowerHandler.java,59] - add power handler received: getAdventurePower: 2, 1, {}
+INFO  2015-08-03 14:40:27,290 [AddPowerHandler.java,100] - add power handler ret send: getAdventurePower: 2, 0, {}
+INFO  2015-08-03 15:04:16,187 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 15:04:16,198 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 10, {}
+INFO  2015-08-03 15:04:16,575 [UserSoulInfoHandler.java,38] - user soul info handler received: 2, 1, {}
+INFO  2015-08-03 15:04:16,577 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 2, 1, {}
+INFO  2015-08-03 15:04:16,771 [UserCareerInfoHandler.java,48] - user career info handler received: 2, 1, {}
+INFO  2015-08-03 15:04:16,776 [UserCareerInfoHandler.java,121] - user career info handler ret send: 2, 4, {}
+INFO  2015-08-03 15:04:29,375 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 15:04:29,381 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 6, {}
+INFO  2015-08-03 15:23:52,139 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 15:23:52,151 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 12, {}
+INFO  2015-08-03 15:34:16,279 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 15:34:16,308 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 27, {}
+INFO  2015-08-03 15:44:43,821 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 15:44:43,827 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 6, {}
+INFO  2015-08-03 15:44:44,149 [UserSoulInfoHandler.java,38] - user soul info handler received: 2, 1, {}
+INFO  2015-08-03 15:44:44,149 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 2, 0, {}
+INFO  2015-08-03 15:44:44,311 [UserCareerInfoHandler.java,48] - user career info handler received: 2, 1, {}
+INFO  2015-08-03 15:44:44,312 [UserCareerInfoHandler.java,121] - user career info handler ret send: 2, 1, {}
+INFO  2015-08-03 16:52:36,655 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 16:52:36,664 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 9, {}
+INFO  2015-08-03 16:52:37,075 [UserSoulInfoHandler.java,38] - user soul info handler received: 2, 1, {}
+INFO  2015-08-03 16:52:37,076 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 2, 1, {}
+INFO  2015-08-03 16:52:37,158 [UserCareerInfoHandler.java,48] - user career info handler received: 2, 1, {}
+INFO  2015-08-03 16:52:37,159 [UserCareerInfoHandler.java,121] - user career info handler ret send: 2, 1, {}
+INFO  2015-08-03 16:52:50,067 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 16:52:50,075 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 8, {}
+INFO  2015-08-03 16:54:26,801 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 16:54:26,808 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 7, {}
+INFO  2015-08-03 16:54:27,142 [UserSoulInfoHandler.java,38] - user soul info handler received: 3, 1, {}
+INFO  2015-08-03 16:54:27,145 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 3, 1, {}
+INFO  2015-08-03 16:54:27,306 [UserCareerInfoHandler.java,48] - user career info handler received: 3, 1, {}
+INFO  2015-08-03 16:54:27,306 [UserCareerInfoHandler.java,121] - user career info handler ret send: 3, 0, {}
+INFO  2015-08-03 16:56:06,843 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 16:56:06,852 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 9, {}
+INFO  2015-08-03 16:56:07,097 [UserSoulInfoHandler.java,38] - user soul info handler received: 3, 1, {}
+INFO  2015-08-03 16:56:07,098 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 3, 1, {}
+INFO  2015-08-03 16:56:07,259 [UserCareerInfoHandler.java,48] - user career info handler received: 3, 1, {}
+INFO  2015-08-03 16:56:07,260 [UserCareerInfoHandler.java,121] - user career info handler ret send: 3, 1, {}
+INFO  2015-08-03 16:56:09,454 [AddPowerHandler.java,59] - add power handler received: getAdventurePower: 3, 1, {}
+INFO  2015-08-03 16:56:09,456 [AddPowerHandler.java,100] - add power handler ret send: getAdventurePower: 3, 2, {}
+INFO  2015-08-03 16:58:12,906 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 16:58:12,917 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 11, {}
+INFO  2015-08-03 16:58:13,291 [UserSoulInfoHandler.java,38] - user soul info handler received: 3, 1, {}
+INFO  2015-08-03 16:58:13,291 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 3, 0, {}
+INFO  2015-08-03 16:58:13,481 [UserCareerInfoHandler.java,48] - user career info handler received: 3, 1, {}
+INFO  2015-08-03 16:58:13,485 [UserCareerInfoHandler.java,121] - user career info handler ret send: 3, 4, {}
+INFO  2015-08-03 16:58:39,244 [UserBasicInfoHandler.java,48] - user basic info handler received: 4, 1, {}
+INFO  2015-08-03 16:58:39,251 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 4, 7, {}
+INFO  2015-08-03 16:58:39,576 [UserSoulInfoHandler.java,38] - user soul info handler received: 4, 1, {}
+INFO  2015-08-03 16:58:39,577 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 4, 1, {}
+INFO  2015-08-03 16:58:39,819 [UserCareerInfoHandler.java,48] - user career info handler received: 4, 1, {}
+INFO  2015-08-03 16:58:39,822 [UserCareerInfoHandler.java,121] - user career info handler ret send: 4, 3, {}
+INFO  2015-08-03 17:00:10,371 [UserBasicInfoHandler.java,48] - user basic info handler received: 4, 1, {}
+INFO  2015-08-03 17:00:10,383 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 4, 12, {}
+INFO  2015-08-03 17:00:10,628 [UserSoulInfoHandler.java,38] - user soul info handler received: 4, 1, {}
+INFO  2015-08-03 17:00:10,629 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 4, 1, {}
+INFO  2015-08-03 17:00:10,791 [UserCareerInfoHandler.java,48] - user career info handler received: 4, 1, {}
+INFO  2015-08-03 17:00:10,792 [UserCareerInfoHandler.java,121] - user career info handler ret send: 4, 1, {}
+INFO  2015-08-03 17:00:17,492 [UserBasicInfoHandler.java,48] - user basic info handler received: 4, 1, {}
+INFO  2015-08-03 17:00:17,504 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 4, 11, {}
+INFO  2015-08-03 17:00:50,278 [AddPowerHandler.java,59] - add power handler received: getAdventurePower: 4, 1, {}
+INFO  2015-08-03 17:00:50,280 [AddPowerHandler.java,100] - add power handler ret send: getAdventurePower: 4, 1, {}
+INFO  2015-08-03 17:11:55,605 [UserBasicInfoHandler.java,48] - user basic info handler received: 3, 1, {}
+INFO  2015-08-03 17:11:55,609 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 3, 4, {}
+INFO  2015-08-03 17:11:55,851 [UserSoulInfoHandler.java,38] - user soul info handler received: 3, 1, {}
+INFO  2015-08-03 17:11:55,851 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 3, 0, {}
+INFO  2015-08-03 17:11:56,012 [UserCareerInfoHandler.java,48] - user career info handler received: 3, 1, {}
+INFO  2015-08-03 17:11:56,012 [UserCareerInfoHandler.java,121] - user career info handler ret send: 3, 0, {}
+INFO  2015-08-03 17:36:29,651 [UserBasicInfoHandler.java,48] - user basic info handler received: 1, 1, {}
+INFO  2015-08-03 17:36:29,659 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 1, 8, {}
+INFO  2015-08-03 17:36:30,066 [UserSoulInfoHandler.java,38] - user soul info handler received: 1, 1, {}
+INFO  2015-08-03 17:36:30,067 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 1, 1, {}
+INFO  2015-08-03 17:36:30,228 [UserCareerInfoHandler.java,48] - user career info handler received: 1, 1, {}
+INFO  2015-08-03 17:36:30,229 [UserCareerInfoHandler.java,121] - user career info handler ret send: 1, 1, {}
+INFO  2015-08-03 19:48:25,879 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 19:48:25,888 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 4, {}
+INFO  2015-08-03 19:48:26,151 [UserSoulInfoHandler.java,38] - user soul info handler received: 2, 1, {}
+INFO  2015-08-03 19:48:26,151 [UserSoulInfoHandler.java,76] - user soul info handler ret send: 2, 0, {}
+INFO  2015-08-03 19:48:26,325 [UserCareerInfoHandler.java,48] - user career info handler received: 2, 1, {}
+INFO  2015-08-03 19:48:26,326 [UserCareerInfoHandler.java,121] - user career info handler ret send: 2, 1, {}
+INFO  2015-08-03 19:48:34,356 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 19:48:34,361 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 5, {}
+INFO  2015-08-03 19:51:49,782 [UserBasicInfoHandler.java,48] - user basic info handler received: 2, 1, {}
+INFO  2015-08-03 19:51:49,795 [UserBasicInfoHandler.java,93] - user basic info handler ret send: 2, 12, {}

@@ -1,0 +1,918 @@
+$#include "ServerDateManager.h"
+
+class	UserBasicInfo
+{
+	std::string		name;
+	unsigned int	level;
+	unsigned int	exp;
+	unsigned int	power;
+	unsigned int	poweraddtime;
+	unsigned int	maxpower;
+	unsigned int	vitality;
+	unsigned int	vitalityaddtim;
+	unsigned int	maxvitality;
+	unsigned int	viplevel;
+	unsigned int	rechargenum;
+	int64_t			silvercoins;
+	unsigned int	goldcoins;
+	unsigned int	tutorialstep;
+	unsigned int	servertime;
+	unsigned int	totalTimeStamp;
+	unsigned int	titleTotalNum;
+	unsigned int	todayAddedPowerNum;
+	unsigned int    todayBuyPowerNum;
+	unsigned int	todayAddedVitalityNum;
+	unsigned int    todayBuyVitalityNum;
+	std::string		dropStatus;
+	unsigned int	unReadCount;
+	unsigned int	readTime;
+};
+
+class MarketInfo
+{
+	bool hasVipGift(int vipGift);;
+	void clearVipGift();;
+	void insertVipGift(int vipGift);;
+
+	unsigned int	servertime;
+	int				msgGotTime;
+	int				recuritTenCount;
+	int				recurittime1;
+	int				recurittime2;
+	int				recurittime3;
+	int				recuritCost1;
+	int				recuritCost2;
+	int				recuritCost3;
+	bool			firstPay;
+	bool			firstbaili;
+	bool			firstwanli;
+};
+struct UserSettingInfo
+{
+	unsigned int music;
+	unsigned int sound;
+	unsigned int chat;
+};
+
+struct UserToolInfo
+{
+	unsigned int id;
+	unsigned int itemid;
+	unsigned int count;
+};
+
+class UserDiscipleInfo
+{
+	unsigned int id;//sever id
+	unsigned int itemid;//resource id
+	unsigned int level;
+	unsigned int exp;
+	unsigned int health;
+	unsigned int attack;
+	unsigned int defence;
+	unsigned int rp;
+	unsigned int upgradelevel;
+	unsigned int potentiality;
+	unsigned int skill1;
+	unsigned int battleid;
+	unsigned int preLevel;
+
+};
+
+class UserSoulInfo
+{
+public:
+	unsigned int id;//server id
+	unsigned int itemid;// resource id
+	unsigned int count;
+};
+
+class SkillInfo
+{
+	unsigned int	id;
+	unsigned int	itemid;
+	unsigned int	level;
+	float			quantity;
+	unsigned int	consume;
+	bool			isBornSkill;
+};
+
+class UserEquipInfo
+{
+	void insertPropertyInfo(int index, int value);;
+	unsigned int getPorpertyInfoSize();;
+	int getPropertyInfoByKey(int key);
+	void setPropertyInfoByKey(int key, int value);
+	int getPropertyInfoByIndex(int index);
+	void setPropertyInfoByIndex(int index, int value);
+	void setStoneInfoByPosition(int index,int value);
+	unsigned int id;
+	unsigned int itemid;
+	unsigned int level;
+	unsigned int refinexp;
+	unsigned int refinelevel;
+	unsigned int bufftype;
+	std::string buffvalue;
+};
+
+class TitleInfo
+{
+	unsigned int id;
+	unsigned int itemid;
+	unsigned int startime;
+};
+
+struct UserFriendsInfo 
+{
+	unsigned int id;
+	std::string name;
+	unsigned int level;
+	unsigned int type;
+};
+
+struct UserChatInfo
+{
+	unsigned int id;
+	unsigned int uId;
+	std::string name;
+	std::string msg;
+	unsigned int eventTime;
+};
+
+class UserBattleInfo
+{
+	void insertFateInfos(int index, int value);;
+	unsigned int getFateInfosSize();
+	bool hasFateInfo(int key);
+	int getFateInfosByKey(int key);
+	void setFateInfosByKey(int key, int value);
+	int getFateInfosByIndex(int index);
+	void setFateInfosByIndex(int index, int value);
+	void clearFateInfos();
+
+	unsigned int id;
+	unsigned int discipleId;
+	unsigned int attack;
+	unsigned int defence;
+	unsigned int health;
+	unsigned int rp;
+	unsigned int skill1;
+	unsigned int skill2;
+	unsigned int equip1;
+	unsigned int equip2;
+	unsigned int equip3;
+	unsigned int position;
+};
+
+struct ShopItem
+{
+	std::string productID;
+	std::string productName;
+	float productPrice;
+	float productOrignalPrice;
+	int productCount;
+};
+
+struct TrainDiscipleInfo
+{
+	struct TrainStatus
+	{
+		unsigned int pro;
+		unsigned int num;
+	};
+	unsigned int id;
+	TrainStatus minus;
+	TrainStatus add;
+};
+
+class BoardCastInfo 
+{
+	void addParam(int param);
+	unsigned int getParamsSize();;
+	int getParamByIndex(int index);;
+	void clearParams();
+
+	unsigned int id;
+	unsigned int itemType;
+	std::string name;
+};
+
+class ContinueLoginInfo 
+{
+	struct ContinueReward
+	{
+		unsigned int id;
+		unsigned int itemType;
+		unsigned int itemId;
+		unsigned int quantity;
+	};
+
+	unsigned int getContinueRewardMapSize();
+	ContinueReward* getContinueRewardByIndex(unsigned int index);
+	bool hasContinueReward(unsigned int key);
+	ContinueReward* getContinueRewardByKey(unsigned int key);
+	void insertContinueReward(unsigned int key, ContinueReward* info);
+
+	unsigned int count;
+};
+
+struct AdventureItemInfo 
+{
+	unsigned int id;
+	unsigned int adventureId;
+	unsigned int itemId;
+	unsigned int count;
+	unsigned int beginTime;
+	unsigned int endTime;
+};
+
+class SkillBookInfo
+{
+	struct SkillBookItem
+	{
+		unsigned int partId;
+		unsigned int partCount;
+	};
+
+	unsigned int getSkillBookItemMapSize();
+	SkillBookItem* getContinueRewardByIndex(unsigned int index);
+	bool hasSkillBookItem(unsigned int key);
+	SkillBookItem* getSkillBookItemByKey(unsigned int key);
+	void insertSkillBookItem(unsigned int key, SkillBookItem* info);
+};
+
+struct SkillBookLootInfo
+{
+	struct PlayerTeamItem
+	{
+		unsigned int id;
+		unsigned int memberId;
+	};
+	unsigned int id;
+	unsigned int playerId;
+	std::string  playerName;
+	unsigned int playerLevel;
+	unsigned int isNpc;
+	PlayerTeamItem* addPlayerTeamItemById(unsigned int id);
+
+};
+
+struct HandbookPersonInfo
+{
+	unsigned int id;
+	unsigned int userid;
+	unsigned int userstatus;
+
+};
+
+struct HandbookEquipmentInfo
+{
+	unsigned int id;
+	unsigned int equipmentid;
+	unsigned int equipmentstatus;
+
+};
+
+struct HandbookSkillInfo
+{
+	unsigned int id;
+	unsigned int skillid;
+	unsigned int skillstatus;
+
+};
+
+struct UserAdventureDataInfo
+{
+	struct AddPowerInfo
+	{
+		unsigned int amStatus;
+		unsigned int pmStatus;
+	};
+	struct BoundlessHoleInfo
+	{
+		unsigned int accumulateCount;
+		unsigned int currCount;
+		unsigned int todayStatus;
+	};
+	
+	AddPowerInfo addPowerInfo;
+	BoundlessHoleInfo boundlessHoldeInfo;
+	std::string mContinueLoginInfo;
+	std::string mInviteKey;
+	std::string mInviteStatus;
+	std::string mInviteRewardStatus;
+};
+struct AdventureTeacherInfo
+{
+	unsigned int id;
+	unsigned int teacherId;
+	unsigned int serverTime;
+	unsigned int endTime;
+	unsigned int exp;
+	float totalTimeStamp;
+};
+
+struct DiscipleExpAddedInfo
+{
+	unsigned int id;
+	unsigned int discipleId;
+	unsigned int level;
+	unsigned int exp;
+	unsigned int expAdded;
+	unsigned int extraExpAdded;
+	unsigned int preLevel;
+};
+
+class AdventureFightEndInfo
+{
+	enum PanelType
+	{
+		MainPanel=1,
+		TeamPanel=2,
+		StepAddAttr=3,
+		RewardPanel=4,
+		YestAddAttrPanel=5,
+	};
+	enum RewardType 
+	{
+		NONE = 0,
+		GOLD = 1,
+		SILVER = 2,
+		TOOLS =3,
+	};
+	enum Addition_Type
+	{
+		HP=1,
+		ATTATCK=2,
+		DEFENSE=3,
+		WILL=4,
+	};
+	struct TotalAdditionStatInfo
+	{
+		unsigned int hp;
+		unsigned int attack;
+		unsigned int defense;
+		unsigned int will;
+	};
+	struct PassBarrierInfo
+	{
+		unsigned int attackCount;
+		unsigned int surplusAttackCount;
+		unsigned int currBarrier;
+		unsigned int currObtainStar;
+		unsigned int currSurplusStar;
+		unsigned int maxPassBarrier;
+		unsigned int maxObtainStar;
+		unsigned int stepObtainStar;
+		unsigned int exceedObtainStar;
+		unsigned int addition;
+		TotalAdditionStatInfo todayAddition;
+	};
+	struct FightTeamItem
+	{
+		unsigned int id;
+		unsigned int memberId;
+		unsigned int selfMember;
+		unsigned int opponentMember;
+		unsigned int rewardKeyId;
+	};
+	struct StepAdditionItem
+	{
+		unsigned int id;
+		unsigned int type;
+		unsigned int percentage;
+		unsigned int requireStar;
+	};
+	struct RewardItem
+	{
+		unsigned int id;
+		unsigned int itemId;
+		unsigned int itemType;
+		unsigned int count;
+	};
+
+	unsigned int getFightTeamListSize();
+	FightTeamItem* getFightTeamByIndex(unsigned int index);
+
+	unsigned int getStepAdditionTeamListSize();
+	StepAdditionItem* getStepAdditionTeamByIndex(unsigned int index);
+
+	PassBarrierInfo mYestFightInfo;
+	PassBarrierInfo mTodayFightInfo;
+	unsigned int mPanelType;
+	unsigned int mCalculateTodayRanking;
+	unsigned int mContinueInRankAmount;
+	unsigned int mIsNewStatus;
+
+};
+
+struct FightEndRankInfo
+{
+	struct RankItem
+	{
+		unsigned int id;
+		unsigned int playerId;
+		std::string playerName;
+		unsigned int level;
+		unsigned int passBattle;
+		unsigned int obtainStar;
+		unsigned int sussessionCount;
+	};
+	enum Fight_Rank_Type
+	{
+		FIVE_BATTLE=1,
+		SIX_BATTLE=2,
+		SEVEN_BATTLE=3,
+		EIGHT_BATTLE=4,
+	};
+
+	unsigned int mPlayerId;
+};
+
+struct AdventureLevelUpRewardInfo{
+
+	unsigned int id ;
+	unsigned int needLevel ;
+	unsigned int rechargenum ;
+	unsigned int goldcoins ;
+	unsigned int upVipLevel ;
+	unsigned int rewardStatus ;
+	unsigned int size;
+
+};
+
+struct WorldBossInfo
+{
+	unsigned int bossId;
+	unsigned int serverTime;
+	unsigned int beginTime;
+	unsigned int bossLevel;
+	unsigned int killedTime;
+	unsigned int sustainedTime;
+	unsigned int totalTimeStamp;
+};
+
+struct WorldBossRankInfo
+{
+	unsigned int id;
+	unsigned int playerId;
+	std::string name;
+	unsigned int level;
+	unsigned int damage;
+	unsigned int rankType;
+};
+
+struct TeamBuffInfo
+{
+
+	unsigned int teamId;
+	unsigned int teamLevel;
+	unsigned int currBoldness;
+};
+
+struct RewardData
+{
+	unsigned int id;
+	unsigned int itemId;
+	unsigned int itemType;
+	unsigned int count;
+};
+
+class UserSysMsgInfo 
+{
+	unsigned int getRewardDataMapSize();;
+
+	unsigned int id;
+	unsigned int relationId;
+	unsigned int uId;
+	std::string name;
+	std::string info;
+	std::string content;
+	unsigned int sysMsgType;
+	unsigned int fightRet;
+	unsigned int oprType;
+	unsigned int eventTime;
+	unsigned int addEnemyType;
+	RewardDataMap rewardDataMap;
+};
+
+class	UserArenaInfo
+{
+	bool hasReward(unsigned int key);
+	unsigned int				arenaRank;
+	unsigned int				arenaScore;
+	unsigned int				arenaNum;
+	unsigned int				rewardScore;
+	unsigned int				rewardRefreshTime;
+};
+
+class ArenaOpponentInfo
+{
+	unsigned int	id;
+	std::string		name;
+	unsigned int	level;
+	unsigned int	arenaRank;
+	unsigned int	rewardScore;
+	unsigned int	arenaType;
+	unsigned int	dicipleItemID1;
+	unsigned int	dicipleItemID2;
+	unsigned int	dicipleItemID3;
+};
+
+class WorldBossItem
+{
+	unsigned int	servertime;
+	unsigned int	bossLevel;
+	std::string		startTime;
+	unsigned int	finished;
+	unsigned int	bossTotalBlood;
+	unsigned int	bossLeftBlood;
+	unsigned int	attackNum;
+	unsigned int	damageBlood;
+	unsigned int	reliveTime;
+	unsigned int	lastTime;
+	unsigned int	useFireTime;
+};
+
+class WorldBossBattleItem
+{
+	unsigned int	id;
+	unsigned int	rank;
+	std::string		name;
+	unsigned int	level;
+	unsigned int	damageBlood;
+	unsigned int	battleId;
+	unsigned int	playerId;
+	bool	isFinal;
+};
+
+class WorldBossDamageItem
+{
+
+	unsigned int	id;
+	std::string		name;
+	unsigned int	attackNum;
+	unsigned int	damageBlood;
+	unsigned int	discipleId;
+};
+
+class ChargeRebateItem
+{
+	enum ChargeType
+	{
+		CHARGE=1,
+		REBATE=2,
+	};
+	unsigned int	id;
+	unsigned int	servertime;
+	unsigned int	chargeType;
+	unsigned int	recurittime;
+	unsigned int	minRecharge;
+	unsigned int	maxRecharge;
+	float	refund;
+	unsigned int	rechargeInfact;
+	unsigned int	rebateBeginTime;
+	unsigned int	rebateEndTime;
+	unsigned int	getRewardToday;
+	float	exchangeRate;
+	unsigned int	getRewardStat;
+	unsigned int	userGoldCoins;
+	unsigned int	refundGoldCoins;
+	unsigned int	rebateDuringDays;
+};
+
+class FortuneComeItem
+{
+	unsigned int	servertime ;
+	unsigned int	lastDays ;
+	unsigned int	chanceNum ;
+	unsigned int	recurittime ;
+	unsigned int	needGold ;
+	unsigned int	userGold ;
+	unsigned int	rewardGold ;
+	unsigned int	rewardStat ;
+	unsigned int	costGold ;
+};
+
+class ViewTeamBattleInfoItem
+{
+	std::string				mPlayerName;
+	unsigned int			mPlayerLevel;
+	unsigned int			mPlayerTitleNum;
+	
+	//SkillInfo
+	SkillInfo* getAndCreatSkillInfo(unsigned int id);
+	SkillInfo * getSkillInfoByID(unsigned int id);
+	//EquipInfo
+	UserEquipInfo* getAndCreatUserEquipInfo(unsigned int id);
+	UserEquipInfo * getUserEquipInfoByID(unsigned int id);
+	//UserBattleInfo
+	UserBattleInfo* getAndCreatUserBattleInfo(unsigned int id);
+	UserBattleInfo* getUserBattleInfo(unsigned int position);
+	UserBattleInfo* getUserBattleInfoByDisciple( unsigned int discipleID );
+	unsigned int getBattleArraySize(){ return mUserBattleArray.size();};
+	//TitleInfo
+	TitleInfo* getAndCreatTitleInfo(unsigned int id);
+	TitleInfo * getTitleInfoByID(unsigned int id);
+	//DiscipleInfo
+	UserDiscipleInfo* getAndCreatDiscipleInfo(unsigned int id);
+	UserDiscipleInfo * getUserDiscipleInfoByID(unsigned int id);
+	void clearTeamBattleInfoItem(void);
+};
+
+class ServerDateManager
+{
+	static ServerDateManager* getInstance();
+
+	//SeverID
+	int getSeverID(){return mSeverID;}
+	void setSeverID(int id){mSeverID = id;}
+	int mSeverID;
+
+	//UserBasicInfo
+	void getBasicNextTime();
+	unsigned int getNextLevelExp();
+	float getUserExpPercent();
+	const std::string getUserExpPercentStr();
+	UserBasicInfo& getUserBasicInfo() {return mUserBasicInfo;};
+	void updateBasicSyncTime();
+	void resetBasicNextSyncTime();
+	void creatAdventureLevelUpGetRewardInfo(unsigned int rechargeNum,unsigned int goldCoins);
+	
+	//UserSettingInfo
+	UserSettingInfo& getUserSettingInfo() {return mSettingInfo;};
+
+	//DiscipleInfo
+	UserDiscipleInfo* getAndCreatDiscipleInfo(unsigned int id);
+	UserDiscipleInfo * getUserDiscipleInfoByID(unsigned int id);
+	UserDiscipleInfo * getUserDiscipleInfoByItemID(unsigned int itemId);
+	UserDiscipleInfo * getUserDiscipleInfoByIndex(unsigned int index);
+	inline unsigned int getDiscipleInfoTotalNum() {return mUserDiscipleInfoList.size();};
+	void removeDiscipleInfoById(unsigned int id);
+	void cleareDiscipleInfo() { mUserDiscipleInfoList.clear();}
+
+	TrainDiscipleInfo& getTrainDiscipleInfo() {return mTrainDiscipleInfo;};
+	TrainDiscipleInfo mTrainDiscipleInfo;
+
+	//ToolInfo
+	UserToolInfo* getAndCreatToolInfo(unsigned int id);
+	UserToolInfo * getUserToolInfoByID(unsigned int id);
+	UserToolInfo * getUserToolInfoByItemId(unsigned int itemid);
+	UserToolInfo * getUserToolInfoByIndex(unsigned int index);
+	inline unsigned int getToolInfoTotalNum() {return mUserToolInfoList.size();};
+	UserToolInfoListIterator getToolIterator(void);
+	void creatUserToolKeyMapByToolItem(const UserToolInfo* userToolInfo);
+
+	//SoulInfo
+	UserSoulInfo* getAndCreatSoulInfo(unsigned int id);
+	UserSoulInfo * getUserSoulInfoByDiscipleID(unsigned int id);
+	UserSoulInfo * getUserSoulInfoByID(unsigned int id);
+	UserSoulInfo * getUserSoulInfoByIndex(unsigned int index);
+	inline unsigned int getSoulInfoTotalNum() {return mUserSoulInfoList.size();};
+	void increaseSoulInfoById(unsigned int id,int count);
+
+	//SkillInfo
+	SkillInfo* getAndCreatSkillInfo(unsigned int id);
+	SkillInfo * getSkillInfoByID(unsigned int id);
+	SkillInfo * getSkillInfoByIndex(unsigned int index);
+	inline unsigned int getSkillInfoTotalNum() {return mSkillInfoList.size();};
+	void removeSkillInfoById(unsigned int id);
+	void clearSkillInfo() { mSkillInfoList.clear();}
+
+	//EquipInfo
+	UserEquipInfo* getAndCreatUserEquipInfo(unsigned int id);
+	UserEquipInfo * getUserEquipInfoByID(unsigned int id);
+	UserEquipInfo * getEquipInfoByIndex(unsigned int index);
+	inline unsigned int getUserEquipInfoTotalNum() {return mUserEquipInfoList.size();};
+	void removeEquipInfoById(unsigned int id);
+
+	//UserBattleInfo
+	UserBattleInfo* getAndCreatUserBattleInfo(unsigned int id);
+	UserBattleInfo* getUserBattleInfo(unsigned int position);
+	UserBattleInfo * getUserBattleInfoByIndex(unsigned int index);
+	UserBattleInfo* getUserBattleInfoByDisciple(unsigned int discipleID);
+	unsigned int getBattleArraySize(){ return mUserBattleArray.size();};
+	unsigned int getUserBattleSize(void);
+	
+	//TitleInfo
+	TitleInfo* getAndCreatTitleInfo(unsigned int id);
+	TitleInfo * getTitleInfoByID(unsigned int id);
+	TitleInfo * getTitleInfoByIndex(unsigned int index);
+	inline unsigned int getTitleInfoTotalNum() {return mTitleInfoList.size();};
+	
+	//ArenaInfo
+	UserArenaInfo& getUserArenaInfo() {return mUserArenaInfo;};
+	UserArenaInfo mUserArenaInfo;
+
+	ArenaOpponentInfo* getAndCreatArenaOpponentInfo(unsigned int id);
+	ArenaOpponentInfo * getArenaOpponentInfoByID(unsigned int id);
+	ArenaOpponentInfo * getArenaOpponentInfoByIndex(unsigned int index);
+	inline unsigned int getArenaOpponentInfoTotalNum() {return mArenaOpponentInfoList.size();};
+	void clearAllArenaOpponentInfoList();
+
+	//UserSysMsgInfo
+	UserSysMsgInfo* getAndCreatSysMsgEntity(unsigned int id);
+	UserSysMsgInfo * getUserSysMsgEntityByID(unsigned int id);
+	UserSysMsgInfo * getUserSysMsgEntityByIndex(unsigned int index);
+	inline unsigned int getUserSysMsgEntityListTotalNum() {return mSysMsgList.size();};
+	static bool cmpSysMsgEntity(const UserSysMsgEntityMap::iterator a,const UserSysMsgEntityMap::iterator b);
+	UserSysMsgEntityList* cloneSysMsgEntityList(const unsigned int tabIndex);
+
+	RewardData* createSysMsgRewardById(unsigned int id,unsigned int rewardId);
+	RewardData * getSysMsgRewardByIndex(unsigned int id,unsigned int rewardIndex);
+	unsigned int getSysMsgRewardTotalNum(unsigned int id);;
+	void clearSysMsgRewardMap(unsigned int msgId);
+	
+	//UserFriendsInfo
+	UserFriendsInfo* getAndCreatFriendInfo(unsigned int id);
+	UserFriendsInfo* getAndCreatInviteFriendInfo(unsigned int id);
+	UserFriendsInfo * getUserFriendsInfoByID(unsigned int id,unsigned int nodeType);
+	UserFriendsInfo * getUserFriendsInfoIndex(unsigned int index,unsigned int nodeType);
+	inline unsigned int getUserFriendsInfoTotalNum(unsigned int nodeType) {if(nodeType==1){return mFriendsEntityList.size();} else if(nodeType==2){return mInviteEntityList.size();} else{ return 0;}};
+
+	static bool cmpUserFriendsInfo(const UserFriendsInfoList::iterator a,const UserFriendsInfoList::iterator b);
+	UserFriendsInfoIterList* cloneUserFriendsInfoByType(const unsigned int nodeType,const unsigned int tabIndex);
+	UserFriendsInfoIterList* cloneUserFriendsInfoByList(UserFriendsInfoList* entityList,const unsigned int tabIndex,const unsigned int nodeType);
+	void delUserFriendsInfoById(unsigned int id,unsigned int nodeType);
+	void clearInviteFriendList(void);
+	
+	//UserChatInfo
+	UserChatInfo* getAndCreatChatInfo(unsigned int id);
+	UserChatInfo * getUserChatInfoByID(unsigned int id);
+	UserChatInfo * getUserChatInfoByIndex(unsigned int index);
+	inline unsigned int getChatInfoTotalNum() {return mUserChatInfoList.size();};
+	
+	//BoardCastInfo
+	BoardCastInfo* getAndCreatBoardCastInfoEntity(unsigned int id);
+	BoardCastInfo * getBoardCastInfoByID(unsigned int id);
+	BoardCastInfo * getBoardCastInfoByIndex(unsigned int index);
+	inline unsigned int getBoardCastInfoListTotalNum() {return mBoardCastInfoList.size();};
+	
+	//ContinueLoginInfo
+	ContinueLoginInfo& getContinueLoginInfo();;
+	ContinueLoginInfo::ContinueReward* getContinueRewardByIndex(unsigned int index);
+	unsigned int getContinueLoginInfoMaxIndex();
+	ContinueLoginInfo::ContinueReward* _getContinueReward(unsigned int index);
+	
+	//AdventureItemInfo
+	AdventureItemInfo* getAndCreatAdventureItemInfo(unsigned int id);
+	AdventureItemInfo * getAdventureItemInfoByID(unsigned int id);
+	AdventureItemInfo * getAdventureItemInfoByIndex(unsigned int index);
+	inline unsigned int getAdventureItemInfoMapTotalNum() {return mAdventureItemInfoList.size();};
+	void removeAdventureItemInfoById(const unsigned int id);
+	inline unsigned int getAdventureMaxIdNext(){return mAdventureMaxId+1;};
+	void resetAdventureMaxId(){mAdventureMaxId=0;};
+	
+	bool minusSkillBookCountById(unsigned int id);
+	unsigned int getAdventureSkillBookPieceCount(unsigned int skillId);
+	unsigned int mAdventureMaxId;
+
+	UserAdventureDataInfo& getUserAdventureDataInfo(){ return mAdventureDataInfo;};
+	
+	//SkillBookInfo
+	SkillBookInfo* getAndCreatSkillBookInfoBySkillId(unsigned int id);
+	SkillBookInfo * getSkillBookInfoByIndex(unsigned int index);
+	inline unsigned int getSkillBookInfoMapTotalNum() {return mSkillBookInfoList.size();};
+	SkillBookInfo::SkillBookItem* getSkillBookItemBySkillIdAndPartId(unsigned int skillId,unsigned int partId);
+	SkillBookInfo::SkillBookItem* getSkillBookItemBySkillIdAndIndex(unsigned int skillId,unsigned int index);
+	inline unsigned int getSkillBookItemMapTotalNum(unsigned int skillId);
+	void pieceSkillBookBySkillId(unsigned int skillId);
+	
+	void addSkillBookPieceChanceBySkillId(unsigned int skillId,unsigned int count);
+	void addSkillBookPartBySkillIdAndPartId(unsigned int skillId,unsigned int partId,unsigned int count);
+
+	//SkillBookLootInfo
+	SkillBookLootInfo* getAndCreatSkillBookLootInfoById(unsigned int id);
+	SkillBookLootInfo* getSkillBookLootItemById(unsigned int id);
+	SkillBookLootInfo* getSkillBookLootItemByIndex(unsigned int index);
+	inline unsigned int getSkillBookLootInfoMapTotalNum() {return mSkillBookLootList.size();};
+	void clearSkillBookLoot(void);
+	
+	//HandbookPersonInfo
+	HandbookPersonInfo* getAndCreatHandbookPersonInfo(unsigned int id);
+	HandbookPersonInfo * getHandbookPersonInfoByID(unsigned int id);
+	HandbookPersonInfo* getHandbookPersonInfoByIndex(unsigned int index);
+	inline unsigned int getHandbookPersonInfoListTotalNum() {return mHandbookPersonInfoList.size();};
+
+	//HandbookSkillInfo
+	HandbookSkillInfo* getAndCreatHandbookSkillInfo(unsigned int id);
+	HandbookSkillInfo * getHandbookSkillInfoByID(unsigned int id);
+	HandbookSkillInfo* getHandbookSkillInfoByIndex(unsigned int index);
+	inline unsigned int getHandbookSkillInfoListTotalNum() {return mHandbookSkillInfoList.size();};
+	
+	//HandbookEquipmentInfo
+	HandbookEquipmentInfo* getAndCreatHandbookEquipmentInfo(unsigned int id);
+	HandbookEquipmentInfo * getHandbookEquipmentInfoByID(unsigned int id);
+	HandbookEquipmentInfo* getHandbookEquipmentInfoByIndex(unsigned int index);
+	inline unsigned int getHandbookEquipmentInfoListTotalNum() {return mHandbookEquipmentInfoList.size();};
+	
+	//AdventureFightEndInfo
+	AdventureFightEndInfo* getAdventureFightEndInfo() { return &mAdventureFightEndInfo;};
+	void clearFightEndAllMap();
+
+	AdventureFightEndInfo::FightTeamItem* addFightEndFightItemById(unsigned int id);
+	AdventureFightEndInfo::FightTeamItem * getFightEndFightItemById(unsigned int id);
+	AdventureFightEndInfo::FightTeamItem * getFightEndFightItemByIndex(unsigned int id);
+	inline unsigned int getFightTeamListTotalNum() {return mAdventureFightEndInfo.mFightTeamList.size();};
+	void removeFightEndAllTeamItem();
+	
+	AdventureFightEndInfo::StepAdditionItem* addFightEndStepAdditionItemById(unsigned int id);
+	AdventureFightEndInfo::StepAdditionItem * getFightEndStepAdditionItemById(unsigned int id);
+	AdventureFightEndInfo::StepAdditionItem * getFightEndStepAdditionItemByIndex(unsigned int id);
+	inline unsigned int getStepAdditionItemListTotalNum() {return mAdventureFightEndInfo.mStepAdditionItemList.size();};
+	void removeFightEndAllStepAdditionItem();
+	
+	AdventureFightEndInfo::RewardItem* addFightEndRewardItemById(unsigned int id);
+	AdventureFightEndInfo::RewardItem * getFightEndRewardItemById(unsigned int id);
+	AdventureFightEndInfo::RewardItem * getFightEndRewardItemByIndex(unsigned int id);
+	inline unsigned int getRewardItemListTotalNum() {return mAdventureFightEndInfo.mRewardItemList.size();};
+	void removeFightEndAllRewardItem();
+	
+	//DiscipleExpAddedInfo
+	DiscipleExpAddedInfo* getAndCreateDiscipleExpAddedInfo(unsigned int id);
+	DiscipleExpAddedInfo* getDiscipleExpAddedInfoByID(unsigned int id);
+	DiscipleExpAddedInfo* getDiscipleExpAddedInfoByIndex(unsigned int id);
+	inline unsigned int getDiscipleExpAddedInfoMapTotalNum() {return mDiscipleExpAddedInfoList.size();};
+	void removeAllDiscipleExpAddedInfo();
+	
+	//FightEndRankInfo
+	FightEndRankInfo::RankItem* getFightEndRankItemByTypeAndIndex(unsigned int type, unsigned int index);
+	inline unsigned int getFightEndRankMapTotalNum(const unsigned int index);
+	FightEndRankInfo::RankItem* getFightEndRankItemByIndexAndId(const unsigned int index,const unsigned int id);
+	FightEndRankInfo::RankItem* addRankItemByIndexAndId(const unsigned int index,const unsigned int id);
+	void clearAllFightEndRankItem();
+	void clearFightEndRankItemByIndex(const unsigned int index);
+	FightEndRankInfo& getFightEndRankInfo(){ return mFightEndRankInfo;};
+
+	//AdventureLevelUpRewardInfo
+	AdventureLevelUpRewardInfo* getAndCreatAdventureLevelUpRewardInfo(unsigned int id);
+	AdventureLevelUpRewardInfo* getAdventureLevelUpRewardInfoByID(unsigned int id);
+	AdventureLevelUpRewardInfo* getAdventureLevelUpRewardInfoByIndex(unsigned int id);
+	inline unsigned int getAdventureLevelUpRewardInfoListTotalNum() {return mAdventureLevelUpRewardInfoList.size();};
+	
+	inline void  setAdventureLevelUpRewardInfoSize(int size){mAdventureLevelUpRewardInfoSize = size;};
+	inline int getAdventureLevelUpRewardInfoSize(){return mAdventureLevelUpRewardInfoSize;};
+
+	//WorldBossInfo
+	WorldBossInfo* getAndCreateWorldBossInfo(unsigned int id);
+	const WorldBossInfo* getWorldBossInfoByID(const unsigned int id);
+
+	//WorldBossRankInfo
+	WorldBossRankInfo* getAndCreateWorldBossRankInfo(unsigned int index);
+	WorldBossRankInfo* getWorldBossRankInfoById(const unsigned int id);
+	WorldBossRankInfo* getWorldBossRankInfoByIndex(unsigned int index);
+	inline unsigned int getWorldBossRankInfoMapTotalNum() {return mWorldBossRankList.size();};
+	
+	//TeamBuffInfo
+	TeamBuffInfo* getAndCreatTeamBuffById(unsigned int id);
+	TeamBuffInfo* getTeamBuffInfoById(const unsigned int id);
+	TeamBuffInfo* getTeamBuffInfoByIndex(unsigned int index);
+	inline unsigned int getTeamBuffInfoTotalSum(){return mTeamBuffInfoList.size();};
+	
+	//ResInfo
+	ResInfo* getAndCreateResInfo(unsigned int id);
+	ResInfo* getResInfoById(unsigned int id);
+	ResInfo* getResInfoByIndex(unsigned int index);
+	inline unsigned int getResInfoMapTotalSum(){return mResInfoList.size();};
+	void clealAllResInfo();
+	
+	//MarketInfo
+	MarketInfo& _getMarketInfo() {return mMarketInfo;};
+
+	//ShopItem
+	ShopItem* getAndCreatShopItem(unsigned int id);
+	ShopItem* getShopItemIndex(unsigned int index);
+	inline unsigned int getShopItemListTotalSum(){return mShopList.size();};
+
+	//AdventureTeacherInfo
+	AdventureTeacherInfo* getAndCreateAdventureTeacherInfo(unsigned int id);
+	AdventureTeacherInfo * getAdventureTeacherInfoByID(unsigned int id);
+	void removeAdventureTeacherInfoById(const unsigned int id);
+	void removeAdventureChildListInfo(const unsigned int id);
+	
+	//RewardData
+	RewardData* getAndCreateRewardData(unsigned int id);
+	void rewardDataToResInfo();
+	
+	//WorldBoss
+	WorldBossItem& getWorldBossItem(){return mWorldBossItem;};
+	
+	void clearWorldBossBattle();
+	WorldBossBattleItem * getAndCreateWorldBossBattleItem(unsigned int id);
+	WorldBossBattleItem * getWorldBossBattleItemByID(unsigned int id);
+	
+	void clearWorldBossDamage();
+	WorldBossDamageItem * getWorldBossDamageItemByID(unsigned int id);
+	WorldBossDamageItem * getNextWorldBossDamageItem();
+
+	WorldBossDamageItem * getAndCreateWorldBossDamageItem(unsigned int id);
+	
+	//ChargeRebate
+	ChargeRebateItem& getChargeRebateItem(){return chargeRebateItem;};
+
+	//FortuneCome
+	FortuneComeItem& getFortuneComeItem(){return fortuneComeItem;};
+
+	//ShowUserBattle
+	ViewTeamBattleInfoItem& getViewTeamBattleInfoItem(){return mTeamBattleInfoItem;};
+};

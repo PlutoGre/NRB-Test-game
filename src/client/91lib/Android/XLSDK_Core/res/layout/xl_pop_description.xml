@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:paddingBottom="12dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="12dp"
+        android:text="手机充值卡支付说明："
+        android:textColor="#278AEA" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#f5f5f5"
+        android:fadingEdge="none"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:lineSpacingExtra="10dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="1. 建议您记录下充值后生成的订单号，一旦发生问题，我们将通过该订单号进行跟踪处理。"
+                android:textColor="#6B808E"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:lineSpacingExtra="10dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="2. 卡内金额将一次全额扣除，请务必使用与您持有面额相同的移动充值卡，否则可能会导致支付不成功或支付金额丢失，我们无法帮您找回。"
+                android:textColor="#6B808E"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:lineSpacingExtra="10dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="3. 请仔细核对您的充值卡序列号和密码，如果因为错误输入而导致您充值卡失效，我们会尽力帮您找回，但仍存在无法找回的可能。"
+                android:textColor="#6B808E"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:lineSpacingExtra="10dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="4. 请您注意，系统目前不支持任何面额的彩铃充值卡和短信充值卡，请您切勿使用相关卡片充值，以免给您带来损失。"
+                android:textColor="#6B808E"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:lineSpacingExtra="10dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="5. 由于网络延迟，您的充值可能有些许延迟，一般将于1-30分钟内兑换成功，如超过30分钟仍未兑换成功，请您联系客服。感谢您对我们的支持和理解！"
+                android:textColor="#6B808E"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

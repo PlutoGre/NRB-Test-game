@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<LeaguaConfig>
+		<Leagua level="1" maxMemberCount="10"></Leagua>
+		<Leagua level="2" maxMemberCount="20"></Leagua>
+		<Leagua level="3" maxMemberCount="30"></Leagua>
+		<Leagua level="4" maxMemberCount="40"></Leagua>
+		<Leagua level="5" maxMemberCount="50"></Leagua>
+		<Leagua level="6" maxMemberCount="60"></Leagua>
+		<Leagua level="7" maxMemberCount="70"></Leagua>
+		<Leagua level="8" maxMemberCount="80"></Leagua>
+		<Leagua level="9" maxMemberCount="90"></Leagua>
+		<Leagua level="10" maxMemberCount="100"></Leagua>
+	</LeaguaConfig>
+</root>

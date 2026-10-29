@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<!--basecoldTime 表示连闯功能的基础冷却时间, basePrice表示连闯功能cd重置的最大消耗钻石数,divisor表示计算消耗钻石的除数 vipLimit表示连闯功能的vip级别限制
+		vipResetLimit表示连闯功能cd重置的vip等级限制-->
+	<QuickCareerConfigs>
+		<QuickCareerConfig	basecoldTime="600"	basePrice="5"  divisor="5"	vipLimit="3"	vipResetLimit="6"/>
+	</QuickCareerConfigs>
+</root>

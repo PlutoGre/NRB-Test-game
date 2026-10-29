@@ -1,0 +1,83 @@
+# Machine-local debugging, emulator images and original duplicate archive.
+/.debug/
+/src.7z
+
+# Portable tools are fetched by the deployment entry point on the target PC.
+/deployment/.bootstrap/
+/deployment/download-cache/
+/deployment/github-upload/
+/OnePieceServer/
+/runtime/
+/outputs/
+
+# Generated clients, native intermediates and IDE caches. Keep library archives
+# and shared libraries outside these build directories: legacy targets need them.
+**/.svn/
+**/.idea/
+**/.metadata/
+**/.settings/
+**/ipch/
+**/obj/
+**/bin/
+**/build/
+**/dist/
+**/generated/
+**/Debug*/
+**/Release*/
+**/DerivedData/
+**/__pycache__/
+*.pyc
+*.pyo
+*.obj
+*.o
+*.pdb
+*.ipch
+*.sdf
+*.opensdf
+*.ilk
+*.idb
+*.tlog
+*.lastbuildstate
+*.ncb
+*.suo
+*.user
+*.log
+*.partial
+*.writing
+*.before-*
+*.DS_Store
+Thumbs.db
+
+# Local SDK paths are recreated by deployment/prepare_android.py.
+**/local.properties
+**/SDK.properties
+
+# Client output and signing material are not source dependencies.
+*.apk
+*.aab
+*.ipa
+*.idsig
+*.xcarchive/
+*.keystore
+*.jks
+*.p12
+*.pfx
+*.mobileprovision
+*.provisionprofile
+*.certSigningRequest
+AuthKey_*.p8
+id_rsa
+id_ed25519
+.env
+.env.*
+
+# This is an old channel APK delivery archive, not a source/build dependency.
+/src/client/Game/proj.android/antbuild/dangle/*.zip
+
+# Runtime data must stay outside the repository (normally LOCALAPPDATA).
+**/.onepiece-server.json
+**/private/gateway.json
+**/private/credentials.json
+
+# Unused legacy recharge sample contains an embedded RSA private key.
+/src/server/Code_Server/recharge/sdk/MyRsa.php

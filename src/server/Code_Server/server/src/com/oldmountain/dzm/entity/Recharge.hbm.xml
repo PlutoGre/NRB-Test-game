@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.oldmountain.dzm.entity">
+	<class name="Recharge" table="pay" dynamic-update="true" dynamic-insert="true">
+		<id name="cooorderserial" column="CooOrderSerial">
+			<generator class="assigned" />
+		</id>
+		<property name="consumestreamid" column="ConsumeStreamId" type="string"></property>
+		<property name="uid" column="uid" type="string"></property>
+		<property name="playerid" column="playerId" type="int"></property>
+		<property name="goodsid" column="goodsId" type="int"></property>
+		<property name="goodscount" column="goodscount" type="int"></property>
+		<property name="goodscost" column="goodsCost" type="int"></property>
+		<property name="amount" column="amount" type="int"></property>
+		<property name="addnum" column="addnum" type="int"></property>
+		<property name="isfirstpay" column="isfirstpay" type="int"></property>
+		<property name="requesttime" column="request_time" type="string"></property>
+		<property name="createtime" column="create_time" type="int"></property>
+	</class>
+</hibernate-mapping>

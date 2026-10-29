@@ -1,0 +1,144 @@
+INFO  2015-08-04 11:10:10,848 [UserEquipInfoHandler.java,48] - user equip info handler received: 1, 1, {}
+INFO  2015-08-04 11:10:10,869 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 1, 14, {}
+INFO  2015-08-04 11:11:19,013 [ChangeEquipHandler.java,51] - change equip handler received: 1, 2, 0
+INFO  2015-08-04 11:11:19,016 [ChangeEquipHandler.java,171] - change equip handler ret send: 1, 2, {}
+INFO  2015-08-04 11:11:22,297 [ChangeEquipHandler.java,51] - change equip handler received: 1, 4, 0
+INFO  2015-08-04 11:11:22,299 [ChangeEquipHandler.java,171] - change equip handler ret send: 1, 1, {}
+INFO  2015-08-04 11:11:33,020 [ChangeEquipHandler.java,51] - change equip handler received: 1, 3, 1
+INFO  2015-08-04 11:11:33,020 [ChangeEquipHandler.java,171] - change equip handler ret send: 1, 0, {}
+INFO  2015-08-04 11:12:29,718 [UserEquipInfoHandler.java,48] - user equip info handler received: 4, 1, {}
+INFO  2015-08-04 11:12:29,719 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 4, 1, {}
+INFO  2015-08-04 11:12:56,726 [ChangeEquipHandler.java,51] - change equip handler received: 4, 12, 0
+INFO  2015-08-04 11:12:56,727 [ChangeEquipHandler.java,171] - change equip handler ret send: 4, 1, {}
+INFO  2015-08-04 11:13:00,968 [ChangeEquipHandler.java,51] - change equip handler received: 4, 14, 0
+INFO  2015-08-04 11:13:00,969 [ChangeEquipHandler.java,171] - change equip handler ret send: 4, 1, {}
+INFO  2015-08-04 11:14:53,351 [UserEquipInfoHandler.java,48] - user equip info handler received: 5, 1, {}
+INFO  2015-08-04 11:14:53,352 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 5, 1, {}
+INFO  2015-08-04 11:17:31,278 [UserEquipInfoHandler.java,48] - user equip info handler received: 6, 1, {}
+INFO  2015-08-04 11:17:31,279 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 6, 1, {}
+INFO  2015-08-04 11:17:41,959 [UserEquipInfoHandler.java,48] - user equip info handler received: 5, 1, {}
+INFO  2015-08-04 11:17:41,960 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 5, 1, {}
+INFO  2015-08-04 11:19:53,617 [UserEquipInfoHandler.java,48] - user equip info handler received: 7, 1, {}
+INFO  2015-08-04 11:19:53,617 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 7, 0, {}
+INFO  2015-08-04 11:20:12,346 [UserEquipInfoHandler.java,48] - user equip info handler received: 8, 1, {}
+INFO  2015-08-04 11:20:12,346 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 8, 0, {}
+INFO  2015-08-04 11:22:13,680 [UserEquipInfoHandler.java,48] - user equip info handler received: 8, 1, {}
+INFO  2015-08-04 11:22:13,681 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 8, 1, {}
+INFO  2015-08-04 11:22:16,583 [UserEquipInfoHandler.java,48] - user equip info handler received: 5, 1, {}
+INFO  2015-08-04 11:22:16,584 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 5, 1, {}
+INFO  2015-08-04 11:22:22,720 [ChangeEquipHandler.java,51] - change equip handler received: 8, 21, 0
+INFO  2015-08-04 11:22:22,722 [ChangeEquipHandler.java,171] - change equip handler ret send: 8, 2, {}
+INFO  2015-08-04 11:28:29,710 [UserEquipInfoHandler.java,48] - user equip info handler received: 5, 1, {}
+INFO  2015-08-04 11:28:29,710 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 5, 0, {}
+INFO  2015-08-04 12:01:36,717 [UpgradeEquipHandler.java,46] - upgrade equip handler received: 5, 15, {}
+INFO  2015-08-04 12:01:36,733 [UpgradeEquipHandler.java,190] - upgrade equip handler ret send: 5, 16, {}
+INFO  2015-08-04 12:01:41,454 [UpgradeEquipHandler.java,46] - upgrade equip handler received: 5, 16, {}
+INFO  2015-08-04 12:01:41,456 [UpgradeEquipHandler.java,190] - upgrade equip handler ret send: 5, 2, {}
+INFO  2015-08-04 12:01:59,458 [ChangeEquipHandler.java,51] - change equip handler received: 5, 15, 0
+INFO  2015-08-04 12:01:59,459 [ChangeEquipHandler.java,171] - change equip handler ret send: 5, 1, {}
+INFO  2015-08-04 12:49:17,364 [UserEquipInfoHandler.java,48] - user equip info handler received: 7, 1, {}
+INFO  2015-08-04 12:49:17,365 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 7, 1, {}
+INFO  2015-08-04 12:51:11,208 [UserEquipInfoHandler.java,48] - user equip info handler received: 7, 1, {}
+INFO  2015-08-04 12:51:11,209 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 7, 1, {}
+INFO  2015-08-04 12:51:18,975 [ChangeEquipHandler.java,51] - change equip handler received: 7, 19, 0
+INFO  2015-08-04 12:51:18,976 [ChangeEquipHandler.java,171] - change equip handler ret send: 7, 1, {}
+INFO  2015-08-04 12:55:18,966 [UpgradeEquipHandler.java,46] - upgrade equip handler received: 7, 19, {}
+INFO  2015-08-04 12:55:18,966 [UpgradeEquipHandler.java,190] - upgrade equip handler ret send: 7, 0, {}
+INFO  2015-08-04 12:55:26,087 [UpgradeEquipHandler.java,46] - upgrade equip handler received: 7, 20, {}
+INFO  2015-08-04 12:55:26,087 [UpgradeEquipHandler.java,190] - upgrade equip handler ret send: 7, 0, {}
+INFO  2015-08-04 12:55:28,167 [UpgradeEquipHandler.java,46] - upgrade equip handler received: 7, 20, {}
+INFO  2015-08-04 12:55:28,167 [UpgradeEquipHandler.java,190] - upgrade equip handler ret send: 7, 0, {}
+INFO  2015-08-04 12:55:37,767 [UpgradeEquipHandler.java,46] - upgrade equip handler received: 7, 25, {}
+INFO  2015-08-04 12:55:37,767 [UpgradeEquipHandler.java,190] - upgrade equip handler ret send: 7, 0, {}
+INFO  2015-08-04 12:55:40,727 [UpgradeEquipHandler.java,46] - upgrade equip handler received: 7, 25, {}
+INFO  2015-08-04 12:55:40,727 [UpgradeEquipHandler.java,190] - upgrade equip handler ret send: 7, 0, {}
+INFO  2015-08-04 12:55:43,208 [UpgradeEquipHandler.java,46] - upgrade equip handler received: 7, 25, {}
+INFO  2015-08-04 12:55:43,208 [UpgradeEquipHandler.java,190] - upgrade equip handler ret send: 7, 0, {}
+INFO  2015-08-04 12:56:06,169 [ChangeEquipHandler.java,51] - change equip handler received: 7, 25, 1
+INFO  2015-08-04 12:56:06,169 [ChangeEquipHandler.java,171] - change equip handler ret send: 7, 0, {}
+INFO  2015-08-04 13:00:11,165 [UpgradeEquipHandler.java,46] - upgrade equip handler received: 7, 19, {}
+INFO  2015-08-04 13:00:11,166 [UpgradeEquipHandler.java,190] - upgrade equip handler ret send: 7, 1, {}
+INFO  2015-08-04 13:00:14,286 [UpgradeEquipHandler.java,46] - upgrade equip handler received: 7, 19, {}
+INFO  2015-08-04 13:00:14,288 [UpgradeEquipHandler.java,190] - upgrade equip handler ret send: 7, 2, {}
+INFO  2015-08-04 13:00:16,849 [UpgradeEquipHandler.java,46] - upgrade equip handler received: 7, 19, {}
+INFO  2015-08-04 13:00:16,853 [UpgradeEquipHandler.java,190] - upgrade equip handler ret send: 7, 3, {}
+INFO  2015-08-04 13:00:23,662 [UpgradeEquipHandler.java,46] - upgrade equip handler received: 7, 20, {}
+INFO  2015-08-04 13:00:23,664 [UpgradeEquipHandler.java,190] - upgrade equip handler ret send: 7, 2, {}
+INFO  2015-08-04 13:00:25,904 [UpgradeEquipHandler.java,46] - upgrade equip handler received: 7, 20, {}
+INFO  2015-08-04 13:00:25,906 [UpgradeEquipHandler.java,190] - upgrade equip handler ret send: 7, 2, {}
+INFO  2015-08-04 13:01:44,774 [ChangeEquipHandler.java,51] - change equip handler received: 7, 26, 2
+INFO  2015-08-04 13:01:44,776 [ChangeEquipHandler.java,171] - change equip handler ret send: 7, 1, {}
+INFO  2015-08-04 13:01:54,751 [UpgradeEquipHandler.java,46] - upgrade equip handler received: 7, 26, {}
+INFO  2015-08-04 13:01:54,752 [UpgradeEquipHandler.java,190] - upgrade equip handler ret send: 7, 1, {}
+INFO  2015-08-04 13:01:56,993 [UpgradeEquipHandler.java,46] - upgrade equip handler received: 7, 26, {}
+INFO  2015-08-04 13:01:56,996 [UpgradeEquipHandler.java,190] - upgrade equip handler ret send: 7, 2, {}
+INFO  2015-08-04 13:01:59,879 [UpgradeEquipHandler.java,46] - upgrade equip handler received: 7, 26, {}
+INFO  2015-08-04 13:01:59,880 [UpgradeEquipHandler.java,190] - upgrade equip handler ret send: 7, 1, {}
+INFO  2015-08-04 13:02:01,894 [UpgradeEquipHandler.java,46] - upgrade equip handler received: 7, 26, {}
+INFO  2015-08-04 13:02:01,896 [UpgradeEquipHandler.java,190] - upgrade equip handler ret send: 7, 2, {}
+INFO  2015-08-04 13:19:24,334 [UserEquipInfoHandler.java,48] - user equip info handler received: 5, 1, {}
+INFO  2015-08-04 13:19:24,354 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 5, 19, {}
+INFO  2015-08-04 13:21:12,443 [ChangeEquipHandler.java,51] - change equip handler received: 5, 24, 0
+INFO  2015-08-04 13:21:12,445 [ChangeEquipHandler.java,171] - change equip handler ret send: 5, 2, {}
+INFO  2015-08-04 13:22:29,446 [UserEquipInfoHandler.java,48] - user equip info handler received: 9, 1, {}
+INFO  2015-08-04 13:22:29,449 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 9, 2, {}
+INFO  2015-08-04 13:23:57,922 [UserEquipInfoHandler.java,48] - user equip info handler received: 9, 1, {}
+INFO  2015-08-04 13:23:57,924 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 9, 2, {}
+INFO  2015-08-04 14:05:35,878 [UserEquipInfoHandler.java,48] - user equip info handler received: 7, 1, {}
+INFO  2015-08-04 14:05:35,898 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 7, 19, {}
+INFO  2015-08-04 14:20:00,126 [UserEquipInfoHandler.java,48] - user equip info handler received: 10, 1, {}
+INFO  2015-08-04 14:20:00,128 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 10, 2, {}
+INFO  2015-08-04 14:21:34,113 [UserEquipInfoHandler.java,48] - user equip info handler received: 5, 1, {}
+INFO  2015-08-04 14:21:34,114 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 5, 1, {}
+INFO  2015-08-04 14:40:04,453 [UserEquipInfoHandler.java,48] - user equip info handler received: 5, 1, {}
+INFO  2015-08-04 14:40:04,472 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 5, 18, {}
+INFO  2015-08-04 14:52:51,957 [UserEquipInfoHandler.java,48] - user equip info handler received: 9, 1, {}
+INFO  2015-08-04 14:52:51,959 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 9, 2, {}
+INFO  2015-08-04 14:56:29,673 [UserEquipInfoHandler.java,48] - user equip info handler received: 5, 1, {}
+INFO  2015-08-04 14:56:29,674 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 5, 1, {}
+INFO  2015-08-04 14:58:34,788 [UserEquipInfoHandler.java,48] - user equip info handler received: 5, 1, {}
+INFO  2015-08-04 14:58:34,801 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 5, 12, {}
+INFO  2015-08-04 15:02:29,397 [UserEquipInfoHandler.java,48] - user equip info handler received: 5, 1, {}
+INFO  2015-08-04 15:02:29,412 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 5, 14, {}
+INFO  2015-08-04 15:02:57,829 [UserEquipInfoHandler.java,48] - user equip info handler received: 9, 1, {}
+INFO  2015-08-04 15:02:57,831 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 9, 2, {}
+INFO  2015-08-04 15:03:50,198 [UserEquipInfoHandler.java,48] - user equip info handler received: 5, 1, {}
+INFO  2015-08-04 15:03:50,208 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 5, 10, {}
+INFO  2015-08-04 15:04:24,552 [UserEquipInfoHandler.java,48] - user equip info handler received: 9, 1, {}
+INFO  2015-08-04 15:04:24,552 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 9, 0, {}
+INFO  2015-08-04 15:05:09,467 [UserEquipInfoHandler.java,48] - user equip info handler received: 5, 1, {}
+INFO  2015-08-04 15:05:09,474 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 5, 7, {}
+INFO  2015-08-04 15:06:07,863 [UserEquipInfoHandler.java,48] - user equip info handler received: 5, 1, {}
+INFO  2015-08-04 15:06:07,873 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 5, 10, {}
+INFO  2015-08-04 15:06:54,546 [UserEquipInfoHandler.java,48] - user equip info handler received: 5, 1, {}
+INFO  2015-08-04 15:06:54,560 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 5, 13, {}
+INFO  2015-08-04 15:10:58,207 [UserEquipInfoHandler.java,48] - user equip info handler received: 9, 1, {}
+INFO  2015-08-04 15:10:58,228 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 9, 21, {}
+INFO  2015-08-04 15:11:34,103 [UserEquipInfoHandler.java,48] - user equip info handler received: 5, 1, {}
+INFO  2015-08-04 15:11:34,115 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 5, 12, {}
+INFO  2015-08-04 15:14:39,047 [UserEquipInfoHandler.java,48] - user equip info handler received: 5, 1, {}
+INFO  2015-08-04 15:14:39,056 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 5, 9, {}
+INFO  2015-08-04 15:16:13,909 [UserEquipInfoHandler.java,48] - user equip info handler received: 5, 1, {}
+INFO  2015-08-04 15:16:13,910 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 5, 0, {}
+INFO  2015-08-04 15:20:17,984 [UserEquipInfoHandler.java,48] - user equip info handler received: 5, 1, {}
+INFO  2015-08-04 15:20:17,996 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 5, 11, {}
+INFO  2015-08-04 15:21:51,185 [ChangeEquipHandler.java,51] - change equip handler received: 5, 29, 0
+INFO  2015-08-04 15:21:51,191 [ChangeEquipHandler.java,171] - change equip handler ret send: 5, 5, {}
+INFO  2015-08-04 15:25:01,301 [UpgradeEquipHandler.java,46] - upgrade equip handler received: 5, 15, {}
+INFO  2015-08-04 15:25:01,307 [UpgradeEquipHandler.java,190] - upgrade equip handler ret send: 5, 6, {}
+INFO  2015-08-04 15:25:04,988 [UpgradeEquipHandler.java,46] - upgrade equip handler received: 5, 24, {}
+INFO  2015-08-04 15:25:04,989 [UpgradeEquipHandler.java,190] - upgrade equip handler ret send: 5, 1, {}
+INFO  2015-08-04 15:25:08,109 [UpgradeEquipHandler.java,46] - upgrade equip handler received: 5, 16, {}
+INFO  2015-08-04 15:25:08,109 [UpgradeEquipHandler.java,190] - upgrade equip handler ret send: 5, 0, {}
+INFO  2015-08-04 15:25:17,151 [UpgradeEquipHandler.java,46] - upgrade equip handler received: 5, 29, {}
+INFO  2015-08-04 15:25:17,151 [UpgradeEquipHandler.java,190] - upgrade equip handler ret send: 5, 0, {}
+INFO  2015-08-05 19:31:15,587 [UserEquipInfoHandler.java,48] - user equip info handler received: 9, 1, {}
+INFO  2015-08-05 19:31:15,605 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 9, 16, {}
+INFO  2015-08-05 19:31:56,246 [UserEquipInfoHandler.java,48] - user equip info handler received: 5, 1, {}
+INFO  2015-08-05 19:31:56,260 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 5, 13, {}
+INFO  2015-08-05 19:37:55,565 [UserEquipInfoHandler.java,48] - user equip info handler received: 9, 1, {}
+INFO  2015-08-05 19:37:55,566 [UserEquipInfoHandler.java,139] - user equip info handler ret send: 9, 1, {}
+INFO  2015-08-05 19:49:59,081 [UpgradeEquipHandler.java,46] - upgrade equip handler received: 5, 15, {}
+INFO  2015-08-05 19:49:59,095 [UpgradeEquipHandler.java,190] - upgrade equip handler ret send: 5, 13, {}
+INFO  2015-08-05 19:50:03,016 [UpgradeEquipHandler.java,46] - upgrade equip handler received: 5, 24, {}
+INFO  2015-08-05 19:50:03,018 [UpgradeEquipHandler.java,190] - upgrade equip handler ret send: 5, 2, {}

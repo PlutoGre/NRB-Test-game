@@ -1,0 +1,20 @@
+#include "TableReader.h"
+
+class TableAutoReader : public TableReader
+{
+	int getLineCount();
+	bool seekLine(int line);
+	bool seekIndex(int index);
+	bool hasRow(int row);
+	const char* getDataInRow(int row);
+	const char* getData(int line,int row);
+	const char* getDataIndex(int index,int row);
+};
+
+
+class TableReaderManager 
+{
+	static TableReaderManager* getInstance();
+	TableAutoReader* getTableReader(const char* filename);
+	void reloadAllReader();
+};

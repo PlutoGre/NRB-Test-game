@@ -1,0 +1,10 @@
+$#include "inifile.h"
+
+class ConfigFile
+{
+	ConfigFile();
+	~ConfigFile();
+    void load(std::stringstream& stream, const std::string& separators = "\t:=", bool trimWhitespace = true);
+	void load(const std::string& filename, const std::string& separators = "\t:=", bool trimWhitespace = true);
+    std::string getSetting(const std::string& key, const std::string& section = "", const std::string& defaultValue = "") const;
+};

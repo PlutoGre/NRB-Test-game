@@ -1,0 +1,52 @@
+$#include "Equip.h"
+
+class Equip
+{
+	Equip(unsigned int id, bool isItemID = false,bool isViewTeam=false);
+	bool mIsViewTeam;
+	unsigned int	id();
+	unsigned int	itemID();
+	const std::string& name();
+	unsigned int	quality();
+	unsigned int	type();
+	std::string describe();
+	unsigned int	initQuantity();
+	float	initGrowthRate();
+	std::string iconPic();
+	std::string bodyPic();
+	std::string namePic();
+
+	unsigned int	level();
+	unsigned int	refinexp();
+	unsigned int	refinelevel();
+	unsigned int	propertyValue(unsigned int type);
+	unsigned int	quantity();
+	unsigned int getTotalProperty();
+
+	ccColor3B getFrameColor();
+	CCSprite* getFrameNormalSpirte(std::string ext="");
+	CCSprite* getFrameSelectedSpirte(std::string ext="");
+	CCSprite* getFrameDisabledSpirte(std::string ext="");
+	std::string getQualityImageFile();
+
+	std::string getEquipAtkTypePic();
+	
+	bool isEquipCarriedBy();
+	std::string getEquipCarriedBy();
+
+	float			getEquipInitValue();//初始身价
+	float			getEquipGrowthValue();//成长身价
+	unsigned int	getEquipValue();//身价
+
+	float getQualityFactor();//品质系数
+
+	bool allowUpgrade();
+	bool allowLevelUpgrade();
+	
+	unsigned int getUpgradeMoneyConsumeFactor();
+
+	unsigned int getUpgradeMoneyConsumeLevelFactor();
+
+	unsigned int getConsumeMoneyNeeded();
+
+};

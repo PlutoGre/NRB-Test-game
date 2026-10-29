@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/linearlayout_normal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/reg_text11"
+                android:layout_width="fill_parent"
+                android:layout_height="58dip"
+                android:layout_marginTop="@dimen/size_10"
+                android:lineSpacingExtra="3dip"
+                android:text="您可以输入字母/数字作为安智帐号，也可以使用系统为您默认分配的帐号。"
+                android:textColor="#757575"
+                android:textSize="@dimen/font_14" />
+
+            <RelativeLayout
+                android:id="@+id/line1"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/size_48"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/anzhi_textview_normal" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_48"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/white" >
+
+                    <TextView
+                        android:id="@+id/account_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/size_10"
+                        android:text="用户名:"
+                        android:textColor="#494949"
+                        android:textSize="@dimen/font_18" />
+
+                    <EditText
+                        android:id="@+id/nameid"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/account_textview"
+                        android:background="@null"
+                        android:digits="abcdefghigklmnopqrstuvwxyzABCDEFGHIGKLMNOPQRSTUVWXYZ1234567890"
+                        android:hint="账号长度为3-15位字母或数字"
+                        android:maxLength="15"
+                        android:paddingRight="5dip"
+                        android:singleLine="true"
+                        android:textColor="#494949"
+                        android:textColorHint="#d0d0d0"
+                        android:textSize="@dimen/font_18" >
+
+                        <requestFocus />
+                    </EditText>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/size_48"
+                android:layout_below="@id/line1"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/size_10"
+                android:background="@drawable/anzhi_textview_normal" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/white" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/size_10"
+                        android:text="密码 :"
+                        android:textColor="#494949"
+                        android:textSize="@dimen/font_18" />
+
+                    <EditText
+                        android:id="@+id/pwdid"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:hint="6~16位字母或数字"
+                        android:digits="abcdefghigklmnopqrstuvwxyzABCDEFGHIGKLMNOPQRSTUVWXYZ1234567890"
+                        android:maxLength="16"
+                        android:paddingRight="5dip"
+                        android:singleLine="true"
+                        android:textColor="#494949"
+                        android:textColorHint="#d0d0d0"
+                        android:textSize="@dimen/font_18" >
+
+                        <requestFocus />
+                    </EditText>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/trade_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayout1"
+                android:layout_marginTop="@dimen/size_20"
+                android:gravity="center_vertical" >
+
+                <CheckBox
+                    android:id="@+id/normal_check_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/anzhi_checkbox_false"
+                    android:button="@drawable/anzhi_checkbox"
+                    android:checked="true"
+                    android:focusable="false" />
+
+                <TextView
+                    android:id="@+id/normal_readper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:textColor="#EB9100"
+                    android:textSize="@dimen/font_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/buton_lay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trade_layout"
+                android:layout_marginTop="@dimen/size_40"
+                android:gravity="center_vertical" >
+
+                <Button
+                    android:id="@+id/normal_button1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_marginLeft="@dimen/size_40"
+                    android:layout_marginRight="@dimen/size_40"
+                    android:background="@drawable/anzhi_button_bg"
+                    android:text="注册"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/font_18" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

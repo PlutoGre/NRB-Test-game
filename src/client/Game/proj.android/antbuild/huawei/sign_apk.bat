@@ -1,0 +1,2 @@
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore .\DreamOnePiece_HuaWei.keystore -storepass youaihzw -keypass youaihzw .\bin\DreamOnePiece-release-unsigned.zip DreamOnePiece_HuaWei.keystore
+jarsigner -verify -verbose -certs .\bin\DreamOnePiece-release-unsigned.zip

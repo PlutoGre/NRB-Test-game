@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<FightEndGenerals>
+		<item barrier="5" battle5Silver="1000" battle6Silver="1500" battle7Silver="2000" battle8Silver="2500" extra5Reward="11001:1002:10000" extra15Reward="61001:3001001:1" extra30Reward="61001:3002001:2" extra45Reward="11001:1001:5"/>
+		<item barrier="10" battle5Silver="2000" battle6Silver="3000" battle7Silver="4000" battle8Silver="5000" extra5Reward="11001:1002:20000" extra15Reward="61001:3001002:1" extra30Reward="61001:3002002:2" extra45Reward="11001:1001:5"/>
+		<item barrier="15" battle5Silver="3000" battle6Silver="4500" battle7Silver="6000" battle8Silver="7500" extra5Reward="11001:1002:30000" extra15Reward="61001:3001003:1" extra30Reward="61001:3002003:2" extra45Reward="11001:1001:5"/>
+		<item barrier="20" battle5Silver="4000" battle6Silver="6000" battle7Silver="8000" battle8Silver="10000" extra5Reward="11001:1002:40000" extra15Reward="61001:3001004:1" extra30Reward="61001:3002004:2" extra45Reward="11001:1001:5"/>
+		<item barrier="25" battle5Silver="5000" battle6Silver="7500" battle7Silver="10000" battle8Silver="12500" extra5Reward="11001:1002:50000" extra15Reward="61001:3001002:2" extra30Reward="61001:3002002:3" extra45Reward="11001:1001:5"/>
+		<item barrier="30" battle5Silver="5500" battle6Silver="8250" battle7Silver="11000" battle8Silver="13750" extra5Reward="11001:1002:60000" extra15Reward="61001:3001003:2" extra30Reward="61001:3002003:3" extra45Reward="11001:1001:5"/>
+		<item barrier="35" battle5Silver="6000" battle6Silver="9000" battle7Silver="12000" battle8Silver="15000" extra5Reward="11001:1002:70000" extra15Reward="61001:3001004:2" extra30Reward="61001:3002004:3" extra45Reward="11001:1001:5"/>
+		<item barrier="40" battle5Silver="6500" battle6Silver="9750" battle7Silver="13000" battle8Silver="16250" extra5Reward="11001:1002:80000" extra15Reward="61001:3001002:3" extra30Reward="61001:3002002:4" extra45Reward="11001:1001:5"/>
+		<item barrier="45" battle5Silver="7000" battle6Silver="10500" battle7Silver="14000" battle8Silver="17500" extra5Reward="11001:1002:90000" extra15Reward="61001:3001003:3" extra30Reward="61001:3002003:4" extra45Reward="11001:1001:5"/>
+		<item barrier="50" battle5Silver="7500" battle6Silver="11250" battle7Silver="15000" battle8Silver="18750" extra5Reward="11001:1002:100000" extra15Reward="61001:3001004:3" extra30Reward="61001:3002004:4" extra45Reward="11001:1001:5"/>
+		<item barrier="55" battle5Silver="8000" battle6Silver="12000" battle7Silver="16000" battle8Silver="20000" extra5Reward="11001:1002:110000" extra15Reward="61001:3001002:4" extra30Reward="61001:3002002:5" extra45Reward="11001:1001:5"/>
+		<item barrier="60" battle5Silver="8500" battle6Silver="12750" battle7Silver="17000" battle8Silver="21250" extra5Reward="11001:1002:120000" extra15Reward="61001:3001003:4" extra30Reward="61001:3002003:5" extra45Reward="11001:1001:5"/>
+		<item barrier="65" battle5Silver="9000" battle6Silver="13500" battle7Silver="18000" battle8Silver="22500" extra5Reward="11001:1002:130000" extra15Reward="61001:3001004:4" extra30Reward="61001:3002004:5" extra45Reward="11001:1001:5"/>
+		<item barrier="70" battle5Silver="9500" battle6Silver="14250" battle7Silver="19000" battle8Silver="23750" extra5Reward="11001:1002:140000" extra15Reward="61001:3001002:5" extra30Reward="61001:3002002:6" extra45Reward="11001:1001:5"/>
+		<item barrier="75" battle5Silver="10000" battle6Silver="15000" battle7Silver="20000" battle8Silver="25000" extra5Reward="11001:1002:150000" extra15Reward="61001:3001003:5" extra30Reward="61001:3002003:6" extra45Reward="11001:1001:5"/>
+		<item barrier="80" battle5Silver="10500" battle6Silver="15750" battle7Silver="21000" battle8Silver="26250" extra5Reward="11001:1002:160000" extra15Reward="61001:3001004:5" extra30Reward="61001:3002004:6" extra45Reward="11001:1001:5"/>
+		<item barrier="85" battle5Silver="11000" battle6Silver="16500" battle7Silver="22000" battle8Silver="27500" extra5Reward="11001:1002:170000" extra15Reward="61001:3001002:6" extra30Reward="61001:3002002:7" extra45Reward="11001:1001:5"/>
+		<item barrier="90" battle5Silver="11500" battle6Silver="17250" battle7Silver="23000" battle8Silver="28750" extra5Reward="11001:1002:180000" extra15Reward="61001:3001003:6" extra30Reward="61001:3002003:7" extra45Reward="11001:1001:5"/>
+		<item barrier="95" battle5Silver="12000" battle6Silver="18000" battle7Silver="24000" battle8Silver="30000" extra5Reward="11001:1002:190000" extra15Reward="61001:3001004:6" extra30Reward="61001:3002004:7" extra45Reward="11001:1001:5"/>
+		<item barrier="100" battle5Silver="12500" battle6Silver="18750" battle7Silver="25000" battle8Silver="31250" extra5Reward="11001:1002:200000" extra15Reward="61001:3001002:7" extra30Reward="61001:3002002:8" extra45Reward="11001:1001:5"/>
+		<item barrier="105" battle5Silver="13000" battle6Silver="19500" battle7Silver="26000" battle8Silver="32500" extra5Reward="11001:1002:210000" extra15Reward="61001:3001003:7" extra30Reward="61001:3002003:8" extra45Reward="11001:1001:5"/>
+		<item barrier="110" battle5Silver="13500" battle6Silver="20250" battle7Silver="27000" battle8Silver="33750" extra5Reward="11001:1002:220000" extra15Reward="61001:3001004:7" extra30Reward="61001:3002004:8" extra45Reward="11001:1001:5"/>
+		<item barrier="115" battle5Silver="14000" battle6Silver="21000" battle7Silver="28000" battle8Silver="35000" extra5Reward="11001:1002:230000" extra15Reward="61001:3001002:8" extra30Reward="61001:3002002:9" extra45Reward="11001:1001:5"/>
+		<item barrier="120" battle5Silver="14500" battle6Silver="21750" battle7Silver="29000" battle8Silver="36250" extra5Reward="11001:1002:240000" extra15Reward="61001:3001003:8" extra30Reward="61001:3002003:9" extra45Reward="11001:1001:5"/>
+		<item barrier="125" battle5Silver="15000" battle6Silver="22500" battle7Silver="30000" battle8Silver="37500" extra5Reward="11001:1002:250000" extra15Reward="61001:3001004:8" extra30Reward="61001:3002004:9" extra45Reward="11001:1001:5"/>
+	</FightEndGenerals>
+</root>

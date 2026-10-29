@@ -1,0 +1,54 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dip"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal|center_vertical"
+    
+    android:background="@color/light_grey"
+    android:fillViewport="true"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dip"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/wdj_icon"
+                android:layout_width="24dip"
+                android:layout_height="24dip"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="left"
+                android:layout_marginLeft="3dip"
+                 android:layout_marginTop="5dip"
+                android:src="@drawable/wdj_icon" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dip"
+                android:layout_toRightOf="@id/wdj_icon"
+                android:background="#DDDDDD"
+                android:text="@string/sso_login_title"
+                android:textColor="#000000"
+                android:textSize="16dip" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/AccountsListView"
+            android:layout_width="fill_parent"
+            android:layout_height="130dp"
+            android:background="#FFFFFF"
+            android:footerDividersEnabled="false" />
+    </LinearLayout>
+
+</ScrollView>

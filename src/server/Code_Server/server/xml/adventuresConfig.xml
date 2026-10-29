@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--id表示adventureId -->
+<!--timeType表示 计算开始结束时间的类型 【1】表示一直都有 【2】表示随玩家自己注册时间向后推移，此时beginTime表示推移时间 【3】表示自定义活动时间段 【4】表示达到条件删除，否则一直都有，例如领取vip活动 【5】关闭 -->
+<!--levelLimit 表示等级开启条件 -->
+<!--lastTime 表示持续时间 -->
+<!--beginTime 表示开始时间，如果timeType是2，则表示玩家注册时间向后推移的时间 -->
+<!--endTime 结束时间 -->
+<!--生效timeType：1、2、1、4、1、1、1、4、4、3-->
+<!--财神到和充值返利在最前位置显示充值返利-->
+<root>
+	<adventures>
+		<adventure id="1" timeType="1" levelLimit="0" lastTime="0" beginTime="0" endTime="0" name="美食" />
+		<adventure id="9" timeType="4" levelLimit="0" lastTime="0" beginTime="0" endTime="0" name="赠vip"/>		
+		<adventure id="7" timeType="1" levelLimit="0" lastTime="0" beginTime="0" endTime="0" name="亲吻女帝" />		
+		<adventure id="12" timeType="4" levelLimit="0" lastTime="0" beginTime="0" endTime="0" name="充值返利"/>			
+		<adventure id="13" timeType="4" levelLimit="0" lastTime="0" beginTime="0" endTime="0" name="财神到"/>
+		<adventure id="5" timeType="1" levelLimit="11" lastTime="0" beginTime="0" endTime="0" name="血战" />
+		<adventure id="10" timeType="1" levelLimit="0" lastTime="0" beginTime="2015-06-10_12:00:00" endTime="2020-07-11_12:00:00" name="连续登陆" version="1"/>		
+		<adventure id="8" timeType="4" levelLimit="0" lastTime="0" beginTime="0" endTime="0" name="残障"/>
+		<adventure id="2" timeType="1" levelLimit="0" lastTime="864000" beginTime="0" endTime="0" name="赠送元宝"/>		
+		<adventure id="3" timeType="5" levelLimit="11" lastTime="0" beginTime="0" endTime="0" name="许愿树" />
+		<adventure id="4" timeType="5" levelLimit="0" lastTime="0" beginTime="0" endTime="0" name="点拨"/>		
+		<adventure id="6" timeType="1" levelLimit="15" lastTime="0" beginTime="0" endTime="0" name="群雄"/>
+		<adventure id="11" timeType="5" levelLimit="0" lastTime="0" beginTime="0" endTime="0" name="邀请奖励"/>
+		<adventure id="14" timeType="4" levelLimit="0" lastTime="0" beginTime="0" endTime="0" name="深海探宝"/>
+		<adventure id="15" timeType="4" levelLimit="0" lastTime="0" beginTime="0" endTime="0" name="女神回馈"/>
+	</adventures>
+	<!-- 角标提示 -->
+	<MarketToolVersion>3</MarketToolVersion>
+	<!--GiveSoulConfigs:送魂魄活动的开启配置 id表示活动开启的id,递增就行 ,时间这个格式就行-->
+	<GiveSoulConfigs>
+		<GiveSoulConfig id="1" beginTime="2015-07-06_14:00:00" endTime="2015-08-10_14:00:00" />
+		<GiveSoulConfig id="2" beginTime="2015-08-16_06:00:00" endTime="2015-08-21_11:00:00" />
+		<GiveSoulConfig id="3" beginTime="2015-08-27_08:00:00" endTime="2015-09-01_11:00:00" />
+	</GiveSoulConfigs>
+	<!--LuckyStarConfigs:幸运星活动的开启配置 id表示活动开启的id-->
+	<LuckyStarConfigs>
+		<LuckyStarConfig id="1" beginTime="2015-07-11_15:00:00" endTime="2015-08-15_16:00:00" />
+		<LuckyStarConfig id="2" beginTime="2015-08-22_06:20:00" endTime="2015-08-26_16:00:00" />
+		<LuckyStarConfig id="3" beginTime="2015-08-29_23:20:00" endTime="2015-09-11_12:00:00" />
+	</LuckyStarConfigs>
+	<!-- 跨服专题活动 -->
+	<tiaozhanConfigs>
+		<tiaozhanConfig  id="1" beginTime="2015-07-27_08:00:00" endTime="2015-08-05_11:00:00" />
+		<tiaozhanConfig  id="2" beginTime="2015-08-11_15:00:00" endTime="2015-08-15_16:00:00" />
+		<tiaozhanConfig  id="3" beginTime="2015-08-11_15:00:00" endTime="2015-08-15_16:00:00" />
+		<tiaozhanPoolConfig Type="2" ArenaRewardIndex="10" ArenaRewardType="61001" ArenaRewardId="3507001" ArenaCost="60000" RankLimit="1" RewardCount="1" />
+	</tiaozhanConfigs>
+	<dropConfigs>
+		<dropConfig  id="1" beginTime="2015-07-27_08:00:00" endTime="2015-08-01_11:00:00" />
+		<dropConfig  id="2" beginTime="2015-08-03_15:00:00" endTime="2015-08-15_16:00:00" />
+		<dropConfig  id="3" beginTime="2015-07-11_15:00:00" endTime="2015-07-15_16:00:00" />		
+		<dropCount PoolId="32001:25" />
+	</dropConfigs>	
+	<!--DeepWaterConfigs:深海探宝活动的开启配置 id表示活动开启的id  有BUG不开了 add by lh-->
+
+	<DeepWaterConfigs>
+		<DeepWaterConfig id="1" beginTime="2013-08-01_23:20:00" endTime="2013-08-18_23:00:00" />
+		<DeepWaterConfig id="2" beginTime="2013-08-20_12:20:00" endTime="2013-09-07_12:40:00" />
+		<DeepWaterConfig id="3" beginTime="2013-09-20_23:20:00" endTime="2013-10-25_12:00:00" />
+	</DeepWaterConfigs>
+	<!--GoddessConfigs:女神回馈活动的开启配置 id表示活动开启的id-->
+	<GoddessConfigs>
+		<GoddessConfig id="1" beginTime="2015-08-01_23:20:00" endTime="2015-08-18_23:00:00" />
+		<GoddessConfig id="2" beginTime="2015-08-20_12:20:00" endTime="2015-08-28_12:40:00" />
+		<GoddessConfig id="3" beginTime="2015-09-20_23:20:00" endTime="2015-09-25_12:00:00" />
+	</GoddessConfigs>
+</root>

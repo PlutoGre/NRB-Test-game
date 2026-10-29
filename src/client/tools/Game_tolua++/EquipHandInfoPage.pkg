@@ -1,0 +1,7 @@
+$#include "EquipHandInfoPage.h"
+
+class EquipHandInfoPage
+{
+	static void showEquipPage(unsigned int id,bool isItem);
+};
+

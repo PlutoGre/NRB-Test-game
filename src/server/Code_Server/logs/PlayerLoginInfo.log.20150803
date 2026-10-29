@@ -1,0 +1,212 @@
+INFO  2015-08-03 10:15:50,024 [ObjectAccessor.java,27] - add online session,playerid:3
+INFO  2015-08-03 10:15:50,025 [ClientSession.java,36] - player login setSession method|#playerId:3#client ip:/192.168.31.183:5039#current online player count:1
+INFO  2015-08-03 10:34:01,937 [SessionHandler.java,73] - player logout sessionClosed method|playerId:3#client ip:/192.168.31.183:5039#Current playerCount:1
+INFO  2015-08-03 10:34:01,938 [ObjectAccessor.java,32] - remove online session,playerid:3
+INFO  2015-08-03 10:34:01,952 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:3
+INFO  2015-08-03 10:35:01,981 [ClientSession.java,25] - player login setSession method|close last session,playerId:3
+INFO  2015-08-03 10:35:01,982 [ObjectAccessor.java,27] - add online session,playerid:3
+INFO  2015-08-03 10:35:01,983 [ClientSession.java,36] - player login setSession method|#playerId:3#client ip:/192.168.31.183:5607#current online player count:2
+INFO  2015-08-03 10:40:53,167 [ObjectAccessor.java,27] - add online session,playerid:3
+INFO  2015-08-03 10:40:53,168 [ClientSession.java,36] - player login setSession method|#playerId:3#client ip:/192.168.31.183:5744#current online player count:1
+INFO  2015-08-03 10:55:06,808 [SessionHandler.java,34] - player logout exceptionCaught method|#playerId:3#client ip:/192.168.31.183:5744#Current playerCount:1
+INFO  2015-08-03 10:55:06,808 [SessionHandler.java,36] - player logout exceptionCaught method|close #playerId:3# session info
+INFO  2015-08-03 10:55:06,810 [ObjectAccessor.java,32] - remove online session,playerid:3
+INFO  2015-08-03 10:55:06,819 [SessionHandler.java,73] - player logout sessionClosed method|playerId:3#client ip:/192.168.31.183:5744#Current playerCount:1
+INFO  2015-08-03 10:55:06,819 [ObjectAccessor.java,32] - remove online session,playerid:3
+INFO  2015-08-03 10:55:06,821 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:3
+INFO  2015-08-03 10:55:26,625 [ObjectAccessor.java,27] - add online session,playerid:3
+INFO  2015-08-03 10:55:26,626 [ClientSession.java,36] - player login setSession method|#playerId:3#client ip:/192.168.31.183:6207#current online player count:1
+INFO  2015-08-03 10:55:58,651 [SessionHandler.java,34] - player logout exceptionCaught method|#playerId:3#client ip:/192.168.31.183:6207#Current playerCount:1
+INFO  2015-08-03 10:55:58,652 [SessionHandler.java,36] - player logout exceptionCaught method|close #playerId:3# session info
+INFO  2015-08-03 10:55:58,653 [ObjectAccessor.java,32] - remove online session,playerid:3
+INFO  2015-08-03 10:55:58,661 [SessionHandler.java,73] - player logout sessionClosed method|playerId:3#client ip:/192.168.31.183:6207#Current playerCount:1
+INFO  2015-08-03 10:55:58,662 [ObjectAccessor.java,32] - remove online session,playerid:3
+INFO  2015-08-03 10:55:58,663 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:3
+INFO  2015-08-03 10:56:20,323 [ObjectAccessor.java,27] - add online session,playerid:2
+INFO  2015-08-03 10:56:20,324 [ClientSession.java,36] - player login setSession method|#playerId:2#client ip:/192.168.31.183:6267#current online player count:1
+INFO  2015-08-03 11:17:50,039 [ObjectAccessor.java,27] - add online session,playerid:3
+INFO  2015-08-03 11:17:50,040 [ClientSession.java,36] - player login setSession method|#playerId:3#client ip:/192.168.31.183:7120#current online player count:1
+INFO  2015-08-03 11:18:18,516 [SessionHandler.java,34] - player logout exceptionCaught method|#playerId:3#client ip:/192.168.31.183:7120#Current playerCount:1
+INFO  2015-08-03 11:18:18,517 [SessionHandler.java,36] - player logout exceptionCaught method|close #playerId:3# session info
+INFO  2015-08-03 11:18:18,519 [ObjectAccessor.java,32] - remove online session,playerid:3
+INFO  2015-08-03 11:18:18,530 [SessionHandler.java,73] - player logout sessionClosed method|playerId:3#client ip:/192.168.31.183:7120#Current playerCount:1
+INFO  2015-08-03 11:18:18,531 [ObjectAccessor.java,32] - remove online session,playerid:3
+INFO  2015-08-03 11:18:18,532 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:3
+INFO  2015-08-03 11:18:33,164 [ObjectAccessor.java,27] - add online session,playerid:2
+INFO  2015-08-03 11:18:33,165 [ClientSession.java,36] - player login setSession method|#playerId:2#client ip:/192.168.31.183:7135#current online player count:2
+INFO  2015-08-03 11:31:59,429 [SessionHandler.java,73] - player logout sessionClosed method|playerId:2#client ip:/192.168.31.183:7135#Current playerCount:2
+INFO  2015-08-03 11:31:59,429 [ObjectAccessor.java,32] - remove online session,playerid:2
+INFO  2015-08-03 11:31:59,430 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:2
+INFO  2015-08-03 11:32:49,509 [ObjectAccessor.java,27] - add online session,playerid:2
+INFO  2015-08-03 11:32:49,509 [ClientSession.java,36] - player login setSession method|#playerId:2#client ip:/192.168.31.183:7547#current online player count:1
+INFO  2015-08-03 11:45:16,284 [SessionHandler.java,73] - player logout sessionClosed method|playerId:2#client ip:/192.168.31.183:7547#Current playerCount:1
+INFO  2015-08-03 11:45:16,284 [ObjectAccessor.java,32] - remove online session,playerid:2
+INFO  2015-08-03 11:45:16,291 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:2
+INFO  2015-08-03 11:45:16,436 [ClientSession.java,25] - player login setSession method|close last session,playerId:2
+INFO  2015-08-03 11:45:16,437 [ObjectAccessor.java,27] - add online session,playerid:2
+INFO  2015-08-03 11:45:16,437 [ClientSession.java,36] - player login setSession method|#playerId:2#client ip:/192.168.31.183:8223#current online player count:2
+INFO  2015-08-03 11:57:31,501 [SessionHandler.java,34] - player logout exceptionCaught method|#playerId:2#client ip:/192.168.31.183:8223#Current playerCount:1
+INFO  2015-08-03 11:57:31,501 [SessionHandler.java,36] - player logout exceptionCaught method|close #playerId:2# session info
+INFO  2015-08-03 11:57:31,501 [ObjectAccessor.java,32] - remove online session,playerid:2
+INFO  2015-08-03 11:57:31,501 [SessionHandler.java,73] - player logout sessionClosed method|playerId:2#client ip:/192.168.31.183:8223#Current playerCount:1
+INFO  2015-08-03 11:57:31,501 [ObjectAccessor.java,32] - remove online session,playerid:2
+INFO  2015-08-03 11:57:31,511 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:2
+INFO  2015-08-03 12:09:06,650 [ClientSession.java,25] - player login setSession method|close last session,playerId:2
+INFO  2015-08-03 12:09:06,652 [ObjectAccessor.java,27] - add online session,playerid:2
+INFO  2015-08-03 12:09:06,652 [ClientSession.java,36] - player login setSession method|#playerId:2#client ip:/192.168.31.183:8794#current online player count:2
+INFO  2015-08-03 12:12:19,418 [SessionHandler.java,73] - player logout sessionClosed method|playerId:2#client ip:/192.168.31.183:8794#Current playerCount:1
+INFO  2015-08-03 12:12:19,418 [ObjectAccessor.java,32] - remove online session,playerid:2
+INFO  2015-08-03 12:12:19,418 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:2
+INFO  2015-08-03 12:12:52,674 [ClientSession.java,25] - player login setSession method|close last session,playerId:2
+INFO  2015-08-03 12:12:52,675 [ObjectAccessor.java,27] - add online session,playerid:2
+INFO  2015-08-03 12:12:52,675 [ClientSession.java,36] - player login setSession method|#playerId:2#client ip:/192.168.31.183:8893#current online player count:2
+INFO  2015-08-03 12:13:37,274 [SessionHandler.java,73] - player logout sessionClosed method|playerId:2#client ip:/192.168.31.183:8893#Current playerCount:1
+INFO  2015-08-03 12:13:37,274 [ObjectAccessor.java,32] - remove online session,playerid:2
+INFO  2015-08-03 12:13:37,274 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:2
+INFO  2015-08-03 12:13:37,418 [ClientSession.java,25] - player login setSession method|close last session,playerId:2
+INFO  2015-08-03 12:13:37,419 [ObjectAccessor.java,27] - add online session,playerid:2
+INFO  2015-08-03 12:13:37,419 [ClientSession.java,36] - player login setSession method|#playerId:2#client ip:/192.168.31.183:8914#current online player count:2
+INFO  2015-08-03 12:15:34,062 [SessionHandler.java,34] - player logout exceptionCaught method|#playerId:2#client ip:/192.168.31.183:8914#Current playerCount:1
+INFO  2015-08-03 12:15:34,062 [SessionHandler.java,36] - player logout exceptionCaught method|close #playerId:2# session info
+INFO  2015-08-03 12:15:34,062 [ObjectAccessor.java,32] - remove online session,playerid:2
+INFO  2015-08-03 12:15:34,062 [SessionHandler.java,73] - player logout sessionClosed method|playerId:2#client ip:/192.168.31.183:8914#Current playerCount:1
+INFO  2015-08-03 12:15:34,062 [ObjectAccessor.java,32] - remove online session,playerid:2
+INFO  2015-08-03 12:15:34,062 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:2
+INFO  2015-08-03 12:15:59,712 [ClientSession.java,25] - player login setSession method|close last session,playerId:2
+INFO  2015-08-03 12:15:59,712 [ObjectAccessor.java,27] - add online session,playerid:2
+INFO  2015-08-03 12:15:59,713 [ClientSession.java,36] - player login setSession method|#playerId:2#client ip:/192.168.31.183:8960#current online player count:2
+INFO  2015-08-03 12:16:31,263 [SessionHandler.java,73] - player logout sessionClosed method|playerId:2#client ip:/192.168.31.183:8960#Current playerCount:1
+INFO  2015-08-03 12:16:31,263 [ObjectAccessor.java,32] - remove online session,playerid:2
+INFO  2015-08-03 12:16:31,263 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:2
+INFO  2015-08-03 12:17:35,401 [ClientSession.java,25] - player login setSession method|close last session,playerId:2
+INFO  2015-08-03 12:17:35,401 [ObjectAccessor.java,27] - add online session,playerid:2
+INFO  2015-08-03 12:17:35,401 [ClientSession.java,36] - player login setSession method|#playerId:2#client ip:/192.168.31.183:9059#current online player count:2
+INFO  2015-08-03 12:17:50,849 [SessionHandler.java,73] - player logout sessionClosed method|playerId:2#client ip:/192.168.31.183:9059#Current playerCount:1
+INFO  2015-08-03 12:17:50,849 [ObjectAccessor.java,32] - remove online session,playerid:2
+INFO  2015-08-03 12:17:50,849 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:2
+INFO  2015-08-03 12:18:25,933 [ClientSession.java,25] - player login setSession method|close last session,playerId:2
+INFO  2015-08-03 12:18:25,933 [ObjectAccessor.java,27] - add online session,playerid:2
+INFO  2015-08-03 12:18:25,934 [ClientSession.java,36] - player login setSession method|#playerId:2#client ip:/192.168.31.183:9072#current online player count:2
+INFO  2015-08-03 12:18:51,803 [SessionHandler.java,73] - player logout sessionClosed method|playerId:2#client ip:/192.168.31.183:9072#Current playerCount:1
+INFO  2015-08-03 12:18:51,804 [ObjectAccessor.java,32] - remove online session,playerid:2
+INFO  2015-08-03 12:18:51,805 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:2
+INFO  2015-08-03 12:19:13,431 [ClientSession.java,25] - player login setSession method|close last session,playerId:2
+INFO  2015-08-03 12:19:13,431 [ObjectAccessor.java,27] - add online session,playerid:2
+INFO  2015-08-03 12:19:13,432 [ClientSession.java,36] - player login setSession method|#playerId:2#client ip:/192.168.31.183:9088#current online player count:2
+INFO  2015-08-03 13:12:51,178 [ObjectAccessor.java,27] - add online session,playerid:2
+INFO  2015-08-03 13:12:51,179 [ClientSession.java,36] - player login setSession method|#playerId:2#client ip:/192.168.31.183:9860#current online player count:1
+INFO  2015-08-03 13:27:56,668 [SessionHandler.java,73] - player logout sessionClosed method|playerId:2#client ip:/192.168.31.183:9860#Current playerCount:1
+INFO  2015-08-03 13:27:56,668 [ObjectAccessor.java,32] - remove online session,playerid:2
+INFO  2015-08-03 13:27:56,678 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:2
+INFO  2015-08-03 13:28:10,026 [ObjectAccessor.java,27] - add online session,playerid:4
+INFO  2015-08-03 13:28:10,027 [ClientSession.java,36] - player login setSession method|#playerId:4#client ip:/192.168.31.183:10043#current online player count:2
+INFO  2015-08-03 13:32:24,050 [SessionHandler.java,73] - player logout sessionClosed method|playerId:4#client ip:/192.168.31.183:10043#Current playerCount:2
+INFO  2015-08-03 13:32:24,050 [ObjectAccessor.java,32] - remove online session,playerid:4
+INFO  2015-08-03 13:32:24,050 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:4
+INFO  2015-08-03 13:32:32,719 [ObjectAccessor.java,27] - add online session,playerid:5
+INFO  2015-08-03 13:32:32,719 [ClientSession.java,36] - player login setSession method|#playerId:5#client ip:/192.168.31.183:10134#current online player count:3
+INFO  2015-08-03 13:42:40,600 [SessionHandler.java,73] - player logout sessionClosed method|playerId:5#client ip:/192.168.31.183:10134#Current playerCount:3
+INFO  2015-08-03 13:42:40,600 [ObjectAccessor.java,32] - remove online session,playerid:5
+INFO  2015-08-03 13:42:40,602 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:5
+INFO  2015-08-03 13:57:30,536 [ClientSession.java,25] - player login setSession method|close last session,playerId:2
+INFO  2015-08-03 13:57:30,536 [ObjectAccessor.java,27] - add online session,playerid:2
+INFO  2015-08-03 13:57:30,537 [ClientSession.java,36] - player login setSession method|#playerId:2#client ip:/192.168.31.183:11284#current online player count:4
+INFO  2015-08-03 13:57:51,167 [SessionHandler.java,73] - player logout sessionClosed method|playerId:2#client ip:/192.168.31.183:11284#Current playerCount:3
+INFO  2015-08-03 13:57:51,168 [ObjectAccessor.java,32] - remove online session,playerid:2
+INFO  2015-08-03 13:57:51,169 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:2
+INFO  2015-08-03 13:57:51,299 [ClientSession.java,25] - player login setSession method|close last session,playerId:2
+INFO  2015-08-03 13:57:51,300 [ObjectAccessor.java,27] - add online session,playerid:2
+INFO  2015-08-03 13:57:51,300 [ClientSession.java,36] - player login setSession method|#playerId:2#client ip:/192.168.31.183:11290#current online player count:4
+INFO  2015-08-03 13:59:41,821 [SessionHandler.java,73] - player logout sessionClosed method|playerId:2#client ip:/192.168.31.183:11290#Current playerCount:3
+INFO  2015-08-03 13:59:41,822 [ObjectAccessor.java,32] - remove online session,playerid:2
+INFO  2015-08-03 13:59:41,823 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:2
+INFO  2015-08-03 14:01:29,213 [ClientSession.java,25] - player login setSession method|close last session,playerId:2
+INFO  2015-08-03 14:01:29,213 [ObjectAccessor.java,27] - add online session,playerid:2
+INFO  2015-08-03 14:01:29,214 [ClientSession.java,36] - player login setSession method|#playerId:2#client ip:/192.168.31.183:11317#current online player count:4
+INFO  2015-08-03 14:02:05,476 [SessionHandler.java,73] - player logout sessionClosed method|playerId:2#client ip:/192.168.31.183:11317#Current playerCount:3
+INFO  2015-08-03 14:02:05,476 [ObjectAccessor.java,32] - remove online session,playerid:2
+INFO  2015-08-03 14:02:05,477 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:2
+INFO  2015-08-03 14:05:25,869 [ObjectAccessor.java,27] - add online session,playerid:1
+INFO  2015-08-03 14:05:25,870 [ClientSession.java,36] - player login setSession method|#playerId:1#client ip:/192.168.31.183:11418#current online player count:1
+INFO  2015-08-03 14:07:04,746 [SessionHandler.java,73] - player logout sessionClosed method|playerId:1#client ip:/192.168.31.183:11418#Current playerCount:1
+INFO  2015-08-03 14:07:04,747 [ObjectAccessor.java,32] - remove online session,playerid:1
+INFO  2015-08-03 14:07:04,766 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:1
+INFO  2015-08-03 14:07:04,901 [ClientSession.java,25] - player login setSession method|close last session,playerId:1
+INFO  2015-08-03 14:07:04,901 [ObjectAccessor.java,27] - add online session,playerid:1
+INFO  2015-08-03 14:07:04,901 [ClientSession.java,36] - player login setSession method|#playerId:1#client ip:/192.168.31.183:11428#current online player count:2
+INFO  2015-08-03 14:07:27,097 [SessionHandler.java,73] - player logout sessionClosed method|playerId:1#client ip:/192.168.31.183:11428#Current playerCount:1
+INFO  2015-08-03 14:07:27,098 [ObjectAccessor.java,32] - remove online session,playerid:1
+INFO  2015-08-03 14:07:27,099 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:1
+INFO  2015-08-03 14:12:24,299 [ObjectAccessor.java,27] - add online session,playerid:2
+INFO  2015-08-03 14:12:24,299 [ClientSession.java,36] - player login setSession method|#playerId:2#client ip:/192.168.31.183:11636#current online player count:2
+INFO  2015-08-03 14:31:25,825 [SessionHandler.java,73] - player logout sessionClosed method|playerId:2#client ip:/192.168.31.183:11636#Current playerCount:2
+INFO  2015-08-03 14:31:25,826 [ObjectAccessor.java,32] - remove online session,playerid:2
+INFO  2015-08-03 14:31:25,826 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:2
+INFO  2015-08-03 14:31:33,057 [ClientSession.java,25] - player login setSession method|close last session,playerId:1
+INFO  2015-08-03 14:31:33,058 [ObjectAccessor.java,27] - add online session,playerid:1
+INFO  2015-08-03 14:31:33,058 [ClientSession.java,36] - player login setSession method|#playerId:1#client ip:/192.168.31.183:12225#current online player count:3
+INFO  2015-08-03 14:33:47,625 [SessionHandler.java,73] - player logout sessionClosed method|playerId:1#client ip:/192.168.31.183:12225#Current playerCount:2
+INFO  2015-08-03 14:33:47,626 [ObjectAccessor.java,32] - remove online session,playerid:1
+INFO  2015-08-03 14:33:47,627 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:1
+INFO  2015-08-03 14:39:28,743 [ObjectAccessor.java,27] - add online session,playerid:2
+INFO  2015-08-03 14:39:28,744 [ClientSession.java,36] - player login setSession method|#playerId:2#client ip:/192.168.31.183:12317#current online player count:1
+INFO  2015-08-03 15:04:14,943 [ObjectAccessor.java,27] - add online session,playerid:2
+INFO  2015-08-03 15:04:14,944 [ClientSession.java,36] - player login setSession method|#playerId:2#client ip:/192.168.31.183:12677#current online player count:1
+INFO  2015-08-03 15:10:27,191 [SessionHandler.java,73] - player logout sessionClosed method|playerId:2#client ip:/192.168.31.183:12677#Current playerCount:1
+INFO  2015-08-03 15:10:27,191 [ObjectAccessor.java,32] - remove online session,playerid:2
+INFO  2015-08-03 15:10:27,203 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:2
+INFO  2015-08-03 15:23:52,061 [ClientSession.java,25] - player login setSession method|close last session,playerId:2
+INFO  2015-08-03 15:23:52,062 [ObjectAccessor.java,27] - add online session,playerid:2
+INFO  2015-08-03 15:23:52,062 [ClientSession.java,36] - player login setSession method|#playerId:2#client ip:/192.168.31.183:13242#current online player count:2
+INFO  2015-08-03 15:44:43,010 [SessionHandler.java,73] - player logout sessionClosed method|playerId:2#client ip:/192.168.31.183:13242#Current playerCount:1
+INFO  2015-08-03 15:44:43,010 [ClientSession.java,25] - player login setSession method|close last session,playerId:2
+INFO  2015-08-03 15:44:43,010 [ObjectAccessor.java,32] - remove online session,playerid:2
+INFO  2015-08-03 15:44:43,010 [ObjectAccessor.java,27] - add online session,playerid:2
+INFO  2015-08-03 15:44:43,011 [ClientSession.java,36] - player login setSession method|#playerId:2#client ip:/192.168.31.183:13514#current online player count:2
+INFO  2015-08-03 15:44:43,011 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:2
+INFO  2015-08-03 15:44:49,306 [SessionHandler.java,73] - player logout sessionClosed method|playerId:2#client ip:/192.168.31.183:13514#Current playerCount:1
+INFO  2015-08-03 15:44:49,306 [ObjectAccessor.java,32] - remove online session,playerid:2
+INFO  2015-08-03 15:44:49,306 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:2
+INFO  2015-08-03 16:52:35,295 [ClientSession.java,25] - player login setSession method|close last session,playerId:2
+INFO  2015-08-03 16:52:35,296 [ObjectAccessor.java,27] - add online session,playerid:2
+INFO  2015-08-03 16:52:35,296 [ClientSession.java,36] - player login setSession method|#playerId:2#client ip:/192.168.31.183:16173#current online player count:2
+INFO  2015-08-03 16:54:13,158 [SessionHandler.java,73] - player logout sessionClosed method|playerId:2#client ip:/192.168.31.183:16173#Current playerCount:1
+INFO  2015-08-03 16:54:13,159 [ObjectAccessor.java,32] - remove online session,playerid:2
+INFO  2015-08-03 16:54:13,160 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:2
+INFO  2015-08-03 16:54:25,673 [ObjectAccessor.java,27] - add online session,playerid:3
+INFO  2015-08-03 16:54:25,674 [ClientSession.java,36] - player login setSession method|#playerId:3#client ip:/192.168.31.183:16196#current online player count:2
+INFO  2015-08-03 16:57:25,452 [SessionHandler.java,73] - player logout sessionClosed method|playerId:3#client ip:/192.168.31.183:16196#Current playerCount:2
+INFO  2015-08-03 16:57:25,453 [ObjectAccessor.java,32] - remove online session,playerid:3
+INFO  2015-08-03 16:57:25,455 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:3
+INFO  2015-08-03 16:58:11,738 [ObjectAccessor.java,27] - add online session,playerid:3
+INFO  2015-08-03 16:58:11,739 [ClientSession.java,36] - player login setSession method|#playerId:3#client ip:/192.168.31.183:16271#current online player count:1
+INFO  2015-08-03 16:58:21,786 [SessionHandler.java,73] - player logout sessionClosed method|playerId:3#client ip:/192.168.31.183:16271#Current playerCount:1
+INFO  2015-08-03 16:58:21,787 [ObjectAccessor.java,32] - remove online session,playerid:3
+INFO  2015-08-03 16:58:21,796 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:3
+INFO  2015-08-03 16:58:38,129 [ObjectAccessor.java,27] - add online session,playerid:4
+INFO  2015-08-03 16:58:38,129 [ClientSession.java,36] - player login setSession method|#playerId:4#client ip:/192.168.31.183:16289#current online player count:2
+INFO  2015-08-03 17:11:48,307 [SessionHandler.java,73] - player logout sessionClosed method|playerId:4#client ip:/192.168.31.183:16289#Current playerCount:2
+INFO  2015-08-03 17:11:48,308 [ObjectAccessor.java,32] - remove online session,playerid:4
+INFO  2015-08-03 17:11:48,308 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:4
+INFO  2015-08-03 17:11:54,882 [ClientSession.java,25] - player login setSession method|close last session,playerId:3
+INFO  2015-08-03 17:11:54,883 [ObjectAccessor.java,27] - add online session,playerid:3
+INFO  2015-08-03 17:11:54,883 [ClientSession.java,36] - player login setSession method|#playerId:3#client ip:/192.168.31.183:16503#current online player count:3
+INFO  2015-08-03 17:12:04,652 [SessionHandler.java,73] - player logout sessionClosed method|playerId:3#client ip:/192.168.31.183:16503#Current playerCount:2
+INFO  2015-08-03 17:12:04,652 [ObjectAccessor.java,32] - remove online session,playerid:3
+INFO  2015-08-03 17:12:04,653 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:3
+INFO  2015-08-03 17:36:28,481 [ObjectAccessor.java,27] - add online session,playerid:1
+INFO  2015-08-03 17:36:28,481 [ClientSession.java,36] - player login setSession method|#playerId:1#client ip:/192.168.31.183:17140#current online player count:3
+INFO  2015-08-03 17:36:53,449 [SessionHandler.java,73] - player logout sessionClosed method|playerId:1#client ip:/192.168.31.183:17140#Current playerCount:3
+INFO  2015-08-03 17:36:53,450 [ObjectAccessor.java,32] - remove online session,playerid:1
+INFO  2015-08-03 17:36:53,451 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:1
+INFO  2015-08-03 19:48:25,195 [ObjectAccessor.java,27] - add online session,playerid:2
+INFO  2015-08-03 19:48:25,196 [ClientSession.java,36] - player login setSession method|#playerId:2#client ip:/192.168.31.183:3867#current online player count:1
+INFO  2015-08-03 19:51:46,867 [SessionHandler.java,73] - player logout sessionClosed method|playerId:2#client ip:/192.168.31.183:3867#Current playerCount:1
+INFO  2015-08-03 19:51:46,868 [ObjectAccessor.java,32] - remove online session,playerid:2
+INFO  2015-08-03 19:51:46,882 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:2
+INFO  2015-08-03 19:51:49,623 [ClientSession.java,25] - player login setSession method|close last session,playerId:2
+INFO  2015-08-03 19:51:49,624 [ObjectAccessor.java,27] - add online session,playerid:2
+INFO  2015-08-03 19:51:49,624 [ClientSession.java,36] - player login setSession method|#playerId:2#client ip:/192.168.31.183:3928#current online player count:2
+INFO  2015-08-03 19:51:51,396 [SessionHandler.java,73] - player logout sessionClosed method|playerId:2#client ip:/192.168.31.183:3928#Current playerCount:1
+INFO  2015-08-03 19:51:51,397 [ObjectAccessor.java,32] - remove online session,playerid:2
+INFO  2015-08-03 19:51:51,398 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:2

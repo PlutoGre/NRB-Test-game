@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dip"
+    android:background="@drawable/wdj_payment_list_item_background" >
+    
+	<ImageView
+	    android:id="@+id/payment_icon"
+	    android:layout_width="@dimen/payment_icon_width"
+	    android:layout_height="@dimen/payment_icon_height"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentTop="true"
+	    android:layout_marginTop="5dip"
+	    android:scaleType="center" />
+	
+	<TextView
+	    android:id="@+id/payment_title"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_toRightOf="@id/payment_icon"
+	    android:layout_alignTop="@id/payment_icon"
+	    android:layout_marginLeft="@dimen/payment_title_margin_left"
+	    android:layout_marginTop="@dimen/payment_title_margin_top"
+	    android:textSize="18sp"
+	    android:textColor="#222222" />
+	
+	<TextView
+	    android:id="@+id/payment_description"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@id/payment_title"
+	    android:layout_alignBottom="@id/payment_icon"
+	    android:layout_marginBottom="@dimen/payment_description_margin_bottom"
+	    android:textSize="14sp"
+	    android:textColor="#777777"
+	    android:singleLine="true"
+        android:ellipsize="marquee" />
+	
+	<!-- <TextView
+	    android:id="@+id/payment_button"
+	    android:layout_width="@dimen/payment_button_width"
+	    android:layout_height="@dimen/payment_button_height"
+	    android:layout_alignParentRight="true"
+	    android:layout_centerVertical="true"
+	    android:layout_marginRight="@dimen/payment_button_margin_right"
+	    android:textSize="14sp"
+	    android:textColor="#FFFFFF"
+	    android:gravity="center"
+	    android:text="@string/payment_button_text"
+	    android:background="@color/wandou_green" /> -->
+	
+	<!-- Payment list item divider. -->
+	<View 
+	    android:layout_width="match_parent"
+	    android:layout_height="1dip"
+	    android:layout_alignParentBottom="true"
+	    android:background="@android:color/darker_gray" />
+</RelativeLayout>

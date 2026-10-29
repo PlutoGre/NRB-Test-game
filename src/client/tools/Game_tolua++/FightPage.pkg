@@ -1,0 +1,44 @@
+$#include "FightPage.h"
+
+enum FightType
+{
+	CareerBattle=0,
+	ArenaBattle=1,
+	FightEndBattle=2,
+	SkillBook=4,
+};
+struct ViewTeamStats
+{
+	unsigned int id;
+	unsigned int viewType;
+	unsigned int npcStatus;
+};
+
+class FightPage
+{
+	static FightPage* getInstance();
+	void fight();
+	//message must be OPCODE_USER_BATTLERET_S
+	void setMessage(char* msg, int length ,bool isShowThreeEvaluation=false,bool isHideSkip = false);
+	void setFightType(FightType fightType);
+	void setViewTeamStatus(unsigned int id,unsigned int viewType,unsigned int npcStatus);
+	void nextRound();
+	bool showViewTeam();
+	bool IsWorldBoss();
+	ViewTeamStats getViewTeamStats();
+
+	enum TEAM_ROTATION
+	{
+		TEAM_SELF = 0,
+		TEAM_ENEMY = 1,
+		TEAM_COUNT = 2,
+	};
+
+	int setLifeMax(int pos,int life);
+	int setLiftMaxByPos(int pos,int life,bool isSelf);
+	int getLifeMax(int pos);
+	int getLifeMaxByPos(int pos,bool isSelf);
+	bool getHideSkip();
+	
+};
+

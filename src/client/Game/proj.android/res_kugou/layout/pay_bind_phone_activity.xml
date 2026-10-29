@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_weight="1"
+        layout="@layout/pay_common_title_bar" />
+
+    <include
+        android:layout_weight="1"
+        layout="@layout/pay_common_tips_bar" />
+
+    <LinearLayout
+        android:id="@+id/pay_layout_bind_phone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="@drawable/pay_common_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="帐号："
+                android:textColor="#ff666666"
+                android:textSize="16dip" />
+
+            <TextView
+                android:id="@+id/pay_current_username_text"
+                android:layout_width="215dip"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="16dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="手机号："
+                android:textColor="#ff666666"
+                android:textSize="16dip" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <EditText
+                    android:id="@+id/pay_sms_phone_number_edittext"
+                    android:layout_width="200dip"
+                    android:layout_height="35dip"
+                    android:background="@drawable/pay_sp_bg"
+                    android:hint="请输入你的手机号码"
+                    android:maxLength="11"
+                    android:numeric="integer"
+                    android:paddingRight="30dip"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="16dip" />
+
+                <TextView
+                    android:id="@+id/pay_sms_phone_number_text"
+                    android:layout_width="200dip"
+                    android:layout_height="35dip"
+                    android:gravity="center_vertical"
+                    android:paddingRight="30dip"
+                    android:singleLine="true"
+                    android:text="23323"
+                    android:textColor="@android:color/black"
+                    android:textSize="16dip"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/pay_sms_phone_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|right"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:src="@drawable/pay_text_clear"
+                    android:visibility="invisible" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/pay_sms_phone_check"
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_marginLeft="5dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dip"
+            android:layout_marginTop="10dip"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/pay_summit_get_sms_code"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/kgpaysdk_mobile_card_seletor"
+                android:text="点击获取验证码"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/pay_summit_get_sms_code_text"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:text="短信验证码已发送（今天剩余x次）"
+                android:textSize="11dip"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="验证码："
+                android:textColor="#ff666666"
+                android:textSize="16dip" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <EditText
+                    android:id="@+id/pay_sms_phone_edittext"
+                    android:layout_width="200dip"
+                    android:layout_height="35dip"
+                    android:background="@drawable/pay_sp_bg"
+                    android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:hint="填写短信中的验证码"
+                    android:maxLength="16"
+                    android:paddingRight="30dip"
+                    android:textColor="@android:color/black"
+                    android:singleLine="true"
+                    android:textSize="16dip" />
+
+                <ImageView
+                    android:id="@+id/pay_sms_code_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|right"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:src="@drawable/pay_text_clear"
+                    android:visibility="invisible" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/pay_sms_code_check"
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_marginLeft="5dip" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/pay_summit_bind_phone"
+            android:layout_width="250dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/kgpaysdk_green_button_bg_selector"
+            android:shadowColor="#ff000fff"
+            android:text="立即绑定手机"
+            android:textColor="#ffffffff" />
+
+        <Button
+            android:id="@+id/pay_bind_phone_cancel"
+            android:layout_width="250dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/kgpaysdk_white_button_bg_selector"
+            android:text="稍后再说"
+            android:textColor="#ff000000" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="left|bottom"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.手机号码仅作为身份验证,不会收取任何费用,请放心使用。"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14dip" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2.酷狗公司承诺保障您的隐私权益,不会泄露您的手机号码。"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.kugou.pay.android.widget.LoadingView
+        android:id="@+id/pay_loading"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="@drawable/pay_common_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/pay_summit_successed_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="@drawable/pay_common_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/pay_summit_imgae_flag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pay_edittext_success_flag" />
+
+            <TextView
+                android:id="@+id/pay_summit_text_flag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:text="恭喜你成功绑定手机号码"
+                android:textColor="#ff000022"
+                android:textSize="20dip" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/pay_back_to_bind_again"
+            android:layout_width="250dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dip"
+            android:background="@drawable/kgpaysdk_green_button_bg_selector"
+            android:shadowColor="#ff000fff"
+            android:text="取消绑定"
+            android:textColor="#ffffffff" />
+
+        <Button
+            android:id="@+id/pay_back_to_the_game_button"
+            android:layout_width="250dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip"
+            android:background="@drawable/kgpaysdk_green_button_bg_selector"
+            android:shadowColor="#ff000fff"
+            android:text="进入游戏"
+            android:textColor="#ffffffff" />
+    </LinearLayout>
+
+    <include
+        android:layout_weight="1"
+        layout="@layout/pay_bottom_bar" />
+
+</LinearLayout>

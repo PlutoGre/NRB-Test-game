@@ -1,0 +1,836 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="protobuf">
+      <UniqueIdentifier>{0af83406-d966-442a-a9dd-28bb3d9cbd25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="general">
+      <UniqueIdentifier>{55510b9f-f7a3-434c-b88f-8a9753eec5e5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="..\Game\Protobuf\playerInfo.proto" />
+    <None Include="..\Game\Protobuf\protobufTest.proto" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\Login.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\OP.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Classes\AES.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Classes\AsyncSocket.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Classes\GameMaths.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Classes\IoSocket.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Classes\SocketBase.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Classes\PacketBase.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Classes\PacketManager.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Classes\ThreadSocket.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Classes\Concurrency.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Classes\GamePackets.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\AddFriend.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\AddPower.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\AddVitality.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\BuyPackage.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\BuyTools.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\ChallengePlayer.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\ChangeBattlePosition.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\ChangeDisciple.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\ChangeEquip.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\ChangeSetting.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\ChangeSkill.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\DailyLogin.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\ExchangeGift.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\ExchangeIntegral.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\MarketRecruitDisciple.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\playerInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\PlayerLogout.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\protobufTest.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\RecruitDisciple.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\RefineEquip.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\SellEquip.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\SendFriendMessage.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\ShakeLantern.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\SnatchFragment.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\SwallowDisciple.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\TrainDisciple.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UpdateCareer.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UpgradeDisciple.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UpgradeEquip.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UpgradeSkill.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UpgradeZhangMenJue.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UserBasicInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UserBattle.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UserBattleArray.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UserDiscipleInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UserEquipInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UserMainInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UserSkillInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UseTool.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\ShopList.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\ShopPurchase.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\ChatSendMsgInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\DealTrainStatus.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\DisposeFriendsInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\DisposeSysMsgInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\ErrorReporter.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UserCareerInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UserChatInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UserFriendsInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UserSoulInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UserSysMsgInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UserToolInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\BoardCastInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\ContinueLogin.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\RewardContinueLogin.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\AdventureInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\GetAdventurePowerInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\AddBoundlessHole.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UpgradeRole.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\GetAdventureBoundlessHole.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\FightEndBattle.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\FightEndInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\FightEndAddYestAttr.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\FightEndGetReward.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\FightEndTempAddStepAttr.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\FightEndRankInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\AddTeachExp.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\AdventureTeacherInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\HandbookInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UserMarketInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\SkillBookInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\PieceSkillBook.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\GetSkillBookLoot.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\SnatchSkillBook.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\Instruction.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\TeamBuffInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UpgradeTeamBuffInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\AdventureLevelUpGetReward.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\AdventureLevelUpReward.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\ResetCareerCount.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\TitleInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UserRewardInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UserUpgrade.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UpdateUserInfoByGM.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\ChallengeOpponent.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\GetArenaOpponentList.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\GetArenaReward.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\RefreshArenaScore.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UserArenaInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="pressureTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Classes\StringConverter.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\AddPowerForCareer.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\AddArenaNum.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\ChangeName.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\Heartbeat.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\ServerDisconnect.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UpdateTitle.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\RewardAdventureContinueLogin.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\GetAdventureContinueLogin.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\RecordReadMsgTime.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\CdkeyReward.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\GuideRecord.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\GuideBuyTool.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UserInviteStatus.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\GetInviteReward.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\AddInviteKey.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\ChargeRebate.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\FortuneCome.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\WorldBossFight.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\WorldBossInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\WorldBossRefresh.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\ShowUserBattle.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\ActiveCode.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\ChatPush.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\Chat.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\QuickCareerBattle.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\UpgradeStoneInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\RemoveStoneInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\PunchStoneInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Protobuf\InlaidStoneInfo.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\Login.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\OP.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Classes\AES.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Classes\SocketBase.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Classes\AsyncSocket.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Classes\GameMaths.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Classes\IoSocket.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Classes\PacketBase.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Classes\PacketManager.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Classes\ThreadSocket.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Classes\Concurrency.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Classes\GamePackets.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\AddFriend.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\AddPower.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\AddVitality.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\BuyPackage.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\BuyTools.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\ChallengePlayer.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\ChangeBattlePosition.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\ChangeDisciple.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\ChangeEquip.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\ChangeSetting.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\ChangeSkill.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\DailyLogin.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\ExchangeGift.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\ExchangeIntegral.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\MarketRecruitDisciple.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\playerInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\PlayerLogout.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\protobufTest.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\RecruitDisciple.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\RefineEquip.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\SellEquip.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\SendFriendMessage.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\ShakeLantern.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\SnatchFragment.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\SwallowDisciple.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\TrainDisciple.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UpdateCareer.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UpgradeDisciple.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UpgradeEquip.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UpgradeSkill.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UpgradeZhangMenJue.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UserBasicInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UserBattle.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UserBattleArray.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UserDiscipleInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UserEquipInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UserMainInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UserSkillInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UseTool.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\ShopList.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\ShopPurchase.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\ChatSendMsgInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\DealTrainStatus.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\DisposeFriendsInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\DisposeSysMsgInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\ErrorReporter.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UserCareerInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UserChatInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UserFriendsInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UserSoulInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UserSysMsgInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UserToolInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\BoardCastInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\ContinueLogin.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\RewardContinueLogin.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\AdventureInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\GetAdventurePowerInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\AddBoundlessHole.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UpgradeRole.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\GetAdventureBoundlessHole.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\FightEndBattle.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\FightEndInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\FightEndAddYestAttr.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\FightEndGetReward.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\FightEndTempAddStepAttr.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\FightEndRankInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\AddTeachExp.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\AdventureTeacherInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\HandbookInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UserMarketInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\SkillBookInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\PieceSkillBook.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\GetSkillBookLoot.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\SnatchSkillBook.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\Instruction.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\TeamBuffInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UpgradeTeamBuffInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\AdventureLevelUpGetReward.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\AdventureLevelUpReward.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\ResetCareerCount.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\TitleInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UserRewardInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UpdateUserInfoByGM.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\ChallengeOpponent.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\GetArenaOpponentList.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\GetArenaReward.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\RefreshArenaScore.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UserArenaInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="pressureTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Classes\StringConverter.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\AddPowerForCareer.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\AddArenaNum.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\ChangeName.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\Heartbeat.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\ServerDisconnect.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UpdateTitle.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\RewardAdventureContinueLogin.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\GetAdventureContinueLogin.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\RecordReadMsgTime.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\CdkeyReward.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\GuideRecord.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\GuideBuyTool.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UserInviteStatus.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\GetInviteReward.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\AddInviteKey.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\ChargeRebate.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\FortuneCome.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\WorldBossFight.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\WorldBossInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\WorldBossRefresh.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\ShowUserBattle.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\ActiveCode.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\ChatPush.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UserUpgrade.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\QuickCareerBattle.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\Chat.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\UpgradeStoneInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\RemoveStoneInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\PunchStoneInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Protobuf\InlaidStoneInfo.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

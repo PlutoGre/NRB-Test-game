@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.youai.dreamonepiece.platform.feiliu"
+    android:versionCode="3"
+    android:versionName="1.3" 
+    android:installLocation="preferExternal">
+
+    <!-- 发布通过Android Tools修改package name -->
+    
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="16" />
+    
+    <uses-feature android:glEsVersion="0x00020000" />
+    
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+	
+     
+    <!--  下载  --> 
+	<uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" /> 
+ 	<!-- end yingyonghui -->
+	
+	<!--  -->
+	<!-- 飞流必须权限 -->
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+	<!--  -->
+    
+    <supports-screens android:largeScreens="true"
+                      android:smallScreens="true"
+                      android:anyDensity="true"
+                      android:normalScreens="true"
+                      android:xlargeScreens="true"/>
+
+    <!-- android:debuggable="true" ADT&NDK自动处理了 -->
+    
+    <!-- 发布修改icon -->
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" 
+        android:largeHeap="true" 
+        android:vmSafeMode="false" 
+        android:allowClearUserData="true"
+        android:debuggable="false">
+        
+        <!-- 发布指定平台：
+        0   defaultplatform.DefaultActivity
+        1	nd91.Nd91Activity
+        2	uc.UcActivity
+        3	qihoo360.Qihoo360Activity
+        4	dangle.DangLeActivity
+        5	mi.XiaoMiActivity
+        6	wandoujia.WanDouJiaActivity
+        7   DK.DuokuActivity
+        11  feiliu.FeiLiuActivity
+        12  jifeng.JiFengActivity
+        13  anzhi.AnZhiActivity
+        14  renren.RenRenActivity
+        17  yingyonghui.YingYongHuiActivity
+        22 	thirdlogin.ThirdLoginActivity
+        23  jinshan.JinShanActivity
+        -->
+       <activity
+            android:name="com.youai.dreamonepiece.platform.feiliu.FeiLiuActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" 
+            android:launchMode="singleTask"  
+            android:screenOrientation="portrait">
+                
+             <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+        </activity>
+        
+			<!-- 发送notification消息 -->
+		<service android:name="com.youai.dreamonepiece.NotificationService"></service> 
+		
+		<!-- begin feiliu -->		
+		
+		<!-- 这部分由飞流分配给用户 -->
+		<!-- 您的游戏key -->
+        <meta-data
+            android:name="FL_PARTNER_KEY"
+            android:value="F8CAF4AB-A511-3A1D-AE8E-4C75F4180660" />
+        <!-- 您的游戏id -->
+        <meta-data
+            android:name="FLGAMESDK_APP_ID"
+            android:value="100104" />
+        <!-- 您的公司id -->
+        <meta-data
+            android:name="FLGAMESDK_COMPANY_ID"
+            android:value="100077" />
+		<!-- 第三方账号接入配置-->
+        <meta-data
+            android:name="IS_OPEN_ACCOUNT"
+            android:value="1" />
+      	<!-- QQ登录 -->
+        <activity
+            android:name="com.tencent.tauth.TAuthView"
+            android:configChanges="keyboardHidden|navigation|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="auth" />
+            </intent-filter>
+        </activity>
+
+        <!-- 登录 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.account.LoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+        </activity>
+
+        <!-- 注册 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.account.RegisterActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 找回密码 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.account.FindPwdActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 重置密码 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.account.ResetPwdActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 修改密码 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.account.EditPwdActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 帐号管理 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.account.ManagerAccountActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 绑定帐号 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.account.BindAccountActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 网页 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.webview.WebViewActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 公告 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.announcement.AnnouncementActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 客服 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.client.ClientActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustPan" />
+
+
+
+        <!-- 服务条款 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.account.ProtocalActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 隐形登录 -->
+        <activity
+            android:name="com.example.gamehelpeexample.HideLoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 快速登录注册 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.account.SetAccountActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 新浪切换 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.account.SinaSwitchActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 消息轮询 -->
+        <service android:name="com.fl.gamehelper.ui.activity.msgservice.MsgService" />
+        
+        <!-- 3.2 增加部分 ↓ -->
+        <!-- 支付中心 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.charge.ChargeCenterActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 支付宝充值 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.charge.ChargeAlipayActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 手机卡充值 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.charge.ChargePhoneCardActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 游戏卡充值 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.charge.ChargeGameCardActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+        <!-- 3.2 增加部分 ↑ -->
+        
+         <!-- 银联充值-->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.charge.ChargeUnionPayActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+        
+        <!-- mo9 added by hanqingnan 20130830 -->
+        <activity android:name="com.mokredit.payment.MktPayment"
+			android:configChanges="keyboardHidden|orientation" 
+			android:screenOrientation="user" 
+			android:windowSoftInputMode="adjustResize" />
+
+        <!-- 3.6 增加部分 ↓ -->
+        <!-- 发帖-回复 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.community.SubmitPostActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- 编辑资料 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.community.EditInfoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- 帖子列表 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.community.PostListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 帖子详情 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.community.PostDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 我的主页 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.community.MyHomeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 3.6 增加部分 ↑ -->
+        
+		<!-- end feiliu -->
+    </application>
+
+</manifest>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/baiduduoku"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/dangle"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jifeng"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/nd91"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/qihoo360"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/rneren"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/thirdlogin"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/uc"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/wandoujia"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/xiaomi"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/yingyonghui"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/anzhi"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/feiliu"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/kingsoft"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

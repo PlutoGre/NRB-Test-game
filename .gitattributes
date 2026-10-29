@@ -1,0 +1,28 @@
+# Preserve legacy GBK C/C++ files and binary resources byte-for-byte by default.
+* -text
+*.py text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.ps1 text eol=crlf
+*.cmd text eol=crlf
+*.sh text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+*.a binary
+*.lib binary
+*.so binary
+*.dll binary
+*.jar binary
+*.zip binary
+*.gz binary
+*.xz binary
+*.7z binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.mp3 binary
+*.ogg binary
+*.ccbi binary
+*.el binary

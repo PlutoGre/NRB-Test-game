@@ -1,0 +1,16 @@
+$#include "MainFrame.h"
+
+class MainFrame
+{
+	static MainFrame* getInstance();
+	void showPage(const std::string& name);
+	void pushPage(const std::string& name);
+	void popPage(const std::string& name);
+	void popAllPage();
+	bool isPageInList(const std::string& name);
+	void initLoadBoardCast();
+	void loadBoardCast();
+	void showNoTouch();
+	void hideNoTouch();
+};
+

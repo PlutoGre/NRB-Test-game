@@ -1,0 +1,14 @@
+message OPRecharge
+{
+	required string ConsumeStreamId = 1;
+	required string CooOrderSerial = 2;
+	required string Uin = 3;
+	required string GoodsId = 4;
+	required int32 GoodsCount = 5;
+	required string CreateTime = 6;
+}
+ 
+message OPRechargeRet
+{
+	required int32 status = 1;
+}

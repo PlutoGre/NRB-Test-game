@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.oldmountain.dzm.entity">
+	<class name="InviteStatus" table="invitestatus" dynamic-update="true" dynamic-insert="true">
+		<id name="playerid" column="playerid">
+			<generator class="assigned" />
+		</id>
+		<property name="invitestatus" column="invitestatus" type="string"></property>
+		<property name="rewardstatus" column="rewardstatus" type="string"></property>
+	</class>
+</hibernate-mapping>

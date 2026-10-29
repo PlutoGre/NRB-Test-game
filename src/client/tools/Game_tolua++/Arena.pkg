@@ -1,0 +1,40 @@
+$#include "Arena.h"
+
+class ArenaOpponent
+{
+public:
+	ArenaOpponent(unsigned int id);
+	unsigned int	id();
+	const std::string& name();
+	unsigned int	level();
+	unsigned int	arenaRank();
+	unsigned int	rewardScore();
+	unsigned int	arenaType();
+	unsigned int	dicipleItemID1();
+	unsigned int	dicipleItemID2();
+	unsigned int	dicipleItemID3();
+
+	CCSprite* getFunctionPic_Normal();
+	CCSprite* getFunctionPic_Selected();
+	std::string getFunctionName();
+
+	bool isDefeatBy();
+	bool canChallenge();
+
+};
+
+class ArenaReward
+{
+	ArenaReward(unsigned int itemid);
+	unsigned int				itemID();
+	unsigned int				type();
+	std::string					title();
+	unsigned int				needScore();
+	unsigned int				rewardNum();
+	std::string					describe();
+	std::string					iconPic();
+
+	bool						isEnable();
+	std::string					getFunctionName();
+
+};

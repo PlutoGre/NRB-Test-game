@@ -1,0 +1,20 @@
+{
+  "python": {
+    "version": "3.14.10",
+    "file": "python-3.14.10-embed-amd64.zip",
+    "url": "https://www.python.org/ftp/python/3.14.10/python-3.14.10-embed-amd64.zip",
+    "sha256": "90905e64a840557d8c1bc4f5b74db3d7ee85e3ffb217611cac1c7813acea4159"
+  },
+  "java": {
+    "version": "Temurin 8u504-b01",
+    "file": "OpenJDK8U-jdk_x64_windows_hotspot_8u504b01.zip",
+    "url": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u504-b01/OpenJDK8U-jdk_x64_windows_hotspot_8u504b01.zip",
+    "sha256": "ea43d46ede95b51e44a12c66711706cddc762e0a766c54bccea18954e902b2aa"
+  },
+  "mariadb": {
+    "version": "10.11.19",
+    "file": "mariadb-10.11.19-winx64.zip",
+    "url": "https://archive.mariadb.org/mariadb-10.11.19/winx64-packages/mariadb-10.11.19-winx64.zip",
+    "sha256": "398ea30e5036010bbebe01d2b1804280424dcc2626e36d8e95155c04d25a0490"
+  }
+}

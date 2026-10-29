@@ -1,0 +1,7 @@
+INFO  2015-08-06 09:33:24,756 [ObjectAccessor.java,76] - player logout delOnlineUser method|#close current login session sussess playerId:5
+INFO  2015-08-06 09:33:24,772 [ObjectAccessor.java,76] - player logout delOnlineUser method|#close current login session sussess playerId:9
+INFO  2015-08-06 10:44:41,487 [ObjectAccessor.java,27] - add online session,playerid:5
+INFO  2015-08-06 10:44:41,488 [ClientSession.java,36] - player login setSession method|#playerId:5#client ip:/192.168.31.183:1638#current online player count:1
+INFO  2015-08-06 10:45:30,683 [SessionHandler.java,73] - player logout sessionClosed method|playerId:5#client ip:/192.168.31.183:1638#Current playerCount:1
+INFO  2015-08-06 10:45:30,684 [ObjectAccessor.java,32] - remove online session,playerid:5
+INFO  2015-08-06 10:45:30,687 [SessionHandler.java,85] - plad|cloyer logout sessionClosed methose this session playerId:5

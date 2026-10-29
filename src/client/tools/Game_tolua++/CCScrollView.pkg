@@ -1,0 +1,131 @@
+$#include "cocos2d.h"
+$#include "cocos-ext.h"
+typedef enum {
+	kCCScrollViewDirectionNone = -1,
+    kCCScrollViewDirectionHorizontal = 0,
+    kCCScrollViewDirectionVertical,
+    kCCScrollViewDirectionBoth
+} CCScrollViewDirection;
+
+class CCScrollView : public CCLayer
+{
+	static CCScrollView* create(CCSize size, CCNode* container = NULL);
+
+    /**
+     * Returns an autoreleased scroll view object.
+     *
+     * @param size view size
+     * @param container parent object
+     * @return autoreleased scroll view object
+     */
+    static CCScrollView* create();
+
+    /**
+     * Returns a scroll view object
+     *
+     * @param size view size
+     * @param container parent object
+     * @return scroll view object
+     */
+    bool initWithViewSize(CCSize size, CCNode* container = NULL);
+
+
+    /**
+     * Sets a new content offset. It ignores max/min offset. It just sets what's given. (just like UIKit's UIScrollView)
+     *
+     * @param offset new offset
+     * @param If YES, the view scrolls to the new offset
+     */
+    void setContentOffset(CCPoint offset, bool animated = false);
+    CCPoint getContentOffset();
+    /**
+     * Sets a new content offset. It ignores max/min offset. It just sets what's given. (just like UIKit's UIScrollView)
+     * You can override the animation duration with this method.
+     *
+     * @param offset new offset
+     * @param animation duration
+     */
+    void setContentOffsetInDuration(CCPoint offset, float dt); 
+
+    void setZoomScale(float s);
+    /**
+     * Sets a new scale and does that for a predefined duration.
+     *
+     * @param s a new scale vale
+     * @param animated if YES, scaling is animated
+     */
+    void setZoomScale(float s, bool animated);
+
+    float getZoomScale();
+
+	void setScrollDeaccelRate(float rate){m_fScrollDeaccelRate = rate;}
+	float getScrollDeaccelRate(){return m_fScrollDeaccelRate;}
+    /**
+     * Sets a new scale for container in a given duration.
+     *
+     * @param s a new scale value
+     * @param animation duration
+     */
+    void setZoomScaleInDuration(float s, float dt);
+    /**
+     * Returns the current container's minimum offset. You may want this while you animate scrolling by yourself
+     */
+    CCPoint minContainerOffset();
+    /**
+     * Returns the current container's maximum offset. You may want this while you animate scrolling by yourself
+     */
+    CCPoint maxContainerOffset(); 
+    /**
+     * Determines if a given node's bounding box is in visible bounds
+     *
+     * @return YES if it is in visible bounds
+     */
+    bool isNodeVisible(CCNode * node);
+    /**
+     * Provided to make scroll view compatible with SWLayer's pause method
+     */
+    void pause(CCObject* sender);
+    /**
+     * Provided to make scroll view compatible with SWLayer's resume method
+     */
+    void resume(CCObject* sender);
+
+
+    bool isDragging();
+    bool isTouchMoved();
+    bool isBounceable();
+    void setBounceable(bool bBounceable);
+
+    /**
+     * size to clip. CCNode boundingBox uses contentSize directly.
+     * It's semantically different what it actually means to common scroll views.
+     * Hence, this scroll view will use a separate size property.
+     */
+    CCSize getViewSize();
+    void setViewSize(CCSize size);
+
+    CCNode * getContainer();
+    void setContainer(CCNode * pContainer);
+
+    /**
+     * direction allowed to scroll. CCScrollViewDirectionBoth by default.
+     */
+    CCScrollViewDirection getDirection();
+    virtual void setDirection(CCScrollViewDirection eDirection);
+
+    /**
+     * Determines whether it clips its children or not.
+     */
+    bool isClippingToBounds() { return m_bClippingToBounds; }
+    void setClippingToBounds(bool bClippingToBounds) { m_bClippingToBounds = bClippingToBounds; }
+
+    virtual void visit();
+    virtual void addChild(CCNode * child, int zOrder, int tag);
+    virtual void addChild(CCNode * child, int zOrder);
+    virtual void addChild(CCNode * child);
+    void setTouchEnabled(bool e);
+
+	void forceRecaculateChildren();
+
+};
+

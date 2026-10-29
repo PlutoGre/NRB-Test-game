@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.oldmountain.dzm.entity">
+	<class name="AdventureFightStats" table="adventurefightstats" dynamic-update="true" dynamic-insert="true">
+		<id name="id" column="id">
+			<generator class="native" />
+		</id>
+		<property name="playerId" column="playerId" type="int"/>
+        <property name="barrierCount" column="barrierCount" type="int"/>
+		<property name="battlePanelType" column="battlePanelType" type="int"/>
+		<property name="battleAmount" column="battleAmount" type="int"/>
+		<property name="yestBarrierLV" column="yestBarrierLV" type="int"/>
+		<property name="yestObtainStar" column="yestObtainStar" type="int"/>
+		<property name="maxBarrierLV" column="maxBarrierLV" type="int"/>
+		<property name="maxObtainStar" column="maxObtainStar" type="int"/>
+		<property name="currSurplusStar" column="currSurplusStar" type="int"/>
+		<property name="currBarrierLV" column="currBarrierLV" type="int"/>
+		<property name="currObtainStar" column="currObtainStar" type="int"/>
+		<property name="extraRewardDetailInfo" column="extraRewardDetailInfo" type="string"/>
+		<property name="obtainStarDetail" column="obtainStarDetail" type="string"/>
+		<property name="extraRewardConf" column="extraRewardConf" type="string"/>
+        <property name="proAdditionInfo" column="proAdditionInfo" type="string"/>
+        <property name="teamConfInfo" column="teamConfInfo" type="string"/>
+        <property name="additionSelDetail" column="additionSelDetail" type="string"/>
+        <property name="lastUpdateTime" column="lastUpdateTime" type="int"/>
+        <property name="lastOprTime" column="lastOprTime" type="int"/>
+        <property name="nextResetTime" column="nextResetTime" type="int"/>
+    </class>
+</hibernate-mapping>

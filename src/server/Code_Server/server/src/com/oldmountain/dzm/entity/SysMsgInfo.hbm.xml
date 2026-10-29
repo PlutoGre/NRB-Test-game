@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.oldmountain.dzm.entity">
+	<class name="SysMsgInfo" table="sysmsginfo" dynamic-update="true" dynamic-insert="true">
+        <id name="id" column="id">
+            <generator class="assigned" />
+        </id>
+		<property name="playerId" column="playerId" type="int"/>
+		<property name="msgType" column="msgType" type="int"/>
+		<property name="msgInfo" column="msgInfo" type="string"/>
+		<property name="msgContent" column="msgContent" type="string"/>
+		<property name="status" column="status" type="int"/>
+		<property name="addTime" column="addTime" type="int"/>
+	</class>
+</hibernate-mapping>

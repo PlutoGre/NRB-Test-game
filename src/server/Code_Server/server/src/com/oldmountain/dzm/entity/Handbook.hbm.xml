@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.oldmountain.dzm.entity">
+	<class name="Handbook" table="handbook" dynamic-update="true" dynamic-insert="true">
+		<id name="playerId" column="playerId">
+			<generator class="assigned" />
+		</id>
+		<property name="discipleInfo" column="discipleInfo" type="string"></property>
+		<property name="equipInfo" column="equipInfo" type="string"></property>
+		<property name="skillInfo" column="skillInfo" type="string"></property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,7 @@
+$#include "PropInfoPage.h"
+
+class PropInfoPage
+{
+	static void showPropInfoPage( unsigned int id,unsigned int type,bool isReward );
+};
+

@@ -1,0 +1,86 @@
+INFO  2015-08-04 11:10:11,093 [TitleInfoHandler.java,38] - title info handler received: 1, 1, {}
+INFO  2015-08-04 11:10:11,099 [TitleInfoHandler.java,95] - title info handler ret send: 1, 1, {}
+INFO  2015-08-04 11:12:30,042 [TitleInfoHandler.java,38] - title info handler received: 4, 1, {}
+INFO  2015-08-04 11:12:30,043 [TitleInfoHandler.java,95] - title info handler ret send: 4, 0, {}
+INFO  2015-08-04 11:14:53,594 [TitleInfoHandler.java,38] - title info handler received: 5, 1, {}
+INFO  2015-08-04 11:14:53,594 [TitleInfoHandler.java,95] - title info handler ret send: 5, 0, {}
+INFO  2015-08-04 11:17:31,526 [TitleInfoHandler.java,38] - title info handler received: 6, 1, {}
+INFO  2015-08-04 11:17:31,527 [TitleInfoHandler.java,95] - title info handler ret send: 6, 1, {}
+INFO  2015-08-04 11:17:42,203 [TitleInfoHandler.java,38] - title info handler received: 5, 1, {}
+INFO  2015-08-04 11:17:42,203 [TitleInfoHandler.java,95] - title info handler ret send: 5, 0, {}
+INFO  2015-08-04 11:19:53,858 [TitleInfoHandler.java,38] - title info handler received: 7, 1, {}
+INFO  2015-08-04 11:19:53,858 [TitleInfoHandler.java,95] - title info handler ret send: 7, 0, {}
+INFO  2015-08-04 11:20:12,587 [TitleInfoHandler.java,38] - title info handler received: 8, 1, {}
+INFO  2015-08-04 11:20:12,587 [TitleInfoHandler.java,95] - title info handler ret send: 8, 0, {}
+INFO  2015-08-04 11:22:13,925 [TitleInfoHandler.java,38] - title info handler received: 8, 1, {}
+INFO  2015-08-04 11:22:13,925 [TitleInfoHandler.java,95] - title info handler ret send: 8, 0, {}
+INFO  2015-08-04 11:22:16,959 [TitleInfoHandler.java,38] - title info handler received: 5, 1, {}
+INFO  2015-08-04 11:22:16,959 [TitleInfoHandler.java,95] - title info handler ret send: 5, 0, {}
+INFO  2015-08-04 11:28:29,953 [TitleInfoHandler.java,38] - title info handler received: 5, 1, {}
+INFO  2015-08-04 11:28:29,953 [TitleInfoHandler.java,95] - title info handler ret send: 5, 0, {}
+INFO  2015-08-04 12:49:17,608 [TitleInfoHandler.java,38] - title info handler received: 7, 1, {}
+INFO  2015-08-04 12:49:17,608 [TitleInfoHandler.java,95] - title info handler ret send: 7, 0, {}
+INFO  2015-08-04 12:51:11,453 [TitleInfoHandler.java,38] - title info handler received: 7, 1, {}
+INFO  2015-08-04 12:51:11,454 [TitleInfoHandler.java,95] - title info handler ret send: 7, 1, {}
+INFO  2015-08-04 13:18:59,694 [TitleInfoHandler.java,38] - title info handler received: 5, 1, {}
+INFO  2015-08-04 13:18:59,695 [TitleInfoHandler.java,95] - title info handler ret send: 5, 1, {}
+INFO  2015-08-04 13:19:24,562 [TitleInfoHandler.java,38] - title info handler received: 5, 1, {}
+INFO  2015-08-04 13:19:24,564 [TitleInfoHandler.java,95] - title info handler ret send: 5, 2, {}
+INFO  2015-08-04 13:22:29,696 [TitleInfoHandler.java,38] - title info handler received: 9, 1, {}
+INFO  2015-08-04 13:22:29,697 [TitleInfoHandler.java,95] - title info handler ret send: 9, 1, {}
+INFO  2015-08-04 13:23:58,172 [TitleInfoHandler.java,38] - title info handler received: 9, 1, {}
+INFO  2015-08-04 13:23:58,173 [TitleInfoHandler.java,95] - title info handler ret send: 9, 1, {}
+INFO  2015-08-04 13:26:23,095 [TitleInfoHandler.java,38] - title info handler received: 5, 1, {}
+INFO  2015-08-04 13:26:23,096 [TitleInfoHandler.java,95] - title info handler ret send: 5, 1, {}
+INFO  2015-08-04 14:05:36,134 [TitleInfoHandler.java,38] - title info handler received: 7, 1, {}
+INFO  2015-08-04 14:05:36,135 [TitleInfoHandler.java,95] - title info handler ret send: 7, 1, {}
+INFO  2015-08-04 14:20:00,454 [TitleInfoHandler.java,38] - title info handler received: 10, 1, {}
+INFO  2015-08-04 14:20:00,455 [TitleInfoHandler.java,95] - title info handler ret send: 10, 1, {}
+INFO  2015-08-04 14:21:34,438 [TitleInfoHandler.java,38] - title info handler received: 5, 1, {}
+INFO  2015-08-04 14:21:34,438 [TitleInfoHandler.java,95] - title info handler ret send: 5, 0, {}
+INFO  2015-08-04 14:40:04,708 [TitleInfoHandler.java,38] - title info handler received: 5, 1, {}
+INFO  2015-08-04 14:40:04,709 [TitleInfoHandler.java,95] - title info handler ret send: 5, 1, {}
+INFO  2015-08-04 14:43:52,870 [TitleInfoHandler.java,38] - title info handler received: 7, 1, {}
+INFO  2015-08-04 14:43:52,871 [TitleInfoHandler.java,95] - title info handler ret send: 7, 1, {}
+INFO  2015-08-04 14:52:52,205 [TitleInfoHandler.java,38] - title info handler received: 9, 1, {}
+INFO  2015-08-04 14:52:52,206 [TitleInfoHandler.java,95] - title info handler ret send: 9, 1, {}
+INFO  2015-08-04 14:56:29,917 [TitleInfoHandler.java,38] - title info handler received: 5, 1, {}
+INFO  2015-08-04 14:56:29,917 [TitleInfoHandler.java,95] - title info handler ret send: 5, 0, {}
+INFO  2015-08-04 14:58:35,039 [TitleInfoHandler.java,38] - title info handler received: 5, 1, {}
+INFO  2015-08-04 14:58:35,042 [TitleInfoHandler.java,95] - title info handler ret send: 5, 0, {}
+INFO  2015-08-04 15:02:29,727 [TitleInfoHandler.java,38] - title info handler received: 5, 1, {}
+INFO  2015-08-04 15:02:29,728 [TitleInfoHandler.java,95] - title info handler ret send: 5, 1, {}
+INFO  2015-08-04 15:02:58,077 [TitleInfoHandler.java,38] - title info handler received: 9, 1, {}
+INFO  2015-08-04 15:02:58,078 [TitleInfoHandler.java,95] - title info handler ret send: 9, 1, {}
+INFO  2015-08-04 15:03:50,734 [TitleInfoHandler.java,38] - title info handler received: 5, 1, {}
+INFO  2015-08-04 15:03:50,735 [TitleInfoHandler.java,95] - title info handler ret send: 5, 1, {}
+INFO  2015-08-04 15:04:24,793 [TitleInfoHandler.java,38] - title info handler received: 9, 1, {}
+INFO  2015-08-04 15:04:24,793 [TitleInfoHandler.java,95] - title info handler ret send: 9, 0, {}
+INFO  2015-08-04 15:05:09,742 [TitleInfoHandler.java,38] - title info handler received: 5, 1, {}
+INFO  2015-08-04 15:05:09,743 [TitleInfoHandler.java,95] - title info handler ret send: 5, 0, {}
+INFO  2015-08-04 15:06:08,154 [TitleInfoHandler.java,38] - title info handler received: 5, 1, {}
+INFO  2015-08-04 15:06:08,155 [TitleInfoHandler.java,95] - title info handler ret send: 5, 0, {}
+INFO  2015-08-04 15:06:54,853 [TitleInfoHandler.java,38] - title info handler received: 5, 1, {}
+INFO  2015-08-04 15:06:54,854 [TitleInfoHandler.java,95] - title info handler ret send: 5, 0, {}
+INFO  2015-08-04 15:09:27,482 [TitleInfoHandler.java,38] - title info handler received: 9, 1, {}
+INFO  2015-08-04 15:09:27,483 [TitleInfoHandler.java,95] - title info handler ret send: 9, 0, {}
+INFO  2015-08-04 15:10:58,486 [TitleInfoHandler.java,38] - title info handler received: 9, 1, {}
+INFO  2015-08-04 15:10:58,488 [TitleInfoHandler.java,95] - title info handler ret send: 9, 1, {}
+INFO  2015-08-04 15:11:34,330 [TitleInfoHandler.java,38] - title info handler received: 5, 1, {}
+INFO  2015-08-04 15:11:34,331 [TitleInfoHandler.java,95] - title info handler ret send: 5, 1, {}
+INFO  2015-08-04 15:14:39,328 [TitleInfoHandler.java,38] - title info handler received: 5, 1, {}
+INFO  2015-08-04 15:14:39,329 [TitleInfoHandler.java,95] - title info handler ret send: 5, 1, {}
+INFO  2015-08-04 15:16:14,152 [TitleInfoHandler.java,38] - title info handler received: 5, 1, {}
+INFO  2015-08-04 15:16:14,152 [TitleInfoHandler.java,95] - title info handler ret send: 5, 0, {}
+INFO  2015-08-04 15:20:18,206 [TitleInfoHandler.java,38] - title info handler received: 5, 1, {}
+INFO  2015-08-04 15:20:18,207 [TitleInfoHandler.java,95] - title info handler ret send: 5, 0, {}
+INFO  2015-08-04 15:26:41,060 [TitleInfoHandler.java,38] - title info handler received: 9, 1, {}
+INFO  2015-08-04 15:26:41,061 [TitleInfoHandler.java,95] - title info handler ret send: 9, 1, {}
+INFO  2015-08-04 20:07:53,646 [TitleInfoHandler.java,38] - title info handler received: 9, 1, {}
+INFO  2015-08-04 20:07:53,647 [TitleInfoHandler.java,95] - title info handler ret send: 9, 1, {}
+INFO  2015-08-05 19:31:15,842 [TitleInfoHandler.java,38] - title info handler received: 9, 1, {}
+INFO  2015-08-05 19:31:15,845 [TitleInfoHandler.java,95] - title info handler ret send: 9, 1, {}
+INFO  2015-08-05 19:31:56,475 [TitleInfoHandler.java,38] - title info handler received: 5, 1, {}
+INFO  2015-08-05 19:31:56,476 [TitleInfoHandler.java,95] - title info handler ret send: 5, 0, {}
+INFO  2015-08-05 19:37:55,808 [TitleInfoHandler.java,38] - title info handler received: 9, 1, {}
+INFO  2015-08-05 19:37:55,808 [TitleInfoHandler.java,95] - title info handler ret send: 9, 0, {}

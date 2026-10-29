@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbarStyle="outsideOverlay" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/account_balance_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="24dip"
+            android:textColor="@color/wandou_font_color_black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/enough_balance_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/account_balance_view"
+            android:layout_below="@id/account_balance_view"
+            android:layout_marginTop="5dip"
+            android:text="@string/enough_balance_prompt"
+            android:textColor="@color/wandou_font_color_grey"
+            android:textSize="16sp" />
+        
+        <CheckBox
+            android:id="@+id/show_passowrd_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/enough_balance_prompt"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="12dip"
+            android:checked="false"
+            android:text="@string/show_passowrd_check_text"
+            android:textColor="@color/wandou_font_color_black"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/balance_payment_password_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/show_passowrd_check"
+            android:layout_toLeftOf="@id/show_passowrd_check"
+            android:layout_marginRight="13dip"
+            android:hint="@string/balance_payment_password_input_hint"
+            android:textColor="@color/wandou_font_color_black"
+            android:textColorHint="@color/wandou_font_hint_color_grey"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/balance_payment_button"
+            android:layout_width="match_parent"
+            android:layout_height="46dip"
+            android:layout_below="@id/show_passowrd_check"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/wdj_payment_general_button_background"
+            android:gravity="center"
+            android:text="@string/balance_purchase_at_once_text"
+            android:textColor="@color/wandou_font_color_white"
+            android:textSize="18sp" />
+        
+        <!-- The prompt indicate it is wandoujia who supports this payment. -->
+		<TextView
+		    android:id="@+id/wandoujia_payment_prompt"
+		    android:layout_width="match_parent"
+		    android:layout_height="@dimen/wandoujia_payment_prompt_height"
+		    android:layout_below="@id/balance_payment_button"
+		    android:layout_marginBottom="16dip"
+		    android:textSize="14sp"
+		    android:textColor="#AAAAAA"
+		    android:gravity="center"
+		    android:text="@string/wandoujia_payment_prompt" />
+    </RelativeLayout>
+</ScrollView>

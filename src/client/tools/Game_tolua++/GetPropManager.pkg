@@ -1,0 +1,17 @@
+$#include "GetPropManager.h"
+
+class GetPropManager
+{
+	enum TYPE
+	{
+		TOOL,
+		TOOL_USE,
+		EQUIPMENT,
+		SKILL,
+		SOUL,
+		DISCIPLE,
+	};
+	static GetPropManager* getInstance();
+	void popUpPage(TYPE _type, int _id, int _count);
+};
+

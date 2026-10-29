@@ -1,0 +1,13 @@
+$#include "AES.h"
+
+
+class AES
+{
+	AES();
+	~AES();
+
+	//key must be 128 bit(16byte), outStr should be alloc and deleted outside the function
+	void Decrypt (const unsigned char* inStr, unsigned int count, unsigned char* outStr, const unsigned char* key);
+	//key must be 128 bit(16byte), outStr should be alloc and deleted outside the function
+	void Encrypt (const unsigned char* inStr, unsigned int count, unsigned char* outStr, const unsigned char* key);
+};

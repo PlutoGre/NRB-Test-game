@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"  
+    android:id="@+id/thidrlogin_dialog"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:background="@drawable/thirdlogin_dialog_bg" 
+    android:layout_height="match_parent"> <!--    android:background="@drawable/thirdlogin_dialog_bg"    -->
+    	<LinearLayout 
+    android:orientation="vertical"  
+    android:layout_gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	>    
+   	<ImageView 
+    	android:id="@+id/image"
+    	android:src="@drawable/third_qq"
+    	android:scaleType="fitXY"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	/>  
+    <LinearLayout
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"> 
+    	<TableLayout 
+    		android:id="@+id/loginInfo"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:stretchColumns="1">
+    		<TableRow>
+    			<TextView 
+    				android:text="个人昵称:"    				
+    				android:textStyle="bold"
+    				android:textColor="#000000"
+    				android:gravity="right"    
+    				android:padding="5dip"  					
+    			/>       			
+    			<EditText 
+    				android:id="@+id/re_username"
+    				android:inputType="textPersonName"
+    				android:singleLine="true"
+    			/>
+    		</TableRow>
+    		<TableRow>
+    			<TextView 
+    				android:text="密码:"    	
+    				android:textStyle="bold"
+    				android:textColor="#000000"
+    				android:gravity="right"    
+    				android:padding="5dip" 				
+    			/>
+    			<EditText 
+    				android:id="@+id/re_password"		
+    				android:singleLine="true"
+    				android:password="true"
+    				android:inputType="textPassword"/>
+    		</TableRow>
+    		<TableRow>
+    			<TextView 
+    				android:text="确认密码:"    				
+    				android:textStyle="bold"
+    				android:textColor="#000000"
+    				android:gravity="right"    
+    				android:padding="5dip" 				
+    			/>
+    			<EditText 
+    				android:id="@+id/re_okpassword"
+    				android:singleLine="true"
+    				android:password="true"
+    				android:inputType="textPassword"/>
+    		</TableRow>
+    		<TableRow>
+    			<TextView 
+    				android:text="邮箱:"    		
+    						
+    				android:textStyle="bold"
+    				android:textColor="#000000"
+    				android:gravity="right"    
+    				android:padding="5dip" 				
+    			/>
+    			<EditText 
+    				android:id="@+id/re_email"
+    				android:singleLine="true"
+    				android:inputType="textEmailAddress"/>
+    		</TableRow>
+    	</TableLayout>    	
+    </LinearLayout>
+    <RelativeLayout 
+    	android:id="@+id/loginSet"    
+    	android:layout_height="wrap_content" 
+    	android:layout_width="fill_parent">
+         	
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+    <Button 
+    	android:id="@+id/submit_bt"
+    	android:text="提交 "
+    	android:paddingTop="3dip"
+    	android:paddingBottom="3dip"
+    	android:paddingLeft="40dip"
+    	android:paddingRight="40dip"    	
+    	android:layout_width="wrap_content"    
+    	android:layout_height="wrap_content"    	
+    	android:layout_gravity="center_horizontal" 
+    	/>
+    
+    <Button 
+    	android:id="@+id/regeit_cancel"
+    	android:text="取消"
+    	android:paddingTop="3dip"
+    	android:paddingBottom="3dip"
+    	android:paddingLeft="40dip"
+    	android:paddingRight="40dip"    	
+    	android:layout_width="wrap_content"    
+    	android:layout_height="wrap_content"    	
+    	android:layout_gravity="center_horizontal" 
+    	/>
+	</LinearLayout>
+     
+   	
+</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#dfdfdf"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#dfdfdf" >
+
+        <TextView
+            android:id="@+id/egamewebfee_top_no_text_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/egamewebfee_top"
+            android:gravity="center"
+            android:text="欢迎使用爱游戏充值"
+            android:textColor="#fff"
+            android:textSize="14dip" />
+
+        <ImageView
+            android:id="@+id/egamewebfee_top_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/egamewebfee_back" />
+
+        <ImageView
+            android:id="@+id/egamewebfee_top_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/egamewebfee_close" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ScrollView
+            android:id="@+id/egamewebfee_body"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+        </ScrollView>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/egamewebfee_top_no_text_title"
+            android:background="@drawable/egamewebfee_top_line" />
+    </FrameLayout>
+
+</LinearLayout>

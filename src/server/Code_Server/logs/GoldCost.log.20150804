@@ -1,0 +1,14 @@
+INFO  2015-08-04 13:09:07,703 [AddPowerHandler.java,173] - Gold Cost Info: 1438664947 , 7 , 1005 , 1 , 90, 70 , 20
+INFO  2015-08-04 13:14:44,444 [TrainDiscipleHandler.java,226] - Gold Cost Info: 1438665284 , 7 , 0 , 1 , 203, 203 , 0
+INFO  2015-08-04 13:14:51,030 [TrainDiscipleHandler.java,226] - Gold Cost Info: 1438665291 , 7 , 1001 , 1 , 203, 193 , 10
+INFO  2015-08-04 14:02:48,379 [BuyToolHandler.java,118] - Gold Cost Info: 1438668168 , 9 , 3002001 , 1 , 2445, 2420 , 25
+INFO  2015-08-04 14:02:59,601 [BuyToolHandler.java,118] - Gold Cost Info: 1438668179 , 9 , 3001004 , 1 , 2420, 2345 , 75
+INFO  2015-08-04 14:03:10,745 [BuyToolHandler.java,118] - Gold Cost Info: 1438668190 , 9 , 3002004 , 1 , 2345, 2245 , 100
+INFO  2015-08-04 14:06:29,821 [BuyToolHandler.java,118] - Gold Cost Info: 1438668389 , 7 , 3002004 , 1 , 3070, 2970 , 100
+INFO  2015-08-04 14:06:47,917 [BuyToolHandler.java,118] - Gold Cost Info: 1438668407 , 7 , 3002004 , 1 , 2970, 2870 , 100
+INFO  2015-08-04 14:06:55,530 [BuyToolHandler.java,118] - Gold Cost Info: 1438668415 , 7 , 3001004 , 1 , 2870, 2795 , 75
+INFO  2015-08-04 14:07:06,264 [BuyToolHandler.java,118] - Gold Cost Info: 1438668426 , 7 , 3001004 , 16 , 2795, 1595 , 1200
+INFO  2015-08-04 14:07:16,860 [BuyToolHandler.java,118] - Gold Cost Info: 1438668436 , 7 , 3002004 , 15 , 1595, 95 , 1500
+INFO  2015-08-04 14:41:08,993 [BuyToolHandler.java,118] - Gold Cost Info: 1438670468 , 5 , 3501001 , 1 , 3050, 3040 , 10
+INFO  2015-08-04 14:41:15,576 [BuyToolHandler.java,118] - Gold Cost Info: 1438670475 , 5 , 5002002 , 1 , 3040, 3015 , 25
+INFO  2015-08-04 15:27:09,094 [AddPowerHandler.java,173] - Gold Cost Info: 1438673229 , 5 , 1005 , 1 , 3025, 3005 , 20

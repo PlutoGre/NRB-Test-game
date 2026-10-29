@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#252525" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/size_20"
+        android:text="重要提示"
+        android:textColor="#cccccc"
+        android:textSize="@dimen/font_18" />
+
+    <View
+        android:id="@+id/imageView1"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/textView1"
+        android:layout_marginTop="@dimen/size_20"
+        android:background="#555555" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView1"
+        android:layout_margin="@dimen/size_20"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/chongqi_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/size_40"
+            android:background="@drawable/anzhi_button_bg_gray"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="#545454"
+            android:textSize="@dimen/font_18" />
+
+        <View
+            android:layout_width="0dip"
+            android:layout_marginTop="@dimen/size_20"
+            android:layout_height="0dip" />
+    </LinearLayout>
+
+</RelativeLayout>

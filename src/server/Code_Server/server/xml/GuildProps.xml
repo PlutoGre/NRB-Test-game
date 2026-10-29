@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<GuildProps>
+		<Prop id="1" types="1"/>
+		<Prop id="2" types="2"/>
+		<Prop id="3" types="3"/>
+		<Prop id="4" types="3"/>
+		<Prop id="5" types="3"/>
+		<Prop id="6" types="3"/>
+		<Prop id="7" types="3"/>
+		<Prop id="8" types="3"/>
+		<Prop id="9" types="3"/>
+		<Prop id="10" types="3"/>
+		<Prop id="11" types="3"/>
+	</GuildProps>
+</root>

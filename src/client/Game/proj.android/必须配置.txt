@@ -1,0 +1,17 @@
+1、安装cygwin http://www.cygwin.cn/
+添加C:\cygwin\bin于path系统环境变量
+创建系统环境变量CYGWIN=nodosfilewarning
+2、安装adt-bundle-windows-x86-20130219
+添加D:\adt-bundle-windows-x86-20130219\sdk\tools于path系统环境变量
+添加D:\adt-bundle-windows-x86-20130219\sdk\platform-tools于path系统环境变量
+3、安装android-ndk-r8e
+添加D:\adt-bundle-windows-x86-20130219\android-ndk-r8e于path系统环境变量
+创建系统环境变量
+NDK_ROOT=D:\adt-bundle-windows-x86-20130219\android-ndk-r8e
+
+64位系统 这些全安装64位的
+但最终NDK的编译链接还是32位或arm_thumb16位
+
+NDK目录下的build\core\build-binary.mk文件第49行有一处错误，改为
+
+$(cleantarget): PRIVATE_CLEAN_FILES := $($(my)OBJS)

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<GuildNPCs>
+		<GuildNpc totemId="3" totemLv="1" totemNpcId="10,10,10,10,10" totemNpcLv="40" totemNpcSkillRatio="4" HpBuff="1.5" atcBuff="1.5" DefBuff="1.5" willBuff="1.5" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="3" totemLv="2" totemNpcId="10,10,10,10,10,10" totemNpcLv="50" totemNpcSkillRatio="4" HpBuff="1.5" atcBuff="1.5" DefBuff="1.5" willBuff="1.5" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="3" totemLv="3" totemNpcId="10,10,10,10,10,10" totemNpcLv="60" totemNpcSkillRatio="4" HpBuff="1.5" atcBuff="1.5" DefBuff="1.5" willBuff="1.5" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="3" totemLv="4" totemNpcId="10,10,10,10,10,10,10" totemNpcLv="70" totemNpcSkillRatio="4" HpBuff="1.5" atcBuff="1.5" DefBuff="1.5" willBuff="1.5" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="3" totemLv="5" totemNpcId="10,10,10,10,10,10,10" totemNpcLv="80" totemNpcSkillRatio="4" HpBuff="1.5" atcBuff="1.5" DefBuff="1.5" willBuff="1.5" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="3" totemLv="6" totemNpcId="10,10,10,10,10,10,10,10" totemNpcLv="90" totemNpcSkillRatio="4" HpBuff="1.5" atcBuff="1.5" DefBuff="1.5" willBuff="1.5" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="3" totemLv="7" totemNpcId="10,10,10,10,10,10,10,10" totemNpcLv="100" totemNpcSkillRatio="4" HpBuff="1.5" atcBuff="1.5" DefBuff="1.5" willBuff="1.5" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="4" totemLv="1" totemNpcId="19,19,19,19,19" totemNpcLv="40" totemNpcSkillRatio="4" HpBuff="1.5" atcBuff="1.5" DefBuff="1.5" willBuff="1.5" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="4" totemLv="2" totemNpcId="19,19,19,19,19,19" totemNpcLv="50" totemNpcSkillRatio="4" HpBuff="1.5" atcBuff="1.5" DefBuff="1.5" willBuff="1.5" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="4" totemLv="3" totemNpcId="19,19,19,19,19,19" totemNpcLv="60" totemNpcSkillRatio="4" HpBuff="1.5" atcBuff="1.5" DefBuff="1.5" willBuff="1.5" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="4" totemLv="4" totemNpcId="19,19,19,19,19,19,19" totemNpcLv="70" totemNpcSkillRatio="4" HpBuff="1.5" atcBuff="1.5" DefBuff="1.5" willBuff="1.5" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="4" totemLv="5" totemNpcId="19,19,19,19,19,19,19" totemNpcLv="80" totemNpcSkillRatio="4" HpBuff="1.5" atcBuff="1.5" DefBuff="1.5" willBuff="1.5" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="4" totemLv="6" totemNpcId="19,19,19,19,19,19,19,19" totemNpcLv="90" totemNpcSkillRatio="4" HpBuff="1.5" atcBuff="1.5" DefBuff="1.5" willBuff="1.5" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="4" totemLv="7" totemNpcId="19,19,19,19,19,19,19,19" totemNpcLv="100" totemNpcSkillRatio="4" HpBuff="1.5" atcBuff="1.5" DefBuff="1.5" willBuff="1.5" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="5" totemLv="1" totemNpcId="5,5,5,5,5" totemNpcLv="40" totemNpcSkillRatio="4" HpBuff="1.5" atcBuff="1.5" DefBuff="1.5" willBuff="1.5" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="5" totemLv="2" totemNpcId="5,5,5,5,5,5" totemNpcLv="50" totemNpcSkillRatio="4" HpBuff="1.5" atcBuff="1.5" DefBuff="1.5" willBuff="1.5" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="5" totemLv="3" totemNpcId="5,5,5,5,5,5" totemNpcLv="60" totemNpcSkillRatio="4" HpBuff="1.5" atcBuff="1.5" DefBuff="1.5" willBuff="1.5" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="5" totemLv="4" totemNpcId="5,5,5,5,5,5,5" totemNpcLv="70" totemNpcSkillRatio="4" HpBuff="1.5" atcBuff="1.5" DefBuff="1.5" willBuff="1.5" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="5" totemLv="5" totemNpcId="5,5,5,5,5,5,5" totemNpcLv="80" totemNpcSkillRatio="4" HpBuff="1.5" atcBuff="1.5" DefBuff="1.5" willBuff="1.5" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="3" totemLv="6" totemNpcId="5,5,5,5,5,5,5,5" totemNpcLv="90" totemNpcSkillRatio="4" HpBuff="1.5" atcBuff="1.5" DefBuff="1.5" willBuff="1.5" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="5" totemLv="7" totemNpcId="5,5,5,5,5,5,5,5" totemNpcLv="100" totemNpcSkillRatio="4" HpBuff="1.5" atcBuff="1.5" DefBuff="1.5" willBuff="1.5" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="6" totemLv="1" totemNpcId="26,26,26,26,26" totemNpcLv="40" totemNpcSkillRatio="3" HpBuff="1.8" atcBuff="1.8" DefBuff="1.8" willBuff="1.8" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="6" totemLv="2" totemNpcId="26,26,26,26,26,26" totemNpcLv="50" totemNpcSkillRatio="3" HpBuff="1.8" atcBuff="1.8" DefBuff="1.8" willBuff="1.8" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="6" totemLv="3" totemNpcId="26,26,26,26,26,26" totemNpcLv="60" totemNpcSkillRatio="3" HpBuff="1.8" atcBuff="1.8" DefBuff="1.8" willBuff="1.8" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="6" totemLv="4" totemNpcId="26,26,26,26,26,26,26" totemNpcLv="70" totemNpcSkillRatio="3" HpBuff="1.8" atcBuff="1.8" DefBuff="1.8" willBuff="1.8" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="6" totemLv="5" totemNpcId="26,26,26,26,26,26,26" totemNpcLv="80" totemNpcSkillRatio="3" HpBuff="1.8" atcBuff="1.8" DefBuff="1.8" willBuff="1.8" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="6" totemLv="6" totemNpcId="26,26,26,26,26,26,26,26" totemNpcLv="90" totemNpcSkillRatio="3" HpBuff="1.8" atcBuff="1.8" DefBuff="1.8" willBuff="1.8" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="6" totemLv="7" totemNpcId="26,26,26,26,26,26,26,26" totemNpcLv="100" totemNpcSkillRatio="3" HpBuff="1.8" atcBuff="1.8" DefBuff="1.8" willBuff="1.8" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="7" totemLv="1" totemNpcId="23,23,23,23,23" totemNpcLv="40" totemNpcSkillRatio="3" HpBuff="1.5" atcBuff="1.5" DefBuff="1.5" willBuff="1.5" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="7" totemLv="2" totemNpcId="23,23,23,23,23,23" totemNpcLv="50" totemNpcSkillRatio="3" HpBuff="1.5" atcBuff="1.5" DefBuff="1.5" willBuff="1.5" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="7" totemLv="3" totemNpcId="23,23,23,23,23,23" totemNpcLv="60" totemNpcSkillRatio="3" HpBuff="1.5" atcBuff="1.5" DefBuff="1.5" willBuff="1.5" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="7" totemLv="4" totemNpcId="23,23,23,23,23,23,23" totemNpcLv="70" totemNpcSkillRatio="3" HpBuff="1.5" atcBuff="1.5" DefBuff="1.5" willBuff="1.5" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="7" totemLv="5" totemNpcId="23,23,23,23,23,23,23" totemNpcLv="80" totemNpcSkillRatio="3" HpBuff="1.5" atcBuff="1.5" DefBuff="1.5" willBuff="1.5" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="7" totemLv="6" totemNpcId="23,23,23,23,23,23,23,23" totemNpcLv="90" totemNpcSkillRatio="3" HpBuff="1.5" atcBuff="1.5" DefBuff="1.5" willBuff="1.5" totemNpcRate="40" GuildMemberRate="2"/>
+		<GuildNpc totemId="7" totemLv="7" totemNpcId="23,23,23,23,23,23,23,23" totemNpcLv="100" totemNpcSkillRatio="3" HpBuff="1.5" atcBuff="1.5" DefBuff="1.5" willBuff="1.5" totemNpcRate="40" GuildMemberRate="2"/>
+	</GuildNPCs>
+</root>

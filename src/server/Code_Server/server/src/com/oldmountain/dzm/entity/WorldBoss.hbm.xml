@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.oldmountain.dzm.entity">
+	<class name="WorldBoss" table="worldboss" dynamic-update="true" dynamic-insert="true">
+		<id name="id" column="id">
+			<generator class="native" />
+		</id>
+		<property name="totalHealth" column="totalHealth" type="long"></property>
+		<property name="leftHealth" column="leftHealth" type="long"></property>
+		<property name="level" column="level" type="int"></property>
+		<property name="killedTime" column="killedTime" type="int"></property>
+		<property name="lastRefreshTime" column="lastRefreshTime" type="int"></property>
+		<property name="killerId" column="killerId" type="int"/>
+		<property name="killerName" column="killerName" type="string"/>
+		<property name="killerLevel" column="killerLevel" type="int"></property>
+		<property name="killerDamage" column="killerDamage" type="int"></property>
+		<property name="date" column="date" type="int"></property>
+	</class>
+</hibernate-mapping>

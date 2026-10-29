@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#000000" >
+
+    <TextView
+        android:id="@+id/title_textview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:gravity="center_horizontal"
+        android:text="安智市场服务条款"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/font_22" />
+
+    <View
+        android:id="@+id/divider_v"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/title_textview"
+        android:layout_marginBottom="@dimen/size_14"
+        android:layout_marginTop="@dimen/size_14"
+        android:background="#555555" />
+
+    <LinearLayout
+        android:id="@+id/bot_lin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/size_14"
+        android:layout_marginRight="@dimen/size_14"
+        android:gravity="center"
+        android:visibility="visible" >
+
+        <Button
+            android:id="@+id/agree"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/size_40"
+            android:layout_margin="@dimen/size_14"
+            android:layout_marginBottom="15dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/anzhi_button_bg_gray"
+            android:text="确定"
+            android:textColor="#545454"
+            android:textSize="@dimen/font_18" />
+    </LinearLayout>
+
+    <!--
+          <WebView
+        android:id="@+id/prot_edittext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bot_lin"
+        android:layout_below="@id/divider_v"
+        android:background="@null"
+        android:editable="false"
+        android:focusable="true"
+        android:lineSpacingExtra="10dip"
+        android:scrollHorizontally="false"
+        android:scrollbars="vertical"
+        android:singleLine="false"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_18"
+        android:visibility="visible" />
+
+
+    -->
+
+    <ScrollView
+        android:layout_width="fill_parent"
+         android:layout_above="@id/bot_lin"
+            android:layout_below="@id/divider_v"
+        android:layout_height="wrap_content" >
+
+
+
+        <TextView
+            android:id="@+id/prot_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@android:color/transparent"
+            android:lineSpacingExtra="10dip"
+            android:scrollHorizontally="false"
+            android:scrollbars="vertical"
+            android:singleLine="false"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_18" />
+
+    </ScrollView>
+
+</RelativeLayout>

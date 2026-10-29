@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<FortuneComes>
+		<FortuneCome id="1"		needGold="28"		minReward="35"			maxReward="60"/>
+		<FortuneCome id="2"		needGold="280"		minReward="310"			maxReward="450"/>
+		<FortuneCome id="3"		needGold="2800"		minReward="3000"		maxReward="3500"/>
+		<FortuneCome id="4"		needGold="28000"	minReward="30000"		maxReward="35000"/>
+	</FortuneComes>
+</root>

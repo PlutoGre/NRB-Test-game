@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'liblua' target in the 'liblua' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

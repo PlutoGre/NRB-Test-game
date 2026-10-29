@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="WandouGreenTheme" parent="android:Theme.Light">
+        <item name="android:editTextStyle">@style/EditTextWandouGreenTheme</item>
+        <item name="android:checkboxStyle">@style/CheckBoxWandouGreenTheme</item>
+        <item name="android:radioButtonStyle">@style/RadioButtonWandouGreenTheme</item>
+        <item name="android:buttonStyle">@style/ButtonWandouGreenTheme</item>
+        <item name="android:imageButtonStyle">@style/ImageButtonWandouGreenTheme</item>
+        <item name="android:spinnerStyle">@style/SpinnerWandouGreenTheme</item>
+        <item name="android:dropDownSpinnerStyle">@style/SpinnerWandouGreenTheme.DropDown</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItemWandouGreenTheme</item>
+    </style>
+
+    <style name="WandouGreenTheme.Dialog" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@drawable/wdj_payment_dialog_background</item>
+        
+        <item name="android:editTextStyle">@style/EditTextWandouGreenTheme</item>
+        <item name="android:checkboxStyle">@style/CheckBoxWandouGreenTheme</item>
+        <item name="android:radioButtonStyle">@style/RadioButtonWandouGreenTheme</item>
+        <item name="android:buttonStyle">@style/ButtonWandouGreenTheme</item>
+        <item name="android:imageButtonStyle">@style/ImageButtonWandouGreenTheme</item>
+        <item name="android:spinnerStyle">@style/SpinnerWandouGreenTheme</item>
+        <item name="android:dropDownSpinnerStyle">@style/SpinnerWandouGreenTheme.DropDown</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItemWandouGreenTheme</item>
+    </style>
+</resources>

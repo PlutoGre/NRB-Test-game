@@ -1,0 +1,210 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="20dip"
+    android:background="@color/light_grey"
+    android:fillViewport="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/activity_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"
+            android:gravity="center"
+            android:padding="8dip"
+            android:text="@string/wdj_cashier_desk"
+            android:textColor="@color/white"
+            android:textSize="@dimen/large_text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:text="@string/problem"
+            android:textColor="#000000"
+            android:textSize="@dimen/normal_text_size" />
+
+        <EditText
+            android:id="@+id/problem"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small_margin"
+          
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:inputType="textMultiLine"
+            android:minLines="4"
+            android:numeric="integer"
+            android:paddingLeft="@dimen/normal_margin"
+            android:singleLine="true"
+            android:textColorHint="@color/ade_grey" />
+
+        <TextView
+            android:id="@+id/connect_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small_margin"
+            android:text="@string/contact"
+            android:textColor="#000000" />
+
+        <LinearLayout
+            android:id="@+id/mobile_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="60dip"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dip"
+                android:layout_marginTop="8dip"
+                android:text="@string/mobile"
+                android:textColor="@color/black"
+                android:textSize="@dimen/normal_text_size" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/mobile_number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dip"
+              
+                android:gravity="center_vertical"
+                android:numeric="integer"
+                android:paddingLeft="@dimen/normal_margin"
+                android:singleLine="true"
+                android:textColorHint="@color/ade_grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/qq_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="60dip"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dip"
+                android:layout_marginTop="8dip"
+                android:text="@string/qq"
+                android:textColor="@color/black"
+                android:textSize="@dimen/normal_text_size" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/qq"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dip"
+                 
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:numeric="integer"
+                android:paddingLeft="@dimen/normal_margin"
+                android:singleLine="true"
+                android:textColorHint="@color/ade_grey" >
+            </EditText>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_marginTop="2dip"
+            android:textColor="@color/red" />
+
+        <TextView
+            android:id="@+id/help_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_marginTop="8dip"
+            android:text="@string/service"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/tel400"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:text="@string/tel400"
+            android:textColor="#000000"
+            android:textColorLink="@color/blue" />
+
+        <TextView
+            android:id="@+id/TextView02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:text="@string/service_email"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/sdk_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:text="@string/sdk_version"
+            android:textColor="#000000" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" >
+        </View>
+
+        <LinearLayout
+            android:id="@+id/button_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/submit_help"
+                android:layout_width="0dip"
+                android:layout_height="@dimen/large_button_height"
+                android:layout_margin="2dip"
+                android:layout_weight="1"
+                android:background="@drawable/wdj_button"
+                android:gravity="center"
+                android:padding="@dimen/small_margin"
+                android:text="@string/submit_help"
+                android:textColor="@color/white"
+                android:textSize="@dimen/large_text_size" />
+
+            <Button
+                android:id="@+id/back_button"
+                android:layout_width="0dip"
+                android:layout_height="@dimen/large_button_height"
+                android:layout_margin="2dip"
+                android:layout_weight="1"
+                android:background="@drawable/wdj_button_grey"
+                android:gravity="center"
+                android:padding="@dimen/small_margin"
+                android:text="@string/back_button"
+                android:textColor="@color/black"
+                android:textSize="@dimen/large_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

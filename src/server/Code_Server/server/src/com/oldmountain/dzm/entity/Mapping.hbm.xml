@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.oldmountain.dzm.entity">
+	<class name="Mapping" table="mapping" dynamic-update="true" dynamic-insert="true">
+		<id name="gameid" column="gameid">
+			<generator class="native" />
+		</id>
+		<property name="puid" column="puid" type="string"></property>
+		<property name="name" column="name" type="string"></property>
+		<property name="passwd" column="passwd" type="string"></property>
+	</class>
+</hibernate-mapping>

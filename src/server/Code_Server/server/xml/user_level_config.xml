@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<Levels>
+		<Level id="1" careerXp="10" challengeUserXp="10" challengeDiscipleXp="0" challengeCoins="0" coins1="92" worldBossRumCount="1" worldBossRumProbability="0"/>
+		<Level id="2" careerXp="11" challengeUserXp="11" challengeDiscipleXp="0" challengeCoins="0" coins1="88" worldBossRumCount="1" worldBossRumProbability="0"/>
+		<Level id="3" careerXp="12" challengeUserXp="12" challengeDiscipleXp="0" challengeCoins="0" coins1="135" worldBossRumCount="1" worldBossRumProbability="0"/>
+		<Level id="4" careerXp="13" challengeUserXp="13" challengeDiscipleXp="0" challengeCoins="0" coins1="138" worldBossRumCount="1" worldBossRumProbability="0"/>
+		<Level id="5" careerXp="14" challengeUserXp="14" challengeDiscipleXp="35" challengeCoins="0" coins1="140" worldBossRumCount="1" worldBossRumProbability="0"/>
+		<Level id="6" careerXp="15" challengeUserXp="15" challengeDiscipleXp="40" challengeCoins="0" coins1="162" worldBossRumCount="1" worldBossRumProbability="0"/>
+		<Level id="7" careerXp="16" challengeUserXp="16" challengeDiscipleXp="40" challengeCoins="0" coins1="164" worldBossRumCount="1" worldBossRumProbability="0"/>
+		<Level id="8" careerXp="16" challengeUserXp="16" challengeDiscipleXp="45" challengeCoins="0" coins1="175" worldBossRumCount="1" worldBossRumProbability="0"/>
+		<Level id="9" careerXp="17" challengeUserXp="17" challengeDiscipleXp="55" challengeCoins="0" coins1="211" worldBossRumCount="1" worldBossRumProbability="0"/>
+		<Level id="10" careerXp="17" challengeUserXp="17" challengeDiscipleXp="55" challengeCoins="0" coins1="222" worldBossRumCount="1" worldBossRumProbability="0"/>
+		<Level id="11" careerXp="18" challengeUserXp="18" challengeDiscipleXp="65" challengeCoins="0" coins1="263" worldBossRumCount="1" worldBossRumProbability="0"/>
+		<Level id="12" careerXp="18" challengeUserXp="18" challengeDiscipleXp="70" challengeCoins="0" coins1="274" worldBossRumCount="1" worldBossRumProbability="0"/>
+		<Level id="13" careerXp="19" challengeUserXp="19" challengeDiscipleXp="80" challengeCoins="0" coins1="320" worldBossRumCount="1" worldBossRumProbability="50"/>
+		<Level id="14" careerXp="20" challengeUserXp="20" challengeDiscipleXp="90" challengeCoins="0" coins1="358" worldBossRumCount="1" worldBossRumProbability="50"/>
+		<Level id="15" careerXp="20" challengeUserXp="20" challengeDiscipleXp="95" challengeCoins="0" coins1="371" worldBossRumCount="1" worldBossRumProbability="50"/>
+		<Level id="16" careerXp="20" challengeUserXp="20" challengeDiscipleXp="120" challengeCoins="0" coins1="487" worldBossRumCount="1" worldBossRumProbability="50"/>
+		<Level id="17" careerXp="21" challengeUserXp="21" challengeDiscipleXp="125" challengeCoins="0" coins1="506" worldBossRumCount="1" worldBossRumProbability="60"/>
+		<Level id="18" careerXp="21" challengeUserXp="21" challengeDiscipleXp="140" challengeCoins="0" coins1="551" worldBossRumCount="1" worldBossRumProbability="65"/>
+		<Level id="19" careerXp="22" challengeUserXp="22" challengeDiscipleXp="140" challengeCoins="0" coins1="556" worldBossRumCount="1" worldBossRumProbability="70"/>
+		<Level id="20" careerXp="23" challengeUserXp="23" challengeDiscipleXp="160" challengeCoins="0" coins1="635" worldBossRumCount="1" worldBossRumProbability="75"/>
+		<Level id="21" careerXp="23" challengeUserXp="23" challengeDiscipleXp="290" challengeCoins="0" coins1="1386" worldBossRumCount="1" worldBossRumProbability="200"/>
+		<Level id="22" careerXp="24" challengeUserXp="24" challengeDiscipleXp="300" challengeCoins="0" coins1="1437" worldBossRumCount="1" worldBossRumProbability="210"/>
+		<Level id="23" careerXp="24" challengeUserXp="24" challengeDiscipleXp="340" challengeCoins="0" coins1="1625" worldBossRumCount="1" worldBossRumProbability="220"/>
+		<Level id="24" careerXp="25" challengeUserXp="25" challengeDiscipleXp="375" challengeCoins="0" coins1="1791" worldBossRumCount="1" worldBossRumProbability="240"/>
+		<Level id="25" careerXp="25" challengeUserXp="25" challengeDiscipleXp="410" challengeCoins="0" coins1="1972" worldBossRumCount="1" worldBossRumProbability="280"/>
+		<Level id="26" careerXp="26" challengeUserXp="26" challengeDiscipleXp="455" challengeCoins="0" coins1="2355" worldBossRumCount="1" worldBossRumProbability="320"/>
+		<Level id="27" careerXp="27" challengeUserXp="27" challengeDiscipleXp="640" challengeCoins="0" coins1="3326" worldBossRumCount="1" worldBossRumProbability="330"/>
+		<Level id="28" careerXp="28" challengeUserXp="28" challengeDiscipleXp="655" challengeCoins="0" coins1="3409" worldBossRumCount="2" worldBossRumProbability="235"/>
+		<Level id="29" careerXp="28" challengeUserXp="28" challengeDiscipleXp="675" challengeCoins="0" coins1="3506" worldBossRumCount="2" worldBossRumProbability="245"/>
+		<Level id="30" careerXp="28" challengeUserXp="28" challengeDiscipleXp="720" challengeCoins="0" coins1="3737" worldBossRumCount="2" worldBossRumProbability="250"/>
+		<Level id="31" careerXp="28" challengeUserXp="28" challengeDiscipleXp="830" challengeCoins="0" coins1="4772" worldBossRumCount="2" worldBossRumProbability="200"/>
+		<Level id="32" careerXp="29" challengeUserXp="29" challengeDiscipleXp="855" challengeCoins="0" coins1="4926" worldBossRumCount="2" worldBossRumProbability="210"/>
+		<Level id="33" careerXp="29" challengeUserXp="29" challengeDiscipleXp="860" challengeCoins="0" coins1="4968" worldBossRumCount="2" worldBossRumProbability="210"/>
+		<Level id="34" careerXp="29" challengeUserXp="29" challengeDiscipleXp="915" challengeCoins="0" coins1="5264" worldBossRumCount="2" worldBossRumProbability="220"/>
+		<Level id="35" careerXp="30" challengeUserXp="30" challengeDiscipleXp="1020" challengeCoins="0" coins1="5878" worldBossRumCount="2" worldBossRumProbability="240"/>
+		<Level id="36" careerXp="30" challengeUserXp="30" challengeDiscipleXp="1125" challengeCoins="0" coins1="6474" worldBossRumCount="2" worldBossRumProbability="250"/>
+		<Level id="37" careerXp="31" challengeUserXp="31" challengeDiscipleXp="1150" challengeCoins="0" coins1="6622" worldBossRumCount="2" worldBossRumProbability="260"/>
+		<Level id="38" careerXp="32" challengeUserXp="32" challengeDiscipleXp="1205" challengeCoins="0" coins1="6943" worldBossRumCount="2" worldBossRumProbability="280"/>
+		<Level id="39" careerXp="33" challengeUserXp="33" challengeDiscipleXp="1265" challengeCoins="0" coins1="7285" worldBossRumCount="2" worldBossRumProbability="300"/>
+		<Level id="40" careerXp="34" challengeUserXp="34" challengeDiscipleXp="1325" challengeCoins="0" coins1="7644" worldBossRumCount="3" worldBossRumProbability="200"/>
+		<Level id="41" careerXp="35" challengeUserXp="35" challengeDiscipleXp="1390" challengeCoins="0" coins1="8012" worldBossRumCount="3" worldBossRumProbability="220"/>
+		<Level id="42" careerXp="36" challengeUserXp="36" challengeDiscipleXp="1460" challengeCoins="0" coins1="8399" worldBossRumCount="3" worldBossRumProbability="230"/>
+		<Level id="43" careerXp="37" challengeUserXp="37" challengeDiscipleXp="1530" challengeCoins="0" coins1="8807" worldBossRumCount="3" worldBossRumProbability="240"/>
+		<Level id="44" careerXp="38" challengeUserXp="38" challengeDiscipleXp="1605" challengeCoins="0" coins1="9232" worldBossRumCount="3" worldBossRumProbability="250"/>
+		<Level id="45" careerXp="39" challengeUserXp="39" challengeDiscipleXp="1680" challengeCoins="0" coins1="9676" worldBossRumCount="3" worldBossRumProbability="260"/>
+		<Level id="46" careerXp="40" challengeUserXp="40" challengeDiscipleXp="1760" challengeCoins="0" coins1="10144" worldBossRumCount="3" worldBossRumProbability="270"/>
+		<Level id="47" careerXp="41" challengeUserXp="41" challengeDiscipleXp="1845" challengeCoins="0" coins1="10627" worldBossRumCount="3" worldBossRumProbability="280"/>
+		<Level id="48" careerXp="42" challengeUserXp="42" challengeDiscipleXp="1935" challengeCoins="0" coins1="11136" worldBossRumCount="3" worldBossRumProbability="290"/>
+		<Level id="49" careerXp="43" challengeUserXp="43" challengeDiscipleXp="2025" challengeCoins="0" coins1="11668" worldBossRumCount="3" worldBossRumProbability="310"/>
+		<Level id="50" careerXp="44" challengeUserXp="44" challengeDiscipleXp="2120" challengeCoins="0" coins1="12225" worldBossRumCount="3" worldBossRumProbability="0"/>
+	</Levels>
+</root>

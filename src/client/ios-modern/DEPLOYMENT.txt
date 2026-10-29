@@ -1,0 +1,123 @@
+iOS 本地客户端适配与 Mac 构建交接
+================================
+
+外网适配补充（2026-10-29）
+已加入启动连接页、HTTPS 资源重映射和 NSURLSessionWebSocketTask 游戏连接。
+Windows 通过 deployment/Start-External.ps1 发布 Quick Tunnel，iPhone 填写域名和邀请码。
+具体按仓库 docs/EXTERNAL_DEPLOYMENT.md 执行；尚未运行隧道、构建或真机验证。
+下方旧 IP 是原局域网调试记录；外网模式在 App 内选择域名，不使用该固定 IP。
+修改源代码后必须重新准备 UTF-8 源码和重新构建；旧的 generated 或源码 ZIP 未更新。
+
+状态与边界
+本目录新增独立的 OnePiece ARM64 构建入口，目标 iOS 15 及以上。
+目前在 Windows 完成代码修改、资源准备和静态检查，尚未经过 Apple Clang
+编译、链接、签名或 iPhone 真机验证。不能把本目录或源码 ZIP 当作可安装的 IPA，
+也不能据此断言兼容问题已经全部解决。下一阶段需要 Mac/Xcode 构建日志和真机。
+
+已处理的迁移点
+- 不使用旧 Game91/PP/TB 等渠道工程和仅支持 ARM32 的闭源登录/支付 SDK。
+- 新增 LocalPlatform，使用安装内持久化随机账号连接现有服务端。
+  卸载或清除 App 数据可能生成新账号；没有账号迁移与商业登录能力。
+- 启用 ARM64、Protobuf ARM64 架构识别、指针宽度的 iOS 触摸 ID。
+- ARM32 NEON 内联汇编只在 ARM32 使用，ARM64 使用现有的可移植矩阵计算。
+- Lua 使用项目内 Lua 5.1 解释器源码；现有 90 个 .el 脚本解密后为文本源码。
+- 游戏资源下载改为 NSURLSession，包含 HTTP 状态、CRC、原子写入及错误回调。
+- 公告使用 WKWebView，始终保留关闭按钮；超时、加载失败、进程终止时移除遮罩。
+- 新增 UIKit 生命周期、安全区域、安装内设备标识、系统弹窗和本地通知桥接。
+- 音频桥接改用 AVAudioSession/AVAudioPlayer，保留原游戏的 SimpleAudioEngine 接口。
+- 配置局域网访问说明，使用独立 version_ios_local.cfg，拒绝 Android 模拟器别名。
+- 源码另存 UTF-8 供 Apple Clang 使用，原工程文件编码不被整体转换。
+- WebP/curl 从随附的、校验 SHA256 的源码重建，不链接旧 iOS .a 文件。
+
+本机当前部署参数
+游戏服务器：192.168.30.101:25524
+资源服务器：http://192.168.30.101:18081
+数据库：只在本机 127.0.0.1:13306，手机无需连接数据库。
+IP 来自本次工作时的以太网接口；换网、DHCP 地址变化时必须重新生成配置。
+手机需能访问这台电脑，首次提示访问本地网络时允许。
+不要把 Android 的 10.0.2.2 或 127.0.0.1 写入手机客户端。
+
+在 Windows 准备或刷新资源
+在本目录执行，Python 需要 3.10 或更新版本：
+  python prepare.py --host 192.168.30.101 --web-port 18081 --game-port 25524
+
+输出 generated/client（UTF-8 源码）、generated/assets（1767 个原始客户端资源
+及 iOS 配置）、generated/web（只包含客户端公开资源的 Web 根目录）。
+脚本不编译、不启动服务，默认不修改正在运行的游戏服务器配置。
+服务端源码配置版本目前为 1.78.6；旧 Android 调试运行目录曾使用 1.78.2。
+如另起游戏服务，确保使用本次部署的资源及正确的数据库配置。
+要同步某个游戏服务目录的资源版本，可显式附加 --server-dir 该服务目录。
+
+  powershell -ExecutionPolicy Bypass -File .\start-resource-server.ps1
+
+此脚本只启动 18081 上的独立资源服务。游戏服务、数据库仍按已有的本地调试
+流程启动（仓库 .debug/onepiece/start-local.ps1）；不要把 .debug 数据库或根目录
+直接作为 Web 根目录。端口已被占用时脚本会停止，避免误用其他服务。
+若手机无法连接，检查网络互通和 Windows 对 Python/Java 的入站防火墙规则。
+本次未添加防火墙规则。已有 Android 18080 资源服务可以继续使用。
+
+生成便于交给 Mac 的源码包
+  python package_source.py
+
+dist/onepiece-ios-source.zip 包含所需源码、客户端资源、依赖源码压缩包和脚本，
+不包含数据库、旧渠道 SDK、Android 工具链、已有签名或已编译 IPA。
+解压后进入 src/client/ios-modern。源码包必须在最新 prepare.py 执行后重新生成。
+
+Mac 环境
+安装能支持目标 iPhone 系统的完整 Xcode，打开 Xcode 完成首次初始化和许可配置。
+需要 Python 3.10+ 和 CMake 3.24+；xcode-select 应指向完整 Xcode。
+例如：sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+源码包随附第三方源码，CMake 不需要联网下载这些依赖。
+
+在 Mac 解压后的 src/client/ios-modern 内执行：
+  python3 prepare.py --host 192.168.30.101 --web-port 18081 --game-port 25524
+  python3 build.py --action configure --bundle-id com.yourname.onepiece
+
+生成 generated/build-iphoneos/OnePieceIOS.xcodeproj，Scheme 为 OnePiece。
+不要打开旧 xcode/workspace.xcworkspace 或 Game/proj.ios 模板工程来构建本适配版本。
+--bundle-id 请改成自己可签名的唯一标识。
+
+无签名编译（得到的 .app 不能直接安装在 iPhone 上）：
+  python3 build.py --action build --bundle-id com.yourname.onepiece
+
+Apple Silicon Mac 的 iOS 模拟器构建：
+  python3 build.py --action build --sdk iphonesimulator --bundle-id com.yourname.onepiece
+Intel Mac 自动使用 x86_64 模拟器架构。模拟器同样使用可访问的电脑局域网地址。
+
+普通 Apple ID 自己的 iPhone
+先用 --action configure 生成工程，在 Xcode 打开，选择 OnePiece Target ->
+Signing & Capabilities，勾选 Automatically manage signing，选择 Personal Team，
+修改 Bundle Identifier，连接 iPhone 并选择它，然后 Run。
+必要时按手机提示启用开发者模式、信任开发者。普通账号的设备/签名有效期和
+功能由 Apple 限制，不应把这种安装包当作可以分发给任意手机的包。
+此方式应直接在 Xcode 操作，不使用脚本的 IPA 导出流程。
+再次运行 build.py 会恢复脚本的签名配置；请把正式 Team ID 通过参数传入。
+
+有开发者签名配置时导出开发测试 IPA
+在 Xcode 登录已获授权的开发者账号并准备证书/设备描述文件后执行：
+  python3 build.py --action export --sign --team-id ABCDE12345 --bundle-id com.yourname.onepiece
+
+Team ID 需替换为自己的 10 位标识；账号密码与私钥不写入脚本。
+脚本先生成 .xcarchive，再按 debugging 方法导出到 generated/build-iphoneos/ipa。
+使用 --configuration Release 可切换 Release 构建。
+开发测试 IPA 受签名和设备描述文件限制，不能保证在任意 iPhone 安装。
+如果仅需归档，用 --action archive。构建日志为相应目录下的 build.log。
+
+后续必须在 Mac/真机完成
+1. 首次完整编译和链接，根据 Apple Clang/Xcode 日志修正仍未暴露的兼容问题。
+2. 真机签名、安装、冷启动、局域网授权、连接资源与游戏服务器。
+3. 创建账号、完整新手流程、远航、勇闯、断网重连、前后台恢复和公告关闭。
+4. 不同刘海/灵动岛 iPhone 的安全区域和触摸位置，内存、音频、通知行为。
+
+限制
+这是自建服务端的本地开发渠道，不接入旧渠道登录、商业支付或 App Store 内购。
+购买操作明确返回失败，不伪造支付成功。iOS 本地账号不同于旧 Android 账号。
+渲染仍复用原项目 OpenGL ES 2；其 API 已被 Apple 弃用，本阶段未迁移 Metal。
+游戏资源的 HTTPS 下载由 NSURLSession 提供。旧引擎中可选的 HttpClient/
+AssetsManager 使用 HTTP-only curl，不提供 HTTPS；主资源更新不走这些接口。
+App 图标、商店元数据、正式隐私清单、上架审核和商业化不在本地安装目标内。
+
+官方参考
+https://cmake.org/cmake/help/latest/manual/cmake-toolchains.7.html
+https://developer.apple.com/documentation/technotes/tn3179-understanding-local-network-privacy
+https://developer.apple.com/documentation/bundleresources/information-property-list/nsapptransportsecurity/nsallowslocalnetworking

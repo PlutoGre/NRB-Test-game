@@ -1,0 +1,2 @@
+INFO  2015-08-06 10:44:41,493 [LoginHandler.java,526] - player login info: 5, 1438658091, 6, 3, 817, 1438829081, ios_91, win32Device
+INFO  2015-08-06 10:45:30,686 [SessionHandler.java,84] - player logout info: 5, 1438658091, 6, 3, 832, 1438829130,ios_91,win32Device

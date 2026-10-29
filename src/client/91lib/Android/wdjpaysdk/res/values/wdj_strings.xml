@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="pay_title">充值支付</string>
+    <string name="pay_game">游戏：</string>
+    <string name="pay_good">商品：</string>
+    <string name="pay_account">账户：</string>
+    <string name="balance">余额</string>
+    <string name="pay_notice">温馨提示：为了保证账户安全，请确认支付信息</string>
+    <string name="normalpay_notice">选择支付方式</string>
+    <string name="pay_money">支付金额：1.0 元</string>
+    <string name="pay_button_alipay">支付宝支付</string>
+    <string name="pay_button_shenzhou">手机充值卡支付</string>
+    <string name="pay_button_account">账户余额支付</string>
+    <string name="wdj_cashier_desk">豌豆荚</string>
+    <string name="help_link"><u>遇到问题</u></string>
+    <string name="confirm_pay">确认支付</string>
+    <string name="input_pay_password">请输入账户登录密码</string>
+    <string name="back_to_game">返回游戏</string>
+    <string name="confirm_install_hint">"安装提示"</string>
+    <string name="confirm_install">"为保证您的交易安全，需要您安装支付宝安全支付服务，才能进行付款。\n\n点击确定，立即安装。"</string>
+    <string name="Ensure">"确定"</string>
+    <string name="Cancel">"取消"</string>
+    <string name="check_sign_failed">您的订单信息已被非法篡改。</string>
+    <string name="show_pwd">显示密码</string>
+    <string name="input_pwd">请输入登录密码</string>
+    <string name="capcha">验证码</string>
+    <string name="face_value">面值 : </string>
+    <string name="card_num">卡号 : </string>
+    <string name="card_pwd">密码 : </string>
+    <string name="card_notice">温馨提示:充值卡余额会被充入你的豌豆荚账户</string>
+    <string name="last_step">上一步</string>
+    <string name="problem">请详细描述您遇到的问题：</string>
+    <string name="contact">请留下您的联系方式：</string>
+    <string name="mobile">手机 : </string>
+    <string name="qq">QQ : </string>
+    <string name="service">您也可以直接联系客服解决问题：</string>
+    <string name="tel400">电话：400 652 8705</string>
+    <string name="service_email">邮件：payment@wandoujia.com</string>
+    <string name="sdk_version">SDK版本：1.0.0</string>
+    <string name="submit_help">提交反馈</string>
+    <string name="back_button">返回</string>
+    <string name="alipay">支付宝</string>
+    <string name="alipay_note">推荐有支付宝账户的用户使用</string>
+    <string name="debitcard">银行储蓄卡</string>
+    <string name="debitcard_note">推荐银行储蓄卡持有人使用</string>
+    <string name="creditcard">信用卡</string>
+    <string name="creditcard_note">推荐信用卡持有人使用</string>
+    <string name="card">手机充值卡</string>
+    <string name="card_note">支持移动、联通、电信手机充值卡</string>
+    <string name="sso_login_title">使用豌豆荚账号登录</string>
+    <string name="card10">10 元</string>
+    <string name="card20">20 元</string>
+    <string name="card30">30 元</string>
+    <string name="card50">50 元</string>
+    <string name="card100">100 元</string>
+    <string name="card200">200 元</string>
+    <string name="hitemail">邮箱/手机号</string>
+    <string name="hitnick">昵称</string>
+    <string name="hitpassword">密码</string>
+    <string name="hitcapcha">验证码</string>
+    <string name="register">注册</string>
+    <string name="cancel">取消</string>
+    <string name="error_network">网络连接失败</string>
+    <string name="retry">重试</string>
+    <string name="mini_login_title">使用豌豆荚账号登录游戏</string>
+    <string name="mini_register_title">豌豆荚-账号注册</string>
+    <string name="mini_register">快速注册</string>
+    <string name="forgot_password">忘记密码？</string>
+    <string name="wdj_forgot_password"><![CDATA[<font color="#66AA00">忘记密码？</font>]]></string>
+    <string name="user_agreement_ok">同意</string>
+    <string name="wdj_user_agreement_title"><![CDATA[<font color="#66AA00">最终用户条款</font>]]></string>
+    <string name="wdj_forgot_password_detail"><![CDATA[请使用浏览器打开 <a href="https://account.wandoujia.com/web/forgetpassword">https://account.wandoujia.com/web/forgetpassword</a> 找回密码]]></string>
+    <string name="purchase_item_price">¥<xliff:g id="price">%s</xliff:g></string>
+    <string name="payment_button_text">支付</string>
+    <string name="wandoujia_help_text">遇到问题?</string>
+    <string name="wandoujia_payment_prompt">豌豆荚</string>
+    <string name="payment_back_to_text">上一步</string>
+    <string name="payment_at_once_text">立即支付</string>
+    <string name="show_the_other_payment_text">更多支付方式</string>
+    <string name="alipay_one_key_purchase_title">支付宝一键支付</string>
+    <string name="alipay_one_key_purchase_description">推荐有支付宝账号的用户使用</string>
+    <string name="union_pay_purchase_title">银行储蓄卡</string>
+    <string name="union_pay_purchase_description">推荐银行储蓄卡持有者使用</string>
+    <string name="credit_card_purchase_title">信用卡</string>
+    <string name="credit_card_purchase_description">推荐信用卡持有者使用</string>
+    <string name="recharge_card_purchase_title">手机充值卡</string>
+    <string name="recharge_card_purchase_description">支持移动、联通、电信的充值卡</string>
+    <string name="game_card_purchase_title">游戏点卡</string>
+    <string name="game_card_purchase_description">支持盛大、骏网等 15 种游戏点卡</string>
+    <string name="game_card_type_label">卡类型 :</string>
+    <string name="game_card_value_input_hint">请输入卡面额，单位：元</string>
+    <string name="game_card_no_input_hint">请输入卡号</string>
+    <string name="game_card_password_input_hint">请输入卡密码</string>
+    
+    <string name="game_card_remind_text">请选择卡类型，填写金额、卡号、密码完成支付，超出金额会以豌豆币的形式充进你的豌豆荚账号。</string>
+
+    <string-array name="game_cards_array">
+        <item>盛大卡</item>
+        <item>骏网一卡通</item>
+        <item>神州行</item>
+        <item>征途卡</item>
+        <item>Q币卡</item>
+        <item>联通卡</item>
+        <item>久游卡</item>
+        <item>易宝e卡通</item>
+        <item>网易卡</item>
+        <item>完美卡</item>
+        <item>搜狐卡</item>
+        <item>电信卡</item>
+        <item>纵游一卡通</item>
+        <item>天下一卡通</item>
+        <item>天宏一卡通</item>
+    </string-array>
+    <string-array name="game_cards_array_codes">
+        <item>SNDACARD</item>
+        <item>JUNNET</item>
+        <item>SZX</item>
+        <item>ZHENGTU</item>
+        <item>QQCARD</item>
+        <item>UNICOM</item>
+        <item>JIUYOU</item>
+        <item>YPCARD</item>
+        <item>NETEASE</item>
+        <item>WANMEI</item>
+        <item>SOHU</item>
+        <item>TELECOM</item>
+        <item>ZONGYOU</item>
+        <item>TIANXIA</item>
+        <item>TIANHONG</item>
+    </string-array>
+	
+	<string name="recharge_card_remind_text1">请选择充值卡面额，填写卡号、密码完成支付，超出金额会以豌豆币的形式充进你的豌豆荚账号。</string>
+	<string name="recharge_card_remind_text2">超出金额会被充进您的豌豆荚账号。</string>
+	<string name="recharge_card_payment_agreement_check_text">本人同意并接受以上条款</string>
+	
+	<string name="recharge_card_ten">10元</string>
+	<string name="recharge_card_twenty">20元</string>
+	<string name="recharge_card_thirty">30元</string>
+	<string name="recharge_card_fifty">50元</string>
+	<string name="recharge_card_one_hundred">100元</string>
+	<string name="recharge_card_two_hundreds">200元</string>
+	
+	<string name="recharge_card_no_input_hint">充值卡卡号</string>
+	<string name="recharge_card_password_input_hint">密码</string>
+	
+	<string name="feedback_title">意见反馈</string>
+	<string name="payment_problem_label">支付过程中遇到问题？</string>
+	<string name="payment_problem_description_hint">详细描述您遇到的问题</string>
+	<string name="customer_contact_information_label">填写联系方式（任选一）</string>
+	<string name="customer_contact_information_mobile_hint">手机</string>
+	<string name="customer_contact_information_qq_hint">QQ</string>
+	<string name="customer_service_contact_information_label">您也可以直接联系客服解决问题：</string>
+	<string name="feedback_cancel_text">取消</string>
+	<string name="feedback_submit_text">提交反馈</string>
+	
+	<string name="balance_value_view_text">账户余额 <xliff:g id="balance_value">%s</xliff:g>豌豆币 (1豌豆币=1元)</string>
+	<string name="enough_balance_prompt">您的余额充足，请输入登录密码完成支付。</string>
+	<string name="balance_payment_password_input_hint">登录密码</string>
+	<string name="show_passowrd_check_text">显示密码</string>
+	<string name="balance_purchase_at_once_text">立即支付</string>
+	<string name="balance_not_enough_prompt">提示：账户仅剩<xliff:g id="balance_value">%s</xliff:g>豌豆币（1豌豆币＝1元），可用于购买低于<xliff:g id="balance_value">%s</xliff:g>元的商品。</string>
+	
+	<string name="payment_succeed_text">支付成功</string>
+	<string name="purchase_not_to_account">充值尚未到账</string>
+	
+	<string name="wdj_payment_retry_text">网络异常，请重试。</string>
+</resources>

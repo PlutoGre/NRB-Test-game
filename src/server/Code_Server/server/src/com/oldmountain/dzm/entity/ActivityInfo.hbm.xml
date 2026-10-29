@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.oldmountain.dzm.entity">
+	<class name="ActivityInfo" table="activityinfo" dynamic-update="true" dynamic-insert="true">
+		<id name="playerid" column="playerid">
+			<generator class="assigned" />
+		</id>
+        <property name="activityinfo"	column="activityinfo" type="string"/>
+        <property name="laseRefreshTime"	column="laseRefreshTime" type="int"/>
+	</class>
+</hibernate-mapping>

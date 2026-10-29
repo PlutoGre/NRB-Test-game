@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<LevelUps>
+		<LevelUp id="1" needLevel="3" goldcoins="50" upVipLevel="1" rechargenum="0"/>
+		<LevelUp id="2" needLevel="5" goldcoins="60" upVipLevel="0" rechargenum="0"/>
+		<LevelUp id="3" needLevel="10" goldcoins="100" upVipLevel="2" rechargenum="0"/>
+		<LevelUp id="4" needLevel="15" goldcoins="300" upVipLevel="0" rechargenum="0"/>
+	</LevelUps>
+</root>

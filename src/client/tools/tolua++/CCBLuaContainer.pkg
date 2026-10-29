@@ -1,0 +1,18 @@
+$#include "CCBLuaContainer.h"
+
+class CCBLuaContainer
+{
+	static CCBLuaContainer* lualink();
+	enum FuncType
+	{
+		ENTER,
+		EXECUTE,
+		EXIT,
+	};
+	CCNode* getVarNode(char* name);
+	
+ 	void registerScriptHandler(FuncType type, LUA_FUNCTION nHandler);
+ 	void unregisterScriptTapHandler(FuncType type);
+	void registerFunctionHandler(char* func, LUA_FUNCTION nHandler);
+};
+

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.oldmountain.dzm.entity">
+	<class name="RelationShip" table="relationship" dynamic-update="true" dynamic-insert="true">
+		<id name="playerid" column="playerid">
+			<generator class="assigned" />
+		</id>
+		<property name="friendids" column="friendids" type="string"/>
+		<property name="enemyids" column="enemyids" type="string"/>
+		<property name="confirm" column="confirm" type="string"/>
+	</class>
+</hibernate-mapping>

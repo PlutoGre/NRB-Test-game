@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.oldmountain.dzm.entity">
+	<class name="Career" table="career" dynamic-update="true" dynamic-insert="true">
+		<id name="playerid" column="playerid">
+			<generator class="assigned" />
+		</id>
+		<property name="currentchapter" column="cchapter" type="int"></property>
+		<property name="currentpoint" column="cpoint" type="int"></property>
+		<property name="chapteraddpower" column="chapter_add_power" type="string"></property>
+		<property name="pointevaluate" column="point_evaluate" type="string"></property>
+		<property name="pointcount" column="point_count" type="string"></property>
+		<property name="checktime" column="check_time" type="int"></property>
+	</class>
+</hibernate-mapping>

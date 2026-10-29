@@ -1,0 +1,280 @@
+$#include "GameMessages.h"
+
+enum
+{
+	MSG_LOADINGFRAME_ENTERGAME,
+	MSG_MAINFRAME_CHANGEPAGE,
+	MSG_MAINFRAME_PUSHPAGE,
+	MSG_MAINFRAME_POPPAGE,
+	MSG_MAINFRAME_COVERSHOW,
+	MSG_MAINFRAME_COVERHIDE,
+	MSG_MAINFRAME_MSGSHOW,
+	MSG_CAREER_CHANGEPAGE,
+	MSG_FRIENDSPAGE_CHANGEPAGE,
+	MSG_LEAVEMSG_RECIEVEMSG,
+	MSG_FRIEND_DETAIL_RECICEVEMSG,
+	MSG_BUY_PROP_POPUPMSG,
+	MSG_FRIEND_DETAIL_DISPOSE,
+	MSG_CONTINUE_LOGIN_FLIPCARD,
+	MSG_ADVENTURE_PAGECHANGE,
+	MSG_SEVERINFO_UPDATE,
+	MSG_MAINFRAME_REFRESH,
+	MSG_ADVENTURE_REMOVEITEM,
+	MSG_ADVENTURE_TEACHEXPINIT,
+	MSG_PACKPREVIEW_SOURCE_MSG,
+	MSG_INSTRUCTION_NEXT,
+	MSG_FIGHT_END,
+	MSG_BUTTON_PRESSED,
+	MSG_TO_TAB,
+	MSG_FIGHTROUND_LOADSKILL,
+	MSG_RECHARGE_SUCCESS,
+};
+
+struct MsgLoadingFrameEnterGame : public GameMessage
+{
+	static MsgLoadingFrameEnterGame* getTrueType(GameMessage * msg);
+	MsgLoadingFrameEnterGame();
+	virtual const unsigned int getTypeId() const{return MSG_LOADINGFRAME_ENTERGAME;}
+	virtual GameMessage * clone() const {return new MsgLoadingFrameEnterGame();}
+};
+struct MsgMainFrameChangePage : public GameMessage
+{
+	static MsgMainFrameChangePage* getTrueType(GameMessage * msg);
+	MsgMainFrameChangePage();
+	std::string pageName;
+	bool needPopAllPage;
+	virtual const unsigned int getTypeId() const{return MSG_MAINFRAME_CHANGEPAGE;}
+	virtual GameMessage * clone() const{MsgMainFrameChangePage*ret = new MsgMainFrameChangePage;ret->pageName = pageName;return ret;}
+};
+
+struct MsgMainFramePushPage : public GameMessage
+{
+	static MsgMainFramePushPage* getTrueType(GameMessage * msg);
+	MsgMainFramePushPage();
+	std::string pageName;
+	virtual const unsigned int getTypeId() const{return MSG_MAINFRAME_PUSHPAGE;}
+	virtual GameMessage * clone() const{MsgMainFramePushPage*ret = new MsgMainFramePushPage;ret->pageName = pageName;return ret;}
+};
+
+struct MsgMainFramePopPage : public GameMessage
+{
+	static MsgMainFramePopPage* getTrueType(GameMessage * msg);
+	MsgMainFramePopPage();
+	std::string pageName;
+	virtual const unsigned int getTypeId() const{return MSG_MAINFRAME_POPPAGE;}
+	virtual GameMessage * clone() const{MsgMainFramePopPage*ret = new MsgMainFramePopPage;ret->pageName = pageName;return ret;}
+};
+struct MsgMainFrameMSGShow : public GameMessage
+{
+	static MsgMainFrameMSGShow* getTrueType(GameMessage * msg);
+	MsgMainFrameMSGShow();
+	virtual const unsigned int getTypeId() const{return MSG_MAINFRAME_MSGSHOW;}
+	virtual GameMessage * clone() const{MsgMainFrameMSGShow*ret = new MsgMainFrameMSGShow;return ret;}
+};
+struct MsgMainFrameCoverShow : public GameMessage
+{
+	static MsgMainFrameCoverShow* getTrueType(GameMessage * msg);
+	MsgMainFrameCoverShow();
+	virtual const unsigned int getTypeId() const{return MSG_MAINFRAME_COVERSHOW;}
+	std::string pageName;
+	virtual GameMessage * clone() const{MsgMainFrameCoverShow*ret = new MsgMainFrameCoverShow;ret->pageName = pageName;return ret;}
+};
+struct MsgMainFrameCoverHide : public GameMessage
+{
+	static MsgMainFrameCoverHide* getTrueType(GameMessage * msg);
+	MsgMainFrameCoverHide();
+	virtual const unsigned int getTypeId() const{return MSG_MAINFRAME_COVERHIDE;}
+	std::string pageName;
+	virtual GameMessage * clone() const{MsgMainFrameCoverHide*ret = new MsgMainFrameCoverHide;return ret;}
+};
+struct MsgCareerChangePage : public GameMessage
+{
+	static MsgCareerChangePage* getTrueType(GameMessage * msg);
+	MsgCareerChangePage();
+	int pageID;
+	virtual std::string getParameters() const{return StringConverter::toString(pageID);}
+	virtual const unsigned int getTypeId() const{return MSG_CAREER_CHANGEPAGE;}
+	virtual GameMessage * clone() const{MsgCareerChangePage*ret = new MsgCareerChangePage;ret->pageID = pageID;return ret;}
+};
+
+struct MsgFriendsPageChangePage : public GameMessage
+{
+	static MsgFriendsPageChangePage* getTrueType(GameMessage * msg);
+	MsgFriendsPageChangePage();
+	int index;
+	int oprType;
+	virtual const unsigned int getTypeId() const{return MSG_FRIENDSPAGE_CHANGEPAGE;}
+	virtual GameMessage * clone() const{MsgFriendsPageChangePage*ret = new MsgFriendsPageChangePage;ret->index = index;ret->oprType=oprType;return ret;}
+};
+
+struct MsgLeaveMsgReceivePage : public GameMessage
+{
+	static MsgLeaveMsgReceivePage* getTrueType(GameMessage * msg);
+	MsgLeaveMsgReceivePage();
+	int uID;
+	std::string uName;
+	virtual const unsigned int getTypeId() const{return MSG_LEAVEMSG_RECIEVEMSG;}
+	virtual GameMessage * clone() const{MsgLeaveMsgReceivePage*ret = new MsgLeaveMsgReceivePage;ret->uID = uID;ret->uName=uName;return ret;}
+};
+
+struct MsgFriendsDetailReceivePage : public GameMessage
+{
+	static MsgFriendsDetailReceivePage* getTrueType(GameMessage * msg);
+	MsgFriendsDetailReceivePage();
+	int index;
+	int uID;
+	int type;
+	bool isAttention;
+	std::string uName;
+	virtual const unsigned int getTypeId() const{return MSG_FRIEND_DETAIL_RECICEVEMSG;}
+	virtual GameMessage * clone() const{MsgFriendsDetailReceivePage*ret = new MsgFriendsDetailReceivePage;ret->index=index;ret->uID = uID;ret->uName=uName;ret->type=type;ret->isAttention=isAttention;return ret;}
+};
+
+struct MsgFriendsDetailDisposePage : public GameMessage
+{
+	static MsgFriendsDetailDisposePage* getTrueType(GameMessage * msg);
+	MsgFriendsDetailDisposePage();
+	int index;
+	int oprType;
+	virtual const unsigned int getTypeId() const{return MSG_FRIEND_DETAIL_DISPOSE;}
+	virtual GameMessage * clone() const{MsgFriendsDetailDisposePage*ret = new MsgFriendsDetailDisposePage;ret->index=index;ret->oprType = oprType;return ret;}
+};
+
+
+struct MsgBuyPropPopupPage : public GameMessage
+{
+	static MsgBuyPropPopupPage* getTrueType(GameMessage * msg);
+	MsgBuyPropPopupPage();
+	unsigned int toolId;
+	unsigned int panelIndex;
+	virtual const unsigned int getTypeId() const{return MSG_BUY_PROP_POPUPMSG;}
+	virtual GameMessage * clone() const{MsgBuyPropPopupPage*ret = new MsgBuyPropPopupPage;ret->toolId=toolId;ret->panelIndex=panelIndex;return ret;}
+};
+
+struct MsgSeverInfoUpdate : public GameMessage
+{
+	static MsgSeverInfoUpdate* getTrueType(GameMessage * msg);
+	MsgSeverInfoUpdate();
+	unsigned int opcode;
+	virtual const unsigned int getTypeId() const{return MSG_SEVERINFO_UPDATE;}
+	virtual GameMessage * clone() const{MsgSeverInfoUpdate*ret = new MsgSeverInfoUpdate;ret->opcode=opcode;return ret;}
+};
+
+struct MsgContinueLoginFlipCard : public GameMessage
+{
+	static MsgContinueLoginFlipCard* getTrueType(GameMessage * msg);
+	MsgContinueLoginFlipCard();
+	unsigned int index;
+	virtual const unsigned int getTypeId() const{return MSG_CONTINUE_LOGIN_FLIPCARD;}
+	virtual GameMessage * clone() const{MsgContinueLoginFlipCard*ret = new MsgContinueLoginFlipCard;ret->index=index;return ret;}
+};
+
+struct MsgAdventurePageChange:public GameMessage
+{	
+	static MsgAdventurePageChange* getTrueType(GameMessage * msg);
+	MsgAdventurePageChange();
+	unsigned int index;
+	virtual const unsigned int getTypeId() const{return MSG_ADVENTURE_PAGECHANGE;}
+	virtual GameMessage * clone() const{MsgAdventurePageChange*ret = new MsgAdventurePageChange;ret->index=index;return ret;}
+};
+struct MsgMainFrameRefreshPage : public GameMessage
+{
+	static MsgMainFrameRefreshPage* getTrueType(GameMessage * msg);
+	MsgMainFrameRefreshPage();
+	std::string pageName;
+	virtual const unsigned int getTypeId() const{return MSG_MAINFRAME_REFRESH;}
+	virtual GameMessage * clone() const{MsgMainFrameRefreshPage*ret = new MsgMainFrameRefreshPage;ret->pageName = pageName;return ret;}
+};
+struct MsgAdventureRemoveItem : public GameMessage
+{
+	static MsgAdventureRemoveItem* getTrueType(GameMessage * msg);
+	MsgAdventureRemoveItem();
+	unsigned int index;
+	virtual const unsigned int getTypeId() const{return MSG_ADVENTURE_REMOVEITEM;}
+	virtual GameMessage * clone() const{MsgAdventureRemoveItem*ret = new MsgAdventureRemoveItem;ret->index = index;return ret;}
+};
+struct MsgAdventureTeachExpDataInit : public GameMessage
+{
+	static MsgAdventureTeachExpDataInit* getTrueType(GameMessage * msg);
+	MsgAdventureTeachExpDataInit();
+	unsigned int index;
+	virtual const unsigned int getTypeId() const{return MSG_ADVENTURE_TEACHEXPINIT;}
+	virtual GameMessage * clone() const{MsgAdventureTeachExpDataInit*ret = new MsgAdventureTeachExpDataInit;ret->index = index;return ret;}
+};
+
+struct MsgPackPreviewSourceMsg : public GameMessage
+{
+	static MsgPackPreviewSourceMsg* getTrueType(GameMessage * msg);
+	MsgPackPreviewSourceMsg();
+	unsigned int index;
+	//virtual std::string getParameters() const{return StringConverter::toString(index);}
+	virtual const unsigned int getTypeId() const{return MSG_PACKPREVIEW_SOURCE_MSG;}
+	virtual GameMessage * clone() const{MsgPackPreviewSourceMsg*ret = new MsgPackPreviewSourceMsg;ret->index = index;return ret;}
+};
+
+struct MsgInstructionNext : public GameMessage
+{
+	static MsgInstructionNext* getTrueType(GameMessage * msg);
+	MsgInstructionNext();
+	unsigned int tag;
+	virtual const unsigned int getTypeId() const{return MSG_INSTRUCTION_NEXT;}
+	virtual GameMessage * clone() const{MsgInstructionNext*ret = new MsgInstructionNext;ret->tag = tag;return ret;}
+};
+
+
+struct MsgFightEnd : public GameMessage
+{
+	static MsgFightEnd* getTrueType(GameMessage * msg);
+	MsgFightEnd();
+	bool gotItem;
+	virtual const unsigned int getTypeId() const{return MSG_FIGHT_END;}
+	virtual GameMessage * clone() const{MsgFightEnd*ret = new MsgFightEnd;ret->gotItem = gotItem;return ret;}
+};
+
+struct MsgButtonPressed : public GameMessage
+{
+	static MsgButtonPressed* getTrueType(GameMessage * msg);
+	MsgButtonPressed();
+	std::string ccb;
+	std::string func;
+	int tag;
+	virtual const unsigned int getTypeId() const{return MSG_BUTTON_PRESSED;}
+	virtual GameMessage * clone() const{
+		MsgButtonPressed*ret = new MsgButtonPressed;
+		ret->ccb = ccb;ret->func = func;ret->tag = tag;
+		return ret;}
+};
+
+
+struct MsgToTab:public GameMessage
+{	
+	static MsgToTab* getTrueType(GameMessage * msg);
+	MsgToTab();
+	unsigned int tabIndex;
+	virtual const unsigned int getTypeId() const{return MSG_TO_TAB;}
+	virtual GameMessage * clone() const{MsgToTab*ret = new MsgToTab;ret->tabIndex=tabIndex;return ret;}
+};
+
+struct MsgFightRoundLoadSkill : public GameMessage
+{
+	static MsgFightRoundLoadSkill* getTrueType(GameMessage * msg);
+	MsgFightRoundLoadSkill();
+	virtual const unsigned int getTypeId() const{return MSG_FIGHTROUND_LOADSKILL;}
+	virtual GameMessage * clone() const {return new MsgFightRoundLoadSkill();}
+};
+
+struct MsgRechargeSuccess : public GameMessage
+{
+	static MsgRechargeSuccess* getTrueType(GameMessage * msg);
+	MsgRechargeSuccess();
+	virtual const unsigned int getTypeId() const{return MSG_RECHARGE_SUCCESS;}
+	virtual GameMessage * clone() const {return new MsgRechargeSuccess();}
+};
+
+struct MsgFightPageExit : public GameMessage
+{
+	static MsgFightPageExit* getTrueType(GameMessage * msg);
+	MsgFightPageExit(){};
+	virtual const unsigned int getTypeId() const{return MSG_FIGHTPAGE_EXIT;}
+	virtual GameMessage * clone() const {return new MsgFightPageExit();}
+};

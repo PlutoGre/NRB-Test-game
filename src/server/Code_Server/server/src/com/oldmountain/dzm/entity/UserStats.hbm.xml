@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.oldmountain.dzm.entity">
+	<class name="UserStats" table="stats" dynamic-update="true" dynamic-insert="true">
+		<id name="playerid" column="playerid">
+			<generator class="assigned" />
+		</id>
+		<property name="firstbaitime" column="firstbaitime" type="int"></property>
+		<property name="firstwantime" column="firstwantime" type="int"></property>
+		<property name="buygifts" column="buygifts" type="string"></property>
+		<property name="discipleLucky" column="discipleLucky" type="int"></property>
+        <property name="nextDisciple" column="nextDisciple" type="int"></property>
+        <property name="visitRewardCount" column="visitRewardCount" type="int"></property>
+        <property name="visitTimes" column="visitTimes" type="int"></property>
+        <property name="lastVisitTime" column="lastVisitTime" type="int"></property>
+        <property name="hasVisited" column="hasVisited" type="int"></property>
+		<property name="loginreward" column="loginreward" type="string"></property>
+		<property name="logincount" column="logincount" type="int"></property>
+		<property name="getreward" column="getreward" type="int"></property>
+		<property name="levelupreward" column="levelupreward" type="string"></property>
+        <property name="luckOne" column="luckOne" type="int"></property>
+        <property name="luckTwo" column="luckTwo" type="int"></property>
+        <property name="treasureWorth" column="treasureWorth" type="int"></property>
+        <property name="ameatfood" column="ameatfood" type="int"></property>
+        <property name="pmeatfood" column="pmeatfood" type="int"></property>
+        <property name="challengetimes" column="challengetimes" type="int"></property>
+        <property name="luckPool" column="luckPool" type="float"></property>
+        <property name="adContinueInfo" column="adContinueInfo" type="string"/>
+        <property name="cdkeyTypes" column="cdkeyTypes" type="string"/>
+        <property name="sysMsgTime" column="sysmsgTime" type="int"/>
+        <property name="pieceskilltimes" column="pieceskilltimes" type="int"/>
+        <property name="chargeHeap" column="chargeHeap" type="int"/>
+        <property name="getRebate" column="getRebate" type="int"/>
+        <property name="chargeTerm" column="chargeTerm" type="int"/>
+        <property name="fortuneComeTimes" column="fortuneComeTimes" type="int"/>
+        <property name="giveSoulTerm" column="giveSoulTerm" type="int"/>
+        <property name="giveSoulHeap2" column="giveSoulHeap2" type="int"/>
+        <property name="giveSoulHeap3" column="giveSoulHeap3" type="int"/>
+        <property name="giveSoulDifferTimes2" column="giveSoulDifferTimes2" type="int"/>
+        <property name="giveSoulDifferTimes3" column="giveSoulDifferTimes3" type="int"/>
+        <property name="fightEndTimes" column="fightEndTimes" type="int"/>
+        <property name="luckyStarTermid" column="luckyStarTermid" type="int"/>
+        <property name="luckyStarDropTimes1" column="luckyStarDropTimes1" type="int"/>
+        <property name="luckyStarDropTimes2" column="luckyStarDropTimes2" type="int"/>
+        <property name="luckyStayHeap1" column="luckyStayHeap1" type="int"/>
+        <property name="luckyStayHeap2" column="luckyStayHeap2" type="int"/>
+        <property name="challengeActTermId" column="challengeActTermId" type="int"/>
+        <property name="highestRankInAct" column="highestRankInAct" type="int"/>
+        <property name="nextQuickCareerTime" column="nextQuickCareerTime" type="int"/>
+        <property name="deepWaterLastTimes"	column="deepWaterLastTimes" type="string"/>
+        <property name="deepWaterHeap"	column="deepWaterHeap" type="string"/>
+        <property name="deepWaterTermId"	column="deepWaterTermId" type="int"/>
+        <property name="dwNextRefreshTime"	column="dwNextRefreshTime" type="int"/>
+	</class>
+</hibernate-mapping>

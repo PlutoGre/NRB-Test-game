@@ -1,0 +1,16 @@
+$#include "MessageBoxPage.h"
+
+enum Popup_Page_Type
+{
+	SnatchSkillBookFightWin,
+	SnatchSkillBookFightFail,
+	CareerAttackNumLimit,
+	NotEnoughGold,
+	ChangeDiscipleConfirm,
+	Script,
+};
+class MessageBoxPage 
+{
+	static void Msg_Box(std::string msgString);
+	static void Msg_Box_Lan(std::string msgString);
+};

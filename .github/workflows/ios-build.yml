@@ -1,0 +1,109 @@
+name: Build iOS from repository
+
+on:
+  workflow_dispatch:
+    inputs:
+      server_host:
+        description: LAN fallback host; enter Quick Tunnel HTTPS URL in the app after installation
+        required: true
+        default: '192.168.1.100'
+        type: string
+      web_port:
+        description: Resource HTTP port
+        required: true
+        default: '18081'
+        type: string
+      game_port:
+        description: Game TCP port
+        required: true
+        default: '25524'
+        type: string
+      resource_version:
+        description: Resource version matching the server deployment
+        required: true
+        default: '1.78.6'
+        type: string
+      bundle_id:
+        description: Bundle identifier (no Apple signing required for this build)
+        required: true
+        default: 'org.onepiece.local'
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ios-source-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: macos-15
+    timeout-minutes: 45
+    env:
+      SERVER_HOST: ${{ inputs.server_host }}
+      WEB_PORT: ${{ inputs.web_port }}
+      GAME_PORT: ${{ inputs.game_port }}
+      RESOURCE_VERSION: ${{ inputs.resource_version }}
+      BUNDLE_ID: ${{ inputs.bundle_id }}
+    steps:
+      - name: Check out project sources
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Install Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Prepare tools and record environment
+        shell: bash
+        run: |
+          python -m pip install 'cmake>=3.24,<4'
+          mkdir -p outputs
+          {
+            sw_vers
+            xcodebuild -version
+            cmake --version
+            python --version
+          } > outputs/environment.txt 2>&1
+          cat outputs/environment.txt
+
+      - name: Prepare current repository sources and assets
+        working-directory: src/client/ios-modern
+        run: python prepare.py --host "$SERVER_HOST" --web-port "$WEB_PORT" --game-port "$GAME_PORT" --resource-version "$RESOURCE_VERSION"
+
+      - name: Build unsigned ARM64 iPhone app
+        working-directory: src/client/ios-modern
+        run: python build.py --action build --sdk iphoneos --bundle-id "$BUNDLE_ID"
+
+      - name: Package unsigned app and IPA for local re-signing
+        run: >-
+          python src/client/ios-modern/package_app.py
+          --app src/client/ios-modern/generated/build-iphoneos/DerivedData/Build/Products/Debug-iphoneos/OnePiece.app
+          --output outputs
+
+      - name: Upload unsigned client
+        uses: actions/upload-artifact@v7
+        with:
+          name: ios-unsigned-app
+          path: |
+            outputs/onepiece-unsigned-for-resigning.ipa
+            outputs/onepiece-unsigned-iphoneos-app.tar.gz
+            outputs/UNSIGNED-NOT-INSTALLABLE.txt
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 0
+
+      - name: Save diagnostics even on failure
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: ios-build-logs
+          path: |
+            outputs/environment.txt
+            src/client/ios-modern/generated/build-iphoneos/build.log
+            src/client/ios-modern/generated/build-iphoneos/result.json
+          if-no-files-found: warn
+          retention-days: 7

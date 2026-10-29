@@ -1,0 +1,39 @@
+$#include "MessageManager.h"
+
+class GameMessage : public cocos2d::CCObject
+{
+	virtual const unsigned int getTypeId();
+};
+
+class GameScriptMessage : public GameMessage
+{
+	GameScriptMessage(unsigned int type):mTypeId(type){};
+	virtual const unsigned int getTypeId() const {return mTypeId;};
+	virtual GameMessage *clone() const {GameScriptMessage*ret = new GameScriptMessage(mTypeId);return ret;};
+
+	unsigned int mTypeId;
+};
+
+class MessageHandler
+{
+
+};
+
+class MessageScriptHandler : public MessageHandler 
+{
+	MessageScriptHandler( LUA_FUNCTION nHandler );
+	virtual ~MessageScriptHandler();
+	virtual void onReceiveMassage( GameMessage * message);
+};
+
+class MessageManager
+{
+	static MessageManager* getInstance(){return MessageManager::Get();}
+	void update();
+	void sendMessageForScript(GameMessage* message);
+	void regisiterMessageHandler(unsigned int id, MessageHandler* handler);
+	void removeMessageHandler(unsigned int id, MessageHandler* messagehandler);
+	void removeMessageHandler(MessageHandler* messagehandler);
+};
+
+

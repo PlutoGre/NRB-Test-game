@@ -1,0 +1,143 @@
+INFO  2015-08-04 11:10:10,990 [UserMarketInfoHandler.java,33] - user market info handler received: 1, 1, {}
+INFO  2015-08-04 11:10:10,998 [UserMarketInfoHandler.java,89] - user market info handler ret send: 1, 2, {}
+INFO  2015-08-04 11:10:46,528 [MarketRecruitDiscipleHandler.java,57] - market recruit disciple handler received: 1, 1, 1
+INFO  2015-08-04 11:10:46,556 [MarketRecruitDiscipleHandler.java,453] - market recruit disciple handler ret send: 1, 26, {}
+INFO  2015-08-04 11:12:29,880 [UserMarketInfoHandler.java,33] - user market info handler received: 4, 1, {}
+INFO  2015-08-04 11:12:29,881 [UserMarketInfoHandler.java,89] - user market info handler ret send: 4, 1, {}
+INFO  2015-08-04 11:14:53,513 [UserMarketInfoHandler.java,33] - user market info handler received: 5, 1, {}
+INFO  2015-08-04 11:14:53,514 [UserMarketInfoHandler.java,89] - user market info handler ret send: 5, 1, {}
+INFO  2015-08-04 11:17:31,443 [UserMarketInfoHandler.java,33] - user market info handler received: 6, 1, {}
+INFO  2015-08-04 11:17:31,446 [UserMarketInfoHandler.java,89] - user market info handler ret send: 6, 3, {}
+INFO  2015-08-04 11:17:42,121 [UserMarketInfoHandler.java,33] - user market info handler received: 5, 1, {}
+INFO  2015-08-04 11:17:42,122 [UserMarketInfoHandler.java,89] - user market info handler ret send: 5, 1, {}
+INFO  2015-08-04 11:19:53,777 [UserMarketInfoHandler.java,33] - user market info handler received: 7, 1, {}
+INFO  2015-08-04 11:19:53,778 [UserMarketInfoHandler.java,89] - user market info handler ret send: 7, 1, {}
+INFO  2015-08-04 11:20:12,506 [UserMarketInfoHandler.java,33] - user market info handler received: 8, 1, {}
+INFO  2015-08-04 11:20:12,507 [UserMarketInfoHandler.java,89] - user market info handler ret send: 8, 0, {}
+INFO  2015-08-04 11:22:13,842 [UserMarketInfoHandler.java,33] - user market info handler received: 8, 1, {}
+INFO  2015-08-04 11:22:13,844 [UserMarketInfoHandler.java,89] - user market info handler ret send: 8, 2, {}
+INFO  2015-08-04 11:22:16,877 [UserMarketInfoHandler.java,33] - user market info handler received: 5, 1, {}
+INFO  2015-08-04 11:22:16,879 [UserMarketInfoHandler.java,89] - user market info handler ret send: 5, 2, {}
+INFO  2015-08-04 11:22:53,037 [MarketRecruitDiscipleHandler.java,57] - market recruit disciple handler received: 8, 1, 2
+INFO  2015-08-04 11:22:53,063 [MarketRecruitDiscipleHandler.java,453] - market recruit disciple handler ret send: 8, 26, {}
+INFO  2015-08-04 11:23:00,664 [MarketRecruitDiscipleHandler.java,57] - market recruit disciple handler received: 8, 1, 1
+INFO  2015-08-04 11:23:00,687 [MarketRecruitDiscipleHandler.java,453] - market recruit disciple handler ret send: 8, 22, {}
+INFO  2015-08-04 11:28:29,872 [UserMarketInfoHandler.java,33] - user market info handler received: 5, 1, {}
+INFO  2015-08-04 11:28:29,873 [UserMarketInfoHandler.java,89] - user market info handler ret send: 5, 1, {}
+INFO  2015-08-04 12:49:17,526 [UserMarketInfoHandler.java,33] - user market info handler received: 7, 1, {}
+INFO  2015-08-04 12:49:17,528 [UserMarketInfoHandler.java,89] - user market info handler ret send: 7, 2, {}
+INFO  2015-08-04 12:51:11,371 [UserMarketInfoHandler.java,33] - user market info handler received: 7, 1, {}
+INFO  2015-08-04 12:51:11,372 [UserMarketInfoHandler.java,89] - user market info handler ret send: 7, 1, {}
+INFO  2015-08-04 12:52:48,900 [MarketRecruitDiscipleHandler.java,57] - market recruit disciple handler received: 7, 1, 2
+INFO  2015-08-04 12:52:48,923 [MarketRecruitDiscipleHandler.java,453] - market recruit disciple handler ret send: 7, 23, {}
+INFO  2015-08-04 12:52:54,044 [MarketRecruitDiscipleHandler.java,57] - market recruit disciple handler received: 7, 1, 1
+INFO  2015-08-04 12:52:54,069 [MarketRecruitDiscipleHandler.java,453] - market recruit disciple handler ret send: 7, 25, {}
+INFO  2015-08-04 13:08:45,583 [MarketRecruitDiscipleHandler.java,57] - market recruit disciple handler received: 7, 1, 1
+INFO  2015-08-04 13:08:45,603 [MarketRecruitDiscipleHandler.java,453] - market recruit disciple handler ret send: 7, 20, {}
+INFO  2015-08-04 13:18:59,666 [UserMarketInfoHandler.java,33] - user market info handler received: 5, 1, {}
+INFO  2015-08-04 13:18:59,670 [UserMarketInfoHandler.java,89] - user market info handler ret send: 5, 3, {}
+INFO  2015-08-04 13:19:24,479 [UserMarketInfoHandler.java,33] - user market info handler received: 5, 1, {}
+INFO  2015-08-04 13:19:24,482 [UserMarketInfoHandler.java,89] - user market info handler ret send: 5, 3, {}
+INFO  2015-08-04 13:22:29,611 [UserMarketInfoHandler.java,33] - user market info handler received: 9, 1, {}
+INFO  2015-08-04 13:22:29,615 [UserMarketInfoHandler.java,89] - user market info handler ret send: 9, 4, {}
+INFO  2015-08-04 13:23:58,088 [UserMarketInfoHandler.java,33] - user market info handler received: 9, 1, {}
+INFO  2015-08-04 13:23:58,091 [UserMarketInfoHandler.java,89] - user market info handler ret send: 9, 3, {}
+INFO  2015-08-04 13:26:12,593 [BuyToolHandler.java,58] - buy tool handler received: 5, 3502001, 1
+INFO  2015-08-04 13:26:22,931 [UserMarketInfoHandler.java,33] - user market info handler received: 5, 1, {}
+INFO  2015-08-04 13:26:22,934 [UserMarketInfoHandler.java,89] - user market info handler ret send: 5, 3, {}
+INFO  2015-08-04 13:33:08,165 [MarketRecruitDiscipleHandler.java,57] - market recruit disciple handler received: 9, 1, 2
+INFO  2015-08-04 13:33:08,180 [MarketRecruitDiscipleHandler.java,453] - market recruit disciple handler ret send: 9, 14, {}
+INFO  2015-08-04 13:33:41,308 [BuyToolHandler.java,58] - buy tool handler received: 9, 3001004, 1
+INFO  2015-08-04 13:33:55,084 [BuyToolHandler.java,58] - buy tool handler received: 9, 3002004, 1
+INFO  2015-08-04 13:34:26,496 [BuyToolHandler.java,58] - buy tool handler received: 9, 3002004, 1
+INFO  2015-08-04 13:56:24,317 [BuyToolHandler.java,58] - buy tool handler received: 9, 3002004, 1
+INFO  2015-08-04 13:56:38,515 [BuyToolHandler.java,58] - buy tool handler received: 9, 3002004, 1
+INFO  2015-08-04 13:57:11,564 [BuyToolHandler.java,58] - buy tool handler received: 9, 3002004, 1
+INFO  2015-08-04 13:58:57,915 [BuyToolHandler.java,58] - buy tool handler received: 9, 1101002, 1
+INFO  2015-08-04 14:02:48,354 [BuyToolHandler.java,58] - buy tool handler received: 9, 3002001, 1
+INFO  2015-08-04 14:02:48,381 [BuyToolHandler.java,140] - buy tool handler ret send: 9, 26, {}
+INFO  2015-08-04 14:02:59,582 [BuyToolHandler.java,58] - buy tool handler received: 9, 3001004, 1
+INFO  2015-08-04 14:02:59,603 [BuyToolHandler.java,140] - buy tool handler ret send: 9, 19, {}
+INFO  2015-08-04 14:03:10,724 [BuyToolHandler.java,58] - buy tool handler received: 9, 3002004, 1
+INFO  2015-08-04 14:03:10,747 [BuyToolHandler.java,140] - buy tool handler ret send: 9, 21, {}
+INFO  2015-08-04 14:05:36,030 [UserMarketInfoHandler.java,33] - user market info handler received: 7, 1, {}
+INFO  2015-08-04 14:05:36,034 [UserMarketInfoHandler.java,89] - user market info handler ret send: 7, 2, {}
+INFO  2015-08-04 14:06:29,783 [BuyToolHandler.java,58] - buy tool handler received: 7, 3002004, 1
+INFO  2015-08-04 14:06:29,824 [BuyToolHandler.java,140] - buy tool handler ret send: 7, 40, {}
+INFO  2015-08-04 14:06:47,906 [BuyToolHandler.java,58] - buy tool handler received: 7, 3002004, 1
+INFO  2015-08-04 14:06:47,919 [BuyToolHandler.java,140] - buy tool handler ret send: 7, 12, {}
+INFO  2015-08-04 14:06:55,520 [BuyToolHandler.java,58] - buy tool handler received: 7, 3001004, 1
+INFO  2015-08-04 14:06:55,532 [BuyToolHandler.java,140] - buy tool handler ret send: 7, 10, {}
+INFO  2015-08-04 14:07:06,253 [BuyToolHandler.java,58] - buy tool handler received: 7, 3001004, 16
+INFO  2015-08-04 14:07:06,266 [BuyToolHandler.java,140] - buy tool handler ret send: 7, 12, {}
+INFO  2015-08-04 14:07:16,849 [BuyToolHandler.java,58] - buy tool handler received: 7, 3002004, 15
+INFO  2015-08-04 14:07:16,861 [BuyToolHandler.java,140] - buy tool handler ret send: 7, 11, {}
+INFO  2015-08-04 14:20:00,370 [UserMarketInfoHandler.java,33] - user market info handler received: 10, 1, {}
+INFO  2015-08-04 14:20:00,373 [UserMarketInfoHandler.java,89] - user market info handler ret send: 10, 3, {}
+INFO  2015-08-04 14:21:34,356 [UserMarketInfoHandler.java,33] - user market info handler received: 5, 1, {}
+INFO  2015-08-04 14:21:34,357 [UserMarketInfoHandler.java,89] - user market info handler ret send: 5, 1, {}
+INFO  2015-08-04 14:40:04,603 [UserMarketInfoHandler.java,33] - user market info handler received: 5, 1, {}
+INFO  2015-08-04 14:40:04,607 [UserMarketInfoHandler.java,89] - user market info handler ret send: 5, 3, {}
+INFO  2015-08-04 14:41:08,854 [BuyToolHandler.java,58] - buy tool handler received: 5, 3501001, 1
+INFO  2015-08-04 14:41:08,995 [BuyToolHandler.java,140] - buy tool handler ret send: 5, 138, {}
+INFO  2015-08-04 14:41:15,557 [BuyToolHandler.java,58] - buy tool handler received: 5, 5002002, 1
+INFO  2015-08-04 14:41:15,577 [BuyToolHandler.java,140] - buy tool handler ret send: 5, 19, {}
+INFO  2015-08-04 14:43:52,788 [UserMarketInfoHandler.java,33] - user market info handler received: 7, 1, {}
+INFO  2015-08-04 14:43:52,790 [UserMarketInfoHandler.java,89] - user market info handler ret send: 7, 2, {}
+INFO  2015-08-04 14:52:52,122 [UserMarketInfoHandler.java,33] - user market info handler received: 9, 1, {}
+INFO  2015-08-04 14:52:52,125 [UserMarketInfoHandler.java,89] - user market info handler ret send: 9, 3, {}
+INFO  2015-08-04 14:56:29,836 [UserMarketInfoHandler.java,33] - user market info handler received: 5, 1, {}
+INFO  2015-08-04 14:56:29,837 [UserMarketInfoHandler.java,89] - user market info handler ret send: 5, 1, {}
+INFO  2015-08-04 14:58:34,926 [UserMarketInfoHandler.java,33] - user market info handler received: 5, 1, {}
+INFO  2015-08-04 14:58:34,930 [UserMarketInfoHandler.java,89] - user market info handler ret send: 5, 2, {}
+INFO  2015-08-04 15:02:29,619 [UserMarketInfoHandler.java,33] - user market info handler received: 5, 1, {}
+INFO  2015-08-04 15:02:29,622 [UserMarketInfoHandler.java,89] - user market info handler ret send: 5, 2, {}
+INFO  2015-08-04 15:02:57,994 [UserMarketInfoHandler.java,33] - user market info handler received: 9, 1, {}
+INFO  2015-08-04 15:02:57,996 [UserMarketInfoHandler.java,89] - user market info handler ret send: 9, 2, {}
+INFO  2015-08-04 15:03:50,641 [UserMarketInfoHandler.java,33] - user market info handler received: 5, 1, {}
+INFO  2015-08-04 15:03:50,643 [UserMarketInfoHandler.java,89] - user market info handler ret send: 5, 1, {}
+INFO  2015-08-04 15:04:24,712 [UserMarketInfoHandler.java,33] - user market info handler received: 9, 1, {}
+INFO  2015-08-04 15:04:24,713 [UserMarketInfoHandler.java,89] - user market info handler ret send: 9, 1, {}
+INFO  2015-08-04 15:05:09,652 [UserMarketInfoHandler.java,33] - user market info handler received: 5, 1, {}
+INFO  2015-08-04 15:05:09,653 [UserMarketInfoHandler.java,89] - user market info handler ret send: 5, 0, {}
+INFO  2015-08-04 15:06:08,062 [UserMarketInfoHandler.java,33] - user market info handler received: 5, 1, {}
+INFO  2015-08-04 15:06:08,064 [UserMarketInfoHandler.java,89] - user market info handler ret send: 5, 2, {}
+INFO  2015-08-04 15:06:54,755 [UserMarketInfoHandler.java,33] - user market info handler received: 5, 1, {}
+INFO  2015-08-04 15:06:54,757 [UserMarketInfoHandler.java,89] - user market info handler ret send: 5, 1, {}
+INFO  2015-08-04 15:09:27,379 [UserMarketInfoHandler.java,33] - user market info handler received: 9, 1, {}
+INFO  2015-08-04 15:09:27,382 [UserMarketInfoHandler.java,89] - user market info handler ret send: 9, 2, {}
+INFO  2015-08-04 15:10:58,375 [UserMarketInfoHandler.java,33] - user market info handler received: 9, 1, {}
+INFO  2015-08-04 15:10:58,378 [UserMarketInfoHandler.java,89] - user market info handler ret send: 9, 2, {}
+INFO  2015-08-04 15:11:34,232 [UserMarketInfoHandler.java,33] - user market info handler received: 5, 1, {}
+INFO  2015-08-04 15:11:34,234 [UserMarketInfoHandler.java,89] - user market info handler ret send: 5, 1, {}
+INFO  2015-08-04 15:14:39,237 [UserMarketInfoHandler.java,33] - user market info handler received: 5, 1, {}
+INFO  2015-08-04 15:14:39,238 [UserMarketInfoHandler.java,89] - user market info handler ret send: 5, 1, {}
+INFO  2015-08-04 15:16:14,071 [UserMarketInfoHandler.java,33] - user market info handler received: 5, 1, {}
+INFO  2015-08-04 15:16:14,071 [UserMarketInfoHandler.java,89] - user market info handler ret send: 5, 0, {}
+INFO  2015-08-04 15:20:18,111 [UserMarketInfoHandler.java,33] - user market info handler received: 5, 1, {}
+INFO  2015-08-04 15:20:18,113 [UserMarketInfoHandler.java,89] - user market info handler ret send: 5, 1, {}
+INFO  2015-08-04 15:21:33,600 [MarketRecruitDiscipleHandler.java,57] - market recruit disciple handler received: 5, 1, 1
+INFO  2015-08-04 15:21:33,632 [MarketRecruitDiscipleHandler.java,453] - market recruit disciple handler ret send: 5, 31, {}
+INFO  2015-08-04 15:24:31,516 [MarketRecruitDiscipleHandler.java,57] - market recruit disciple handler received: 5, 1, 2
+INFO  2015-08-04 15:24:31,529 [SoulUtil.java,237] - Market get additionalSoul: 5, 26, 1, 1
+INFO  2015-08-04 15:24:31,530 [MarketRecruitDiscipleHandler.java,453] - market recruit disciple handler ret send: 5, 14, {}
+INFO  2015-08-04 15:26:40,978 [UserMarketInfoHandler.java,33] - user market info handler received: 9, 1, {}
+INFO  2015-08-04 15:26:40,980 [UserMarketInfoHandler.java,89] - user market info handler ret send: 9, 2, {}
+INFO  2015-08-04 20:07:53,564 [UserMarketInfoHandler.java,33] - user market info handler received: 9, 1, {}
+INFO  2015-08-04 20:07:53,566 [UserMarketInfoHandler.java,89] - user market info handler ret send: 9, 2, {}
+INFO  2015-08-05 19:31:15,737 [UserMarketInfoHandler.java,33] - user market info handler received: 9, 1, {}
+INFO  2015-08-05 19:31:15,742 [UserMarketInfoHandler.java,89] - user market info handler ret send: 9, 2, {}
+INFO  2015-08-05 19:31:56,381 [UserMarketInfoHandler.java,33] - user market info handler received: 5, 1, {}
+INFO  2015-08-05 19:31:56,384 [UserMarketInfoHandler.java,89] - user market info handler ret send: 5, 2, {}
+INFO  2015-08-05 19:37:55,727 [UserMarketInfoHandler.java,33] - user market info handler received: 9, 1, {}
+INFO  2015-08-05 19:37:55,728 [UserMarketInfoHandler.java,89] - user market info handler ret send: 9, 1, {}
+INFO  2015-08-05 19:38:11,736 [BuyToolHandler.java,58] - buy tool handler received: 9, 3501002, 1
+INFO  2015-08-05 19:38:11,782 [BuyToolHandler.java,140] - buy tool handler ret send: 9, 46, {}
+INFO  2015-08-05 19:40:01,905 [BuyToolHandler.java,58] - buy tool handler received: 9, 3502001, 1
+INFO  2015-08-05 19:40:01,942 [BuyToolHandler.java,140] - buy tool handler ret send: 9, 36, {}
+INFO  2015-08-05 19:42:34,325 [BuyToolHandler.java,58] - buy tool handler received: 9, 5001032, 1
+INFO  2015-08-05 19:42:34,943 [BuyToolHandler.java,140] - buy tool handler ret send: 9, 618, {}
+INFO  2015-08-05 19:42:49,427 [BuyToolHandler.java,58] - buy tool handler received: 9, 5001032, 1
+INFO  2015-08-05 19:42:49,438 [BuyToolHandler.java,140] - buy tool handler ret send: 9, 9, {}
+INFO  2015-08-05 19:43:05,843 [BuyToolHandler.java,58] - buy tool handler received: 9, 5001032, 1
+INFO  2015-08-05 19:43:05,856 [BuyToolHandler.java,140] - buy tool handler ret send: 9, 11, {}

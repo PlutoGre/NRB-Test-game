@@ -1,0 +1,4 @@
+.bootstrap/
+download-cache/
+*.partial
+github-upload/

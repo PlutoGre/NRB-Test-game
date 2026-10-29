@@ -1,0 +1,6 @@
+INFO  2015-08-04 13:13:51,711 [UserSysMsgInfoHandler.java,55] - getSysMsgInfo handler received: 7, 1, {}
+INFO  2015-08-04 13:13:51,766 [UserSysMsgInfoHandler.java,68] - getSysMsgInfo handler ret send: 7, Cost:48, {}
+INFO  2015-08-04 13:19:28,655 [UserSysMsgInfoHandler.java,55] - getSysMsgInfo handler received: 5, 1, {}
+INFO  2015-08-04 13:19:28,733 [UserSysMsgInfoHandler.java,68] - getSysMsgInfo handler ret send: 5, Cost:77, {}
+INFO  2015-08-04 14:45:32,983 [UserSysMsgInfoHandler.java,55] - getSysMsgInfo handler received: 7, 1, {}
+INFO  2015-08-04 14:45:33,019 [UserSysMsgInfoHandler.java,68] - getSysMsgInfo handler ret send: 7, Cost:36, {}

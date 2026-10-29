@@ -1,0 +1,19 @@
+$#include "CCBContainer.h"
+
+class CCBContainer : public cocos2d::CCNode
+{
+	virtual void onMenuItemAction(const std::string& itemName, cocos2d::CCObject* sender){};
+	virtual void unload();
+	virtual bool getLoaded();
+
+	void loadCcbiFile(const std::string& filename, bool froceLoad = false);
+	void runAnimation(const std::string& actionname);
+  CCObject* getVariable(const std::string& variablename);
+
+	void registerScriptHandler(int nHandler);
+	void unregisterScriptHandler(void);
+	int getScriptHandler() { return mScriptHandler; };
+
+	virtual bool init(){return true;}  
+
+};

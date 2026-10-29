@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+	<TextView
+	    android:id="@+id/feedback_title"
+	    android:layout_width="wrap_content"
+	    android:layout_height="60dip"
+	    android:layout_marginLeft="16dip"
+	    android:text="@string/feedback_title"
+	    android:textColor="#222222"
+	    android:textSize="28sp"
+	    android:gravity="center_vertical" />
+	
+	<View
+	    android:id="@+id/feedback_divider"
+	    android:layout_width="match_parent"
+	    android:layout_height="2dip"
+	    android:background="@color/wandou_green" />
+	
+	<ScrollView
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="28dip"
+	    android:layout_marginBottom="24dip"
+	    android:layout_marginLeft="15dip"
+	    android:layout_marginRight="15dip"
+	    android:scrollbarStyle="outsideInset" >
+	    
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" >
+	        
+	        <TextView
+	            android:id="@+id/payment_problem_label"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_alignParentTop="true"
+	            android:text="@string/payment_problem_label"
+	            android:textColor="#222222"
+	            android:textSize="18sp" />
+	        
+	        <EditText
+	            android:id="@+id/payment_problem_description"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@id/payment_problem_label"
+	            android:layout_marginTop="24dip"
+	            android:hint="@string/payment_problem_description_hint"
+	            android:textColor="#222222"
+	            android:textColorHint="#777777"
+	            android:textSize="16sp" />
+	        
+	        <TextView
+	            android:id="@+id/customer_contact_information_label"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@id/payment_problem_description"
+	            android:layout_marginTop="40dip"
+	            android:text="@string/customer_contact_information_label"
+	            android:textColor="#222222"
+	            android:textSize="18sp" />
+	        
+	        <EditText
+	            android:id="@+id/customer_contact_information_mobile"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@id/customer_contact_information_label"
+	            android:layout_marginTop="24dip"
+	            android:hint="@string/customer_contact_information_mobile_hint"
+	            android:textColor="#222222"
+	            android:textColorHint="#777777"
+	            android:textSize="16sp"
+	            android:inputType="phone" />
+	        
+	        <EditText
+	            android:id="@+id/customer_contact_information_qq"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@id/customer_contact_information_mobile"
+	            android:layout_marginTop="24dip"
+	            android:hint="@string/customer_contact_information_qq_hint"
+	            android:textColor="#222222"
+	            android:textColorHint="#777777"
+	            android:textSize="16sp"
+	            android:inputType="number" />
+	        
+	        <TextView
+	            android:id="@+id/customer_service_contact_information_label"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@id/customer_contact_information_qq"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginTop="36dip"
+	            android:text="@string/customer_service_contact_information_label"
+	            android:textSize="14sp"
+	    		android:textColor="#AAAAAA" />
+	        
+	        <TextView
+	            android:id="@+id/customer_service_contact_information_mobile"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@id/customer_service_contact_information_label"
+	            android:layout_alignLeft="@id/customer_service_contact_information_label"
+	            android:layout_marginTop="2dip"
+	            android:textSize="14sp"
+	    		android:textColor="#AAAAAA" />
+	        
+	        <TextView
+	            android:id="@+id/customer_service_contact_information_email"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@id/customer_service_contact_information_mobile"
+	            android:layout_alignLeft="@id/customer_service_contact_information_label"
+	            android:layout_marginTop="2dip"
+	            android:textSize="14sp"
+	    		android:textColor="#AAAAAA" />
+	        
+	        <TextView
+	            android:id="@+id/sdk_version_in_feedback"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@id/customer_service_contact_information_email"
+	            android:layout_alignLeft="@id/customer_service_contact_information_label"
+	            android:layout_marginTop="2dip"
+	            android:textSize="14sp"
+	    		android:textColor="#AAAAAA" />
+	        
+	        <Button
+	            android:id="@+id/feedback_back_to_button"
+	            android:layout_width="@dimen/wandoujia_payment_button_width"
+	            android:layout_height="@dimen/wandoujia_payment_button_height"
+	            android:layout_alignParentLeft="true"
+	            android:layout_below="@id/sdk_version_in_feedback"
+	            android:layout_marginTop="36dip"
+	            android:background="@drawable/wdj_grey_button_drawable"
+	            android:gravity="center"
+	            android:text="@string/feedback_cancel_text"
+	            android:textColor="#222222"
+	            android:textSize="18sp" />
+
+	        <Button
+	            android:id="@+id/feed_back_submit_button"
+	            android:layout_width="@dimen/wandoujia_payment_button_width"
+	            android:layout_height="@dimen/wandoujia_payment_button_height"
+	            android:layout_alignParentRight="true"
+	            android:layout_alignTop="@id/feedback_back_to_button"
+	            android:background="@drawable/wdj_payment_general_button_background"
+	            android:gravity="center"
+	            android:text="@string/feedback_submit_text"
+	            android:textColor="#FFFFFF"
+	            android:textSize="18sp" />
+	    </RelativeLayout>
+	</ScrollView>
+</LinearLayout>

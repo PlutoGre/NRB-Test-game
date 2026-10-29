@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/userloginroot"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/dk_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/dk_login_title"
+        style="@style/tabbar_top_style"
+        android:layout_gravity="center_vertical"
+         >
+
+        <ImageView
+            android:id="@+id/dk_btn_back_register_agreement"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/dk_ic_back_ab"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="8dp"/>
+		
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            >
+            
+        	<TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:gravity="center"
+	            android:text="@string/dk_tv_string_register_service_lease"
+	            android:textSize="18sp"
+	            android:textColor="@color/dk_gamesdk_white"
+            />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1"
+	    android:scrollbars="none"
+	    android:background="@color/dk_bg"
+	    android:layout_marginLeft="12dp"
+	    android:layout_marginRight="12dp"
+        >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="16dp"
+	        android:orientation="vertical" 
+	        >
+			
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/dk_color_333333"
+                android:text="@string/dk_userregister_licence"/>
+
+        </LinearLayout>
+    </ScrollView>
+	
+    <LinearLayout
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:layout_marginBottom="2dip"
+	    android:layout_marginLeft="12dp"
+	    android:layout_marginRight="12dp"
+	    android:layout_marginTop="4dp">
+ 		
+		<LinearLayout
+		    	android:id="@+id/one_button" 
+			    android:layout_width="fill_parent" 
+			    android:layout_height="wrap_content" 
+			    android:orientation="horizontal"
+			    android:visibility="visible">
+	  			    />
+		    <Button android:id="@+id/dk_button_ok"
+	  			    android:layout_width="fill_parent"
+	  			    android:layout_height="wrap_content"
+	  			    android:layout_weight="1"
+	  			    android:background="@drawable/dk_login_btn_selector"
+	  			    android:textColor="@color/dk_gamesdk_white"
+                    android:textSize="16sp"
+	  			    android:text="@string/dk_btn_string_i_know"
+	  			    />
+		</LinearLayout>
+		
+	</LinearLayout>
+</LinearLayout>

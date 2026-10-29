@@ -1,0 +1,58 @@
+本地部署与已知问题修复
+
+本次修改修复源码和后续打包流程，不会自动改变目录中已有的 APK、DZM.jar。
+此前 .debug/onepiece/local-offline.apk 是已实际验证玩法的临时调试包，不等同于本次源码重新编译的产物。
+
+1. 生成配套地址与资源配置（Python 3）
+
+官方模拟器连接本机示例，在仓库根目录执行：
+python src/tools/configure_deployment.py --host 10.0.2.2 --web-port 18080 --game-port 25524 --channel anzhi --local-login --web-root D:/test/onepiece-web --server-dir src/server/Code_Server/server
+
+web-root 必须是独立空目录，或该工具之前生成的目录。不要指定原有其他网站目录。
+真机连接同一局域网电脑时，将 host 改为电脑的局域网 IP；手机中的 127.0.0.1 是手机自己。
+只配置 Windows 本机客户端时可以使用 127.0.0.1。
+真实渠道登录不传 --local-login；--channel all 可生成全部渠道的部署覆盖文件。
+需要更换资源或地址时递增 --resource-version，默认 1.78.6，用于替换旧 APK 的缓存资源。
+
+工具生成：
+- 各渠道 deployment/version_android.cfg 与 deployment/game.properties。
+- Web 下 gameserver/dzm/1.8 的客户端资源、servers_list.php、update.php。
+- Web 根地址指向资源目录，而不是 update.php；更新清单使用与 C++ 相同的 CRC16 算法。
+- 默认关闭公告，避免沿用不存在的 notice_ios.php 或旧运营公告地址。
+- 指定 server-dir 时同步游戏端口与 ResourceVersion，保留原 config.xml 的备份；数据库账号和端口仍需自行配置。
+
+将 Web 服务的站点根目录指向生成的 web-root。servers_list.php 和 update.php 是 JSON 文本，静态 HTTP 服务也可提供。
+例如：python -m http.server 18080 --bind 0.0.0.0 --directory D:/test/onepiece-web
+数据库与 Java 游戏服按原说明启动；游戏 TCP 端口、Web 端口都必须能从客户端访问。
+这些命令为部署操作说明，本次修复没有自动执行构建、编译、测试或 lint。
+
+2. 重新生成客户端
+
+按已有 NDK/Ant 流程构建所选渠道。现在根 Android 工程与 25 个渠道 Ant 工程均接入 -pre-build 公共准备步骤。
+该步骤需 Python 3（默认 python 命令，可通过 Ant 的 deployment.python 属性指定 Python 3 可执行文件）。
+它同步修复后的公共源码、统一日志入口、默认登录类，以及 deployment 覆盖配置。
+旧 step3_copy_res_src_libs_assets_so.bat 覆盖 assets 后，deployment 配置会在 Ant 打包前重新应用。
+
+NDK 的 Application.mk 保留 armeabi、armeabi-v7a 两种 32 位 ARM 目标。
+若 v7a 目录只有 SDK 库，公共步骤会补入通用 ARM 游戏库；其他缺失或错误架构会停止打包并指出缺失文件。
+不会把 ARM 库复制到 x86 或 ARM64 目录。当前项目仍需支持 ARM32 的设备/模拟器；这次修改不包含 ARM64/iOS 迁移。
+
+已有 Eclipse 渠道工程或绕过 Ant 的打包方式，需要先执行：
+python src/client/Game/proj.android/antbuild/prepare_channel.py --project-dir src/client/Game/proj.android/antbuild/anzhi
+它只准备源码与原生库，不编译。不要只修改 Game/proj.android/src 而继续使用渠道目录里过期的 src 副本。
+
+3. 本地登录与公告
+
+localDebugLogin=true 为显式的本地设备登录，不连接安智等外部账号服务，不提供真实渠道充值。
+不再需要修改 DEX 字节偏移或把所有客户端固定为同一个 az_debug 账号。
+game.properties 先读取包内 assets，再由应用 files 根目录中的同名文件覆盖。
+设备身份读取失败会使用持久化随机标识；卸载/清除应用数据可能改变本地角色身份。
+
+公告地址为空时完全跳过公告，不回退旧网址。
+非空公告支持关闭按钮、返回键、取消加载；网络/证书错误及 15 秒超时会释放整个窗口。
+重复登录会先关闭旧公告，Activity 销毁时也会清理，避免透明公告层拦截游戏触摸。
+
+4. 玩法解锁
+
+远航可在完成新手引导后游玩。勇闯需要船长达到 11 级、开放 5 个阵位；新账号看不到该入口不表示玩法缺失。
+此前隔离调试账号通过本地 GM 升到 11 级，只为验证解锁条件；普通远航胜利及勇闯失败结算都已实际验证。

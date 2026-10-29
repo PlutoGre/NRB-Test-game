@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.oldmountain.dzm.entity">
+	<class name="Leagua" table="leagua" dynamic-update="true" dynamic-insert="true">
+		<id name="leaguaId" column="leaguaId">
+			<generator class="native" />
+		</id>
+		<property name="leaguaName" column="leaguaName" type="string"></property>
+		<property name="leaguaLevel" column="leaguaLevel" type="int"></property>
+		<property name="leaguaMaxMemberCount" column="leaguaMaxMemberCount" type="int"></property>
+		<property name="leaguaCurMemberCount" column="leaguaCurMemberCount" type="int"></property>
+		<property name="leaguaFunds" column="leaguaFunds" type="long"></property>
+		<property name="ownerPlayerId" column="ownerPlayerId" type="int"></property>
+		<property name="leaguaActiveMedal" column="leaguaActiveMedal" type="int"></property>
+		<property name="leaguaBroadcast" column="leaguaBroadcast" type="string"></property>
+		<property name="leaguaTotemInfo" column="leaguaTotemInfo" type="string"></property>
+		<property name="leaguaBuildingInfo" column="leaguaBuildingInfo" type="string"></property>
+		<property name="leaguaShopInfo" column="leaguaShopInfo" type="string"></property>
+		<property name="leaguaShopRefreshTime" column="leaguaShopRefreshTime" type="int"/>
+		<property name="leaguaWinRate" column="leaguaWinRate" type="float"/>
+		<property name="createTime" column="createTime" type="int"/>
+		<property name="broadcastRefreshTime" column="broadcastRefreshTime" type="int"/>
+		<property name="contributionCount" column="contributionCount" type="int"></property>
+		<property name="contributionTime" column="contributionTime" type="int"></property>
+		<property name="receiveMedalTime" column="receiveMedalTime" type="int"></property>
+		<property name="transLeaderTime" column="transLeaderTime" type="int"></property>
+	</class>
+</hibernate-mapping>

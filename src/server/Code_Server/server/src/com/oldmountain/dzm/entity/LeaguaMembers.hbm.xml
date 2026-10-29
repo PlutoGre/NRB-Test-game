@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.oldmountain.dzm.entity">
+	<class name="LeaguaMembers" table="leaguamembers" dynamic-update="true" dynamic-insert="true">
+		<id name="playerId" column="playerId">
+			<generator class="assigned" />
+		</id>
+		<property name="playerName" column="playerName" type="string"></property>
+		<property name="playerGrade" column="playerGrade" type="int"></property>
+		<property name="playerlevel" column="playerlevel" type="int"></property>
+		<property name="playerLeftContribution" column="playerLeftContribution" type="int"></property>
+		<property name="playerTotalContribution" column="playerTotalContribution" type="int"></property>
+		<property name="playerKillCount" column="playerKillCount" type="int"></property>
+		<property name="guildId" column="guildId" type="int"></property>
+		<property name="shopPurchaseInfo" column="shopPurchaseInfo" type="string"/>
+		<property name="lastBuyTime" column="lastBuyTime" type="int"></property>
+		<property name="time" column="time" type="int"></property>
+		<property name="nextCanAttackTime" column="nextcanattacktime" type="int"></property>
+		<property name="leftAttackTimes" column="leftattacktimes" type="int"></property>
+		<property name="leftGetAttackRewardTimes" column="leftrewardtimes" type="int"></property>
+		<property name="reccontributiontime" column="reccontributiontime" type="int"></property>
+		<property name="lastRefreshTime" column="lastrefreshtime" type="int"></property>
+		<property name="lastShopRefreshTime" column="lastShopRefreshTime" type="int"></property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_weight="1"
+        layout="@layout/pay_common_title_bar" />
+
+    <include layout="@layout/pay_common_tips_bar" />
+
+    <com.kugou.pay.android.widget.LoadingView
+        android:id="@+id/pay_loading"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/pay_common_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/pay_input_charge_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="@drawable/pay_common_bg" >
+
+        <LinearLayout
+            android:id="@+id/pay_layout_grid_card_money"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dip"
+                android:gravity="left"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:text="充值金额："
+                    android:textColor="#ff666666"
+                    android:textSize="15dip" />
+            </LinearLayout>
+
+            <GridView
+                android:id="@+id/recharge_grid_seletor"
+                android:layout_width="fill_parent"
+                android:layout_height="130dip"
+                android:layout_margin="10dip"
+                android:listSelector="@drawable/kgpaysdk_transparent"
+                android:numColumns="4"
+                android:scrollbars="none" />
+
+            <LinearLayout
+                android:layout_width="280dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/pay_recharge_money_custom"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dip"
+                    android:layout_weight="10"
+                    android:background="@drawable/pay_sp_bg"
+                    android:hint="也可以输入自定金额(元)"
+                    android:maxLength="7"
+                    android:numeric="integer"
+                    android:paddingRight="30dip"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="16dip" >
+                </EditText>
+
+                <Button
+                    android:id="@+id/pay_trans_money_button"
+                    android:layout_width="54dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/kgpaysdk_green_button_bg_selector"
+                    android:shadowColor="#ff000fff"
+                    android:text="确认"
+                    android:textColor="#ffffffff" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/pay_recharge_tips"
+                android:layout_width="280dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip"
+                android:background="@drawable/pay_yello_bg"
+                android:padding="5dip"
+                android:textColor="#ff000000"
+                android:textSize="15dip" />
+
+            <Button
+                android:id="@+id/pay_summit_recharge_button"
+                android:layout_width="280dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dip"
+                android:background="@drawable/kgpaysdk_green_button_bg_selector"
+                android:shadowColor="#ff000fff"
+                android:text="确认充值"
+                android:textColor="#ffffffff" />
+
+            <TextView
+                android:id="@+id/pay_long_recharge_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="27dip"
+                android:padding="5dip"
+                android:textColor="#ff666666"
+                android:textSize="13dip" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:layout_weight="1"
+        layout="@layout/pay_bottom_bar" />
+
+</LinearLayout>

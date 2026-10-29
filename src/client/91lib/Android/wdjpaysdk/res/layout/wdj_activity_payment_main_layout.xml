@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/wandou_semi_transparent"
+    android:paddingLeft="@dimen/wandoujia_payment_dialog_padding_left"
+    android:paddingRight="@dimen/wandoujia_payment_dialog_padding_right"
+    android:paddingTop="@dimen/wandoujia_payment_dialog_padding_top"
+    android:paddingBottom="@dimen/wandoujia_payment_dialog_padding_bottom" >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:background="@drawable/wdj_payment_dialog_background" >
+        
+        <include
+            android:id="@+id/payment_header_view" 
+            layout="@layout/wdj_payment_relative_header" />
+        
+        <include
+            android:id="@+id/payment_retry_view"
+            android:visibility="gone" 
+            layout="@layout/wdj_retry_payment_view_layout" />
+        
+        <FrameLayout
+		    android:id="@+id/payment_main_container"
+		    android:layout_width="match_parent"
+	    	android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/white" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingBottom="@dimen/size_20" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="@dimen/size_10"
+                android:layout_marginRight="@dimen/size_10"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/size_10"
+                    android:text="请输入手机号码"
+                    android:textColor="#494949"
+                    android:textSize="@dimen/font_18" />
+
+                <RelativeLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_48"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/size_5" >
+
+                    <Button
+                        android:id="@+id/getcode_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/size_10"
+                        android:background="@drawable/anzhi_button_bg_gray"
+                        android:gravity="center"
+                        android:text="  获取验证码  "
+                        android:textColor="#545454"
+                        android:textSize="@dimen/font_18" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/size_48"
+                        android:layout_toLeftOf="@id/getcode_tv"
+                        android:background="@drawable/anzhi_textview_normal" >
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:background="@android:color/white" >
+
+                            <EditText
+                                android:id="@+id/tel_et"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@null"
+                                android:hint="请输入手机号码"
+                                android:inputType="phone"
+                                android:paddingLeft="5dip"
+                                android:paddingRight="5dip"
+                                android:singleLine="true"
+                                android:textColor="#494949"
+                                android:textColorHint="#d0d0d0"
+                                android:textSize="@dimen/font_18" >
+
+                                <requestFocus />
+                            </EditText>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/size_10"
+                    android:gravity="center"
+                    android:text="请输入短信验证码"
+                    android:textColor="#494949"
+                    android:textSize="@dimen/font_18" />
+
+                <RelativeLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_48"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/size_5" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/size_48"
+                        android:background="@drawable/anzhi_textview_normal" >
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:background="@android:color/white" >
+
+                            <EditText
+                                android:id="@+id/code_edittext"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@null"
+                                android:hint="请输入6位验证码"
+                                android:inputType="number"
+                                android:paddingLeft="5dip"
+                                android:paddingRight="5dip"
+                                android:singleLine="true"
+                                android:textColor="#494949"
+                                android:textColorHint="#d0d0d0"
+                                android:textSize="@dimen/font_18" >
+
+                                <requestFocus />
+                            </EditText>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/yuanzhifu_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/size_10"
+                    android:text="支付密码"
+                    android:textColor="#494949"
+                    android:textSize="@dimen/font_18" />
+
+                <RelativeLayout
+                    android:id="@+id/yuan_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_48"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/size_5"
+                    android:background="@drawable/anzhi_textview_normal"
+                    android:gravity="center_vertical"
+                    android:visibility="visible" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/size_48"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:background="@android:color/white" >
+
+                        <EditText
+                            android:id="@+id/pwd_yuan"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/yuanzhifu_textview"
+                            android:background="@null"
+                            android:ems="10"
+                            android:hint="请输入支付密码"
+                            android:inputType="textPassword"
+                            android:paddingLeft="5dip"
+                            android:paddingRight="5dip"
+                            android:password="true"
+                            android:singleLine="true"
+                            android:textColor="#494949"
+                                android:textColorHint="#d0d0d0"
+                                android:textSize="@dimen/font_18" >
+
+                            <requestFocus />
+                        </EditText>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/zhifu_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/size_10"
+                    android:text="确认支付密码"
+                    android:textColor="#494949"
+                    android:textSize="@dimen/font_18" />
+
+                <RelativeLayout
+                    android:id="@+id/new_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_48"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/size_5"
+                    android:background="@drawable/anzhi_textview_normal"
+                    android:gravity="center_vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/size_48"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:background="@android:color/white" >
+
+                        <EditText
+                            android:id="@+id/pwd_first"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/zhifu_textview"
+                            android:background="@null"
+                            android:ems="10"
+                            android:hint="请输入支付密码"
+                            android:inputType="textPassword"
+                            android:paddingLeft="5dip"
+                            android:paddingRight="5dip"
+                            android:password="true"
+                            android:singleLine="true"
+                            android:textColor="#494949"
+                                android:textColorHint="#d0d0d0"
+                                android:textSize="@dimen/font_18" >
+
+                            <requestFocus />
+                        </EditText>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/new2_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="20dip"
+                    android:gravity="center_vertical"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/zhifu_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="确认支付密码：" />
+
+                    <EditText
+                        android:id="@+id/pwd_second"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/zhifu_textview"
+                        android:layout_marginTop="10dip"
+                        android:ems="10"
+                        android:hint="请输入支付密码" >
+
+                        <requestFocus />
+                    </EditText>
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/size_40"
+                    android:layout_marginRight="@dimen/size_40"
+                    android:layout_marginTop="@dimen/size_40"
+                    android:background="@drawable/anzhi_button_bg"
+                    android:gravity="center"
+                    android:text="立即设置"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/font_18" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_10"
+                    android:layout_marginRight="@dimen/size_10"
+                    android:layout_marginTop="@dimen/size_40"
+                    android:text="温馨提示"
+                    android:textColor="#757575"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_10"
+                    android:layout_marginRight="@dimen/size_10"
+                    android:layout_marginTop="@dimen/size_10"
+                    android:text="1.设置支付密码后，每次支付时，都会提示您输入支付密码，确保您的支付安全"
+                    android:textColor="#757575"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_10"
+                    android:layout_marginRight="@dimen/size_10"
+                    android:text="2.设置支付密码，需要先验证您的手机"
+                    android:textColor="#757575"
+                    android:textSize="@dimen/font_14" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

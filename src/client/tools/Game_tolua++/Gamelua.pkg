@@ -1,0 +1,53 @@
+$#include "Gamelua.h"
+
+$pfile "CCBScriptContainer.pkg"
+
+$pfile "CCScrollView.pkg"
+$pfile "TableReader.pkg"
+$pfile "InstructionManager.pkg"
+$pfile "GetPropManager.pkg"
+$pfile "TimeCalculator.pkg"
+$pfile "AES.pkg"
+$pfile "GameMaths.pkg"
+$pfile "inifile.pkg"
+$pfile "ResManager.pkg"
+$pfile "MainFrame.pkg"
+$pfile "FightPage.pkg"
+
+$pfile "Language.pkg"
+
+$pfile "SoundManager.pkg"
+
+$pfile "BlackBoard.pkg"
+
+$pfile "MessageBoxPage.pkg"
+$pfile "PopupPage.pkg"
+$pfile "PopupNotEnoughPage.pkg"
+$pfile "GiftPreviewPage.pkg"
+
+$pfile "Disciple.pkg"
+$pfile "Title.pkg"
+$pfile "Skill.pkg"
+$pfile "Equip.pkg"
+$pfile "Arena.pkg"
+
+$pfile "ServerDateManager.pkg"
+$pfile "DataTableManager.pkg"
+
+$pfile "CCBManager.pkg"
+$pfile "ScriptContentBase.pkg"
+$pfile "CCReViScrollViewFacade.pkg"
+$pfile "StringConverter.pkg"
+$pfile "PacketManager.pkg"
+$pfile "ScriptMathToLua.pkg"
+$pfile "GoodsPopupPage.pkg"
+$pfile "GameMessages.pkg"
+$pfile "MessageManager.pkg"
+$pfile "libOS.pkg"
+$pfile "libPlatform.pkg"
+$pfile "DiscipleHandInfoPage.pkg"
+$pfile "SkillHandInfoPage.pkg"
+$pfile "EquipHandInfoPage.pkg"
+$pfile "PropInfoPage.pkg"
+$pfile "RestrictedWord.pkg"
+$pfile "GamePrecedure.pkg"

@@ -1,0 +1,18 @@
+message OPBackStagePushRewardInfo
+{
+	required int32 version 	= 1 [default = 1];
+	required string rewardname = 2 ;
+	required string rewardcontent = 3 ;
+	required string field = 4 ;
+	required int32 logintime = 5 ;
+	required string names = 6 ;
+	required int32 levelStart = 7;
+	required int32 levelEnd = 8;
+	required int32 rankStart = 9;
+	required int32 rankEnd = 10;
+}
+ 
+message OPBackStagePushRewardInfoRet
+{
+	required int32 servertime = 1;
+}

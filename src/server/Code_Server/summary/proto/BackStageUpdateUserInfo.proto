@@ -1,0 +1,20 @@
+message OPBackStageUpdateUserInfo
+{
+	required int32 version 	= 1 [default = 1];
+	required string name 	= 2 ;
+	required string changeType 	= 3 ;
+	required int32 changeNum1 	= 4 ;
+	required int32 changeNum2 	= 5 ;
+}
+ 
+message OPBackStageUpdateUserInfoRet
+{
+	required int32 servertime = 1;
+	required int32 userid = 2;
+	required string name = 3;
+	required int32 registertime = 4;
+	required int32 lastlogin = 5;
+	required int32 level = 6;
+	required int64 silvercoins = 7;
+	required int32 goldcoins = 8;
+}

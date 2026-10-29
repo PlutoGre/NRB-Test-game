@@ -1,0 +1,17 @@
+$#include "PopupPage.h"
+
+enum Popup_Page_Type
+{
+	SnatchSkillBookFightWin,
+	SnatchSkillBookFightFail,
+	CareerAttackNumLimit,
+	NotEnoughGold,
+	ChangeDiscipleConfirm,
+	Script,
+};
+
+class PopupPage
+{
+	static void Pop_Box(Popup_Page_Type _type);
+	static void Pop_Box(std::string msgKey, std::string titleKey, std::string function1Key, std::string function2Key, LUA_FUNCTION fun1handle);
+};

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<DeepWaterSelecters>
+		<DeepWaterSelecter id="1" typeid="1" rewardType="52002" itemId="46" lvl="0" count="1" rate="0" forSureTimes="13"/>
+		<DeepWaterSelecter id="2" typeid="1" rewardType="61001" itemId="5001013" lvl="0" count="1" rate="3" forSureTimes="0"/>
+		<DeepWaterSelecter id="3" typeid="1" rewardType="61001" itemId="5001012" lvl="0" count="1" rate="3" forSureTimes="0"/>
+		<DeepWaterSelecter id="4" typeid="1" rewardType="11001" itemId="1002" lvl="0" count="200000" rate="1" forSureTimes="0"/>
+		<DeepWaterSelecter id="5" typeid="1" rewardType="41003" itemId="66" lvl="1" count="1" rate="1" forSureTimes="0"/>
+		<DeepWaterSelecter id="6" typeid="1" rewardType="41003" itemId="66" lvl="2" count="1" rate="3" forSureTimes="0"/>
+		<DeepWaterSelecter id="7" typeid="1" rewardType="61001" itemId="5002001" lvl="0" count="1" rate="5" forSureTimes="0"/>
+		<DeepWaterSelecter id="8" typeid="1" rewardType="42000" itemId="0" lvl="0" count="1" rate="0" forSureTimes="5,12"/>
+		<DeepWaterSelecter id="9" typeid="2" rewardType="51001" itemId="5" lvl="0" count="1" rate="0" forSureTimes="62"/>
+		<DeepWaterSelecter id="10" typeid="2" rewardType="51002" itemId="9" lvl="0" count="1" rate="0" forSureTimes="14,33,61"/>
+		<DeepWaterSelecter id="11" typeid="2" rewardType="61001" itemId="5001023" lvl="0" count="1" rate="3" forSureTimes="0"/>
+		<DeepWaterSelecter id="12" typeid="2" rewardType="61001" itemId="5001022" lvl="0" count="1" rate="3" forSureTimes="0"/>
+		<DeepWaterSelecter id="13" typeid="2" rewardType="41003" itemId="58" lvl="3" count="1" rate="8" forSureTimes="0"/>
+		<DeepWaterSelecter id="14" typeid="2" rewardType="41002" itemId="46" lvl="3" count="1" rate="5" forSureTimes="0"/>
+		<DeepWaterSelecter id="15" typeid="2" rewardType="61001" itemId="5002001" lvl="0" count="1" rate="3" forSureTimes="0"/>
+		<DeepWaterSelecter id="16" typeid="2" rewardType="42000" itemId="0" lvl="0" count="1" rate="0" forSureTimes="39,56"/>
+		<DeepWaterSelecter id="17" typeid="3" rewardType="53001" itemId="70" lvl="0" count="1" rate="0" forSureTimes="71"/>
+		<DeepWaterSelecter id="18" typeid="3" rewardType="52001" itemId="40" lvl="0" count="1" rate="0" forSureTimes="24"/>
+		<DeepWaterSelecter id="19" typeid="3" rewardType="61001" itemId="5002001" lvl="0" count="1" rate="8" forSureTimes="0"/>
+		<DeepWaterSelecter id="20" typeid="3" rewardType="61001" itemId="5001032" lvl="0" count="1" rate="3" forSureTimes="0"/>
+		<DeepWaterSelecter id="21" typeid="3" rewardType="61001" itemId="5001021" lvl="0" count="1" rate="5" forSureTimes="0"/>
+		<DeepWaterSelecter id="22" typeid="3" rewardType="41002" itemId="46" lvl="3" count="1" rate="8" forSureTimes="0"/>
+		<DeepWaterSelecter id="23" typeid="3" rewardType="41001" itemId="20" lvl="3" count="1" rate="1" forSureTimes="0"/>
+		<DeepWaterSelecter id="24" typeid="3" rewardType="42000" itemId="0" lvl="0" count="1" rate="0" forSureTimes="39,56"/>
+	</DeepWaterSelecters>
+</root>

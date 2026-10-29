@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    
+	<!-- Payment title part, including game icon, purchase information and help link. -->
+	<ImageView
+	    android:id="@+id/game_icon"
+	    android:layout_width="@dimen/game_icon_width"
+	    android:layout_height="@dimen/game_icon_height"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentTop="true"
+	    android:layout_marginLeft="@dimen/game_icon_margin_left"
+	    android:layout_marginTop="@dimen/game_icon_margin_top"
+	    android:scaleType="fitCenter" />
+	
+	<TextView
+	    android:id="@+id/game_purchase_item_name"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_toRightOf="@id/game_icon"
+	    android:layout_alignTop="@id/game_icon"
+	    android:layout_marginLeft="@dimen/game_purchase_item_name_margin_left"
+	    android:layout_marginTop="@dimen/game_purchase_item_name_margin_top"
+	    android:textSize="18sp"
+	    android:textColor="#66AA00" />
+	
+	<TextView
+	    android:id="@+id/game_purchase_item_price"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@id/game_purchase_item_name"
+	    android:layout_alignBottom="@id/game_icon"
+	    android:textSize="28sp"
+	    android:textColor="#66AA00" />
+	
+	<TextView
+	    android:id="@+id/payment_help"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignBottom="@id/game_purchase_item_name"
+	    android:layout_marginRight="@dimen/game_icon_margin_left"
+	    android:text="@string/wandoujia_help_text"
+	    android:textSize="14sp"
+	    android:textColor="#AAAAAA" />
+	
+	<!-- The divider between purchase information and payment list. -->
+	<View
+	    android:id="@+id/payment_list_divider"
+	    android:layout_width="match_parent"
+	    android:layout_height="2dip"
+	    android:background="@color/wandou_green"
+	    android:layout_below="@id/game_icon"
+	    android:layout_marginTop="@dimen/payment_list_divider_margin_top" />
+</RelativeLayout>

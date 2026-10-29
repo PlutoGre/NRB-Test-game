@@ -1,0 +1,25 @@
+$#include "ScriptContentBase.h"
+
+class ScriptContentBase : public CCNode, public CCReViSvItemNodeFacade
+{
+	//for lua
+	static ScriptContentBase* create(const std::string& fileName, int tag = 0);
+
+	CCNode* getVarNode(char* name);
+	CCSprite* getVarSprite(char* name);
+	CCLabelBMFont* getVarLabelBMFont(char* name);
+	CCLabelTTF* getVarLabelTTF(char* name);
+	CCMenu* getVarMenu(char* name);
+	CCMenuItem* getVarMenuItem(char* name);
+	CCMenuItemSprite* getVarMenuItemSprite(char* name);
+	CCMenuItemImage* getVarMenuItemImage(char* name);
+	CCScrollView* getVarScrollView(char* name);
+	CCScale9Sprite* getVarScale9Sprite(char* name);
+	
+	void registerFunctionHandler(LUA_FUNCTION nHandler);
+	void unregisterFunctionHandler();
+	
+	CCReViSvItemData* getItemDate();
+	
+	virtual std::string dumpInfo();
+};

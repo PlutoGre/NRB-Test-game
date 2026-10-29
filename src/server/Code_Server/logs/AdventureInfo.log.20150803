@@ -1,0 +1,52 @@
+INFO  2015-08-03 10:21:22,900 [AdventureContinueLoginHandler.java,61] - getInfo received: 3, 1
+INFO  2015-08-03 10:21:22,914 [AdventureContinueLoginHandler.java,81] - getInfo Send: PlayerId:3, Cost:14
+INFO  2015-08-03 12:10:52,165 [AdventureLevelUpRewardInfoHandler.java,48] - adventure level up reward info handler received: 2, 1, {}
+INFO  2015-08-03 12:10:52,167 [AdventureLevelUpRewardInfoHandler.java,74] - adventure level up reward info handler ret send: 2, 2, {}
+INFO  2015-08-03 12:10:53,853 [AdventureLevelUpGetRewardInfoHandler.java,51] - adventure level up get reward info handler received: 2, 1, 1
+INFO  2015-08-03 12:10:53,858 [AdventureLevelUpGetRewardInfoHandler.java,95] - adventure level up get reward info handler ret send: 2, 4, {}
+INFO  2015-08-03 12:10:55,780 [GetAdventureBoundlessHoleHandler.java,50] - get adventure boundless hole handler received: 2, 1, {}
+INFO  2015-08-03 12:10:55,784 [GetAdventureBoundlessHoleHandler.java,76] - get adventure boundless hole handler ret send: 2, 3, {}
+INFO  2015-08-03 12:10:56,668 [AddBoundlessHoleHandler.java,50] - add boundless hole handler received: 2, 1, {}
+INFO  2015-08-03 12:10:56,673 [AddBoundlessHoleHandler.java,112] - add boundless hole handler ret send: 2, 5, {}
+INFO  2015-08-03 12:12:09,656 [AdventureContinueLoginHandler.java,61] - getInfo received: 2, 1
+INFO  2015-08-03 12:12:09,661 [AdventureContinueLoginHandler.java,81] - getInfo Send: PlayerId:2, Cost:4
+INFO  2015-08-03 12:12:11,263 [AdventureContinueLoginHandler.java,111] - getReward received: PlayerId:2, Version:1,rewardId:1
+INFO  2015-08-03 12:12:11,296 [AdventureContinueLoginHandler.java,247] - gerReward Send: PlayerId:2,Cost:33
+INFO  2015-08-03 13:11:01,311 [AdventureContinueLoginHandler.java,61] - getInfo received: 2, 1
+INFO  2015-08-03 13:11:01,315 [AdventureContinueLoginHandler.java,81] - getInfo Send: PlayerId:2, Cost:3
+INFO  2015-08-03 13:31:00,070 [AdventureContinueLoginHandler.java,61] - getInfo received: 4, 1
+INFO  2015-08-03 13:31:00,081 [AdventureContinueLoginHandler.java,81] - getInfo Send: PlayerId:4, Cost:10
+INFO  2015-08-03 13:39:23,848 [AdventureContinueLoginHandler.java,61] - getInfo received: 5, 1
+INFO  2015-08-03 13:39:23,850 [AdventureContinueLoginHandler.java,81] - getInfo Send: PlayerId:5, Cost:2
+INFO  2015-08-03 13:39:35,889 [GetAdventureBoundlessHoleHandler.java,50] - get adventure boundless hole handler received: 5, 1, {}
+INFO  2015-08-03 13:39:35,903 [GetAdventureBoundlessHoleHandler.java,76] - get adventure boundless hole handler ret send: 5, 12, {}
+INFO  2015-08-03 13:39:37,051 [AdventureLevelUpRewardInfoHandler.java,48] - adventure level up reward info handler received: 5, 1, {}
+INFO  2015-08-03 13:39:37,060 [AdventureLevelUpRewardInfoHandler.java,74] - adventure level up reward info handler ret send: 5, 7, {}
+INFO  2015-08-03 13:39:39,471 [AddBoundlessHoleHandler.java,50] - add boundless hole handler received: 5, 1, {}
+INFO  2015-08-03 13:39:39,486 [AddBoundlessHoleHandler.java,112] - add boundless hole handler ret send: 5, 14, {}
+INFO  2015-08-03 13:57:37,135 [AdventureContinueLoginHandler.java,61] - getInfo received: 2, 1
+INFO  2015-08-03 13:57:37,137 [AdventureContinueLoginHandler.java,81] - getInfo Send: PlayerId:2, Cost:2
+INFO  2015-08-03 14:02:03,448 [AdventureContinueLoginHandler.java,61] - getInfo received: 2, 1
+INFO  2015-08-03 14:02:03,450 [AdventureContinueLoginHandler.java,81] - getInfo Send: PlayerId:2, Cost:2
+INFO  2015-08-03 14:06:25,243 [AdventureContinueLoginHandler.java,61] - getInfo received: 1, 1
+INFO  2015-08-03 14:06:25,254 [AdventureContinueLoginHandler.java,81] - getInfo Send: PlayerId:1, Cost:11
+INFO  2015-08-03 14:06:26,621 [AdventureContinueLoginHandler.java,111] - getReward received: PlayerId:1, Version:1,rewardId:1
+INFO  2015-08-03 14:06:26,672 [AdventureContinueLoginHandler.java,247] - gerReward Send: PlayerId:1,Cost:50
+INFO  2015-08-03 14:18:38,510 [AdventureLevelUpRewardInfoHandler.java,48] - adventure level up reward info handler received: 2, 1, {}
+INFO  2015-08-03 14:18:38,519 [AdventureLevelUpRewardInfoHandler.java,74] - adventure level up reward info handler ret send: 2, 8, {}
+INFO  2015-08-03 14:18:41,007 [GetAdventureBoundlessHoleHandler.java,50] - get adventure boundless hole handler received: 2, 1, {}
+INFO  2015-08-03 14:18:41,015 [GetAdventureBoundlessHoleHandler.java,76] - get adventure boundless hole handler ret send: 2, 8, {}
+INFO  2015-08-03 14:18:42,789 [AddBoundlessHoleHandler.java,50] - add boundless hole handler received: 2, 1, {}
+INFO  2015-08-03 14:18:42,805 [AddBoundlessHoleHandler.java,112] - add boundless hole handler ret send: 2, 14, {}
+INFO  2015-08-03 14:27:58,832 [AdventureContinueLoginHandler.java,61] - getInfo received: 2, 1
+INFO  2015-08-03 14:27:58,834 [AdventureContinueLoginHandler.java,81] - getInfo Send: PlayerId:2, Cost:2
+INFO  2015-08-03 14:28:00,115 [AdventureContinueLoginHandler.java,111] - getReward received: PlayerId:2, Version:1,rewardId:1
+INFO  2015-08-03 14:28:00,138 [AdventureContinueLoginHandler.java,247] - gerReward Send: PlayerId:2,Cost:22
+INFO  2015-08-03 14:32:17,085 [AdventureContinueLoginHandler.java,61] - getInfo received: 1, 1
+INFO  2015-08-03 14:32:17,086 [AdventureContinueLoginHandler.java,81] - getInfo Send: PlayerId:1, Cost:0
+INFO  2015-08-03 15:04:22,813 [AdventureContinueLoginHandler.java,61] - getInfo received: 2, 1
+INFO  2015-08-03 15:04:22,827 [AdventureContinueLoginHandler.java,81] - getInfo Send: PlayerId:2, Cost:12
+INFO  2015-08-03 16:52:41,497 [AdventureContinueLoginHandler.java,61] - getInfo received: 2, 1
+INFO  2015-08-03 16:52:41,499 [AdventureContinueLoginHandler.java,81] - getInfo Send: PlayerId:2, Cost:2
+INFO  2015-08-03 19:48:30,792 [AdventureContinueLoginHandler.java,61] - getInfo received: 2, 1
+INFO  2015-08-03 19:48:30,796 [AdventureContinueLoginHandler.java,81] - getInfo Send: PlayerId:2, Cost:3

@@ -1,0 +1,15 @@
+$#include "InstructionManager.h"
+
+class InstructionManager
+{
+	static InstructionManager* getInstance();
+	enum
+	{
+		START_ISNTRUCTION = 1,
+		NAME_STEP = 3,
+		ATTACK_FIRST = 6,
+		TOTAL_INSTRUCTION = 23,
+	};
+	int getDiscipleSelected();
+	int loadLocalInstructionStep();
+}

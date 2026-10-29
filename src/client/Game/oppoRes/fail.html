@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width,initial-scale=1,user-scalable=no" name="viewport">
+<title>支付中心</title>
+<style type="text/css">
+.topaycompelet1{position:relatve; text-align:center; font-weight:500; font-size:16px; margin:10px auto 30px  auto;color: black;}
+.content{ padding:10px; border-top:1px solid #fff; z-index:1;}
+.button{ margin:10px auto 32px auto; display:block; width:70%;  background:#ed6d00; border:1px solid #888; border-radius:5px; padding:10px 0; color:#fff; font-size:16px; font-weight:500; text-align:center; }
+</style>
+</head>
+<body>
+<div class="content" style="margin-top:50px">
+	<div class="track">
+			<div align="center"><img alt="" src="notnetwork.png"></div>
+		</div>
+</div>
+	<div class="topaycompelet1">网络无连接<br/><br/>请检测连接后重试</div>
+<footer>
+	<div class="button" id="goback" ontouchstart="abc()">重试</div>
+</footer>
+</body>
+<script>
+function abc(){
+	window.nearmepay.reloadFailUrl();
+}
+</script>
+</html>

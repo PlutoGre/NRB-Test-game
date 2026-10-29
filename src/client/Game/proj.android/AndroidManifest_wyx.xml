@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.youai.dreamonepiece.platform.sina_wyx"
+    android:versionCode="3"
+    android:versionName="1.3" 
+    android:installLocation="preferExternal">
+
+    <!-- 发布通过Android Tools修改package name -->
+    
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="16" />
+    
+    <uses-feature android:glEsVersion="0x00020000" />
+    
+    <!-- Allows access to the Download Manager -->
+    <permission
+        android:name="cn.sina.youxi.permission.ACCESS_DOWNLOAD_MANAGER"
+        android:description="@string/permdesc_downloadManager"
+        android:label="@string/permlab_downloadManager"
+        android:protectionLevel="normal" />
+
+    <!-- Allows advanced access to the Download Manager -->
+    <permission
+        android:name="cn.sina.youxi.permission.ACCESS_DOWNLOAD_MANAGER_ADVANCED"
+        android:description="@string/permdesc_downloadManagerAdvanced"
+        android:label="@string/permlab_downloadManagerAdvanced"
+        android:protectionLevel="normal" />
+
+    <!-- Allows to send broadcasts on download completion -->
+    <permission
+        android:name="cn.sina.youxi.permission.SEND_DOWNLOAD_COMPLETED_INTENTS"
+        android:description="@string/permdesc_downloadCompletedIntent"
+        android:label="@string/permlab_downloadCompletedIntent"
+        android:protectionLevel="normal" />
+         
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    
+    
+    <!-- sina微博 大厅需要的uses-permission start -->
+    <!-- Allows access to the Download Manager -->
+    <uses-permission android:name="cn.sina.youxi.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="cn.sina.youxi.permission.ACCESS_DOWNLOAD_MANAGER_ADVANCED" />
+    <uses-permission android:name="cn.sina.youxi.permission.SEND_DOWNLOAD_COMPLETED_INTENTS" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	
+	<!-- -->
+	<!-- 360快捷支付必须的权限 -->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <!--
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+	-->
+
+    <supports-screens android:largeScreens="true"
+                      android:smallScreens="true"
+                      android:anyDensity="true"
+                      android:normalScreens="true"
+                      android:xlargeScreens="true"/>
+
+    <!-- android:debuggable="true" ADT&NDK自动处理了 -->
+    
+    <!-- 发布修改icon -->
+    
+    <application
+        android:name = "cn.sina.youxi.app.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" 
+        android:largeHeap="true" 
+        android:vmSafeMode="false" 
+        android:allowClearUserData="true"
+        android:debuggable="false">
+        
+        <!-- 发布指定平台：
+        1	nd91.Nd91Activity
+        2	uc.UcActivity
+        3	qihoo360.Qihoo360Activity
+        4	dangle.DangLeActivity
+        5	mi.XiaoMiActivity
+        6	wandoujia.WanDouJiaActivity
+		7   DK.DuokuActivity
+		15  sina_wyx.SinaActivity
+        
+         -->
+        <activity
+            android:name="com.youai.dreamonepiece.platform.sina_wyx.SinaActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" 
+            android:launchMode="singleTop" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+			    <action android:name="com.youai.dreamonepiece.platform.sina_wyx.MAINACTION" />
+			    <data android:host="MainActivity" android:scheme="gamehall" />
+			    <category android:name="android.intent.category.DEFAULT" />
+		    </intent-filter>
+        </activity>
+        <!--  -->
+        
+		<!-- sina begin -->
+		<!-- sina的appkey -->
+        <meta-data
+            android:name="WYX_APPKEY"
+            android:value="WYX_3883789765" >
+        </meta-data>
+         <!-- sina的appSecret -->
+        <meta-data
+            android:name="WYX_APPSECRET"
+            android:value="WYX_91d0066a5ee294695d9ca4681f517dff" >
+        </meta-data>
+        <!-- sina的渠道值 GAMEHALL_100010041000 GAMEHALL_100010051000 GAMEHALL_101010001000 GAMEHALL_100610061000 GAMEHALL_101310001000 GAMEHALL_101510001000-->
+        <meta-data
+            android:name="GAMEHALL_CHANNEL"
+            android:value="GAMEHALL_101510001000" >
+        </meta-data>
+		  <!-- 大厅需要的2个provider-->
+        <provider
+            android:name="cn.sina.youxi.app.mine.PlayedGameContentProvider"
+            android:authorities="com.youai.dreamonepiece.platform.sina_wyx.providers.playedgameprovider"
+            android:exported="true"
+            android:multiprocess="true" />
+        <provider
+            android:name="cn.sina.youxi.downloader.DownloadProvider"
+            android:authorities="com.youai.dreamonepiece.platform.sina_wyx.providers.downloadprovider"
+            android:exported="false" />
+        
+        <!-- 大厅需要的1个service-->
+        <service
+            android:name="cn.sina.youxi.downloader.DownloadService"
+            android:exported="false" />
+         <!-- 大厅需要的3个receiver -->
+        <receiver
+            android:name="cn.sina.youxi.downloader.DownloadReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.DOWNLOAD_WAKEUP" />
+                <action android:name="android.intent.action.DOWNLOAD_OPEN" />
+                <action android:name="android.intent.action.DOWNLOAD_LIST" />
+                <action android:name="android.intent.action.DOWNLOAD_HIDE" />
+                <data android:scheme="content"></data>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="cn.sina.youxi.app.receiver.DownLoadCompleteReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED" />
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+                <action android:name="android.intent.action.VIEW_DOWNLOADS" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="cn.sina.youxi.app.receiver.BootReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package"></data>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name="cn.sina.youxi.app.GameHallMainActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" >
+			<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.sina.youxi.app.home.HomeMainActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="cn.sina.youxi.app.game.GameMainActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="cn.sina.youxi.app.game.WebGameActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="cn.sina.youxi.app.game.GameDetailsActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="cn.sina.youxi.app.mine.MineActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:label="@string/gamehall_mine_game"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="cn.sina.youxi.app.mine.MineListActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:label="@string/gamehall_mine_game"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="cn.sina.youxi.app.setting.SettingActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="cn.sina.youxi.app.gameupdate.GameUpdateActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="cn.sina.youxi.app.activity.ActivityMainActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="cn.sina.youxi.app.activity.WelcomeActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="cn.sina.youxi.app.activity.ActivityDetailActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="cn.sina.youxi.app.activity.LuckyDrawActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="cn.sina.youxi.app.setting.CommonWebViewActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="cn.sina.youxi.app.mine.StandAloneListActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        
+        <!-- sina end -->	
+    </application>
+
+</manifest>

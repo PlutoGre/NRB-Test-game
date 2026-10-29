@@ -1,0 +1,619 @@
+$#include "DataTableManager.h"
+
+// quality		品质
+// 	1 			甲
+// 	2 			乙
+// 	3 			丙
+// 	4 			丁
+//const std::string empty("");
+
+ccColor3B getFrameColor(unsigned int quality);
+CCSprite* getFrameNormalSpirte(unsigned int quality, std::string ext="");
+CCSprite* getFrameSelectedSpirte(unsigned int quality, std::string ext="");
+CCSprite* getFrameDisabledSpirte(unsigned int quality, std::string ext="");
+CCSprite* getContentUnselectedSpirte(std::string ext="");
+CCSprite* getContentSelectedSpirte(std::string ext="");
+
+std::string getQualityImageFile(unsigned int quality);
+
+std::string getQualityFrameNormalImageFile(void);
+std::string getQualityFrameSelectImageFile(void);
+
+std::string getVipLevelImageFile(unsigned int level);
+std::string getTeamDefaultPic(void);
+std::string getTeamLockPic(void);
+
+class VaribleManager : public ConfigFile
+{
+	static VaribleManager* getInstance();
+};
+// YUANFEN::type	触发条件		机缘前半句文案生成规则
+// 	1				与他人同阵营	与XXX齐上阵，
+// 	2				佩戴指定技能	装备XXX（技能），
+// 	3				佩戴指定装备	装备YYYY(装备)，
+// 
+// 	YUANFEN::upgradeType	提升属性	机缘后半句文案生成规则
+// 	1						血			生命提高N%
+// 	2						攻			攻击提高N%
+// 	3						防			防御提高N%
+// 	4						内			内力提高N%
+class YuanfenItem
+{
+	unsigned int	itemID;
+	std::string		name;
+	unsigned int	type;
+	std::string		TriggerCondition;
+	unsigned int	upgradeType;
+	unsigned int	upgradeRate;
+	std::string		describe;
+};
+
+class YuanfenTableManager
+{
+	const YuanfenItem * getYuanfenItemByID(unsigned int id);
+	const YuanfenItem * getYuanfenItemByName(const std::string& name);
+
+	inline unsigned int getTotalNum() {return mYuanfenList.size();};
+
+	static YuanfenTableManager* getInstance();
+};
+
+class DiscipleItem
+{
+	unsigned int	itemID;
+	std::string		name;
+	unsigned int	quality;
+	unsigned int	type;
+	std::string		describe;
+	unsigned int	bornSkillItemID;
+	unsigned int	initHealth;
+	unsigned int	initAttack;
+	unsigned int	initDefence;
+	unsigned int	initPower;
+	unsigned int	initExp;
+	unsigned int	yuanfens[6];
+	bool			showEnable;
+	std::string		iconPic;
+	std::string		bodyPic;
+	std::string		namePic;
+	std::string		backPic;
+	std::string		battlePic;
+	std::string		soundUrl;
+};
+
+class DiscipleTableManager
+{
+	const DiscipleItem * getDiscipleItemByID(unsigned int id);
+	const DiscipleItem * getDiscipleItemByName(const std::string& name);
+
+	const std::string getYuanfenDescribe(unsigned int id);
+
+	inline unsigned int getTotalNum() {return mDiscipleList.size();};
+	unsigned int getRandomDiscipleId();
+
+	static DiscipleTableManager* getInstance();
+}; 
+
+// EquipItem::Type	装备类别
+// 	1 				武器
+// 	2 				防具
+// 	3 				饰品
+// const std::string Equip1_ImageFile("career/cash.png");
+// const std::string Equip2_ImageFile("career/cash.png");
+// const std::string Equip3_ImageFile("career/cash.png");
+// const std::string& getEquipAtkTypeImageFile(unsigned int type);
+
+class EquipItem
+{
+	unsigned int		itemID;
+	std::string		name;
+	unsigned int	quality;
+	unsigned int	type;
+	std::string		describe;
+	unsigned int	initQuantity;
+	float			initGrowthRate;
+	std::string		iconPic;
+	std::string		bodyPic;
+	std::string		namePic;
+};
+
+class EquipTableManager
+{
+	const EquipItem * getEquipItemByID(unsigned int id);
+	const EquipItem * getEquipItemByName(const std::string& name);
+
+	inline unsigned int getTotalNum() {return mEquipList.size();};
+	unsigned int getRandomEquipId();
+
+	static DiscipleTableManager* getInstance();
+};
+
+class EquipLevelParam
+{
+	unsigned int	index;
+	float			param;
+};
+
+class EquipLevelParamManager
+{
+	const float getParamByLevel(unsigned int level);
+
+	inline unsigned int getTotalNum() {return mEquipLevelParamList.size();};
+
+	static EquipLevelParamManager* getInstance();
+};
+
+
+// SkillItem::type	技能类型
+// 	1 				单体攻击
+// 	2 				群体攻击
+// 	3 				血量BUFF
+// 	4 				攻击BUFF
+// 	5 				防御BUFF
+// 	6 				内力BUFF
+// const std::string Skill1_ImageFile("career/cash.png");
+// const std::string Skill2_ImageFile("career/cash.png");
+// const std::string Skill3_ImageFile("career/cash.png");
+// const std::string Skill4_ImageFile("career/cash.png");
+// const std::string Skill5_ImageFile("career/cash.png");
+// const std::string Skill6_ImageFile("career/cash.png");
+// const std::string& getSkillAtkTypeImageFile(unsigned int type);
+class SkillItem
+{
+	enum
+	{
+		TYPE_SINGLE = 1,
+		TYPE_MULTIPLE = 2,
+		TYPE_BUFF_ATTACK = 4,
+		TYPE_BUFF_DEFENSE = 5,
+		TYPE_BUFF_POWER = 6
+	};
+	enum
+	{
+		QUALITY_BEST = 1,
+		QUALITY_GOOD = 2,
+		QUALITY_NORMAL = 3,
+		QUALITY_BAD = 4
+	};
+	unsigned int		itemID;
+	std::string		name;
+	unsigned int	quality;
+	unsigned int	type;
+	std::string		describe;
+	float	initQuantity;
+	float	initGrowthRate;
+	std::string		iconPic;
+	std::string		bodyPic;
+	std::string		namePic;
+	float			duration;
+	std::string		ccbFile;
+	std::string		timeLine;
+	std::string		soundUrl;
+};
+
+class SkillTableManager
+{
+	const SkillItem * getSkillItemByID(unsigned int id);
+	const SkillItem * getSkillItemByName(const std::string& name);
+
+	inline unsigned int getTotalNum() {return mSkillList.size();};
+	unsigned int getRandomSkillId();
+	
+	static SkillTableManager* getInstance();
+
+};
+
+class SkillBookTable
+{
+	class SkillBookItem
+	{
+		unsigned int		itemID;
+		unsigned int	skillId;
+		std::string		name;
+		std::string		iconPic;
+	};
+
+	inline unsigned int getSkillBookItemSize(){return mSkillBookItemList.size();};
+};
+
+class SkillBookTableManager
+{
+	const SkillBookTable::SkillBookItem * getSkillBookItemByID(unsigned int skillId,unsigned int id);
+
+	inline unsigned int getTotalNum(){return mSkillBookList.size();};
+
+	SkillBookTable* getSkillTableBySkillId(unsigned int skillId);
+
+	static SkillBookTableManager* getInstance();
+};
+
+class ToolItem
+{
+	unsigned int		itemID;
+	std::string		name;
+	std::string		describe;
+	unsigned int	price;
+	unsigned int	priceType;
+	unsigned int	operationType;
+	std::string		jumpPage;
+	std::string		buttonString;
+	std::string		iconPic;
+	std::string		bodyPic;
+	std::string		namePic;
+	unsigned int	originPrice;
+	int				pageID;
+	int				buyCountLimit;
+	std::string		includeStr;
+	ResInfoMap		includeOther;
+};
+
+class ToolTableManager
+{
+	void initIncludeOther();
+	const ToolItem * getToolItemByID(unsigned int id);
+	const ToolItem * getToolItemByName(const std::string& name);
+
+	inline unsigned int getTotalNum() {return mToolList.size();};
+
+	static ToolTableManager* getInstance();
+};
+
+class DisciplesLevelParam
+{
+	unsigned int	index;
+	float			param;
+};
+
+class DisciplesLevelParamManager
+{
+	const float getParamByLevel(unsigned int level);
+	const float getTotalParamByLevel(unsigned int level);
+
+	inline unsigned int getTotalNum() {return mDisciplesLevelParamList.size();};
+
+	static DisciplesLevelParamManager* getInstance();
+};
+
+class HelpItem
+{
+	unsigned int		itemID;
+	std::string		iconPic;
+	std::string		name;
+	std::string		describe;
+};
+
+class HelpTableManager
+{
+	const HelpItem * getHelpItemByID(unsigned int id);
+
+	inline unsigned int getTotalNum() {return mHelpList.size();};
+
+	static HelpTableManager* getInstance();
+};
+
+class VIPPrivilegeItem
+{
+	unsigned int		itemID;
+	std::string		iconPic;
+	std::string		name;
+	unsigned int	rechangeNum;
+	unsigned int	describeNum;
+	std::string		describe[9];
+};
+
+class VIPPrivilegeTableManager
+{
+	const VIPPrivilegeItem * getVIPPrivilegeItemByID(unsigned int id);
+	const VIPPrivilegeItem * getVIPPrivilegeDescribeItemByID(unsigned int id,int describeIndex);
+
+	inline unsigned int getTotalNum(){return mVIPPrivilegeList.size();};
+
+	static VIPPrivilegeTableManager* getInstance();
+
+};
+
+class AboutItem
+{
+	unsigned int		itemID;
+	std::string		iconPic;
+	std::string		name;
+	std::string		describe;
+};
+
+class AboutTableManager
+{
+	const AboutItem * getAboutItemByID(unsigned int id);
+
+	inline unsigned int getTotalNum() {return mAboutList.size();};
+
+	static AboutTableManager* getInstance();
+};
+
+class ContinueLoginItem
+{
+	unsigned int	id;
+	unsigned int	poolIndex;
+	unsigned int	itemType;
+	unsigned int    itemId;
+	unsigned int	quantity;
+	unsigned int	rate;
+};
+
+class ContinueLoginTableManager
+{
+	const ContinueLoginItem * getContinueLoginItemByID(unsigned int id);
+	inline unsigned int getTotalNum() {return mContinueLoginList.size();};
+
+	static ContinueLoginTableManager* getInstance();
+};
+
+class AdventureItem
+{
+	unsigned int		itemID;
+	std::string		name;
+	unsigned int	adventureType;
+	std::string		iconPic;
+	std::string		ccbi;
+};
+
+class AdventureTableManager
+{
+	const AdventureItem * getAdventureItemByID(unsigned int id);
+
+	inline unsigned int getTotalNum() {return mAdventureList.size();};
+
+	static AdventureTableManager* getInstance();
+};
+class AdventureTeacherItem
+{
+	unsigned int		itemID;
+	std::string		name;
+	std::string		iconPic;
+	unsigned int needPropNum;
+	unsigned int propID;
+};
+class AdventureTeacherTableManager
+{
+	const AdventureTeacherItem * getAdventureTeacherByID(unsigned int id);
+
+	inline unsigned int getTotalNum() {return mAdventureTeacherList.size();};
+
+	static AdventureTeacherTableManager* getInstance();
+};
+
+class PlayerGradeItem
+{
+	unsigned int ID;
+	unsigned int canDiscipleNum;
+	unsigned int maxPower;
+	unsigned int maxVitality;
+	unsigned int goldReward;
+	unsigned int silverReward;
+	unsigned int exp;
+	unsigned int levelSilverCoins;
+};
+
+class PlayerGradeTableManager
+{
+	const PlayerGradeItem* getGradeItemByID(unsigned int id);
+
+	inline unsigned int getTotalNum(){return mGradeItemList.size();};
+
+	static PlayerGradeTableManager* getInstance();
+};
+
+
+class TitleItem
+{
+	unsigned int	itemID;
+	std::string		name;
+	unsigned int	buffType;
+	unsigned int	time;
+	std::string		levelupCondition;
+	std::string		describe;
+	std::string		iconPic;
+	std::string		namePic;
+	unsigned int	quantity;
+};
+
+class TitleTableManager
+{
+	const TitleItem* getTitleItemByID(unsigned int id);
+
+	inline unsigned int getTotalNum(){return mTitleItemList.size();};
+
+	static TitleTableManager* getInstance();
+};
+
+class TeamBuffBoldnessItem
+{
+	unsigned int		quality;
+	unsigned int	soulBoldness;
+	unsigned int	discipleBoldness;
+};
+
+class TeamBuffBoldnessTableManager
+{
+	const TeamBuffBoldnessItem* getTeamBuffBoldnessItemByQuality(unsigned int quality);
+
+	inline unsigned int getTotalNum(){return mTeamBuffBoldnessList.size();};
+
+	static TeamBuffBoldnessTableManager* getInstance();
+};
+
+class TeamBuffItem
+{
+	enum AdditionType
+	{
+		HP=1,
+		ATTACK=2,
+		DEFENSE=3,
+		WILL=4,
+	};
+	unsigned int	buffType;
+	std::string		name;
+	unsigned int	unlockLevel;
+	unsigned int	initLevel;
+	unsigned int	addition;
+	std::string		iconPic;
+	std::string		namePic;
+};
+
+class TeamBuffTableManager
+{
+	const TeamBuffItem* getTeamBuffItemByID(unsigned int id);
+	unsigned int getAdditionValueByIdAndLevel(unsigned int id,unsigned int level);
+	inline unsigned int getTotalNum(){return mTeamBuffList.size();};
+	unsigned int getBoldnessByIdAndLevel(unsigned int id,unsigned int level);
+
+	static TeamBuffTableManager* getInstance();
+};
+
+class AnnouncementItem
+{
+	unsigned int itemId;
+	std::string idName;
+	std::string title;
+	long int startTime;
+	long int endTime;
+	std::string timeMsg;
+	std::string msg;
+	unsigned int isHaveButton;
+	std::string buttonText;
+	std::string buttonGoPage;
+	int btnType;
+	unsigned int adventureId;
+	unsigned int changeOrPush;
+};
+
+class AnnouncementTableManager
+{
+	const AnnouncementItem* getAnnouncementItemById(unsigned int id);
+
+	inline unsigned int getTotalNum(){return mAnnouncementItemList.size();};
+
+	static AnnouncementTableManager* getInstance();
+};
+
+class UserPropertyItem
+{
+	unsigned int	itemID;
+	std::string	name;
+	std::string	describe;
+	std::string	iconPic;
+};
+class UserPropertyTableManager
+{
+	const UserPropertyItem * getUserPropertyItemByID(unsigned int id);
+
+	inline unsigned int getTotalNum() {return mUserPropertyList.size();};
+
+	static UserPropertyTableManager* getInstance();
+};
+
+
+class NewActivePromptItem
+{
+	unsigned int	itemID;
+	unsigned int	type;
+	int	level;
+	std::string	ccbiPath;
+	std::string	pageName;
+	std::string	dropType;
+	int	dropId;
+};
+class NewActivePromptTableManager
+{
+	void init(const std::string& filename);
+	const NewActivePromptItem * getNewActivePromptItemByID(unsigned int id);
+
+	inline unsigned int getTotalNum() {return mNewActivePromptList.size();};
+
+	static NewActivePromptTableManager* getInstance();
+};
+
+
+class ArenaRewardItem
+{
+	unsigned int	itemID;
+	unsigned int	type;
+	std::string		title;
+	unsigned int	needScore;
+	unsigned int	rewardNum;
+	std::string		describe;
+	std::string		iconPic;
+};
+class ArenaRewardTableManager
+{
+
+	const ArenaRewardItem * getArenaRewardItemByID(unsigned int id);
+
+	inline unsigned int getTotalNum() {return mArenaRewardList.size();};
+
+	static ArenaRewardTableManager* getInstance();
+};
+
+class FightEndRewardItem
+{
+	unsigned int	itemID;
+	unsigned int	battle5;
+	unsigned int	battle6;
+	unsigned int	battle7;
+	unsigned int	battle8;
+	std::string		rewardInfo;
+};
+class FightEndRewardTableManager
+{
+	const FightEndRewardItem * getFightEndRewardItemByID(unsigned int id);
+
+	inline unsigned int getTotalNum() {return mFightEndRewardList.size();};
+
+	static FightEndRewardTableManager* getInstance();
+};
+
+class AdventureContinueLoginItem
+{
+	unsigned int	itemID;
+	unsigned int	dayCount;
+	std::string		rewardInfo;
+
+};
+class AdventureContinueLoginTableManager
+{
+	const AdventureContinueLoginItem * getAdventureContinueLoginItemByID(unsigned int id);
+
+	inline unsigned int getTotalNum() {return mAdventureContinueLoginList.size();};
+
+	static AdventureContinueLoginTableManager* getInstance();
+};
+
+class AdventureInviteItem
+{
+	unsigned int	itemID;
+	unsigned int	requireCount;
+	std::string		describe;
+	std::string		rewardInfo;
+};
+class AdventureInviteTableManager
+{
+	const AdventureInviteItem * getAdventureInviteItemByID(unsigned int id);
+
+	inline unsigned int getTotalNum() {return mAdventureInviteList.size();};
+
+	static AdventureInviteTableManager* getInstance();
+};
+
+class FortuneComeRewardItem
+{
+	unsigned int	itemID;
+	std::string		name;
+	std::string		rewardGold;
+};
+class FortuneComeRewardTableManager
+{
+	const FortuneComeRewardItem * getFortuneComeRewardItemByID(unsigned int id);
+
+	inline unsigned int getTotalNum() {return mFortuneComeRewardList.size();};
+
+	static FortuneComeRewardTableManager* getInstance();
+};

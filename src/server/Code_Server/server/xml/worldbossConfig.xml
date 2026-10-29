@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<!-- startTime：活动开启时间  endTime：活动结束时间  baseHealth:Boss基础血量	healthRatio:BOSS血量成长系数	maxLevel:BOSS最大等级 
+	timeLimitMax:最长攻击间隔	timeLimitMin:最短攻击间隔	reliveCost:普通复活花费		ashesCost:浴火重生花费  	ashesAddType:浴火重生加成类型	ashesAddQuantity:浴火重生加成额度	
+	silverCoinsBase:（排名）伤害得贝里系数	rumRewardRatio:排名得培养丹系数		bossKillRatio:最后击杀BOSS得奖励	ashesCost:浴火重生初始费用  ashesIncrease:浴火重生费用递增钻石数 perAttackRewardNum:每次攻击获得培养药剂数量 perAttackRewardProbability：每次攻击获得培养药剂奖励的概率 totleRewardMax：每次活动可获得培养药剂数量上限-->
+	<BossInfo startTime="2030" endTime="2100" startLevel="13" npcItemId="12" baseHealth="7000000" healthRatio="1" maxLevel="99" 
+	timeLimitMax="60" timeLimitMin="5" reliveCost="2" ashesCost="10" ashesIncrease="5" ashesAddType="2" ashesAddQuantity="0.2" 
+	silverCoinsBase="0.5" rumRewardRatio="5" bossKillRatio="0.02" perAttackRewardNum="3" perAttackRewardProbability="100" totalRewardMax="99">
+	</BossInfo>
+</root>

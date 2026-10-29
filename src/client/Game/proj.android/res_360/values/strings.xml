@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">梦想海贼王</string>
+    <string name="dummy_button">DreamOnePiece</string>
+    <string name="dummy_content">loading game :)</string>
+    <string name="app_exit_title">梦想海贼王</string>
+    <string name="app_exit_msg">您确定退出游戏吗?</string>
+    <string name="app_dlg_title">提示</string>
+    <string name="app_dlg_newwork_notok_msg">网络不可连接，请检查您的手机网络！</string>
+    <string name="app_dlg_externalstorage_notok_msg">外部存储不可用，请检查您的SD卡是否正确安装！</string>
+    <string name="app_dlg_externalstorage_nofreespace_msg">外部存储空间不足，请先释放SD卡存储空间！</string>
+    
+    <string name="assets_unzip_msg">首次运行解压资源</string>
+    <string name="starting_game">正在启动游戏</string>
+    
+    <string name="sdk_init">initing platform</string>
+    
+    <!-- begin qihoo 360 -->
+    <!-- 实名注册和防沉迷 -->
+    <string name="anti_addiction_query">防沉迷查询</string>
+    <string name="anti_addiction_query_result_0">为了您更好的体验游戏，请填写实名制注册。</string>
+    <string name="anti_addiction_query_result_1">健康的身体，锻造健康的战士。请合理安排游戏时间。</string>
+    <string name="anti_addiction_query_result_2">祝您游戏愉快~！</string>
+    <string name="anti_addiction_query_exception">查询出现异常</string>
+    
+    <string name="pay_callback_toast" formatted="false">状态码:%d, 状态描述：%s</string>
+    
+    <!-- 提示用户信息 -->
+    <string name="get_token_title">获取Access Token</string>
+    <string name="get_token_message">正在请求应用服务器,请稍候……</string>
+    <string name="get_user_title">获取Qihoo UserInfo</string>
+    <string name="get_user_message">正在请求应用服务器,请稍候……</string>
+    <string name="get_code_fail">从登录注册、切换账号、试玩注册界面返回，未获取Authorization Code</string>
+    <string name="get_token_fail">未从应用服务器获取Access Token</string>
+    <string name="get_user_fail">未从应用服务器获取Qihoo UserInfo</string>
+    <string name="back_from_pay">从支付界面返回，请访问您的应用服务器查询结果</string>
+    <!-- end qihoo 360 -->
+    
+
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.oldmountain.dzm.entity">
+	<class name="PlayerFrom" table="playerfrom" dynamic-update="true" dynamic-insert="true">
+		<id name="puid" column="puid" type="string">
+			<generator class="assigned" />
+		</id>
+		<property name="playerid" column="playerid" type="int"></property>
+		<property name="platform" column="platform" type="string"></property>
+		<property name="deviceid" column="deviceid" type="string"></property>
+		<property name="createtime" column="createtime" type="int"></property>
+	</class>
+</hibernate-mapping>

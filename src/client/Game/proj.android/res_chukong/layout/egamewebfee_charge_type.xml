@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#dfdfdf"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/egamewebfee_telfare"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/egamewebfee_list_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dip"
+        android:text="话费支付 (推荐)"
+        android:textColor="#000"
+        android:textSize="14dip" />
+
+    <Button
+        android:id="@+id/egamewebfee_card_cm"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/egamewebfee_list_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dip"
+        android:text="移动充值卡支付"
+        android:textColor="#ff0000"
+        android:textSize="14dip" />
+
+    <Button
+        android:id="@+id/egamewebfee_card_ct"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/egamewebfee_list_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dip"
+        android:text="电信充值卡支付"
+        android:textColor="#ff0000"
+        android:textSize="14dip" />
+
+    <Button
+        android:id="@+id/egamewebfee_card_cu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/egamewebfee_list_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dip"
+        android:text="联通充值卡支付"
+        android:textColor="#ff0000"
+        android:textSize="14dip" />
+
+    <Button
+        android:id="@+id/egamewebfee_alipay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/egamewebfee_list_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dip"
+        android:text="支付宝支付"
+        android:textColor="#000"
+        android:textSize="14dip" />
+
+    <Button
+        android:id="@+id/egamewebfee_handpay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/egamewebfee_list_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dip"
+        android:text="掌中付支付"
+        android:textColor="#000"
+        android:textSize="14dip" />
+
+    <Button
+        android:id="@+id/egamewebfee_aidou"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/egamewebfee_list_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dip"
+        android:text="爱豆支付"
+        android:textColor="#000"
+        android:textSize="14dip" />
+
+    <Button
+        android:id="@+id/egamewebfee_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/egamewebfee_btn_green_selector"
+        android:gravity="center"
+        android:layout_marginTop="20dip"
+        android:layout_marginBottom="20dip"
+        android:text="取消"
+        android:textColor="#4a8737"
+        android:textSize="14dip" />
+
+</LinearLayout>

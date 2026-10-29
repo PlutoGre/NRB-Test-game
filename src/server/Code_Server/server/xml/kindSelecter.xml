@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<Selects>
+		<Select types="3" kind="31001" rate1="100" rate2="1" rate3="100" rate4="100" rate5="100" rate6="100" free1Rate="0"/>
+		<Select types="3" kind="31002" rate1="0" rate2="60" rate3="0" rate4="0" rate5="0" rate6="0" free1Rate="100"/>
+		<Select types="3" kind="32001" rate1="0" rate2="18" rate3="0" rate4="0" rate5="0" rate6="0" free1Rate="0"/>
+		<Select types="3" kind="32002" rate1="0" rate2="21" rate3="0" rate4="0" rate5="0" rate6="0" free1Rate="0"/>
+		<Select types="2" kind="31001" rate1="0" rate2="0" rate3="25" rate4="25" rate5="25" rate6="25" free1Rate="0"/>
+		<Select types="2" kind="31002" rate1="100" rate2="25" rate3="75" rate4="75" rate5="75" rate6="75" free1Rate="0"/>
+		<Select types="2" kind="31003" rate1="0" rate2="40" rate3="0" rate4="0" rate5="0" rate6="0" free1Rate="100"/>
+		<Select types="2" kind="32001" rate1="0" rate2="5" rate3="0" rate4="0" rate5="0" rate6="0" free1Rate="0"/>
+		<Select types="2" kind="32002" rate1="0" rate2="15" rate3="0" rate4="0" rate5="0" rate6="0" free1Rate="0"/>
+		<Select types="2" kind="32003" rate1="0" rate2="15" rate3="0" rate4="0" rate5="0" rate6="0" free1Rate="0"/>
+		<Select types="1" kind="32002" rate1="0" rate2="10" rate3="10" rate4="10" rate5="10" rate6="10" free1Rate="0"/>
+		<Select types="1" kind="32003" rate1="0" rate2="15" rate3="15" rate4="15" rate5="15" rate6="15" free1Rate="0"/>
+		<Select types="1" kind="32004" rate1="0" rate2="15" rate3="15" rate4="15" rate5="15" rate6="15" free1Rate="0"/>
+		<Select types="1" kind="31002" rate1="0" rate2="10" rate3="10" rate4="10" rate5="10" rate6="10" free1Rate="0"/>
+		<Select types="1" kind="31003" rate1="0" rate2="23" rate3="23" rate4="23" rate5="23" rate6="23" free1Rate="0"/>
+		<Select types="1" kind="31004" rate1="0" rate2="32" rate3="32" rate4="32" rate5="32" rate6="32" free1Rate="100"/>
+	</Selects>
+</root>

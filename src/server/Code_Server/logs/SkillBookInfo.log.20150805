@@ -1,0 +1,91 @@
+INFO  2015-08-04 08:54:59,795 [SkillBookServices.java,145] - start************clearSkillBookByPlayer#playerId:2,startTime:1438649699795*********start
+INFO  2015-08-04 08:54:59,798 [SkillBookServices.java,174] - end************clearSkillBookByPlayer#playerId:2,endTime:1438649699798,cost:3*********end
+INFO  2015-08-04 11:10:08,779 [SkillBookServices.java,44] - start************#playerId:1,startTime:1438657808779*********start
+INFO  2015-08-04 11:10:08,796 [SkillBookServices.java,72] - end************playerId:1,endTime:1438657808796,cost:17*********end
+INFO  2015-08-04 11:12:27,870 [SkillBookServices.java,44] - start************#playerId:4,startTime:1438657947870*********start
+INFO  2015-08-04 11:12:27,878 [SkillBookServices.java,72] - end************playerId:4,endTime:1438657947878,cost:8*********end
+INFO  2015-08-04 12:57:37,021 [SkillBookInfoHandler.java,58] - getSkillBookInfo received: 7, 1, {}
+INFO  2015-08-04 12:57:37,031 [SkillBookInfoHandler.java,90] - getSkillBookInfo ret send: 7, Cost:9, {}
+INFO  2015-08-04 13:10:40,037 [GetSkillBookLootHandler.java,47] - get skill book loot kandler received: 7, 1, 6901
+INFO  2015-08-04 13:10:40,071 [GetSkillBookLootHandler.java,56] - get skill book loot kandler ret send: 7, 34, {}
+INFO  2015-08-04 13:10:43,761 [SnatchSkillBookHandler.java,67] - snatchSkillBook handler received: 7, 1, 2
+INFO  2015-08-04 13:10:43,774 [SnatchSkillBookHandler.java,72] - snatchSkillBook handler ret send: 7,Cost:13, {}
+INFO  2015-08-04 13:11:13,964 [SnatchSkillBookHandler.java,67] - snatchSkillBook handler received: 7, 1, 2
+INFO  2015-08-04 13:11:13,967 [SnatchSkillBookHandler.java,72] - snatchSkillBook handler ret send: 7,Cost:3, {}
+INFO  2015-08-04 13:11:20,588 [SnatchSkillBookHandler.java,67] - snatchSkillBook handler received: 7, 1, 2
+INFO  2015-08-04 13:11:20,590 [SnatchSkillBookHandler.java,72] - snatchSkillBook handler ret send: 7,Cost:2, {}
+INFO  2015-08-04 13:11:30,032 [GetSkillBookLootHandler.java,47] - get skill book loot kandler received: 7, 1, 6902
+INFO  2015-08-04 13:11:30,035 [GetSkillBookLootHandler.java,56] - get skill book loot kandler ret send: 7, 2, {}
+INFO  2015-08-04 13:11:33,333 [SnatchSkillBookHandler.java,67] - snatchSkillBook handler received: 7, 1, 0
+INFO  2015-08-04 13:11:33,336 [SnatchSkillBookHandler.java,72] - snatchSkillBook handler ret send: 7,Cost:2, {}
+INFO  2015-08-04 13:11:40,651 [SnatchSkillBookHandler.java,67] - snatchSkillBook handler received: 7, 1, 0
+INFO  2015-08-04 13:11:40,655 [SnatchSkillBookHandler.java,72] - snatchSkillBook handler ret send: 7,Cost:3, {}
+INFO  2015-08-04 13:11:47,143 [SnatchSkillBookHandler.java,67] - snatchSkillBook handler received: 7, 1, 0
+INFO  2015-08-04 13:11:47,147 [SnatchSkillBookHandler.java,72] - snatchSkillBook handler ret send: 7,Cost:3, {}
+INFO  2015-08-04 13:11:51,828 [SnatchSkillBookHandler.java,67] - snatchSkillBook handler received: 7, 1, 0
+INFO  2015-08-04 13:11:51,830 [SnatchSkillBookHandler.java,72] - snatchSkillBook handler ret send: 7,Cost:2, {}
+INFO  2015-08-04 13:11:56,742 [SnatchSkillBookHandler.java,67] - snatchSkillBook handler received: 7, 1, 0
+INFO  2015-08-04 13:11:56,745 [SnatchSkillBookHandler.java,72] - snatchSkillBook handler ret send: 7,Cost:3, {}
+INFO  2015-08-04 13:12:12,975 [PieceSkillBookHandler.java,63] - pieceSkillBook handler received: 7, 1, 69
+INFO  2015-08-04 13:12:12,982 [SkillBookServices.java,133] - removePlayerIdFromMap#skillBookId:6901,playerId:7containsStatus:false
+INFO  2015-08-04 13:12:12,982 [SkillBookServices.java,133] - removePlayerIdFromMap#skillBookId:6902,playerId:7containsStatus:false
+INFO  2015-08-04 13:12:12,983 [SkillBookServices.java,133] - removePlayerIdFromMap#skillBookId:6903,playerId:7containsStatus:false
+INFO  2015-08-04 13:12:13,008 [PieceSkillBookHandler.java,170] - pieceSkillBook handler ret send: 7, Cost:32, {}
+INFO  2015-08-04 13:13:29,141 [SkillBookInfoHandler.java,58] - getSkillBookInfo received: 7, 1, {}
+INFO  2015-08-04 13:13:29,142 [SkillBookInfoHandler.java,90] - getSkillBookInfo ret send: 7, Cost:1, {}
+INFO  2015-08-04 13:13:30,103 [SkillBookInfoHandler.java,58] - getSkillBookInfo received: 7, 1, {}
+INFO  2015-08-04 13:13:30,104 [SkillBookInfoHandler.java,90] - getSkillBookInfo ret send: 7, Cost:1, {}
+INFO  2015-08-04 13:18:59,227 [SkillBookServices.java,44] - start************#playerId:5,startTime:1438665539227*********start
+INFO  2015-08-04 13:18:59,237 [SkillBookServices.java,72] - end************playerId:5,endTime:1438665539237,cost:10*********end
+INFO  2015-08-04 14:05:34,785 [SkillBookServices.java,44] - start************#playerId:7,startTime:1438668334785*********start
+INFO  2015-08-04 14:05:34,797 [SkillBookServices.java,72] - end************playerId:7,endTime:1438668334797,cost:12*********end
+INFO  2015-08-04 14:21:32,324 [SkillBookServices.java,44] - start************#playerId:5,startTime:1438669292324*********start
+INFO  2015-08-04 14:21:32,328 [SkillBookServices.java,72] - end************playerId:5,endTime:1438669292328,cost:4*********end
+INFO  2015-08-04 14:40:02,377 [SkillBookServices.java,44] - start************#playerId:5,startTime:1438670402377*********start
+INFO  2015-08-04 14:40:02,387 [SkillBookServices.java,72] - end************playerId:5,endTime:1438670402387,cost:10*********end
+INFO  2015-08-04 14:43:52,455 [SkillBookServices.java,44] - start************#playerId:7,startTime:1438670632455*********start
+INFO  2015-08-04 14:43:52,460 [SkillBookServices.java,72] - end************playerId:7,endTime:1438670632460,cost:5*********end
+INFO  2015-08-04 14:44:54,563 [SkillBookInfoHandler.java,58] - getSkillBookInfo received: 7, 1, {}
+INFO  2015-08-04 14:44:54,569 [SkillBookInfoHandler.java,90] - getSkillBookInfo ret send: 7, Cost:6, {}
+INFO  2015-08-04 14:46:04,644 [SkillBookInfoHandler.java,58] - getSkillBookInfo received: 7, 1, {}
+INFO  2015-08-04 14:46:04,644 [SkillBookInfoHandler.java,90] - getSkillBookInfo ret send: 7, Cost:0, {}
+INFO  2015-08-04 14:52:50,896 [SkillBookServices.java,44] - start************#playerId:9,startTime:1438671170896*********start
+INFO  2015-08-04 14:52:50,901 [SkillBookServices.java,72] - end************playerId:9,endTime:1438671170901,cost:5*********end
+INFO  2015-08-04 14:58:32,849 [SkillBookServices.java,44] - start************#playerId:5,startTime:1438671512849*********start
+INFO  2015-08-04 14:58:32,860 [SkillBookServices.java,72] - end************playerId:5,endTime:1438671512860,cost:11*********end
+INFO  2015-08-04 15:02:26,600 [SkillBookServices.java,44] - start************#playerId:5,startTime:1438671746600*********start
+INFO  2015-08-04 15:02:26,630 [SkillBookServices.java,72] - end************playerId:5,endTime:1438671746630,cost:30*********end
+INFO  2015-08-04 15:02:56,849 [SkillBookServices.java,44] - start************#playerId:9,startTime:1438671776849*********start
+INFO  2015-08-04 15:02:56,855 [SkillBookServices.java,72] - end************playerId:9,endTime:1438671776855,cost:6*********end
+INFO  2015-08-04 15:03:48,262 [SkillBookServices.java,44] - start************#playerId:5,startTime:1438671828261*********start
+INFO  2015-08-04 15:03:48,271 [SkillBookServices.java,72] - end************playerId:5,endTime:1438671828271,cost:10*********end
+INFO  2015-08-04 15:04:23,609 [SkillBookServices.java,44] - start************#playerId:9,startTime:1438671863609*********start
+INFO  2015-08-04 15:04:23,610 [SkillBookServices.java,72] - end************playerId:9,endTime:1438671863610,cost:1*********end
+INFO  2015-08-04 15:05:08,153 [SkillBookServices.java,44] - start************#playerId:5,startTime:1438671908153*********start
+INFO  2015-08-04 15:05:08,160 [SkillBookServices.java,72] - end************playerId:5,endTime:1438671908160,cost:7*********end
+INFO  2015-08-04 15:06:05,955 [SkillBookServices.java,44] - start************#playerId:5,startTime:1438671965955*********start
+INFO  2015-08-04 15:06:05,969 [SkillBookServices.java,72] - end************playerId:5,endTime:1438671965969,cost:14*********end
+INFO  2015-08-04 15:06:52,625 [SkillBookServices.java,44] - start************#playerId:5,startTime:1438672012625*********start
+INFO  2015-08-04 15:06:52,637 [SkillBookServices.java,72] - end************playerId:5,endTime:1438672012637,cost:12*********end
+INFO  2015-08-04 15:09:26,866 [SkillBookServices.java,44] - start************#playerId:9,startTime:1438672166865*********start
+INFO  2015-08-04 15:09:26,881 [SkillBookServices.java,72] - end************playerId:9,endTime:1438672166881,cost:16*********end
+INFO  2015-08-04 15:10:57,228 [SkillBookServices.java,44] - start************#playerId:9,startTime:1438672257228*********start
+INFO  2015-08-04 15:10:57,242 [SkillBookServices.java,72] - end************playerId:9,endTime:1438672257241,cost:13*********end
+INFO  2015-08-04 15:11:32,182 [SkillBookServices.java,44] - start************#playerId:5,startTime:1438672292182*********start
+INFO  2015-08-04 15:11:32,212 [SkillBookServices.java,72] - end************playerId:5,endTime:1438672292212,cost:30*********end
+INFO  2015-08-04 15:14:37,922 [SkillBookServices.java,44] - start************#playerId:5,startTime:1438672477922*********start
+INFO  2015-08-04 15:14:37,927 [SkillBookServices.java,72] - end************playerId:5,endTime:1438672477927,cost:5*********end
+INFO  2015-08-04 15:20:16,052 [SkillBookServices.java,44] - start************#playerId:5,startTime:1438672816052*********start
+INFO  2015-08-04 15:20:16,067 [SkillBookServices.java,72] - end************playerId:5,endTime:1438672816067,cost:15*********end
+INFO  2015-08-04 15:26:40,649 [SkillBookServices.java,44] - start************#playerId:9,startTime:1438673200648*********start
+INFO  2015-08-04 15:26:40,654 [SkillBookServices.java,72] - end************playerId:9,endTime:1438673200654,cost:6*********end
+INFO  2015-08-05 19:31:13,758 [SkillBookServices.java,44] - start************#playerId:9,startTime:1438774273758*********start
+INFO  2015-08-05 19:31:13,787 [SkillBookServices.java,72] - end************playerId:9,endTime:1438774273787,cost:29*********end
+INFO  2015-08-05 19:31:54,248 [SkillBookServices.java,44] - start************#playerId:5,startTime:1438774314248*********start
+INFO  2015-08-05 19:31:54,258 [SkillBookServices.java,72] - end************playerId:5,endTime:1438774314258,cost:10*********end
+INFO  2015-08-05 19:37:51,873 [SkillBookInfoHandler.java,58] - getSkillBookInfo received: 5, 1, {}
+INFO  2015-08-05 19:37:51,878 [SkillBookInfoHandler.java,90] - getSkillBookInfo ret send: 5, Cost:5, {}
+INFO  2015-08-05 19:37:54,624 [SkillBookServices.java,44] - start************#playerId:9,startTime:1438774674624*********start
+INFO  2015-08-05 19:37:54,626 [SkillBookServices.java,72] - end************playerId:9,endTime:1438774674626,cost:2*********end
+INFO  2015-08-05 19:51:16,346 [SkillBookInfoHandler.java,58] - getSkillBookInfo received: 5, 1, {}
+INFO  2015-08-05 19:51:16,347 [SkillBookInfoHandler.java,90] - getSkillBookInfo ret send: 5, Cost:1, {}

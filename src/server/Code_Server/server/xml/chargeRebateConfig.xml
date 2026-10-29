@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<ChargeRebates>
+		<ChargeRebate id="1" activeTimeInterval="2" chargeDuration="4" rebateDuration="30" minRecharge="100" maxRecharge="2000" refundRate="0.033"/>
+		<ChargeRebate id="2" activeTimeInterval="1000" chargeDuration="4" rebateDuration="30" minRecharge="100" maxRecharge="2000" refundRate="0.033"/>
+		<ChargeRebate id="3" activeTimeInterval="1000" chargeDuration="4" rebateDuration="30" minRecharge="100" maxRecharge="2000" refundRate="0.033"/>
+		<ChargeRebate id="4" activeTimeInterval="1000" chargeDuration="4" rebateDuration="30" minRecharge="100" maxRecharge="2000" refundRate="0.033"/>
+	</ChargeRebates>
+</root>

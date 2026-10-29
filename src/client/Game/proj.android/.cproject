@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?>
+
+<cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="com.android.toolchain.gcc.455182730">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.android.toolchain.gcc.455182730" moduleId="org.eclipse.cdt.core.settings" name="Default">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.VCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.MakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildProperties="" description="" id="com.android.toolchain.gcc.455182730" name="Default" parent="org.eclipse.cdt.build.core.emptycfg">
+					<folderInfo id="com.android.toolchain.gcc.455182730.1756209301" name="/" resourcePath="">
+						<toolChain id="com.android.toolchain.gcc.2091201294" name="com.android.toolchain.gcc" superClass="com.android.toolchain.gcc">
+							<targetPlatform binaryParser="org.eclipse.cdt.core.ELF" id="com.android.targetPlatform.1137873968" isAbstract="false" superClass="com.android.targetPlatform"/>
+							<builder arguments="" buildPath="${ProjDirPath}" command="${ProjDirPath}/build_native.sh" id="com.android.builder.2078106057" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Android Builder" superClass="com.android.builder">
+								<outputEntries>
+									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name="obj"/>
+									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name="libs"/>
+								</outputEntries>
+							</builder>
+							<tool id="com.android.gcc.compiler.1414828235" name="Android GCC Compiler" superClass="com.android.gcc.compiler">
+								<option id="com.android.gcc.option.includePath.1035882224" superClass="com.android.gcc.option.includePath" valueType="includePath">
+									<listOptionValue builtIn="false" value="C:/workspace/android-ndk-r8e/sources/cxx-stl/system/include"/>
+									<listOptionValue builtIn="false" value="C:/workspace/android-ndk-r8e/toolchains/arm-linux-androideabi-4.6/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.6/include"/>
+									<listOptionValue builtIn="false" value="C:/workspace/android-ndk-r8e/toolchains/arm-linux-androideabi-4.6/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.6/include-fixed"/>
+									<listOptionValue builtIn="false" value="C:/workspace/android-ndk-r8e/platforms/android-9/arch-arm/usr/include"/>
+									<listOptionValue builtIn="false" value="C:/workspace/android-ndk-r8e/sources/cxx-stl/gnu-libstdc++/4.6/include"/>
+									<listOptionValue builtIn="false" value="C:/workspace/svn/CardGame_1/Main/client/cocos2dx/platform"/>
+									<listOptionValue builtIn="false" value="C:/workspace/svn/CardGame_1/Main/client/cocos2dx/platform/android/jni"/>
+									<listOptionValue builtIn="false" value="C:/workspace/svn/CardGame_1/Main/client/cocos2dx/platform/android"/>
+									<listOptionValue builtIn="false" value="C:/workspace/svn/CardGame_1/Main/client/cocos2dx/include"/>
+									<listOptionValue builtIn="false" value="C:/workspace/svn/CardGame_1/Main/client/CocosDenshion/include"/>
+									<listOptionValue builtIn="false" value="C:/workspace/svn/CardGame_1/Main/client/extensions"/>
+									<listOptionValue builtIn="false" value="C:/workspace/svn/CardGame_1/Main/client/Game/Classes"/>
+									<listOptionValue builtIn="false" value="C:/workspace/svn/CardGame_1/Main/client/Game/Protobuf"/>
+									<listOptionValue builtIn="false" value="C:/workspace/svn/CardGame_1/Main/client/Game/Platform"/>
+									<listOptionValue builtIn="false" value="C:/workspace/svn/CardGame_1/Main/client/cocos2dx"/>
+								</option>
+								<inputType id="com.android.gcc.inputType.938805536" superClass="com.android.gcc.inputType"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="Game.null.1740285897" name="Game"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="com.android.toolchain.gcc.455182730;com.android.toolchain.gcc.455182730.1756209301;com.android.gcc.compiler.1414828235;com.android.gcc.inputType.938805536">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.android.AndroidPerProjectProfile"/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="refreshScope" versionNumber="1">
+		<resource resourceType="PROJECT" workspacePath="/Game"/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
+</cproject>

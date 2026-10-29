@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<VisitRewardSelecters>
+		<VisitRewardSelecter times="1" continueDay="3" rewardTypes="53003" rates="1"/>
+		<VisitRewardSelecter times="2" continueDay="6" rewardTypes="41001" rates="1"/>
+		<VisitRewardSelecter times="3" continueDay="5" rewardTypes="53003" rates="1"/>
+		<VisitRewardSelecter times="4" continueDay="5" rewardTypes="41001" rates="1"/>
+		<VisitRewardSelecter times="5" continueDay="5" rewardTypes="41001,41002" rates="67%,33%"/>
+	</VisitRewardSelecters>
+</root>

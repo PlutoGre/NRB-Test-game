@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<GuildBuildInfos>
+		<Info id="1" type="1"/>
+		<Info id="2" type="2"/>
+		<Info id="3" type="3"/>
+		<Info id="4" type="3"/>
+		<Info id="5" type="3"/>
+		<Info id="6" type="3"/>
+		<Info id="7" type="3"/>
+		<Info id="8" type="4"/>
+		<Info id="9" type="4"/>
+		<Info id="10" type="4"/>
+		<Info id="11" type="4"/>
+		<Info id="12" type="5"/>
+	</GuildBuildInfos>
+</root>

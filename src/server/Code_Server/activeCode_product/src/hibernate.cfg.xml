@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- 连接数据库的基本配置 -->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3306/dzm</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+		
+		<!-- 配置hibernate的方言，指明连接的是哪个数据库 -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		
+		<!-- 是否在控制台中输出sql语句，默认是false（不输出） -->
+		<property name="hibernate.show_sql">true</property>
+
+		<!-- 
+			使用hibernate配置事务的隔离级别
+				1—Read uncommitted isolation
+				2—Read committed isolation
+				4—Repeatable read isolation
+				8—Serializable isolation
+		 -->
+		<property name="hibernate.connection.isolation">4</property>
+		<!-- 配置Session对象的生命周期与本地线程绑定 -->
+		<property name="hibernate.current_session_context_class">thread</property>
+
+		<!-- 加载映射文件 -->
+		<mapping resource="entity/ActiveCode.hbm.xml"/>
+	</session-factory>
+</hibernate-configuration>
+		

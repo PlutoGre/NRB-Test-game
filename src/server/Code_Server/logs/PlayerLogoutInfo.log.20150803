@@ -1,0 +1,77 @@
+INFO  2015-08-03 10:15:50,033 [LoginHandler.java,516] - player login info: 3, 1438323968, 2, 0, 271, 1438568150, ios_91, win32Device
+INFO  2015-08-03 10:34:01,951 [SessionHandler.java,84] - player logout info: 3, 1438323968, 3, 0, 329, 1438569241,ios_91,win32Device
+INFO  2015-08-03 10:35:01,984 [LoginHandler.java,516] - player login info: 3, 1438323968, 3, 0, 329, 1438569301, ios_91, win32Device
+INFO  2015-08-03 10:40:53,185 [LoginHandler.java,516] - player login info: 3, 1438323968, 3, 0, 329, 1438569653, ios_91, win32Device
+INFO  2015-08-03 10:55:06,809 [SessionHandler.java,37] - player logout info: 3, 1438323968, 4, 0, 341, 1438570506,ios_91,win32Device
+INFO  2015-08-03 10:55:06,820 [SessionHandler.java,84] - player logout info: 3, 1438323968, 4, 0, 341, 1438570506,ios_91,win32Device
+INFO  2015-08-03 10:55:26,649 [LoginHandler.java,516] - player login info: 3, 1438323968, 4, 0, 341, 1438570526, ios_91, win32Device
+INFO  2015-08-03 10:55:58,652 [SessionHandler.java,37] - player logout info: 3, 1438323968, 4, 0, 341, 1438570558,ios_91,win32Device
+INFO  2015-08-03 10:55:58,663 [SessionHandler.java,84] - player logout info: 3, 1438323968, 4, 0, 341, 1438570558,ios_91,win32Device
+INFO  2015-08-03 10:56:20,349 [LoginHandler.java,516] - player login info: 2, 1438323925, 2, 0, 205, 1438570580, ios_91, win32Device
+INFO  2015-08-03 11:17:50,065 [LoginHandler.java,526] - player login info: 3, 1438323968, 4, 0, 341, 1438571870, ios_91, win32Device
+INFO  2015-08-03 11:18:18,518 [SessionHandler.java,37] - player logout info: 3, 1438323968, 4, 0, 341, 1438571898,ios_91,win32Device
+INFO  2015-08-03 11:18:18,531 [SessionHandler.java,84] - player logout info: 3, 1438323968, 4, 0, 341, 1438571898,ios_91,win32Device
+INFO  2015-08-03 11:18:33,166 [LoginHandler.java,526] - player login info: 2, 1438323925, 2, 0, 282, 1438571913, ios_91, win32Device
+INFO  2015-08-03 11:31:59,430 [SessionHandler.java,84] - player logout info: 2, 1438323925, 3, 0, 305, 1438572719,ios_91,win32Device
+INFO  2015-08-03 11:32:49,515 [LoginHandler.java,526] - player login info: 2, 1438323925, 3, 0, 305, 1438572769, ios_91, win32Device
+INFO  2015-08-03 11:45:16,291 [SessionHandler.java,84] - player logout info: 2, 1438323925, 3, 0, 305, 1438573516,ios_91,win32Device
+INFO  2015-08-03 11:45:16,437 [LoginHandler.java,526] - player login info: 2, 1438323925, 3, 0, 305, 1438573516, ios_91, win32Device
+INFO  2015-08-03 11:57:31,501 [SessionHandler.java,37] - player logout info: 2, 1438323925, 3, 0, 305, 1438574251,ios_91,win32Device
+INFO  2015-08-03 11:57:31,511 [SessionHandler.java,84] - player logout info: 2, 1438323925, 3, 0, 305, 1438574251,ios_91,win32Device
+INFO  2015-08-03 12:09:06,655 [LoginHandler.java,526] - player login info: 2, 1438323925, 3, 0, 305, 1438574946, ios_91, win32Device
+INFO  2015-08-03 12:12:19,418 [SessionHandler.java,84] - player logout info: 2, 1438323925, 3, 1, 305, 1438575139,ios_91,win32Device
+INFO  2015-08-03 12:12:52,676 [LoginHandler.java,526] - player login info: 2, 1438323925, 3, 1, 305, 1438575172, ios_91, win32Device
+INFO  2015-08-03 12:13:37,274 [SessionHandler.java,84] - player logout info: 2, 1438323925, 3, 1, 305, 1438575217,ios_91,win32Device
+INFO  2015-08-03 12:13:37,420 [LoginHandler.java,526] - player login info: 2, 1438323925, 3, 1, 305, 1438575217, ios_91, win32Device
+INFO  2015-08-03 12:15:34,062 [SessionHandler.java,37] - player logout info: 2, 1438323925, 3, 1, 317, 1438575334,ios_91,win32Device
+INFO  2015-08-03 12:15:34,062 [SessionHandler.java,84] - player logout info: 2, 1438323925, 3, 1, 317, 1438575334,ios_91,win32Device
+INFO  2015-08-03 12:15:59,715 [LoginHandler.java,526] - player login info: 2, 1438323925, 3, 1, 317, 1438575359, ios_91, win32Device
+INFO  2015-08-03 12:16:31,263 [SessionHandler.java,84] - player logout info: 2, 1438323925, 3, 1, 317, 1438575391,ios_91,win32Device
+INFO  2015-08-03 12:17:35,403 [LoginHandler.java,526] - player login info: 2, 1438323925, 3, 1, 317, 1438575455, ios_91, win32Device
+INFO  2015-08-03 12:17:50,849 [SessionHandler.java,84] - player logout info: 2, 1438323925, 3, 1, 317, 1438575470,ios_91,win32Device
+INFO  2015-08-03 12:18:25,937 [LoginHandler.java,526] - player login info: 2, 1438323925, 3, 1, 317, 1438575505, ios_91, win32Device
+INFO  2015-08-03 12:18:51,804 [SessionHandler.java,84] - player logout info: 2, 1438323925, 3, 1, 317, 1438575531,ios_91,win32Device
+INFO  2015-08-03 12:19:13,433 [LoginHandler.java,526] - player login info: 2, 1438323925, 3, 1, 317, 1438575553, ios_91, win32Device
+INFO  2015-08-03 13:12:51,206 [LoginHandler.java,526] - player login info: 2, 1438323925, 3, 1, 341, 1438578771, ios_91, win32Device
+INFO  2015-08-03 13:27:56,678 [SessionHandler.java,84] - player logout info: 2, 1438323925, 3, 1, 341, 1438579676,ios_91,win32Device
+INFO  2015-08-03 13:28:10,028 [LoginHandler.java,526] - player login info: 4, 1438579689, 1, 0, 60, 1438579690, win32platforminfo_91, win32Device
+INFO  2015-08-03 13:32:24,050 [SessionHandler.java,84] - player logout info: 4, 1438579689, 1, 0, 90, 1438579944,win32platforminfo_91,win32Device
+INFO  2015-08-03 13:32:32,720 [LoginHandler.java,526] - player login info: 5, 1438579952, 1, 0, 60, 1438579952, win32platforminfo_91, win32Device
+INFO  2015-08-03 13:42:40,601 [SessionHandler.java,84] - player logout info: 5, 1438579952, 1, 0, 90, 1438580560,win32platforminfo_91,win32Device
+INFO  2015-08-03 13:57:30,538 [LoginHandler.java,526] - player login info: 2, 1438323925, 3, 1, 341, 1438581450, ios_91, win32Device
+INFO  2015-08-03 13:57:51,168 [SessionHandler.java,84] - player logout info: 2, 1438323925, 3, 1, 341, 1438581471,ios_91,win32Device
+INFO  2015-08-03 13:57:51,301 [LoginHandler.java,526] - player login info: 2, 1438323925, 3, 1, 341, 1438581471, ios_91, win32Device
+INFO  2015-08-03 13:59:41,823 [SessionHandler.java,84] - player logout info: 2, 1438323925, 3, 1, 341, 1438581581,ios_91,win32Device
+INFO  2015-08-03 14:01:29,215 [LoginHandler.java,526] - player login info: 2, 1438323925, 3, 1, 341, 1438581689, ios_91, win32Device
+INFO  2015-08-03 14:02:05,477 [SessionHandler.java,84] - player logout info: 2, 1438323925, 3, 1, 341, 1438581725,ios_91,win32Device
+INFO  2015-08-03 14:05:25,890 [LoginHandler.java,526] - player login info: 1, 1438581925, 1, 0, 60, 1438581925, win32platforminfo_91, win32Device
+INFO  2015-08-03 14:07:04,766 [SessionHandler.java,84] - player logout info: 1, 1438581925, 1, 0, 60, 1438582024,win32platforminfo_91,win32Device
+INFO  2015-08-03 14:07:04,902 [LoginHandler.java,526] - player login info: 1, 1438581925, 1, 0, 60, 1438582024, win32platforminfo_91, win32Device
+INFO  2015-08-03 14:07:27,099 [SessionHandler.java,84] - player logout info: 1, 1438581925, 1, 0, 60, 1438582047,win32platforminfo_91,win32Device
+INFO  2015-08-03 14:12:24,301 [LoginHandler.java,526] - player login info: 2, 1438582344, 1, 0, 60, 1438582344, win32platforminfo_91, win32Device
+INFO  2015-08-03 14:31:25,826 [SessionHandler.java,84] - player logout info: 2, 1438582344, 1, 0, 60, 1438583485,win32platforminfo_91,win32Device
+INFO  2015-08-03 14:31:33,061 [LoginHandler.java,526] - player login info: 1, 1438581925, 1, 0, 60, 1438583493, win32platforminfo_91, win32Device
+INFO  2015-08-03 14:33:47,627 [SessionHandler.java,84] - player logout info: 1, 1438581925, 1, 0, 60, 1438583627,win32platforminfo_91,win32Device
+INFO  2015-08-03 14:39:28,772 [LoginHandler.java,526] - player login info: 2, 1438582344, 1, 0, 60, 1438583968, ios_91, win32Device
+INFO  2015-08-03 15:04:14,973 [LoginHandler.java,526] - player login info: 2, 1438582344, 1, 0, 60, 1438585454, ios_91, win32Device
+INFO  2015-08-03 15:10:27,202 [SessionHandler.java,84] - player logout info: 2, 1438582344, 1, 0, 90, 1438585827,ios_91,win32Device
+INFO  2015-08-03 15:23:52,066 [LoginHandler.java,526] - player login info: 2, 1438582344, 1, 0, 90, 1438586632, ios_91, win32Device
+INFO  2015-08-03 15:44:43,011 [SessionHandler.java,84] - player logout info: 2, 1438582344, 1, 0, 90, 1438587883,ios_91,win32Device
+INFO  2015-08-03 15:44:43,012 [LoginHandler.java,526] - player login info: 2, 1438582344, 1, 0, 90, 1438587883, ios_91, win32Device
+INFO  2015-08-03 15:44:49,306 [SessionHandler.java,84] - player logout info: 2, 1438582344, 1, 0, 90, 1438587889,ios_91,win32Device
+INFO  2015-08-03 16:52:35,298 [LoginHandler.java,526] - player login info: 2, 1438582344, 1, 0, 90, 1438591955, ios_91, win32Device
+INFO  2015-08-03 16:54:13,159 [SessionHandler.java,84] - player logout info: 2, 1438582344, 1, 0, 90, 1438592053,ios_91,win32Device
+INFO  2015-08-03 16:54:25,675 [LoginHandler.java,526] - player login info: 3, 1438592065, 1, 0, 60, 1438592065, win32platforminfo_91, win32Device
+INFO  2015-08-03 16:57:25,455 [SessionHandler.java,84] - player logout info: 3, 1438592065, 1, 0, 60, 1438592245,win32platforminfo_91,win32Device
+INFO  2015-08-03 16:58:11,767 [LoginHandler.java,526] - player login info: 3, 1438592065, 1, 0, 60, 1438592291, ios_91, win32Device
+INFO  2015-08-03 16:58:21,796 [SessionHandler.java,84] - player logout info: 3, 1438592065, 1, 0, 60, 1438592301,ios_91,win32Device
+INFO  2015-08-03 16:58:38,131 [LoginHandler.java,526] - player login info: 4, 1438592316, 1, 3, 60, 1438592318, win32platforminfo_91, win32Device
+INFO  2015-08-03 17:11:48,308 [SessionHandler.java,84] - player logout info: 4, 1438592316, 1, 3, 90, 1438593108,win32platforminfo_91,win32Device
+INFO  2015-08-03 17:11:54,884 [LoginHandler.java,526] - player login info: 3, 1438592065, 1, 0, 60, 1438593114, ios_91, win32Device
+INFO  2015-08-03 17:12:04,652 [SessionHandler.java,84] - player logout info: 3, 1438592065, 1, 0, 60, 1438593124,ios_91,win32Device
+INFO  2015-08-03 17:36:28,483 [LoginHandler.java,526] - player login info: 1, 1438581925, 1, 0, 60, 1438594588, ios_91, win32Device
+INFO  2015-08-03 17:36:53,451 [SessionHandler.java,84] - player logout info: 1, 1438581925, 1, 0, 60, 1438594613,ios_91,win32Device
+INFO  2015-08-03 19:48:25,209 [LoginHandler.java,526] - player login info: 2, 1438582344, 1, 0, 90, 1438602505, ios_91, win32Device
+INFO  2015-08-03 19:51:46,881 [SessionHandler.java,84] - player logout info: 2, 1438582344, 1, 0, 120, 1438602706,ios_91,win32Device
+INFO  2015-08-03 19:51:49,626 [LoginHandler.java,526] - player login info: 2, 1438582344, 1, 0, 120, 1438602709, ios_91, win32Device
+INFO  2015-08-03 19:51:51,398 [SessionHandler.java,84] - player logout info: 2, 1438582344, 1, 0, 120, 1438602711,ios_91,win32Device

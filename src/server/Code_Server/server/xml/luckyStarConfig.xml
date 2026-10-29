@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<!--itemId 表示幸运星的itemId, maxDropCount表示航行中幸运星的最大可掉落次数,balanceTimes表示保底抽取所需的次数, balanceType表示保底抽取的类型,balanceId表示保底抽取的物品id  treasureType为宝箱的抽取类型-->
+	<LuckyStarConfigs>
+		<LuckyStarConfig id="1"	itemId="4002001"	maxDropCount="1"  balanceTimes="600" balanceType="52001" balanceId="40" treasureType="101"/>
+		<LuckyStarConfig id="2"	itemId="4002002"	maxDropCount="1"  balanceTimes="120" balanceType="52002" balanceId="43" treasureType="102"/>
+	</LuckyStarConfigs>
+</root>

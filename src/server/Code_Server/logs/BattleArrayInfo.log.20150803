@@ -1,0 +1,138 @@
+INFO  2015-08-03 10:15:51,209 [UserBattleArrayHandler.java,47] - user battle array handler received: 3, 1, {}
+INFO  2015-08-03 10:15:51,216 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 3, 7, {}
+INFO  2015-08-03 10:16:02,341 [UserBattleHandler.java,56] - user battle handler received: 3, 1, 0
+INFO  2015-08-03 10:16:02,366 [UserBattleHandler.java,302] - user battle handler ret send: 3, 24, {}
+INFO  2015-08-03 10:18:25,904 [UserBattleHandler.java,56] - user battle handler received: 3, 1, 0
+INFO  2015-08-03 10:18:25,947 [UserBattleHandler.java,302] - user battle handler ret send: 3, 41, {}
+INFO  2015-08-03 10:20:31,200 [UserBattleHandler.java,56] - user battle handler received: 3, 1, 0
+INFO  2015-08-03 10:20:31,268 [UserBattleHandler.java,302] - user battle handler ret send: 3, 68, {}
+INFO  2015-08-03 10:26:18,784 [UserBattleHandler.java,56] - user battle handler received: 3, 1, 0
+INFO  2015-08-03 10:27:23,021 [UserBattleHandler.java,302] - user battle handler ret send: 3, 64235, {}
+INFO  2015-08-03 10:27:23,022 [UserBattleHandler.java,56] - user battle handler received: 3, 1, 0
+INFO  2015-08-03 10:28:59,089 [UserBattleHandler.java,302] - user battle handler ret send: 3, 96067, {}
+INFO  2015-08-03 10:35:03,199 [UserBattleHandler.java,56] - user battle handler received: 3, 1, 0
+INFO  2015-08-03 10:35:11,464 [UserBattleHandler.java,302] - user battle handler ret send: 3, 8265, {}
+INFO  2015-08-03 10:36:47,338 [UserBattleHandler.java,56] - user battle handler received: 3, 1, 0
+INFO  2015-08-03 10:36:47,346 [UserBattleHandler.java,302] - user battle handler ret send: 3, 8, {}
+INFO  2015-08-03 10:40:54,783 [UserBattleArrayHandler.java,47] - user battle array handler received: 3, 1, {}
+INFO  2015-08-03 10:40:54,790 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 3, 7, {}
+INFO  2015-08-03 10:54:07,245 [UserBattleHandler.java,56] - user battle handler received: 3, 1, 0
+INFO  2015-08-03 10:54:07,323 [UserBattleHandler.java,302] - user battle handler ret send: 3, 77, {}
+INFO  2015-08-03 10:55:28,473 [UserBattleArrayHandler.java,47] - user battle array handler received: 3, 1, {}
+INFO  2015-08-03 10:55:28,496 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 3, 21, {}
+INFO  2015-08-03 10:56:22,254 [UserBattleArrayHandler.java,47] - user battle array handler received: 2, 1, {}
+INFO  2015-08-03 10:56:22,263 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 2, 8, {}
+INFO  2015-08-03 10:56:28,688 [UserBattleHandler.java,56] - user battle handler received: 2, 1, 0
+INFO  2015-08-03 10:56:28,750 [UserBattleHandler.java,302] - user battle handler ret send: 2, 61, {}
+INFO  2015-08-03 10:56:57,817 [UserBattleHandler.java,56] - user battle handler received: 2, 1, 0
+INFO  2015-08-03 10:56:57,823 [UserBattleHandler.java,302] - user battle handler ret send: 2, 5, {}
+INFO  2015-08-03 10:57:23,910 [UserBattleHandler.java,56] - user battle handler received: 2, 1, 0
+INFO  2015-08-03 10:57:23,921 [UserBattleHandler.java,302] - user battle handler ret send: 2, 11, {}
+INFO  2015-08-03 10:57:44,403 [UserBattleHandler.java,56] - user battle handler received: 2, 1, 0
+INFO  2015-08-03 10:57:44,487 [UserBattleHandler.java,302] - user battle handler ret send: 2, 83, {}
+INFO  2015-08-03 11:00:13,768 [UserBattleHandler.java,56] - user battle handler received: 2, 1, 0
+INFO  2015-08-03 11:00:13,784 [UserBattleHandler.java,302] - user battle handler ret send: 2, 16, {}
+INFO  2015-08-03 11:00:56,783 [UserBattleHandler.java,56] - user battle handler received: 2, 1, 0
+INFO  2015-08-03 11:00:56,792 [UserBattleHandler.java,302] - user battle handler ret send: 2, 9, {}
+INFO  2015-08-03 11:11:10,251 [UserBattleHandler.java,56] - user battle handler received: 2, 1, 0
+INFO  2015-08-03 11:11:10,258 [UserBattleHandler.java,302] - user battle handler ret send: 2, 7, {}
+INFO  2015-08-03 11:17:51,874 [UserBattleArrayHandler.java,47] - user battle array handler received: 3, 1, {}
+INFO  2015-08-03 11:17:51,897 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 3, 22, {}
+INFO  2015-08-03 11:18:35,727 [UserBattleArrayHandler.java,47] - user battle array handler received: 2, 1, {}
+INFO  2015-08-03 11:18:35,729 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 2, 2, {}
+INFO  2015-08-03 11:25:57,581 [UserBattleHandler.java,56] - user battle handler received: 2, 1, 0
+INFO  2015-08-03 11:25:57,633 [UserBattleHandler.java,302] - user battle handler ret send: 2, 52, {}
+INFO  2015-08-03 11:28:30,169 [UserBattleHandler.java,56] - user battle handler received: 2, 1, 0
+INFO  2015-08-03 11:28:30,179 [UserBattleHandler.java,302] - user battle handler ret send: 2, 10, {}
+INFO  2015-08-03 11:32:50,799 [UserBattleArrayHandler.java,47] - user battle array handler received: 2, 1, {}
+INFO  2015-08-03 11:32:50,806 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 2, 7, {}
+INFO  2015-08-03 12:09:08,768 [UserBattleArrayHandler.java,47] - user battle array handler received: 2, 1, {}
+INFO  2015-08-03 12:09:08,769 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 2, 1, {}
+INFO  2015-08-03 12:13:47,072 [UserBattleHandler.java,56] - user battle handler received: 2, 1, 0
+INFO  2015-08-03 12:13:47,113 [UserBattleHandler.java,302] - user battle handler ret send: 2, 40, {}
+INFO  2015-08-03 12:16:02,217 [UserBattleArrayHandler.java,47] - user battle array handler received: 2, 1, {}
+INFO  2015-08-03 12:16:02,218 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 2, 1, {}
+INFO  2015-08-03 12:17:37,422 [UserBattleArrayHandler.java,47] - user battle array handler received: 2, 1, {}
+INFO  2015-08-03 12:17:37,423 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 2, 1, {}
+INFO  2015-08-03 12:18:27,873 [UserBattleArrayHandler.java,47] - user battle array handler received: 2, 1, {}
+INFO  2015-08-03 12:18:27,874 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 2, 0, {}
+INFO  2015-08-03 12:19:15,620 [UserBattleArrayHandler.java,47] - user battle array handler received: 2, 1, {}
+INFO  2015-08-03 12:19:15,621 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 2, 1, {}
+INFO  2015-08-03 12:20:39,418 [UserBattleHandler.java,56] - user battle handler received: 2, 1, 0
+INFO  2015-08-03 12:20:39,422 [UserBattleHandler.java,302] - user battle handler ret send: 2, 4, {}
+INFO  2015-08-03 12:21:43,531 [UserBattleHandler.java,56] - user battle handler received: 2, 1, 0
+INFO  2015-08-03 12:21:43,538 [UserBattleHandler.java,302] - user battle handler ret send: 2, 6, {}
+INFO  2015-08-03 13:03:58,743 [UserBattleHandler.java,56] - user battle handler received: 2, 1, 0
+INFO  2015-08-03 13:03:58,769 [UserBattleHandler.java,302] - user battle handler ret send: 2, 26, {}
+INFO  2015-08-03 13:12:53,003 [UserBattleArrayHandler.java,47] - user battle array handler received: 2, 1, {}
+INFO  2015-08-03 13:12:53,014 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 2, 10, {}
+INFO  2015-08-03 13:13:01,519 [UserBattleHandler.java,56] - user battle handler received: 2, 1, 0
+INFO  2015-08-03 13:13:01,542 [UserBattleHandler.java,302] - user battle handler ret send: 2, 23, {}
+INFO  2015-08-03 13:28:11,935 [UserBattleArrayHandler.java,47] - user battle array handler received: 4, 1, {}
+INFO  2015-08-03 13:28:11,936 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 4, 1, {}
+INFO  2015-08-03 13:29:57,510 [UserBattleArrayHandler.java,47] - user battle array handler received: 4, 1, {}
+INFO  2015-08-03 13:29:57,511 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 4, 1, {}
+INFO  2015-08-03 13:29:59,195 [UserBattleHandler.java,56] - user battle handler received: 4, 1, 0
+INFO  2015-08-03 13:29:59,218 [UserBattleHandler.java,302] - user battle handler ret send: 4, 23, {}
+INFO  2015-08-03 13:32:34,463 [UserBattleArrayHandler.java,47] - user battle array handler received: 5, 1, {}
+INFO  2015-08-03 13:32:34,464 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 5, 1, {}
+INFO  2015-08-03 13:38:20,431 [UserBattleArrayHandler.java,47] - user battle array handler received: 5, 1, {}
+INFO  2015-08-03 13:38:20,432 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 5, 1, {}
+INFO  2015-08-03 13:38:21,315 [UserBattleHandler.java,56] - user battle handler received: 5, 1, 0
+INFO  2015-08-03 13:38:21,319 [UserBattleHandler.java,302] - user battle handler ret send: 5, 4, {}
+INFO  2015-08-03 13:57:32,642 [UserBattleArrayHandler.java,47] - user battle array handler received: 2, 1, {}
+INFO  2015-08-03 13:57:32,643 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 2, 1, {}
+INFO  2015-08-03 14:01:31,334 [UserBattleArrayHandler.java,47] - user battle array handler received: 2, 1, {}
+INFO  2015-08-03 14:01:31,336 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 2, 2, {}
+INFO  2015-08-03 14:05:27,900 [UserBattleArrayHandler.java,47] - user battle array handler received: 1, 1, {}
+INFO  2015-08-03 14:05:27,910 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 1, 9, {}
+INFO  2015-08-03 14:12:26,476 [UserBattleArrayHandler.java,47] - user battle array handler received: 2, 1, {}
+INFO  2015-08-03 14:12:26,477 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 2, 1, {}
+INFO  2015-08-03 14:30:09,521 [UserBattleHandler.java,56] - user battle handler received: 2, 1, 0
+INFO  2015-08-03 14:30:09,575 [UserBattleHandler.java,302] - user battle handler ret send: 2, 53, {}
+INFO  2015-08-03 14:31:34,992 [UserBattleArrayHandler.java,47] - user battle array handler received: 1, 1, {}
+INFO  2015-08-03 14:31:34,992 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 1, 0, {}
+INFO  2015-08-03 14:39:30,640 [UserBattleArrayHandler.java,47] - user battle array handler received: 2, 1, {}
+INFO  2015-08-03 14:39:30,648 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 2, 7, {}
+INFO  2015-08-03 15:04:16,987 [UserBattleArrayHandler.java,47] - user battle array handler received: 2, 1, {}
+INFO  2015-08-03 15:04:16,995 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 2, 8, {}
+INFO  2015-08-03 15:04:28,642 [UserBattleHandler.java,56] - user battle handler received: 2, 1, 0
+INFO  2015-08-03 15:04:28,734 [UserBattleHandler.java,302] - user battle handler ret send: 2, 91, {}
+INFO  2015-08-03 15:04:51,906 [ChangeDiscipleHandler.java,44] - change disciple handler received: 2, 0, 1
+INFO  2015-08-03 15:04:51,914 [ChangeDiscipleHandler.java,213] - change disciple handler ret send: 2, 7, {}
+INFO  2015-08-03 15:08:50,385 [ChangeDiscipleHandler.java,44] - change disciple handler received: 2, 1, 3
+INFO  2015-08-03 15:08:50,387 [ChangeDiscipleHandler.java,213] - change disciple handler ret send: 2, 2, {}
+INFO  2015-08-03 15:08:54,046 [UserBattleHandler.java,56] - user battle handler received: 2, 1, 0
+INFO  2015-08-03 15:08:54,061 [UserBattleHandler.java,302] - user battle handler ret send: 2, 4, {}
+INFO  2015-08-03 15:09:52,638 [ChangeBattlePositionHandler.java,46] - change battle position handler received: 2, {}, {}
+INFO  2015-08-03 15:09:52,641 [ChangeBattlePositionHandler.java,121] - change battle position handler ret send: 2, 2
+INFO  2015-08-03 15:09:55,921 [UserBattleHandler.java,56] - user battle handler received: 2, 1, 0
+INFO  2015-08-03 15:09:55,934 [UserBattleHandler.java,302] - user battle handler ret send: 2, 12, {}
+INFO  2015-08-03 15:44:44,555 [UserBattleArrayHandler.java,47] - user battle array handler received: 2, 1, {}
+INFO  2015-08-03 15:44:44,555 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 2, 0, {}
+INFO  2015-08-03 16:52:37,482 [UserBattleArrayHandler.java,47] - user battle array handler received: 2, 1, {}
+INFO  2015-08-03 16:52:37,483 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 2, 1, {}
+INFO  2015-08-03 16:52:49,660 [UserBattleHandler.java,56] - user battle handler received: 2, 1, 0
+INFO  2015-08-03 16:52:49,664 [UserBattleHandler.java,302] - user battle handler ret send: 2, 3, {}
+INFO  2015-08-03 16:54:27,629 [UserBattleArrayHandler.java,47] - user battle array handler received: 3, 1, {}
+INFO  2015-08-03 16:54:27,630 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 3, 1, {}
+INFO  2015-08-03 16:56:07,505 [UserBattleArrayHandler.java,47] - user battle array handler received: 3, 1, {}
+INFO  2015-08-03 16:56:07,506 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 3, 1, {}
+INFO  2015-08-03 16:58:13,696 [UserBattleArrayHandler.java,47] - user battle array handler received: 3, 1, {}
+INFO  2015-08-03 16:58:13,703 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 3, 7, {}
+INFO  2015-08-03 16:58:40,065 [UserBattleArrayHandler.java,47] - user battle array handler received: 4, 1, {}
+INFO  2015-08-03 16:58:40,066 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 4, 1, {}
+INFO  2015-08-03 17:00:11,120 [UserBattleArrayHandler.java,47] - user battle array handler received: 4, 1, {}
+INFO  2015-08-03 17:00:11,130 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 4, 10, {}
+INFO  2015-08-03 17:00:16,839 [UserBattleHandler.java,56] - user battle handler received: 4, 1, 0
+INFO  2015-08-03 17:00:16,851 [UserBattleHandler.java,302] - user battle handler ret send: 4, 12, {}
+INFO  2015-08-03 17:11:56,255 [UserBattleArrayHandler.java,47] - user battle array handler received: 3, 1, {}
+INFO  2015-08-03 17:11:56,255 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 3, 0, {}
+INFO  2015-08-03 17:36:30,472 [UserBattleArrayHandler.java,47] - user battle array handler received: 1, 1, {}
+INFO  2015-08-03 17:36:30,473 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 1, 1, {}
+INFO  2015-08-03 19:48:26,994 [UserBattleArrayHandler.java,47] - user battle array handler received: 2, 1, {}
+INFO  2015-08-03 19:48:26,999 [UserBattleArrayHandler.java,99] - user battle array handler ret send: 2, 5, {}
+INFO  2015-08-03 19:48:34,018 [UserBattleHandler.java,56] - user battle handler received: 2, 1, 0
+INFO  2015-08-03 19:48:34,036 [UserBattleHandler.java,302] - user battle handler ret send: 2, 18, {}
+INFO  2015-08-03 19:49:48,139 [UserBattleHandler.java,56] - user battle handler received: 2, 1, 0
+INFO  2015-08-03 19:49:48,147 [UserBattleHandler.java,302] - user battle handler ret send: 2, 8, {}

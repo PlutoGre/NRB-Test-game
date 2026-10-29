@@ -1,0 +1,10 @@
+$#include "TimeCalculator.h"
+
+class TimeCalculator
+{
+	static TimeCalculator* getInstance();
+	void createTimeCalcultor(std::string key, long timeleft);
+	long getTimeLeft(std::string);
+	bool hasKey(std::string key);
+};
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<Rewards>
+		<Reward type="71001" id="1001" quantity="1" rate="0"/>
+		<Reward type="42000" id="0" quantity="1" rate="0"/>
+		<Reward type="32001" id="0" quantity="1" rate="0"/>
+		<Reward type="32002" id="0" quantity="1" rate="0"/>
+		<Reward type="32003" id="0" quantity="1" rate="20"/>
+		<Reward type="32004" id="0" quantity="1" rate="20"/>
+		<Reward type="61001" id="3001004" quantity="1" rate="10"/>
+		<Reward type="61001" id="3001003" quantity="1" rate="10"/>
+		<Reward type="61001" id="3001002" quantity="1" rate="50"/>
+		<Reward type="61001" id="3001001" quantity="1" rate="45"/>
+		<Reward type="42000" id="0" quantity="1" rate="100"/>
+		<Reward type="42001" id="0" quantity="1" rate="0"/>
+		<Reward type="42002" id="0" quantity="1" rate="0"/>
+		<Reward type="42003" id="0" quantity="1" rate="0"/>
+		<Reward type="42004" id="0" quantity="1" rate="0"/>
+		<Reward type="61001" id="5001011" quantity="1" rate="0"/>
+		<Reward type="61001" id="5001012" quantity="1" rate="0"/>
+		<Reward type="61001" id="5001013" quantity="1" rate="0"/>
+		<Reward type="61001" id="5001021" quantity="1" rate="0"/>
+		<Reward type="61001" id="5001022" quantity="1" rate="0"/>
+		<Reward type="61001" id="5001023" quantity="1" rate="0"/>
+		<Reward type="61001" id="5002001" quantity="1" rate="10"/>
+		<Reward type="61001" id="5002002" quantity="1" rate="10"/>
+		<Reward type="61001" id="4002001" quantity="1" rate="10"/>
+		<Reward type="61001" id="4002002" quantity="1" rate="10"/>
+	</Rewards>
+</root>

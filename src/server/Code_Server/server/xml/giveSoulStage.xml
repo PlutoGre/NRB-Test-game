@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<GiveSoulStages>
+		<GiveSoulStage id="1" typeid="3" stage="1" condition="25:0" balanceSoulId="25" balanceId="6" balanceTimes="16"/>
+		<GiveSoulStage id="2" typeid="3" stage="2" condition="25:6" balanceSoulId="25" balanceId="6" balanceTimes="16"/>
+		<GiveSoulStage id="3" typeid="3" stage="3" condition="25:12" balanceSoulId="25" balanceId="6" balanceTimes="16"/>
+		<GiveSoulStage id="4" typeid="3" stage="4" condition="25:20" balanceSoulId="25" balanceId="6" balanceTimes="16"/>
+		<GiveSoulStage id="5" typeid="3" stage="5" condition="25:26" balanceSoulId="25" balanceId="6" balanceTimes="16"/>
+		<GiveSoulStage id="6" typeid="2" stage="1" condition="26:0" balanceSoulId="26" balanceId="12" balanceTimes="3"/>
+		<GiveSoulStage id="7" typeid="2" stage="2" condition="26:6" balanceSoulId="26" balanceId="12" balanceTimes="5"/>
+		<GiveSoulStage id="8" typeid="2" stage="3" condition="26:12" balanceSoulId="26" balanceId="12" balanceTimes="10"/>
+		<GiveSoulStage id="9" typeid="2" stage="4" condition="26:20" balanceSoulId="26" balanceId="12" balanceTimes="15"/>
+		<GiveSoulStage id="10" typeid="2" stage="5" condition="26:26" balanceSoulId="26" balanceId="12" balanceTimes="25"/>
+	</GiveSoulStages>
+</root>

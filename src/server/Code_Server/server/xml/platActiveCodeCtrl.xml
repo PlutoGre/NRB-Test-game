@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<platform>
+	<platforms>
+		<plat name="android_youai" isopen="false"/>
+		<plat name="android_default" isopen="false"/>
+		<plat name="android_91" isopen="false"/>
+		<plat name="android_uc" isopen="false"/>
+		<plat name="android_360" isopen="false"/>
+		<plat name="android_dangle" isopen="false"/>
+		<plat name="android_xiaomi" isopen="false"/>
+		<plat name="android_wandoujia" isopen="false"/>
+		<plat name="android_baiduduoku" isopen="false"/>
+		<plat name="android_baiduappcenter" isopen="false"/>
+		<plat name="android_91androidmarket" isopen="false"/>
+		<plat name="android_kuwo" isopen="false"/>
+		<plat name="android_feiliu" isopen="false"/>
+	</platforms>
+</platform>

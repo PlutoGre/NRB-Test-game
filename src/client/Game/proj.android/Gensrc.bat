@@ -1,0 +1,2 @@
+sh Gensrc.sh
+pause

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<Diamonds>
+		<Diamond itemId="5001011" colorType="1" level="1" weanponAttr="10" armorAttr="2" jewelryAttr="7" upgradeConsumeSilver="100" upgradeConsumeDiamon="5" dismantleConsume="1" nextItemId="5001021"/>
+		<Diamond itemId="5001021" colorType="1" level="2" weanponAttr="20" armorAttr="4" jewelryAttr="13" upgradeConsumeSilver="1000" upgradeConsumeDiamon="5" dismantleConsume="2" nextItemId="5001031"/>
+		<Diamond itemId="5001031" colorType="1" level="3" weanponAttr="40" armorAttr="8" jewelryAttr="26" upgradeConsumeSilver="10000" upgradeConsumeDiamon="5" dismantleConsume="5" nextItemId="5001041"/>
+		<Diamond itemId="5001041" colorType="1" level="4" weanponAttr="80" armorAttr="16" jewelryAttr="52" upgradeConsumeSilver="100000" upgradeConsumeDiamon="5" dismantleConsume="16" nextItemId="5001051"/>
+		<Diamond itemId="5001051" colorType="1" level="5" weanponAttr="160" armorAttr="32" jewelryAttr="103" upgradeConsumeSilver="1000000" upgradeConsumeDiamon="5" dismantleConsume="32" nextItemId="5001061"/>
+		<Diamond itemId="5001061" colorType="1" level="6" weanponAttr="320" armorAttr="64" jewelryAttr="205" upgradeConsumeSilver="10000000" upgradeConsumeDiamon="5" dismantleConsume="64" nextItemId="5001071"/>
+		<Diamond itemId="5001071" colorType="1" level="7" weanponAttr="640" armorAttr="128" jewelryAttr="410" upgradeConsumeSilver="0" upgradeConsumeDiamon="0" dismantleConsume="128" nextItemId="0"/>
+		<Diamond itemId="5001012" colorType="2" level="1" weanponAttr="4" armorAttr="6" jewelryAttr="6" upgradeConsumeSilver="100" upgradeConsumeDiamon="5" dismantleConsume="1" nextItemId="5001022"/>
+		<Diamond itemId="5001022" colorType="2" level="2" weanponAttr="8" armorAttr="12" jewelryAttr="11" upgradeConsumeSilver="1000" upgradeConsumeDiamon="5" dismantleConsume="2" nextItemId="5001032"/>
+		<Diamond itemId="5001032" colorType="2" level="3" weanponAttr="16" armorAttr="24" jewelryAttr="22" upgradeConsumeSilver="10000" upgradeConsumeDiamon="5" dismantleConsume="5" nextItemId="5001042"/>
+		<Diamond itemId="5001042" colorType="2" level="4" weanponAttr="32" armorAttr="48" jewelryAttr="43" upgradeConsumeSilver="100000" upgradeConsumeDiamon="5" dismantleConsume="16" nextItemId="5001052"/>
+		<Diamond itemId="5001052" colorType="2" level="5" weanponAttr="64" armorAttr="96" jewelryAttr="86" upgradeConsumeSilver="1000000" upgradeConsumeDiamon="5" dismantleConsume="32" nextItemId="5001062"/>
+		<Diamond itemId="5001062" colorType="2" level="6" weanponAttr="128" armorAttr="192" jewelryAttr="170" upgradeConsumeSilver="10000000" upgradeConsumeDiamon="5" dismantleConsume="64" nextItemId="5001072"/>
+		<Diamond itemId="5001072" colorType="2" level="7" weanponAttr="256" armorAttr="384" jewelryAttr="340" upgradeConsumeSilver="0" upgradeConsumeDiamon="0" dismantleConsume="128" nextItemId="0"/>
+		<Diamond itemId="5001013" colorType="3" level="1" weanponAttr="3" armorAttr="3" jewelryAttr="16" upgradeConsumeSilver="100" upgradeConsumeDiamon="5" dismantleConsume="1" nextItemId="5001023"/>
+		<Diamond itemId="5001023" colorType="3" level="2" weanponAttr="7" armorAttr="5" jewelryAttr="32" upgradeConsumeSilver="1000" upgradeConsumeDiamon="5" dismantleConsume="2" nextItemId="5001033"/>
+		<Diamond itemId="5001033" colorType="3" level="3" weanponAttr="14" armorAttr="10" jewelryAttr="64" upgradeConsumeSilver="10000" upgradeConsumeDiamon="5" dismantleConsume="5" nextItemId="5001043"/>
+		<Diamond itemId="5001043" colorType="3" level="4" weanponAttr="27" armorAttr="20" jewelryAttr="128" upgradeConsumeSilver="100000" upgradeConsumeDiamon="5" dismantleConsume="16" nextItemId="5001053"/>
+		<Diamond itemId="5001053" colorType="3" level="5" weanponAttr="54" armorAttr="40" jewelryAttr="256" upgradeConsumeSilver="1000000" upgradeConsumeDiamon="5" dismantleConsume="32" nextItemId="5001063"/>
+		<Diamond itemId="5001063" colorType="3" level="6" weanponAttr="107" armorAttr="75" jewelryAttr="512" upgradeConsumeSilver="10000000" upgradeConsumeDiamon="5" dismantleConsume="64" nextItemId="5001073"/>
+		<Diamond itemId="5001073" colorType="3" level="7" weanponAttr="214" armorAttr="150" jewelryAttr="1024" upgradeConsumeSilver="0" upgradeConsumeDiamon="0" dismantleConsume="128" nextItemId="0"/>
+	</Diamonds>
+</root>

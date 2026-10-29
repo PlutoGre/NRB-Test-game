@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<Guild costGold="300" levelLimit="17" defaultBrodcast="联盟欢迎您!点击修改联盟公告" totemRepairNeedSeconds="14400" broadcastRefreshCD="60" memberUpgradeCD="3600"
+	  shopFresh="1200,2000" shopWinFreshCost="200"  
+	dailyMaxAttackTimes="40" dailyMaxRewardTimes="10" attackCoolSeconds="5" attckHp="15" 
+	attackRankingRatio1="2" attackRankingRatio2="0.85" 	
+	remainingHpRatio="1,0.9,0.7,0.6,0.3" remainingHpStage="1:0.8,0.8:0.6,0.6:0.4,0.4:0.2,0.2:0" 
+	getHpRatio="1.2,1,0.9,0.8,0.7" getHpStage="1:0.8,0.8:0.6,0.6:0.4,0.4:0.2,0.2:0" 
+	attackAdjustmentRatio="1"
+	getGuildCoinRatio="2" 
+	exchangeRate="1:20000:1:1"
+	></Guild>
+	
+<!-- 
+	costGold：创建公会花费 
+	broadcastRefreshCD：公告发布冷却时间
+	memberUpgradeCD： 用户晋升CD（秒）
+	levelLimit：加入公会等级限制
+	defaultBrodcast:初始公会欢迎词
+	totemRepairNeedSeconds：图腾修复时间
+	dailyMaxAttackTimes：每日最大攻击次数
+	attackCoolSeconds:攻击冷却时间
+	attckHp：每次攻击造成目标损血
+	shopFresh:公会商店刷新时间
+	shopWinFreshCost:公会商店窗口刷新消耗（钻石）
+	attackRankingRatio1:进攻时目标公会排名系数，计算公式基数
+	attackRankingRatio2：进攻时目标公会排名系数，计算公式修正数
+	remainingHpRatio：攻打目标公会的剩余血量对攻打收益的分段加成系数.
+	remainingHpStage:攻打目标公会的剩余血量阶段划分
+	attackAdjustmentRatio：攻打公会收益调整系数
+	getGuildCoinRatio：每日领取帮贡系数
+	exchangeRate：钻石：贝里：建设度：直接兑换贡献度
+-->	
+</root>	

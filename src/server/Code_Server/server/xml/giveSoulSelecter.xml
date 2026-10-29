@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<GiveSoulSelecters>
+		<GiveSoulSelecter id="1" typeid="3" soulItemid="181" count1="1" count2="1" rate1="118" rate2="118" rate3="118" rate4="118" rate5="118"/>
+		<GiveSoulSelecter id="2" typeid="3" soulItemid="101" count1="1" count2="1" rate1="177" rate2="177" rate3="177" rate4="177" rate5="177"/>
+		<GiveSoulSelecter id="3" typeid="3" soulItemid="75" count1="1" count2="1" rate1="59" rate2="59" rate3="59" rate4="59" rate5="59"/>
+		<GiveSoulSelecter id="4" typeid="3" soulItemid="158" count1="1" count2="1" rate1="118" rate2="118" rate3="118" rate4="118" rate5="118"/>
+		<GiveSoulSelecter id="5" typeid="3" soulItemid="100" count1="1" count2="1" rate1="118" rate2="118" rate3="118" rate4="118" rate5="118"/>
+		<GiveSoulSelecter id="6" typeid="3" soulItemid="25" count1="1" count2="1" rate1="70" rate2="70" rate3="70" rate4="70" rate5="45"/>
+		<GiveSoulSelecter id="7" typeid="2" soulItemid="181" count1="1" count2="1" rate1="12" rate2="32" rate3="66" rate4="118" rate5="204"/>
+		<GiveSoulSelecter id="8" typeid="2" soulItemid="101" count1="1" count2="1" rate1="12" rate2="48" rate3="66" rate4="177" rate5="204"/>
+		<GiveSoulSelecter id="9" typeid="2" soulItemid="75" count1="1" count2="1" rate1="6" rate2="16" rate3="33" rate4="59" rate5="102"/>
+		<GiveSoulSelecter id="10" typeid="2" soulItemid="158" count1="1" count2="1" rate1="12" rate2="32" rate3="66" rate4="118" rate5="306"/>
+		<GiveSoulSelecter id="11" typeid="2" soulItemid="100" count1="1" count2="1" rate1="18" rate2="32" rate3="99" rate4="118" rate5="204"/>
+		<GiveSoulSelecter id="12" typeid="2" soulItemid="26" count1="1" count2="1" rate1="70" rate2="70" rate3="70" rate4="70" rate5="70"/>
+	</GiveSoulSelecters>
+</root>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<Recharges>
+		<Recharge id="1" amount="100" addNum="10" costMoney="10"/>
+		<Recharge id="2" amount="300" addNum="30" costMoney="30"/>
+		<Recharge id="3" amount="500" addNum="55" costMoney="50"/>
+		<Recharge id="4" amount="1000" addNum="110" costMoney="100"/>
+		<Recharge id="5" amount="2000" addNum="230" costMoney="200"/>
+		<Recharge id="6" amount="5000" addNum="600" costMoney="500"/>
+		<Recharge id="7" amount="10000" addNum="1300" costMoney="1000"/>
+		<Recharge id="8" amount="20000" addNum="2700" costMoney="2000"/>
+		<Recharge id="9" amount="50000" addNum="6800" costMoney="5000"/>			
+	</Recharges>
+</root>

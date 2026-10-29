@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.oldmountain.dzm.entity">
+	<class name="TeamBuffer" table="teambuffer" dynamic-update="true" dynamic-insert="true">
+		<id name="playerid" column="playerid">
+			<generator class="assigned" />
+		</id>
+		<property name="healthbufferlevel" column="healthbufferlevel" type="int"></property>
+		<property name="healthbufferexp" column="healthbufferexp" type="int"></property>
+		<property name="attackbufferlevel" column="attackbufferlevel" type="int"></property>
+		<property name="attackbufferexp" column="attackbufferexp" type="int"></property>
+		<property name="defencebufferlevel" column="defencebufferlevel" type="int"></property>
+		<property name="defencebufferexp" column="defencebufferexp" type="int"></property>
+		<property name="rpbufferlevel" column="rpbufferlevel" type="int"></property>
+		<property name="rpbufferexp" column="rpbufferexp" type="int"></property>
+	</class>
+</hibernate-mapping>

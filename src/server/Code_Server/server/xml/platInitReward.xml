@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+	<PlatInfo platform="win32platforminfo_91" rewardStartTime="1374829200" rewardEndTime="1374832800" rewardInfo='[{"t":11001,"i":1002,"q":100000},{"t":61001,"i":3001004,"q":5},{"t":61001,"i":3002003,"q":5},{"t":61001,"i":2502001,"q":3},{"t":61001,"i":2503001,"q":5}]' rewardMsg="欢迎来到海贼王"></PlatInfo>
+	<PlatInfo platform="ios_91" rewardStartTime="0" rewardEndTime="0" rewardInfo="" serverStat=""></PlatInfo>
+	<PlatInfo platform="ios_pp" rewardStartTime="0" rewardEndTime="0" rewardInfo="" serverStat=""></PlatInfo>
+	<PlatInfo platform="android_uc" rewardStartTime="0" rewardEndTime="0" rewardInfo="" serverStat=""></PlatInfo>
+	<PlatInfo platform="android_91" rewardStartTime="0" rewardEndTime="0" rewardInfo="" serverStat=""></PlatInfo>
+	<PlatInfo platform="android_dangle" rewardStartTime="0" rewardEndTime="0" rewardInfo="" serverStat=""></PlatInfo>
+	<PlatInfo platform="android_baiduduoku" rewardStartTime="0" rewardEndTime="0" rewardInfo="" serverStat=""></PlatInfo>
+	<PlatInfo platform="android_xiaomi" rewardStartTime="0" rewardEndTime="0" rewardInfo="" serverStat=""></PlatInfo>
+	<PlatInfo platform="android_sina" rewardStartTime="0" rewardEndTime="0" rewardInfo="" serverStat=""></PlatInfo>
+	<PlatInfo platform="android_wandoujia" rewardStartTime="1374807600" rewardEndTime="1375243200" rewardInfo='[{"t":11001,"i":1002,"q":100000},{"t":61001,"i":3001004,"q":5},{"t":61001,"i":3002003,"q":5},{"t":61001,"i":2502001,"q":3},{"t":61001,"i":2503001,"q":5}]' rewardMsg="豌豆荚特权礼包:"></PlatInfo>
+	<PlatInfo platform="android_360" rewardStartTime="0" rewardEndTime="0" rewardInfo="" serverStat=""></PlatInfo>
+</root>

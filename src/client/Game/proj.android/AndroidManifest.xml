@@ -1,0 +1,1288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.youai.dreamonepiece.platform.nd91"
+    android:versionCode="3"
+    android:versionName="1.3" 
+    android:installLocation="preferExternal">
+
+    <!-- 发布通过Android Tools修改package name -->
+    
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="16" />
+    
+    <uses-feature android:glEsVersion="0x00020000" />
+    
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+	
+    <!-- 应用汇权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" /> 
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+     
+    <!--  下载  --> 
+	<uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" /> 
+ 	<!-- end yingyonghui -->
+	
+	<!--  -->
+	<!-- 飞流必须权限 -->
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+	<!--  -->
+	
+	<!-- 360快捷支付必须的权限 -->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+	
+	<!-- -->
+	
+	<!-- 安智必须权限 -->
+	<uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.ACCESS_FIND_LOCATION" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+	<!-- 人人支付添加的权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <!--  -->
+    
+    <!-- 4399game -->
+    
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- end 4399 -->
+    
+    <!-- 机锋权限  （其它平台时屏蔽掉）-->
+   <!-- 
+    <permission android:name="com.mappn.sdk.pay.permission" android:protectionLevel="signature" />
+	<uses-permission android:name="com.mappn.sdk.pay.permission" />
+	--> 
+    <!-- end 机锋权限 -->
+    
+    <!-- begin 百度游戏权限 -->
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <!-- end 百度游戏权限 -->
+    
+    <!-- 触控权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name= "android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name= "android.permission.READ_CONTACTS"/>
+    <!-- end 触控权限 -->
+    
+    <!-- 迅雷权限
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />  -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FIFESYSTEMS" />
+    <!-- end 迅雷权限 -->
+    
+    <!-- 华为权限 -->
+    <uses-permission android:name="com.huawei.hwid.permission.ACCESS" />
+    <!-- end 华为权限 -->
+    <supports-screens android:largeScreens="true"
+                      android:smallScreens="true"
+                      android:anyDensity="true"
+                      android:normalScreens="true"
+                      android:xlargeScreens="true"/>
+
+    <!-- android:debuggable="true" ADT&NDK自动处理了 -->
+    
+    <!-- 发布修改icon -->
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_91"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" 
+        android:largeHeap="true" 
+        android:vmSafeMode="false" 
+        android:allowClearUserData="true"
+        android:debuggable="false">
+        
+        <!-- 发布指定平台：
+        0   defaultplatform.DefaultActivity
+        1	nd91.Nd91Activity
+        2	uc.UcActivity
+        3	qihoo360.Qihoo360Activity
+        4	dangle.DangLeActivity
+        5	mi.XiaoMiActivity
+        6	wandoujia.WanDouJiaActivity
+        7   DK.DuokuActivity
+        11  feiliu.FeiLiuActivity
+        12  jifeng.JiFengActivity
+        13  anzhi.AnZhiActivity
+        14  renren.RenRenActivity
+        16  sy4399.SSJJActivity
+        17  yingyonghui.YingYongHuiActivity
+        22 	thirdlogin.ThirdLoginActivity
+        23  kingsoft.JinShanActivity
+        24  baidugame.BaiDuGameActivity
+        25  ld.LvDouGameActivity
+        10  kuwo.KuWoActivity
+        27  punchbox.ChuKongActivity
+        28  xunlei.XunLeiActivity
+        29  GTV
+        30  kugou.KuGouActivity
+        31  huawei.HuiWeiActivity
+        -->
+        <!-- 飞流需要把  android:launchMode="singleTask" 其他用  singleTop -->
+        
+       <activity
+            android:name="com.youai.dreamonepiece.platform.nd91.Nd91Activity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" 
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+                
+             <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+        </activity>
+        
+			<!-- 发送notification消息 -->
+			<service android:name="com.youai.dreamonepiece.NotificationService"></service>       
+         <!-- Oauth2.0 qq登录    android:launchMode="singleTask"-->
+         <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100363349" /><!--  100380359 100381104 222222 -->
+            </intent-filter>
+        </activity>
+        
+        <!-- 人人支付 需要的-->
+            <activity
+            android:name="com.renn.rennsdk.oauth.OAuthActivity"
+            android:configChanges="orientation|navigation|keyboardHidden"
+            android:screenOrientation="portrait"  />
+        
+        <activity android:name="com.renn.rennsdk.pay.PayActivity"
+            android:configChanges="orientation|navigation|keyboardHidden"
+            android:screenOrientation="portrait"  />
+         <!--  -->
+         
+        
+        <!--  -->
+        
+        
+        <!-- begin 91 -->
+        <activity android:name="com.nd.commplatform.activity.SNSControlCenterActivity"
+			android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+			android:windowSoftInputMode="adjustPan"
+			android:windowBackground="@null"
+			android:launchMode="singleTask"/>
+
+	  	<activity android:name="com.nd.commplatform.activity.SNSLoginActivity"
+		    android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+			android:windowSoftInputMode="adjustPan"
+			android:windowBackground="@null"
+			android:launchMode="singleTask"/>
+		 
+         <activity android:name="com.nd.commplatform.activity.SNSAppPromotionActivity"
+		    android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+			android:windowSoftInputMode="adjustPan"
+            android:theme="@android:style/Theme.NoTitleBar"
+			android:windowBackground="@null"/>	
+			
+		 <service  android:name="com.nd.commplatform.service.NdDownloadService"
+		    android:process=":com.nd.commplatform.download"
+		    android:enabled="true"
+            android:exported="false"/>
+
+		 <receiver android:name="com.nd.commplatform.versionupdate.ND2VersionUpdateNotify"
+			android:process="android.intent.nd.sns.commplatform.versionupdate"
+			android:exported="false"/>
+
+	  	 <service android:name="com.nd.commplatform.versionupdate.ND2VersionUpdateService"
+			android:process="android.intent.nd.sns.commplatform.versionupdate"
+			android:exported="false"/>
+			
+	  	 <service  android:name="com.nd.commplatform.service.NdNewMessageNotification"
+		    android:enabled="true"
+            android:exported="false"/>
+        <!-- end 91 -->
+        
+        <!-- begin UC -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize"
+			android:label="@string/app_name" android:name="cn.uc.gamesdk.view.SdkWebActivity"
+			android:theme="@android:style/Theme.Translucent"
+			android:windowSoftInputMode="adjustResize">
+			<intent-filter>
+				<action android:name="cn.uc.gamesdk.sdkweb"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+		</activity>
+        <!-- end UC -->
+		
+		<!-- begin 360 -->
+		
+		<!-- 添加360SDK必需的activity：com.qihoopay.insdk.activity.ContainerActivity -->
+        <activity
+            android:name="com.qihoopay.insdk.activity.ContainerActivity"
+            android:configChanges="fontScale|orientation|keyboardHidden|locale|navigation|screenSize|uiMode"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <!-- 添加360SDK必需的activity：com.qihoopay.insdk.activity.RemoteContainerActivity -->
+        <activity
+            android:name="com.qihoopay.insdk.activity.RemoteContainerActivity"
+            android:configChanges="fontScale|orientation|keyboardHidden|locale|navigation|screenSize|uiMode"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:process=":remote" >
+        </activity>
+        
+        <!-- 添加360SDK必需的meta-data：QHOPENSDK_APPID。 -->
+        <meta-data
+            android:name="QHOPENSDK_APPID"
+            android:value="200608711" >
+        </meta-data>
+
+        <!-- 添加360SDK必需的meta-data：QHOPENSDK_APPKEY。此处value为app_key。请在360应用开放平台http://open.app.360.cn/?from=open_dt注册申请app_key和app_secret -->
+        <meta-data
+            android:name="QHOPENSDK_APPKEY"
+            android:value="72a64bf3abdf4ece1ceeeac90609a1b6" >
+        </meta-data>
+
+        <!-- 添加360SDK必需的meta-data：QHOPENSDK_PRIVATEKEY。此处value为private_key，其生成算法为md5(app_secret +”#”+ app_key)，全小写，详细算法请看开发文档附录。 -->
+        <meta-data
+            android:name="QHOPENSDK_PRIVATEKEY"
+            android:value="34e2bbead513a4c00774e3eeb8d72cc4" >
+        </meta-data>
+
+        <!-- 添加360SDK可选的meta-data：QHOPENSDK_CHANNEL。此处value由应用方自定义，请以字母开头，不支持纯数字，用于标识应用方的子渠道。 -->
+        <meta-data
+            android:name="QHOPENSDK_CHANNEL"
+            android:value="360Android" >
+        </meta-data>
+        
+        <!-- 机锋需要的meta-data -->
+        <meta-data
+            android:name="gfan_pay_appkey"
+            android:value="706794504"/>
+		<meta-data
+		    android:name="gfan_cpid"
+		    android:value="CPID"/>
+        <!--end 机锋需要的meta-data -->
+        
+		<!-- Start 快捷支付   -->
+		<activity
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:name="cn.paypalm.jar.game360.InitialAct"
+            android:screenOrientation="behind"
+            android:theme="@style/FloatingWindowStyle"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:name="cn.paypalm.jar.game360.UserMessageAct"
+            android:screenOrientation="behind"
+            android:theme="@style/FloatingWindowStyle"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:name="cn.paypalm.jar.game360.BankcardPayAct"
+            android:screenOrientation="behind"
+            android:theme="@style/FloatingWindowStyle"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:name="cn.paypalm.jar.game360.SuccessAct"
+            android:screenOrientation="behind"
+            android:theme="@style/FloatingWindowStyle"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:name="cn.paypalm.jar.game360.BankcardAgreement"
+            android:screenOrientation="behind"
+            android:theme="@style/FloatingWindowStyle"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+		<!--  快捷支付 End  -->
+		<!-- end 360 -->
+        
+				
+		<!-- begin wandoujia -->
+		 <activity
+            android:name="com.wandoujia.login.LoginActivity"
+            android:screenOrientation="sensor"
+            android:theme="@style/DialogActivity" >
+        </activity>
+        <activity
+            android:name="com.wandoujia.login.RegisterActivity"
+            android:screenOrientation="sensor"
+            android:theme="@style/DialogActivity" >
+        </activity>
+        <activity
+            android:name="com.wandoujia.paysdkimpl.PayActivity"
+            android:screenOrientation="sensor"
+            android:theme="@style/DialogActivity" >
+        </activity>
+        <activity
+            android:name="com.wandoujia.paysdkimpl.HelpActivity"
+            android:screenOrientation="sensor"
+            android:theme="@style/DialogActivity" >
+        </activity>
+        <activity
+            android:name="com.wandoujia.paysdkimpl.ShenzhouActivity"
+            android:screenOrientation="sensor"
+            android:theme="@style/DialogActivity" >
+        </activity>
+        <activity
+            android:name="com.wandoujia.paysdkimpl.AlipayWapActivity"
+            android:screenOrientation="sensor" >
+        </activity>
+		<!-- end wandoujia -->
+		<!-- start duoku -->
+		<meta-data android:name="DUOKUSDK_CHANNEL" 
+           android:value="700" />
+		<activity
+            android:name="com.duoku.platform.ui.ChargeCenterActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowBackground="@null" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.duoku.platform.ui.ExchangeActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowBackground="@null" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.duoku.platform.ui.TradeResultActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowBackground="@null" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.duoku.platform.ui.DKLoginActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowBackground="@null" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.duoku.platform.ui.DKAccountManagerActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowBackground="@null" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.duoku.platform.ui.DKLoginBdActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowBackground="@null" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.duoku.platform.ui.DKRegisterActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowBackground="@null" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.duoku.platform.ui.DKFindPwdHintActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:excludeFromRecents="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.duoku.platform.ui.DKLicenceActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:excludeFromRecents="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.duoku.platform.ui.DKReqBindPhoneActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:excludeFromRecents="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" 
+            android:screenOrientation="portrait">
+        </activity>
+		<!-- end duoku -->
+		 <!-- begin dangle -->
+		<activity
+            android:name="com.downjoy.activity.SdkActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/dcn_Activity_Transparent"/>
+		<!-- end dangle -->
+		
+		<!-- begin jifeng  -->
+		<activity
+			android:name="com.mappn.sdk.uc.activity.LoginActivity"
+			android:theme="@android:style/Theme.Light.NoTitleBar"/>
+		<activity
+			android:name="com.mappn.sdk.uc.activity.RegisterActivity"
+			android:theme="@android:style/Theme.Light.NoTitleBar"/>
+		<activity
+			android:name="com.mappn.sdk.uc.activity.ChooseAccountActivity"
+			android:theme="@android:style/Theme.Light.NoTitleBar"/>
+		<activity
+			android:name="com.mappn.sdk.pay.payment.PaymentsActivity"
+			android:configChanges="orientation|keyboardHidden"/>
+		<activity
+			android:name="com.mappn.sdk.pay.chargement.ChargeActivity"
+			android:configChanges="orientation|keyboardHidden"/>
+		<activity
+			android:name="com.mappn.sdk.pay.account.LoginActivity"
+			android:configChanges="orientation|keyboardHidden"
+			android:windowSoftInputMode="adjustUnspecified"/>
+		<service android:name="com.mappn.sdk.pay.GfanPayService"/>
+		<!-- end jifeng -->
+		
+		<!-- begin anzhi -->
+			<!-- 用户在中心SDK -->
+        <!-- ============================================== -->
+        <activity
+            android:name="com.anzhi.usercenter.LoginActivity"
+            android:configChanges="keyboardHidden|orientation"
+            >
+        </activity>
+        <activity
+            android:name="com.anzhi.usercenter.InfoManagerActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        <activity
+            android:name="com.anzhi.usercenter.UpdateBindTelTimClearActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        <activity
+            android:name="com.anzhi.usercenter.RegisterActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        <activity
+            android:name="com.anzhi.usercenter.UpdateBindEmailTimClearActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        <activity
+            android:name="com.anzhi.usercenter.UpdateBindTelTimActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        <activity
+            android:name="com.anzhi.usercenter.ChargePwdSettingClearActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        <activity
+            android:name="com.anzhi.usercenter.AccountSafeActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        <activity
+            android:name="com.anzhi.usercenter.ResetPWDActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        <activity
+            android:name="com.anzhi.usercenter.UpdateMsnActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        <activity
+            android:name="com.anzhi.usercenter.StarChooserActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        <activity
+            android:name="com.anzhi.usercenter.UpdateBindEmailTimActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        <activity
+            android:name="com.anzhi.usercenter.UpdateNiChengActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        <activity
+            android:name="com.anzhi.usercenter.ChargeMainActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        <activity
+            android:name="com.anzhi.usercenter.PayWebViewActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        <activity
+            android:name="com.anzhi.usercenter.BaseWebViewActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        <activity
+            android:name="com.anzhi.usercenter.UCenterActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        <activity
+            android:name="com.anzhi.usercenter.InitActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        <activity
+            android:name="com.anzhi.usercenter.ChargePwdSettingActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        <activity
+            android:name="com.anzhi.usercenter.GameOldAccountLoginActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+
+        <receiver android:name="com.anzhi.usercenter.receiver.NetListenerReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <!-- 一下是银联支付插件所依赖配置，请勿重复添加 -->
+        <activity
+            android:name="com.unionpay.upomp.tbow.paymain"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.tbow.activity.Pm"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.unionpay.upomp.tbow.activity.Pi"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.unionpay.upomp.tbow.activity.Pr"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+      <!-- 其他平台是需要屏蔽  <activity
+         <activity
+            android:name="com.unionpay.upomp.tbow.activity.Mk"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.FloatActivity" />   -->
+        <activity
+            android:name="com.unionpay.upomp.tbow.activity.Um"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.unionpay.upomp.tbow.activity.Ur"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.unionpay.upomp.tbow.activity.Up"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.unionpay.upomp.tbow.activity.Ui"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.unionpay.upomp.tbow.activity.Ua"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.unionpay.upomp.tbow.activity.Cm"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.unionpay.upomp.tbow.activity.Car"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.unionpay.upomp.tbow.activity.Ca"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.unionpay.upomp.tbow.activity.Cbr"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.unionpay.upomp.tbow.activity.Cb"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.unionpay.upomp.tbow.activity.Ci"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+		<!-- end anzhi -->
+		
+		<!-- begin yingyonghui -->
+		<activity
+            android:name="com.iapppay.mpay.ifmgr.PayManagerActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+
+        <service
+            android:name="com.iapppay.mpay.downmgr.DownLoadService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        <!-- 银联 -->
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.SplashActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.CardMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.PayMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.PayItActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.PayResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.AccountMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.ChooseBankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.GetpassActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.ResetpassActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.EditpassActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.EditinfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.AddCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.AddCardFromAuthActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.UserProtocalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.CheckCardBalanceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.CardInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.CardBalanceResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.CardBankResultActivity"
+            android:screenOrientation="portrait" />
+      <!-- 一键支付 -->
+        <activity
+            android:name="com.fastpay.sdk.activity.FastPay"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        
+        
+        
+        <!--  yyh usersdk -->
+        
+        <!--  应用汇时需要
+         <activity
+            android:name="com.appchina.usersdk.YYHLoginDialogActivity"
+            android:theme="@style/YYHDialogThemeHigh" >  
+        	<intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+             	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>   -->
+        
+		<activity 
+			android:name="com.appchina.usersdk.YYHAccountCenter" >
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+
+		<!-- appkey与appid以后会由cp提供， 这里添加只为测试方便-->
+		<meta-data android:name="APPCHINA_ACCOUNT_APPKEY" android:value="S1pbZ7wsjeu198VN" />
+		<meta-data android:name="APPCHINA_ACCOUNT_APPID" android:value="10026" />
+		
+		<!-- end yongyinghui -->
+		
+		<!-- begin feiliu -->
+		
+		<!-- 这部分由飞流分配给用户 -->
+		<!-- 您的游戏key -->
+        <meta-data
+            android:name="FL_PARTNER_KEY"
+            android:value="F8CAF4AB-A511-3A1D-AE8E-4C75F4180660" />
+        <!-- 您的游戏id -->
+        <meta-data
+            android:name="FLGAMESDK_APP_ID"
+            android:value="100104" />
+        <!-- 您的公司id -->
+        <meta-data
+            android:name="FLGAMESDK_COMPANY_ID"
+            android:value="100077" />
+		<!-- 第三方账号接入配置-->
+        <meta-data
+            android:name="IS_OPEN_ACCOUNT"
+            android:value="1" />
+      	<!-- QQ登录 -->
+        <activity
+            android:name="com.tencent.tauth.TAuthView"
+            android:configChanges="keyboardHidden|navigation|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="auth" />
+            </intent-filter>
+        </activity>
+
+        <!-- 登录 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.account.LoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+        </activity>
+
+        <!-- 注册 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.account.RegisterActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 找回密码 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.account.FindPwdActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 重置密码 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.account.ResetPwdActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 修改密码 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.account.EditPwdActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 帐号管理 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.account.ManagerAccountActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 绑定帐号 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.account.BindAccountActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 网页 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.webview.WebViewActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 公告 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.announcement.AnnouncementActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 客服 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.client.ClientActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustPan" />
+
+
+
+        <!-- 服务条款 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.account.ProtocalActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 隐形登录 -->
+        <activity
+            android:name="com.example.gamehelpeexample.HideLoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 快速登录注册 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.account.SetAccountActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 新浪切换 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.account.SinaSwitchActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 消息轮询 -->
+        <service android:name="com.fl.gamehelper.ui.activity.msgservice.MsgService" />
+        
+        <!-- 3.2 增加部分 ↓ -->
+        <!-- 支付中心 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.charge.ChargeCenterActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 支付宝充值 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.charge.ChargeAlipayActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 手机卡充值 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.charge.ChargePhoneCardActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 游戏卡充值 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.charge.ChargeGameCardActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+        <!-- 3.2 增加部分 ↑ -->
+
+
+        <!-- 3.6 增加部分 ↓ -->
+        <!-- 发帖-回复 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.community.SubmitPostActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- 编辑资料 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.community.EditInfoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- 帖子列表 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.community.PostListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 帖子详情 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.community.PostDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 我的主页 -->
+        <activity
+            android:name="com.fl.gamehelper.ui.activity.community.MyHomeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 3.6 增加部分 ↑ -->
+		<!-- end feiliu -->
+		
+		<!-- begin jinshan -->
+		<activity android:name="com.ijinshan.ksmglogin.CommonActivity"
+		    android:screenOrientation="portrait">
+		</activity>
+		<!-- end jinshan -->
+		
+		 <!-- Bigen 4399 -->
+		<!-- 添加4399手游SDK所需渠道id -->
+        <meta-data
+            android:name="com.ssjjsy.channelId"
+            android:value="channel_270" />
+        <!-- 添加4399大小包标识 -->
+        <meta-data
+            android:name="com.ssjjsy.packageType"
+            android:value="packageType_1" />
+        <!-- 添加4399 包标识，如普清为 1，高清 2，默认情况为1 ，如果没有高清或者普清，只有小包，这样可以不添加以下代码 -->
+        <meta-data
+            android:name="com.ssjjsy.packageHd"
+            android:value="packageHd_1" />
+        <activity
+   		android:name="com.youai.dreamonepiece.platform.game4399.wxapi.WXEntryActivity"
+   	 	android:configChanges="orientation"
+    	android:exported="true"
+   		android:launchMode="singleInstance"
+    	android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
+    	<intent-filter>
+      	 <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+    	</intent-filter>
+		</activity>
+        <!-- End 4399 -->
+        
+        <!-- begin baidugame -->
+       <activity android:name="com.baidu.game.activity.LoginActivity"
+		     android:screenOrientation="portrait" >
+		</activity>
+		<activity android:name="com.baidu.game.activity.RegisterActivity"
+		      android:screenOrientation="portrait" >
+		</activity>
+		<activity android:name="com.baidu.game.activity.PaymentActivity"
+		      android:screenOrientation="portrait">
+		</activity>
+		<activity android:name="com.baidu.game.activity.VerifyCodeActivity"
+		        android:screenOrientation="portrait" >
+		</activity>
+
+        <!-- end baidugame -->
+        <!-- 酷我需要 -->
+        <activity 
+		android:name="cn.kuwo.game.GameActivity"
+		android:windowSoftInputMode="adjustResize"
+		android:configChanges="keyboardHidden|orientation|locale"
+		android:screenOrientation="portrait">
+		</activity>
+		<!-- end 酷我 -->
+		
+		<!-- begin 绿豆 -->
+		 <meta-data android:name="LD_CID"
+            android:value="asdkln"/>
+		 
+		 <activity
+            android:name="co.lvdou.sdk.view.SdkWebActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+
+            <intent-filter>
+                <action android:name="co.lvdou.sdk.sdkweb" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+		<!-- end lvdou -->
+		
+		<!-- begin 触控 -->
+		<!-- 触控支付-->
+		<!-- 
+		 <activity
+		    android:name="cn.iyd.iydpay_apk.IydpayActivity"
+		    android:screenOrientation="portrait"
+		    android:exported="true"
+		    android:theme="@android:style/Theme.Translucent.NoTitleBar">
+		</activity>
+		<service android:name="cn.iyd.iydpay_apk.IydpayService" />
+		<service android:name="cn.iyd.iydpay_apk.PunchboxService">
+		      <intent-filter android:priority="1000">
+				<action android:name="com.youai.dreamonepiece.platform.punchbox.iydpay"/>
+		        <category android:name="android.intent.category.DEFAULT"/>
+		      </intent-filter>
+		</service>
+		-->
+		<!-- 触控支付-->
+		<!-- 单机移动-->
+	<!--  	
+	<activity android:name="cn.emagsoftware.gamebilling.activity.BillingActivity"
+		      android:windowSoftInputMode="stateHidden"
+		  android:configChanges="orientation|keyboardHidden"> 
+		</activity>
+	-->
+		<!-- 单机移动-->
+		<!-- 银联-->
+	<!-- 
+		    <activity
+		      android:name="com.unionpay.upomp.lthj.plugin.ui.SplashActivity"
+		      android:screenOrientation="portrait">
+		      <intent-filter>
+		      <action android:name="com.unionpay.upomp.lthj.android.plugin.init.test"/>
+		        <category android:name="android.intent.category.DEFAULT"/>
+		      </intent-filter>
+		    </activity>
+		    <activity
+		  android:name="com.unionpay.upomp.lthj.plugin.ui.IndexActivityGroup"
+		  android:screenOrientation="portrait">
+		  <intent-filter>
+		    <action
+		    android:name="com.unionpay.upomp.lthj.android.plugin.index.test"/>
+		    <category android:name="android.intent.category.DEFAULT"/>
+		  </intent-filter>
+		</activity>
+		<activity
+		  android:name="com.unionpay.upomp.lthj.plugin.ui.HomeActivity"
+		  android:screenOrientation="portrait">
+		</activity>
+		<activity
+		  android:name="com.unionpay.upomp.lthj.plugin.ui.PayActivity"
+		  android:screenOrientation="portrait">
+		</activity>
+		<activity
+		  android:name="com.unionpay.upomp.lthj.plugin.ui.AccountActivity"
+		  android:screenOrientation="portrait">
+		</activity>
+		<activity
+		  android:name="com.unionpay.upomp.lthj.plugin.ui.BankCardInfoActivity"
+		  android:screenOrientation="portrait">
+		</activity>
+		<activity
+		  android:name="com.unionpay.upomp.lthj.plugin.ui.SupportCardActivity"
+		  android:screenOrientation="portrait">
+		</activity>
+		<activity
+		  android:name="com.unionpay.upomp.lthj.plugin.ui.UserProtocolActivity"
+		  android:screenOrientation="portrait">
+		</activity>
+		<activity
+		  android:name="com.unionpay.upomp.lthj.plugin.ui.AboutActivity"
+		  android:screenOrientation="portrait">
+		</activity>
+		<activity
+		  android:name="com.tcl.hyt.unionpay.plugin.activity.IndexActivity"
+		  android:configChanges="keyboardHidden|orientation"
+		  android:theme="@android:style/Theme.NoTitleBar"/>
+		<activity
+		  android:name="com.tcl.hyt.unionpay.plugin.activity.LoadingActivity"
+		  android:configChanges="keyboardHidden|orientation"
+		  android:theme="@android:style/Theme.NoTitleBar"/>
+		 -->
+		<!-- 银联--> <!-- 电信-->
+		<!-- 
+		<activity
+		 android:name="com.egame.webfee.ui.EgameSdkWebFeeActivity"
+		 android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+		</activity> -->
+		<!-- 电信-->
+		<!-- 
+		<service android:enabled="true"
+		      android:name="joy.sdk.JoyService"
+		      android:process=":remote">
+		      <intent-filter>
+		        <action android:name="com.joy.pushservice"/>
+		      </intent-filter>
+		</service>
+		-->
+		<!-- ======================================= -->
+		<!-- 
+		<receiver android:name="com.punchbox.hound.monitor.ArchiveMonitorReceiver"> 
+            <intent-filter> 
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" /> 
+                <action android:name="android.intent.action.USER_PRESENT" /> 
+            </intent-filter> 
+             
+             <intent-filter > 
+                <action android:name="android.intent.action.PACKAGE_ADDED" /> 
+                <data android:scheme="package" /> 
+            </intent-filter> 
+        </receiver>   
+		<service  
+            android:name="com.punchbox.hound.monitor.ArchiveMonitorDownloadService" 
+            android:enabled="true" 
+            android:label="DownloadService" 
+            android:process="org.punchbox.service" > 
+        </service> 
+         
+        <receiver android:name="com.punchbox.hound.monitor.CheckBootBroadcastReceiver" > 
+            <intent-filter> 
+                <action android:name="android.intent.action.BOOT_COMPLETED" /> 
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" /> 
+            </intent-filter> 
+             
+        </receiver> 
+ 
+        <service android:name="com.punchbox.hound.monitor.CheckUpdateService" > 
+            <intent_filter> 
+                <category android:name="android.intent.category.default" /> 
+            </intent_filter> 
+        </service>
+        -->
+		<!-- end 触控 -->
+		
+		<!-- begin 迅雷 -->
+		<activity
+            android:name="com.xunlei.phone.game.component.activity.XLMainActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.xunlei.phone.game.component.activity.XLChargeCenterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.xunlei.phone.game.component.activity.XLChargeCommonActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.xunlei.phone.game.component.activity.XLChargeCFT"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.xunlei.phone.game.component.activity.XLChargeYKT"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.xunlei.phone.game.component.activity.XLChargeYKTPay"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.xunlei.phone.game.component.activity.XLChargeYTKResult"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+		<!-- end 迅雷 -->
+		
+		<!-- begin 酷狗 -->
+		<!-- 这个ID是厂商ID -->
+		<meta-data android:name="KGPAY_MERCHANT_ID" 
+				android:value="34"/>
+		<!-- 这个ID是程序ID -->
+		<meta-data
+			android:name="KGPAY_APP_ID" 
+			android:value="51"/>
+		<meta-data
+			android:name="KGPAY_APP_KEY"
+			android:value="0|gTv3}O{%g2z7xU]q%18dR*d%dz%|Gk55cRs6{RN"/>
+		
+		<activity
+            android:name="com.kugou.pay.android.ui.EntryActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.kugou.pay.android.ui.LoginActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.kugou.pay.android.ui.RegisterActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.kugou.pay.android.ui.ModifyUserPasswordActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.kugou.pay.android.ui.MoreFunctionalActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.kugou.pay.android.ui.GetPasswordActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.kugou.pay.android.ui.RechargeSelectActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.kugou.pay.android.ui.RechargeByMobileCardActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.kugou.pay.android.ui.RechargeResultActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.kugou.pay.android.ui.BindPhoneActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.kugou.pay.android.ui.ResetPasswordActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.kugou.pay.android.ui.ChargeHistoryActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.kugou.pay.android.ui.RechargeByAlipayActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <receiver android:name="com.kugou.pay.android.setting.ReBootBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="com.kugou.pay.android.KG_ACTION_REBOOT_THE_GAME10170" />
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+		<!-- end 酷狗 -->
+		
+		<!-- begin 华为 -->
+		<activity android:name="com.huawei.hwid.openapi.auth.dump.OpenDumpActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent" 
+            android:exported="false">
+		</activity>
+		<!-- end 华为 -->
+    </application>
+
+</manifest>

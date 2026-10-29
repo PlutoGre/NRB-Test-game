@@ -1,0 +1,7 @@
+$#include "GoodsPopupPage.h"
+
+class GoodsPopupPage
+{
+	static void showGoodsPopup(unsigned int type,unsigned int Id,unsigned int count,unsigned int partId);
+};
+

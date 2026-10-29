@@ -1,0 +1,132 @@
+INFO  2015-08-03 10:15:51,025 [GetShopListHandler.java,46] - get shop list handler received: 3, 1, {}
+INFO  2015-08-03 10:15:51,030 [GetShopListHandler.java,93] - get shop list handler ret send: 3, 3, {}
+INFO  2015-08-03 10:35:02,150 [GetShopListHandler.java,46] - get shop list handler received: 3, 1, {}
+INFO  2015-08-03 10:35:02,153 [GetShopListHandler.java,93] - get shop list handler ret send: 3, 2, {}
+INFO  2015-08-03 10:40:54,587 [GetShopListHandler.java,46] - get shop list handler received: 3, 1, {}
+INFO  2015-08-03 10:40:54,592 [GetShopListHandler.java,93] - get shop list handler ret send: 3, 4, {}
+INFO  2015-08-03 10:55:28,318 [GetShopListHandler.java,46] - get shop list handler received: 3, 1, {}
+INFO  2015-08-03 10:55:28,329 [GetShopListHandler.java,93] - get shop list handler ret send: 3, 9, {}
+INFO  2015-08-03 10:56:22,059 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 10:56:22,064 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 4, {}
+INFO  2015-08-03 11:04:35,707 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 11:04:35,710 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 3, {}
+INFO  2015-08-03 11:17:51,645 [GetShopListHandler.java,46] - get shop list handler received: 3, 1, {}
+INFO  2015-08-03 11:17:51,651 [GetShopListHandler.java,93] - get shop list handler ret send: 3, 4, {}
+INFO  2015-08-03 11:18:35,483 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 11:18:35,485 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 1, {}
+INFO  2015-08-03 11:18:42,060 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 11:18:42,062 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 1, {}
+INFO  2015-08-03 11:22:13,370 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 11:22:13,383 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 11, {}
+INFO  2015-08-03 11:22:19,785 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 11:22:19,787 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 1, {}
+INFO  2015-08-03 11:29:28,437 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 11:29:28,437 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 0, {}
+INFO  2015-08-03 11:32:50,616 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 11:32:50,619 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 3, {}
+INFO  2015-08-03 11:33:17,095 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 11:33:17,096 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 1, {}
+INFO  2015-08-03 11:43:00,663 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 11:43:00,664 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 0, {}
+INFO  2015-08-03 11:45:16,679 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 11:45:16,680 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 1, {}
+INFO  2015-08-03 12:09:08,604 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 12:09:08,606 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 2, {}
+INFO  2015-08-03 12:09:54,064 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 12:09:54,065 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 1, {}
+INFO  2015-08-03 12:11:57,813 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 12:11:57,814 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 1, {}
+INFO  2015-08-03 12:12:52,838 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 12:12:52,839 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 1, {}
+INFO  2015-08-03 12:13:37,664 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 12:13:37,665 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 1, {}
+INFO  2015-08-03 12:16:01,974 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 12:16:01,976 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 0, {}
+INFO  2015-08-03 12:16:20,466 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 12:16:20,466 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 0, {}
+INFO  2015-08-03 12:17:37,260 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 12:17:37,261 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 1, {}
+INFO  2015-08-03 12:18:27,710 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 12:18:27,711 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 1, {}
+INFO  2015-08-03 12:19:15,455 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 12:19:15,458 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 1, {}
+INFO  2015-08-03 13:07:17,471 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 13:07:17,473 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 1, {}
+INFO  2015-08-03 13:12:52,882 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 13:12:52,887 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 5, {}
+INFO  2015-08-03 13:24:13,624 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 13:24:13,626 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 1, {}
+INFO  2015-08-03 13:24:16,666 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 13:24:16,671 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 3, {}
+INFO  2015-08-03 13:28:11,772 [GetShopListHandler.java,46] - get shop list handler received: 4, 1, {}
+INFO  2015-08-03 13:28:11,774 [GetShopListHandler.java,93] - get shop list handler ret send: 4, 2, {}
+INFO  2015-08-03 13:29:57,267 [GetShopListHandler.java,46] - get shop list handler received: 4, 1, {}
+INFO  2015-08-03 13:29:57,269 [GetShopListHandler.java,93] - get shop list handler ret send: 4, 2, {}
+INFO  2015-08-03 13:30:42,522 [GetShopListHandler.java,46] - get shop list handler received: 4, 1, {}
+INFO  2015-08-03 13:30:42,525 [GetShopListHandler.java,93] - get shop list handler ret send: 4, 1, {}
+INFO  2015-08-03 13:30:48,767 [GetShopListHandler.java,46] - get shop list handler received: 4, 1, {}
+INFO  2015-08-03 13:30:48,771 [GetShopListHandler.java,93] - get shop list handler ret send: 4, 2, {}
+INFO  2015-08-03 13:32:34,301 [GetShopListHandler.java,46] - get shop list handler received: 5, 1, {}
+INFO  2015-08-03 13:32:34,302 [GetShopListHandler.java,93] - get shop list handler ret send: 5, 1, {}
+INFO  2015-08-03 13:38:20,268 [GetShopListHandler.java,46] - get shop list handler received: 5, 1, {}
+INFO  2015-08-03 13:38:20,269 [GetShopListHandler.java,93] - get shop list handler ret send: 5, 1, {}
+INFO  2015-08-03 13:40:26,216 [GetShopListHandler.java,46] - get shop list handler received: 5, 1, {}
+INFO  2015-08-03 13:40:26,218 [GetShopListHandler.java,93] - get shop list handler ret send: 5, 1, {}
+INFO  2015-08-03 13:57:32,475 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 13:57:32,479 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 3, {}
+INFO  2015-08-03 13:57:51,546 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 13:57:51,548 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 1, {}
+INFO  2015-08-03 14:01:31,167 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 14:01:31,169 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 1, {}
+INFO  2015-08-03 14:05:27,686 [GetShopListHandler.java,46] - get shop list handler received: 1, 1, {}
+INFO  2015-08-03 14:05:27,691 [GetShopListHandler.java,93] - get shop list handler ret send: 1, 4, {}
+INFO  2015-08-03 14:07:05,141 [GetShopListHandler.java,46] - get shop list handler received: 1, 1, {}
+INFO  2015-08-03 14:07:05,144 [GetShopListHandler.java,93] - get shop list handler ret send: 1, 2, {}
+INFO  2015-08-03 14:07:20,218 [GetShopListHandler.java,46] - get shop list handler received: 1, 1, {}
+INFO  2015-08-03 14:07:20,221 [GetShopListHandler.java,93] - get shop list handler ret send: 1, 2, {}
+INFO  2015-08-03 14:12:26,312 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 14:12:26,315 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 2, {}
+INFO  2015-08-03 14:31:34,828 [GetShopListHandler.java,46] - get shop list handler received: 1, 1, {}
+INFO  2015-08-03 14:31:34,830 [GetShopListHandler.java,93] - get shop list handler ret send: 1, 2, {}
+INFO  2015-08-03 14:32:24,366 [GetShopListHandler.java,46] - get shop list handler received: 1, 1, {}
+INFO  2015-08-03 14:32:24,367 [GetShopListHandler.java,93] - get shop list handler ret send: 1, 1, {}
+INFO  2015-08-03 14:33:05,652 [GetShopListHandler.java,46] - get shop list handler received: 1, 1, {}
+INFO  2015-08-03 14:33:05,656 [GetShopListHandler.java,93] - get shop list handler ret send: 1, 2, {}
+INFO  2015-08-03 14:39:30,515 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 14:39:30,520 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 5, {}
+INFO  2015-08-03 14:40:50,492 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 14:40:50,494 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 2, {}
+INFO  2015-08-03 14:41:36,661 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 14:41:36,662 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 1, {}
+INFO  2015-08-03 15:04:16,867 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 15:04:16,874 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 5, {}
+INFO  2015-08-03 15:23:52,312 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 15:23:52,315 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 2, {}
+INFO  2015-08-03 15:44:44,392 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 15:44:44,393 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 1, {}
+INFO  2015-08-03 16:52:37,319 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 16:52:37,320 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 1, {}
+INFO  2015-08-03 16:54:27,467 [GetShopListHandler.java,46] - get shop list handler received: 3, 1, {}
+INFO  2015-08-03 16:54:27,468 [GetShopListHandler.java,93] - get shop list handler ret send: 3, 1, {}
+INFO  2015-08-03 16:56:07,341 [GetShopListHandler.java,46] - get shop list handler received: 3, 1, {}
+INFO  2015-08-03 16:56:07,342 [GetShopListHandler.java,93] - get shop list handler ret send: 3, 1, {}
+INFO  2015-08-03 16:58:13,496 [GetShopListHandler.java,46] - get shop list handler received: 3, 1, {}
+INFO  2015-08-03 16:58:13,501 [GetShopListHandler.java,93] - get shop list handler ret send: 3, 4, {}
+INFO  2015-08-03 16:58:39,902 [GetShopListHandler.java,46] - get shop list handler received: 4, 1, {}
+INFO  2015-08-03 16:58:39,904 [GetShopListHandler.java,93] - get shop list handler ret send: 4, 1, {}
+INFO  2015-08-03 17:00:10,953 [GetShopListHandler.java,46] - get shop list handler received: 4, 1, {}
+INFO  2015-08-03 17:00:10,958 [GetShopListHandler.java,93] - get shop list handler ret send: 4, 3, {}
+INFO  2015-08-03 17:01:22,684 [GetShopListHandler.java,46] - get shop list handler received: 4, 1, {}
+INFO  2015-08-03 17:01:22,686 [GetShopListHandler.java,93] - get shop list handler ret send: 4, 1, {}
+INFO  2015-08-03 17:10:57,972 [GetShopListHandler.java,46] - get shop list handler received: 4, 1, {}
+INFO  2015-08-03 17:10:57,976 [GetShopListHandler.java,93] - get shop list handler ret send: 4, 2, {}
+INFO  2015-08-03 17:11:56,093 [GetShopListHandler.java,46] - get shop list handler received: 3, 1, {}
+INFO  2015-08-03 17:11:56,094 [GetShopListHandler.java,93] - get shop list handler ret send: 3, 1, {}
+INFO  2015-08-03 17:12:00,818 [GetShopListHandler.java,46] - get shop list handler received: 3, 1, {}
+INFO  2015-08-03 17:12:00,819 [GetShopListHandler.java,93] - get shop list handler ret send: 3, 1, {}
+INFO  2015-08-03 17:36:30,309 [GetShopListHandler.java,46] - get shop list handler received: 1, 1, {}
+INFO  2015-08-03 17:36:30,311 [GetShopListHandler.java,93] - get shop list handler ret send: 1, 2, {}
+INFO  2015-08-03 19:48:26,814 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 19:48:26,817 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 3, {}
+INFO  2015-08-03 19:51:49,875 [GetShopListHandler.java,46] - get shop list handler received: 2, 1, {}
+INFO  2015-08-03 19:51:49,878 [GetShopListHandler.java,93] - get shop list handler ret send: 2, 2, {}

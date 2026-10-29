@@ -1,0 +1,8 @@
+$#include "GiftPreviewPage.h"
+
+class GiftPreviewPage
+{
+	static void addContent(std::string name, std::string icon, int number, int quality);
+	static void showPage(const std::string& title);
+};
+

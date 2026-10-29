@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+	<ServerInfo platform="lo" serverId="01" serverOpenDate="20130524" serverMaxUser="20000" serverStat="1" serverCloseTime="2013-06-20|20:30:00" closeNeedMinutes="10"></ServerInfo>
+	<ServerInfo platform="ts" serverId="01" serverOpenDate="20130524" serverMaxUser="20000" serverStat="1" serverCloseTime="2013-06-20|19:30:00" closeNeedMinutes="10"></ServerInfo>
+	<ServerInfo platform="91" serverId="01" serverOpenDate="20130613" serverMaxUser="20000" serverStat="1" serverCloseTime="2013-06-20|19:30:00" closeNeedMinutes="10"></ServerInfo>
+	<ServerInfo platform="91" serverId="02" serverOpenDate="20130524" serverMaxUser="20000" serverStat="1" serverCloseTime="2013-06-20|19:30:00" closeNeedMinutes="10"></ServerInfo>
+	<ServerInfo platform="adts" serverId="01" serverOpenDate="20130524" serverMaxUser="20000" serverStat="1" serverCloseTime="2013-06-20|19:30:00" closeNeedMinutes="10"></ServerInfo>
+	<ServerInfo platform="android" serverId="01" serverOpenDate="20130524" serverMaxUser="20000" serverStat="1" serverCloseTime="2013-06-20|19:30:00" closeNeedMinutes="10"></ServerInfo>
+	<ServerInfo platform="android" serverId="02" serverOpenDate="20130524" serverMaxUser="20000" serverStat="1" serverCloseTime="2013-06-20|19:30:00" closeNeedMinutes="10"></ServerInfo>
+	<ServerInfo platform="android" serverId="03" serverOpenDate="20130524" serverMaxUser="20000" serverStat="1" serverCloseTime="2013-06-20|19:30:00" closeNeedMinutes="10"></ServerInfo>
+	<ServerInfo platform="android" serverId="04" serverOpenDate="20130524" serverMaxUser="20000" serverStat="1" serverCloseTime="2013-06-20|19:30:00" closeNeedMinutes="10"></ServerInfo>
+	<ServerInfo platform="android" serverId="05" serverOpenDate="20130524" serverMaxUser="20000" serverStat="1" serverCloseTime="2013-06-20|19:30:00" closeNeedMinutes="10"></ServerInfo>
+	<ServerInfo platform="android" serverId="06" serverOpenDate="20130524" serverMaxUser="20000" serverStat="1" serverCloseTime="2013-06-20|19:30:00" closeNeedMinutes="10"></ServerInfo>
+	<ServerInfo platform="android" serverId="07" serverOpenDate="20130524" serverMaxUser="20000" serverStat="1" serverCloseTime="2013-06-20|19:30:00" closeNeedMinutes="10"></ServerInfo>
+	<ServerInfo platform="android" serverId="08" serverOpenDate="20130524" serverMaxUser="20000" serverStat="1" serverCloseTime="2013-06-20|19:30:00" closeNeedMinutes="10"></ServerInfo>
+	<ServerInfo platform="android" serverId="09" serverOpenDate="20130524" serverMaxUser="20000" serverStat="1" serverCloseTime="2013-06-20|19:30:00" closeNeedMinutes="10"></ServerInfo>
+	<ServerInfo platform="android" serverId="10" serverOpenDate="20130524" serverMaxUser="20000" serverStat="1" serverCloseTime="2013-06-20|19:30:00" closeNeedMinutes="10"></ServerInfo>
+</root>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.oldmountain.dzm.entity">
+	<class name="Challenge" table="challenge" dynamic-update="true" dynamic-insert="true">
+		<id name="playerid" column="playerid">
+			<generator class="assigned" />
+		</id>
+		<property name="level" column="level" type="int"></property>
+		<property name="name" column="name" type="string"></property>
+		<property name="isnpc" column="isnpc" type="int"></property>
+		<property name="rank" column="rank" type="int"></property>
+		<property name="highestrank" column="highest_rank" type="int"></property>
+		<property name="score" column="score" type="int"></property>
+		<property name="hasgotreward" column="hasgotreward" type="string"></property>
+		<property name="lastsettletime" column="lastsettletime" type="int"></property>
+		<property name="lastrefreshtime" column="lastrefreshtime" type="int"></property>
+	</class>
+</hibernate-mapping>

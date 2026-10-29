@@ -1,0 +1,2087 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="win32">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="states">
+      <UniqueIdentifier>{e10714df-a6c9-461c-a3d5-315bf8b48bd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui">
+      <UniqueIdentifier>{06388e16-ebe3-4fab-bb65-aacdcc8b9a79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protobuf">
+      <UniqueIdentifier>{667fd488-a379-46e9-905c-41b61c7becd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="general">
+      <UniqueIdentifier>{7f6960a2-a137-46cf-a09e-49579fa4c5da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes">
+      <UniqueIdentifier>{07afe4be-9937-4d5c-a298-87627e819c23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="general\network">
+      <UniqueIdentifier>{db316f00-0836-414c-b3c3-5a924843c06d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\career">
+      <UniqueIdentifier>{61c97ecc-c5bc-4a3b-92b2-7301d1599f8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logical">
+      <UniqueIdentifier>{20120d7f-5df0-41db-b869-a5d692d778af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes\SkillPages">
+      <UniqueIdentifier>{773fb959-eaea-4389-8268-fc5e56452302}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes\DisciplePages">
+      <UniqueIdentifier>{dc5d5cda-231d-4648-8707-af7f902f71e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes\Adventures">
+      <UniqueIdentifier>{b3f40d54-d05e-4df3-a9a2-e1c726187e92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes\Equip">
+      <UniqueIdentifier>{aba3fcec-11a7-4418-abc2-571ba691e6d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes\Team">
+      <UniqueIdentifier>{b0df3200-4bb8-4736-a9e6-bdb1886cbfd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes\Utility">
+      <UniqueIdentifier>{01e4ea41-afe9-4503-9772-a1f25e3f6384}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes\TeamBuff">
+      <UniqueIdentifier>{74c621e2-5088-4141-9a19-b1acb22b41a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes\Package">
+      <UniqueIdentifier>{4ab3256c-a970-4f05-8c60-f8445d61ca45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes\Arena">
+      <UniqueIdentifier>{03f0a25c-1077-4af9-a7d9-118659326171}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes\FriendsPage">
+      <UniqueIdentifier>{35bcd66f-01ad-4bfd-9796-3aa754a5a588}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes\SysMsgPage">
+      <UniqueIdentifier>{0fe1f36e-0ba7-4765-9cb4-3c13f228fc06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes\BuyPropPage">
+      <UniqueIdentifier>{53985103-2e0f-46fb-a1e4-af97f08256d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes\Fight">
+      <UniqueIdentifier>{704cff3e-919a-4422-9917-8738c7230923}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes\CareerPage">
+      <UniqueIdentifier>{e48e70a3-bbbb-4e37-aa7a-160964a303a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes\TitlePage">
+      <UniqueIdentifier>{e72ee7bd-7319-4e4a-83e0-255e7f7fe584}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="luabind">
+      <UniqueIdentifier>{2aa70e86-a1b8-4846-9814-7077c3013cd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes\Guide">
+      <UniqueIdentifier>{dc89fbef-e609-4aa9-8f2a-5e7f21976c5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes\SettingsPage">
+      <UniqueIdentifier>{a3b15815-c29a-4785-b882-d1f531883041}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes\ViewTeamBattle">
+      <UniqueIdentifier>{43a48cfc-de94-4290-9246-de3d70bf95e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes\Stone">
+      <UniqueIdentifier>{cf2f92ed-e9ea-40fd-82ea-defa09f33cc8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GamePrecedure.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\LoadingScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameConsts.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\LoadingUnit.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\CurlDownload.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\AES.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Concurrency.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameMaths.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\Language.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\AsyncSprite.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\MainFrame.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\CCBContainer.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\MainPage.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\CCBManager.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\IoSocket.cpp">
+      <Filter>general\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AsyncSocket.cpp">
+      <Filter>general\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\SocketBase.cpp">
+      <Filter>general\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\PacketBase.cpp">
+      <Filter>general\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\PacketManager.cpp">
+      <Filter>general\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\ThreadSocket.cpp">
+      <Filter>general\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\MemberPage.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\CharacterConsts.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\TableReader.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CareerConfigManager.cpp">
+      <Filter>Classes\career</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\GamePackets.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SkillConsts.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\LoadingFrame.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SeverConsts.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Platform\GamePlatform.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\DataTableManager.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\LeaveMsgPage.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ServerDateManager.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\StringConverter.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PackageLogic.cpp">
+      <Filter>Logical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ChatPage.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\DisciplePage.cpp">
+      <Filter>Scenes\DisciplePages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TransferEXPPage.cpp">
+      <Filter>Scenes\DisciplePages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TranExpChooseMemberPage.cpp">
+      <Filter>Scenes\DisciplePages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TrainPage.cpp">
+      <Filter>Scenes\DisciplePages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BoardCastLabel.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TranExpPreview.cpp">
+      <Filter>Scenes\DisciplePages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\DiscipleInfoPage.cpp">
+      <Filter>Scenes\DisciplePages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\RechargePage.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TrainResultPage.cpp">
+      <Filter>Scenes\DisciplePages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\buyingCheck.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TranExpResult.cpp">
+      <Filter>Scenes\DisciplePages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ContinueLoginPage.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SkillPage.cpp">
+      <Filter>Scenes\SkillPages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Skill.cpp">
+      <Filter>Logical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SkillInfoPage.cpp">
+      <Filter>Scenes\SkillPages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SkillUpgradePage.cpp">
+      <Filter>Scenes\SkillPages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SkillUpChoosePage.cpp">
+      <Filter>Scenes\SkillPages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AddPowerPage.cpp">
+      <Filter>Scenes\Adventures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AdventureBase.cpp">
+      <Filter>Scenes\Adventures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AdventurePage.cpp">
+      <Filter>Scenes\Adventures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FightEndPage.cpp">
+      <Filter>Scenes\Adventures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TeacherTeachPage.cpp">
+      <Filter>Scenes\Adventures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\WishPage.cpp">
+      <Filter>Scenes\Adventures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SkillUpgradeResultPage.cpp">
+      <Filter>Scenes\SkillPages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Disciple.cpp">
+      <Filter>Logical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\DiscipleUpgradePage.cpp">
+      <Filter>Scenes\DisciplePages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\DiscipleRecruitPage.cpp">
+      <Filter>Scenes\DisciplePages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EquipPage.cpp">
+      <Filter>Scenes\Equip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Equip.cpp">
+      <Filter>Logical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EquipSellPage.cpp">
+      <Filter>Scenes\Equip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BoundlessHolePage.cpp">
+      <Filter>Scenes\Adventures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EquipInfoPage.cpp">
+      <Filter>Scenes\Equip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EquipEnhancePage.cpp">
+      <Filter>Scenes\Equip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EquipEnhanceResultPage.cpp">
+      <Filter>Scenes\Equip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FightEndRankPage.cpp">
+      <Filter>Scenes\Adventures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\TeamPage.cpp">
+      <Filter>Scenes\Team</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SkillChangePage.cpp">
+      <Filter>Scenes\SkillPages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EquipChangePage.cpp">
+      <Filter>Scenes\Equip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PlayerInfPage.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EmbattlePage.cpp">
+      <Filter>Scenes\Team</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TeacherTeachResultPage.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\HandbookPage.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SkillBookPage.cpp">
+      <Filter>Scenes\Adventures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\GiftPreviewPage.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MessageBoxPage.cpp">
+      <Filter>Scenes\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\DiscipleCardPage.cpp">
+      <Filter>Scenes\DisciplePages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EquipCardPage.cpp">
+      <Filter>Scenes\Equip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SkillCardPage.cpp">
+      <Filter>Scenes\SkillPages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\WorldBossPage.cpp">
+      <Filter>Scenes\Adventures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\DiscipleChangePage.cpp">
+      <Filter>Scenes\DisciplePages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SkillBookLootPage.cpp">
+      <Filter>Scenes\Adventures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\VIPPrivilegePage.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\inifile.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\AddBoundlessHole.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\AddFriend.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\AddPower.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\AddTeachExp.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\AddVitality.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\AdventureInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\AdventureTeacherInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\BoardCastInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\BuyPackage.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\BuyTools.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\ChallengePlayer.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\ChangeBattlePosition.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\ChangeDisciple.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\ChangeEquip.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\ChangeSetting.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\ChangeSkill.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\ChatSendMsgInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\ContinueLogin.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\DailyLogin.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\DealTrainStatus.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\DisposeFriendsInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\DisposeSysMsgInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\ErrorReporter.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\ExchangeGift.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\ExchangeIntegral.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\FightEndAddYestAttr.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\FightEndBattle.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\FightEndGetReward.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\FightEndInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\FightEndRankInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\FightEndTempAddStepAttr.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\GetAdventureBoundlessHole.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\GetAdventurePowerInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\GetSkillBookLoot.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\HandbookInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\Instruction.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\Login.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\MarketRecruitDisciple.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\OP.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\PieceSkillBook.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\playerInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\PlayerLogout.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\protobufTest.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\RecruitDisciple.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\RefineEquip.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\RewardContinueLogin.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\SellEquip.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\SendFriendMessage.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\ShakeLantern.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\ShopList.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\ShopPurchase.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\SkillBookInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\SnatchFragment.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\SnatchSkillBook.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PopupPage.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\SwallowDisciple.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\TrainDisciple.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UpdateCareer.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UpgradeDisciple.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UpgradeEquip.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UpgradeRole.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UpgradeSkill.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UpgradeZhangMenJue.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UserBasicInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UserBattle.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UserBattleArray.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UserCareerInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UserChatInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UserDiscipleInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UserEquipInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UserFriendsInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UserMainInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UserMarketInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UserSkillInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UserSoulInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UserSysMsgInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UserToolInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UseTool.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\Instruction.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TitleCardPage.cpp">
+      <Filter>Scenes\Team</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Title.cpp">
+      <Filter>Logical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TitleInfoPage.cpp">
+      <Filter>Scenes\Team</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\WorldBossRankPage.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\TeamBuffInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UpgradeTeamBuffInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GetPropManager.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GetPropManager.cpp">
+      <Filter>Logical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\InstructionManager.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TeamBuffPage.cpp">
+      <Filter>Scenes\TeamBuff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TeamBuffUpgradePage.cpp">
+      <Filter>Scenes\TeamBuff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PackPreviewPage.cpp">
+      <Filter>Scenes\Package</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PackagePage.cpp">
+      <Filter>Scenes\Package</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TrainingBolusChoosePage.cpp">
+      <Filter>Scenes\Package</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ResManager.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\PropUpPage.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\waitingManager.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BattleArrayInfo.cpp">
+      <Filter>Logical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SoulInfoPage.cpp">
+      <Filter>Scenes\DisciplePages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BlackBoard.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\CareerStoryPage.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EquipEnhanceAniPage.cpp">
+      <Filter>Scenes\Equip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\SoundManager.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\ResetCareerCount.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\TitleInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ArenaPage.cpp">
+      <Filter>Scenes\Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Arena.cpp">
+      <Filter>Logical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FightEndPopupPage.cpp">
+      <Filter>Scenes\Adventures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AboutPage.cpp">
+      <Filter>Scenes\SettingsPage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AnnouncementPage.cpp">
+      <Filter>Scenes\SettingsPage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\HelpPage.cpp">
+      <Filter>Scenes\SettingsPage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\AdventureLevelUpReward.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\AdventureLevelUpGetReward.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\ChallengeOpponent.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\GetArenaOpponentList.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\GetArenaReward.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\RefreshArenaScore.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UserArenaInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ArenaBuyChallengePage.cpp">
+      <Filter>Scenes\Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ArenaRewardPage.cpp">
+      <Filter>Scenes\Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SysMsgPage.cpp">
+      <Filter>Scenes\SysMsgPage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FriendsPage.cpp">
+      <Filter>Scenes\FriendsPage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FriendsDetailPopupPage.cpp">
+      <Filter>Scenes\FriendsPage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ArenaRewardAniPage.cpp">
+      <Filter>Scenes\Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UserRewardInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\LevelUpRewardPage.cpp">
+      <Filter>Scenes\Adventures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UserUpgrade.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UpdateUserInfoByGM.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\BuyPropInfoPage.cpp">
+      <Filter>Scenes\BuyPropPage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BuyPropPopupPage.cpp">
+      <Filter>Scenes\BuyPropPage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\BuyPropsCountPage.cpp">
+      <Filter>Scenes\BuyPropPage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\BuyPropsPage.cpp">
+      <Filter>Scenes\BuyPropPage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PropInfoPage.cpp">
+      <Filter>Scenes\BuyPropPage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\MarketPage.cpp">
+      <Filter>Scenes\BuyPropPage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\FightPage.cpp">
+      <Filter>Scenes\Fight</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\FightPage_finalRound.cpp">
+      <Filter>Scenes\Fight</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\FightPage_resultState.cpp">
+      <Filter>Scenes\Fight</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\FightPage_roundState.cpp">
+      <Filter>Scenes\Fight</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\FightTasks.cpp">
+      <Filter>Scenes\Fight</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\MarketPage.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PopupNotEnoughPage.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CareerPage.cpp">
+      <Filter>Scenes\CareerPage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PopUpSurprisePage.cpp">
+      <Filter>Scenes\CareerPage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EquipSurprisePage.cpp">
+      <Filter>Scenes\CareerPage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SkillSurprisePage.cpp">
+      <Filter>Scenes\CareerPage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\AddPowerForCareer.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\TimeCalculator.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\LoginPacket.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\AddArenaNum.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FightPage_resultState_FightEnd.cpp">
+      <Filter>Scenes\Fight</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\ServerDisconnect.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ChangeNamePage.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\ChangeName.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\Heartbeat.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UpdateTitle.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TitleGetNewPage.cpp">
+      <Filter>Scenes\TitlePage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TitleLVUpPage.cpp">
+      <Filter>Scenes\TitlePage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AdventureContinuePage.cpp">
+      <Filter>Scenes\Adventures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\RewardAdventureContinueLogin.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\GetAdventureContinueLogin.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Gamelua.cpp">
+      <Filter>luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\pb.cpp">
+      <Filter>luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\GameMessages.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\MessageManager.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CCBScriptContainer.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ObtainSkillBookPage.cpp">
+      <Filter>Scenes\Adventures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SkillBookSurprisePage.cpp">
+      <Filter>Scenes\CareerPage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\RecordReadMsgTime.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\CdkeyReward.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FightGuidePage.cpp">
+      <Filter>Scenes\Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GuideRechargePage.cpp">
+      <Filter>Scenes\Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GuideBuyEquipPage.cpp">
+      <Filter>Scenes\Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GuideBuyExpPage.cpp">
+      <Filter>Scenes\Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\GuideRecord.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\GuideBuyTool.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\NewActivePromptPage.cpp">
+      <Filter>Scenes\Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\NewActivePromptToolPage.cpp">
+      <Filter>Scenes\Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PlayerUpgradePage.cpp">
+      <Filter>Scenes\Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PopupManager.cpp">
+      <Filter>Scenes\Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UserInviteStatus.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\GetInviteReward.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\AddInviteKey.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AdventureInvitePage.cpp">
+      <Filter>Scenes\Adventures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\RestrictedWord.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\SpriteShader.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\FightCardSprite.cpp">
+      <Filter>Scenes\Fight</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FightConfigManager.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\NumberChangeAction.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\FightTasksSkill.cpp">
+      <Filter>Scenes\Fight</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\WorldBossFight.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\FortuneCome.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\WorldBossRefresh.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\ChargeRebate.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\WorldBossInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ChargeRebatePage.cpp">
+      <Filter>Scenes\Adventures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FortuneComePage.cpp">
+      <Filter>Scenes\Adventures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CDKeyInvitePage.cpp">
+      <Filter>Scenes\Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\WorldBossFight.cpp">
+      <Filter>Scenes\Adventures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\WorldBossFightEnd.cpp">
+      <Filter>Scenes\Adventures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\WorldBossJoinBattle.cpp">
+      <Filter>Scenes\Adventures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ScrollNumCard.cpp">
+      <Filter>Scenes\Adventures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ScrollNumCardTask.cpp">
+      <Filter>Scenes\Adventures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FortuneComeReward.cpp">
+      <Filter>Scenes\Adventures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CDKeyMsgPage.cpp">
+      <Filter>Scenes\SettingsPage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\stdafx.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Popup1stPayTipPage.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\ShowUserBattle.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ViewTeamPage.cpp">
+      <Filter>Scenes\ViewTeamBattle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ViewListTeamPage.cpp">
+      <Filter>Scenes\ViewTeamBattle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SettingsPage.cpp">
+      <Filter>Scenes\SettingsPage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\ActiveCode.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ActiveCodePage.cpp">
+      <Filter>Scenes\SettingsPage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\WorldBossGiftPreviewPage.cpp">
+      <Filter>Scenes\Adventures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\GameNotification.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EquipQuickEnhancePage.cpp">
+      <Filter>Scenes\Equip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\ChatPush.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ScriptContentBase.cpp">
+      <Filter>general</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\QuickCareerBattle.pb.cc">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CareerQuickResultPage.cpp">
+      <Filter>Scenes\CareerPage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\StoneInlaidPage.cpp">
+      <Filter>Scenes\Stone</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\StoneUpgradePage.cpp">
+      <Filter>Scenes\Stone</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\UpgradeStoneInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\RemoveStoneInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\PunchStoneInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Protobuf\InlaidStoneInfo.pb.cc">
+      <Filter>Protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BuyStoneCountPage.cpp">
+      <Filter>Scenes\Stone</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BuyToolAlertPage.cpp">
+      <Filter>Scenes\Stone</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ScriptMathToLua.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GoodsPopupPage.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BuyStonePopupPage.cpp">
+      <Filter>Scenes\Stone</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EquipHandInfoPage.cpp">
+      <Filter>Scenes\Equip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\DiscipleHandInfoPage.cpp">
+      <Filter>Scenes\DisciplePages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SkillHandInfoPage.cpp">
+      <Filter>Scenes\SkillPages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ActivityPopPage.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ViewTeamEquipInfoPage.cpp">
+      <Filter>Scenes\ViewTeamBattle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SkillViewTeamInfoPage.cpp">
+      <Filter>Scenes\ViewTeamBattle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\DiscipleViewTeamInfoPage.cpp">
+      <Filter>Scenes\ViewTeamBattle</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GamePrecedure.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\LoadingScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameConsts.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\LoadingUnit.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MessageManager.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Singleton.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\StateMachine.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\CurlDownload.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\AES.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Concurrency.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameMaths.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\Language.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\AsyncSprite.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\MainFrame.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\CCBContainer.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\MainPage.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BasePage.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\CCBManager.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameMessages.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\IoSocket.h">
+      <Filter>general\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AsyncSocket.h">
+      <Filter>general\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\SocketBase.h">
+      <Filter>general\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\PacketBase.h">
+      <Filter>general\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\PacketManager.h">
+      <Filter>general\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\GamePackets.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\ThreadSocket.h">
+      <Filter>general\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\MemberPage.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\CharacterConsts.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\TableReader.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CareerConfigManager.h">
+      <Filter>Classes\career</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CareerData.h">
+      <Filter>Classes\career</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\CustomPage.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SkillConsts.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LoadingFrame.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SeverConsts.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DataTableManager.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\IteratorWrapper.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LeaveMsgPage.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ServerDateManager.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\StringConverter.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PackageLogic.h">
+      <Filter>Logical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ChatPage.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DisciplePage.h">
+      <Filter>Scenes\DisciplePages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TransferEXPPage.h">
+      <Filter>Scenes\DisciplePages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BlackBoard.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TranExpChooseMemberPage.h">
+      <Filter>Scenes\DisciplePages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TrainPage.h">
+      <Filter>Scenes\DisciplePages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BoardCastLabel.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TranExpPreview.h">
+      <Filter>Scenes\DisciplePages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DiscipleInfoPage.h">
+      <Filter>Scenes\DisciplePages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\RechargePage.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TrainResultPage.h">
+      <Filter>Scenes\DisciplePages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\buyingCheck.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TranExpResult.h">
+      <Filter>Scenes\DisciplePages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ContinueLoginPage.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SkillPage.h">
+      <Filter>Scenes\SkillPages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ContentBase.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Skill.h">
+      <Filter>Logical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SkillInfoPage.h">
+      <Filter>Scenes\SkillPages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SkillUpgradePage.h">
+      <Filter>Scenes\SkillPages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SkillUpChoosePage.h">
+      <Filter>Scenes\SkillPages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AdventurePage.h">
+      <Filter>Scenes\Adventures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AdventureBase.h">
+      <Filter>Scenes\Adventures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AddPowerPage.h">
+      <Filter>Scenes\Adventures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FightEndPage.h">
+      <Filter>Scenes\Adventures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TeacherTeachPage.h">
+      <Filter>Scenes\Adventures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\WishPage.h">
+      <Filter>Scenes\Adventures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SkillUpgradeResultPage.h">
+      <Filter>Scenes\SkillPages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Disciple.h">
+      <Filter>Logical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DiscipleUpgradePage.h">
+      <Filter>Scenes\DisciplePages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DiscipleRecruitPage.h">
+      <Filter>Scenes\DisciplePages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EquipPage.h">
+      <Filter>Scenes\Equip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Equip.h">
+      <Filter>Logical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EquipSellPage.h">
+      <Filter>Scenes\Equip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BoundlessHolePage.h">
+      <Filter>Scenes\Adventures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EquipInfoPage.h">
+      <Filter>Scenes\Equip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EquipEnhancePage.h">
+      <Filter>Scenes\Equip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EquipEnhanceResultPage.h">
+      <Filter>Scenes\Equip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FightEndRankPage.h">
+      <Filter>Scenes\Adventures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\TeamPage.h">
+      <Filter>Scenes\Team</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SkillChangePage.h">
+      <Filter>Scenes\SkillPages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EquipChangePage.h">
+      <Filter>Scenes\Equip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PlayerInfPage.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EmbattlePage.h">
+      <Filter>Scenes\Team</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TeacherTeachResultPage.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\HandbookPage.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SkillBookPage.h">
+      <Filter>Scenes\Adventures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\GiftPreviewPage.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MessageBoxPage.h">
+      <Filter>Scenes\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DiscipleCardPage.h">
+      <Filter>Scenes\DisciplePages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EquipCardPage.h">
+      <Filter>Scenes\Equip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SkillCardPage.h">
+      <Filter>Scenes\SkillPages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\WorldBossPage.h">
+      <Filter>Scenes\Adventures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\Instruction.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DiscipleChangePage.h">
+      <Filter>Scenes\DisciplePages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SkillBookLootPage.h">
+      <Filter>Scenes\Adventures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\VIPPrivilegePage.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\inifile.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\AddBoundlessHole.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\AddFriend.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\AddPower.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\AddTeachExp.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\AddVitality.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\AdventureInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\AdventureTeacherInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\BoardCastInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\BuyPackage.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\BuyTools.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\ChallengePlayer.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\ChangeBattlePosition.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\ChangeDisciple.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\ChangeEquip.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\ChangeSetting.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\ChangeSkill.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\ChatSendMsgInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\ContinueLogin.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\DailyLogin.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\DealTrainStatus.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\DisposeFriendsInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\DisposeSysMsgInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\ErrorReporter.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\ExchangeGift.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\ExchangeIntegral.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\FightEndAddYestAttr.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\FightEndBattle.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\FightEndGetReward.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\FightEndInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\FightEndRankInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\FightEndTempAddStepAttr.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\GetAdventureBoundlessHole.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\GetAdventurePowerInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\GetSkillBookLoot.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\HandbookInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\Instruction.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\Login.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\MarketRecruitDisciple.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\OP.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\PieceSkillBook.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\playerInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\PlayerLogout.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\protobufTest.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\RecruitDisciple.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\RefineEquip.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\RewardContinueLogin.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\SellEquip.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\SendFriendMessage.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\ShakeLantern.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\ShopList.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\ShopPurchase.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\SkillBookInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\SnatchFragment.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\SnatchSkillBook.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PopupPage.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\SwallowDisciple.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\TrainDisciple.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UpdateCareer.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UpgradeDisciple.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UpgradeEquip.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UpgradeRole.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UpgradeSkill.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UpgradeZhangMenJue.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UserBasicInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UserBattle.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UserBattleArray.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UserCareerInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UserChatInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UserDiscipleInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UserEquipInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UserFriendsInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UserMainInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UserMarketInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UserSkillInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UserSoulInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UserSysMsgInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UserToolInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UseTool.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TitleCardPage.h">
+      <Filter>Scenes\Team</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Title.h">
+      <Filter>Logical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TitleInfoPage.h">
+      <Filter>Scenes\Team</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\WorldBossRankPage.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\TeamBuffInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UpgradeTeamBuffInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GetPropManager.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GetPropManager.h">
+      <Filter>Logical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\InstructionManager.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TeamBuffPage.h">
+      <Filter>Scenes\TeamBuff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TeamBuffUpgradePage.h">
+      <Filter>Scenes\TeamBuff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Platform\GamePlatform.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PackagePage.h">
+      <Filter>Scenes\Package</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PackPreviewPage.h">
+      <Filter>Scenes\Package</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TrainingBolusChoosePage.h">
+      <Filter>Scenes\Package</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ResManager.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\PropUpPage.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\waitingManager.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BattleArrayInfo.h">
+      <Filter>Logical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SoulInfoPage.h">
+      <Filter>Scenes\DisciplePages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EquipEnhanceAniPage.h">
+      <Filter>Scenes\Equip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\ResetCareerCount.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\TitleInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ArenaPage.h">
+      <Filter>Scenes\Arena</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Arena.h">
+      <Filter>Logical</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FightEndPopupPage.h">
+      <Filter>Scenes\Adventures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\AdventureLevelUpReward.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\AdventureLevelUpGetReward.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AboutPage.h">
+      <Filter>Scenes\SettingsPage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AnnouncementPage.h">
+      <Filter>Scenes\SettingsPage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\HelpPage.h">
+      <Filter>Scenes\SettingsPage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\ChallengeOpponent.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\GetArenaOpponentList.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\GetArenaReward.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\RefreshArenaScore.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UserArenaInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ArenaBuyChallengePage.h">
+      <Filter>Scenes\Arena</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ArenaRewardPage.h">
+      <Filter>Scenes\Arena</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SysMsgPage.h">
+      <Filter>Scenes\SysMsgPage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FriendsPage.h">
+      <Filter>Scenes\FriendsPage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FriendsDetailPopupPage.h">
+      <Filter>Scenes\FriendsPage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ArenaRewardAniPage.h">
+      <Filter>Scenes\Arena</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UserRewardInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\SoundManager.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\CareerStoryPage.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LevelUpRewardPage.h">
+      <Filter>Scenes\Adventures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UserUpgrade.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UpdateUserInfoByGM.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\BuyPropsPage.h">
+      <Filter>Scenes\BuyPropPage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\BuyPropInfoPage.h">
+      <Filter>Scenes\BuyPropPage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BuyPropPopupPage.h">
+      <Filter>Scenes\BuyPropPage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\BuyPropsCountPage.h">
+      <Filter>Scenes\BuyPropPage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PropInfoPage.h">
+      <Filter>Scenes\BuyPropPage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\BuyPropsCountPage.h">
+      <Filter>Scenes\BuyPropPage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\BuyPropInfoPage.h">
+      <Filter>Scenes\BuyPropPage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\MarketPage.h">
+      <Filter>Scenes\BuyPropPage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\FightPage.h">
+      <Filter>Scenes\Fight</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\FightPage_finalRound.h">
+      <Filter>Scenes\Fight</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\FightPage_resultState.h">
+      <Filter>Scenes\Fight</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\FightPage_roundState.h">
+      <Filter>Scenes\Fight</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\FightTasks.h">
+      <Filter>Scenes\Fight</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\STLUtility.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\MarketPage.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PopupNotEnoughPage.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CareerPage.h">
+      <Filter>Scenes\CareerPage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PopUpSurprisePage.h">
+      <Filter>Scenes\CareerPage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EquipSurprisePage.h">
+      <Filter>Scenes\CareerPage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SkillSurprisePage.h">
+      <Filter>Scenes\CareerPage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\AddPowerForCareer.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LoginPacket.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\AddArenaNum.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FightPage_resultState_FightEnd.h">
+      <Filter>Scenes\Fight</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\ServerDisconnect.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ChangeNamePage.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\ChangeName.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\Heartbeat.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UpdateTitle.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TitleGetNewPage.h">
+      <Filter>Scenes\TitlePage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TitleLVUpPage.h">
+      <Filter>Scenes\TitlePage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AdventureContinuePage.h">
+      <Filter>Scenes\Adventures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\RewardAdventureContinueLogin.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\GetAdventureContinueLogin.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Gamelua.h">
+      <Filter>luabind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\pb.h">
+      <Filter>luabind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\TimeCalculator.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CCBScriptContainer.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ObtainSkillBookPage.h">
+      <Filter>Scenes\Adventures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SkillBookSurprisePage.h">
+      <Filter>Scenes\CareerPage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\RecordReadMsgTime.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\CdkeyReward.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CDKeyMsgPage.h">
+      <Filter>Scenes\SettingsPage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FightGuidePage.h">
+      <Filter>Scenes\Guide</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GuideRechargePage.h">
+      <Filter>Scenes\Guide</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GuideBuyEquipPage.h">
+      <Filter>Scenes\Guide</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GuideBuyExpPage.h">
+      <Filter>Scenes\Guide</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\GuideRecord.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\GuideBuyTool.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PopupManager.h">
+      <Filter>Scenes\Guide</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\NewActivePromptPage.h">
+      <Filter>Scenes\Guide</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\NewActivePromptToolPage.h">
+      <Filter>Scenes\Guide</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PlayerUpgradePage.h">
+      <Filter>Scenes\Guide</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UserInviteStatus.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\GetInviteReward.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\AddInviteKey.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AdventureInvitePage.h">
+      <Filter>Scenes\Adventures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CDKeyInvitePage.h">
+      <Filter>Scenes\Guide</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\RestrictedWord.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\SpriteShader.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\FightCardSprite.h">
+      <Filter>Scenes\Fight</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FightConfigManager.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\NumberChangeAction.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\FightTasksSkill.h">
+      <Filter>Scenes\Fight</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\WorldBossFight.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\FortuneCome.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\WorldBossRefresh.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\ChargeRebate.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\WorldBossInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ChargeRebatePage.h">
+      <Filter>Scenes\Adventures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FortuneComePage.h">
+      <Filter>Scenes\Adventures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\WorldBossFight.h">
+      <Filter>Scenes\Adventures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\WorldBossFightEnd.h">
+      <Filter>Scenes\Adventures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\WorldBossJoinBattle.h">
+      <Filter>Scenes\Adventures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ScrollNumCard.h">
+      <Filter>Scenes\Adventures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ScrollNumCardTask.h">
+      <Filter>Scenes\Adventures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FortuneComeReward.h">
+      <Filter>Scenes\Adventures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Popup1stPayTipPage.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\ShowUserBattle.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ViewTeamPage.h">
+      <Filter>Scenes\ViewTeamBattle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ViewListTeamPage.h">
+      <Filter>Scenes\ViewTeamBattle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SettingsPage.h">
+      <Filter>Scenes\SettingsPage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\ActiveCode.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ActiveCodePage.h">
+      <Filter>Scenes\SettingsPage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\WorldBossGiftPreviewPage.h">
+      <Filter>Scenes\Adventures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EquipQuickEnhancePage.h">
+      <Filter>Scenes\Equip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\ChatPush.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ScriptContentBase.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\CareerQuickResultPage.h">
+      <Filter>Scenes\CareerPage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\StoneInlaidPage.h">
+      <Filter>Scenes\Stone</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\StoneUpgradePage.h">
+      <Filter>Scenes\Stone</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\GameNotification.h">
+      <Filter>general</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\QuickCareerBattle.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\UpgradeStoneInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\RemoveStoneInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\PunchStoneInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Protobuf\InlaidStoneInfo.pb.h">
+      <Filter>Protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BuyStoneCountPage.h">
+      <Filter>Scenes\Stone</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BuyToolAlertPage.h">
+      <Filter>Scenes\Stone</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ScriptMathToLua.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GoodsPopupPage.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BuyStonePopupPage.h">
+      <Filter>Scenes\Stone</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EquipHandInfoPage.h">
+      <Filter>Scenes\Equip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DiscipleHandInfoPage.h">
+      <Filter>Scenes\DisciplePages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SkillHandInfoPage.h">
+      <Filter>Scenes\SkillPages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ActivityPopPage.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ViewTeamEquipInfoPage.h">
+      <Filter>Scenes\ViewTeamBattle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SkillViewTeamInfoPage.h">
+      <Filter>Scenes\ViewTeamBattle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DiscipleViewTeamInfoPage.h">
+      <Filter>Scenes\ViewTeamBattle</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+</Project>

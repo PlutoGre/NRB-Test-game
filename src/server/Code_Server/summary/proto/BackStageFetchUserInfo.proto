@@ -1,0 +1,17 @@
+message OPBackStageFetchUserInfo
+{
+	required int32 version 	= 1 [default = 1];
+	required string name 	= 2 ;
+}
+ 
+message OPBackStageFetchUserInfoRet
+{
+	required int32 servertime = 1;
+	required int32 userid = 2;
+	required string name = 3;
+	required int32 registertime = 4;
+	required int32 lastlogin = 5;
+	required int32 level = 6;
+	required int64 silvercoins = 7;
+	required int32 goldcoins = 8;
+}

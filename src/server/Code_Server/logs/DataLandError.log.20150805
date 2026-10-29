@@ -1,0 +1,28 @@
+INFO  2015-08-05 19:46:39,877 [DataLander.java,33] - start landing data to database
+INFO  2015-08-05 19:46:40,151 [DataLander.java,90] - end landing data to database,total update player count:2,cost Time:274,total update db count:22
+INFO  2015-08-05 19:56:39,869 [DataLander.java,33] - start landing data to database
+INFO  2015-08-05 19:56:40,002 [DataLander.java,90] - end landing data to database,total update player count:1,cost Time:133,total update db count:13
+INFO  2015-08-05 20:06:39,900 [DataLander.java,33] - start landing data to database
+INFO  2015-08-05 20:06:40,009 [DataLander.java,90] - end landing data to database,total update player count:1,cost Time:109,total update db count:9
+INFO  2015-08-05 20:16:39,930 [DataLander.java,33] - start landing data to database
+INFO  2015-08-05 20:16:39,982 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:52,total update db count:0
+INFO  2015-08-05 20:26:39,959 [DataLander.java,33] - start landing data to database
+INFO  2015-08-05 20:26:40,044 [DataLander.java,90] - end landing data to database,total update player count:1,cost Time:85,total update db count:0
+INFO  2015-08-05 20:36:39,990 [DataLander.java,33] - start landing data to database
+INFO  2015-08-05 20:36:40,052 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:62,total update db count:0
+INFO  2015-08-05 20:46:40,007 [DataLander.java,33] - start landing data to database
+INFO  2015-08-05 20:46:40,663 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:656,total update db count:0
+INFO  2015-08-05 20:56:40,013 [DataLander.java,33] - start landing data to database
+INFO  2015-08-05 20:56:40,089 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:76,total update db count:0
+INFO  2015-08-05 21:06:40,031 [DataLander.java,33] - start landing data to database
+INFO  2015-08-05 21:06:40,125 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:94,total update db count:0
+INFO  2015-08-05 21:16:39,950 [DataLander.java,33] - start landing data to database
+INFO  2015-08-05 21:16:40,031 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:81,total update db count:0
+INFO  2015-08-05 21:26:39,967 [DataLander.java,33] - start landing data to database
+INFO  2015-08-05 21:26:40,077 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:110,total update db count:0
+INFO  2015-08-05 21:36:39,971 [DataLander.java,33] - start landing data to database
+INFO  2015-08-05 21:36:40,050 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:79,total update db count:0
+INFO  2015-08-05 21:46:40,000 [DataLander.java,33] - start landing data to database
+INFO  2015-08-05 21:46:40,077 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:77,total update db count:0
+INFO  2015-08-05 21:56:40,030 [DataLander.java,33] - start landing data to database
+INFO  2015-08-05 21:56:40,092 [DataLander.java,90] - end landing data to database,total update player count:0,cost Time:62,total update db count:0

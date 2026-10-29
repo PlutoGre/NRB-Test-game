@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="25dip"
+    android:paddingRight="25dip"
+    android:paddingTop="10dip"
+    android:paddingBottom="10dip" >
+
+    <TextView
+        android:id="@+id/retry_info_view"
+        android:layout_width="match_parent"
+        android:layout_height="36dip"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="@string/wdj_payment_retry_text"
+        android:textColor="@color/wandou_font_color_black"
+	    android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/payment_retry_back_to_game_button"
+        android:layout_width="@dimen/wandoujia_payment_button_width"
+        android:layout_height="@dimen/wandoujia_payment_button_height"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/retry_info_view"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/wdj_grey_button_drawable"
+        android:gravity="center"
+        android:text="@string/back_to_game"
+        android:textColor="#222222"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/payment_retry_button"
+        android:layout_width="@dimen/wandoujia_payment_button_width"
+        android:layout_height="@dimen/wandoujia_payment_button_height"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/payment_retry_back_to_game_button"
+        android:background="@drawable/wdj_payment_general_button_background"
+        android:gravity="center"
+        android:text="@string/retry"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+</RelativeLayout>

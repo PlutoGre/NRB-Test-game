@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configs>
+	<minDiscipleId>147</minDiscipleId>
+	<maxDiscipleId>156</maxDiscipleId>
+	<hpAddition>1.5</hpAddition>
+	<attackAddition>1.4</attackAddition>
+	<defenseAddition>1.2</defenseAddition>
+	<rpAddition>1</rpAddition>
+	<floorCaptainLevel>-3</floorCaptainLevel>
+	<ceilCaptainLevel>3</ceilCaptainLevel>
+	<floorTeamLevel>-4</floorTeamLevel>
+	<ceilTeamLevel>2</ceilTeamLevel>
+	<teamLevelRatio>3</teamLevelRatio>
+</Configs>

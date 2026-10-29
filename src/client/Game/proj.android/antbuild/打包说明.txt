@@ -1,0 +1,51 @@
+
+
+
+
+xinzheng
+2013-07-22
+
+1、开发模式下，我们所有平台代码不分离，位于主Prj.DreameOnePiece，
+在Eclipse Workspace，Prj.DreameOnePiece引用Prj.libcocos2dx及
+不产生冲突的所有平台的Prj.lib&jars
+
+2、开发模式下，通过ADT Tools更改包名，手动修改AndroidManifest.xml主Activity
+来切换当前debug、build的平台，注意平台依赖的Res、Assets、Libs、SOs、Jars，
+不可避免需要手动操作
+
+3、提交代码前要求，统一切换为Nd91平台，一切正常再提交！
+
+4、打包模式下，目前所有平台共用libDreamOnePiece.so代码，所以先确定最终的CPP代码
+、最终的未加密资源、与IOS与Win32版本的资源差异，最终的加密资源置于assets目录；
+	打包模式下，先生成libDreamOnePiece.so；
+	Android.mk的生成：Gensrc.bat，需要cygwin，并且cygwin里python可用，生成的
+包含所有源代码的Android.mk文件位于jni\gen目录；
+	Android.mk&Application.mk中的编译配置需要人肉编辑、确认！
+	然后，建议在Eclipse里clean、build生成用于打包的libDreamOnePiece.so，另外
+也可以用sh build_native.sh clean/all生成
+
+5-1、使用 5-2 打包的时候需要注意修改 SDK.properties 文件里的sdk.dir=""路径。
+     如果有引入资源的平台，还需要修改 local.properties 文件里的 sdk.dir路径 
+     (local.propertier路径：Main\client\91lib\Android\91SDK_LibProject\local.properties)
+     注意：这个路径是根据自己电脑所装的 adt 路径！！！
+     
+5-2、打包模式下，再检查antbuild目录下各个平台的打包脚本是否正确！运行BuildRelease.bat
+生成APK
+	
+	1)clearDIRs.bat各个平台可能有差异
+	2)antclean.bat
+	3)copy_res_src_libs_assets_so.bat各个平台有差异
+	4)ant_build.bat
+
+6、打包发布的APK，无论是内部测试版本、平台测试版、玩家测试版、发布版，都需要生成MD5
+备查！
+
+
+7、bin&gen目录不允许提交SVN；assets目录下的内容不允许提交SVN！
+
+8、所有java源文件需要转换为utf-8无BOM编码！(notepad++)
+
+9、需要安装winrar并且能够运行winrar 的命令（需要配置winrar的系统环境变量，把winrar的安装目录添加到path里）
+
+
+

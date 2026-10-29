@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/pay_all_user_del_button"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:scaleType="center"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/pay_all_user_del_button" />
+
+        <ImageView
+            android:id="@+id/pay_all_user_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/pay_all_user_mark" />
+
+        <TextView
+            android:id="@+id/pay_all_user_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@id/pay_all_user_mark"
+            android:layout_toRightOf="@id/pay_all_user_del_button"
+            android:ellipsize="middle"
+            android:minWidth="150dip"
+            android:textColor="@android:color/black"
+            android:textSize="16dip" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.oldmountain.dzm.entity">
+	<class name="Player" table="player" dynamic-update="true" dynamic-insert="true">
+		<id name="id" column="id">
+			<generator class="assigned" />
+		</id>
+		<property name="puid" column="puid" type="string"/>
+		<property name="password" column="password" type="string"/>
+		<property name="name" column="name" type="string"/>
+		<property name="level" column="level" type="int"></property>
+		<property name="exp" column="exp" type="int"></property>
+		<property name="powerbytime" column="powerbytime" type="int"></property>
+		<property name="powerbychicken" column="powerbychicken" type="int"></property>
+		<property name="poweraddtime" column="poweraddtime" type="int"/>
+		<property name="eatfoodtime" column="eatfoodtime" type="int"/>
+		<property name="maxpower" column="maxpower" type="int"></property>
+		<property name="todaychickennum" column="todaychickennum" type="int"></property>
+		<property name="eatchickentime" column="eatchickentime" type="int"></property>
+		<property name="vitalitybytime" column="vitalitybytime" type="int"></property>
+		<property name="vitalitybypellet" column="vitalitybypellet" type="int"></property>
+		<property name="vitalityaddtime" column="vitalityaddtime" type="int"/>
+		<property name="maxvitality" column="maxvitality" type="int"></property>
+		<property name="todaypelletnum" column="todaypelletnum" type="int"></property>
+		<property name="eatpellettime" column="eatpellettime" type="int"></property>
+		<property name="todaybuychickennum" column="todaybuychickennum" type="int"></property>
+		<property name="todaybuypelletnum" column="todaybuypelletnum" type="int"></property>
+		<property name="viplevel" column="viplevel" type="int"></property>
+		<property name="rechargenum" column="rechargenum" type="int"></property>
+		<property name="silvercoins" column="silvercoins" type="long"></property>
+		<property name="sysgoldcoins" column="sysgoldcoins" type="int"></property>
+		<property name="rechargegoldcoins" column="rechargegoldcoins" type="int"></property>
+		<property name="todayleavetimes" column="todayleavetimes" type="int"></property>
+		<property name="tentime" column="tentime" type="int"></property>
+		<property name="hundredtime" column="hundredtime" type="int"></property>
+		<property name="wanlitime" column="wanlitime" type="int"></property>
+		<property name="tutorialstep" column="tutorialstep" type="int"></property>
+		<property name="registertime" column="registertime" type="int"/>
+		<property name="origin" column="origin" type="int"/>
+		<property name="momentum" column="momentum" type="int"/>
+		<property name="battleids" column="battleids" type="string"/>
+		<property name="setting" column="setting" type="string"/>
+		<property name="lastlogin" column="lastlogin" type="int"/>
+		<property name="firstgain" column="firstgain" type="string"/>
+		<property name="invitedid" column="invitedid" type="int"/>
+		<property name="instructionFinishTime" column="instructionFinishTime" type="int"/>
+		<property name="leaguaid" column="leaguaid" type="int"/>
+	</class>
+</hibernate-mapping>
