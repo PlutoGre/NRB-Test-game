@@ -5,8 +5,7 @@ echo "请确认build_native.sh里NDK_ROOT&COCOS2DX_ROOT"
 
 # options
 
-#export NDK_ROOT=/cygdrive/D/adt-bundle-windows-x86-20130219/android-ndk-r8e
-#export COCOS2DX_ROOT=/cygdrive/D/WorkSVN/CardGame_1/Branches/forJavascriptDev/client
+# Prefer deployment/Build-Android.ps1 on Windows for automatic path aliases.
 
 buildexternalsfromsource=
 
@@ -54,10 +53,9 @@ fi
 
 # paths
 
-if [ -z "${NDK_ROOT+aaa}" ];then
-echo "NDK_ROOT not defined. Please define NDK_ROOT in your environment or in local.properties"
-exit 1
-fi
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+REPO_ROOT="$( cd "$SCRIPT_DIR/../../../.." && pwd )"
+NDK_ROOT="${NDK_ROOT:-$REPO_ROOT/tools/android-ndk-r8e}"
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # ... use paths relative to current directory
@@ -87,9 +85,8 @@ if [ $* != "clean" ]; then
 	echo "copy resources:"
 	echo "from ""$APP_ROOT"/Resources
 	echo "to ""$APP_ANDROID_ROOT"/assets
-	#for file in /cygdrive/D/WorkSVN/Debug_Alpha/Resources2/*
 	#for file in "$APP_ROOT"/Resources2/*
-	for file in /cygdrive/D/VSPro/subversion/CardGame_1/Branches/PlatBranch20130727/ResourcesAndroid_Encrypt/*
+	for file in "$REPO_ROOT/src/server/ResourcesAndroid_Encrypt/"*
 	do
 		if [ -d "$file" ]; then
 		    cp -urf "$file" "$APP_ANDROID_ROOT"/assets

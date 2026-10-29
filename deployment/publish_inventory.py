@@ -7,6 +7,8 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "src/tools"))
+from project_paths import project_path
 LIMIT = 100 * 1024 * 1024
 SIGNING_SUFFIXES = {".keystore", ".jks", ".p12", ".pfx", ".p8", ".mobileprovision", ".provisionprofile"}
 
@@ -52,6 +54,8 @@ def main():
     total = 0
     names = {item["path"] for item in staged}
     required = {".github/workflows/ios-build.yml", "deployment/Deploy-Server.ps1", "deployment/server.py",
+                "deployment/Project-Paths.ps1", "deployment/Build-Android.ps1", "deployment/build-android.cmd",
+                "deployment/runtime_paths.py", "src/tools/project_paths.py",
                 "deployment/Start-External.ps1", "deployment/external.cmd", "deployment/external.py", "deployment/websocket_gateway.py",
                 "deployment/tunnel-manifest.json", "docs/EXTERNAL_DEPLOYMENT.md",
                 "src/client/ios-modern/native/ConnectionSettings.h", "src/client/ios-modern/native/ConnectionSettings.mm",
@@ -96,7 +100,9 @@ def main():
               "blocked": blocked, "filesOver50MiB": large, "missingRequiredFiles": missing}
     print(json.dumps(report, ensure_ascii=False, indent=2))
     if args.report:
-        args.report.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        report_path = project_path(args.report)
+        report_path.parent.mkdir(parents=True, exist_ok=True)
+        report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if blocked or missing:
         print("Fix the listed staged entries before commit/push. Nothing was uploaded.")
         return 1

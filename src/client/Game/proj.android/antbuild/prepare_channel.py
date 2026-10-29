@@ -7,8 +7,11 @@ from pathlib import Path
 import re
 import shutil
 import struct
+import sys
 import xml.etree.ElementTree as ET
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[4] / "tools"))
+from project_paths import project_path
 
 ANDROID_PROJECT = Path(__file__).resolve().parent.parent
 COMMON_SOURCES = (
@@ -93,7 +96,7 @@ def prepare_native_libraries(project):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--project-dir", required=True, type=Path)
-    project = parser.parse_args().project_dir.resolve()
+    project = project_path(parser.parse_args().project_dir).resolve()
     if project != ANDROID_PROJECT and project.parent != ANDROID_PROJECT / "antbuild":
         parser.error("project-dir must be this Android project or one of its Ant channel directories")
     prepare_sources(project)

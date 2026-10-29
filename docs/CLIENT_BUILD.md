@@ -12,11 +12,11 @@
 在仓库根目录 PowerShell 执行：
 
 ```powershell
-$gameRuntime = Join-Path $env:LOCALAPPDATA 'OnePieceServer'
+$gameRuntime = '.\runtime\server'
 Get-Content (Join-Path $gameRuntime 'client-config\deployment.json')
 ```
 
-若安装时指定了其他运行目录，将 `$gameRuntime` 改成实际目录。记下输出值；后续以 `host=192.168.1.100`、`webPort=18081`、`gamePort=25524`、`resourceVersion=1.78.6` 为例，按自己的输出替换。
+若安装时指定了其他运行目录，将 `$gameRuntime` 改成对应路径。下列命令在仓库根目录执行；脚本参数里的相对路径也统一以仓库根目录为基准。记下输出值；后续以 `host=192.168.1.100`、`webPort=18081`、`gamePort=25524`、`resourceVersion=1.78.6` 为例，按自己的输出替换。
 
 ## 2. iOS：云端构建并安装
 
@@ -60,7 +60,7 @@ Get-Content (Join-Path $gameRuntime 'client-config\deployment.json')
 
 ## 3. Android：本机生成 APK
 
-以下使用安智渠道的本地测试登录。这个项目仍是旧 Ant 工程，不能只安装最新 Android Studio 就打包；当前也没有 Android 云构建工作流。
+以下使用安智渠道的本地测试登录。新入口把准备、NDK 编译、Ant 打包串起来；项目仍需要旧工具链，不能只安装最新 Android Studio 就打包。
 
 ### 3.1 准备工具
 
@@ -68,68 +68,40 @@ Get-Content (Join-Path $gameRuntime 'client-config\deployment.json')
 
 | 工具 | 示例目录与要求 |
 |---|---|
-| Apache Ant | `D:\Tools\apache-ant`，使用兼容 JDK 8 的版本 |
-| 旧 Android SDK | `D:\Tools\AndroidLegacySDK`，须含 `tools/ant/build.xml`、`platforms/android-17/android.jar` 及旧 Build Tools 的 aapt/dx |
-| Android NDK r8e | `D:\Tools\android-ndk-r8e`；当前依赖 gnustl 和 armeabi，不能随意换成新版 NDK |
-| Cygwin | 提供 Bash、make、coreutils、sed、unzip |
+| Apache Ant | 解压到项目 `tools/apache-ant`，应包含 `bin/ant.bat`，使用兼容 JDK 8 的版本 |
+| 旧 Android SDK | 解压到 `tools/android-sdk`，须含 `tools/ant/build.xml`、`platforms/android-17/android.jar` 及旧 Build Tools 的 aapt/dx |
+| Windows 版 Android NDK r8e | 解压到 `tools/android-ndk-r8e`，应包含 `ndk-build.cmd`；依赖 gnustl 和 armeabi，不能随意换成新版 NDK |
 
-有配套的旧 ADT/SDK 工具包可以复用；工具下载及版本说明见 [Android 环境参考](reference/CLIENT_BUILD.md#3-android准备旧构建环境)。
+解压后应直接符合表中的目录结构，避免多套一层版本目录。工具不随仓库上传，换电脑需要重新放入或自行复制 `tools`。新入口使用 Windows `ndk-build.cmd`，不要求额外安装 Cygwin；该方式来自 [NDK 官方历史说明](https://android.googlesource.com/platform/ndk/+/refs/heads/tools_r20/docs/CHANGES.html)。
 
-### 3.2 准备源码和资源
+### 3.2 一键生成 APK
 
-在仓库根目录的同一个 PowerShell 中执行，工具路径按实际位置修改：
-
-```powershell
-$repo = (Get-Location).Path
-$gameRuntime = Join-Path $env:LOCALAPPDATA 'OnePieceServer'
-$python = Join-Path $repo 'deployment\.bootstrap\python\python.exe'
-$env:JAVA_HOME = Join-Path $gameRuntime 'runtimes\java'
-$env:ANT_HOME = 'D:\Tools\apache-ant'
-$env:ANDROID_HOME = 'D:\Tools\AndroidLegacySDK'
-$env:PATH = "$env:JAVA_HOME\bin;$env:ANT_HOME\bin;$env:ANDROID_HOME\tools;$env:PATH"
-& $python .\deployment\prepare_android.py --sdk $env:ANDROID_HOME --skip-native-sync
-```
-
-安装时用了自定义运行目录，则同步修改 `$gameRuntime`。首次部署已为本仓库生成服务器地址和本地登录配置，不必再手动复制配置文件。
-
-### 3.3 编译游戏原生库
-
-打开 **Cygwin Bash**，执行：
-
-```bash
-cd /cygdrive/d/test/NRB-Test-game/src/client/Game/proj.android
-export NDK_ROOT=/cygdrive/d/Tools/android-ndk-r8e
-export CLIENT_ROOT="$(cd ../.. && pwd)"
-export NDK_MODULE_PATH="$CLIENT_ROOT:$CLIENT_ROOT/cocos2dx/platform/third_party/android/prebuilt"
-"$NDK_ROOT/ndk-build" -C "$PWD" -j2
-```
-
-源码或 NDK 不在示例目录时改成对应的 Cygwin 路径。此步必须成功，并生成 `libs/armeabi/libDreamOnePiece.so` 和 `libs/armeabi-v7a/libDreamOnePiece.so`，再继续下一步。
-
-### 3.4 同步并生成 APK
-
-回到 **3.2 的同一个 PowerShell 窗口**：
+双击 **`deployment/build-android.cmd`**，或在仓库根目录执行：
 
 ```powershell
-Set-Location $repo
-& $python .\deployment\prepare_android.py --sdk $env:ANDROID_HOME
-Set-Location .\src\client\Game\proj.android\antbuild\anzhi
-$pythonForAnt = $python.Replace('\', '/')
-ant "-Ddeployment.python=$pythonForAnt" debug
+.\deployment\build-android.cmd
 ```
 
-每一步都成功后再继续。生成的 APK 位于：
+它会读取 `runtime/server/client-config/deployment.json`，生成当前电脑对应的配置，编译原生库，再生成 APK。成功后的统一输出为：
 
 ```text
-src/client/Game/proj.android/antbuild/anzhi/bin/DreamOnePiece-debug.apk
+outputs/android/DreamOnePiece-debug.apk
 ```
 
-以 Ant 实际输出文件名为准。Debug APK 已带调试签名，可传到支持 ARM32 的 Android 手机安装；新版系统可能限制这类旧 App，纯 ARM64 设备无法运行当前包。测试时让手机与服务端电脑处于可互访的局域网，当前 Android 不能直接使用 iOS 的 WSS 临时域名入口。
+打包时会自动选择空闲盘符给旧工具使用，正常退出时释放属于本次构建的映射；源码和产物始终留在项目原目录。不要在构建中途移动项目。
+
+工具或运行目录不同，可传入相对路径，不需要改脚本：
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Build-Android.ps1 -InstallDir runtime/server-2 -AndroidSdk tools/legacy-sdk -AndroidNdk tools/ndk-r8e -AntDir tools/ant
+```
+
+Debug APK 已带调试签名，可传到支持 ARM32 的 Android 手机安装；新版系统可能限制这类旧 App，纯 ARM64 设备无法运行当前包。测试时让手机与服务端电脑处于可互访的局域网，当前 Android 不能直接使用 iOS 的 WSS 临时域名入口。
 
 ## 4. 后续更新
 
-代码有改动时，Android 重新执行 3.2～3.4；iOS 将改动推送到 GitHub 后重新运行工作流。换开服电脑按 README 重新部署；原电脑 IP 变化时先停服，再用新的 `-PublicHost` 执行部署命令，之后使用对应参数打包。
+代码有改动时，Android 重新执行打包入口；iOS 将改动推送到 GitHub 后重新运行工作流。换开服电脑按 README 重新部署；原电脑 IP 变化时先停服，再用新的 `-PublicHost` 执行部署命令，之后使用对应参数打包。
 
 发布版签名、Mac 本地构建和更多排查步骤放在 [详细参考](reference/CLIENT_BUILD.md)，个人测试不必先阅读。
 
-**当前这些打包步骤尚未完成新环境实跑；iOS 尚未通过实际 Xcode 构建和 iPhone 验证。本次文档整理没有执行任何构建或测试。**
+**新入口、临时盘符映射和中文/空格路径尚未完成新环境实跑；iOS 尚未通过实际 Xcode 构建和 iPhone 验证。本次按项目要求只修改代码和做静态检查，没有执行部署、构建或测试。**

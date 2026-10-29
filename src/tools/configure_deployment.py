@@ -7,10 +7,14 @@ import json
 from pathlib import Path
 import re
 import shutil
+import sys
 import xml.etree.ElementTree as ET
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from project_paths import project_path, project_root
 
-SOURCE = Path(__file__).resolve().parent.parent
+
+SOURCE = project_root() / "src"
 ANDROID = SOURCE / "client/Game/proj.android"
 RESOURCE_SOURCE = SOURCE / "server/ResourcesAndroid_Encrypt"
 CRC_NIBBLES = (0x0000, 0xCC01, 0xD801, 0x1400, 0xF001, 0x3C00, 0x2800, 0xE401,
@@ -34,9 +38,9 @@ def write_json(path, value):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--host", required=True, help="Host reachable from the client; emulator: 10.0.2.2")
-    parser.add_argument("--web-port", type=int, default=80)
+    parser.add_argument("--web-port", type=int, default=18081)
     parser.add_argument("--game-port", type=int, default=25524)
-    parser.add_argument("--web-root", type=Path, required=True, help="New dedicated public web directory")
+    parser.add_argument("--web-root", type=Path, default=Path("runtime/server/web"), help="Project-relative public web directory")
     parser.add_argument("--channel", default="anzhi", help="Ant channel directory name, or all")
     parser.add_argument("--platform", choices=("android", "ios"), default="android")
     parser.add_argument("--ios-overlay", type=Path, help="iOS asset overlay output directory")
@@ -44,13 +48,17 @@ def main():
     parser.add_argument("--resource-version", default="1.78.6", help="Bump when replacing cached APK assets")
     parser.add_argument("--server-dir", type=Path, help="Optional game server directory to configure")
     args = parser.parse_args()
+    if args.server_dir:
+        args.server_dir = project_path(args.server_dir)
+    if args.ios_overlay:
+        args.ios_overlay = project_path(args.ios_overlay)
     if not re.fullmatch(r"[A-Za-z0-9_.-]+", args.host):
         parser.error("host must be an IPv4 address or DNS hostname, without URL/port/path")
     if not (1 <= args.web_port <= 65535 and 1 <= args.game_port <= 65535):
         parser.error("ports must be between 1 and 65535")
     if not re.fullmatch(r"\d+\.\d+\.\d+", args.resource_version):
         parser.error("resource-version must have three numeric components")
-    root = args.web_root.resolve()
+    root = project_path(args.web_root).resolve()
     marker = root / ".onepiece-deployment.json"
     if root == RESOURCE_SOURCE.resolve() or RESOURCE_SOURCE.resolve() in root.parents:
         parser.error("web-root must not be inside the source resource directory")

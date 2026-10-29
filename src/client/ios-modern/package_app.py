@@ -4,6 +4,10 @@ from pathlib import Path
 import plistlib
 import tarfile
 import zipfile
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "tools"))
+from project_paths import project_path
 
 
 def main():
@@ -11,7 +15,7 @@ def main():
     parser.add_argument("--app", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
-    app = args.app.resolve()
+    app = project_path(args.app).resolve()
     if not app.is_dir() or app.suffix != ".app" or not (app / "Info.plist").is_file():
         parser.error("--app must be a compiled .app bundle with Info.plist")
     with (app / "Info.plist").open("rb") as stream:
@@ -19,7 +23,7 @@ def main():
     executable = info.get("CFBundleExecutable", "")
     if not executable or Path(executable).name != executable or not (app / executable).is_file():
         parser.error("app bundle executable is missing")
-    output = args.output.resolve()
+    output = project_path(args.output).resolve()
     if output == app or output.is_relative_to(app):
         parser.error("output must be outside the app bundle")
     output.mkdir(parents=True, exist_ok=True)

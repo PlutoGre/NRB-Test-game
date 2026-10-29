@@ -14,10 +14,14 @@ import secrets
 import selectors
 import socket
 import struct
+import sys
 import threading
 import time
 from urllib.parse import unquote, urlsplit
 import xml.etree.ElementTree as ET
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src/tools"))
+from project_paths import DEFAULT_INSTALL_DIR, project_path
 
 PREFIX = "/gameserver/dzm/1.8/"
 PROTOCOL = "nrb-tcp-v1"
@@ -345,10 +349,11 @@ class Handler(BaseHTTPRequestHandler):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--install-dir", required=True, type=Path)
+    parser.add_argument("--install-dir", type=Path, default=DEFAULT_INSTALL_DIR)
     parser.add_argument("--port", type=int, default=18082)
     parser.add_argument("--connections", type=int, default=8)
     args = parser.parse_args()
+    args.install_dir = project_path(args.install_dir)
     if not 1024 <= args.port <= 65535 or not 1 <= args.connections <= 16:
         parser.error("Use port 1024..65535 and 1..16 game connections")
     configuration(args.install_dir)

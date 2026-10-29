@@ -1,6 +1,10 @@
 iOS 本地客户端适配与 Mac 构建交接
 ================================
 
+路径补充：默认服务端在项目 runtime/server，Android 入口为 deployment/build-android.cmd。
+所有入口脚本的相对路径参数均以项目根目录为准，不需要修改固定盘符。
+下面的旧 IP 和独立资源服务命令是历史交接记录；日常操作按 README.md 和 docs/CLIENT_BUILD.md。
+
 外网适配补充（2026-10-29）
 已加入启动连接页、HTTPS 资源重映射和 NSURLSessionWebSocketTask 游戏连接。
 Windows 通过 deployment/Start-External.ps1 发布 Quick Tunnel，iPhone 填写域名和邀请码。

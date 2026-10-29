@@ -3,8 +3,11 @@ import argparse
 import hashlib
 from pathlib import Path
 import zipfile
+import sys
 
 ROOT = Path(__file__).resolve().parent
+sys.path.insert(0, str(ROOT.parents[1] / "tools"))
+from project_paths import project_path
 
 
 def main():
@@ -14,7 +17,7 @@ def main():
     generated = ROOT / "generated"
     if not (generated / "client/Game/Classes/GamePrecedure.cpp").is_file():
         parser.error("run prepare.py before packaging")
-    output = args.output.resolve()
+    output = project_path(args.output).resolve()
     output.parent.mkdir(parents=True, exist_ok=True)
     count = 0
     with zipfile.ZipFile(output, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=6) as archive:
@@ -32,9 +35,10 @@ def main():
                 continue
             archive.write(path, "src/client/ios-modern/" + relative.as_posix())
             count += 1
-        script = ROOT.parents[1] / "tools/configure_deployment.py"
-        archive.write(script, "src/tools/configure_deployment.py")
-        count += 1
+        for name in ("configure_deployment.py", "project_paths.py"):
+            script = ROOT.parents[1] / "tools" / name
+            archive.write(script, "src/tools/" + name)
+            count += 1
     checksum = hashlib.sha256(output.read_bytes()).hexdigest()
     output.with_suffix(output.suffix + ".sha256").write_text(checksum + "  " + output.name + "\n", encoding="ascii")
     print("Portable source ZIP:", output)

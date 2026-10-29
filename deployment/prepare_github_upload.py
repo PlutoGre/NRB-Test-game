@@ -9,6 +9,8 @@ import sys
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parent
+sys.path.insert(0, str(REPO / "src/tools"))
+from project_paths import project_path
 
 
 def main():
@@ -19,7 +21,7 @@ def main():
     parser.add_argument("--resource-version", default="1.78.6")
     parser.add_argument("--output", type=Path, default=HERE / "github-upload")
     args = parser.parse_args()
-    output = args.output.resolve()
+    output = project_path(args.output).resolve()
     marker = output / ".onepiece-github-upload"
     if output.exists() and any(output.iterdir()) and not marker.exists():
         parser.error("output must be empty or previously created by this script")

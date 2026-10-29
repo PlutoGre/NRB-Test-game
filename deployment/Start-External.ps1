@@ -1,7 +1,7 @@
 param(
     [ValidateSet('start', 'stop', 'status', 'download', 'rotate-invite')]
     [string]$Action = 'start',
-    [string]$InstallDir = (Join-Path $env:LOCALAPPDATA 'OnePieceServer'),
+    [string]$InstallDir = 'runtime/server',
     [int]$GatewayPort = 18082,
     [ValidateSet('auto', 'http2', 'quic')]
     [string]$TunnelProtocol = 'auto',
@@ -9,6 +9,8 @@ param(
 )
 $ErrorActionPreference = 'Stop'
 try {
+    . (Join-Path $PSScriptRoot 'Project-Paths.ps1')
+    $InstallDir = Resolve-NrbProjectPath $InstallDir
     $python = Join-Path $PSScriptRoot '.bootstrap/python/python.exe'
     if (-not (Test-Path -LiteralPath $python)) {
         throw 'Run Deploy-Server.ps1 first to install the server and portable Python.'

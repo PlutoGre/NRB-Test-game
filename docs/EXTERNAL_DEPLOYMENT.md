@@ -17,7 +17,7 @@ iPhone HTTPS URL: https://随机名称.trycloudflare.com
 Invitation (keep private): 本机生成的邀请码
 ```
 
-若开服时指定了运行目录，命令也要加相同的 `-InstallDir`，例如 `-InstallDir D:\OnePieceServer`。
+默认自动使用项目内的 `runtime/server`。若开服时指定了其他运行目录，命令也要加相同的 `-InstallDir`，例如 `-InstallDir runtime/server-2`；相对路径均以项目根目录为基准。
 
 ## 2. 手机连接
 

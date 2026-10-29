@@ -9,6 +9,7 @@
 /OnePieceServer/
 /runtime/
 /outputs/
+/tools/
 
 # Generated clients, native intermediates and IDE caches. Keep library archives
 # and shared libraries outside these build directories: legacy targets need them.

@@ -5,8 +5,8 @@
 
 1. 生成配套地址与资源配置（Python 3）
 
-官方模拟器连接本机示例，在仓库根目录执行：
-python src/tools/configure_deployment.py --host 10.0.2.2 --web-port 18080 --game-port 25524 --channel anzhi --local-login --web-root D:/test/onepiece-web --server-dir src/server/Code_Server/server
+已部署服务端的局域网配置示例：先停服，在仓库根目录执行，IP 换成电脑实际地址：
+python src/tools/configure_deployment.py --host 192.168.1.100 --web-port 18081 --game-port 25524 --channel anzhi --local-login --web-root runtime/server/web --server-dir runtime/server/server
 
 web-root 必须是独立空目录，或该工具之前生成的目录。不要指定原有其他网站目录。
 真机连接同一局域网电脑时，将 host 改为电脑的局域网 IP；手机中的 127.0.0.1 是手机自己。
@@ -22,7 +22,7 @@ web-root 必须是独立空目录，或该工具之前生成的目录。不要�
 - 指定 server-dir 时同步游戏端口与 ResourceVersion，保留原 config.xml 的备份；数据库账号和端口仍需自行配置。
 
 将 Web 服务的站点根目录指向生成的 web-root。servers_list.php 和 update.php 是 JSON 文本，静态 HTTP 服务也可提供。
-例如：python -m http.server 18080 --bind 0.0.0.0 --directory D:/test/onepiece-web
+例如，在项目根目录执行：python -m http.server 18081 --bind 0.0.0.0 --directory runtime/server/web
 数据库与 Java 游戏服按原说明启动；游戏 TCP 端口、Web 端口都必须能从客户端访问。
 这些命令为部署操作说明，本次修复没有自动执行构建、编译、测试或 lint。
 
@@ -35,7 +35,7 @@ web-root 必须是独立空目录，或该工具之前生成的目录。不要�
 
 NDK 的 Application.mk 保留 armeabi、armeabi-v7a 两种 32 位 ARM 目标。
 若 v7a 目录只有 SDK 库，公共步骤会补入通用 ARM 游戏库；其他缺失或错误架构会停止打包并指出缺失文件。
-不会把 ARM 库复制到 x86 或 ARM64 目录。当前项目仍需支持 ARM32 的设备/模拟器；这次修改不包含 ARM64/iOS 迁移。
+不会把 ARM 库复制到 x86 或 ARM64 目录。Android 仍需支持 ARM32 的设备/模拟器；iOS 独立入口及新的一键打包流程见仓库 docs/CLIENT_BUILD.md。
 
 已有 Eclipse 渠道工程或绕过 Ant 的打包方式，需要先执行：
 python src/client/Game/proj.android/antbuild/prepare_channel.py --project-dir src/client/Game/proj.android/antbuild/anzhi

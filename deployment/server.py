@@ -27,6 +27,10 @@ import zipfile
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parent
+sys.path.insert(0, str(HERE))
+sys.path.insert(0, str(REPO / "src/tools"))
+from project_paths import DEFAULT_INSTALL_DIR, project_path
+from runtime_paths import ensure_alias, release_alias
 MANIFEST = json.loads((HERE / "runtime-manifest.json").read_text(encoding="utf-8"))
 CACHE = HERE / "download-cache"
 STATE_NAME = ".onepiece-server.json"
@@ -119,7 +123,7 @@ def port_open(port):
 def operation_lock(root):
     """Reject concurrent management commands for the same runtime directory."""
     import msvcrt
-    identity = hashlib.sha256(os.path.normcase(str(root.resolve())).encode("utf-8")).hexdigest()[:24]
+    identity = hashlib.sha256(os.path.normcase(str(project_path(root).resolve())).encode("utf-8")).hexdigest()[:24]
     path = Path(tempfile.gettempdir()) / ("onepiece-deployment-" + identity + ".lock")
     with path.open("a+b") as stream:
         if stream.seek(0, os.SEEK_END) == 0:
@@ -139,7 +143,7 @@ def operation_lock(root):
 
 class Deployment:
     def __init__(self, root):
-        self.root = root.resolve()
+        self.root = project_path(root).resolve()
         self.marker = self.root / STATE_NAME
         self.state = read_json(self.marker) if self.marker.is_file() else None
         if self.state and self.state.get("format") != 1:
@@ -156,6 +160,14 @@ class Deployment:
         if not self.state or not self.credentials:
             raise RuntimeError("No deployment at this location. Run install first.")
 
+    def runtime_directory(self):
+        previous = self.state.get("pathAlias")
+        record = ensure_alias(self.root, previous, any(self.owned(name) for name in ("database", "game")))
+        if record != previous:
+            self.state["pathAlias"] = record
+            self.save()
+        return Path(record["device"] + "/")
+
     def log(self, text):
         if self.credentials:
             for value in self.credentials.values():
@@ -169,6 +181,7 @@ class Deployment:
         print(label, flush=True)
         result = subprocess.run([str(value) for value in command], input=input_data,
                                 stdin=input_stream,
+                                cwd=self.runtime_directory(),
                                 stdout=output if output is not None else subprocess.PIPE,
                                 stderr=subprocess.PIPE, timeout=timeout, creationflags=subprocess.CREATE_NO_WINDOW)
         # Command arguments may contain the initial root password; do not log the command line.
@@ -243,17 +256,23 @@ class Deployment:
         return target
 
     def database_command(self, tool="mariadb.exe"):
-        return [self.root / "runtimes/mariadb/bin" / tool,
-                "--defaults-file=" + str(self.root / "private/db-client.ini")]
+        directory = self.runtime_directory()
+        return [directory / "runtimes/mariadb/bin" / tool,
+                "--defaults-file=" + str(directory / "private/db-client.ini")]
 
     def ensure_db(self):
-        self.launch("database", [self.root / "runtimes/mariadb/bin/mariadbd.exe",
-                                 "--defaults-file=" + str(self.root / "dbdata/my.ini"), "--console"],
-                    self.root, self.state["dbPort"])
+        directory = self.runtime_directory()
+        if not self.owned("database"):
+            # Paths are derived again after a stopped checkout/runtime is moved.
+            self.write_database_options()
+        self.launch("database", [directory / "runtimes/mariadb/bin/mariadbd.exe",
+                                 "--defaults-file=" + str(directory / "dbdata/my.ini"), "--console"],
+                    directory, self.state["dbPort"])
         deadline = time.monotonic() + 45
         while time.monotonic() < deadline:
             result = subprocess.run([str(x) for x in self.database_command()] + ["--connect-timeout=2", "-e", "SELECT 1"],
                                     stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                                    cwd=directory,
                                     timeout=5, creationflags=subprocess.CREATE_NO_WINDOW)
             if result.returncode == 0:
                 return
@@ -261,6 +280,24 @@ class Deployment:
                 break
             time.sleep(1)
         raise RuntimeError("Database did not accept configured credentials; inspect logs/database.stderr.log")
+
+    def database_settings(self):
+        directory = self.runtime_directory()
+        return ("[mysqld]\n"
+                    + 'basedir="' + (directory / "runtimes/mariadb").as_posix() + '"\n'
+                    + 'datadir="' + (directory / "dbdata").as_posix() + '"\n'
+                    + "port=" + str(self.state["dbPort"]) + "\nbind-address=127.0.0.1\n"
+                    + "character-set-server=utf8\ncollation-server=utf8_bin\n"
+                    + "innodb-buffer-pool-size=128M\nmax-connections=80\nsql-mode=\n")
+
+    def write_database_options(self):
+        if not (self.root / "dbdata/mysql").is_dir() or not self.credentials:
+            raise RuntimeError("Database is not initialized; complete installation first")
+        (self.root / "dbdata/my.ini").write_text(self.database_settings(), encoding="utf-8")
+        (self.root / "private/db-client.ini").write_text(
+            "[client]\nprotocol=tcp\nhost=127.0.0.1\nport=" + str(self.state["dbPort"])
+            + "\nuser=root\npassword=" + self.credentials["rootPassword"]
+            + "\ndefault-character-set=utf8\n", encoding="utf-8")
 
     def prepare_database(self):
         data = self.root / "dbdata"
@@ -272,26 +309,18 @@ class Deployment:
             self.credentials = {"rootPassword": secrets.token_hex(24), "appPassword": secrets.token_hex(24)}
             write_json(private / "credentials.json", self.credentials)
         root_password = self.credentials["rootPassword"]
-        settings = ("[mysqld]\n"
-                    + 'basedir="' + (self.root / "runtimes/mariadb").as_posix() + '"\n'
-                    + 'datadir="' + data.as_posix() + '"\n'
-                    + "port=" + str(self.state["dbPort"]) + "\nbind-address=127.0.0.1\n"
-                    + "character-set-server=utf8\ncollation-server=utf8_bin\n"
-                    + "innodb-buffer-pool-size=128M\nmax-connections=80\nsql-mode=\n")
         if not (data / "mysql").is_dir():
             if data.exists() and any(data.iterdir()):
                 raise RuntimeError("Partial database initialization detected; inspect it or choose a new installation directory")
             template = private / "db-template.ini"
-            template.write_text(settings, encoding="utf-8")
-            initializer = self.root / "runtimes/mariadb/bin/mariadb-install-db.exe"
+            template.write_text(self.database_settings(), encoding="utf-8")
+            directory = self.runtime_directory()
+            initializer = directory / "runtimes/mariadb/bin/mariadb-install-db.exe"
             if not initializer.exists():
                 initializer = initializer.with_name("mysql_install_db.exe")
-            self.run([initializer, "--datadir=" + str(data), "--port=" + str(self.state["dbPort"]),
-                      "--password=" + root_password, "--config=" + str(template)], "Initialize private database", timeout=240)
-        (data / "my.ini").write_text(settings, encoding="utf-8")
-        (private / "db-client.ini").write_text(
-            "[client]\nprotocol=tcp\nhost=127.0.0.1\nport=" + str(self.state["dbPort"])
-            + "\nuser=root\npassword=" + root_password + "\ndefault-character-set=utf8\n", encoding="utf-8")
+            self.run([initializer, "--datadir=" + str(directory / "dbdata"), "--port=" + str(self.state["dbPort"]),
+                      "--password=" + root_password, "--config=" + str(directory / "private/db-template.ini")],
+                     "Initialize private database", timeout=240)
         self.ensure_db()
         imported = private / "schema-imported.json"
         importing = private / "schema-importing"
@@ -363,12 +392,9 @@ class Deployment:
                    ("host", "webPort", "gamePort", "resourceVersion", "channel")})
 
     def install(self, args):
-        try:
-            str(self.root).encode("ascii")
-        except UnicodeEncodeError:
-            raise RuntimeError("Use an ASCII runtime path, e.g. -InstallDir D:\\OnePieceServer; the source path may contain Chinese")
-        if self.root == REPO or REPO.is_relative_to(self.root) or self.root.is_relative_to(REPO / "src"):
-            raise RuntimeError("Install directory must be a separate runtime directory")
+        if (self.root == REPO or REPO.is_relative_to(self.root)
+                or (self.root.is_relative_to(REPO) and not self.root.is_relative_to(REPO / "runtime"))):
+            raise RuntimeError("Use runtime/server (or runtime/another-name) inside the checkout, or a separate data directory outside it")
         if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.-]*", args.host or "") or args.host in ("localhost", "127.0.0.1", "10.0.2.2"):
             raise RuntimeError("Provide a phone-reachable LAN IPv4 address or DNS hostname")
         ports = (args.web_port, args.game_port, args.db_port)
@@ -414,10 +440,11 @@ class Deployment:
         if not self.state.get("installed"):
             raise RuntimeError("Installation is incomplete; inspect logs and re-run install")
         self.ensure_db()
+        directory = self.runtime_directory()
         self.launch("web", [sys.executable, "-m", "http.server", str(self.state["webPort"]),
                             "--bind", "0.0.0.0", "--directory", self.root / "web"], self.root, self.state["webPort"])
-        self.launch("game", [self.root / "runtimes/java/bin/java.exe", "-Xms64m", "-Xmx512m",
-                             "-Dfile.encoding=UTF-8", "-jar", "DZM.jar"], self.root / "server", self.state["gamePort"])
+        self.launch("game", [directory / "runtimes/java/bin/java.exe", "-Xms64m", "-Xmx512m",
+                             "-Dfile.encoding=UTF-8", "-jar", "DZM.jar"], directory / "server", self.state["gamePort"])
         self.status()
 
     def terminate_owned(self, name):
@@ -463,10 +490,16 @@ class Deployment:
                 raise RuntimeError("Database is still running; no forced database termination was attempted")
             self.state["processes"].pop("database", None)
             self.save()
+        if self.state.get("pathAlias"):
+            release_alias(self.root, self.state["pathAlias"])
+            self.state.pop("pathAlias")
+            self.save()
         print("Owned deployment stopped. Player data has been retained.")
 
     def status(self):
         self.require_installed()
+        if self.state.get("pathAlias"):
+            print("Runtime drive:", self.state["pathAlias"]["device"], "->", self.root)
         for name, port in (("database", self.state["dbPort"]), ("web", self.state["webPort"]), ("game", self.state["gamePort"])):
             owned = self.owned(name)
             print(name + ":", "owned/running" if owned else "not running", "port", port,
@@ -510,7 +543,7 @@ class Deployment:
         self.require_installed()
         if not args.confirm_restore or not args.restore_file:
             raise RuntimeError("Restore replaces game data. Supply -RestoreFile and -ConfirmRestore explicitly.")
-        source = Path(args.restore_file).resolve()
+        source = project_path(args.restore_file).resolve()
         if not source.is_file() or not source.name.endswith(".sql.gz"):
             raise RuntimeError("Use a .sql.gz backup created by this deployment tool")
         checksum = source.with_suffix(source.suffix + ".sha256")
@@ -539,7 +572,7 @@ class Deployment:
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("action", choices=("install", "start", "stop", "status", "backup", "restore", "download"))
-    parser.add_argument("--install-dir", type=Path, required=True)
+    parser.add_argument("--install-dir", type=Path, default=DEFAULT_INSTALL_DIR)
     parser.add_argument("--host")
     parser.add_argument("--web-port", type=int, default=18081)
     parser.add_argument("--game-port", type=int, default=25524)
@@ -550,6 +583,7 @@ def main():
     parser.add_argument("--restore-file", type=Path)
     parser.add_argument("--confirm-restore", action="store_true")
     args = parser.parse_args()
+    args.install_dir = project_path(args.install_dir)
     if os.name != "nt":
         parser.error("This server deployment is for Windows x64")
     if args.action == "download":

@@ -11,6 +11,8 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parent
+sys.path.insert(0, str(ROOT.parents[1] / "tools"))
+from project_paths import project_path
 
 
 def run(command, log):
@@ -52,11 +54,11 @@ def main():
         parser.error("--sign requires --team-id; configure it in Xcode for a Personal Team")
     if args.action in ("archive", "export") and (args.sdk != "iphoneos" or not args.sign):
         parser.error("archive/export requires --sdk iphoneos --sign --team-id TEAMID")
-    generated = args.generated.resolve()
+    generated = project_path(args.generated).resolve()
     preparation = generated / "preparation.json"
     if not preparation.is_file() or json.loads(preparation.read_text(encoding="utf-8"))["stageOnly"]:
         parser.error("run prepare.py --host PHONE_REACHABLE_HOST first")
-    build = (args.build_dir or generated / ("build-" + args.sdk)).resolve()
+    build = project_path(args.build_dir or generated / ("build-" + args.sdk)).resolve()
     build.mkdir(parents=True, exist_ok=True)
     log = build / "build.log"
     arch = "arm64" if args.sdk == "iphoneos" or platform.machine() == "arm64" else "x86_64"

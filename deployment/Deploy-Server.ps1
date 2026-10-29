@@ -1,7 +1,7 @@
 param(
     [ValidateSet('install', 'start', 'stop', 'status', 'backup', 'restore', 'download')]
     [string]$Action = 'install',
-    [string]$InstallDir = (Join-Path $env:LOCALAPPDATA 'OnePieceServer'),
+    [string]$InstallDir = 'runtime/server',
     [string]$PublicHost = '',
     [int]$WebPort = 18081,
     [int]$GamePort = 25524,
@@ -16,6 +16,9 @@ param(
 )
 $ErrorActionPreference = 'Stop'
 try {
+    . (Join-Path $PSScriptRoot 'Project-Paths.ps1')
+    $InstallDir = Resolve-NrbProjectPath $InstallDir
+    if ($RestoreFile) { $RestoreFile = Resolve-NrbProjectPath $RestoreFile }
     if (-not [Environment]::Is64BitOperatingSystem) { throw '64-bit Windows is required.' }
     if ($OpenFirewall) {
         if ($Action -notin @('install', 'start')) { throw '-OpenFirewall is supported only with install or start.' }
@@ -66,7 +69,7 @@ try {
     if ($LASTEXITCODE -ne 0) { throw "Deployment command failed (exit $LASTEXITCODE)." }
     if ($OpenFirewall) {
         $statePath = Join-Path $InstallDir '.onepiece-server.json'
-        $state = Get-Content -LiteralPath $statePath -Raw | ConvertFrom-Json
+        $state = Get-Content -LiteralPath $statePath -Raw -Encoding UTF8 | ConvertFrom-Json
         $sha = [Security.Cryptography.SHA256]::Create()
         try { $suffix = ([BitConverter]::ToString($sha.ComputeHash([Text.Encoding]::UTF8.GetBytes([IO.Path]::GetFullPath($InstallDir))))).Replace('-', '').Substring(0, 12) }
         finally { $sha.Dispose() }

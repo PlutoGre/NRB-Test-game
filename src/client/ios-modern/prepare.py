@@ -13,6 +13,8 @@ import zlib
 
 ROOT = Path(__file__).resolve().parent
 SOURCE = ROOT.parents[1]
+sys.path.insert(0, str(SOURCE / "tools"))
+from project_paths import project_path
 ASSETS = SOURCE / "server/ResourcesAndroid_Encrypt"
 EXCLUDED = {".php", ".html", ".js", ".xls", ".xlsx", ".doc", ".docx", ".sql", ".pem", ".zip"}
 ARCHIVES = {
@@ -60,7 +62,7 @@ def main():
     args = parser.parse_args()
     if not args.stage_only and not args.host:
         parser.error("--host is required unless --stage-only is selected")
-    output = args.output.resolve()
+    output = project_path(args.output).resolve()
     # Refuse to mix generated artifacts with unrelated user files.
     marker = output / ".onepiece-ios-generated"
     if output.exists() and any(output.iterdir()) and not marker.is_file():
@@ -92,14 +94,14 @@ def main():
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(path, destination)
         count += 1
-    web_root = (args.web_root or output / "web").resolve()
+    web_root = project_path(args.web_root or output / "web").resolve()
     if not args.stage_only:
         command = [sys.executable, str(SOURCE / "tools/configure_deployment.py"),
                    "--platform", "ios", "--ios-overlay", str(assets), "--host", args.host,
                    "--web-port", str(args.web_port), "--game-port", str(args.game_port),
                    "--resource-version", args.resource_version, "--web-root", str(web_root)]
         if args.server_dir:
-            command += ["--server-dir", str(args.server_dir.resolve())]
+            command += ["--server-dir", str(project_path(args.server_dir).resolve())]
         subprocess.run(command, check=True)
     else:
         (assets / "version_ios_local.cfg").unlink(missing_ok=True)

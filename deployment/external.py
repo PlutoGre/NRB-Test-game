@@ -96,11 +96,12 @@ def start(deployment, args):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("action", choices=("start", "stop", "status", "download", "rotate-invite"))
-    parser.add_argument("--install-dir", required=True, type=Path)
+    parser.add_argument("--install-dir", type=Path, default=server.DEFAULT_INSTALL_DIR)
     parser.add_argument("--port", type=int, default=18082)
     parser.add_argument("--protocol", choices=("auto", "http2", "quic"), default="auto")
     parser.add_argument("--offline", action="store_true")
     args = parser.parse_args()
+    args.install_dir = server.project_path(args.install_dir)
     if os.name != "nt" or not 1024 <= args.port <= 65535:
         parser.error("Windows x64 and a gateway port in 1024..65535 are required")
     if args.action == "download":
