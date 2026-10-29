@@ -19,6 +19,11 @@ try {
     . (Join-Path $PSScriptRoot 'Project-Paths.ps1')
     $InstallDir = Resolve-NrbProjectPath $InstallDir
     if ($RestoreFile) { $RestoreFile = Resolve-NrbProjectPath $RestoreFile }
+    # The root Start shortcut also handles a fresh clone. Existing installations
+    # always use start, preserving their generated settings and player database.
+    if ($Action -eq 'start' -and -not (Test-Path -LiteralPath (Join-Path $InstallDir '.onepiece-server.json'))) {
+        $Action = 'install'
+    }
     if (-not [Environment]::Is64BitOperatingSystem) { throw '64-bit Windows is required.' }
     if ($OpenFirewall) {
         if ($Action -notin @('install', 'start')) { throw '-OpenFirewall is supported only with install or start.' }

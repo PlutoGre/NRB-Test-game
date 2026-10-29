@@ -39,6 +39,6 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Start-External.
 powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Start-External.ps1 -Action stop
 ```
 
-完整关闭服务端仍用 README 中的 `Deploy-Server.ps1 -Action stop`，会同时关闭该部署的网关和隧道。
+完整关闭服务端可双击项目根目录的 `停止服务.cmd`，会同时关闭该部署的网关和隧道。
 
 无法连接时先确认开服成功，再查看运行目录 `logs` 下的 `gateway`、`tunnel` 日志。原理、邀请码更换及更多排查见 [外网参考说明](reference/EXTERNAL_DEPLOYMENT.md)。此链路尚未实际联调验证。

@@ -17,13 +17,13 @@ Set-Location .\NRB-Test-game
 
 ## 2. 一键部署服务端
 
-双击仓库里的 **`deployment/server.cmd`**，或在仓库根目录运行：
+双击项目根目录的 **`启动服务.cmd`**，或在仓库根目录运行：
 
 ```powershell
-.\deployment\server.cmd
+.\启动服务.cmd
 ```
 
-首次会下载运行时、初始化数据库并启动游戏服；再次用相同配置运行会启动已有部署，保留玩家数据。
+首次会下载运行时、初始化数据库并启动游戏服；已经部署过则直接启动已有实例，保留配置和玩家数据。`deployment/server.cmd` 保留为手动部署入口。
 
 首次安装优先使用资源 `18081`、游戏 `25524`、数据库 `13306`；被占用时自动选空闲端口，不会停止原有服务。选定端口写入部署记录，后续一键启动会沿用，不会每次改变。显式传入的端口保持固定，冲突时仍会报错。
 
@@ -53,12 +53,17 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Deploy-Server.p
 
 ## 3. 日常启动和关闭
 
-以下使用默认运行目录，在仓库根目录执行；也可从其他目录通过脚本完整路径调用，脚本会自行定位所属项目：
+直接双击项目根目录的两个文件即可，启动和停止都使用本项目的 `runtime/server`：
+
+| 文件 | 作用 |
+|---|---|
+| `启动服务.cmd` | 首次自动部署，以后启动已有服务；重复点击不会多开同一实例 |
+| `停止服务.cmd` | 停止当前实例的游戏服、资源服务、数据库及外网入口，保留玩家数据 |
+
+窗口显示“请按任意键继续”后可以关闭；启动的服务在后台运行，关闭启动窗口不会停服。查看状态仍可在项目根目录执行：
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Deploy-Server.ps1 -Action start
 powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Deploy-Server.ps1 -Action status
-powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Deploy-Server.ps1 -Action stop
 ```
 
 默认是局域网连接。iPhone 如需在外地或用移动流量访问，安装新客户端后按 [外网接入简明步骤](docs/EXTERNAL_DEPLOYMENT.md) 操作；Android 当前仍使用直接 TCP 连接。
