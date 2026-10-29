@@ -25,6 +25,8 @@ Set-Location .\NRB-Test-game
 
 首次会下载运行时、初始化数据库并启动游戏服；再次用相同配置运行会启动已有部署，保留玩家数据。
 
+首次安装优先使用资源 `18081`、游戏 `25524`、数据库 `13306`；被占用时自动选空闲端口，不会停止原有服务。选定端口写入部署记录，后续一键启动会沿用，不会每次改变。显式传入的端口保持固定，冲突时仍会报错。
+
 默认运行目录为项目内的 `runtime/server`，数据库、日志、备份和资源都放在这里。安装完成后，在 PowerShell 查看客户端打包需要的参数：
 
 ```powershell
@@ -39,7 +41,7 @@ Get-Content .\runtime\server\client-config\deployment.json
 |---|---|
 | 多网卡，无法自动选 IP | 用下面的命令显式指定本机局域网 IP |
 | 需指定另一套运行目录 | 同一命令加 `-InstallDir runtime/server-2`；后续管理命令也加相同参数 |
-| 端口占用 | 同一命令加 `-WebPort 18091 -GamePort 25534 -DatabasePort 13316` |
+| 端口占用 | 首次未指定端口时会自动避开；已有部署或指定端口冲突时，停服后用 `-WebPort 18091 -GamePort 25534 -DatabasePort 13316` 调整 |
 | 手机在同一 Wi-Fi 下仍无法连接 | 确认电脑和手机可互访；管理员 PowerShell 中执行同一命令并加 `-OpenFirewall` |
 | 下载或进程启动失败 | 查看运行目录 `logs`；缺少 VC++ DLL 时安装微软对应的 x64 运行库 |
 

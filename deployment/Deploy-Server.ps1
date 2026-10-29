@@ -3,9 +3,9 @@ param(
     [string]$Action = 'install',
     [string]$InstallDir = 'runtime/server',
     [string]$PublicHost = '',
-    [int]$WebPort = 18081,
-    [int]$GamePort = 25524,
-    [int]$DatabasePort = 13306,
+    [Nullable[int]]$WebPort = $null,
+    [Nullable[int]]$GamePort = $null,
+    [Nullable[int]]$DatabasePort = $null,
     [string]$ResourceVersion = '1.78.6',
     [ValidateSet('anzhi', 'all')]
     [string]$Channel = 'anzhi',
@@ -58,9 +58,11 @@ try {
     $env:PYTHONIOENCODING = 'utf-8'
     $deployArgs = @((Join-Path $PSScriptRoot 'server.py'), $Action, '--install-dir', $InstallDir)
     if ($Action -eq 'install') {
-        $deployArgs += @('--host', $PublicHost, '--web-port', [string]$WebPort,
-            '--game-port', [string]$GamePort, '--db-port', [string]$DatabasePort,
-            '--resource-version', $ResourceVersion, '--channel', $Channel)
+        $deployArgs += @('--host', $PublicHost, '--resource-version', $ResourceVersion, '--channel', $Channel)
+        # Omitted ports let Python reuse saved values or select free ports on first install.
+        if ($null -ne $WebPort) { $deployArgs += @('--web-port', [string]$WebPort) }
+        if ($null -ne $GamePort) { $deployArgs += @('--game-port', [string]$GamePort) }
+        if ($null -ne $DatabasePort) { $deployArgs += @('--db-port', [string]$DatabasePort) }
     }
     if ($Offline) { $deployArgs += '--offline' }
     if ($RestoreFile) { $deployArgs += @('--restore-file', $RestoreFile) }

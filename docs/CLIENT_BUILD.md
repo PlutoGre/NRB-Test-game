@@ -18,6 +18,8 @@ Get-Content (Join-Path $gameRuntime 'client-config\deployment.json')
 
 若安装时指定了其他运行目录，将 `$gameRuntime` 改成对应路径。下列命令在仓库根目录执行；脚本参数里的相对路径也统一以仓库根目录为基准。记下输出值；后续以 `host=192.168.1.100`、`webPort=18081`、`gamePort=25524`、`resourceVersion=1.78.6` 为例，按自己的输出替换。
 
+首次部署会避开已占用的端口，实际端口可能与示例不同，务必以 `deployment.json` 为准。新旧服务并存时，旧安装包仍使用旧配置；连接新部署需使用对应参数重新打包。
+
 ## 2. iOS：云端构建并安装
 
 ### 2.1 生成 IPA

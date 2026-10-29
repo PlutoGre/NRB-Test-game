@@ -7,6 +7,7 @@ from contextlib import contextmanager
 import ctypes
 from ctypes import wintypes
 from datetime import datetime
+import errno
 import gzip
 import hashlib
 import json
@@ -117,6 +118,36 @@ def port_open(port):
             return True
     except OSError:
         return False
+
+
+def port_available(port):
+    """Check wildcard listeners too; connecting to loopback misses LAN-only binds."""
+    families = [(socket.AF_INET, "0.0.0.0")]
+    if socket.has_ipv6:
+        families.append((socket.AF_INET6, "::"))
+    for family, address in families:
+        try:
+            with socket.socket(family, socket.SOCK_STREAM) as listener:
+                if hasattr(socket, "SO_EXCLUSIVEADDRUSE"):
+                    listener.setsockopt(socket.SOL_SOCKET, socket.SO_EXCLUSIVEADDRUSE, 1)
+                if family == socket.AF_INET6:
+                    listener.setsockopt(socket.IPPROTO_IPV6, socket.IPV6_V6ONLY, 1)
+                listener.bind((address, port))
+        except OSError as error:
+            # Python can have IPv6 support while the Windows adapter has it disabled.
+            unsupported = (errno.EAFNOSUPPORT, errno.EPROTONOSUPPORT, errno.EADDRNOTAVAIL, 10047, 10049)
+            if family == socket.AF_INET6 and error.errno in unsupported:
+                continue
+            return False
+    return True
+
+
+def find_available_port(preferred, reserved):
+    for first, last in ((preferred, 65536), (1024, preferred)):
+        for candidate in range(first, last):
+            if candidate not in reserved and port_available(candidate):
+                return candidate
+    raise RuntimeError("No available TCP port found; provide explicit deployment ports")
 
 
 @contextmanager
@@ -391,15 +422,48 @@ class Deployment:
         write_json(configs / "deployment.json", {key: self.state[key] for key in
                    ("host", "webPort", "gamePort", "resourceVersion", "channel")})
 
+    def select_install_ports(self, args):
+        items = (("web_port", "webPort", 18081), ("game_port", "gamePort", 25524),
+                 ("db_port", "dbPort", 13306))
+        selected, automatic = {}, []
+        for argument, field, preferred in items:
+            value = getattr(args, argument)
+            if value is None and self.state:
+                if field not in self.state:
+                    raise RuntimeError("Deployment marker is missing " + field + "; inspect its configuration")
+                value = self.state[field]
+            if value is None:
+                automatic.append((argument, preferred))
+            elif not isinstance(value, int) or not 1024 <= value <= 65535:
+                raise RuntimeError("Deployment ports must be integers in 1024..65535")
+            else:
+                selected[argument] = value
+        if len(set(selected.values())) != len(selected):
+            raise RuntimeError("Use different resource, game and database ports")
+        # Leave the default WebSocket gateway port free when selecting new ports.
+        reserved = set(selected.values()) | {18082}
+        for argument, preferred in automatic:
+            chosen = find_available_port(preferred, reserved)
+            selected[argument] = chosen
+            reserved.add(chosen)
+            if chosen != preferred:
+                print("Port", preferred, "unavailable; selected", chosen, "for", argument.replace("_", " "), flush=True)
+        for argument, value in selected.items():
+            setattr(args, argument, value)
+        if not self.state:
+            print("Deployment ports: resources", args.web_port, "game", args.game_port,
+                  "database", args.db_port, "(loopback only)", flush=True)
+
     def install(self, args):
         if (self.root == REPO or REPO.is_relative_to(self.root)
                 or (self.root.is_relative_to(REPO) and not self.root.is_relative_to(REPO / "runtime"))):
             raise RuntimeError("Use runtime/server (or runtime/another-name) inside the checkout, or a separate data directory outside it")
         if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.-]*", args.host or "") or args.host in ("localhost", "127.0.0.1", "10.0.2.2"):
             raise RuntimeError("Provide a phone-reachable LAN IPv4 address or DNS hostname")
+        if self.root.exists() and any(self.root.iterdir()) and not self.state:
+            raise RuntimeError("Install directory contains unowned files; choose an empty directory")
+        self.select_install_ports(args)
         ports = (args.web_port, args.game_port, args.db_port)
-        if len(set(ports)) != 3 or any(port < 1024 or port > 65535 for port in ports):
-            raise RuntimeError("Use three different ports in the range 1024..65535")
         if not re.fullmatch(r"\d+\.\d+\.\d+", args.resource_version):
             raise RuntimeError("Resource version must have three numeric components")
         for name in ("src/server/Code_Server/server/DZM.jar", "src/server/dzm.sql", "src/server/Code_Server/dzm_stat.sql",
@@ -413,11 +477,10 @@ class Deployment:
                 self.start()
                 return
             raise RuntimeError("Stop this deployment before changing its configuration")
-        if self.root.exists() and any(self.root.iterdir()) and not self.state:
-            raise RuntimeError("Install directory contains unowned files; choose an empty directory")
         for port in ports:
-            if port_open(port):
-                raise RuntimeError("Port " + str(port) + " is occupied; existing services will not be changed")
+            if not port_available(port):
+                raise RuntimeError("Port " + str(port) + " is occupied or reserved; saved/explicit ports are not reassigned. "
+                                   "Stop the conflicting service, or stop this deployment and specify different ports")
         self.root.mkdir(parents=True, exist_ok=True)
         (self.root / "logs").mkdir(exist_ok=True)
         self.state = dict(self.state or {"format": 1, "processes": {}}, **requested)
@@ -574,9 +637,9 @@ def main():
     parser.add_argument("action", choices=("install", "start", "stop", "status", "backup", "restore", "download"))
     parser.add_argument("--install-dir", type=Path, default=DEFAULT_INSTALL_DIR)
     parser.add_argument("--host")
-    parser.add_argument("--web-port", type=int, default=18081)
-    parser.add_argument("--game-port", type=int, default=25524)
-    parser.add_argument("--db-port", type=int, default=13306)
+    parser.add_argument("--web-port", type=int, help="Use a fixed port; omitted: reuse saved port or choose an available port")
+    parser.add_argument("--game-port", type=int, help="Use a fixed port; omitted: reuse saved port or choose an available port")
+    parser.add_argument("--db-port", type=int, help="Use a fixed loopback port; omitted: reuse saved port or choose an available port")
     parser.add_argument("--resource-version", default="1.78.6")
     parser.add_argument("--channel", choices=("anzhi", "all"), default="anzhi")
     parser.add_argument("--offline", action="store_true")
