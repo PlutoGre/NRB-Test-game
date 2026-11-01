@@ -24,6 +24,7 @@ from project_paths import project_path
 MANIFEST = json.loads((HERE / "android-toolchain.json").read_text(encoding="utf-8"))
 CACHE = HERE / "download-cache"
 STAMP = ".nrb-android-tool.json"
+INSTALLING = ".nrb-android-installing.json"
 
 
 @contextmanager
@@ -129,17 +130,70 @@ def extended_path(path):
     return value
 
 
+def retry_windows_io(operation, action):
+    # 解压后的文件可能被短暂占用；只重试 Windows 的拒绝访问和共享冲突。
+    for attempt in range(6):
+        try:
+            return action()
+        except OSError as error:
+            if getattr(error, "winerror", None) not in (5, 32, 33) or attempt == 5:
+                raise
+            print(operation + ": Windows denied access; retry " + str(attempt + 1) + "/5", flush=True)
+            time.sleep(0.5 * (attempt + 1))
+
+
+def copy_tool_file(source, destination):
+    # copytree 会汇总文件异常，因此在这里保留单个文件的 Windows 错误码并重试。
+    return retry_windows_io("Copy tool file " + str(destination), lambda: shutil.copyfile(source, destination))
+
+
+def publish_tool(source, directory, expected, recovering):
+    if not recovering:
+        if directory.exists():
+            retry_windows_io("Remove empty tool directory", directory.rmdir)
+        try:
+            # Windows 的 rename 拒绝覆盖已有目标，避免替换其他程序创建的目录。
+            retry_windows_io("Move extracted tool", lambda: os.rename(extended_path(source), extended_path(directory)))
+            return
+        except OSError as error:
+            if getattr(error, "winerror", None) not in (5, 32, 33):
+                raise
+            print("Directory move is still blocked; copying the verified tool files instead:", directory, flush=True)
+        # 只有本次成功创建的目录才允许复制，已有的外部工具目录不会被覆盖。
+        retry_windows_io("Create tool directory", directory.mkdir)
+        with (directory / INSTALLING).open("x", encoding="utf-8") as stream:
+            stream.write(json.dumps(expected, indent=2) + "\n")
+    else:
+        print("Resuming an interrupted tool installation:", directory, flush=True)
+    try:
+        # 保留进行中标记直到所有文件复制完毕，避免下次误用半套工具。
+        retry_windows_io("Copy extracted tool", lambda: shutil.copytree(
+            extended_path(source), extended_path(directory), dirs_exist_ok=True,
+            copy_function=copy_tool_file, ignore=shutil.ignore_patterns(STAMP, INSTALLING)))
+        retry_windows_io("Record installed tool", lambda: (directory / STAMP).write_text(
+            json.dumps(expected, indent=2) + "\n", encoding="utf-8"))
+        retry_windows_io("Finish tool installation", (directory / INSTALLING).unlink)
+    except OSError as error:
+        raise RuntimeError("Cannot finish tool installation at " + str(directory)
+                           + ". Close programs using this folder and check its write permissions, then rerun. "
+                           + "The download cache and installation marker were kept for retry. " + str(error)) from error
+
+
 def install(name, directory, item, offline):
     stamp = directory / STAMP
     expected = {key: item[key] for key in ("version", "algorithm", "checksum")}
-    if complete(directory, item):
+    pending = directory / INSTALLING
+    recovering = pending.is_file()
+    if recovering and json.loads(pending.read_text(encoding="utf-8")) != expected:
+        raise RuntimeError("Interrupted tool installation has a different version; choose a fresh directory: " + str(directory))
+    if not recovering and complete(directory, item):
         if stamp.exists() and json.loads(stamp.read_text(encoding="utf-8")) != expected:
             raise RuntimeError("Managed tool version changed; use a fresh tool directory: " + str(directory))
         if name == "ndk" and not (directory / "RELEASE.TXT").read_text(encoding="utf-8").strip().startswith("r8e"):
             raise RuntimeError("This project requires NDK r8e; choose a separate NDK directory")
         print("Using existing", name + ":", directory, flush=True)
         return
-    if directory.exists() and any(directory.iterdir()):
+    if not recovering and directory.exists() and any(directory.iterdir()):
         hint = " Modern SDK Tools do not contain Ant support; use a separate legacy SDK directory." if name == "sdk-tools" else ""
         raise RuntimeError("Incomplete/unrecognized tool directory; no existing files were replaced: " + str(directory) + hint)
     archive = download(item, offline)
@@ -170,15 +224,17 @@ def install(name, directory, item, offline):
         if not complete(source, item):
             raise RuntimeError("Official package does not contain the expected " + name + " files")
         (source / STAMP).write_text(json.dumps(expected, indent=2) + "\n", encoding="utf-8")
-        if directory.exists():
-            directory.rmdir()  # Only removes an empty destination, never an existing tool tree.
-        os.replace(source, directory)
+        publish_tool(source, directory, expected, recovering)
     finally:
         # This is the only recursive deletion: a unique staging directory we own.
         if stage.exists():
             if not stage.name.startswith(".nrb-tool-") or not stage.resolve().is_relative_to(parent):
                 raise RuntimeError("Refusing to clean a staging directory outside the tool parent")
-            shutil.rmtree(extended_path(stage))
+            try:
+                retry_windows_io("Clean tool staging directory", lambda: shutil.rmtree(extended_path(stage)))
+            except OSError as error:
+                # 清理失败不应覆盖真正的安装错误，也不能把已成功安装报告成失败。
+                print("WARNING: Temporary tool files could not be removed:", stage, str(error), file=sys.stderr)
 
 
 def main():

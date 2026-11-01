@@ -79,6 +79,8 @@ Get-Content (Join-Path $gameRuntime 'client-config\deployment.json')
 
 首次共需下载约 850 MiB，解压需要数 GB 空间，电脑需能访问 Google 和 Apache 官方下载站。下载缓存位于 `deployment/download-cache`；网络中断后重新运行，会尝试续传。已准备完整的组件会复用，不会每次重新下载。
 
+Windows 拒绝移动刚解压的目录时，脚本会重试，再回退为复制文件；复制中断后重新运行会继续安装。若仍提示 `WinError 5/32/33`，关闭占用该工具目录的程序，并确认项目目录可写，再重试；不必删除下载缓存或已经准备好的 SDK。
+
 版本、地址、大小及校验值固定在 `deployment/android-toolchain.json`。SDK 校验值来自 [Google 官方仓库元数据](https://dl.google.com/android/repository/repository-12.xml)，Ant 使用 [官方 SHA512](https://archive.apache.org/dist/ant/binaries/apache-ant-1.10.15-bin.zip.sha512)，NDK 的 SHA256 由官方 Google HTTPS 压缩包计算。各包自带的许可及 NOTICE 文件会保留。
 
 已有兼容工具也可按上述目录放入，完整组件会直接复用；不会覆盖已有的不完整或无法识别的工具目录。现代 SDK 的 `cmdline-tools` 不等于旧的 `tools/ant`，遇到冲突可用下面的参数指定另一个 SDK 目录。
