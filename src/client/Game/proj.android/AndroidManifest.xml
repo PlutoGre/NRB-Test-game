@@ -78,8 +78,8 @@
     
     <!-- 触控权限 -->
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-    <uses-permission android:name= "android.permission.WRITE_CONTACTS"/>
-    <uses-permission android:name= "android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
     <!-- end 触控权限 -->
     
     <!-- 迅雷权限

@@ -83,7 +83,8 @@ def main():
         if not source.is_file():
             parser.error("Missing bundled dependency: " + str(source))
         shutil.copy2(source, channel / "libs" / source.name)
-    references = (REPO / "src/client/cocos2dx/platform/android/java", REPO / "src/client/91lib/Android/AnZhiSdkPro")
+    resource_library = REPO / "src/client/91lib/Android/AnZhiSdkPro"
+    references = (REPO / "src/client/cocos2dx/platform/android/java", resource_library)
     # SDK 的 Ant 任务按 Java 进程工作目录检查 sdk.dir，不能使用各子库自己的相对路径。
     # 每次从当前参数生成绝对路径，并保留构建入口提供的临时盘符。
     sdk_property = property_path(sdk)
@@ -91,6 +92,10 @@ def main():
     for index, library in enumerate(references, 1):
         if not library.is_dir():
             parser.error("Missing Android library project: " + str(library))
+        if library == resource_library:
+            # 安智资源库没有 Java 源码，但旧 Ant 的 AIDL 扫描仍要求 src 目录存在。
+            # Git 不保留空目录；打包前补齐，兼容旧克隆和手工删除目录的情况。
+            (library / "src").mkdir(exist_ok=True)
         properties += "android.library.reference." + str(index) + "=" + property_path(library, channel) + "\n"
         backup_write(library / "local.properties", "sdk.dir=" + sdk_property + "\n")
     backup_write(channel / "project.properties", properties)

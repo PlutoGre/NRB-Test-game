@@ -349,9 +349,7 @@ BulletinBoardPage.cpp \
 
 #mark1
 
-$(info "这里可以使用Eclipse C/C++ Build的Environment环境变量")
-$(info "ProjDirPath: " $(PWD))
-$(info "LOCAL_PATH: " $(LOCAL_PATH))
+$(info Native sources: $(LOCAL_PATH))
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/../../Platform
