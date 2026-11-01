@@ -2,7 +2,7 @@
 
 换一台电脑后，在任意有写权限的目录克隆仓库并原地部署，再按 [客户端打包流程](docs/CLIENT_BUILD.md) 生成 Android 或 iOS 客户端。
 
-适用环境：联网的 Windows 10/11 x64。服务端自动下载 Python、Java 和 MariaDB；Android 打包另外需要旧工具链，iOS 使用 GitHub Actions 云端 Mac 构建。
+适用环境：联网的 Windows 10/11 x64。服务端自动下载 Python、Java 和 MariaDB；Android 首次打包自动准备旧版 SDK、NDK 和 Ant，无需预装 Android Studio；iOS 使用 GitHub Actions 云端 Mac 构建。
 
 ## 1. 克隆仓库
 
@@ -73,7 +73,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Deploy-Server.p
 | 相对项目目录 | 用途 |
 |---|---|
 | `runtime/server` | 服务端、数据库、日志、备份和客户端连接参数 |
-| `tools` | 自行解压的 Android SDK、NDK、Ant |
+| `tools` | Android 首次打包自动下载的 SDK、NDK、Ant，也可放入已有的兼容工具 |
 | `outputs/android` | Android 新入口输出的 APK |
 | `src/client/ios-modern/generated` | iOS 生成文件；云构建成功后从 Actions 下载 IPA |
 

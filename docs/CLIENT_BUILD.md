@@ -62,19 +62,26 @@ Get-Content (Join-Path $gameRuntime 'client-config\deployment.json')
 
 ## 3. Android：本机生成 APK
 
-以下使用安智渠道的本地测试登录。新入口把准备、NDK 编译、Ant 打包串起来；项目仍需要旧工具链，不能只安装最新 Android Studio 就打包。
+以下使用安智渠道的本地测试登录。支持没有任何 Android 编译环境的 Windows x64 新电脑：先完成服务端部署，再双击 Android 打包入口，脚本会自动准备旧工具链。
 
-### 3.1 准备工具
+### 3.1 首次自动准备工具
 
-服务端已经自动下载 Python 和 JDK 8，下面直接复用。另行准备：
+复用服务端下载的 Python 和 JDK 8；缺少的下列组件会从 Google/Apache 官方地址下载、校验并解压，不需要安装 Android Studio、Cygwin 或配置系统环境变量：
 
-| 工具 | 示例目录与要求 |
+| 工具 | 自动准备的版本与项目内目录 |
 |---|---|
-| Apache Ant | 解压到项目 `tools/apache-ant`，应包含 `bin/ant.bat`，使用兼容 JDK 8 的版本 |
-| 旧 Android SDK | 解压到 `tools/android-sdk`，须含 `tools/ant/build.xml`、`platforms/android-17/android.jar` 及旧 Build Tools 的 aapt/dx |
-| Windows 版 Android NDK r8e | 解压到 `tools/android-ndk-r8e`，应包含 `ndk-build.cmd`；依赖 gnustl 和 armeabi，不能随意换成新版 NDK |
+| SDK Tools | 25.2.5，`tools/android-sdk/tools`，包含旧 Ant 构建文件 |
+| Android Platform | API 17 r3，`tools/android-sdk/platforms/android-17` |
+| Build Tools | 23.0.3，`tools/android-sdk/build-tools/23.0.3`，包含 aapt/dx |
+| Platform Tools | 29.0.6，`tools/android-sdk/platform-tools` |
+| Android NDK | r8e Windows x64，`tools/android-ndk-r8e`，保留 gnustl 和 armeabi |
+| Apache Ant | 1.10.15，`tools/apache-ant` |
 
-解压后应直接符合表中的目录结构，避免多套一层版本目录。工具不随仓库上传，换电脑需要重新放入或自行复制 `tools`。新入口使用 Windows `ndk-build.cmd`，不要求额外安装 Cygwin；该方式来自 [NDK 官方历史说明](https://android.googlesource.com/platform/ndk/+/refs/heads/tools_r20/docs/CHANGES.html)。
+首次共需下载约 850 MiB，解压需要数 GB 空间，电脑需能访问 Google 和 Apache 官方下载站。下载缓存位于 `deployment/download-cache`；网络中断后重新运行，会尝试续传。已准备完整的组件会复用，不会每次重新下载。
+
+版本、地址、大小及校验值固定在 `deployment/android-toolchain.json`。SDK 校验值来自 [Google 官方仓库元数据](https://dl.google.com/android/repository/repository-12.xml)，Ant 使用 [官方 SHA512](https://archive.apache.org/dist/ant/binaries/apache-ant-1.10.15-bin.zip.sha512)，NDK 的 SHA256 由官方 Google HTTPS 压缩包计算。各包自带的许可及 NOTICE 文件会保留。
+
+已有兼容工具也可按上述目录放入，完整组件会直接复用；不会覆盖已有的不完整或无法识别的工具目录。现代 SDK 的 `cmdline-tools` 不等于旧的 `tools/ant`，遇到冲突可用下面的参数指定另一个 SDK 目录。
 
 ### 3.2 一键生成 APK
 
@@ -84,7 +91,7 @@ Get-Content (Join-Path $gameRuntime 'client-config\deployment.json')
 .\deployment\build-android.cmd
 ```
 
-它会读取 `runtime/server/client-config/deployment.json`，生成当前电脑对应的配置，编译原生库，再生成 APK。成功后的统一输出为：
+它会先自动准备工具，再读取 `runtime/server/client-config/deployment.json`，生成当前电脑对应的配置，编译原生库并生成 APK。成功后的统一输出为：
 
 ```text
 outputs/android/DreamOnePiece-debug.apk
@@ -100,10 +107,24 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Build-Android.p
 
 Debug APK 已带调试签名，可传到支持 ARM32 的 Android 手机安装；新版系统可能限制这类旧 App，纯 ARM64 设备无法运行当前包。测试时让手机与服务端电脑处于可互访的局域网，当前 Android 不能直接使用 iOS 的 WSS 临时域名入口。
 
+### 3.3 只准备环境或离线使用（可选）
+
+只下载、解压工具，暂不编译：
+
+```powershell
+.\deployment\build-android.cmd -PrepareToolsOnly
+```
+
+无法连接官方站点时，可从能下载的电脑复制上述 `tools` 目录，或把清单对应的原始 ZIP 放入 `deployment/download-cache`；脚本仍会校验缓存。只使用本地工具/缓存、不联网下载：
+
+```powershell
+.\deployment\build-android.cmd -Offline
+```
+
 ## 4. 后续更新
 
 代码有改动时，Android 重新执行打包入口；iOS 将改动推送到 GitHub 后重新运行工作流。换开服电脑按 README 重新部署；原电脑 IP 变化时先停服，再用新的 `-PublicHost` 执行部署命令，之后使用对应参数打包。
 
 发布版签名、Mac 本地构建和更多排查步骤放在 [详细参考](reference/CLIENT_BUILD.md)，个人测试不必先阅读。
 
-**新入口、临时盘符映射和中文/空格路径尚未完成新环境实跑；iOS 尚未通过实际 Xcode 构建和 iPhone 验证。本次按项目要求只修改代码和做静态检查，没有执行部署、构建或测试。**
+**自动准备工具、新入口及中文/空格路径尚未完成新环境实跑；iOS 尚未通过实际 Xcode 构建和 iPhone 验证。本次只核对官方元数据和压缩包内容、修改代码并做静态检查，没有执行工具安装、构建或测试。**

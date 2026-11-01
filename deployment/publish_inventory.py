@@ -56,6 +56,7 @@ def main():
     required = {".github/workflows/ios-build.yml", "deployment/Deploy-Server.ps1", "deployment/server.py",
                 "启动服务.cmd", "停止服务.cmd",
                 "deployment/Project-Paths.ps1", "deployment/Build-Android.ps1", "deployment/build-android.cmd",
+                "deployment/setup_android.py", "deployment/android-toolchain.json",
                 "deployment/runtime_paths.py", "src/tools/project_paths.py",
                 "deployment/Start-External.ps1", "deployment/external.cmd", "deployment/external.py", "deployment/websocket_gateway.py",
                 "deployment/tunnel-manifest.json", "docs/EXTERNAL_DEPLOYMENT.md",

@@ -1,0 +1,74 @@
+{
+  "sdk-tools": {
+    "version": "25.2.5",
+    "file": "tools_r25.2.5-windows.zip",
+    "url": "https://dl.google.com/android/repository/tools_r25.2.5-windows.zip",
+    "size": 306785944,
+    "algorithm": "sha1",
+    "checksum": "a7f7ebeae1c8d8f62d3a8466e9c81baee7cc31ca",
+    "provenance": "https://dl.google.com/android/repository/repository-12.xml",
+    "root": "tools",
+    "destination": "sdk/tools",
+    "required": ["ant/build.xml", "lib/ant-tasks.jar"]
+  },
+  "platform-17": {
+    "version": "17-r3",
+    "file": "android-17_r03.zip",
+    "url": "https://dl.google.com/android/repository/android-17_r03.zip",
+    "size": 57030216,
+    "algorithm": "sha1",
+    "checksum": "dbe14101c06e6cdb34e300393e64e64f8c92168a",
+    "provenance": "https://dl.google.com/android/repository/repository-12.xml",
+    "root": "android-4.2.2",
+    "destination": "sdk/platforms/android-17",
+    "required": ["android.jar", "framework.aidl"]
+  },
+  "build-tools": {
+    "version": "23.0.3",
+    "file": "build-tools_r23.0.3-windows.zip",
+    "url": "https://dl.google.com/android/repository/build-tools_r23.0.3-windows.zip",
+    "size": 39869945,
+    "algorithm": "sha1",
+    "checksum": "c6d8266c6a3243c8f1e41b786c0e3cee4c781263",
+    "provenance": "https://dl.google.com/android/repository/repository-12.xml",
+    "root": "android-6.0",
+    "destination": "sdk/build-tools/23.0.3",
+    "required": ["aapt.exe", "dx.bat", "lib/dx.jar", "zipalign.exe"]
+  },
+  "platform-tools": {
+    "version": "29.0.6",
+    "file": "platform-tools_r29.0.6-windows.zip",
+    "url": "https://dl.google.com/android/repository/platform-tools_r29.0.6-windows.zip",
+    "size": 7278590,
+    "algorithm": "sha1",
+    "checksum": "c970e1216ef99abf9fd480b01439998c4780728e",
+    "provenance": "https://dl.google.com/android/repository/repository-12.xml",
+    "root": "platform-tools",
+    "destination": "sdk/platform-tools",
+    "required": ["adb.exe", "AdbWinApi.dll"]
+  },
+  "ndk": {
+    "version": "r8e-windows-x86_64",
+    "file": "android-ndk-r8e-windows-x86_64.zip",
+    "url": "https://dl.google.com/android/ndk/android-ndk-r8e-windows-x86_64.zip",
+    "size": 461298980,
+    "algorithm": "sha256",
+    "checksum": "337bc76630053e650e285b5840e071b59a82c74d23ed38097afec98192e649fa",
+    "provenance": "SHA256 calculated from the official Google HTTPS archive, 2026-11-01",
+    "root": "android-ndk-r8e",
+    "destination": "ndk",
+    "required": ["ndk-build.cmd", "RELEASE.TXT", "prebuilt/windows-x86_64/bin/make.exe"]
+  },
+  "ant": {
+    "version": "1.10.15",
+    "file": "apache-ant-1.10.15-bin.zip",
+    "url": "https://archive.apache.org/dist/ant/binaries/apache-ant-1.10.15-bin.zip",
+    "size": 9939901,
+    "algorithm": "sha512",
+    "checksum": "1de7facbc9874fa4e5a2f045d5c659f64e0b89318c1dbc8acc6aae4595c4ffaf90a7b1ffb57f958dd08d6e086d3fff07aa90e50c77342a0aa5c9b4c36bff03a9",
+    "provenance": "https://archive.apache.org/dist/ant/binaries/apache-ant-1.10.15-bin.zip.sha512",
+    "root": "apache-ant-1.10.15",
+    "destination": "ant",
+    "required": ["bin/ant.bat", "lib/ant.jar", "lib/ant-launcher.jar"]
+  }
+}

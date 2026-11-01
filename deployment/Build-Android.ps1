@@ -5,7 +5,9 @@ param(
     [string]$AntDir = 'tools/apache-ant',
     [string]$JavaHome = '',
     [string]$OutputDir = 'outputs/android',
-    [ValidateRange(1, 16)][int]$Jobs = 2
+    [ValidateRange(1, 16)][int]$Jobs = 2,
+    [switch]$Offline,
+    [switch]$PrepareToolsOnly
 )
 $ErrorActionPreference = 'Stop'
 . (Join-Path $PSScriptRoot 'Project-Paths.ps1')
@@ -72,12 +74,27 @@ try {
     $portablePython = Join-Path $script:NrbProjectRoot 'deployment/.bootstrap/python/python.exe'
     if (-not (Test-Path -LiteralPath $portablePython)) { throw 'Run deployment/server.cmd first to prepare Python.' }
     if (-not $JavaHome) { $JavaHome = Join-Path $runtime 'runtimes/java' }
+    if (-not (Test-Path -LiteralPath (Join-Path (Resolve-NrbProjectPath $JavaHome) 'bin/javac.exe'))) {
+        throw 'JDK 8 is missing. Finish server deployment or provide -JavaHome.'
+    }
+    $env:PYTHONIOENCODING = 'utf-8'
+    $setupArgs = @((Join-Path $PSScriptRoot 'setup_android.py'), '--sdk', $AndroidSdk,
+        '--ndk', $AndroidNdk, '--ant', $AntDir)
+    if ($Offline) { $setupArgs += '--offline' }
+    Write-Host 'Preparing the local Android toolchain (downloads missing components on first use)...'
+    & $portablePython @setupArgs
+    if ($LASTEXITCODE -ne 0) { throw 'Android tool setup failed. Read the download/directory error above.' }
+    $toolchain = Get-Content -LiteralPath (Join-Path $PSScriptRoot 'android-toolchain.json') -Raw -Encoding UTF8 | ConvertFrom-Json
     foreach ($tool in @((Join-Path (Resolve-NrbProjectPath $AndroidSdk) 'tools/ant/build.xml'),
                         (Join-Path (Resolve-NrbProjectPath $AndroidSdk) 'platforms/android-17/android.jar'),
                         (Join-Path (Resolve-NrbProjectPath $AndroidNdk) 'ndk-build.cmd'),
                         (Join-Path (Resolve-NrbProjectPath $AntDir) 'bin/ant.bat'),
                         (Join-Path (Resolve-NrbProjectPath $JavaHome) 'bin/javac.exe'))) {
         if (-not (Test-Path -LiteralPath $tool)) { throw "Required tool missing: $tool. See docs/CLIENT_BUILD.md." }
+    }
+    if ($PrepareToolsOnly) {
+        Write-Host 'Android tools are ready. No compilation or APK packaging was started.'
+        return
     }
     if (-not ('Nrb.BuildPaths' -as [type])) {
         Add-Type -TypeDefinition @'
@@ -131,7 +148,10 @@ namespace Nrb {
     & $python $prepare --sdk $sdk
     if ($LASTEXITCODE -ne 0) { throw 'Native library synchronization failed.' }
     Set-Location $channel
-    & (Join-Path $ant 'bin/ant.bat') ("-Ddeployment.python=" + $python.Replace('\', '/')) debug
+    # Avoid selecting a newer installed Build Tools version that no longer has dx.
+    $buildTools = Join-Path $sdk ($toolchain.'build-tools'.destination.Substring(4))
+    & (Join-Path $ant 'bin/ant.bat') ("-Ddeployment.python=" + $python.Replace('\', '/')) `
+        ("-Dandroid.build.tools.dir=" + $buildTools.Replace('\', '/')) debug
     if ($LASTEXITCODE -ne 0) { throw 'Ant packaging failed.' }
     $apk = Join-Path $channel 'bin/DreamOnePiece-debug.apk'
     if (-not (Test-Path -LiteralPath $apk)) { throw 'Ant completed without the expected APK.' }
