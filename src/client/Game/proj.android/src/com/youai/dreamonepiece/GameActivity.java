@@ -44,6 +44,7 @@ import com.youai.dreamonepiece.GameInterface.IDreamOnePiece;
 
 //
 
+/** @brief 连接 Android 生命周期、平台登录与 Cocos 游戏线程。 */
 public class GameActivity extends Cocos2dxActivity implements IDreamOnePiece {
 	// ////////////////////////////////////////////////////////////////////////
 	static {
@@ -531,23 +532,18 @@ public class GameActivity extends Cocos2dxActivity implements IDreamOnePiece {
 		Log.d(TAG, "notifyInitPlatformSDKComplete");
 	}
 
+    /** 缓存版本检查结果，或通过 GL 线程通知游戏更新流程。 */
 	@Override
 	public void notifyVersionCheckResult(VersionInfo versionInfo) {
-		Log.d(TAG, "notifyVersionCheckResult");
+		LogUtils.d(TAG, "notifyVersionCheckResult: updateInfo=" + versionInfo.update_info);
 
 		if (mHaveEnteredGameAppState) {
 			if (versionInfo.update_info == PlatformAndGameInfo.enUpdateInfo_No) {
-				Cocos2dxHelper.nativeNotifyPlatformGameUpdateResult(
-						versionInfo.update_info, versionInfo.max_version_code,
-						versionInfo.local_version_code,
-						versionInfo.download_url);
+                notifyVersionResultOnGLThread(versionInfo);
 			} else if (versionInfo.update_info == PlatformAndGameInfo.enUpdateInfo_Suggest) {
-				Cocos2dxHelper.nativeNotifyPlatformGameUpdateResult(
-						versionInfo.update_info, versionInfo.max_version_code,
-						versionInfo.local_version_code,
-						versionInfo.download_url);
+                notifyVersionResultOnGLThread(versionInfo);
 			} else if (versionInfo.update_info == PlatformAndGameInfo.enUpdateInfo_Force) {
-				Log.w(TAG, "notifyVersionCheckResult: enUpdateInfo_Force");
+				LogUtils.w(TAG, "notifyVersionCheckResult: enUpdateInfo_Force");
 
 				showWaitingView(true, -1, "需要强制版本更新，请下载新版本重新安装");
 			}
@@ -558,6 +554,22 @@ public class GameActivity extends Cocos2dxActivity implements IDreamOnePiece {
 			mVersionResult = versionInfo;
 		}
 	}
+
+    /** 将版本结果快照交给 GL 线程，避免平台回调直接修改游戏状态。 */
+    private void notifyVersionResultOnGLThread(VersionInfo versionInfo) {
+        final int updateInfo = versionInfo.update_info;
+        final int maxVersion = versionInfo.max_version_code;
+        final int localVersion = versionInfo.local_version_code;
+        final String downloadUrl = versionInfo.download_url;
+        runOnGLThread(new Runnable() {
+            @Override
+            public void run() {
+                LogUtils.i(TAG, "notifyVersionResultOnGLThread: updateInfo=" + updateInfo);
+                Cocos2dxHelper.nativeNotifyPlatformGameUpdateResult(
+                        updateInfo, maxVersion, localVersion, downloadUrl);
+            }
+        });
+    }
 
 	@Override
 	public void initCocos2dxAndroidContext(View glView, View editText,
@@ -607,19 +619,28 @@ public class GameActivity extends Cocos2dxActivity implements IDreamOnePiece {
 		super.setOnTempShortPause(true);
 	}
 
+    /** 恢复渲染并将登录结果快照交给 GL 线程，避免并发修改 Cocos 节点。 */
 	@Override
 	public void notifyLoginResut(LoginInfo result) {
-		Log.d(TAG, "notifyLoginResut");
+		LogUtils.d(TAG, "notifyLoginResut: queuing login result");
 
 		super.setOnTempShortPause(false);
 
 		/*
 		 * 平台账号登录成功�?允许玩家进入游戏
 		 */
-		Cocos2dxHelper.nativeNotifyPlatformLoginResult(
-				PlatformAndGameInfo.enLoginResult_Success,
-				String.valueOf(result.account_uid), result.login_session,
-				result.account_nick_name);
+        // Cocos 节点和自动释放池只能在 GL 线程修改，避免与绘制并发。
+        final String accountUid = String.valueOf(result.account_uid);
+        final String session = result.login_session;
+        final String nickname = result.account_nick_name;
+        runOnGLThread(new Runnable() {
+            @Override
+            public void run() {
+                LogUtils.i(TAG, "notifyLoginResut: delivering login result on GL thread");
+                Cocos2dxHelper.nativeNotifyPlatformLoginResult(
+                        PlatformAndGameInfo.enLoginResult_Success, accountUid, session, nickname);
+            }
+        });
 	}
 
 	@Override

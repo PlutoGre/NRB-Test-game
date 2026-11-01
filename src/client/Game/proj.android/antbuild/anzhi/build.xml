@@ -95,6 +95,12 @@
             <arg value="${basedir}" />
         </exec>
     </target>
+    <!-- Local x86 testing does not use the ARM-only legacy payment SDK binaries.
+         Clear dependency native folders after Ant resolves them; the game library
+         itself is supplied through native.libs.absolute.dir by the build script. -->
+    <target name="-post-compile" if="nrb.emulator.x86">
+        <path id="project.library.native.folder.path" />
+    </target>
     <import file="${sdk.dir}/tools/ant/build.xml" />
  
 </project>

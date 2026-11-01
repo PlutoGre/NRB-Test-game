@@ -5,7 +5,7 @@
 | 目标 | 使用方式 | 产物 |
 |---|---|---|
 | iPhone（iOS 15+） | GitHub Actions 云端 Mac 构建，本机可用 Windows | 未签名 IPA，另需签名安装 |
-| Android | Windows 上的旧 SDK + NDK + Ant | 自动使用调试签名的 APK，需要支持 ARM32 的设备 |
+| Android | Windows 上自动准备旧 SDK + NDK + Ant | 手机通用 APK，以及雷电等 x86 模拟器专用 APK |
 
 ## 1. 取得服务器参数
 
@@ -97,7 +97,13 @@ Windows 拒绝移动刚解压的目录时，脚本会重试，再回退为复制
 
 ```text
 outputs/android/DreamOnePiece-debug.apk
+outputs/android/DreamOnePiece-emulator-x86-debug.apk
 ```
+
+- **Android 手机**：使用 `DreamOnePiece-debug.apk`，手机需要支持 ARM32。
+- **本次验证的雷电 14**：使用 `DreamOnePiece-emulator-x86-debug.apk`。专用包只包含 x86 游戏库，可覆盖安装，不需要卸载或清除数据。部分模拟器会优先运行通用包中的 ARM 库，导致停在服务器选择页；专用包避免这条转译路径。
+
+两个包使用同一包名和本机调试签名，不能作为两个应用同时安装。x86 包用于本地测试登录，不包含旧支付 SDK 的 ARM 库。更换电脑后调试签名可能不同；如遇签名冲突，应先保留原签名与应用数据，再处理安装问题。
 
 打包时会自动选择空闲盘符给旧工具使用，正常退出时释放属于本次构建的映射；源码和产物始终留在项目原目录。不要在构建中途移动项目。
 
@@ -137,6 +143,6 @@ Debug APK 已带调试签名，可传到支持 ARM32 的 Android 手机安装；
 
 发布版签名、Mac 本地构建和更多排查步骤放在 [详细参考](reference/CLIENT_BUILD.md)，个人测试不必先阅读。
 
-2026-11-01 已在 Windows x64 完成自动准备 Android 工具、NDK 双 ARM 架构编译、Ant 打包和安装验证。已修复 Activity 构造阶段的 Context 空指针，以及雷电 14 上旧存储路径不可写、原生 `fwrite` 使用空文件指针导致的崩溃；资源目录改用系统 API 获取，外部目录不可写时回退到内部目录。Android 11 官方模拟器与雷电 14 均通过重复冷启动和前后台切换检查，验证到服务器选择页面，详见 [启动验证记录](reference/ANDROID_STARTUP_VALIDATION.md)。
+2026-11-01 的 Context、存储路径和 `fwrite` 崩溃修复见 [启动验证记录](reference/ANDROID_STARTUP_VALIDATION.md)。2026-11-02 已新增原生 x86 构建，并在用户的雷电 14 上实际登录、完成新手引导、远航战斗、卡牌升级、装备强化、海鲜饭和抽卡等操作；各项结果与尚未验证的玩法见 [玩法验证记录](reference/ANDROID_GAMEPLAY_VALIDATION.md)。
 
-本次未验证完整玩法、Android 14/15 实机及中文/空格项目路径；iOS 仍未通过实际 Xcode 构建和 iPhone 验证。
+并非所有玩法均已通过，部分活动缺少实现或受等级、开放时段限制。Android 14/15 实机及中文/空格项目路径尚未验证；iOS 仍未通过实际 Xcode 构建和 iPhone 验证。

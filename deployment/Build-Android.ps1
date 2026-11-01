@@ -161,6 +161,27 @@ namespace Nrb {
     New-Item -ItemType Directory -Path $destination -Force | Out-Null
     Copy-Item -LiteralPath $apk -Destination (Join-Path $destination 'DreamOnePiece-debug.apk') -Force
     Write-Host ('APK: ' + (Join-Path $destination 'DreamOnePiece-debug.apk'))
+
+    # Some emulators prefer ARM even when an APK contains x86. A separate package
+    # prevents installation from selecting the legacy ARM translation path.
+    $emulatorLibraries = Join-Path $script:NrbBuildRoot 'runtime/android/x86-apk-libs'
+    New-Item -ItemType Directory -Path (Join-Path $emulatorLibraries 'x86') -Force | Out-Null
+    Copy-Item -LiteralPath (Join-Path $project 'libs/x86/libDreamOnePiece.so') `
+        -Destination (Join-Path $emulatorLibraries 'x86/libDreamOnePiece.so') -Force
+    $emulatorApk = Join-Path $channel 'bin/DreamOnePiece-emulator-x86-debug.apk'
+    Write-Host 'Packaging the native x86 emulator APK...'
+    & (Join-Path $ant 'bin/ant.bat') ("-Ddeployment.python=" + $python.Replace('\', '/')) `
+        ("-Dsdk.dir=" + $sdk.Replace('\', '/')) `
+        ("-Dandroid.build.tools.dir=" + $buildTools.Replace('\', '/')) `
+        '-Dnrb.emulator.x86=true' `
+        ("-Dnative.libs.absolute.dir=" + $emulatorLibraries.Replace('\', '/')) `
+        ("-Dout.packaged.file=" + (Join-Path $channel 'bin/DreamOnePiece-emulator-x86-debug-unaligned.apk').Replace('\', '/')) `
+        ("-Dout.final.file=" + $emulatorApk.Replace('\', '/')) debug
+    if ($LASTEXITCODE -ne 0 -or -not (Test-Path -LiteralPath $emulatorApk)) { throw 'x86 emulator APK packaging failed.' }
+    & $python -c "import sys,zipfile; z=zipfile.ZipFile(sys.argv[1]); libs={n for n in z.namelist() if n.startswith('lib/') and n.endswith('.so')}; assert libs == {'lib/x86/libDreamOnePiece.so'}, 'Unexpected emulator native libraries: ' + repr(libs)" $emulatorApk
+    if ($LASTEXITCODE -ne 0) { throw 'Emulator APK must contain only the x86 game library.' }
+    Copy-Item -LiteralPath $emulatorApk -Destination (Join-Path $destination 'DreamOnePiece-emulator-x86-debug.apk') -Force
+    Write-Host ('Emulator APK: ' + (Join-Path $destination 'DreamOnePiece-emulator-x86-debug.apk'))
 } catch {
     Write-Host $_.Exception.Message -ForegroundColor Red
     exit 1

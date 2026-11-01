@@ -40,6 +40,11 @@ LOCAL_SRC_FILES :=   ../src/google/protobuf/io/coded_stream.cc         \
 
 LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/../src
 
+# The x86 atomic primitives require their CPU feature definitions.
+ifeq ($(TARGET_ARCH_ABI),x86)
+LOCAL_SRC_FILES += ../src/google/protobuf/stubs/atomicops_internals_x86_gcc.cc
+endif
+
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../src
 
 
