@@ -21,12 +21,14 @@ def backup_write(path, text):
     path.write_text(text, encoding="utf-8")
 
 
-def property_path(path, base):
-    try:
-        value = Path(os.path.relpath(path, base)).as_posix()
-    except ValueError:
-        # An explicitly supplied SDK on another drive cannot be relative.
-        value = path.as_posix()
+def property_path(path, base=None):
+    value = path.as_posix()
+    if base is not None:
+        try:
+            value = Path(os.path.relpath(path, base)).as_posix()
+        except ValueError:
+            # An explicitly supplied library on another drive cannot be relative.
+            pass
     # Java .properties is ISO-8859-1 with UTF-16 escapes, not UTF-8.
     units = value.encode("utf-16-be")
     return "".join(chr(code) if 33 <= code <= 126 and code != 92 else "\\u%04x" % code
@@ -82,14 +84,17 @@ def main():
             parser.error("Missing bundled dependency: " + str(source))
         shutil.copy2(source, channel / "libs" / source.name)
     references = (REPO / "src/client/cocos2dx/platform/android/java", REPO / "src/client/91lib/Android/AnZhiSdkPro")
+    # SDK 的 Ant 任务按 Java 进程工作目录检查 sdk.dir，不能使用各子库自己的相对路径。
+    # 每次从当前参数生成绝对路径，并保留构建入口提供的临时盘符。
+    sdk_property = property_path(sdk)
     properties = "target=android-17\n"
     for index, library in enumerate(references, 1):
         if not library.is_dir():
             parser.error("Missing Android library project: " + str(library))
         properties += "android.library.reference." + str(index) + "=" + property_path(library, channel) + "\n"
-        backup_write(library / "local.properties", "sdk.dir=" + property_path(sdk, library) + "\n")
+        backup_write(library / "local.properties", "sdk.dir=" + sdk_property + "\n")
     backup_write(channel / "project.properties", properties)
-    backup_write(channel / "SDK.properties", "sdk.dir=" + property_path(sdk, channel) + "\nprj.dir=./\n")
+    backup_write(channel / "SDK.properties", "sdk.dir=" + sdk_property + "\nprj.dir=./\n")
     if args.skip_native_sync:
         print("Sources/assets staged. After the NDK build, run again without --skip-native-sync.")
         return

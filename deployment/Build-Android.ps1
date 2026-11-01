@@ -150,7 +150,9 @@ namespace Nrb {
     Set-Location $channel
     # Avoid selecting a newer installed Build Tools version that no longer has dx.
     $buildTools = Join-Path $sdk ($toolchain.'build-tools'.destination.Substring(4))
+    # Command-line properties keep the same absolute SDK path in every Ant subproject.
     & (Join-Path $ant 'bin/ant.bat') ("-Ddeployment.python=" + $python.Replace('\', '/')) `
+        ("-Dsdk.dir=" + $sdk.Replace('\', '/')) `
         ("-Dandroid.build.tools.dir=" + $buildTools.Replace('\', '/')) debug
     if ($LASTEXITCODE -ne 0) { throw 'Ant packaging failed.' }
     $apk = Join-Path $channel 'bin/DreamOnePiece-debug.apk'

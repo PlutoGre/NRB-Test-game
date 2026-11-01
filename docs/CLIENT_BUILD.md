@@ -101,6 +101,8 @@ outputs/android/DreamOnePiece-debug.apk
 
 打包时会自动选择空闲盘符给旧工具使用，正常退出时释放属于本次构建的映射；源码和产物始终留在项目原目录。不要在构建中途移动项目。
 
+SDK 路径会根据当前项目和工具参数重新生成，并以绝对路径传给所有 Ant 子工程（[Ant 属性传递规则](https://ant.apache.org/manual/Tasks/ant.html)），避免依赖库报 `SDK Location '.../tools/android-sdk' is not valid`。这里的绝对路径由脚本每次计算，无需固定项目目录或盘符；更新代码后重新运行打包入口即可刷新旧配置。
+
 工具或运行目录不同，可传入相对路径，不需要改脚本：
 
 ```powershell
