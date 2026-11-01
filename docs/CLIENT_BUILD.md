@@ -137,6 +137,6 @@ Debug APK 已带调试签名，可传到支持 ARM32 的 Android 手机安装；
 
 发布版签名、Mac 本地构建和更多排查步骤放在 [详细参考](reference/CLIENT_BUILD.md)，个人测试不必先阅读。
 
-2026-11-01 已在 Windows x64 完成自动准备 Android 工具、NDK 双 ARM 架构编译、Ant 打包和模拟器安装；复现并修复了安智入口在构造函数中读取资源导致的 Context 空指针。Android 11（API 30）模拟器连续 3 次冷启动均到达服务器选择页面，前后台切换正常，详见 [启动验证记录](reference/ANDROID_STARTUP_VALIDATION.md)。
+2026-11-01 已在 Windows x64 完成自动准备 Android 工具、NDK 双 ARM 架构编译、Ant 打包和安装验证。已修复 Activity 构造阶段的 Context 空指针，以及雷电 14 上旧存储路径不可写、原生 `fwrite` 使用空文件指针导致的崩溃；资源目录改用系统 API 获取，外部目录不可写时回退到内部目录。Android 11 官方模拟器与雷电 14 均通过重复冷启动和前后台切换检查，验证到服务器选择页面，详见 [启动验证记录](reference/ANDROID_STARTUP_VALIDATION.md)。
 
 本次未验证完整玩法、Android 14/15 实机及中文/空格项目路径；iOS 仍未通过实际 Xcode 构建和 iPhone 验证。

@@ -19,6 +19,7 @@ COMMON_SOURCES = (
     "com/youai/PlatformAndGameInfo.java",
     "com/youai/dreamonepiece/GameConfig.java",
     "com/youai/dreamonepiece/GameActivity.java",
+    "com/youai/dreamonepiece/GameLogoState.java",
     "com/youai/dreamonepiece/GameAnnounceDialog.java",
     "com/youai/dreamonepiece/platform/defaultplatform/PlatformDefaultLoginAndPay.java",
 )

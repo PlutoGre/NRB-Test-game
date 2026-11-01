@@ -3,6 +3,8 @@
 
 #include "GamePlatform.h"
 #include <cstdio>
+#include <cerrno>
+#include <cstring>
 
 #ifdef _WINDOWS
 #include <direct.h>
@@ -22,28 +24,51 @@
 
 void saveFileInPath( const std::string& fileInPath, const char* mode, const unsigned char* data, unsigned long size )
 {
-	FILE* fp = fopen(fileInPath.c_str(), "wb"); //
-	int directoryDepth = 50;
-
-	int pathstart = 0;
-	int totalLength = fileInPath.length();
-	while(!fp && --directoryDepth>0 && pathstart!=std::string::npos && pathstart<totalLength)
-	{
-		int pathend = fileInPath.find_first_of("\\/",pathstart);
-		pathstart = pathend+1;
-		if(pathend!=std::string::npos)
-		{
-			std::string subFilename = fileInPath.substr(0,pathend);
+    if (!mode || (!data && size != 0))
+    {
+        cocos2d::CCLog("saveFileInPath: invalid write arguments, path=%s", fileInPath.c_str());
+        return;
+    }
+    FILE* fp = fopen(fileInPath.c_str(), mode);
+    if (!fp)
+    {
+        // Creating parents cannot grant access to a directory Android denies.
+        std::string::size_type separator = fileInPath.find_first_of("\\/");
+        while (separator != std::string::npos)
+        {
+            const std::string directory = fileInPath.substr(0, separator);
+            if (!directory.empty())
+            {
 #ifdef _WINDOWS
-			mkdir(subFilename.c_str());
+                mkdir(directory.c_str());
 #else
-			mkdir(subFilename.c_str(), S_IRWXU);
+                mkdir(directory.c_str(), S_IRWXU);
 #endif
-		}
-		fp = fopen(fileInPath.c_str(), mode); 
-	}
-	size_t return_size = fwrite(data, 1,size, fp);  
-	fclose(fp);
+            }
+            separator = fileInPath.find_first_of("\\/", separator + 1);
+        }
+        fp = fopen(fileInPath.c_str(), mode);
+    }
+    if (!fp)
+    {
+        const int error = errno;
+        cocos2d::CCLog("saveFileInPath: open failed, path=%s, errno=%d (%s)",
+            fileInPath.c_str(), error, strerror(error));
+        return; // Never pass a null FILE pointer to fwrite or fclose.
+    }
+    const size_t written = size == 0 ? 0 : fwrite(data, 1, size, fp);
+    if (written != size)
+    {
+        const int error = errno;
+        cocos2d::CCLog("saveFileInPath: incomplete write, path=%s, bytes=%lu/%lu, errno=%d (%s)",
+            fileInPath.c_str(), static_cast<unsigned long>(written), size, error, strerror(error));
+    }
+    if (fclose(fp) != 0)
+    {
+        const int error = errno;
+        cocos2d::CCLog("saveFileInPath: close failed, path=%s, errno=%d (%s)",
+            fileInPath.c_str(), error, strerror(error));
+    }
 }
 
 const char gamekey[]="youaiABC";

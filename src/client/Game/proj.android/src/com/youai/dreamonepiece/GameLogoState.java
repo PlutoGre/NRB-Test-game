@@ -24,7 +24,6 @@ import android.content.SharedPreferences.Editor;
 import android.content.res.AssetManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
@@ -36,19 +35,21 @@ import android.widget.TextView;
 import com.youai.IGameActivity;
 import com.youai.IGameActivityState;
 import com.youai.IStateManager;
-import com.youai.StorageUtil;
+import com.youai.LogUtils;
 import com.youai.dreamonepiece.GameInterface.IGameLogoStateCallback;
 import com.youai.dreamonepiece.platform.nd91.R;
 
+/** @brief 启动时准备应用专属存储和资源，再进入更新与渲染流程。 */
 public class GameLogoState implements IGameActivityState
 {
 	
 	public static final String	TAG	= GameLogoState.class.getSimpleName();
 	
+    /** 准备启动界面和存储；没有可写目录时保留错误提示，不进入原生启动流程。 */
 	@Override
 	public void enter()
 	{
-		Log.d(TAG, "enter GameLogoState");
+		LogUtils.d(TAG, "enter: 开始准备启动资源");
 		/*
 		 * 
 		 * */
@@ -60,10 +61,13 @@ public class GameLogoState implements IGameActivityState
 		mAssetsUnzipTextView = (TextView) mGameActivity.getActivity()
 				.findViewById(R.id.assets_unzip_textView);
 		
+        // 存储失败也可能退出该状态，提前准备 Handler 以便统一清理。
+        mHandler = new GameLogoStateHandler();
 		checkNetworkStatus();
-		checkStorageStatus();
-		
-		mHandler = new GameLogoStateHandler();
+        if (!checkStorageStatus()) {
+            mAssetsUnzipTextView.setText("无法创建游戏存储目录，请检查设备存储空间后重新启动。");
+            return;
+        }
 		
 		if (mUnzipedAssets == false
 				|| checkExternalStorageResourcesStatus() == false)
@@ -133,110 +137,79 @@ public class GameLogoState implements IGameActivityState
 	/*
 	 * 
 	 * */
-	private void checkStorageStatus()
-	{
-		/*
-		 * 
-		 * */
-		SharedPreferences sp = mGameActivity.getActivity()
-				.getSharedPreferences("ResourcesInfo", Context.MODE_PRIVATE);
-		String spath = sp.getString("StorageFullPath", "");
-		boolean unziped = sp.getBoolean("UnzipedAssets", false);
-		if (unziped == false)
-		{
-			spath = "";
-		}
-		else
-		{
-			File dir = new File(spath);
-			if (dir.exists() == false)
-			{
-				spath = "";
-				
-				Editor edit = sp.edit();
-				edit.putBoolean("UnzipedAssets", false);
-				edit.apply();
-				
-				unziped = false;
-			}
-		}
-		
-		if (spath.equals(""))
-		{
-			String appFilesPath = null;
-			File appFilesDir = mGameActivity.getActivity().getFilesDir();
-			
-			if (Environment.getExternalStorageState().equalsIgnoreCase(
-					Environment.MEDIA_MOUNTED))
-			{
-				File externalStorageDir = Environment
-						.getExternalStorageDirectory();
-				if (!externalStorageDir.canRead()
-						|| !externalStorageDir.canWrite()
-						|| externalStorageDir.getUsableSpace() < 200 * 1024 * 1024)
-				{
-					String secondPath = StorageUtil
-							.getSecondStorageWithFreeSize(250 * 1024 * 1024);
-					if (secondPath != null)
-					{
-						appFilesPath = secondPath;
-					}
-					else
-					{
-						secondPath = StorageUtil
-								.getSecondStorageWithFreeSize(externalStorageDir
-										.getUsableSpace());
-						if (secondPath != null)
-						{
-							appFilesPath = secondPath;
-						}
-						else
-						{
-							appFilesPath = externalStorageDir.getAbsolutePath();
-						}
-						
-						File dir = new File(appFilesPath);
-						if (dir.getUsableSpace() < 20 * 1024 * 1024)
-						{
-							appFilesPath = appFilesDir.getAbsolutePath();
-						}
-					}
-				}
-				else
-				{
-					appFilesPath = externalStorageDir.getAbsolutePath();
-				}
-			}
-			else
-			{
-				appFilesPath = appFilesDir.getAbsolutePath();
-			}
-			
-			if (appFilesPath.equalsIgnoreCase(appFilesDir.getAbsolutePath()) == false)
-			{
-				//spath = appFilesPath + "/Data/"
-				//		+ mGameActivity.getActivity().getPackageName();
-				spath = appFilesPath + "/Android/Data/" +
-						mGameActivity.getActivity().getPackageName() + "/files";
-			}
-			else
-			{
-				spath = appFilesPath;
-			}
-			
-			Editor edit = sp.edit();
-			edit.putString("StorageFullPath", spath);
-			edit.apply();
-		}
-		
-		mCallback.initAppDataPath(spath);
-		
-		mAppFilesPath = spath;
-		mUnzipedAssets = unziped;
-	}
-	
-	/*
-	 * */
+    /** 准备应用专属目录；目录不可写时停止启动，避免原生层继续操作无效文件。 */
+    private boolean checkStorageStatus() {
+        LogUtils.d(TAG, "checkStorageStatus: 准备应用专属存储目录");
+        Activity activity = mGameActivity.getActivity();
+        SharedPreferences sp = activity.getSharedPreferences("ResourcesInfo", Context.MODE_PRIVATE);
+        File directory = null;
+        try {
+            // 由系统提供正确的路径及访问权限，不能自行拼接 Android/Data。
+            directory = prepareStorageDirectory(activity.getExternalFilesDir(null));
+        } catch (SecurityException error) {
+            LogUtils.e(TAG, "checkStorageStatus: 外部存储不可访问，尝试内部目录", error);
+        }
+        if (directory == null) {
+            directory = prepareStorageDirectory(activity.getFilesDir());
+        }
+        if (directory == null) {
+            LogUtils.w(TAG, "checkStorageStatus: 没有可写目录，停止进入原生渲染流程");
+            return false;
+        }
+        String path = directory.getAbsolutePath();
+        String previousPath = sp.getString("StorageFullPath", "");
+        boolean unziped = path.equals(previousPath) && sp.getBoolean("UnzipedAssets", false);
+        if (!path.equals(previousPath)) {
+            LogUtils.i(TAG, "checkStorageStatus: 存储位置已更新，将重新准备资源");
+        }
+        sp.edit().putString("StorageFullPath", path).putBoolean("UnzipedAssets", unziped).apply();
+        mCallback.initAppDataPath(path);
+        mAppFilesPath = path;
+        mUnzipedAssets = unziped;
+        LogUtils.i(TAG, "checkStorageStatus: path=" + path + ", reuseAssets=" + unziped);
+        return true;
+    }
+
+    /** 验证真实文件写入，避免 canWrite 成功但原生 fopen 仍被存储策略拒绝。 */
+    private File prepareStorageDirectory(File directory) {
+        if (directory == null) {
+            return null;
+        }
+        File probe = null;
+        try {
+            File[] required = { directory, new File(directory, "Assets"), new File(directory, "Cache") };
+            for (File folder : required) {
+                if ((!folder.isDirectory() && !folder.mkdirs()) || !folder.canRead() || !folder.canWrite()) {
+                    throw new IOException("Cannot prepare game directory: " + folder.getAbsolutePath());
+                }
+            }
+            probe = File.createTempFile("nrb-write-", ".tmp", directory);
+            FileOutputStream output = new FileOutputStream(probe);
+            try {
+                output.write(0);
+            } finally {
+                output.close();
+            }
+            return directory;
+        } catch (IOException error) {
+            LogUtils.e(TAG, "prepareStorageDirectory: 写入检查失败，path=" + directory, error);
+            return null;
+        } catch (SecurityException error) {
+            LogUtils.e(TAG, "prepareStorageDirectory: 目录访问被拒绝，path=" + directory, error);
+            return null;
+        } finally {
+            if (probe != null) {
+                try {
+                    if (!probe.delete()) {
+                        LogUtils.w(TAG, "prepareStorageDirectory: 无法清理写入检查文件");
+                    }
+                } catch (SecurityException error) {
+                    LogUtils.e(TAG, "prepareStorageDirectory: 清理写入检查文件被拒绝", error);
+                }
+            }
+        }
+    }
+
 	private void requestUnzipAssetToExternalStorageResources()
 	{
 		Log.d(TAG, "requestUnzipAssetToExternalStorageResources");
