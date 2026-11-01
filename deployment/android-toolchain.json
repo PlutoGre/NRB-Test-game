@@ -11,16 +11,16 @@
     "destination": "sdk/tools",
     "required": ["ant/build.xml", "lib/ant-tasks.jar"]
   },
-  "platform-17": {
-    "version": "17-r3",
-    "file": "android-17_r03.zip",
-    "url": "https://dl.google.com/android/repository/android-17_r03.zip",
-    "size": 57030216,
+  "platform-21": {
+    "version": "21-r2",
+    "file": "android-21_r02.zip",
+    "url": "https://dl.google.com/android/repository/android-21_r02.zip",
+    "size": 65897960,
     "algorithm": "sha1",
-    "checksum": "dbe14101c06e6cdb34e300393e64e64f8c92168a",
+    "checksum": "53536556059bb29ae82f414fd2e14bc335a4eb4c",
     "provenance": "https://dl.google.com/android/repository/repository-12.xml",
-    "root": "android-4.2.2",
-    "destination": "sdk/platforms/android-17",
+    "root": "android-5.0.1",
+    "destination": "sdk/platforms/android-21",
     "required": ["android.jar", "framework.aidl"]
   },
   "build-tools": {

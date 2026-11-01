@@ -258,7 +258,7 @@ def main():
             else:
                 destination = ndk if item["destination"] == "ndk" else ant
             install(name, destination, item, args.offline)
-    print("Android SDK, API 17, Build Tools, Platform Tools, NDK r8e and Ant are ready.", flush=True)
+    print("Android SDK, API 21, Build Tools, Platform Tools, NDK r8e and Ant are ready.", flush=True)
     print("No compilation, packaging, signing or device test was executed by this setup tool.", flush=True)
 
 

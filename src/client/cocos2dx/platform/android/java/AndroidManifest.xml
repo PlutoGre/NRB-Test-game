@@ -5,8 +5,8 @@
     android:versionName="1.1">
 
     <uses-sdk
-        android:minSdkVersion="9"
-        android:targetSdkVersion="16" />
+        android:minSdkVersion="21"
+        android:targetSdkVersion="21" />
     
     <!-- for proguard -->
     <application android:debuggable="false"/>

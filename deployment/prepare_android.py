@@ -41,8 +41,8 @@ def main():
     parser.add_argument("--skip-native-sync", action="store_true", help="Stage before compiling NDK libraries")
     args = parser.parse_args()
     sdk = project_path(args.sdk)
-    if not (sdk / "tools/ant/build.xml").is_file() or not (sdk / "platforms/android-17/android.jar").is_file():
-        parser.error("SDK requires legacy Ant support and platform android-17; modern command-line tools alone are insufficient")
+    if not (sdk / "tools/ant/build.xml").is_file() or not (sdk / "platforms/android-21/android.jar").is_file():
+        parser.error("SDK requires legacy Ant support and platform android-21; modern command-line tools alone are insufficient")
     channel = PROJECT / "antbuild/anzhi"
     for name in ("version_android.cfg", "game.properties"):
         if not (channel / "deployment" / name).is_file():
@@ -88,7 +88,7 @@ def main():
     # SDK 的 Ant 任务按 Java 进程工作目录检查 sdk.dir，不能使用各子库自己的相对路径。
     # 每次从当前参数生成绝对路径，并保留构建入口提供的临时盘符。
     sdk_property = property_path(sdk)
-    properties = "target=android-17\n"
+    properties = "target=android-21\n"
     for index, library in enumerate(references, 1):
         if not library.is_dir():
             parser.error("Missing Android library project: " + str(library))

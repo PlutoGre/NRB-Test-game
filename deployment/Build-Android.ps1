@@ -86,7 +86,7 @@ try {
     if ($LASTEXITCODE -ne 0) { throw 'Android tool setup failed. Read the download/directory error above.' }
     $toolchain = Get-Content -LiteralPath (Join-Path $PSScriptRoot 'android-toolchain.json') -Raw -Encoding UTF8 | ConvertFrom-Json
     foreach ($tool in @((Join-Path (Resolve-NrbProjectPath $AndroidSdk) 'tools/ant/build.xml'),
-                        (Join-Path (Resolve-NrbProjectPath $AndroidSdk) 'platforms/android-17/android.jar'),
+                        (Join-Path (Resolve-NrbProjectPath $AndroidSdk) 'platforms/android-21/android.jar'),
                         (Join-Path (Resolve-NrbProjectPath $AndroidNdk) 'ndk-build.cmd'),
                         (Join-Path (Resolve-NrbProjectPath $AntDir) 'bin/ant.bat'),
                         (Join-Path (Resolve-NrbProjectPath $JavaHome) 'bin/javac.exe'))) {

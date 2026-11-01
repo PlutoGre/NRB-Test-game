@@ -71,7 +71,7 @@ Get-Content (Join-Path $gameRuntime 'client-config\deployment.json')
 | 工具 | 自动准备的版本与项目内目录 |
 |---|---|
 | SDK Tools | 25.2.5，`tools/android-sdk/tools`，包含旧 Ant 构建文件 |
-| Android Platform | API 17 r3，`tools/android-sdk/platforms/android-17` |
+| Android Platform | API 21 r2，`tools/android-sdk/platforms/android-21` |
 | Build Tools | 23.0.3，`tools/android-sdk/build-tools/23.0.3`，包含 aapt/dx |
 | Platform Tools | 29.0.6，`tools/android-sdk/platform-tools` |
 | Android NDK | r8e Windows x64，`tools/android-ndk-r8e`，保留 gnustl 和 armeabi |
@@ -112,6 +112,10 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Build-Android.p
 ```
 
 Debug APK 已带调试签名，可传到支持 ARM32 的 Android 手机安装；新版系统可能限制这类旧 App，纯 ARM64 设备无法运行当前包。测试时让手机与服务端电脑处于可互访的局域网，当前 Android 不能直接使用 iOS 的 WSS 临时域名入口。
+
+当前一键入口使用 **minSdkVersion=21、targetSdkVersion=21、编译平台 API 21**：最低系统为 Android 5.0，同时满足报错中要求目标版本至少为 19 的设备。更新后重新打包，脚本会自动补充 API 21 平台，无需删除现有 SDK。NDK r8e 继续使用它支持的原生 API 9 编译旧 C++ 代码，APK 的最低安装版本由 Manifest 的 21 决定。
+
+这次调整不代表已兼容所有新系统：[Android 14](https://developer.android.com/about/versions/14/behavior-changes-all#minimum-target-api-level) 默认要求目标版本至少 23，[Android 15](https://developer.android.com/about/versions/15/behavior-changes-all#minimum-target-sdk-version) 至少 24。在这些系统上普通安装仍可能被拒绝，需要继续提高目标版本并适配运行时权限等行为。
 
 ### 3.3 只准备环境或离线使用（可选）
 
