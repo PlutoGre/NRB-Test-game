@@ -81,4 +81,6 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Deploy-Server.p
 
 克隆仓库只会得到初始数据，旧电脑的玩家进度需另行迁移。备份恢复等低频操作保存在 [服务端参考说明](docs/reference/SERVER_DEPLOYMENT.md)。
 
+后续修改游戏内容，阅读 [代码逻辑与扩展指南](docs/extension/README.md)：包含服务端保存与发奖、资源替换、卡牌和缘分、装备、奥义、船舱与修行六个专题，以及完整模板清单。
+
 **验证状态：新电脑部署、外网链路及 iOS 构建/真机运行仍待实际验证。文档中的步骤不代表已全部实跑通过。**
