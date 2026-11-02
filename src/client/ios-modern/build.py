@@ -17,6 +17,7 @@ from project_paths import project_path
 
 def run(command, log):
     print("+", shlex.join(str(value) for value in command), flush=True)
+    diagnostics = []
     with log.open("a", encoding="utf-8") as stream:
         stream.write("\n+ " + shlex.join(str(value) for value in command) + "\n")
         with subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
@@ -24,8 +25,15 @@ def run(command, log):
             for line in process.stdout:
                 print(line, end="", flush=True)
                 stream.write(line)
+                if len(diagnostics) < 25 and re.search(r"\berror:|Undefined symbols|^ld:", line):
+                    diagnostics.append(line.rstrip())
             code = process.wait()
     if code:
+        # Xcode may print unrelated parallel compile commands after an error.
+        # Repeat the first diagnostics so the end of the Actions log is useful.
+        if diagnostics:
+            print("\nFirst build diagnostics:", flush=True)
+            print("\n".join(diagnostics), flush=True)
         raise SystemExit("Command failed with exit code " + str(code) + "; see " + str(log))
 
 

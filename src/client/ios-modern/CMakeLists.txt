@@ -72,7 +72,7 @@ add_executable(OnePiece MACOSX_BUNDLE ${ENGINE_SOURCES} ${PROTOBUF_SOURCES}
 # This legacy .cpp contains Objective-C imports on Apple platforms.
 set_source_files_properties("${CLIENT}/91lib/include/libPlatform.cpp" PROPERTIES LANGUAGE OBJCXX)
 target_compile_definitions(OnePiece PRIVATE CC_TARGET_OS_IPHONE=1 PROJECTIOSLOCAL=1
-    CC_ENABLE_CHIPMUNK_INTEGRATION=0 CC_ENABLE_BOX2D_INTEGRATION=0 CURL_STATICLIB=1 LUA_USE_POSIX=1)
+    CC_ENABLE_CHIPMUNK_INTEGRATION=0 CC_ENABLE_BOX2D_INTEGRATION=0 CURL_STATICLIB=1 LUA_USE_POSIX=1 LUA_USE_IOS=1)
 target_compile_options(OnePiece PRIVATE -Wno-deprecated-declarations)
 target_include_directories(OnePiece BEFORE PRIVATE "${webp_SOURCE_DIR}/src" "${webp_SOURCE_DIR}/src/webp"
     "${curl_SOURCE_DIR}/include" "${curl_BINARY_DIR}/include")
@@ -104,6 +104,9 @@ add_custom_command(TARGET OnePiece POST_BUILD
     COMMAND "${CMAKE_COMMAND}" -E copy_directory "${OP_ASSET_DIR}" "$<TARGET_BUNDLE_DIR:OnePiece>"
     VERBATIM)
 set_target_properties(OnePiece PROPERTIES
+    # Keep the app path consistent with build.py and both packaging workflows.
+    # Setting the target output directory also updates TARGET_BUNDLE_DIR above.
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/DerivedData/Build/Products"
     MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/Info.plist.in"
     MACOSX_BUNDLE_GUI_IDENTIFIER "${OP_BUNDLE_ID}"
     XCODE_ATTRIBUTE_PRODUCT_BUNDLE_IDENTIFIER "${OP_BUNDLE_ID}"

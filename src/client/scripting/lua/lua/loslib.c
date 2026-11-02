@@ -36,7 +36,13 @@ static int os_pushresult (lua_State *L, int i, const char *filename) {
 
 
 static int os_execute (lua_State *L) {
+#if defined(LUA_USE_IOS)
+  /* iOS has no shell; preserve Lua 5.1's integer availability/error result. */
+  const char *command = luaL_optstring(L, 1, NULL);
+  lua_pushinteger(L, command == NULL ? 0 : -1);
+#else
   lua_pushinteger(L, system(luaL_optstring(L, 1, NULL)));
+#endif
   return 1;
 }
 

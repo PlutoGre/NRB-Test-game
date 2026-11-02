@@ -665,7 +665,8 @@ union luai_Cast { double l_d; long l_l; };
 @* the file streams.
 ** CHANGE it if you have a way to implement it in your system.
 */
-#if defined(LUA_USE_POPEN)
+/* iOS cannot spawn a shell even when the other POSIX helpers are enabled. */
+#if defined(LUA_USE_POPEN) && !defined(LUA_USE_IOS)
 
 #define lua_popen(L,c,m)	((void)L, fflush(NULL), popen(c,m))
 #define lua_pclose(L,file)	((void)L, (pclose(file) != -1))
