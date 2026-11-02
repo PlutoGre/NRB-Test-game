@@ -25,15 +25,15 @@
 
 | 提交 | 不提交 |
 |---|---|
-| `src/server` 的 Java 源码、现成 DZM.jar、XML、初始 SQL、客户端资源 | `.debug` 中的运行数据库、模拟器、日志、截图 |
-| `src/client` 的 C++/Lua/Java/Objective-C 源码、项目配置、必需 `.a/.so/.jar` | `obj/bin/build/dist/generated`、Debug/Release 编译缓存、旧 APK/IPA |
-| `src/client/ios-modern/vendor` 中固定哈希的依赖源码压缩包 | `src.7z` 等已解压的重复整包 |
+| `server` 的 Java 源码、基础 DZM.jar、XML 和初始 SQL，以及 `resources/client` 公共资源 | `.debug` 中的运行数据库、模拟器、日志、截图 |
+| `client/source` 的 C++/Lua/Java/Objective-C 源码、项目配置、必需 `.a/.so/.jar` | `obj/bin/build/dist/generated`、Debug/Release 编译缓存、旧 APK/IPA |
+| `client/ios/vendor` 中固定哈希的依赖源码压缩包 | `src.7z` 等已解压的重复整包 |
 | `.github/workflows/ios-build.yml`、`deployment`、`docs` | 下载缓存、解压后的本机 Python/Java/MariaDB |
 | `.gitignore`、`.gitattributes`、`README.md` | 个人签名密钥、证书私钥、描述文件、本机 SDK 路径配置 |
 
 `.gitignore` 已按此设置，不会删除本机原有文件。不要加一个全局 `*.jar`、`*.a` 或 `*.so` 忽略规则，否则服务端或旧客户端所需依赖会缺失。数据库运行目录建议始终放在仓库之外。
 
-原工程 `src/client/.gitignore` 曾整体忽略 `libs/` 和 `assets/`；现已调整为保留随源码提供的 SDK/原生依赖，只忽略 Android 生成的 APK 资源目录。初始资源仍统一来自 `src/server/ResourcesAndroid_Encrypt`，克隆后由准备工具复制。
+原工程 `client/source/.gitignore` 曾整体忽略 `libs/` 和 `assets/`；现已调整为保留随源码提供的 SDK/原生依赖，只忽略 Android 生成的 APK 资源目录。初始资源仍统一来自 `resources/client`，克隆后由准备工具复制。
 
 原目录确实存在大于 100 MiB 的中间文件，例如 Android `obj` 中的未剥离 `.so` 和 Visual Studio 缓存，这些已排除。GitHub 普通 Git 会阻止大于 100 MiB 的文件；必要的大文件才考虑 Git LFS。本方案没有预设 LFS，以免额外引入 LFS 依赖和流量计费。[GitHub 大文件说明](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github)
 
@@ -49,7 +49,7 @@
 
 ## 4. 在本机提交并推送
 
-在当前源码根目录打开 PowerShell；该目录应该能看到 `src`、`deployment`、`docs`、`.github` 和本文件引用的 README。
+在仓库根目录打开 PowerShell；该目录应该能看到 `client`、`server`、`resources`、`scripts`、`deployment`、`docs`、`.github` 和 README。
 
 如果本机目录还没有 Git 仓库：
 

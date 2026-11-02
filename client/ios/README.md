@@ -1,0 +1,10 @@
+# 当前 iOS 入口
+
+日常构建见 [客户端打包流程](../../docs/CLIENT_BUILD.md)，平台迁移交接说明见 [IOS_HANDOFF.txt](../../docs/reference/IOS_HANDOFF.txt)。
+
+- 共享游戏源码从 `client/source` 准备。
+- 公共资源从 `resources/client` 准备。
+- `native` 为 iOS 平台实现，`CMakeLists.txt` 和 `Sources.cmake` 为构建配置。
+- `generated` 是本机或云端生成目录，不作为源码编辑入口，不提交到 Git。
+
+运行脚本时，路径参数仍以仓库根目录为基准。目录整理前的实际构建结果见 [验证记录](../../docs/reference/IOS_BUILD_VALIDATION.md)；本次目录调整尚未重新编译。

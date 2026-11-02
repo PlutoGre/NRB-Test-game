@@ -118,7 +118,7 @@ namespace Nrb {
     $ant = ConvertTo-NrbBuildDirectory $AntDir
     $java = ConvertTo-NrbBuildDirectory $JavaHome
     $python = Join-Path $script:NrbBuildRoot 'deployment/.bootstrap/python/python.exe'
-    $project = Join-Path $script:NrbBuildRoot 'src/client/Game/proj.android'
+    $project = Join-Path $script:NrbBuildRoot 'client/source/Game/proj.android'
     $channel = Join-Path $project 'antbuild/anzhi'
     $prepare = Join-Path $script:NrbBuildRoot 'deployment/prepare_android.py'
     $tempDir = Join-Path $script:NrbBuildRoot 'runtime/android/tmp'
@@ -130,13 +130,13 @@ namespace Nrb {
     $env:ANDROID_SDK_ROOT = $sdk
     $env:ANT_HOME = $ant
     $env:NDK_ROOT = $ndk
-    $client = (Join-Path $script:NrbBuildRoot 'src/client').Replace('\', '/')
+    $client = (Join-Path $script:NrbBuildRoot 'client/source').Replace('\', '/')
     $env:NDK_MODULE_PATH = "$client;$client/cocos2dx/platform/third_party/android/prebuilt"
     $env:PATH = "$java\bin;$ant\bin;$sdk\tools;" + $savedEnvironment['PATH']
     $env:TEMP = $tempDir; $env:TMP = $tempDir
     Set-Location $script:NrbBuildRoot
     # Regenerate overlays in this checkout, including when the runtime was reused.
-    & $python (Join-Path $script:NrbBuildRoot 'src/tools/configure_deployment.py') `
+    & $python (Join-Path $script:NrbBuildRoot 'scripts/configure_deployment.py') `
         --host $settings.host --web-port $settings.webPort --game-port $settings.gamePort `
         --resource-version $settings.resourceVersion --channel anzhi --local-login --web-root (Join-Path $runtime 'web')
     if ($LASTEXITCODE -ne 0) { throw 'Deployment overlay preparation failed.' }

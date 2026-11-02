@@ -18,7 +18,7 @@ import uuid
 import zipfile
 
 HERE = Path(__file__).resolve().parent
-sys.path.insert(0, str(HERE.parent / "src/tools"))
+sys.path.insert(0, str(HERE.parent / "scripts"))
 from project_paths import project_path
 
 MANIFEST = json.loads((HERE / "android-toolchain.json").read_text(encoding="utf-8"))

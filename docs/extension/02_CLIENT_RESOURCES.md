@@ -1,20 +1,20 @@
 # 02 客户端资源位置、图片修改与发布
 
-[返回扩展指南](README.md)。本项目的服务端目录中也存放客户端美术资源，不能只在 `src/client` 下找图片。
+[返回扩展指南](README.md)。游戏公共资源已统一到 `resources/client`，与客户端、服务端代码分离。目录迁移对照见 [项目目录说明](../PROJECT_STRUCTURE.md)。
 
 ## 1. 哪个目录是修改入口
 
 | 目录 | 定位 | 修改建议 |
 |---|---|---|
-| `src/server/haizei/Resource_Client/Resource_Client` | 明文资料：PNG、TXT、Lua、CCBI等 | 用于阅读、编辑原始文本；改完要同步发布源 |
-| `src/server/ResourcesAndroid_Encrypt` | 当前实际发布源 | Android准备、iOS准备、HTTP资源生成都从这里取文件 |
-| `src/client/Game/proj.android/res_anzhi` | Android渠道原生资源 | 启动界面、Android图标/布局等；与游戏内卡牌PNG不是同一套 |
-| `src/client/Game/proj.android/antbuild/anzhi/assets`、`res` | Android生成目录 | 不作长期修改入口，重新准备时可能覆盖 |
-| `src/client/ios-modern/generated/assets` | iOS生成目录 | 修改发布源后重新生成 |
+| `archive/client-resources` | 历史明文资料：PNG、TXT、Lua、CCBI等 | 用于查阅和取材；实际修改及发布以 `resources/client` 为准 |
+| `resources/client` | 当前实际发布源 | Android准备、iOS准备、HTTP资源生成都从这里取文件 |
+| `client/source/Game/proj.android/res_anzhi` | Android渠道原生资源 | 启动界面、Android图标/布局等；与游戏内卡牌PNG不是同一套 |
+| `client/source/Game/proj.android/antbuild/anzhi/assets`、`res` | Android生成目录 | 不作长期修改入口，重新准备时可能覆盖 |
+| `client/ios/generated/assets` | iOS生成目录 | 修改发布源后重新生成 |
 | `runtime/server/web/gameserver/dzm/1.8` | 部署后的HTTP资源副本 | 不作唯一编辑源，重新部署可能覆盖 |
 | 安装到手机后的应用专属目录 | 解包资源、更新文件、版本信息 | 旧缓存可能优先于新包；勿把它当源码目录 |
 
-具体复制逻辑：[prepare_android.py](../../deployment/prepare_android.py)、[iOS prepare.py](../../src/client/ios-modern/prepare.py)、[configure_deployment.py](../../src/tools/configure_deployment.py)。`1.8` 是固定URL路径，`1.78.6` 这类字符串是资源版本，不应把二者混成一个值。
+具体复制逻辑：[prepare_android.py](../../deployment/prepare_android.py)、[iOS prepare.py](../../client/ios/prepare.py)、[configure_deployment.py](../../scripts/configure_deployment.py)。`1.8` 是固定URL路径，`1.78.6` 这类字符串是资源版本，不应把二者混成一个值。
 
 ## 2. 常用图片在哪
 
@@ -40,13 +40,13 @@
 以索隆头像为例：
 
 ```text
-src/server/haizei/Resource_Client/Resource_Client/members/head_char_suolong.png
-src/server/ResourcesAndroid_Encrypt/members/head_char_suolong.png
+archive/client-resources/members/head_char_suolong.png
+resources/client/members/head_char_suolong.png
 ```
 
-1. 保留原图备份，在明文资料目录编辑或替换图片。
+1. 保留原图备份，在 `resources/client` 编辑或替换图片；需要原始素材时参考归档目录。
 2. 尽量保持文件名、原尺寸、透明背景、视觉中心和留白一致。旧CCBI可能按固定尺寸定位。
-3. 将新图同步到发布目录的同一相对路径。
+3. 确认新图位于发布目录的同一相对路径，不需要维护两份长期编辑源。
 4. 若对应的是合图帧，修改合图源并重新导出纹理与 `.plist`；帧尺寸、裁剪、旋转和偏移必须一起更新。只往目录增加一张独立PNG，不会覆盖内存中已注册的同名精灵帧。
 5. 更新资源版本并按第6节发布。完全退出客户端再启动，检查头像、卡面、阵容和战斗等使用位置。
 
@@ -54,7 +54,7 @@ src/server/ResourcesAndroid_Encrypt/members/head_char_suolong.png
 
 ## 4. 文本表为什么看起来像乱码
 
-发布目录中的部分TXT使用自定义封装，以十六进制 `EF FE` 开头，后续为异或处理的压缩数据。加载入口在 [GamePlatform.cpp](../../src/client/Game/Platform/GamePlatform.cpp) 的 `getFileData()` / `decBuffer()`；iOS旧平台实现见 [GamePlatform.mm](../../src/client/Game/Platform/GamePlatform.mm)。这与同目录普通PNG、UTF-16文本、AES示例不是同一回事。
+发布目录中的部分TXT使用自定义封装，以十六进制 `EF FE` 开头，后续为异或处理的压缩数据。加载入口在 [GamePlatform.cpp](../../client/source/Game/Platform/GamePlatform.cpp) 的 `getFileData()` / `decBuffer()`；iOS旧平台实现见 [GamePlatform.mm](../../client/source/Game/Platform/GamePlatform.mm)。这与同目录普通PNG、UTF-16文本、AES示例不是同一回事。
 
 此次把 `Disciples.txt`、`Equips.txt`、`Skills.txt`、`Yuanfens.txt`、`TeamBuff.txt` 发布文件按源码规则解码，均与明文资料中的文件逐字节相同。编辑这些表时可以：
 
@@ -64,7 +64,7 @@ src/server/ResourcesAndroid_Encrypt/members/head_char_suolong.png
 
 明文发布是从读取代码得出的可用编辑路线，本轮未实际打包验证新表。不要把它推广成“所有资源均可任意转明文”。
 
-[TableReader.cpp](../../src/client/Game/Classes/TableReader.cpp) 以及 [DataTableManager.h](../../src/client/Game/Classes/DataTableManager.h) 还决定了表解析规则：
+[TableReader.cpp](../../client/source/Game/Classes/TableReader.cpp) 以及 [DataTableManager.h](../../client/source/Game/Classes/DataTableManager.h) 还决定了表解析规则：
 
 - 第一行表头被跳过；中间空行可能使后续数据不再读取。
 - 多数对象用 `std::stringstream >>` 顺序读字段。名称、描述等字段中新增ASCII空格/换行可能造成字段错位；沿用现有格式，不要随意插入空列。
@@ -77,13 +77,13 @@ src/server/ResourcesAndroid_Encrypt/members/head_char_suolong.png
 
 预加载示例为 `mainUI_ccbi.dep`，由 `LoadingGroup` 使用。增加新合图、页面、动作后，要核对对应依赖；文件放进去不等于一定被预加载。
 
-Android旧Lua加载器 [Cocos2dxLuaLoader.cpp](../../src/client/scripting/lua/cocos2dx_support/Cocos2dxLuaLoader.cpp) 最终读取 `.el` 并调用 `decBuffer()`。Windows编译分支会尝试由 `.lua` 生成 `.el`，手机端不能依赖这一步。修改 `.lua` 后要同步可加载的 `.el`，不能只保留同名旧 `.el`。Lua封装与 `EF FE` TXT封装的外层格式也不同。
+Android旧Lua加载器 [Cocos2dxLuaLoader.cpp](../../client/source/scripting/lua/cocos2dx_support/Cocos2dxLuaLoader.cpp) 最终读取 `.el` 并调用 `decBuffer()`。Windows编译分支会尝试由 `.lua` 生成 `.el`，手机端不能依赖这一步。修改 `.lua` 后要同步可加载的 `.el`，不能只保留同名旧 `.el`。Lua封装与 `EF FE` TXT封装的外层格式也不同。
 
 ## 6. 如何让已有安装看到修改
 
 ```mermaid
 flowchart LR
-  Edit[编辑明文/美术资源] --> Pub[同步 ResourcesAndroid_Encrypt]
+  Edit[编辑明文/美术资源] --> Pub[发布源 resources/client]
   Pub --> Stage[准备客户端 assets]
   Pub --> Web[生成 HTTP副本及CRC清单]
   Stage --> Package[Android APK / iOS IPA]
@@ -103,7 +103,7 @@ flowchart LR
 
 ### 已有HTTP更新机制的边界
 
-[configure_deployment.py](../../src/tools/configure_deployment.py) 生成 `servers_list.php`、`update.php`、版本CFG和CRC16清单；这些文件当前是静态JSON，Python HTTP服务并不执行PHP。客户端 [SeverConsts.cpp](../../src/client/Game/Classes/SeverConsts.cpp) / 更新流程根据版本、大小和CRC检查文件。
+[configure_deployment.py](../../scripts/configure_deployment.py) 生成 `servers_list.php`、`update.php`、版本CFG和CRC16清单；这些文件当前是静态JSON，Python HTTP服务并不执行PHP。客户端 [SeverConsts.cpp](../../client/source/Game/Classes/SeverConsts.cpp) / 更新流程根据版本、大小和CRC检查文件。
 
 因此只改 `runtime/server/web` 里的一张图而不更新清单，或者只改服务端Java里的 `ResourceVersion`，都不是完整发布。资源版本、运行端目录、清单和包内配置应配套更新。自动脚本是复制/生成工具，没有完整的版本回滚、差分包发布或删除旧资源清理流程；本次未验证新增资源的纯热更新路线，优先用上述重新打包方案。
 

@@ -1,0 +1,19 @@
+# 客户端
+
+打包步骤统一见 [客户端打包流程](../docs/CLIENT_BUILD.md)。Android 入口仍为仓库根目录的 `deployment/build-android.cmd`；iOS 使用 GitHub Actions 的 **Build iOS from repository**。
+
+| 目录 | 维护内容 |
+|---|---|
+| `source/Game/Classes` | 游戏 C++ 逻辑、页面、战斗和网络协议处理 |
+| `source/Game/Protobuf` | 客户端协议定义和生成文件 |
+| `source/Game/Platform` | 共享平台接口、资源读取与解码 |
+| `source/Game/proj.android` | Android 工程、Java 桥接、NDK/Ant 配置 |
+| `source/Game/proj.android/res_anzhi` | Android 图标、启动页和原生布局 |
+| `ios/native` | 当前 iOS 平台桥接、启动页、网络、音频与系统接口 |
+| `ios` | 当前 iOS 的资源准备、CMake/Xcode 构建与打包脚本 |
+| `source/cocos2dx`、`source/extensions`、`source/CocosDenshion` | 旧 Cocos 引擎及扩展 |
+| `source/91lib`、`source/libOS` 和其余第三方目录 | 旧渠道、平台接口和依赖库 |
+
+游戏公共图片、CCBI、表、Lua 和音频位于 [`resources/client`](../resources/client)，不放在客户端代码目录中。Android 的 `res_*`、渠道覆盖资源及第三方 SDK 的资源保留在原工程内，它们受旧工程和 Android 目录约定约束。
+
+`source` 内部仍保留旧引擎、渠道和示例的相对关系。日常开发优先修改上表中的游戏代码、当前 Android 工程与 `ios`；旧渠道工程的存在不代表均已适配当前系统。

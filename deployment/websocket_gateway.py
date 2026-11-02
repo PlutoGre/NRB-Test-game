@@ -20,7 +20,7 @@ import time
 from urllib.parse import unquote, urlsplit
 import xml.etree.ElementTree as ET
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src/tools"))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 from project_paths import DEFAULT_INSTALL_DIR, project_path
 
 PREFIX = "/gameserver/dzm/1.8/"

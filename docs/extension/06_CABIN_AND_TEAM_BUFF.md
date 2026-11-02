@@ -20,20 +20,20 @@
 | `Player.battleids`、`Battle`、`BattleArrayObject`、`dzm.battle` | 玩家上阵顺序、位置、实例引用及战斗快照 |
 | `BattleUtil.resetBattleProperty()` | 合并船员基础、装备、技能、缘分、修行属性 |
 
-人物缘分在 [BattleUtil.java](../../src/server/Code_Server/server/src/com/oldmountain/dzm/util/BattleUtil.java) 中与 `battleDiscipleItems` 做匹配，判断的是参与上阵的人物模板列表。没有看到把“船舱/未上阵所有卡牌”合入这个列表的现成规则。
+人物缘分在 [BattleUtil.java](../../server/source/src/com/oldmountain/dzm/util/BattleUtil.java) 中与 `battleDiscipleItems` 做匹配，判断的是参与上阵的人物模板列表。没有看到把“船舱/未上阵所有卡牌”合入这个列表的现成规则。
 
 ## 3. 已有功能：修行（TeamBuff）
 
-入口在 [MainPage.cpp](../../src/client/Game/Classes/MainPage.cpp) 的 `onTeamBufferPage`，角色等级不足5时提示，达到条件切入 `TeamBuffPage`。
+入口在 [MainPage.cpp](../../client/source/Game/Classes/MainPage.cpp) 的 `onTeamBufferPage`，角色等级不足5时提示，达到条件切入 `TeamBuffPage`。
 
 | 层 | 文件 |
 |---|---|
-| 客户端页面 | `src/client/Game/Classes/TeamBuffPage.cpp`、资源 `TeamBuff*.ccbi` |
+| 客户端页面 | `client/source/Game/Classes/TeamBuffPage.cpp`、资源 `TeamBuff*.ccbi` |
 | 客户端表 | `TeamBuff.txt`、`TeamBuffBoldness.txt` |
-| 服务端模板 | [teamBuff.xml](../../src/server/Code_Server/server/xml/teamBuff.xml)、`teamBuffBoldness.xml` |
+| 服务端模板 | [teamBuff.xml](../../server/config/xml/teamBuff.xml)、`teamBuffBoldness.xml` |
 | 协议 | `TeamBuffInfo`、`UpgradeTeamBuffInfo` |
-| 服务端处理 | [TeamBuffInfoHandler.java](../../src/server/Code_Server/server/src/com/oldmountain/dzm/packethandler/TeamBuffInfoHandler.java) |
-| 持久化 | `TeamBuffer.java`、[TeamBuffer.hbm.xml](../../src/server/Code_Server/server/src/com/oldmountain/dzm/entity/TeamBuffer.hbm.xml) → `dzm.teambuffer` |
+| 服务端处理 | [TeamBuffInfoHandler.java](../../server/source/src/com/oldmountain/dzm/packethandler/TeamBuffInfoHandler.java) |
+| 持久化 | `TeamBuffer.java`、[TeamBuffer.hbm.xml](../../server/source/src/com/oldmountain/dzm/entity/TeamBuffer.hbm.xml) → `dzm.teambuffer` |
 | 战斗加成 | `BattleUtil.resetBattleProperty()` |
 
 现有四项修行通过消耗船员或影子增加豪气/经验，再提升全队属性等级。它不是把船员留在一个舱位持续生效；消耗素材的语义应与“安置船员”明确区分。

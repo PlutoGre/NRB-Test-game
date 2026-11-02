@@ -7,7 +7,7 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT / "src/tools"))
+sys.path.insert(0, str(ROOT / "scripts"))
 from project_paths import project_path
 LIMIT = 100 * 1024 * 1024
 SIGNING_SUFFIXES = {".keystore", ".jks", ".p12", ".pfx", ".p8", ".mobileprovision", ".provisionprofile"}
@@ -57,25 +57,26 @@ def main():
                 "启动服务.cmd", "停止服务.cmd",
                 "deployment/Project-Paths.ps1", "deployment/Build-Android.ps1", "deployment/build-android.cmd",
                 "deployment/setup_android.py", "deployment/android-toolchain.json",
-                "deployment/runtime_paths.py", "src/tools/project_paths.py",
+                "deployment/runtime_paths.py", "scripts/project_paths.py",
                 "deployment/Start-External.ps1", "deployment/external.cmd", "deployment/external.py", "deployment/websocket_gateway.py",
                 "deployment/tunnel-manifest.json", "docs/EXTERNAL_DEPLOYMENT.md",
-                "src/client/ios-modern/native/ConnectionSettings.h", "src/client/ios-modern/native/ConnectionSettings.mm",
-                "src/client/ios-modern/native/RemoteSocket.h", "src/client/ios-modern/native/RemoteSocket.mm",
-                "deployment/runtime-manifest.json", "src/server/Code_Server/server/DZM.jar", "src/server/dzm.sql",
-                "src/server/Code_Server/dzm_stat.sql", "src/tools/configure_deployment.py",
-                "src/client/ios-modern/CMakeLists.txt", "src/client/ios-modern/prepare.py",
-                "src/client/ios-modern/build.py", "src/client/ios-modern/package_app.py",
-                "src/client/ios-modern/Sources.cmake", "src/client/ios-modern/vendor/curl-8.23.0.tar.xz",
-                "src/client/ios-modern/vendor/libwebp-1.6.0.tar.gz"}
-    required.update("src/client/cocos2dx/platform/third_party/android/prebuilt/" + library
+                "client/ios/native/ConnectionSettings.h", "client/ios/native/ConnectionSettings.mm",
+                "client/ios/native/RemoteSocket.h", "client/ios/native/RemoteSocket.mm",
+                "deployment/runtime-manifest.json", "server/distribution/DZM.jar", "server/database/dzm.sql",
+                "server/config/xml/config.xml", "server/config/hibernateconfig/hibernate_lo_01.cfg.xml",
+                "server/database/dzm_stat.sql", "scripts/configure_deployment.py",
+                "client/ios/CMakeLists.txt", "client/ios/prepare.py",
+                "client/ios/build.py", "client/ios/package_app.py",
+                "client/ios/Sources.cmake", "client/ios/vendor/curl-8.23.0.tar.xz",
+                "client/ios/vendor/libwebp-1.6.0.tar.gz"}
+    required.update("client/source/cocos2dx/platform/third_party/android/prebuilt/" + library
                     + "/libs/" + abi + "/" + library + ".a"
                     for library in ("libcurl", "libjpeg", "libpng", "libtiff", "libwebp")
                     for abi in ("armeabi", "armeabi-v7a"))
-    required.update({"src/client/Game/proj.android/libs/android-parcel.jar",
-                     "src/client/Game/proj.android/libs/android-support-v4.jar",
-                     "src/client/Game/proj.android/libs/annotations.jar",
-                     "src/client/Game/proj.android/libs/anzhi/AnzhiSDKUCenter1.0.0.jar"})
+    required.update({"client/source/Game/proj.android/libs/android-parcel.jar",
+                     "client/source/Game/proj.android/libs/android-support-v4.jar",
+                     "client/source/Game/proj.android/libs/annotations.jar",
+                     "client/source/Game/proj.android/libs/anzhi/AnzhiSDKUCenter1.0.0.jar"})
     for item, size in zip(staged, sizes):
         item["size"] = int(size)
         total += item["size"]
@@ -95,7 +96,7 @@ def main():
         if item["size"] >= 50 * 1024 * 1024:
             large.append({"path": item["path"], "MiB": round(item["size"] / 1024 / 1024, 2)})
     missing = sorted(required - names)
-    for prefix in ("src/server/ResourcesAndroid_Encrypt/", "src/client/ios-modern/native/"):
+    for prefix in ("resources/client/", "client/ios/native/"):
         if not any(name.startswith(prefix) for name in names):
             missing.append(prefix + "*")
     report = {"files": len(staged), "uncompressedMiB": round(total / 1024 / 1024, 2),

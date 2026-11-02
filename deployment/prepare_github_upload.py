@@ -9,7 +9,7 @@ import sys
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parent
-sys.path.insert(0, str(REPO / "src/tools"))
+sys.path.insert(0, str(REPO / "scripts"))
 from project_paths import project_path
 
 
@@ -25,7 +25,7 @@ def main():
     marker = output / ".onepiece-github-upload"
     if output.exists() and any(output.iterdir()) and not marker.exists():
         parser.error("output must be empty or previously created by this script")
-    ios = REPO / "src/client/ios-modern"
+    ios = REPO / "client/ios"
     subprocess.run([sys.executable, str(ios / "prepare.py"), "--host", args.host,
                     "--web-port", str(args.web_port), "--game-port", str(args.game_port),
                     "--resource-version", args.resource_version], check=True)

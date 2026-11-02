@@ -20,15 +20,15 @@
 
 | 层次 | 文件/数据 | 作用 |
 |---|---|---|
-| 服务端模板 | [disciple.xml](../../src/server/Code_Server/server/xml/disciple.xml) | 品质、阵营、默认奥义、初始属性、成长、经验基数、潜力、六个缘分 |
-| 客户端模板 | [Disciples.txt](../../src/server/haizei/Resource_Client/Resource_Client/Disciples.txt) | 相同ID下的名称、描述、显示数值、缘分引用、图片音效路径 |
-| 发布模板 | `src/server/ResourcesAndroid_Encrypt/Disciples.txt` | 实际进入安装包/HTTP资源的版本 |
+| 服务端模板 | [disciple.xml](../../server/config/xml/disciple.xml) | 品质、阵营、默认奥义、初始属性、成长、经验基数、潜力、六个缘分 |
+| 客户端模板 | [Disciples.txt](../../archive/client-resources/Disciples.txt) | 相同ID下的名称、描述、显示数值、缘分引用、图片音效路径 |
+| 发布模板 | `resources/client/Disciples.txt` | 实际进入安装包/HTTP资源的版本 |
 | 玩家实例 | `dzm.disciple` | 实例ID、模板 `itemid`、等级经验、当前属性、天生奥义实例、上阵关联 |
 | 上阵快照 | `dzm.battle` 及内存Battle对象 | 合并装备、技能、修行、缘分后的战斗属性和激活状态 |
 
-[XMLTemplateService.loadDiscipleTemplates()](../../src/server/Code_Server/server/src/com/oldmountain/dzm/util/XMLTemplateService.java) 读XML；[GamePrecedure.cpp](../../src/client/Game/Classes/GamePrecedure.cpp) 初始化 `DiscipleTableManager`，字段顺序定义在 [DataTableManager.h](../../src/client/Game/Classes/DataTableManager.h)。
+[XMLTemplateService.loadDiscipleTemplates()](../../server/source/src/com/oldmountain/dzm/util/XMLTemplateService.java) 读XML；[GamePrecedure.cpp](../../client/source/Game/Classes/GamePrecedure.cpp) 初始化 `DiscipleTableManager`，字段顺序定义在 [DataTableManager.h](../../client/source/Game/Classes/DataTableManager.h)。
 
-实例创建由 [DiscipleUtil.newDisciple()](../../src/server/Code_Server/server/src/com/oldmountain/dzm/util/DiscipleUtil.java) 完成：从模板计算初始/等级成长属性，通过 `SkillUtil.newSkill()` 创建天生奥义，再 `Player.addOneDisciple()` 保存到集合/数据库。后续战斗、升级、传承、培养、突破及上阵分别有业务处理器，不能只插一条表记录替代完整创建。
+实例创建由 [DiscipleUtil.newDisciple()](../../server/source/src/com/oldmountain/dzm/util/DiscipleUtil.java) 完成：从模板计算初始/等级成长属性，通过 `SkillUtil.newSkill()` 创建天生奥义，再 `Player.addOneDisciple()` 保存到集合/数据库。后续战斗、升级、传承、培养、突破及上阵分别有业务处理器，不能只插一条表记录替代完整创建。
 
 更改模板的初始攻击或成长后，旧实例的已存属性不会凭空变成新数值。要明确是“只作用于新卡”还是需要迁移旧卡，并重算相关阵容。
 
@@ -47,7 +47,7 @@ disciple.xml 的 fate1～fate6
   → 客户端 PackageLogic / ServerDateManager / Disciple 等显示
 ```
 
-核心文件：[fate.xml](../../src/server/Code_Server/server/xml/fate.xml)、[BattleUtil.java](../../src/server/Code_Server/server/src/com/oldmountain/dzm/util/BattleUtil.java)、[ChangeDiscipleHandler.java](../../src/server/Code_Server/server/src/com/oldmountain/dzm/packethandler/ChangeDiscipleHandler.java)、[UserBattleArrayHandler.java](../../src/server/Code_Server/server/src/com/oldmountain/dzm/packethandler/UserBattleArrayHandler.java)。客户端文字见 [Yuanfens.txt](../../src/server/haizei/Resource_Client/Resource_Client/Yuanfens.txt)，读取与展示见 `YuanfenTableManager`、`Disciple.cpp`。
+核心文件：[fate.xml](../../server/config/xml/fate.xml)、[BattleUtil.java](../../server/source/src/com/oldmountain/dzm/util/BattleUtil.java)、[ChangeDiscipleHandler.java](../../server/source/src/com/oldmountain/dzm/packethandler/ChangeDiscipleHandler.java)、[UserBattleArrayHandler.java](../../server/source/src/com/oldmountain/dzm/packethandler/UserBattleArrayHandler.java)。客户端文字见 [Yuanfens.txt](../../archive/client-resources/Yuanfens.txt)，读取与展示见 `YuanfenTableManager`、`Disciple.cpp`。
 
 现有缘分688条：人物592、奥义18、装备78。
 
@@ -111,7 +111,7 @@ fate1～fate6
 
 新增美术建议使用新的文件名，例如 `members/head_char_custom30001.png`、`person/poster_char_custom30001.png`，避免覆盖其他卡。涉及合图或位图文字时还需更新帧索引及依赖。完整发布方式见 [客户端资源](02_CLIENT_RESOURCES.md)。
 
-修改明文表后必须同步到 `ResourcesAndroid_Encrypt`。两端模板ID相同是必要条件；只在服务器增加卡牌会使客户端找不到资料或图片。
+修改明文表后必须同步到 `resources/client`。两端模板ID相同是必要条件；只在服务器增加卡牌会使客户端找不到资料或图片。
 
 ### 4.4 添加获取途径
 

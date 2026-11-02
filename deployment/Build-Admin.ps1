@@ -18,13 +18,13 @@ $python = Join-Path $PSScriptRoot '.bootstrap/python/python.exe'
 if (-not (Test-Path -LiteralPath $python)) { throw 'Run the server deployment once to prepare portable Python.' }
 & $python (Join-Path $admin 'export_names.py') --output $classes
 if ($LASTEXITCODE -ne 0) { throw 'Administration resource generation failed.' }
-$originalJar = Join-Path $repo 'src/server/Code_Server/server/DZM.jar'
-$serverAdminSource = Join-Path $repo 'src/server/Code_Server/server/src/com/oldmountain/dzm/admin'
+$originalJar = Join-Path $repo 'server/distribution/DZM.jar'
+$serverAdminSource = Join-Path $repo 'server/source/src/com/oldmountain/dzm/admin'
 $sources = @((Get-ChildItem -LiteralPath $serverAdminSource -Filter '*.java' -File).FullName)
-$sources += Join-Path $repo 'src/server/Code_Server/server/src/com/oldmountain/dzm/net/packet/PacketHandler.java'
-$sources += Join-Path $repo 'src/server/Code_Server/server/src/com/oldmountain/dzm/packethandler/DisposeSysMsgInfoHandler.java'
-$sources += Join-Path $repo 'src/server/Code_Server/server/src/com/oldmountain/dzm/packethandler/AdventureContinueLoginHandler.java'
-$sources += Join-Path $repo 'src/server/Code_Server/server/src/com/oldmountain/dzm/services/RewardServices.java'
+$sources += Join-Path $repo 'server/source/src/com/oldmountain/dzm/net/packet/PacketHandler.java'
+$sources += Join-Path $repo 'server/source/src/com/oldmountain/dzm/packethandler/DisposeSysMsgInfoHandler.java'
+$sources += Join-Path $repo 'server/source/src/com/oldmountain/dzm/packethandler/AdventureContinueLoginHandler.java'
+$sources += Join-Path $repo 'server/source/src/com/oldmountain/dzm/services/RewardServices.java'
 # Build only the explicitly listed overlay classes against the original self-contained JAR.
 $emptySources = Join-Path $buildDir 'empty-sourcepath'
 New-Item -ItemType Directory -Path $emptySources -Force | Out-Null

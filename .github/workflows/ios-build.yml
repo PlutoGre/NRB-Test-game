@@ -71,17 +71,17 @@ jobs:
           cat outputs/environment.txt
 
       - name: Prepare current repository sources and assets
-        working-directory: src/client/ios-modern
+        working-directory: client/ios
         run: python prepare.py --host "$SERVER_HOST" --web-port "$WEB_PORT" --game-port "$GAME_PORT" --resource-version "$RESOURCE_VERSION"
 
       - name: Build unsigned ARM64 iPhone app
-        working-directory: src/client/ios-modern
+        working-directory: client/ios
         run: python build.py --action build --sdk iphoneos --bundle-id "$BUNDLE_ID"
 
       - name: Package unsigned app and IPA for local re-signing
         run: >-
-          python src/client/ios-modern/package_app.py
-          --app src/client/ios-modern/generated/build-iphoneos/DerivedData/Build/Products/Debug-iphoneos/OnePiece.app
+          python client/ios/package_app.py
+          --app client/ios/generated/build-iphoneos/DerivedData/Build/Products/Debug-iphoneos/OnePiece.app
           --output outputs
 
       - name: Upload unsigned client
@@ -103,7 +103,7 @@ jobs:
           name: ios-build-logs
           path: |
             outputs/environment.txt
-            src/client/ios-modern/generated/build-iphoneos/build.log
-            src/client/ios-modern/generated/build-iphoneos/result.json
+            client/ios/generated/build-iphoneos/build.log
+            client/ios/generated/build-iphoneos/result.json
           if-no-files-found: warn
           retention-days: 7

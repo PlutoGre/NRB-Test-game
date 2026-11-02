@@ -4,7 +4,7 @@
 
 ## 1. 数量与分类
 
-服务端 [skill.xml](../../src/server/Code_Server/server/xml/skill.xml) 与客户端 [Skills.txt](../../src/server/haizei/Resource_Client/Resource_Client/Skills.txt) 均有 **77个不同模板ID，连续1～77**；两端ID集合一致，发布表解码后与明文资料一致。
+服务端 [skill.xml](../../server/config/xml/skill.xml) 与客户端 [Skills.txt](../../archive/client-resources/Skills.txt) 均有 **77个不同模板ID，连续1～77**；两端ID集合一致，发布表解码后与明文资料一致。
 
 | type | 含义 | 数量 |
 |---:|---|---:|
@@ -33,15 +33,15 @@
 | `dzm.skillbook` | 玩家残章状态，对应 `SkillBook.hbm.xml` |
 | Battle中defaultskill/skill1/skill2相关字段 | 上阵技能实例及计算用快照 |
 
-客户端技能类型枚举在 [DataTableManager.h](../../src/client/Game/Classes/DataTableManager.h) 的 `SkillItem`；表初始化在 `GamePrecedure.cpp`。服务端 [SkillUtil.newSkill()](../../src/server/Code_Server/server/src/com/oldmountain/dzm/util/SkillUtil.java) 用模板创建实例，`isDefault` 标记天生技能。
+客户端技能类型枚举在 [DataTableManager.h](../../client/source/Game/Classes/DataTableManager.h) 的 `SkillItem`；表初始化在 `GamePrecedure.cpp`。服务端 [SkillUtil.newSkill()](../../server/source/src/com/oldmountain/dzm/util/SkillUtil.java) 用模板创建实例，`isDefault` 标记天生技能。
 
-天生奥义由卡牌模板 `defaultSkill` 指定，创建船员时同时创建。额外奥义通过 [ChangeSkillHandler.java](../../src/server/Code_Server/server/src/com/oldmountain/dzm/packethandler/ChangeSkillHandler.java) 装配；卡牌天生技能和可装配奥义不是无限槽位的同一种绑定。
+天生奥义由卡牌模板 `defaultSkill` 指定，创建船员时同时创建。额外奥义通过 [ChangeSkillHandler.java](../../server/source/src/com/oldmountain/dzm/packethandler/ChangeSkillHandler.java) 装配；卡牌天生技能和可装配奥义不是无限槽位的同一种绑定。
 
 ## 3. 升级和战斗计算
 
-[UpgradeSkillHandler.java](../../src/server/Code_Server/server/src/com/oldmountain/dzm/packethandler/UpgradeSkillHandler.java) 读取待升级技能及消耗技能实例，检查贝里、实例存在和上阵限制，移除材料，增加升级进度，在升级时按模板 `growth` 增加 `quantity`，更新对应Battle快照并返回结果。
+[UpgradeSkillHandler.java](../../server/source/src/com/oldmountain/dzm/packethandler/UpgradeSkillHandler.java) 读取待升级技能及消耗技能实例，检查贝里、实例存在和上阵限制，移除材料，增加升级进度，在升级时按模板 `growth` 增加 `quantity`，更新对应Battle快照并返回结果。
 
-服务端战斗逻辑主要在 [Fight.java](../../src/server/Code_Server/server/src/com/oldmountain/dzm/util/Fight.java)，被动对阵容属性的加成还在 [BattleUtil.resetBattleProperty()](../../src/server/Code_Server/server/src/com/oldmountain/dzm/util/BattleUtil.java)。客户端 [FightTasksSkill.cpp](../../src/client/Game/Classes/FightTasksSkill.cpp) 等负责技能动画和表现；替换动画不会自动修改服务端伤害。
+服务端战斗逻辑主要在 [Fight.java](../../server/source/src/com/oldmountain/dzm/util/Fight.java)，被动对阵容属性的加成还在 [BattleUtil.resetBattleProperty()](../../server/source/src/com/oldmountain/dzm/util/BattleUtil.java)。客户端 [FightTasksSkill.cpp](../../client/source/Game/Classes/FightTasksSkill.cpp) 等负责技能动画和表现；替换动画不会自动修改服务端伤害。
 
 被动比例沿用小数单位，例如ID8“酒樽舞曲” `quantity=0.093`、`growth=0.031`。攻击技能的强度参数不能直接等同于“最终造成多少点伤害”，还要结合战斗算法、攻防、目标与触发条件。旧代码的 `rp` 在界面中对应意志。
 

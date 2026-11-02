@@ -2,6 +2,8 @@
 
 验证日期：2026-11-02。使用完整仓库的 **Build iOS from repository** 工作流，目标为 iOS 15+、ARM64、Debug、未签名客户端。
 
+本页记录的是目录整理前提交的实际结果。当前入口已迁移到 `client/ios`，目录说明见 [项目结构](../PROJECT_STRUCTURE.md)；本轮结构调整仅作静态检查，尚未重新构建。
+
 ## 构建结果
 
 已在 [GitHub Actions 第 6 次运行](https://github.com/PlutoGre/NRB-Test-game/actions/runs/41390810401) 完成真实编译、链接、IPA 打包及产物上传，工作流结果为 **success**。

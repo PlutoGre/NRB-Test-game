@@ -52,7 +52,7 @@ git pull
 相关文件：
 
 - [启动与旧配置迁移](../../deployment/server.py)
-- [默认活动配置](../../src/server/Code_Server/server/xml/adventuresConfig.xml)
-- [连续登录服务端处理](../../src/server/Code_Server/server/src/com/oldmountain/dzm/packethandler/AdventureContinueLoginHandler.java)
-- [客户端连续页](../../src/client/Game/Classes/AdventureContinuePage.cpp)
-- [客户端等待逻辑](../../src/client/Game/Classes/waitingManager.cpp)
+- [默认活动配置](../../server/config/xml/adventuresConfig.xml)
+- [连续登录服务端处理](../../server/source/src/com/oldmountain/dzm/packethandler/AdventureContinueLoginHandler.java)
+- [客户端连续页](../../client/source/Game/Classes/AdventureContinuePage.cpp)
+- [客户端等待逻辑](../../client/source/Game/Classes/waitingManager.cpp)

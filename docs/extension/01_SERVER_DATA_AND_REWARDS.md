@@ -7,33 +7,33 @@
 | 类型 | 编辑源 | 实际生效位置 |
 |---|---|---|
 | 玩家进度、资产、背包 | 数据库中的玩家记录 | MariaDB 的 `dzm` 数据库，加上 Java 内存缓存 |
-| 卡牌、装备、奥义、活动模板 | `src/server/Code_Server/server/xml` | 默认 `runtime/server/server/xml`，启动/热加载后进入模板缓存 |
-| 服务端 Java 逻辑 | `src/server/Code_Server/server/src` | 默认 `runtime/server/server/DZM.jar` 中的字节码 |
+| 卡牌、装备、奥义、活动模板 | `server/config/xml` | 默认 `runtime/server/server/xml`，启动/热加载后进入模板缓存 |
+| 服务端 Java 逻辑 | `server/source/src` | 默认 `runtime/server/server/DZM.jar` 中的字节码 |
 
-`src/server/dzm.sql` 是新部署的初始库快照，修改它不会改变已经运行的数据库。`runtime/server/dbdata` 才是本机 MariaDB 数据目录，不应直接编辑其中的数据文件。`dzm_stat` 用于统计记录，不是玩家资产主库。
+`server/database/dzm.sql` 是新部署的初始库快照，修改它不会改变已经运行的数据库。`runtime/server/dbdata` 才是本机 MariaDB 数据目录，不应直接编辑其中的数据文件。`dzm_stat` 用于统计记录，不是玩家资产主库。
 
 默认部署资料在 `runtime/server/client-config/deployment.json`，进程/端口状态在 `runtime/server/.onepiece-server.json`。数据库登录参数由部署脚本放在 `runtime/server/private/db-client.ini`；维护工具引用该文件，不要把密码复制到文档或仓库。数据库端口应以本机配置为准。
 
 ## 2. 请求、内存修改和落库链路
 
-1. [DZM.java](../../src/server/Code_Server/server/src/com/oldmountain/dzm/DZM.java) 加载 `xml/config.xml`、Hibernate配置和 `XMLTemplateService` 模板，启动 MINA TCP 服务。
-2. [SessionHandler.java](../../src/server/Code_Server/server/src/com/oldmountain/dzm/net/SessionHandler.java) 收包后交给 [PacketHandler.java](../../src/server/Code_Server/server/src/com/oldmountain/dzm/net/packet/PacketHandler.java)，按 Protobuf 操作码调用 `packethandler`。
-3. 业务通过 `session.playerid` 获取 [ObjectAccessor.java](../../src/server/Code_Server/server/src/com/oldmountain/dzm/net/ObjectAccessor.java) 中的 `Player`。玩家对象持有卡牌、装备、奥义、背包、阵容等集合。
-4. [Player.java](../../src/server/Code_Server/server/src/com/oldmountain/dzm/entity/Player.java) 的 setter 及 `addNeedUpdate()` 标记脏数据；新增对象的一部分调用 `createSync()` 立即插入，已有对象更新常通过待落库集合处理，具体取决于业务路径。
-5. [DataLander.java](../../src/server/Code_Server/server/src/com/oldmountain/dzm/persist/DataLander.java) 调用 [EntityManagerImpl.java](../../src/server/Code_Server/server/src/com/oldmountain/dzm/persist/EntityManagerImpl.java) 的 `updateSync()`，经 Hibernate事务提交到 MariaDB。定时任务源码设置为启动后900秒首次执行、以后每600秒执行。
+1. [DZM.java](../../server/source/src/com/oldmountain/dzm/DZM.java) 加载 `xml/config.xml`、Hibernate配置和 `XMLTemplateService` 模板，启动 MINA TCP 服务。
+2. [SessionHandler.java](../../server/source/src/com/oldmountain/dzm/net/SessionHandler.java) 收包后交给 [PacketHandler.java](../../server/source/src/com/oldmountain/dzm/net/packet/PacketHandler.java)，按 Protobuf 操作码调用 `packethandler`。
+3. 业务通过 `session.playerid` 获取 [ObjectAccessor.java](../../server/source/src/com/oldmountain/dzm/net/ObjectAccessor.java) 中的 `Player`。玩家对象持有卡牌、装备、奥义、背包、阵容等集合。
+4. [Player.java](../../server/source/src/com/oldmountain/dzm/entity/Player.java) 的 setter 及 `addNeedUpdate()` 标记脏数据；新增对象的一部分调用 `createSync()` 立即插入，已有对象更新常通过待落库集合处理，具体取决于业务路径。
+5. [DataLander.java](../../server/source/src/com/oldmountain/dzm/persist/DataLander.java) 调用 [EntityManagerImpl.java](../../server/source/src/com/oldmountain/dzm/persist/EntityManagerImpl.java) 的 `updateSync()`，经 Hibernate事务提交到 MariaDB。定时任务源码设置为启动后900秒首次执行、以后每600秒执行。
 6. 响应通过 `Player.sendPacket()` 发回；客户端 `PackageLogic.cpp` 解析更新 `ServerDateManager` 等缓存，再刷新页面。
 
 因此，服务端内存、客户端画面和数据库可能暂时不一致。关闭客户端连接时，`removeOnlineSession()` 主要移除会话，不能把它当作“立即保存全部玩家数据”的保证。
 
 ### 停服和保存的实际边界
 
-[ServerShutDown.java](../../src/server/Code_Server/server/src/com/oldmountain/dzm/ServerShutDown.java) 注册了 JVM shutdown hook，其中调用 `DataLander.landingImmediately()`。但当前 Windows 部署工具的 `terminate_owned()` 使用 `TerminateProcess` 结束游戏进程，**不能依赖它执行 JVM hook**。
+[ServerShutDown.java](../../server/source/src/com/oldmountain/dzm/ServerShutDown.java) 注册了 JVM shutdown hook，其中调用 `DataLander.landingImmediately()`。但当前 Windows 部署工具的 `terminate_owned()` 使用 `TerminateProcess` 结束游戏进程，**不能依赖它执行 JVM hook**。
 
 重要进度更新后，维护前应确认对应数据已落库：可以等待落库周期，并用只读 SQL 比较目标玩家状态。备份工具备份的是数据库中已有的数据，无法取回被强制结束进程时仍只在内存中的改动。后续可单独扩展经过鉴权的“立即落库并优雅停服”管理命令；本次没有实现它。
 
 ## 3. 常用数据库表与 ID
 
-映射源在 `src/server/Code_Server/server/src/com/oldmountain/dzm/entity/*.hbm.xml`。
+映射源在 `server/source/src/com/oldmountain/dzm/entity/*.hbm.xml`。
 
 | 表 | 用途 | 关键字段 |
 |---|---|---|
@@ -107,7 +107,7 @@ SELECT id,sysgoldcoins,rechargegoldcoins FROM player WHERE id=12345;
 
 ### 5.1 GM 直接修改
 
-[UpdateUserInfoByGMhandler.java](../../src/server/Code_Server/server/src/com/oldmountain/dzm/packethandler/UpdateUserInfoByGMhandler.java) 支持以下源码格式：
+[UpdateUserInfoByGMhandler.java](../../server/source/src/com/oldmountain/dzm/packethandler/UpdateUserInfoByGMhandler.java) 支持以下源码格式：
 
 ```text
 /add gold 1000
@@ -122,7 +122,7 @@ SELECT id,sysgoldcoins,rechargegoldcoins FROM player WHERE id=12345;
 可用性有两层限制：
 
 - 服务端 `DZM.canUseGmTools` 必须为1，由 `xml/config.xml` 的 `CanUseGm` 加载；源码配置为1，但当前部署工具会改为0。源码只看到总开关，不能把它当作完整的管理员权限系统。
-- 客户端 [LeaveMsgPage.cpp](../../src/client/Game/Classes/LeaveMsgPage.cpp) 的命令分流在 `_DEBUG` 下才启用。当前 NDK `Application.mk` 为 release 原生配置，**APK 名叫 debug 不代表 C++ 定义了 `_DEBUG`**。不能假设在普通聊天窗口输入这些文本就会发GM包。
+- 客户端 [LeaveMsgPage.cpp](../../client/source/Game/Classes/LeaveMsgPage.cpp) 的命令分流在 `_DEBUG` 下才启用。当前 NDK `Application.mk` 为 release 原生配置，**APK 名叫 debug 不代表 C++ 定义了 `_DEBUG`**。不能假设在普通聊天窗口输入这些文本就会发GM包。
 
 `/additem` 的匹配还依赖 `/add` 子串；若改命令识别器，应改成明确的命令解析。针对他人的 `player <puid>` 后缀并非所有子命令都会使用，不能把所有发放命令机械地加后缀。正式扩展建议实现明确鉴权的本地管理入口。
 
@@ -167,7 +167,7 @@ GM解析器要求内容中包含逗号，不能照普通单附件格式直接少
 
 ### XML模板
 
-[CheckXml.java](../../src/server/Code_Server/server/src/com/oldmountain/dzm/persist/CheckXml.java) 每600秒检查部分XML修改时间，例如卡牌、装备、技能和缘分。它不是所有文件的通用热更新；模板重载也不等于重建所有既有玩家实例。为便于复现，个人测试优先采用明确的停服更新与重启。
+[CheckXml.java](../../server/source/src/com/oldmountain/dzm/persist/CheckXml.java) 每600秒检查部分XML修改时间，例如卡牌、装备、技能和缘分。它不是所有文件的通用热更新；模板重载也不等于重建所有既有玩家实例。为便于复现，个人测试优先采用明确的停服更新与重启。
 
 修改源码XML后，可在完成备份、停服后，以保存的部署参数重新执行 `-Action install`，它会同步 `DZM.jar`、`xml` 和 `hibernateconfig`，保留已初始化数据库。**“启动服务.cmd”在已有部署上只启动，不会复制新源码文件。**
 

@@ -39,7 +39,7 @@ Quick Tunnel 直接代理 HTTP 资源服务器，不能让旧客户端的裸 TCP
 
 ## 2. 首次准备
 
-1. 在 Windows 克隆包含本次修改的完整仓库；保留 `src`、`deployment`、`.github`、`docs` 的相对位置。
+1. 在 Windows 克隆完整仓库；保留 `client`、`server`、`resources`、`scripts`、`deployment`、`.github` 和 `docs` 的相对位置。
 2. 按 [服务端文档](SERVER_DEPLOYMENT.md) 部署到独立运行目录，例如 `D:\OnePieceServer`。
 3. 按 [完整仓库 GitHub 流程](GITHUB_REPOSITORY.md) 构建新的 `ios-modern` 客户端，并按 [客户端文档](CLIENT_BUILD.md) 完成签名和安装。
 
@@ -173,8 +173,8 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Deploy-Server.p
 
 - `deployment/websocket_gateway.py`：受限资源服务及 WebSocket/TCP 转发。
 - `deployment/external.py`、`Start-External.ps1`、`tunnel-manifest.json`：下载校验、隧道启停、邀请码管理。
-- `src/client/ios-modern/native/ConnectionSettings.*`：启动选择、配置持久化、连接检测、资源地址重映射。
-- `src/client/ios-modern/native/RemoteSocket.*`：系统 WSS 与旧 socket 接口之间的桥接。
+- `client/ios/native/ConnectionSettings.*`：启动选择、配置持久化、连接检测、资源地址重映射。
+- `client/ios/native/RemoteSocket.*`：系统 WSS 与旧 socket 接口之间的桥接。
 - `IoSocket.cpp`、`AsyncSocket.cpp`：仅 `PROJECTIOSLOCAL` 下接入外网传输，其他平台保留 TCP。
 - `PacketManager.*`、`ThreadSocket.*`：处理半包/多包、重连清空缓存，修复连接失败被覆盖和对端关闭未上报的问题。这些基础收发修复也影响原 TCP 路径，构建后应一并回归局域网连接。
 

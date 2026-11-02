@@ -44,7 +44,7 @@ OnePiece/
 
 不必复制 `.debug`、模拟器镜像、旧截图、`src.7z` 或旧调试数据库目录来完成一套全新部署。若需要保留已有玩家数据，按第 9 节先备份再恢复。
 
-建议源码放在 `D:\test\NRB-Test-game`。源码路径含中文时部署程序可读取，但 **数据库和 Java 的运行目录要求使用 ASCII 路径**，例如 `D:\OnePieceServer`，避免旧工具对中文路径的兼容问题。运行目录不能是整个源码目录、磁盘根目录或 `src` 内部目录。
+源码可放在任意有写权限的目录，默认运行目录为 `runtime/server`；入口会为旧工具准备兼容路径。运行目录不能是仓库根目录、磁盘根目录或 `client`、`server`、`resources`、`scripts` 等源码目录。中文及空格路径仍需实际环境验证。
 
 ## 3. 系统和运行时
 
@@ -91,7 +91,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Deploy-Server.p
 2. 检查独立运行目录和端口，拒绝接管其他程序。
 3. 下载、校验、解压 JDK 和 MariaDB。
 4. 生成随机数据库密码，初始化自己的数据库目录。
-5. 导入 `src/server/dzm.sql` 和 `Code_Server/dzm_stat.sql`，创建仅能操作游戏库的应用账号。
+5. 导入 `server/database/dzm.sql` 和 `Code_Server/dzm_stat.sql`，创建仅能操作游戏库的应用账号。
 6. 复制游戏服；配置 `Platform=lo`、`ServerId=01`，默认关闭 GM。
 7. 生成静态 Web 资源、服务器列表、更新清单，以及 Android 本地登录覆盖配置。
 8. 依次启动数据库、资源服务和 Java 游戏服，并报告进程和端口状态。
@@ -151,7 +151,7 @@ D:\OnePieceServer/
 }
 ```
 
-部署时也会生成仓库 `src/client/Game/proj.android/antbuild/anzhi/deployment` 的覆盖配置。默认使用本地设备账号，未接商业充值。
+部署时也会生成仓库 `client/source/Game/proj.android/antbuild/anzhi/deployment` 的覆盖配置。默认使用本地设备账号，未接商业充值。
 
 ## 6. 日常启动、停止和状态
 

@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 def table(name):
-    data = (ROOT / "src/server/ResourcesAndroid_Encrypt" / name).read_bytes()
+    data = (ROOT / "resources/client" / name).read_bytes()
     if data[:2] == b"\xef\xfe":
         key = b"youaiABC"
         data = bytes(byte ^ key[index % len(key)] for index, byte in enumerate(data[2:]))

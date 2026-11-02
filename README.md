@@ -2,6 +2,8 @@
 
 换一台电脑后，在任意有写权限的目录克隆仓库并原地部署，再按 [客户端打包流程](docs/CLIENT_BUILD.md) 生成 Android 或 iOS 客户端。
 
+项目已按客户端、服务端、公共资源、脚本、文档和历史资料分目录维护，入口见 [项目目录说明](docs/PROJECT_STRUCTURE.md)；全部文档见 [文档索引](docs/README.md)。
+
 适用环境：联网的 Windows 10/11 x64。服务端自动下载 Python、Java 和 MariaDB；Android 首次打包自动准备旧版 SDK、NDK 和 Ant，无需预装 Android Studio；iOS 使用 GitHub Actions 云端 Mac 构建。
 
 ## 1. 克隆仓库
@@ -74,10 +76,17 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Deploy-Server.p
 
 | 相对项目目录 | 用途 |
 |---|---|
+| `client/source` | 共享游戏源码、Android 工程、旧 Cocos 引擎和依赖 |
+| `client/ios` | 当前 iOS 平台实现、准备与构建脚本 |
+| `server/source`、`server/config` | Java 源码及服务端配置模板 |
+| `server/distribution`、`server/database` | 部署使用的基础 JAR 和初始 SQL |
+| `resources/client` | 游戏公共资源的唯一发布源 |
+| `scripts`、`deployment` | 共享脚本、一键部署和客户端构建入口 |
+| `archive`、`docs` | 历史资料及维护文档 |
 | `runtime/server` | 服务端、数据库、日志、备份和客户端连接参数 |
 | `tools` | Android 首次打包自动下载的 SDK、NDK、Ant，也可放入已有的兼容工具 |
 | `outputs/android` | Android 新入口输出的 APK |
-| `src/client/ios-modern/generated` | iOS 生成文件；云构建成功后从 Actions 下载 IPA |
+| `client/ios/generated` | iOS 生成文件；云构建成功后从 Actions 下载 IPA |
 
 运行数据、便携构建工具和客户端构建产物均被 Git 忽略；管理 EXE 和配套 JAR 随仓库提供。服务端会在运行期间保留自己的盘符映射，完整停服后释放；不要手动删除运行中的映射。移动整个项目之前先停止服务和构建；启动时会按新位置重写数据库路径，客户端 IP 改变时仍需更新部署参数。旧版本放在 `%LOCALAPPDATA%\OnePieceServer` 的数据不会自动迁移，管理旧实例时显式传入它的 `-InstallDir`，迁移方法见下面的参考说明。
 
@@ -87,4 +96,4 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Deploy-Server.p
 
 发放测试物品：服务启动后双击根目录 **NRB游戏管理.exe**，账号 `op_root`、密码 `hy1212`。支持按完整游戏名或全服现有角色发送传书附件，详见 [Windows 管理工具](docs/ADMIN_TOOL.md)。已有部署更新后先停服再启动一次，客户端无需重新打包。
 
-**验证状态：新电脑部署、外网链路及 iOS 构建/真机运行仍待实际验证。文档中的步骤不代表已全部实跑通过。**
+**验证状态：目录整理前已通过 iOS 云端编译、链接和 IPA 打包。本次目录调整仅作文件和路径静态检查，未重新部署或构建；新布局及其他未验证环境仍需按文档实际确认。**

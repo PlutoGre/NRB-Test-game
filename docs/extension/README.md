@@ -38,14 +38,14 @@ flowchart LR
 
 | 层次 | 主要位置 | 用途 |
 |---|---|---|
-| 服务端入口 | [DZM.java](../../src/server/Code_Server/server/src/com/oldmountain/dzm/DZM.java) | 启动配置、网络、定时任务 |
-| 网络分发 | [PacketHandler.java](../../src/server/Code_Server/server/src/com/oldmountain/dzm/net/packet/PacketHandler.java) | 按操作码分发请求 |
-| 服务端业务 | `src/server/Code_Server/server/src/com/oldmountain/dzm/{packethandler,services,util,entity,persist}` | 业务、实体、缓存与持久化 |
-| 客户端逻辑 | `src/client/Game/{Classes,Protobuf,Platform}` | C++ 页面、协议及平台接口 |
-| Android 接入 | `src/client/Game/proj.android/src` | Activity、存储、登录与资源准备 |
-| iOS 接入 | `src/client/ios-modern` | 新 iOS 工程、资源准备及构建 |
-| 资源发布源 | `src/server/ResourcesAndroid_Encrypt` | 两端打包与 HTTP 资源生成的实际输入 |
-| 明文资源资料 | `src/server/haizei/Resource_Client/Resource_Client` | 文本表、图片、Lua 等编辑参考 |
+| 服务端入口 | [DZM.java](../../server/source/src/com/oldmountain/dzm/DZM.java) | 启动配置、网络、定时任务 |
+| 网络分发 | [PacketHandler.java](../../server/source/src/com/oldmountain/dzm/net/packet/PacketHandler.java) | 按操作码分发请求 |
+| 服务端业务 | `server/source/src/com/oldmountain/dzm/{packethandler,services,util,entity,persist}` | 业务、实体、缓存与持久化 |
+| 客户端逻辑 | `client/source/Game/{Classes,Protobuf,Platform}` | C++ 页面、协议及平台接口 |
+| Android 接入 | `client/source/Game/proj.android/src` | Activity、存储、登录与资源准备 |
+| iOS 接入 | `client/ios` | 新 iOS 工程、资源准备及构建 |
+| 资源发布源 | `resources/client` | 两端打包与 HTTP 资源生成的实际输入 |
+| 明文资源资料 | `archive/client-resources` | 文本表、图片、Lua 等编辑参考 |
 | 自动部署 | [deployment/server.py](../../deployment/server.py) | 安装运行目录、数据库、启动停止和备份 |
 
 ## 当前内容规模

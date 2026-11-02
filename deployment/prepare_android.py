@@ -8,11 +8,11 @@ import subprocess
 import sys
 import xml.etree.ElementTree as ET
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src/tools"))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 from project_paths import project_path, project_root
 
 REPO = project_root()
-PROJECT = REPO / "src/client/Game/proj.android"
+PROJECT = REPO / "client/source/Game/proj.android"
 
 
 def backup_write(path, text):
@@ -63,7 +63,7 @@ def main():
     shutil.copytree(PROJECT / "res_anzhi", channel / "res", dirs_exist_ok=True)
     assets = channel / "assets"
     assets.mkdir(exist_ok=True)
-    resource_root = REPO / "src/server/ResourcesAndroid_Encrypt"
+    resource_root = REPO / "resources/client"
     excluded = {".php", ".html", ".js", ".sql", ".pem", ".xls", ".xlsx", ".doc", ".docx", ".zip"}
     for path in resource_root.rglob("*"):
         if not path.is_file() or path.suffix.lower() in excluded or "summary_dzm" in path.parts:
@@ -71,9 +71,9 @@ def main():
         target = assets / path.relative_to(resource_root)
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(path, target)
-    for path in (REPO / "src/client/Game/anzhiRes").rglob("*"):
+    for path in (REPO / "client/source/Game/anzhiRes").rglob("*"):
         if path.is_file():
-            relative = path.relative_to(REPO / "src/client/Game/anzhiRes")
+            relative = path.relative_to(REPO / "client/source/Game/anzhiRes")
             target = assets / relative
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(path, target)
@@ -83,8 +83,8 @@ def main():
         if not source.is_file():
             parser.error("Missing bundled dependency: " + str(source))
         shutil.copy2(source, channel / "libs" / source.name)
-    resource_library = REPO / "src/client/91lib/Android/AnZhiSdkPro"
-    references = (REPO / "src/client/cocos2dx/platform/android/java", resource_library)
+    resource_library = REPO / "client/source/91lib/Android/AnZhiSdkPro"
+    references = (REPO / "client/source/cocos2dx/platform/android/java", resource_library)
     # SDK 的 Ant 任务按 Java 进程工作目录检查 sdk.dir，不能使用各子库自己的相对路径。
     # 每次从当前参数生成绝对路径，并保留构建入口提供的临时盘符。
     sdk_property = property_path(sdk)

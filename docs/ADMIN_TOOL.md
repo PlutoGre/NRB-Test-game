@@ -98,7 +98,7 @@
 源码入口：
 
 - [桌面界面](../deployment/admin/AdminTool.cs)
-- [服务端管理模块](../src/server/Code_Server/server/src/com/oldmountain/dzm/admin/)
+- [服务端管理模块](../server/source/src/com/oldmountain/dzm/admin/)
 - [一键启动接入](../deployment/server.py)
 - [生成脚本](../deployment/Build-Admin.ps1)
 

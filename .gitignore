@@ -73,7 +73,7 @@ id_ed25519
 .env.*
 
 # This is an old channel APK delivery archive, not a source/build dependency.
-/src/client/Game/proj.android/antbuild/dangle/*.zip
+/client/source/Game/proj.android/antbuild/dangle/*.zip
 
 # Runtime data must stay outside the repository (normally LOCALAPPDATA).
 **/.onepiece-server.json
@@ -81,4 +81,4 @@ id_ed25519
 **/private/credentials.json
 
 # Unused legacy recharge sample contains an embedded RSA private key.
-/src/server/Code_Server/recharge/sdk/MyRsa.php
+/archive/server/legacy-source/recharge/sdk/MyRsa.php

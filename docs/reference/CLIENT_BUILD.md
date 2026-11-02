@@ -4,12 +4,12 @@
 
 ## 1. 当前项目状态与路径约定
 
-这不是一个可以直接用最新 Android Studio 打开的 Gradle 项目。游戏使用旧 Cocos2d-x、C++/Lua、Protobuf，Android 构建入口为 NDK + Ant；新 iOS 入口是 `src/client/ios-modern`。
+这不是一个可以直接用最新 Android Studio 打开的 Gradle 项目。游戏使用旧 Cocos2d-x、C++/Lua、Protobuf，Android 构建入口为 NDK + Ant；新 iOS 入口是 `client/ios`。
 
 | 平台 | 入口 | 当前范围 |
 |---|---|---|
-| Android | `src/client/Game/proj.android` 和 `antbuild/anzhi` | ARM32：armeabi、armeabi-v7a；本地登录、公告及打包准备已修改 |
-| iOS | `src/client/ios-modern` | ARM64/CMake/Xcode、本地账号、系统桥接及外网 WSS；已通过云端编译、链接和 IPA 打包，待签名与真机验证 |
+| Android | `client/source/Game/proj.android` 和 `antbuild/anzhi` | ARM32：armeabi、armeabi-v7a；本地登录、公告及打包准备已修改 |
+| iOS | `client/ios` | ARM64/CMake/Xcode、本地账号、系统桥接及外网 WSS；已通过云端编译、链接和 IPA 打包，待签名与真机验证 |
 
 2026-11-02 已实际完成 iOS ARM64 云端编译、链接及 IPA 打包，结果见 [iOS 构建验证](IOS_BUILD_VALIDATION.md)。下文保留不同构建方式及历史排查说明，不代表全部命令都已在每一种新电脑环境中验证。此前 `.debug/onepiece/local-offline.apk` 是历史玩法调试包；当前 Android 产物与操作以 [简明客户端打包流程](../CLIENT_BUILD.md) 为准。
 
@@ -44,7 +44,7 @@ D:\OnePieceServer\client-config\game.properties
 首次部署已经生成安智渠道的 `deployment` 配置。只想重新生成配置时，在源码根目录执行下面的工具；它不编译、不启动服务：
 
 ```powershell
-python .\src\tools\configure_deployment.py `
+python .\scripts\configure_deployment.py `
   --host 192.168.1.100 --web-port 18081 --game-port 25524 `
   --resource-version 1.78.6 --channel anzhi --local-login `
   --web-root D:\OnePieceServer\web
@@ -127,7 +127,7 @@ python .\deployment\prepare_android.py --sdk D:\Tools\AndroidLegacySDK --skip-na
 打开 Cygwin Bash。在 Bash 内执行，路径需使用 Cygwin 形式：
 
 ```bash
-cd /cygdrive/d/test/NRB-Test-game/src/client/Game/proj.android
+cd /cygdrive/d/test/NRB-Test-game/client/source/Game/proj.android
 export NDK_ROOT=/cygdrive/d/Tools/android-ndk-r8e
 export CLIENT_ROOT="$(cd ../.. && pwd)"
 export NDK_MODULE_PATH="$CLIENT_ROOT:$CLIENT_ROOT/cocos2dx/platform/third_party/android/prebuilt"
@@ -145,8 +145,8 @@ APP_PLATFORM := android-9
 成功后应生成：
 
 ```text
-src/client/Game/proj.android/libs/armeabi/libDreamOnePiece.so
-src/client/Game/proj.android/libs/armeabi-v7a/libDreamOnePiece.so
+client/source/Game/proj.android/libs/armeabi/libDreamOnePiece.so
+client/source/Game/proj.android/libs/armeabi-v7a/libDreamOnePiece.so
 ```
 
 不要直接使用 `build_native.sh` 中残留的旧开发者绝对资源路径。本流程直接调用 NDK，资源由准备工具复制。若出现 r8e 自身兼容问题，保留第一条实际编译错误再处理；不能把只生成新 APK 外壳、却沿用旧 `.so` 的结果当作完成了 C++ 修复构建。
@@ -166,7 +166,7 @@ python .\deployment\prepare_android.py --sdk D:\Tools\AndroidLegacySDK
 ### 4.4 生成本地调试 APK
 
 ```powershell
-Set-Location D:\test\NRB-Test-game\src\client\Game\proj.android\antbuild\anzhi
+Set-Location D:\test\NRB-Test-game\client\source\Game\proj.android\antbuild\anzhi
 ant "-Ddeployment.python=C:/你的Python目录/python.exe" debug
 ```
 
@@ -323,9 +323,9 @@ GitHub 网页单文件上传限制 25 MiB，所以已拆成每个不超过 20 Mi
 
 ## 7. iOS：在 Mac 本地或远程 SSH 构建
 
-也可把完整项目或 `src/client/ios-modern/dist/onepiece-ios-source.zip` 交给一台可用 Mac。需要完整 Xcode、Python 3.10+、CMake 3.24+。打开 Xcode 完成首次初始化；命令行工具应指向完整 Xcode。
+也可把完整项目或 `client/ios/dist/onepiece-ios-source.zip` 交给一台可用 Mac。需要完整 Xcode、Python 3.10+、CMake 3.24+。打开 Xcode 完成首次初始化；命令行工具应指向完整 Xcode。
 
-在 Mac 的 `src/client/ios-modern` 内执行：
+在 Mac 的 `client/ios` 内执行：
 
 ```bash
 python3 prepare.py --host 192.168.1.100 --web-port 18081 --game-port 25524 --resource-version 1.78.6

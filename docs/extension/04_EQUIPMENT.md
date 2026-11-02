@@ -4,7 +4,7 @@
 
 ## 1. 数量和分类
 
-服务端 [equip.xml](../../src/server/Code_Server/server/xml/equip.xml) 与客户端 [Equips.txt](../../src/server/haizei/Resource_Client/Resource_Client/Equips.txt) 均有 **91个不同模板ID，连续1～91**。两端ID集合一致，发布表解码后与明文资料一致。
+服务端 [equip.xml](../../server/config/xml/equip.xml) 与客户端 [Equips.txt](../../archive/client-resources/Equips.txt) 均有 **91个不同模板ID，连续1～91**。两端ID集合一致，发布表解码后与明文资料一致。
 
 | type | 类别 | A品质 | B品质 | C品质 | D品质 | 总计 |
 |---:|---|---:|---:|---:|---:|---:|
@@ -28,11 +28,11 @@
 | `equipmentFragment.txt`、相关页面 | 碎片/锻造资料，不计入91个完整装备模板 |
 | `dzm.equip`、`dzm.battle` | 玩家装备实例及穿戴引用/战斗属性 |
 
-实例创建：[EquipUtil.newEquip()](../../src/server/Code_Server/server/src/com/oldmountain/dzm/util/EquipUtil.java) / [EquipServices.java](../../src/server/Code_Server/server/src/com/oldmountain/dzm/services/EquipServices.java)。创建时按类型把 `quantity` 写入 attack/defence/health，再加入玩家装备集合与保存逻辑。
+实例创建：[EquipUtil.newEquip()](../../server/source/src/com/oldmountain/dzm/util/EquipUtil.java) / [EquipServices.java](../../server/source/src/com/oldmountain/dzm/services/EquipServices.java)。创建时按类型把 `quantity` 写入 attack/defence/health，再加入玩家装备集合与保存逻辑。
 
-穿戴：[ChangeEquipHandler.java](../../src/server/Code_Server/server/src/com/oldmountain/dzm/packethandler/ChangeEquipHandler.java) 校验实例与位置，更新Battle引用，调用阵容属性重算。客户端入口为 `TeamPage`、`EquipmentInfo`、装备选择页。
+穿戴：[ChangeEquipHandler.java](../../server/source/src/com/oldmountain/dzm/packethandler/ChangeEquipHandler.java) 校验实例与位置，更新Battle引用，调用阵容属性重算。客户端入口为 `TeamPage`、`EquipmentInfo`、装备选择页。
 
-强化：[UpgradeEquipHandler.java](../../src/server/Code_Server/server/src/com/oldmountain/dzm/packethandler/UpgradeEquipHandler.java) 检查条件和贝里、计算强化结果、写等级/属性、重算阵容并响应；客户端 `EquipEnhancePage.cpp` 负责交互和结果显示。
+强化：[UpgradeEquipHandler.java](../../server/source/src/com/oldmountain/dzm/packethandler/UpgradeEquipHandler.java) 检查条件和贝里、计算强化结果、写等级/属性、重算阵容并响应；客户端 `EquipEnhancePage.cpp` 负责交互和结果显示。
 
 精炼与宝石：`RefineEquipHandler`、`EquipDiamondHandler`、`Equip.calcEquipAttr()`。基础成长可理解为 `quantity + (level-1)*growth`，最终属性还应看精炼、宝石等计算，不能只用这一式解释所有实例。
 
@@ -50,7 +50,7 @@
 
 1. 在 `equip.xml` 复制同类型同品质记录，新增ID92，设置 `type/quality/quantity/growth`。
 2. 在 `Equips.txt` 新增相同ID、名称、类型、品质、描述、初始值、成长、图标/海报/名字图。注意该表第3列是**类型**，第4列才是品质。
-3. 添加 `equipposter` 图片或合图帧，必要时更新依赖；同步 `ResourcesAndroid_Encrypt` 的表和图片。
+3. 添加 `equipposter` 图片或合图帧，必要时更新依赖；同步 `resources/client` 的表和图片。
 4. 为关卡、选择器、宝箱、商店或管理发放逻辑添加获取途径。需要人物装备缘分时，添加 `fate.xml type=3 require=92` 和对应客户端 `Yuanfens.txt`，再引用到卡牌缘分槽。
 5. 更新运行端XML、资源版本及安装包。单纯增加现有类型的装备模板一般不需要改数据库结构。
 6. 后续验证：获得实例、装备列表、穿戴/替换/卸下、强化扣费和属性、缘分触发、战斗与重登。

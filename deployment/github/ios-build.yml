@@ -92,23 +92,23 @@ jobs:
           cat outputs/environment.txt
 
       - name: Prepare client sources and assets
-        working-directory: work/src/client/ios-modern
+        working-directory: work/client/ios
         run: python prepare.py --host "$SERVER_HOST" --web-port "$WEB_PORT" --game-port "$GAME_PORT" --resource-version "$RESOURCE_VERSION"
 
       - name: Compile unsigned iPhone client
-        working-directory: work/src/client/ios-modern
+        working-directory: work/client/ios
         run: python build.py --action build --sdk iphoneos --bundle-id org.onepiece.local
 
       - name: Package unsigned app
         shell: bash
         run: |
           tar -czf outputs/onepiece-unsigned-iphoneos-app.tar.gz \
-            -C work/src/client/ios-modern/generated/build-iphoneos/DerivedData/Build/Products/Debug-iphoneos \
+            -C work/client/ios/generated/build-iphoneos/DerivedData/Build/Products/Debug-iphoneos \
             OnePiece.app
           python - <<'PY'
           from pathlib import Path
           import zipfile
-          products = Path('work/src/client/ios-modern/generated/build-iphoneos/DerivedData/Build/Products/Debug-iphoneos')
+          products = Path('work/client/ios/generated/build-iphoneos/DerivedData/Build/Products/Debug-iphoneos')
           app = products / 'OnePiece.app'
           with zipfile.ZipFile('outputs/onepiece-unsigned-for-resigning.ipa', 'w', zipfile.ZIP_DEFLATED) as archive:
               for path in sorted(app.rglob('*')):
@@ -138,7 +138,7 @@ jobs:
           name: ios-build-logs
           path: |
             outputs/environment.txt
-            work/src/client/ios-modern/generated/build-iphoneos/build.log
-            work/src/client/ios-modern/generated/build-iphoneos/result.json
+            work/client/ios/generated/build-iphoneos/build.log
+            work/client/ios/generated/build-iphoneos/result.json
           if-no-files-found: warn
           retention-days: 7

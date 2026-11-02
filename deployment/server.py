@@ -29,7 +29,7 @@ import zipfile
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parent
 sys.path.insert(0, str(HERE))
-sys.path.insert(0, str(REPO / "src/tools"))
+sys.path.insert(0, str(REPO / "scripts"))
 from project_paths import DEFAULT_INSTALL_DIR, project_path
 from runtime_paths import ensure_alias, release_alias
 MANIFEST = json.loads((HERE / "runtime-manifest.json").read_text(encoding="utf-8"))
@@ -362,9 +362,9 @@ class Deployment:
         importing.touch()
         self.run(self.database_command() + ["-e", "CREATE DATABASE IF NOT EXISTS dzm CHARACTER SET utf8 COLLATE utf8_bin"],
                  "Create application database")
-        seed = REPO / "src/server/dzm.sql"
+        seed = REPO / "server/database/dzm.sql"
         self.run(self.database_command() + ["--database=dzm"], "Import bundled game schema", seed.read_bytes())
-        stat_seed = REPO / "src/server/Code_Server/dzm_stat.sql"
+        stat_seed = REPO / "server/database/dzm_stat.sql"
         self.run(self.database_command(), "Import bundled statistics schema", stat_seed.read_bytes())
         password = self.credentials["appPassword"]
         grant = ""
@@ -377,12 +377,12 @@ class Deployment:
         importing.unlink()
 
     def configure_server(self):
-        source = REPO / "src/server/Code_Server/server"
+        source = REPO / "server"
         target = self.root / "server"
         target.mkdir(exist_ok=True)
-        shutil.copy2(source / "DZM.jar", target / "DZM.jar")
+        shutil.copy2(source / "distribution/DZM.jar", target / "DZM.jar")
         for name in ("xml", "hibernateconfig"):
-            shutil.copytree(source / name, target / name, dirs_exist_ok=True)
+            shutil.copytree(source / "config" / name, target / name, dirs_exist_ok=True)
         config = target / "xml/config.xml"
         tree = ET.parse(config)
         for query, value in (("connection/address", "0.0.0.0"), ("connection/port", str(self.state["gamePort"])),
@@ -408,7 +408,7 @@ class Deployment:
         hibernate.write_text(text, encoding="utf-8")
 
     def configure_resources(self):
-        command = [sys.executable, REPO / "src/tools/configure_deployment.py", "--host", self.state["host"],
+        command = [sys.executable, REPO / "scripts/configure_deployment.py", "--host", self.state["host"],
                    "--web-port", str(self.state["webPort"]), "--game-port", str(self.state["gamePort"]),
                    "--resource-version", self.state["resourceVersion"], "--channel", self.state["channel"],
                    "--local-login", "--web-root", self.root / "web"]
@@ -466,10 +466,11 @@ class Deployment:
         ports = (args.web_port, args.game_port, args.db_port)
         if not re.fullmatch(r"\d+\.\d+\.\d+", args.resource_version):
             raise RuntimeError("Resource version must have three numeric components")
-        for name in ("src/server/Code_Server/server/DZM.jar", "src/server/dzm.sql", "src/server/Code_Server/dzm_stat.sql",
-                     "src/tools/configure_deployment.py", "src/server/ResourcesAndroid_Encrypt"):
+        for name in ("server/distribution/DZM.jar", "server/database/dzm.sql", "server/database/dzm_stat.sql",
+                     "server/config/xml/config.xml", "server/config/hibernateconfig/hibernate_lo_01.cfg.xml",
+                     "scripts/configure_deployment.py", "resources/client"):
             if not (REPO / name).exists():
-                raise RuntimeError("Copy the full src directory; missing " + name)
+                raise RuntimeError("Clone or copy the full project; missing " + name)
         requested = {"host": args.host, "webPort": args.web_port, "gamePort": args.game_port,
                      "dbPort": args.db_port, "resourceVersion": args.resource_version, "channel": args.channel}
         if self.state and any(self.owned(name) for name in ("database", "web", "game", "gateway", "tunnel")):
