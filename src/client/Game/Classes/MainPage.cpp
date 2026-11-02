@@ -439,7 +439,7 @@ void MainPage::_refreshBattle(void)
 				sprite->setTexture(::getTeamDefaultPic().c_str());
 			}
 			framebutton->retain();
-			mFrameBtnList.insert(std::make_pair<unsigned int,CCBContainer*>(_index,framebutton));
+			mFrameBtnList.insert(std::pair<unsigned int,CCBContainer*>(_index,framebutton));
 			node->addChild(framebutton);
 			framebutton->setPosition(ccp(size.width,5.0f));
 			size.width += framebutton->getContentSize().width;
@@ -518,7 +518,7 @@ void MainPage::_refreshBattle(void)
 			sprite->setTexture(::getTeamLockPic().c_str());
 		}
 		framebutton->retain();
-		mFrameBtnList.insert(std::make_pair<unsigned int,CCBContainer*>(_index,framebutton));
+		mFrameBtnList.insert(std::pair<unsigned int,CCBContainer*>(_index,framebutton));
 		node->addChild(framebutton);
 		framebutton->setPosition(ccp(size.width,5.0f));
 		size.width += framebutton->getContentSize().width;

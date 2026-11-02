@@ -377,7 +377,7 @@ void ViewTeamPage::addCardItem( ContentBase* item )
 	CCBContainer* container = item->getContainerNode();
 	if(container)
 	{
-		mPersonCardContentList.insert(std::make_pair<unsigned int, ContentBase *>(mPersonCardContentList.size() + 1, item));
+		mPersonCardContentList.insert(std::pair<unsigned int, ContentBase *>(mPersonCardContentList.size() + 1, item));
  		mPersonCardRootNode->addChild(container);
  
  		CCPoint pos = ccp(container->getContentSize().width * (mPersonCardContentList.size()-1), 0);
@@ -393,7 +393,7 @@ void ViewTeamPage::addIconItem( ContentBase* item )
 	CCBContainer* container = item->getContainerNode();
 	if(container)
 	{
-		mPersonIconContentList.insert(std::make_pair<unsigned int, ContentBase *>(mPersonIconContentList.size() + 1, item));
+		mPersonIconContentList.insert(std::pair<unsigned int, ContentBase *>(mPersonIconContentList.size() + 1, item));
 		mPersonIconRootNode->addChild(container);
 
 		CCPoint pos = ccp(container->getContentSize().width * (mPersonIconContentList.size()-1), 5.0f);

@@ -81,7 +81,7 @@ def main():
         return
     # Finish independent compilation tasks to collect compatibility errors in
     # one run; xcodebuild still returns failure when any compilation fails.
-    command = ["xcodebuild", "-PBXBuildsContinueAfterErrors=YES",
+    command = ["xcodebuild", "-IDEBuildingContinueBuildingAfterErrors=YES",
                "-project", str(build / "OnePieceIOS.xcodeproj"), "-scheme", "OnePiece",
                "-configuration", args.configuration, "-sdk", args.sdk,
                "-destination", "generic/platform=" + ("iOS" if args.sdk == "iphoneos" else "iOS Simulator"),
