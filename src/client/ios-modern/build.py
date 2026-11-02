@@ -79,7 +79,10 @@ def main():
     if args.action == "configure":
         print("Xcode project:", build / "OnePieceIOS.xcodeproj")
         return
-    command = ["xcodebuild", "-project", str(build / "OnePieceIOS.xcodeproj"), "-scheme", "OnePiece",
+    # Finish independent compilation tasks to collect compatibility errors in
+    # one run; xcodebuild still returns failure when any compilation fails.
+    command = ["xcodebuild", "-PBXBuildsContinueAfterErrors=YES",
+               "-project", str(build / "OnePieceIOS.xcodeproj"), "-scheme", "OnePiece",
                "-configuration", args.configuration, "-sdk", args.sdk,
                "-destination", "generic/platform=" + ("iOS" if args.sdk == "iphoneos" else "iOS Simulator"),
                "-derivedDataPath", str(build / "DerivedData")]

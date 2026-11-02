@@ -52,6 +52,11 @@ namespace cocos2d {
 #define fopen64 fopen
 #define ftello64 ftell
 #define fseeko64 fseek
+#elif defined(__APPLE__)
+/* Darwin's off_t APIs already use 64-bit offsets and have no *64 aliases. */
+#define fopen64 fopen
+#define ftello64 ftello
+#define fseeko64 fseeko
 #else
 #ifdef _MSC_VER
  #define fopen64 fopen

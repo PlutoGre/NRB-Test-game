@@ -99,6 +99,13 @@ foreach(framework UIKit Foundation CoreGraphics QuartzCore OpenGLES AudioToolbox
     target_link_libraries(OnePiece PRIVATE "${OP_${framework}}")
 endforeach()
 
+# An explicit runtime directory suppresses Xcode's automatic SDK suffix.
+if(CMAKE_OSX_SYSROOT MATCHES "[Ss]imulator")
+    set(OP_APP_PLATFORM "iphonesimulator")
+else()
+    set(OP_APP_PLATFORM "iphoneos")
+endif()
+
 # Copy directories without flattening lua/, sound/ and texture subdirectories.
 add_custom_command(TARGET OnePiece POST_BUILD
     COMMAND "${CMAKE_COMMAND}" -E copy_directory "${OP_ASSET_DIR}" "$<TARGET_BUNDLE_DIR:OnePiece>"
@@ -106,7 +113,7 @@ add_custom_command(TARGET OnePiece POST_BUILD
 set_target_properties(OnePiece PROPERTIES
     # Keep the app path consistent with build.py and both packaging workflows.
     # Setting the target output directory also updates TARGET_BUNDLE_DIR above.
-    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/DerivedData/Build/Products"
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/DerivedData/Build/Products/$<CONFIG>-${OP_APP_PLATFORM}"
     MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/Info.plist.in"
     MACOSX_BUNDLE_GUI_IDENTIFIER "${OP_BUNDLE_ID}"
     XCODE_ATTRIBUTE_PRODUCT_BUNDLE_IDENTIFIER "${OP_BUNDLE_ID}"
