@@ -6,7 +6,8 @@
 NRB-Test-game/
 ├─ client/
 │  ├─ source/              共享游戏源码、Android 工程、旧引擎及依赖
-│  └─ ios/                 当前 iOS 平台实现和构建入口
+│  ├─ ios/                 当前 iOS 平台实现和构建入口
+│  └─ web/                 WebAssembly 平台接口、画布入口和构建脚本
 ├─ server/
 │  ├─ source/              Java 源码、依赖及原工程文件
 │  ├─ config/              XML 玩法模板和 Hibernate 部署模板
@@ -34,6 +35,7 @@ NRB-Test-game/
 | Android Java 与原生工程 | `client/source/Game/proj.android` |
 | 协议定义和生成文件 | 客户端 `client/source/Game/Protobuf`，服务端 `server/source/src` 中相应协议文件 |
 | iOS 系统接口、网络、启动页 | `client/ios/native` |
+| Web 平台接口、网络、启动页 | `client/web/native`、`client/web/shell` |
 | 服务端玩法、实体、奖励、持久化 | `server/source/src/com/oldmountain/dzm` |
 | 服务端卡牌、装备、奥义、活动数值 | `server/config/xml` |
 | 游戏内图片、布局、Lua、文本和音效 | `resources/client` |

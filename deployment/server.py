@@ -473,7 +473,7 @@ class Deployment:
                 raise RuntimeError("Clone or copy the full project; missing " + name)
         requested = {"host": args.host, "webPort": args.web_port, "gamePort": args.game_port,
                      "dbPort": args.db_port, "resourceVersion": args.resource_version, "channel": args.channel}
-        if self.state and any(self.owned(name) for name in ("database", "web", "game", "gateway", "tunnel")):
+        if self.state and any(self.owned(name) for name in ("database", "web", "game", "gateway", "tunnel", "browser")):
             if all(self.state.get(key) == value for key, value in requested.items()) and self.state.get("installed"):
                 self.start()
                 return
@@ -642,6 +642,7 @@ class Deployment:
     def stop(self):
         self.require_installed()
         self.terminate_owned("tunnel")
+        self.terminate_owned("browser")
         self.terminate_owned("gateway")
         self.terminate_owned("game")
         self.terminate_owned("web")
@@ -677,9 +678,14 @@ class Deployment:
             print("External URL/invitation: use Start-External.ps1 -Action status with the same InstallDir")
         print("Runtime:", self.root)
 
+        if self.state.get("browser"):
+            browser = self.state["browser"]
+            print("browser:", "owned/running" if self.owned("browser") else "not running", "port", browser["port"])
+            print("Browser URL:", browser["origin"] + "/")
+
     def backup(self):
         self.require_installed()
-        if any(self.owned(name) for name in ("game", "gateway", "tunnel")):
+        if any(self.owned(name) for name in ("game", "gateway", "tunnel", "browser")):
             raise RuntimeError("Stop the deployment before backup so gameplay writes cannot change during export")
         self.ensure_db()
         folder = self.root / "backups"
@@ -713,7 +719,7 @@ class Deployment:
         checksum = source.with_suffix(source.suffix + ".sha256")
         if not checksum.is_file() or digest(source) != checksum.read_text().split()[0]:
             raise RuntimeError("Restore backup is missing its checksum file or is corrupted")
-        if any(self.owned(name) for name in ("game", "web", "gateway", "tunnel")):
+        if any(self.owned(name) for name in ("game", "web", "gateway", "tunnel", "browser")):
             raise RuntimeError("Stop game and web before restore")
         self.ensure_db()
         self.backup()

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#12223b">
+  <title>男人帮 · 网页客户端</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/web.js" defer></script>
+</head>
+<body>
+  <main id="game-frame">
+    <canvas id="game" width="640" height="960" tabindex="0" aria-label="男人帮游戏画面"></canvas>
+    <section id="boot" class="cover" aria-live="polite">
+      <h1>男人帮</h1>
+      <p id="status">正在检查服务端…</p>
+      <progress id="progress" max="100" value="0"></progress>
+      <button id="start" disabled>进入男人帮1区</button>
+      <p class="hint">首次进入需要下载游戏资源。游戏进度保存在服务端。<br>请使用固定网址和浏览器，保留当前游客角色。</p>
+      <pre id="error" hidden></pre>
+    </section>
+    <div id="waiting" role="status" hidden>正在与服务端通信…</div>
+  </main>
+  <dialog id="message"><p></p><button>确定</button></dialog>
+  <dialog id="input"><form method="dialog"><label>请输入内容</label><div id="input-control"></div><button value="ok">确定</button></form></dialog>
+  <dialog id="board"><button id="close-board">关闭公告</button><iframe title="游戏公告" sandbox="allow-same-origin"></iframe></dialog>
+  <noscript>需要启用 JavaScript 和 WebAssembly 才能运行游戏。</noscript>
+</body>
+</html>

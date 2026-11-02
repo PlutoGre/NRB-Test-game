@@ -1,0 +1,34 @@
+name: Build Web client
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 120
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Cache pinned Emscripten
+        uses: actions/cache@v4
+        with:
+          path: tools/emsdk
+          key: nrb-web-emsdk-3.1.74-ubuntu22-v1
+      - name: Compile original game to WebAssembly
+        run: python client/web/build.py --jobs 2
+      - name: Upload build logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: web-build-logs
+          path: client/web/generated/logs
+          if-no-files-found: ignore
+      - name: Upload Web distribution
+        uses: actions/upload-artifact@v4
+        with:
+          name: nrb-web-client
+          path: outputs/web/
+          if-no-files-found: error

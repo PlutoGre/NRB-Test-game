@@ -39,6 +39,8 @@ Get-Content .\runtime\server\client-config\deployment.json
 
 记下 `host`、`webPort`、`gamePort`、`resourceVersion`，接着打开 **[客户端打包流程](docs/CLIENT_BUILD.md)**。
 
+网页客户端新增独立入口：先运行 `deployment/build-web.cmd` 构建，再运行 `deployment/start-web.cmd`，浏览器访问窗口显示的网址。也可在 GitHub Actions 手动运行 **Build Web client**，下载产物放到 `outputs/web` 后启动。详见 [网页客户端流程及验证状态](docs/WEB_CLIENT.md)。本次未执行 Web 编译或浏览器验证。
+
 ### 仅在部署遇到问题时使用
 
 | 情况 | 处理 |
@@ -78,6 +80,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Deploy-Server.p
 |---|---|
 | `client/source` | 共享游戏源码、Android 工程、旧 Cocos 引擎和依赖 |
 | `client/ios` | 当前 iOS 平台实现、准备与构建脚本 |
+| `client/web` | 网页平台接口、画布宿主页、WebAssembly 构建脚本 |
 | `server/source`、`server/config` | Java 源码及服务端配置模板 |
 | `server/distribution`、`server/database` | 部署使用的基础 JAR 和初始 SQL |
 | `resources/client` | 游戏公共资源的唯一发布源 |
@@ -86,6 +89,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Deploy-Server.p
 | `runtime/server` | 服务端、数据库、日志、备份和客户端连接参数 |
 | `tools` | Android 首次打包自动下载的 SDK、NDK、Ant，也可放入已有的兼容工具 |
 | `outputs/android` | Android 新入口输出的 APK |
+| `outputs/web` | 网页构建产物，使用网页网关提供访问 |
 | `client/ios/generated` | iOS 生成文件；云构建成功后从 Actions 下载 IPA |
 
 运行数据、便携构建工具和客户端构建产物均被 Git 忽略；管理 EXE 和配套 JAR 随仓库提供。服务端会在运行期间保留自己的盘符映射，完整停服后释放；不要手动删除运行中的映射。移动整个项目之前先停止服务和构建；启动时会按新位置重写数据库路径，客户端 IP 改变时仍需更新部署参数。旧版本放在 `%LOCALAPPDATA%\OnePieceServer` 的数据不会自动迁移，管理旧实例时显式传入它的 `-InstallDir`，迁移方法见下面的参考说明。
