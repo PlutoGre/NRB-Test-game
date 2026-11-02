@@ -74,6 +74,7 @@ def confirm_public(deployment, settings, seconds):
     """Compare public readiness with the local gateway, without logging in a player."""
     expected = local_health(deployment, settings)
     settings["localReady"] = True
+    settings["downloads"] = expected.get("downloads", {})
     deadline, last_error, last_kind = time.monotonic() + seconds, "not checked", "request"
     while True:
         if not deployment.owned(WEB) or not deployment.owned(TUNNEL):
@@ -131,6 +132,11 @@ def details(deployment):
     if running and origin:
         print("Web HTTPS URL: " + origin + "/", flush=True)
         print("URL saved: " + str(deployment.root / URL_FILE), flush=True)
+        downloads = settings.get("downloads", {})
+        if downloads.get("originalBytes") and downloads.get("gzipBytes"):
+            print("Web bundle: {:.1f} MiB original; {:.1f} MiB gzip transfer estimate."
+                  .format(downloads["originalBytes"] / 1048576, downloads["gzipBytes"] / 1048576), flush=True)
+            print("Repeat downloads use browser cache after ETag revalidation.", flush=True)
         if settings.get("publicReady"):
             print("Public readiness: confirmed at " + time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(settings["checkedAt"])), flush=True)
         else:
@@ -214,7 +220,7 @@ def start(deployment, args):
              and previous.get("protocol") == args.protocol)
     fingerprint = server.digest(args.build_dir / "web-client.json")
     gateway_digest = hashlib.sha256()
-    for source in (HERE / "web_client.py", HERE / "websocket_gateway.py", HERE / "server.py",
+    for source in (HERE / "web_client.py", HERE / "web_assets.py", HERE / "websocket_gateway.py", HERE / "server.py",
                    HERE.parent / "scripts/project_paths.py"):
         gateway_digest.update(source.read_bytes())
     gateway_fingerprint = gateway_digest.hexdigest()

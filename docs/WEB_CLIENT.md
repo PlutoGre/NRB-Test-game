@@ -89,6 +89,23 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Start-Web.ps1 -
 
 本次已使用当前电脑的已有 Web 包实际启动外网入口，下载隧道工具，取得 HTTPS 地址，并确认公网就绪响应与本机网关一致。没有重新编译客户端，也没有执行全新 Windows 初始化或公网浏览器玩法测试；此前玩法实测使用本地浏览器入口。
 
+### 多台手机同时进入，游戏包下载慢
+
+资源虽然放在开服电脑上，手机仍需通过网络下载网页游戏包，再在手机浏览器中运行。当前已有包的未压缩文件合计约 40 MB；多台手机首次打开时，各自都需要下载，并共用开服电脑的上传带宽。下载期间不要连续刷新页面，以免重复开始传输。
+
+网页网关已增加两项下载优化，兼容已有 `outputs/web`，无需重新编译：
+
+- **首次下载使用 gzip。** 网关启动时提前生成压缩副本，多台手机共用该副本，不会为每个请求重复压缩。浏览器支持 gzip 且压缩后更小时才使用；解压后的游戏文件内容不变。图片、音频本来就有压缩，实际缩减幅度以本次生成结果为准。
+- **再次进入复用浏览器缓存。** 静态文件使用内容哈希 ETag 和 `public, no-cache`。这里的 `no-cache` 允许存储文件，但复用前先向网关校验；内容未变时返回 304，无需重传整个游戏包。文件更新后会下载新内容。登录接口、玩家身份和实时通信仍不缓存。
+
+更新方法：在开服电脑的仓库根目录执行 `git pull`，随后双击 **`启动网页外网.cmd`**，让网页网关加载新代码。已有隧道正常且参数一致时会复用当前网址，不需要先停止隧道。窗口将显示原始大小和 gzip 传输大小估算，例如 `Web bundle: ... MiB original; ... MiB gzip transfer estimate.`；这不是实测下载耗时，Cloudflare 也可能再次转换传输编码。
+
+首次启动新网关会先准备压缩缓存，因此启动比以后稍慢；缓存放在运行目录的 `cache/web-assets`（默认 `runtime/server/cache/web-assets`），不进入 Git 仓库。磁盘或权限问题导致无法生成压缩副本时，会记录原因并改为发送原文件。压缩记录见 `runtime/server/logs/web_external.stdout.log`；局域网入口对应 `browser.stdout.log`。仅使用局域网入口时，先通过 `deployment/Start-Web.ps1 -Action stop` 停止该网页网关，再运行 `deployment/start-web.cmd` 加载更新。
+
+浏览器缓存不能让第一次进入的其他手机免下载。更换临时域名、清理缓存、隐私模式或浏览器回收缓存后仍可能重新下载；同一 Wi-Fi 下也可启动局域网入口直接访问电脑 IP，避开外网隧道。较慢的上传带宽和免费隧道的网络质量仍会影响首次下载，不能保证多台同时进入的速度。
+
+依据：[Emscripten 部署与预压缩建议](https://emscripten.org/docs/compiling/Deploying-Pages.html)、[浏览器 ETag 校验](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/ETag)。本次优化仅做代码与差异检查，未执行编译、测试或多手机测速，实际大小和速度以部署电脑及手机结果为准。
+
 ### 点击进入后提示 Empty session request required
 
 旧版网页网关会拒绝所有带 `Transfer-Encoding` 的登录请求。Cloudflare 隧道可能把空 POST 转成分块传输，导致 `/web/session` 返回 HTTP 400，页面显示“游戏未能启动”；GET 转发遇到同样情况时，首页或资源会报 `Unexpected body`。修复后的网关会在登录、页面、资源和 WebSocket 握手入口读取并接受空的分块请求，同时继续拒绝非空请求、冲突的长度头和来源不匹配的请求。
@@ -161,7 +178,9 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Start-Web.ps1 -
 | `client/web/generated` | 临时源码、资源、编译对象及日志；不提交 |
 | `outputs/web` | 发布文件；不提交，可从 Actions 下载 |
 | `deployment/web_client.py` | 同源 HTTP、浏览器会话、WebSocket→本地 TCP |
+| `deployment/web_assets.py` | 静态网页包的预压缩、内容哈希与浏览器缓存校验 |
 | `deployment/web_external.py` | Web 免费隧道、网址发现、就绪检查与进程管理 |
+| `runtime/server/cache/web-assets` | 当前及历史网页包的 gzip 副本，可在停止网页网关后删除并由下次启动重建 |
 | `runtime/server/web-external-url.txt` | 当前 Web 外网网址；停止外网入口后删除 |
 | `runtime/server/private/web-session.key` | 本机游客 Cookie 签名密钥；保留在当前部署，不提交或公开 |
 | `runtime/server/logs/browser.*.log` | 网页网关运行日志 |

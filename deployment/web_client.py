@@ -22,6 +22,7 @@ from urllib.parse import unquote, urlsplit
 # Portable embedded Python does not put this script's directory on sys.path.
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from websocket_gateway import Gateway, Handler, PREFIX, PROTOCOL, check_runtime
+from web_assets import WebAssets, accepts_gzip, unchanged
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 from project_paths import DEFAULT_INSTALL_DIR, project_path
 
@@ -61,6 +62,7 @@ class WebGateway(Gateway):
         for name in FILES:
             if not (build / name).is_file():
                 raise ValueError("Missing Web output: " + name)
+        self.assets = WebAssets(build, root / "cache/web-assets", FILES)
         secret = root / "private/web-session.key"
         try:
             with secret.open("xb") as stream:
@@ -169,7 +171,8 @@ class WebHandler(Handler):
             self.ready()
             return self.reply(200, {"serverName": "男人帮1区", "protocol": PROTOCOL,
                                     "build": self.server.manifest.get("sourceRevision", "unknown"),
-                                    "instanceId": hashlib.sha256(self.server.key).hexdigest()[:24]})
+                                    "instanceId": hashlib.sha256(self.server.key).hexdigest()[:24],
+                                    "downloads": self.server.assets.summary})
         if path == "/web/game":
             if self.headers.get("Origin") not in self.server.origins or not self.identity():
                 return self.reply(403, {"error": "Browser session required"})
@@ -182,14 +185,27 @@ class WebHandler(Handler):
         name = "index.html" if path == "/" else path.lstrip("/")
         if name not in FILES:
             return self.reply(404, {"error": "Not found"})
-        target = self.server.build / name
-        self.send_response(200)
+        asset = self.server.assets.get(name)
+        encoded = asset["gzipPath"] is not None and accepts_gzip(
+            ",".join(self.headers.get_all("Accept-Encoding", [])))
+        cached = unchanged(",".join(self.headers.get_all("If-None-Match", [])), asset["etag"])
+        self.send_response(304 if cached else 200)
         types = {".wasm": "application/wasm", ".js": "text/javascript; charset=utf-8", ".data": "application/octet-stream"}
-        self.send_header("Content-Type", types.get(target.suffix, mimetypes.guess_type(name)[0] or "application/octet-stream"))
-        self.send_header("Content-Length", str(target.stat().st_size))
-        self.send_header("Cache-Control", "no-store")
+        if not cached:
+            self.send_header("Content-Type", types.get(Path(name).suffix, mimetypes.guess_type(name)[0] or "application/octet-stream"))
+            self.send_header("Content-Length", str(asset["gzipSize"] if encoded else asset["size"]))
+            if encoded:
+                self.send_header("Content-Encoding", "gzip")
+        # These URLs are not versioned. Check cached bytes against the current
+        # files on every load instead of pinning an old build after an update.
+        self.send_header("Cache-Control", "public, no-cache")
+        self.send_header("ETag", asset["etag"])
+        self.send_header("Vary", "Accept-Encoding")
         self.send_header("Connection", "close")
         self.end_headers()
+        if cached:
+            return
+        target = asset["gzipPath"] if encoded else asset["path"]
         with target.open("rb") as stream:
             while block := stream.read(65536):
                 self.wfile.write(block)
