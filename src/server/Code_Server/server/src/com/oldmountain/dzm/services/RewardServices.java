@@ -20,14 +20,9 @@ import com.oldmountain.dzm.message.UserSysMsgInfo.OPUserSysMsgInfoRet;
 import com.oldmountain.dzm.net.ObjectAccessor;
 import com.oldmountain.dzm.util.TimeUtil;
 import com.oldmountain.dzm.util.Util;
+import com.oldmountain.dzm.util.XMLTemplateService;
 
-/*
- * Created with IntelliJ IDEA.
- * User: dylan
- * Date: 13-4-8
- * Time: 下午5:06
- * To change this template use File | Settings | File Templates.
- */
+/** @brief 创建和读取系统奖励传书，并转换为客户端已有的奖励显示协议。 */
 public class RewardServices
 {
 
@@ -196,6 +191,10 @@ public class RewardServices
             UserRewardInfo.OPRewardInfoRet.RewardInfo.Builder reward=UserRewardInfo.OPRewardInfoRet.RewardInfo.newBuilder();
             reward.setItemType(rewardItem.getInt("t"));
             reward.setItemId(rewardItem.getInt("i"));
+            // 旧客户端按奥义模板显示残章；数据库仍保留真实残章 ID 供领取。
+            if (_item.getRewardInfoJson().optInt("nrb", 0) == 1 && rewardItem.getInt("t") == 42000) {
+                reward.setItemId(XMLTemplateService.getSkillIdBySkillBookId(rewardItem.getInt("i")));
+            }
             reward.setCount(rewardItem.getInt("q"));
             sysMsgInfo.addReward(reward);
         }

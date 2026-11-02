@@ -528,13 +528,67 @@ class Deployment:
         if not self.state.get("installed"):
             raise RuntimeError("Installation is incomplete; inspect logs and re-run install")
         self.upgrade_legacy_continue_login()
+        admin_current = self.prepare_admin()
         self.ensure_db()
         directory = self.runtime_directory()
         self.launch("web", [sys.executable, "-m", "http.server", str(self.state["webPort"]),
                             "--bind", "0.0.0.0", "--directory", self.root / "web"], self.root, self.state["webPort"])
         self.launch("game", [directory / "runtimes/java/bin/java.exe", "-Xms64m", "-Xmx512m",
-                             "-Dfile.encoding=UTF-8", "-jar", "DZM.jar"], directory / "server", self.state["gamePort"])
+                             "-Dfile.encoding=UTF-8", "-cp", "NRBAdminServer.jar;DZM.jar",
+                             "com.oldmountain.dzm.admin.AdminLauncher"], directory / "server", self.state["gamePort"])
+        if admin_current:
+            self.wait_admin()
         self.status()
+
+    def prepare_admin(self):
+        """Install the prebuilt local admin module only while the game is stopped."""
+        source = HERE / "admin"
+        manifest = read_json(source / "artifacts.json")
+        if self.owned("game"):
+            destination = self.root / "server/NRBAdminServer.jar"
+            if (not destination.is_file() or digest(destination) != manifest["serverJarSha256"]
+                    or "adminPort" not in self.state):
+                print("Local administration update pending: stop this deployment, then start again.", flush=True)
+                return False
+            return True
+        if digest(source / "NRBAdminServer.jar") != manifest["serverJarSha256"]:
+            raise RuntimeError("Administration package checksum mismatch; update the complete repository")
+        if digest(self.root / "server/DZM.jar") != manifest["baseJarSha256"]:
+            raise RuntimeError("Custom DZM.jar detected; regenerate the administration companion with Build-Admin.ps1")
+        port = self.state.get("adminPort", 18090)
+        reserved = {self.state[key] for key in ("webPort", "gamePort", "dbPort")} | {18082}
+        while port in reserved or not port_available(port):
+            port += 1
+            if port > 65535:
+                raise RuntimeError("No free local administration port is available")
+        self.state["adminPort"] = port
+        self.state.setdefault("adminInstanceId", secrets.token_hex(16))
+        shutil.copy2(source / "NRBAdminServer.jar", self.root / "server/NRBAdminServer.jar")
+        (self.root / "private/admin.properties").write_text(
+            "port=" + str(port) + "\ninstanceId=" + self.state["adminInstanceId"] + "\n", encoding="ascii")
+        self.save()
+        print("Local administration endpoint: 127.0.0.1:" + str(port), flush=True)
+        return True
+
+    def wait_admin(self):
+        """Require the game loop and database to respond before reporting startup success."""
+        opener = urllib.request.build_opener(urllib.request.ProxyHandler({}))
+        url = "http://127.0.0.1:" + str(self.state["adminPort"]) + "/admin/v1/health"
+        deadline = time.monotonic() + 60
+        while time.monotonic() < deadline:
+            if not self.owned("game"):
+                raise RuntimeError("Game exited during administration initialization; inspect game logs")
+            try:
+                with opener.open(url, timeout=6) as response:
+                    health = json.loads(response.read(4096).decode("utf-8"))
+                if (health.get("ok") and health.get("protocol") == 1
+                        and health.get("instanceId") == self.state["adminInstanceId"]):
+                    print("Local administration ready; open NRB game administration EXE", flush=True)
+                    return
+            except (OSError, ValueError):
+                pass
+            time.sleep(1)
+        raise RuntimeError("Administration initialization timed out; game retained for inspection, see game logs")
 
     def terminate_owned(self, name):
         if not self.owned(name):

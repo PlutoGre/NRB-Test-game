@@ -77,10 +77,12 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Deploy-Server.p
 | `outputs/android` | Android 新入口输出的 APK |
 | `src/client/ios-modern/generated` | iOS 生成文件；云构建成功后从 Actions 下载 IPA |
 
-运行数据、工具和产物均被 Git 忽略。服务端会在运行期间保留自己的盘符映射，完整停服后释放；不要手动删除运行中的映射。移动整个项目之前先停止服务和构建；启动时会按新位置重写数据库路径，客户端 IP 改变时仍需更新部署参数。旧版本放在 `%LOCALAPPDATA%\OnePieceServer` 的数据不会自动迁移，管理旧实例时显式传入它的 `-InstallDir`，迁移方法见下面的参考说明。
+运行数据、便携构建工具和客户端构建产物均被 Git 忽略；管理 EXE 和配套 JAR 随仓库提供。服务端会在运行期间保留自己的盘符映射，完整停服后释放；不要手动删除运行中的映射。移动整个项目之前先停止服务和构建；启动时会按新位置重写数据库路径，客户端 IP 改变时仍需更新部署参数。旧版本放在 `%LOCALAPPDATA%\OnePieceServer` 的数据不会自动迁移，管理旧实例时显式传入它的 `-InstallDir`，迁移方法见下面的参考说明。
 
 克隆仓库只会得到初始数据，旧电脑的玩家进度需另行迁移。备份恢复等低频操作保存在 [服务端参考说明](docs/reference/SERVER_DEPLOYMENT.md)。
 
 后续修改游戏内容，阅读 [代码逻辑与扩展指南](docs/extension/README.md)：包含服务端保存与发奖、资源替换、卡牌和缘分、装备、奥义、船舱与修行六个专题，以及完整模板清单。
+
+发放测试物品：服务启动后双击根目录 **NRB游戏管理.exe**，账号 `op_root`、密码 `hy1212`。支持按完整游戏名或全服现有角色发送传书附件，详见 [Windows 管理工具](docs/ADMIN_TOOL.md)。已有部署更新后先停服再启动一次，客户端无需重新打包。
 
 **验证状态：新电脑部署、外网链路及 iOS 构建/真机运行仍待实际验证。文档中的步骤不代表已全部实跑通过。**

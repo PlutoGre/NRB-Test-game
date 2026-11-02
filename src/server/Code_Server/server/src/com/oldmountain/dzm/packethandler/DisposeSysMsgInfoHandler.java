@@ -1,6 +1,7 @@
 package com.oldmountain.dzm.packethandler;
 
 import com.oldmountain.dzm.DZM;
+import com.oldmountain.dzm.admin.AdminRewards;
 import com.oldmountain.dzm.entity.RelationShip;
 import com.oldmountain.dzm.entity.Reward;
 import com.oldmountain.dzm.entity.SysMsgInfo;
@@ -25,21 +26,12 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.HashSet;
 
-/**
- * 留言包
- * 1， 解析数据包
- * 2， 保存留言数据
- * 3， 推送给相关玩家数据信息
- * 4， 下发留言成功
- * 
- * TODO 重复登陆的处理， 下发玩家数据信息.
- * 
- * @author lvjc
- */
+/** @brief 处理系统传书操作、补偿奖励领取和好友申请，并返回客户端状态。 */
 public class DisposeSysMsgInfoHandler
 {
 	private static final Logger log = LoggerFactory.getLogger(DisposeSysMsgInfoHandler.class);
 	private static final Logger logger2 = LoggerFactory.getLogger("SysMsgInfo");
+    /** 处理传书操作；管理附件按扩展领取逻辑保存，普通传书继续使用原逻辑。 */
 	public static void DisposeSysMsgInfo(Packet packet, IoSession session)
 	{
 		OPDisposeSysMsg opDisposeSysMsg = null;
@@ -83,6 +75,22 @@ public class DisposeSysMsgInfoHandler
 				} 
 				else
 				{
+                    if (_reward.getRewardInfoJson().optInt("nrb", 0) == 1) {
+                        try {
+                            AdminRewards.claim(player, _reward, builder);
+                            builder.setStatus(1);
+                            builder.setServertime(Util.getServerTime());
+                            player.setLastVerifyTime(Util.getServerTime());
+                            player.sendPacket(OP.code.OPCODE_DISPOSE_USER_SYSMSG_INFORET_S_VALUE, builder);
+                        } catch (Exception e) {
+                            log.error("DisposeSysMsgInfo: admin reward claim failed, playerId=" + uuid + ", rewardId=" + relationId, e);
+                            ErrorReporter.OPErrorReporter.Builder error = ErrorReporter.OPErrorReporter.newBuilder();
+                            error.setErrorid(OP.code.OPCODE_DISPOSE_USER_SYSMSG_INFORET_S_VALUE);
+                            error.setErrormsg("Admin reward cannot be claimed; check the server log before retrying.");
+                            player.sendPacket(OP.code.OPCODE_ERROR_RET_S_VALUE, error);
+                        }
+                        return;
+                    }
 					JSONArray rewards = _reward.getRewardContentJson();
 					for (int i = 0; i < rewards.size(); i++)
 					{

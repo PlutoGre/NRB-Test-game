@@ -2,6 +2,7 @@ package com.oldmountain.dzm.net.packet;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
+import com.oldmountain.dzm.admin.AdminTask;
 
 import org.dom4j.Branch;
 
@@ -11,6 +12,7 @@ import com.oldmountain.dzm.message.OPLeague;
 import com.oldmountain.dzm.message.LeagueStructExt.OPLeaguaShopBuy;
 import com.oldmountain.dzm.packethandler.*;
 
+/** @brief 按操作码分发游戏请求，并在同一主循环执行已鉴权的本机管理任务。 */
 public class PacketHandler extends Thread{ 
 	static BlockingQueue<Packet> inqueue =  new LinkedBlockingQueue<Packet>(); 
 	
@@ -29,11 +31,16 @@ public class PacketHandler extends Thread{
 	}
 	
 	/**
-	 * 
-	 * @param packet
+	 * 在游戏主循环中执行内部管理任务，或分发普通网络请求。
+	 * @param packet 主循环队列中的任务或网络包
 	 */
 	public static void handle(Packet packet)
     {
+        // 管理任务仅由本机 HTTP 模块创建，网络包不能构造这个内部类型。
+        if (packet instanceof AdminTask) {
+            ((AdminTask) packet).execute();
+            return;
+        }
         //TODO:非法请求判断
 		switch (packet.opcode)
         {

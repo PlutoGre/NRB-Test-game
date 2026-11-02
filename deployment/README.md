@@ -2,6 +2,7 @@
 
 - **启动：** 双击项目根目录的 `启动服务.cmd`；首次自动部署，以后启动已有实例。
 - **停止：** 双击项目根目录的 `停止服务.cmd`；停止该实例并保留数据。
+- **发放测试物品：** 服务就绪后双击根目录 `NRB游戏管理.exe`，见 [管理工具说明](../docs/ADMIN_TOOL.md)。已有部署更新后需停服再启动一次。
 - 完整操作见 [仓库 README](../README.md)，`server.cmd` 保留为手动部署入口。
 - **客户端打包：** 按 [iOS / Android 打包流程](../docs/CLIENT_BUILD.md) 执行。
 - **Android 打包：** 双击 `build-android.cmd`；首次自动下载所需 SDK、NDK 和 Ant 到项目 `tools`。

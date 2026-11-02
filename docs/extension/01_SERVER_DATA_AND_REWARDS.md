@@ -103,6 +103,8 @@ SELECT id,sysgoldcoins,rechargegoldcoins FROM player WHERE id=12345;
 
 ## 5. 发物品和钻石给客户端
 
+日常操作现在可以直接使用 [Windows 管理工具](../ADMIN_TOOL.md)：服务启动后以管理账号登录，选择游戏名或全服现有角色，发送传书附件。配套模块补齐了完整卡牌、残章及多件装备/奥义的领取；下面保留原始 GM 和后台协议的行为，勿把原 JAR 接口的限制与新工具混用。
+
 ### 5.1 GM 直接修改
 
 [UpdateUserInfoByGMhandler.java](../../src/server/Code_Server/server/src/com/oldmountain/dzm/packethandler/UpdateUserInfoByGMhandler.java) 支持以下源码格式：
