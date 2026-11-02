@@ -101,6 +101,27 @@ def confirm_public(deployment, settings, seconds):
     return settings["publicReady"]
 
 
+def tunnel_diagnostics(deployment):
+    """Show recent connection evidence without treating old registrations as live health."""
+    path = deployment.root / "logs/web_tunnel.stderr.log"
+    print("Tunnel connection details: " + str(path), flush=True)
+    try:
+        # Repeated reconnects can grow this file; status should only read its tail.
+        with path.open("rb") as stream:
+            stream.seek(0, os.SEEK_END)
+            stream.seek(max(0, stream.tell() - 65536))
+            lines = stream.read().decode("utf-8", errors="replace").splitlines()
+    except OSError as error:
+        print("Cannot read tunnel log: " + str(error), flush=True)
+        return
+    markers = (" ERR ", " WRN ", "precheck ", "precheck complete", "SUMMARY:",
+               "Registered tunnel connection", "connection terminated", "Connection terminated")
+    relevant = [line for line in lines if any(marker in line for marker in markers)]
+    print("Recent tunnel log (historical records; public access remains unconfirmed):", flush=True)
+    for line in (relevant or [line for line in lines if line.strip()])[-12:]:
+        print("  " + line[:1200], flush=True)
+
+
 def details(deployment):
     settings = deployment.state.get(STATE, {})
     running = deployment.owned(WEB) and deployment.owned(TUNNEL)
@@ -123,7 +144,8 @@ def details(deployment):
                 print("On the hosting PC, clear cached DNS with: ipconfig /flushdns", flush=True)
                 print("Check hostname resolution with: nslookup " + urlsplit(origin).hostname, flush=True)
                 print("This is a DNS check failure; public access is still unconfirmed. Reinstalling the game is not required.", flush=True)
-            print("Tunnel connection details: " + str(deployment.root / "logs/web_tunnel.stderr.log"), flush=True)
+            print("If the browser shows Cloudflare error 1033, Cloudflare cannot find a healthy tunnel connection.", flush=True)
+            tunnel_diagnostics(deployment)
     else:
         print("No active Web HTTPS URL. Start this entry to obtain an address.", flush=True)
 

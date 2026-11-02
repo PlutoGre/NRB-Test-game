@@ -104,6 +104,20 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Start-Web.ps1 -
 
 更新脚本只需 `git pull` 后双击 `查看网页外网.cmd` 获取更具体的 DNS 提示；无需重新编译客户端或重建数据库。此次 DNS 提示修改只进行了代码和文档检查，尚未在报错的另一台电脑上验证。
 
+### 手机浏览器显示 Error 1033
+
+这表示手机已经访问到 Cloudflare，但 Cloudflare 找不到可用的隧道连接。可能同时存在开服电脑的 DNS 解析失败，不能仅清理浏览器缓存就认定解决。[1033 官方说明](https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1033/)
+
+1. 保持服务和当前隧道运行，在仓库根目录执行 `git pull`，再双击 `查看网页外网.cmd`。脚本会在公网检查失败时显示近期隧道连接日志；这些是历史记录，最终仍以实际访问结果为准。
+2. 需要完整上下文时，在仓库根目录的 PowerShell 中执行：
+
+   ```powershell
+   Get-Content .\runtime\server\logs\web_tunnel.stderr.log -Tail 80
+   ```
+
+3. 查看 `precheck`、`ERR` 和连接重试信息：域名查询失败需要检查开服电脑的 DNS；`dial tcp ...:7844` 超时或拒绝连接需要检查出站 TCP 连通性。当前默认 `http2` 使用出站 TCP 7844；`quic` 使用出站 UDP 7844，切换协议不保证能绕过当前网络限制。[Cloudflare 网络要求](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/configure-tunnels/tunnel-with-firewall/)
+4. 如果日志有注册成功后又断开的记录，应结合最后的错误排查。修改网络后先用状态入口和手机重试；需要重启隧道或切换传输协议时，网址可能改变，使用新显示的网址。
+
 ### 自有固定域名或其他 HTTPS 代理
 
 外网需要 HTTPS 反向代理或隧道，将**整个站点**代理到本机网页端口，并支持 WebSocket Upgrade。例如把一个固定的 `https://game.example.com` 转发到 `http://127.0.0.1:18084` 后，先停止局域网网页网关，再执行：
