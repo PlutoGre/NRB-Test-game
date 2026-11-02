@@ -16,8 +16,12 @@ Result request;
 void finish(emscripten_fetch_t* fetch) {
     Result result = request;
     result.success = fetch->status >= 200 && fetch->status < 300 && fetch->numBytes <= 32 * 1024 * 1024;
-    if (result.success && result.check)
-        result.success = GameMaths::GetCRC16(reinterpret_cast<unsigned char*>(fetch->data), fetch->numBytes) == result.crc;
+    if (result.success && result.check) {
+        // Fetch owns a read-only body; CRC validation must preserve its constness.
+        // The 32 MiB limit above keeps the byte count within GetCRC16's int range.
+        result.success = GameMaths::GetCRC16(reinterpret_cast<const unsigned char*>(fetch->data),
+                                            static_cast<int>(fetch->numBytes)) == result.crc;
+    }
     if (result.success) {
         std::string temporary = result.filename + ".download";
         saveFileInPath(temporary, "wb", reinterpret_cast<const unsigned char*>(fetch->data), fetch->numBytes);
