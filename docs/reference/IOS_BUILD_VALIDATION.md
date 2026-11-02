@@ -1,0 +1,48 @@
+# iOS 云构建验证记录
+
+验证日期：2026-11-02。使用完整仓库的 **Build iOS from repository** 工作流，目标为 iOS 15+、ARM64、Debug、未签名客户端。
+
+## 构建结果
+
+已在 [GitHub Actions 第 6 次运行](https://github.com/PlutoGre/NRB-Test-game/actions/runs/41390810401) 完成真实编译、链接、IPA 打包及产物上传，工作流结果为 **success**。
+
+- 源码提交：`58cab90b7878691ab6b885fcc18ec56731958a37`。
+- 云端环境：macOS 15.8.2、Xcode 16.4 / iPhoneOS SDK 18.5、CMake 3.31.10、Python 3.12.10。
+- 本次沿用原失败构建的参数：`server_host=192.168.1.3`、`web_port=18081`、`game_port=25524`、`resource_version=1.78.6`、`bundle_id=org.onepiece.local`；这些仅为该次构建的参数，不是固定配置。
+- 下载入口：上述运行页面的 **Artifacts → ios-unsigned-app**，保存期为 7 天，过期后按同一工作流重新构建。
+
+下载后已完成静态产物检查：
+
+- 主程序为 ARM64 Mach-O 可执行文件，加载命令及 `Info.plist` 均标记为 `iPhoneOS`，最低系统为 `15.0`。
+- Bundle ID 为 `org.onepiece.local`，IPA 共包含 1771 个文件，`LoadingFrame.ccbi` 和 `version_ios_local.cfg` 均存在，可执行权限得到保留。
+- IPA 大小为 34,255,952 字节；原 Artifact ZIP 的 SHA256 与 GitHub 发布值一致。
+- 本机下载副本：`outputs/ios/onepiece-unsigned-for-resigning.ipa`，检查记录：`outputs/ios/inspection.json`。这些输出不提交到 Git，其他电脑可从运行页面下载或重新构建。
+
+IPA SHA256：`57cae1ffd38578989dd1ecaeefb8d924a4b4e9455626c0e877a8ac8c28e0fba1`。
+
+## 已修复的问题
+
+| 位置 | 原因 | 修改 |
+|---|---|---|
+| Protobuf `message.cc` | 使用流对象时只获得标准库的前置声明，Xcode 16 报 `implicit instantiation of undefined template` | 直接包含 `<istream>` 和 `<ostream>` |
+| Lua `loslib.c`、`luaconf.h` | iOS 禁用 `system()`，也不能通过 `popen` 启动命令解释器 | iOS 目标启用 `LUA_USE_IOS`；`os.execute()` 返回 0 表示无命令解释器，传入命令返回 -1；`io.popen` 使用原库已有的“不支持”分支。日期、时间等其他功能保留，其他平台不启用这项限制 |
+| MiniZip `ioapi.h` | Darwin 没有 Linux 风格的 `fopen64`、`ftello64`、`fseeko64` | Apple 平台映射到 `fopen`、`ftello`、`fseeko`，使用 Darwin 的 64 位文件偏移接口 |
+| 队伍与主页的 6 处容器插入 | 显式模板参数的 `std::make_pair` 在 C++11 下要求右值，原代码传入左值指针 | 使用显式 `std::pair` 构造，保留原键值类型和插入语义 |
+| Lua OpenGL 绑定 | iOS SDK 不定义 `GL_STENCIL_INDEX` | 仅在目标 OpenGL 头文件确实提供该常量时注册；不将它替换成含义不同的 `GL_STENCIL_INDEX8` |
+| iOS `CCImage.mm` | 旧 `UITextAlignment`、`UILineBreakMode` 与新版文本接口的枚举参数不匹配 | 使用 `NSTextAlignment`、`NSLineBreakByWordWrapping`，保留原对齐及换行方式 |
+| iOS `CMakeLists.txt` | CMake 默认应用目录与打包脚本的查找目录不同；显式设置输出目录后也不再自动附加 SDK 名称 | 显式使用 `DerivedData/Build/Products/<配置>-<SDK>/OnePiece.app`，同步匹配打包入口 |
+
+`build.py` 在失败时会重印前 25 条关键诊断，完整日志仍保存在 `build.log`。Xcode 继续编译独立任务以收集错误；有编译错误时依然返回失败。
+
+还对随包的 90 个 Lua 源码资源作了静态检索，未发现直接调用 `os.execute`、`io.popen` 或引用 `GL_STENCIL_INDEX` 的代码。此检查不替代实际玩法验证。
+
+## 后续重新构建
+
+1. 将源码更新推送到 GitHub 的 `main`。
+2. 打开 **Actions → Build iOS from repository → Run workflow**。
+3. 按目标服务端的 `runtime/server/client-config/deployment.json` 填写 IP、端口和资源版本，再填写自己的 Bundle ID。
+4. 成功后从 **Artifacts → ios-unsigned-app** 下载并解压，取得 `onepiece-unsigned-for-resigning.ipa`。
+
+不要对旧的失败记录直接点 **Re-run jobs** 来验证新代码；重新运行旧记录仍使用其原提交，应从工作流页面发起新运行。
+
+详细签名及安装步骤见 [客户端打包流程](../CLIENT_BUILD.md)。IPA 需要有效签名后才能安装到普通 iPhone；编译、链接、打包和静态产物检查不能代替真机启动、登录、联网和玩法验证。

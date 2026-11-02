@@ -9,9 +9,9 @@
 | 平台 | 入口 | 当前范围 |
 |---|---|---|
 | Android | `src/client/Game/proj.android` 和 `antbuild/anzhi` | ARM32：armeabi、armeabi-v7a；本地登录、公告及打包准备已修改 |
-| iOS | `src/client/ios-modern` | ARM64/CMake/Xcode、本地账号、系统桥接及外网 WSS；待首次实际编译和真机验证 |
+| iOS | `src/client/ios-modern` | ARM64/CMake/Xcode、本地账号、系统桥接及外网 WSS；已通过云端编译、链接和 IPA 打包，待签名与真机验证 |
 
-**本次未运行编译、构建、assemble、测试或 lint。** 本文是交给你执行的操作流程，不代表所有命令已在新电脑通过。此前 `.debug/onepiece/local-offline.apk` 为实际验证过玩法的临时二进制调试包，不是由最新修复源码重新构建的正式交付包。
+2026-11-02 已实际完成 iOS ARM64 云端编译、链接及 IPA 打包，结果见 [iOS 构建验证](IOS_BUILD_VALIDATION.md)。下文保留不同构建方式及历史排查说明，不代表全部命令都已在每一种新电脑环境中验证。此前 `.debug/onepiece/local-offline.apk` 是历史玩法调试包；当前 Android 产物与操作以 [简明客户端打包流程](../CLIENT_BUILD.md) 为准。
 
 示例约定：
 

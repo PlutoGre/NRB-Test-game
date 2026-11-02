@@ -40,6 +40,8 @@ Get-Content (Join-Path $gameRuntime 'client-config\deployment.json')
 
 构建成功后，打开该次运行 → **Summary → Artifacts → ios-unsigned-app**，下载并解压，取得 `onepiece-unsigned-for-resigning.ipa`。失败时下载 **ios-build-logs**，从第一条实际构建错误排查。
 
+2026-11-02 已实际通过完整云端构建并生成 IPA，修复内容与产物记录见 [iOS 构建验证](reference/IOS_BUILD_VALIDATION.md)。更新代码后，应从工作流页面选择 `main` 发起新运行；旧失败记录的 **Re-run jobs** 仍使用原提交，不会自动取得修复。
+
 找不到工作流时，确认默认分支包含 `.github/workflows/ios-build.yml`、仓库启用了 Actions，且当前账号有运行权限。不要选择旧的 **iOS unsigned build** 快照工作流。
 
 ### 2.2 签名并安装到 iPhone
@@ -147,4 +149,4 @@ Debug APK 已带调试签名，可传到支持 ARM32 的 Android 手机安装；
 
 2026-11-01 的 Context、存储路径和 `fwrite` 崩溃修复见 [启动验证记录](reference/ANDROID_STARTUP_VALIDATION.md)。2026-11-02 已新增原生 x86 构建，并在用户的雷电 14 上实际登录、完成新手引导、远航战斗、卡牌升级、装备强化、海鲜饭和抽卡等操作；各项结果与尚未验证的玩法见 [玩法验证记录](reference/ANDROID_GAMEPLAY_VALIDATION.md)。
 
-并非所有玩法均已通过，部分活动缺少实现或受等级、开放时段限制。Android 14/15 实机及中文/空格项目路径尚未验证；iOS 仍未通过实际 Xcode 构建和 iPhone 验证。
+并非所有玩法均已通过，部分活动缺少实现或受等级、开放时段限制。Android 14/15 实机及中文/空格项目路径尚未验证。iOS 已通过实际 Xcode 编译、链接及 IPA 打包；签名安装和 iPhone 真机玩法仍未验证。
