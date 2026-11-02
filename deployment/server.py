@@ -521,12 +521,32 @@ class Deployment:
         os.replace(temporary, config)
         print("Updated legacy continuous-login activity configuration; original XML backed up to " + str(backup), flush=True)
 
+    def upgrade_default_server_name(self):
+        """Rename the old single-server default without changing its identity or endpoint."""
+        path = self.root / "web/gameserver/dzm/1.8/servers_list.php"
+        if not path.is_file():
+            return
+        value = read_json(path)
+        servers = value.get("severs")
+        if (not isinstance(servers, list) or len(servers) != 1
+                or not isinstance(servers[0], dict)
+                or servers[0].get("id") != 1 or servers[0].get("name") != "Local"):
+            return
+        backup = path.with_name(path.name + ".before-default-server-name")
+        if not backup.exists():
+            shutil.copy2(path, backup)
+        servers[0]["name"] = "男人帮1区"
+        value["defaultSeverID"] = 1
+        write_json(path, value)
+        print("Updated the legacy default server display name (server ID 1)", flush=True)
+
     def start(self):
         self.require_installed()
         if (self.root / "private/restore-in-progress").exists():
             raise RuntimeError("Finish the interrupted database restore before starting gameplay")
         if not self.state.get("installed"):
             raise RuntimeError("Installation is incomplete; inspect logs and re-run install")
+        self.upgrade_default_server_name()
         self.upgrade_legacy_continue_login()
         admin_current = self.prepare_admin()
         self.ensure_db()

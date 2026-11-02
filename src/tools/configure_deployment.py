@@ -121,7 +121,7 @@ def main():
         "version": 1, "severVerson": args.resource_version,
         "updateAddress": resource_url + "update.php", "rootAddress": resource_url,
         "defaultSeverID": 1, "announcement": "", "updateByteSize": 0,
-        "severs": [{"id": 1, "name": "Local", "address": args.host,
+        "severs": [{"id": 1, "name": "男人帮1区", "address": args.host,
                     "port": args.game_port, "state": "new"}]})
     if args.server_dir:
         config = args.server_dir / "xml/config.xml"
