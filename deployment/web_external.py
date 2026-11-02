@@ -5,6 +5,7 @@ import json
 import os
 from pathlib import Path
 import re
+import socket
 import subprocess
 import sys
 import time
@@ -63,10 +64,17 @@ def local_health(deployment, settings):
                        urlsplit(settings["origin"]).netloc)
 
 
+def public_error_kind(error):
+    """urllib wraps Windows name-resolution errors in URLError.reason."""
+    reason = getattr(error, "reason", error)
+    return "dns" if isinstance(reason, socket.gaierror) else "request"
+
+
 def confirm_public(deployment, settings, seconds):
     """Compare public readiness with the local gateway, without logging in a player."""
     expected = local_health(deployment, settings)
-    deadline, last_error = time.monotonic() + seconds, "not checked"
+    settings["localReady"] = True
+    deadline, last_error, last_kind = time.monotonic() + seconds, "not checked", "request"
     while True:
         if not deployment.owned(WEB) or not deployment.owned(TUNNEL):
             raise RuntimeError("Web gateway or tunnel exited during public readiness check")
@@ -76,12 +84,15 @@ def confirm_public(deployment, settings, seconds):
                 raise ValueError("Public URL does not match this Web deployment")
             settings["publicReady"] = True
             settings.pop("publicError", None)
+            settings.pop("publicErrorKind", None)
             break
         except (OSError, ValueError) as error:
             last_error = str(error)
+            last_kind = public_error_kind(error)
         if time.monotonic() >= deadline:
             settings["publicReady"] = False
             settings["publicError"] = last_error
+            settings["publicErrorKind"] = last_kind
             break
         time.sleep(1)
     settings["checkedAt"] = int(time.time())
@@ -94,7 +105,7 @@ def details(deployment):
     settings = deployment.state.get(STATE, {})
     running = deployment.owned(WEB) and deployment.owned(TUNNEL)
     print("External Web gateway:", "owned/running" if deployment.owned(WEB) else "not running", flush=True)
-    print("Web tunnel:", "owned/running" if deployment.owned(TUNNEL) else "not running", flush=True)
+    print("Web tunnel process:", "owned/running" if deployment.owned(TUNNEL) else "not running", flush=True)
     origin = origin_from_state(settings)
     if running and origin:
         print("Web HTTPS URL: " + origin + "/", flush=True)
@@ -104,6 +115,15 @@ def details(deployment):
         else:
             print("Public readiness: NOT confirmed from this computer. The processes remain running.", flush=True)
             print("Last public check: " + settings.get("publicError", "not checked"), flush=True)
+            if settings.get("publicErrorKind") == "dns":
+                print("DNS lookup failed for " + urlsplit(origin).hostname + " on this computer.", flush=True)
+                if settings.get("localReady"):
+                    print("The local Web gateway answered the readiness check.", flush=True)
+                print("Keep the tunnel running. Try this URL using a phone's mobile data, then run the status shortcut again.", flush=True)
+                print("On the hosting PC, clear cached DNS with: ipconfig /flushdns", flush=True)
+                print("Check hostname resolution with: nslookup " + urlsplit(origin).hostname, flush=True)
+                print("This is a DNS check failure; public access is still unconfirmed. Reinstalling the game is not required.", flush=True)
+            print("Tunnel connection details: " + str(deployment.root / "logs/web_tunnel.stderr.log"), flush=True)
     else:
         print("No active Web HTTPS URL. Start this entry to obtain an address.", flush=True)
 
@@ -257,7 +277,8 @@ def main():
                 try:
                     confirm_public(deployment, settings, 4)
                 except (OSError, ValueError, RuntimeError) as error:
-                    settings.update(publicReady=False, publicError=str(error))
+                    settings.update(publicReady=False, localReady=False, publicError=str(error),
+                                    publicErrorKind=public_error_kind(error))
                     deployment.state[STATE] = settings
                     deployment.save()
             details(deployment)

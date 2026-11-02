@@ -89,6 +89,21 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Start-Web.ps1 -
 
 本次已使用当前电脑的已有 Web 包实际启动外网入口，下载隧道工具，取得 HTTPS 地址，并确认公网就绪响应与本机网关一致。没有重新编译客户端，也没有执行全新 Windows 初始化或公网浏览器玩法测试；此前玩法实测使用本地浏览器入口。
 
+### 提示 getaddrinfo failed / Errno 11001
+
+`Local administration ready`、`web_external started` 表示游戏服和外网网页网关已经启动；`browser: not running port 18084` 只是可选的局域网网页入口未启动，外网网页入口实际使用 18085 或自动选择的其他端口。
+
+`Public readiness: NOT confirmed` 加上 `getaddrinfo failed` / `11001`，表示**开服电脑无法解析本次公网域名，HTTPS 检查还没有连接到 Cloudflare**。这份日志不能证明所有网络都打不开，也不能证明隧道已连通；隧道进程存在不等于已建立连接。[Windows 错误码说明](https://learn.microsoft.com/en-us/windows/win32/winsock/windows-sockets-error-codes-2)
+
+按以下顺序排查，先保留正在运行的隧道和网址：
+
+1. 用手机关闭 Wi-Fi，改用流量打开当前 HTTPS 网址。若能显示游戏页面，说明该网络可以到达入口，开服电脑自身的域名解析仍需检查。
+2. 在开服电脑的管理员终端运行 `ipconfig /flushdns` 清理本机缓存，然后双击 `查看网页外网.cmd` 重试。该命令不会修改 DNS 服务器设置。
+3. 若仍失败，运行 `nslookup 当前网址的域名`；也可运行 `nslookup 当前网址的域名 1.1.1.1` 对比查询结果。这里仅作查询，不会改变电脑的 DNS 配置。DNS 缓存、上游解析和网络问题需根据实际结果区分，不能仅凭这份日志确定是哪一种。
+4. 若手机流量也无法访问，提供具体提示和 `runtime/server/logs/web_tunnel.stderr.log` 末尾约 60 行。`Registered tunnel connection` 表示这次运行曾注册连接；后续的 `ERR`、断开或重连记录同样需要查看。Cloudflare 的 `1033` 表示找不到健康隧道连接，`502` 则需继续检查隧道到本机网页网关的连接。[Cloudflare 排查说明](https://developers.cloudflare.com/tunnel/troubleshooting/)
+
+更新脚本只需 `git pull` 后双击 `查看网页外网.cmd` 获取更具体的 DNS 提示；无需重新编译客户端或重建数据库。此次 DNS 提示修改只进行了代码和文档检查，尚未在报错的另一台电脑上验证。
+
 ### 自有固定域名或其他 HTTPS 代理
 
 外网需要 HTTPS 反向代理或隧道，将**整个站点**代理到本机网页端口，并支持 WebSocket Upgrade。例如把一个固定的 `https://game.example.com` 转发到 `http://127.0.0.1:18084` 后，先停止局域网网页网关，再执行：
