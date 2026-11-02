@@ -97,6 +97,8 @@ private:
 	void showEnter();
 	void showEnterAndLoginingIn();
 
+	/** 隐藏自动登录模式下多余的账号入口，并将区服入口居中。 */
+	void configureLoginButtons();
 	void updateSeverName();
 	void updateLoginName();
 	

@@ -122,6 +122,16 @@ cocos2d::CCObject* CCBContainer::getVariable( const std::string& variablename )
 }
 
 
+cocos2d::CCMenuItem* CCBContainer::getMenuItemByAction(const std::string& actionName) const
+{
+	for(MENUITEM_MAP::const_iterator it = mMenus.begin(); it != mMenus.end(); ++it)
+	{
+		if(it->second == actionName)
+			return dynamic_cast<cocos2d::CCMenuItem*>(it->first);
+	}
+	return NULL;
+}
+
 cocos2d::SEL_MenuHandler CCBContainer::onResolveCCBCCMenuItemSelectorWithSender( cocos2d::CCObject * pTarget, const char* pSelectorName, cocos2d::CCNode* sender )
 {
 	if(pTarget!=this)

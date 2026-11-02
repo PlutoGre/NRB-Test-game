@@ -492,6 +492,7 @@ void LoadingFrame::_updateLocalSeverId()
 void LoadingFrame::load( void )
 {
 	loadCcbiFile("LoadingFrame.ccbi");
+	configureLoginButtons();
 }
 
 void LoadingFrame::showSevers(bool _show)
@@ -688,6 +689,7 @@ void LoadingFrame::showUpdateDone()
 
 	mSelectedSeverID = getDefaultSeverID();
 	updateSeverName();
+	configureLoginButtons();
 
 	if(getVariable("mPostUpdateNode"))
 	{
@@ -729,6 +731,7 @@ void LoadingFrame::showEnter()
 {
 	//平台登录结果回来了，可选区 进入游戏
 	CCLOG("LoadingFrame::showEnter");
+	configureLoginButtons();
 	if(getVariable("mLoginNode"))
 	{
 		CCNode* sever = dynamic_cast<CCNode*>(getVariable("mLoginNode"));
@@ -802,6 +805,51 @@ void LoadingFrame::showEnterAndLoginingIn()
 int LoadingFrame::getDefaultSeverID()
 {
 	return cocos2d::CCUserDefault::sharedUserDefault()->getIntegerForKey("DefaultSeverID",SeverConsts::Get()->getSeverDefaultID());
+}
+
+void LoadingFrame::configureLoginButtons()
+{
+	// 本地账号已自动登录，保留 onEnter 的登录重试，避免把账号昵称误认为区服。
+	CCMenuItem* loginButton = getMenuItemByAction("onLogin");
+	if(loginButton)
+	{
+		loginButton->setVisible(false);
+		loginButton->setEnabled(false);
+	}
+	CCB_FUNC(this, "mLoginName", CCNode, setVisible(false));
+
+	CCMenuItem* serverButton = getMenuItemByAction("onSever");
+	if(!serverButton || !serverButton->getParent())
+	{
+		CCLOG("LoadingFrame::configureLoginButtons: server selector not found");
+		return;
+	}
+
+	// 使用世界坐标移动，兼容不同屏幕比例和 CCB 父节点的缩放。
+	CCDirector* director = CCDirector::sharedDirector();
+	float centerX = director->getVisibleOrigin().x + director->getVisibleSize().width * 0.5f;
+	CCSize buttonSize = serverButton->getContentSize();
+	CCPoint buttonCenter = serverButton->convertToWorldSpace(ccp(buttonSize.width * 0.5f, buttonSize.height * 0.5f));
+	float shiftX = centerX - buttonCenter.x;
+	CCNode* parent = serverButton->getParent();
+	CCPoint position = parent->convertToWorldSpace(serverButton->getPosition());
+	position.x += shiftX;
+	serverButton->setPosition(parent->convertToNodeSpace(position));
+
+	// 部分 CCB 将文字放在按钮外；子节点会跟随按钮，独立文字只平移一次。
+	CCNode* serverName = dynamic_cast<CCNode*>(getVariable("mSeverName1"));
+	for(CCNode* node = serverName; node; node = node->getParent())
+	{
+		if(node == serverButton)
+			return;
+	}
+	if(serverName && serverName->getParent())
+	{
+		CCNode* nameParent = serverName->getParent();
+		CCPoint namePosition = nameParent->convertToWorldSpace(serverName->getPosition());
+		namePosition.x += shiftX;
+		serverName->setPosition(nameParent->convertToNodeSpace(namePosition));
+	}
 }
 
 void LoadingFrame::updateSeverName()

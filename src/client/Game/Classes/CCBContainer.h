@@ -34,6 +34,12 @@ public:
 	virtual void loadCcbiFile(const std::string& filename, bool froceLoad = false);
 	void runAnimation(const std::string& actionname);
 	cocos2d::CCObject* getVariable(const std::string& variablename);
+	/**
+	 * 按 CCB 回调名称查找菜单项，不改变节点的所有权。
+	 * @param actionName CCB 中绑定的回调名称。
+	 * @return 当前容器中的菜单项；未找到时返回 NULL。
+	 */
+	cocos2d::CCMenuItem* getMenuItemByAction(const std::string& actionName) const;
 	void setListener(CCBContainerListener* listener, int tag = 0);
 
 	virtual bool init();
