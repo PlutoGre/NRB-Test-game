@@ -89,6 +89,14 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Start-Web.ps1 -
 
 本次已使用当前电脑的已有 Web 包实际启动外网入口，下载隧道工具，取得 HTTPS 地址，并确认公网就绪响应与本机网关一致。没有重新编译客户端，也没有执行全新 Windows 初始化或公网浏览器玩法测试；此前玩法实测使用本地浏览器入口。
 
+### 点击进入后提示 Empty session request required
+
+旧版网页网关会拒绝所有带 `Transfer-Encoding` 的登录请求。Cloudflare 隧道可能把空 POST 转成分块传输，导致 `/web/session` 返回 HTTP 400，页面显示“游戏未能启动”。修复后的网关会读取并接受空的分块请求，同时继续拒绝非空请求、冲突的长度头和来源不匹配的请求。
+
+在开服电脑的仓库根目录运行 `git pull`，随后双击 **`启动网页外网.cmd`** 更新后台网页网关，再刷新原网址。启动入口会复用仍在运行的隧道；无需先停止隧道、重新编译网页包或重建数据库。只更新文件或双击状态入口，不会替换已经运行的旧网关进程。
+
+验证记录：修复前在提供的公网入口复现 `/web/config` HTTP 200、`/web/session` HTTP 400；修复后的本机 HTTP 集成检查确认空分块请求返回 200，非空请求和长度头冲突返回 400，错误来源返回 403。另一台电脑需要更新并重新启动网页网关后，才能验证该网址上的修复结果。
+
 ### 提示 getaddrinfo failed / Errno 11001
 
 `Local administration ready`、`web_external started` 表示游戏服和外网网页网关已经启动；`browser: not running port 18084` 只是可选的局域网网页入口未启动，外网网页入口实际使用 18085 或自动选择的其他端口。
