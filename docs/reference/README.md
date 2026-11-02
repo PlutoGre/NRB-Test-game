@@ -3,6 +3,7 @@
 日常使用只需阅读 [仓库 README](../../README.md) 和 [客户端打包流程](../CLIENT_BUILD.md)。这里保留此前的详细内容，遇到对应需求时再查阅。
 
 - [服务端备份、恢复、迁移及故障排查](SERVER_DEPLOYMENT.md)
+- [冒险“连续”页等待后空白的原因与更新步骤](CONTINUE_LOGIN_FIX.md)
 - [Android 发布版签名、Mac 本地构建和其他打包方式](CLIENT_BUILD.md)
 - [首次上传完整 GitHub 仓库及文件范围](GITHUB_REPOSITORY.md)
 - [外网网关原理、配置及排查](EXTERNAL_DEPLOYMENT.md)

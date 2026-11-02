@@ -496,12 +496,38 @@ class Deployment:
         self.start()
         print("Client configuration:", self.root / "client-config")
 
+    def upgrade_legacy_continue_login(self):
+        """Migrate only the bundled expired activity, before the game reads it."""
+        config = self.root / "server/xml/adventuresConfig.xml"
+        parser = ET.XMLParser(target=ET.TreeBuilder(insert_comments=True))
+        tree = ET.parse(config, parser=parser)
+        activities = tree.findall("adventures/adventure[@id='10']")
+        legacy = {"timeType": "1", "beginTime": "2015-06-10_12:00:00",
+                  "endTime": "2020-07-11_12:00:00", "version": "1"}
+        if len(activities) != 1 or any(activities[0].get(key) != value for key, value in legacy.items()):
+            return
+        if self.owned("game"):
+            print("Continuous-login configuration needs an update: stop this deployment, then start it again.", flush=True)
+            return
+        backup = config.with_name(config.name + ".before-continue-login-fix")
+        if not backup.exists():
+            shutil.copy2(config, backup)
+        # The bundled JAR validates dates even for timeType=1. Use an explicit
+        # window supported by both handlers, below its signed 32-bit time limit.
+        activities[0].set("timeType", "3")
+        activities[0].set("endTime", "2037-12-31_23:59:59")
+        temporary = config.with_name(config.name + ".continue-login.tmp")
+        tree.write(temporary, encoding="UTF-8", xml_declaration=True)
+        os.replace(temporary, config)
+        print("Updated legacy continuous-login activity configuration; original XML backed up to " + str(backup), flush=True)
+
     def start(self):
         self.require_installed()
         if (self.root / "private/restore-in-progress").exists():
             raise RuntimeError("Finish the interrupted database restore before starting gameplay")
         if not self.state.get("installed"):
             raise RuntimeError("Installation is incomplete; inspect logs and re-run install")
+        self.upgrade_legacy_continue_login()
         self.ensure_db()
         directory = self.runtime_directory()
         self.launch("web", [sys.executable, "-m", "http.server", str(self.state["webPort"]),

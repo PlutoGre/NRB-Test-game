@@ -22,14 +22,7 @@ import java.util.List;
 import java.util.ListIterator;
 
 /**
- * 留言包
- * 1， 解析数据包
- * 2， 保存留言数据
- * 3， 推送给相关玩家数据信息
- * 4， 下发留言成功
- *
- * 
- * @author lvjc
+ * @brief 处理冒险连续登录活动的状态查询、奖励领取和登录天数累计。
  */
 public class AdventureContinueLoginHandler
 {
@@ -50,7 +43,7 @@ public class AdventureContinueLoginHandler
         }
         catch (InvalidProtocolBufferException e)
         {
-            e.printStackTrace();
+            logger.error("getInfo: 连续登录请求解析失败", e);
             return;
         }
 
@@ -58,13 +51,14 @@ public class AdventureContinueLoginHandler
         int uuid = (Integer)session.getAttribute("playerid");
         Player player = ObjectAccessor.getOnlineUser(uuid);
         int id=player.getId();
-        logger.info("getInfo received: {}, {}", new Object[]{id , version});
+        logger.debug("getInfo: playerId={}, version={}", new Object[]{id , version});
 
         long current_time = Util.getServerMillTime();
         if(!_checkValid())
         {
             ErrorReporter.OPErrorReporter.Builder eBuilder = ErrorReporter.OPErrorReporter.newBuilder();
-            eBuilder.setErrorid(OP.code.OPCODE_GET_FIGHTEND_REWARD_INFORET_S_VALUE);
+            logger.warn("getInfo: 连续登录活动未开放, playerId={}", id);
+            eBuilder.setErrorid(OP.code.OPCODE_ADVENTURE_CONTINUELOGIN_GET_INFORET_S_VALUE);
             eBuilder.setErrormsg("PlayerId:"+player.getId()+" Current Activity Invalid!");
             player.sendPacket(OP.code.OPCODE_ERROR_RET_S_VALUE, eBuilder);
            return;
@@ -78,7 +72,7 @@ public class AdventureContinueLoginHandler
         player.sendPacket(OP.code.OPCODE_ADVENTURE_CONTINUELOGIN_GET_INFORET_S_VALUE, builder);// 发送返回包
         long current_time_2 = Util.getServerMillTime();
         long taken_time=current_time_2-current_time;
-        logger.info("getInfo Send: PlayerId:{}, Cost:{}", new Object[]{id ,taken_time});
+        logger.info("getInfo: response sent, playerId={}, durationMs={}", new Object[]{id ,taken_time});
     }
 
 
@@ -98,7 +92,7 @@ public class AdventureContinueLoginHandler
 		}
         catch (InvalidProtocolBufferException e)
         {
-			e.printStackTrace();
+            logger.error("getReward: 连续登录领奖请求解析失败", e);
 			return;
 		}
 		
@@ -108,12 +102,13 @@ public class AdventureContinueLoginHandler
         Player player = ObjectAccessor.getOnlineUser(uuid);
         int id=player.getId();
         int rewardId=opRewardAdventureContinueLogin.getId();
-        logger.info("getReward received: PlayerId:{}, Version:{},rewardId:{}", new Object[]{id , version,rewardId});
+        logger.debug("getReward: playerId={}, version={}, rewardId={}", new Object[]{id , version,rewardId});
         long current_time = Util.getServerMillTime();
         if(!_checkValid())
         {
             ErrorReporter.OPErrorReporter.Builder eBuilder = ErrorReporter.OPErrorReporter.newBuilder();
-            eBuilder.setErrorid(OP.code.OPCODE_GET_FIGHTEND_REWARD_INFORET_S_VALUE);
+            logger.warn("getReward: 连续登录活动未开放, playerId={}", id);
+            eBuilder.setErrorid(OP.code.OPCODE_ADVENTURE_CONTINUELOGIN_REWARDRET_S_VALUE);
             eBuilder.setErrormsg("PlayerId:"+player.getId()+" Current Continue Activity Invalid!");
             player.sendPacket(OP.code.OPCODE_ERROR_RET_S_VALUE, eBuilder);
             return;
@@ -125,7 +120,7 @@ public class AdventureContinueLoginHandler
         if(stats.getAdventureContinueInfoJson().size()==(XMLTemplateService.adventureContinueLoginTemplatesSize()+2))
         {
             ErrorReporter.OPErrorReporter.Builder eBuilder = ErrorReporter.OPErrorReporter.newBuilder();
-            eBuilder.setErrorid(OP.code.OPCODE_GET_FIGHTEND_REWARD_INFORET_S_VALUE);
+            eBuilder.setErrorid(OP.code.OPCODE_ADVENTURE_CONTINUELOGIN_REWARDRET_S_VALUE);
             eBuilder.setErrormsg("PlayerId:"+player.getId()+" Current Continue Activity Reward All Get!!");
             player.sendPacket(OP.code.OPCODE_ERROR_RET_S_VALUE, eBuilder);
             return;
@@ -134,7 +129,7 @@ public class AdventureContinueLoginHandler
         if(stats.getAdventureContinueInfoJson().containsKey(String.valueOf(rewardId)))
         {
             ErrorReporter.OPErrorReporter.Builder eBuilder = ErrorReporter.OPErrorReporter.newBuilder();
-            eBuilder.setErrorid(OP.code.OPCODE_GET_FIGHTEND_REWARD_INFORET_S_VALUE);
+            eBuilder.setErrorid(OP.code.OPCODE_ADVENTURE_CONTINUELOGIN_REWARDRET_S_VALUE);
             eBuilder.setErrormsg("PlayerId:"+player.getId()+" Current Continue Activity Id:"+rewardId+" Already Get!!");
             player.sendPacket(OP.code.OPCODE_ERROR_RET_S_VALUE, eBuilder);
             return;
@@ -144,7 +139,7 @@ public class AdventureContinueLoginHandler
         if(item==null)
         {
             ErrorReporter.OPErrorReporter.Builder eBuilder = ErrorReporter.OPErrorReporter.newBuilder();
-            eBuilder.setErrorid(OP.code.OPCODE_GET_FIGHTEND_REWARD_INFORET_S_VALUE);
+            eBuilder.setErrorid(OP.code.OPCODE_ADVENTURE_CONTINUELOGIN_REWARDRET_S_VALUE);
             eBuilder.setErrormsg("PlayerId:"+player.getId()+" Current Continue Activity ItemId Error!!");
             player.sendPacket(OP.code.OPCODE_ERROR_RET_S_VALUE, eBuilder);
             return;
@@ -163,7 +158,7 @@ public class AdventureContinueLoginHandler
         if(currLoginCount<item.getDayCount())
         {
             ErrorReporter.OPErrorReporter.Builder eBuilder = ErrorReporter.OPErrorReporter.newBuilder();
-            eBuilder.setErrorid(OP.code.OPCODE_GET_FIGHTEND_REWARD_INFORET_S_VALUE);
+            eBuilder.setErrorid(OP.code.OPCODE_ADVENTURE_CONTINUELOGIN_REWARDRET_S_VALUE);
             eBuilder.setErrormsg("PlayerId:"+player.getId()+" Current Continue Activity LoginCount Error!!");
             player.sendPacket(OP.code.OPCODE_ERROR_RET_S_VALUE, eBuilder);
             return;
@@ -233,7 +228,7 @@ public class AdventureContinueLoginHandler
 
         player.setLastVerifyTime(Util.getServerTime());
         builder.setStatus(1);
-        builder.setServertime((int) System.currentTimeMillis());
+        builder.setServertime(Util.getServerTime());
         builder.setLoginStatus(player.getUserStats().getAdContinueInfo());
         builder.setGoldcoins(player.getGoldCoins());
         builder.setSilvercoins(player.getSilvercoins());
@@ -244,9 +239,10 @@ public class AdventureContinueLoginHandler
 		player.sendPacket(OP.code.OPCODE_ADVENTURE_CONTINUELOGIN_REWARDRET_S_VALUE, builder);// 发送返回包
 		long current_time_2 = Util.getServerMillTime();
 		long taken_time=current_time_2-current_time;
-        logger.info("gerReward Send: PlayerId:{},Cost:{}", new Object[]{id ,taken_time});
+        logger.info("getReward: response sent, playerId={}, durationMs={}", new Object[]{id ,taken_time});
 	}
 
+    /** 判断当前期的连续登录奖励是否已全部领取，用于隐藏已完成入口。 */
     public static boolean checkShow(Player player)
     {
         setAdventureContinueLoginStats(player,false,true);
@@ -259,34 +255,34 @@ public class AdventureContinueLoginHandler
      */
     private static boolean  _checkValid()
     {
-        boolean valid=true;
         Adventures adventure=_getAdventures();
-        int current_time=Util.getServerTime();
-        if(adventure!=null)
+        if(adventure == null)
         {
-            SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
-            int endTime = 0;
-            int startTime = 0;
-            try
-            {
-                endTime =  (int)(df.parse(adventure.getEndTime()).getTime()/1000);
-                startTime = (int)(df.parse(adventure.getBeginTime()).getTime()/1000);
-            }
-            catch (ParseException e)
-            {
-                endTime=0;
-                startTime=0;
-            }
-            if(endTime<current_time||startTime>current_time)
-            {
-                valid=false;
-            }
+            return false;
         }
-        else
+        // 常驻活动与入口列表采用相同规则，不能再用旧排期拒绝详情请求。
+        if(adventure.getTimeType() == 1)
         {
-            valid=false;
+            return true;
         }
-       return valid;
+        if(adventure.getTimeType() != 3)
+        {
+            return false;
+        }
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
+        df.setLenient(false);
+        try
+        {
+            long startTime = df.parse(adventure.getBeginTime()).getTime();
+            long endTime = df.parse(adventure.getEndTime()).getTime();
+            long currentTime = Util.getServerMillTime();
+            return startTime <= currentTime && currentTime <= endTime;
+        }
+        catch (ParseException e)
+        {
+            logger.error("_checkValid: 连续登录活动日期配置无效", e);
+            return false;
+        }
     }
 
     /**

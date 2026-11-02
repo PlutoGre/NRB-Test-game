@@ -15,7 +15,8 @@
 		<adventure id="12" timeType="4" levelLimit="0" lastTime="0" beginTime="0" endTime="0" name="充值返利"/>			
 		<adventure id="13" timeType="4" levelLimit="0" lastTime="0" beginTime="0" endTime="0" name="财神到"/>
 		<adventure id="5" timeType="1" levelLimit="11" lastTime="0" beginTime="0" endTime="0" name="血战" />
-		<adventure id="10" timeType="1" levelLimit="0" lastTime="0" beginTime="2015-06-10_12:00:00" endTime="2020-07-11_12:00:00" name="连续登陆" version="1"/>		
+		<!-- Bundled JAR checks these dates even for timeType=1; keep both handlers consistent and below 2038. -->
+		<adventure id="10" timeType="3" levelLimit="0" lastTime="0" beginTime="2015-06-10_12:00:00" endTime="2037-12-31_23:59:59" name="连续登陆" version="1"/>
 		<adventure id="8" timeType="4" levelLimit="0" lastTime="0" beginTime="0" endTime="0" name="残障"/>
 		<adventure id="2" timeType="1" levelLimit="0" lastTime="864000" beginTime="0" endTime="0" name="赠送元宝"/>		
 		<adventure id="3" timeType="5" levelLimit="11" lastTime="0" beginTime="0" endTime="0" name="许愿树" />

@@ -9,4 +9,6 @@
 
 默认运行目录是项目内的 `runtime/server`，Android 产物在 `outputs/android`。相对路径参数以项目根目录为准，脚本不依赖启动时的工作目录；自定义 `-InstallDir` 时各命令使用同一个参数。
 
+冒险“连续”页等待后空白：更新仓库、停止后重新启动服务，入口会备份并修正旧默认配置中的过期排期，无需重装数据库或重新打包客户端。说明与检查状态见 [连续登录修复](../docs/reference/CONTINUE_LOGIN_FIX.md)。
+
 旧的迁移、签名和故障排查说明保存在 [参考资料](../docs/reference/README.md)。
