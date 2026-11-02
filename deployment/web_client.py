@@ -114,12 +114,12 @@ class WebHandler(Handler):
                 pass
         return state
 
-    def empty_session_body(self):
+    def empty_request_body(self):
         """Accept an empty body even when a tunnel forwards it using chunked framing."""
         lengths = self.headers.get_all("Content-Length", [])
         transfers = self.headers.get_all("Transfer-Encoding", [])
         # Do not allow ambiguous framing or consume an arbitrary request body.
-        # Every session response closes the connection, including rejections.
+        # HTTP responses close the connection, including rejections.
         if len(lengths) > 1 or len(transfers) > 1 or (lengths and transfers):
             return False
         if not transfers:
@@ -128,7 +128,7 @@ class WebHandler(Handler):
             return False
         try:
             # An empty chunked body contains only its zero chunk and final CRLF.
-            # Bound both reads; nonempty chunks and trailers are not session input.
+            # Bound both reads; nonempty chunks and trailers are not gateway input.
             return (re.fullmatch(rb"0+\r\n", self.rfile.readline(64)) is not None
                     and self.rfile.readline(2) == b"\r\n")
         except OSError:
@@ -138,7 +138,7 @@ class WebHandler(Handler):
         self.close_connection = True
         if not self.valid_host() or self.headers.get("Origin") not in self.server.origins:
             return self.reply(403, {"error": "Origin rejected"})
-        if self.path != "/web/session" or not self.empty_session_body():
+        if self.path != "/web/session" or not self.empty_request_body():
             return self.reply(400, {"error": "Empty session request required"})
         try:
             self.ready()
@@ -162,7 +162,7 @@ class WebHandler(Handler):
     def get_request(self):
         if not self.valid_host():
             return self.reply(403, {"error": "Host rejected; configure --public-origin for this URL"})
-        if self.headers.get("Transfer-Encoding") or self.headers.get("Content-Length", "0") != "0":
+        if not self.empty_request_body():
             return self.reply(400, {"error": "Unexpected body"})
         path = unquote(urlsplit(self.path).path)
         if path == "/web/config":

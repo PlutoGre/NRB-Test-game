@@ -91,11 +91,11 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Start-Web.ps1 -
 
 ### 点击进入后提示 Empty session request required
 
-旧版网页网关会拒绝所有带 `Transfer-Encoding` 的登录请求。Cloudflare 隧道可能把空 POST 转成分块传输，导致 `/web/session` 返回 HTTP 400，页面显示“游戏未能启动”。修复后的网关会读取并接受空的分块请求，同时继续拒绝非空请求、冲突的长度头和来源不匹配的请求。
+旧版网页网关会拒绝所有带 `Transfer-Encoding` 的登录请求。Cloudflare 隧道可能把空 POST 转成分块传输，导致 `/web/session` 返回 HTTP 400，页面显示“游戏未能启动”；GET 转发遇到同样情况时，首页或资源会报 `Unexpected body`。修复后的网关会在登录、页面、资源和 WebSocket 握手入口读取并接受空的分块请求，同时继续拒绝非空请求、冲突的长度头和来源不匹配的请求。
 
 在开服电脑的仓库根目录运行 `git pull`，随后双击 **`启动网页外网.cmd`** 更新后台网页网关，再刷新原网址。启动入口会复用仍在运行的隧道；无需先停止隧道、重新编译网页包或重建数据库。只更新文件或双击状态入口，不会替换已经运行的旧网关进程。
 
-验证记录：修复前在提供的公网入口复现 `/web/config` HTTP 200、`/web/session` HTTP 400；修复后的本机 HTTP 集成检查确认空分块请求返回 200，非空请求和长度头冲突返回 400，错误来源返回 403。另一台电脑需要更新并重新启动网页网关后，才能验证该网址上的修复结果。
+验证记录：修复前在提供的公网入口复现 `/web/config` HTTP 200、`/web/session` HTTP 400；更新后已确认公网登录接口返回 200。后续本机 HTTP 集成检查确认空分块的首页、配置、脚本和鉴权资源返回 200，WebSocket 握手返回 101；非空请求、重复或冲突的长度头返回 400，错误来源返回 403。另一台电脑需要更新并重新启动网页网关后，才能验证完整的浏览器启动流程。
 
 ### 提示 getaddrinfo failed / Errno 11001
 
