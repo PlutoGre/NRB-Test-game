@@ -4,6 +4,7 @@
 
 - [服务端备份、恢复、迁移及故障排查](SERVER_DEPLOYMENT.md)
 - [冒险“连续”页等待后空白的原因与更新步骤](CONTINUE_LOGIN_FIX.md)
+- [管理工具发奖与界面修复实测](ADMIN_TOOL_VALIDATION.md)
 - [Android 发布版签名、Mac 本地构建和其他打包方式](CLIENT_BUILD.md)
 - [首次上传完整 GitHub 仓库及文件范围](GITHUB_REPOSITORY.md)
 - [外网网关原理、配置及排查](EXTERNAL_DEPLOYMENT.md)

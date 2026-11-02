@@ -191,9 +191,21 @@ public class RewardServices
             UserRewardInfo.OPRewardInfoRet.RewardInfo.Builder reward=UserRewardInfo.OPRewardInfoRet.RewardInfo.newBuilder();
             reward.setItemType(rewardItem.getInt("t"));
             reward.setItemId(rewardItem.getInt("i"));
-            // 旧客户端按奥义模板显示残章；数据库仍保留真实残章 ID 供领取。
-            if (_item.getRewardInfoJson().optInt("nrb", 0) == 1 && rewardItem.getInt("t") == 42000) {
-                reward.setItemId(XMLTemplateService.getSkillIdBySkillBookId(rewardItem.getInt("i")));
+            if (_item.getRewardInfoJson().optInt("nrb", 0) == 1) {
+                int type = rewardItem.getInt("t");
+                int itemId = rewardItem.getInt("i");
+                // ResManager 只注册了带品质的卡牌/影子/装备/奥义类型，通用类型会显示空名称。
+                if ((type == 31000 || type == 32000) && XMLTemplateService.getDiscipleTemplate(itemId) != null) {
+                    reward.setItemType(type + XMLTemplateService.getDiscipleTemplate(itemId).getQuality());
+                } else if (type == 41000 && XMLTemplateService.getSkillTemplate(itemId) != null) {
+                    reward.setItemType(type + XMLTemplateService.getSkillTemplate(itemId).getQuality());
+                } else if (type == 51000 && XMLTemplateService.getEquipTemplate(itemId) != null) {
+                    reward.setItemType(50000 + XMLTemplateService.getEquipTemplate(itemId).getType() * 1000
+                            + XMLTemplateService.getEquipTemplate(itemId).getQuality());
+                } else if (type == 42000) {
+                    // 显示时使用奥义模板，数据库仍保留真实残章 ID 供领取。
+                    reward.setItemId(XMLTemplateService.getSkillIdBySkillBookId(itemId));
+                }
             }
             reward.setCount(rewardItem.getInt("q"));
             sysMsgInfo.addReward(reward);

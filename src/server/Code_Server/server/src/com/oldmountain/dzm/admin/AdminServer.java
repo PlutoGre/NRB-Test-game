@@ -13,6 +13,7 @@ import net.sf.json.JSONObject;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.SQLQuery;
+import org.hibernate.Hibernate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.oldmountain.dzm.DZM;
@@ -370,7 +371,9 @@ public final class AdminServer implements HttpHandler {
         Session db = DZM.getEntityManager().getSessionFactory();
         Transaction tx = db.beginTransaction();
         try {
-            Object details = db.createSQLQuery("SELECT details FROM nrb_admin_batches WHERE batchId=:id").setString("id", id).uniqueResult();
+            // MariaDB 把 MEDIUMTEXT 报告为 LONGVARCHAR(-1)，旧 Hibernate 必须显式指定字符串映射。
+            Object details = db.createSQLQuery("SELECT details FROM nrb_admin_batches WHERE batchId=:id")
+                    .addScalar("details", Hibernate.STRING).setString("id", id).uniqueResult();
             tx.commit();
             return details == null ? null : JSONObject.fromObject(details.toString());
         } catch (RuntimeException e) { tx.rollback(); throw e; }
@@ -381,7 +384,8 @@ public final class AdminServer implements HttpHandler {
         Session db = DZM.getEntityManager().getSessionFactory();
         Transaction tx = db.beginTransaction();
         try {
-            for (Object details : db.createSQLQuery("SELECT details FROM nrb_admin_batches ORDER BY createdAt DESC,batchId DESC LIMIT 50").list()) {
+            for (Object details : db.createSQLQuery("SELECT details FROM nrb_admin_batches ORDER BY createdAt DESC,batchId DESC LIMIT 50")
+                    .addScalar("details", Hibernate.STRING).list()) {
                 rows.add(JSONObject.fromObject(details.toString()));
             }
             tx.commit();

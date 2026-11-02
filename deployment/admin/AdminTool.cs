@@ -141,7 +141,8 @@ namespace NrbAdmin
         private readonly TextBox password = new TextBox { UseSystemPasswordChar = true };
         private readonly Label status = new Label { AutoSize = true };
         private readonly Label selection = new Label { AutoSize = true };
-        private readonly Label result = new Label { Dock = DockStyle.Fill, AutoEllipsis = true };
+        private readonly TextBox result = new TextBox { Dock = DockStyle.Fill, ReadOnly = true,
+            Multiline = true, ScrollBars = ScrollBars.Vertical, TabStop = false };
         private readonly Button login = new Button { Text = "登录", Width = 90, Enabled = false };
         private readonly Button browse = new Button { Text = "选择运行目录", Width = 115 };
         private readonly Button logout = new Button { Text = "退出登录", Width = 90, Enabled = false };
@@ -179,8 +180,9 @@ namespace NrbAdmin
             Text = "NRB 游戏管理";
             Font = new Font("Microsoft YaHei UI", 9F);
             StartPosition = FormStartPosition.CenterScreen;
-            ClientSize = new Size(1180, 790);
+            ClientSize = new Size(1180, 870);
             MinimumSize = new Size(1000, 720);
+            AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             BuildLayout();
             directory.Text = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "runtime", "server");
@@ -205,7 +207,14 @@ namespace NrbAdmin
             };
             directory.TextChanged += async delegate { if (!busy) { api = null; await CheckHealth(); } };
             all.CheckedChanged += delegate { playerName.Enabled = !all.Checked; findPlayer.Enabled = !all.Checked; };
-            Shown += async delegate { await CheckHealth(); timer.Start(); };
+            Shown += async delegate
+            {
+                Rectangle area = Screen.FromControl(this).WorkingArea;
+                MinimumSize = new Size(Math.Min(MinimumSize.Width, area.Width - 24), Math.Min(MinimumSize.Height, area.Height - 24));
+                Size = new Size(Math.Min(Width, area.Width - 24), Math.Min(Height, area.Height - 24));
+                CenterToScreen();
+                await CheckHealth(); timer.Start();
+            };
             timer.Tick += async delegate { if (!busy) await CheckHealth(); };
             FormClosed += delegate { timer.Stop(); };
             AcceptButton = login;
@@ -217,67 +226,174 @@ namespace NrbAdmin
             return new DataGridView { Dock = DockStyle.Fill, ReadOnly = true, AutoGenerateColumns = false,
                 AllowUserToAddRows = false, AllowUserToDeleteRows = false, AllowUserToResizeRows = false,
                 SelectionMode = DataGridViewSelectionMode.FullRowSelect, MultiSelect = false,
-                RowHeadersVisible = false, BackgroundColor = Color.White, BorderStyle = BorderStyle.FixedSingle };
+                RowHeadersVisible = false, BackgroundColor = Color.White, BorderStyle = BorderStyle.FixedSingle,
+                ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize };
         }
         private static void Column(DataGridView grid, string property, string caption, int width)
         { grid.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = property, HeaderText = caption, Width = width, SortMode = DataGridViewColumnSortMode.NotSortable }); }
         private static FlowLayoutPanel Flow(params Control[] controls)
         {
-            var panel = new FlowLayoutPanel { Dock = DockStyle.Fill, AutoSize = true, WrapContents = false, Padding = new Padding(0, 3, 0, 3) };
+            var panel = new FlowLayoutPanel { Dock = DockStyle.Top, AutoSize = true,
+                AutoSizeMode = AutoSizeMode.GrowAndShrink, WrapContents = true,
+                Margin = Padding.Empty, Padding = new Padding(0, 3, 0, 3) };
             panel.Controls.AddRange(controls); return panel;
         }
         private static Label Label(string text) { return new Label { Text = text, AutoSize = true, Margin = new Padding(3, 7, 3, 3) }; }
 
+        private static TableLayoutPanel Field(string text, Control input, Control action = null)
+        {
+            var row = new TableLayoutPanel { Dock = DockStyle.Top, AutoSize = true,
+                AutoSizeMode = AutoSizeMode.GrowAndShrink, ColumnCount = action == null ? 2 : 3,
+                RowCount = 1, Margin = Padding.Empty };
+            row.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
+            row.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
+            if (action != null) row.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
+            var caption = Label(text); caption.Anchor = AnchorStyles.Left;
+            input.Dock = DockStyle.Fill; input.Margin = new Padding(6, 6, 6, 6);
+            row.Controls.Add(caption, 0, 0); row.Controls.Add(input, 1, 0);
+            if (action != null) row.Controls.Add(action, 2, 0);
+            return row;
+        }
+
+        private static void WrapLabel(Label label, Control parent)
+        {
+            label.AutoSize = true;
+            label.Dock = DockStyle.Top;
+            parent.SizeChanged += delegate
+            {
+                int width = Math.Max(100, parent.ClientSize.Width - parent.Padding.Horizontal - label.Margin.Horizontal - 8);
+                if (label.MaximumSize.Width != width) label.MaximumSize = new Size(width, 0);
+            };
+        }
+
         private void BuildLayout()
         {
             var shell = new TableLayoutPanel { Dock = DockStyle.Fill, Padding = new Padding(15), ColumnCount = 1, RowCount = 4 };
-            shell.RowStyles.Add(new RowStyle(SizeType.Absolute, 34));
-            shell.RowStyles.Add(new RowStyle(SizeType.Absolute, 94));
+            shell.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+            shell.RowStyles.Add(new RowStyle(SizeType.AutoSize));
             shell.RowStyles.Add(new RowStyle(SizeType.Percent, 100));
-            shell.RowStyles.Add(new RowStyle(SizeType.Absolute, 48));
-            shell.Controls.Add(new Label { Text = "NRB 游戏管理 · 物品发放", Font = new Font(Font, FontStyle.Bold), AutoSize = true }, 0, 0);
-            var authPanel = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 1, RowCount = 3 };
-            directory.Width = 670;
-            authPanel.Controls.Add(Flow(Label("服务运行目录"), directory, browse));
-            authPanel.Controls.Add(Flow(Label("管理账号"), username, Label("密码"), password, login, logout));
-            authPanel.Controls.Add(status);
+            shell.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+            shell.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
+            foreach (var button in new[] { login, logout, browse, add, remove, findPlayer, send, query, cancel })
+            {
+                button.MinimumSize = new Size(button.Width, 32);
+                button.AutoSize = true; button.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                button.Padding = new Padding(10, 5, 10, 5);
+            }
+            shell.Controls.Add(new Label { Text = "NRB 游戏管理 · 物品发放", Font = new Font(Font, FontStyle.Bold),
+                AutoSize = true, Margin = new Padding(3, 3, 3, 12) }, 0, 0);
+            var authPanel = new TableLayoutPanel { Dock = DockStyle.Top, AutoSize = true,
+                AutoSizeMode = AutoSizeMode.GrowAndShrink, ColumnCount = 1, RowCount = 3, Margin = Padding.Empty };
+            authPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
+            for (int i = 0; i < 3; i++) authPanel.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+            authPanel.Controls.Add(Field("服务运行目录", directory, browse), 0, 0);
+            authPanel.Controls.Add(Flow(Label("管理账号"), username, Label("密码"), password, login, logout), 0, 1);
+            status.Margin = new Padding(3, 4, 3, 10);
+            WrapLabel(status, authPanel); authPanel.Controls.Add(status, 0, 2);
+            bool sizingAuth = false;
+            Action fitAuth = delegate
+            {
+                if (sizingAuth || !IsHandleCreated || authPanel.ClientSize.Width == 0) return;
+                sizingAuth = true;
+                try
+                {
+                    int height = 0;
+                    foreach (Control child in authPanel.Controls)
+                        height += child.GetPreferredSize(new Size(Math.Max(100, authPanel.ClientSize.Width - child.Margin.Horizontal), 0)).Height + child.Margin.Vertical;
+                    var maximum = new Size(0, height);
+                    if (authPanel.MaximumSize != maximum) authPanel.MaximumSize = maximum;
+                }
+                finally { sizingAuth = false; }
+            };
+            authPanel.Layout += delegate { fitAuth(); };
+            Shown += delegate { fitAuth(); };
             shell.Controls.Add(authPanel, 0, 1);
-            var tabs = new TabControl { Dock = DockStyle.Fill };
+            workspace.AutoScroll = true;
+            workspace.AutoScrollMinSize = new Size(900, 400);
+            // 滚动内容不能 Dock=Fill，否则布局会把滚动后的位置重新归零。
+            var tabs = new TabControl { Dock = DockStyle.None, Anchor = AnchorStyles.Top | AnchorStyles.Left,
+                MinimumSize = new Size(900, 400) };
             var grantTab = new TabPage("发放物品");
             var historyTab = new TabPage("发放记录");
             tabs.TabPages.Add(grantTab); tabs.TabPages.Add(historyTab);
             var split = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 2, RowCount = 1, Padding = new Padding(4) };
             split.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 53)); split.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 47));
+            split.RowStyles.Add(new RowStyle(SizeType.Percent, 100));
             var left = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 1, RowCount = 4 };
-            left.RowStyles.Add(new RowStyle(SizeType.Absolute, 36)); left.RowStyles.Add(new RowStyle(SizeType.Percent, 100));
-            left.RowStyles.Add(new RowStyle(SizeType.Absolute, 47)); left.RowStyles.Add(new RowStyle(SizeType.Absolute, 38));
-            left.Controls.Add(Flow(category, Label("名称 / ID"), search), 0, 0);
+            left.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
+            left.RowStyles.Add(new RowStyle(SizeType.AutoSize)); left.RowStyles.Add(new RowStyle(SizeType.Percent, 100));
+            left.RowStyles.Add(new RowStyle(SizeType.AutoSize)); left.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+            var filter = Field("名称 / ID", search);
+            filter.ColumnCount = 3;
+            filter.ColumnStyles.Insert(0, new ColumnStyle(SizeType.AutoSize));
+            filter.Controls.Clear();
+            filter.Controls.Add(category, 0, 0); filter.Controls.Add(Label("名称 / ID"), 1, 0); filter.Controls.Add(search, 2, 0);
+            category.Margin = new Padding(3, 6, 8, 6);
+            left.Controls.Add(filter, 0, 0);
             Column(catalogGrid, "Category", "类别", 80); Column(catalogGrid, "Id", "模板 ID", 80); Column(catalogGrid, "Name", "名称", 280);
             catalogGrid.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            catalogGrid.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            catalogGrid.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            catalogGrid.Columns[2].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            catalogGrid.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
+            catalogGrid.RowTemplate.Height = Math.Max(28, Font.Height + 10);
             left.Controls.Add(catalogGrid, 0, 1); left.Controls.Add(selection, 0, 2);
+            selection.Margin = new Padding(4, 8, 4, 8); WrapLabel(selection, left);
             left.Controls.Add(Flow(Label("数量"), quantity, add), 0, 3);
             var right = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 1, RowCount = 9, Padding = new Padding(10, 0, 0, 0) };
-            foreach (float h in new float[] { 30, 35, 26, 0, 35, 35, 35, 34, 78 }) right.RowStyles.Add(new RowStyle(h == 0 ? SizeType.Percent : SizeType.Absolute, h == 0 ? 100 : h));
+            right.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
+            for (int row = 0; row < 9; row++) right.RowStyles.Add(new RowStyle(row == 3 ? SizeType.Percent : SizeType.AutoSize, row == 3 ? 100 : 0));
             right.Controls.Add(Flow(single, all), 0, 0);
-            right.Controls.Add(Flow(playerName, findPlayer), 0, 1);
+            right.Controls.Add(Field("角色名", playerName, findPlayer), 0, 1);
             right.Controls.Add(Label("发放清单（每批最多 20 种物品）"), 0, 2);
             Column(cartGrid, "Name", "物品", 290); Column(cartGrid, "Quantity", "数量", 90);
             cartGrid.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cartGrid.Columns[0].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            cartGrid.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            cartGrid.RowTemplate.Height = Math.Max(28, Font.Height + 10);
+            cartGrid.MinimumSize = new Size(0, 100);
             cartGrid.DataSource = cart; right.Controls.Add(cartGrid, 0, 3);
             right.Controls.Add(Flow(remove), 0, 4);
-            right.Controls.Add(Flow(Label("标题"), title), 0, 5); title.Dock = DockStyle.None; title.Width = 325;
-            right.Controls.Add(Flow(Label("说明"), message), 0, 6); message.Dock = DockStyle.None; message.Width = 325;
-            right.Controls.Add(Label("在游戏内“传书”领取；已有完整卡牌会转为影子。"), 0, 7);
-            var actions = new FlowLayoutPanel { Dock = DockStyle.Fill, WrapContents = true };
-            actions.Controls.AddRange(new Control[] { send, query, cancel }); right.Controls.Add(actions, 0, 8);
+            right.Controls.Add(Field("标题", title), 0, 5);
+            right.Controls.Add(Field("说明", message), 0, 6);
+            var instructions = Label("在游戏内“传书 → 系统”领取；已有完整卡牌会转为影子。");
+            WrapLabel(instructions, right); right.Controls.Add(instructions, 0, 7);
+            right.Controls.Add(Flow(send, query, cancel), 0, 8);
             split.Controls.Add(left, 0, 0); split.Controls.Add(right, 1, 0); grantTab.Controls.Add(split);
             var historyLayout = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 1, RowCount = 2 };
-            historyLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 40)); historyLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100));
-            var refresh = new Button { Text = "刷新最近 50 批", Width = 130 };
+            historyLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
+            historyLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize)); historyLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100));
+            var refresh = new Button { Text = "刷新最近 50 批", AutoSize = true, Padding = new Padding(10, 5, 10, 5) };
             refresh.Click += async delegate { await Run(History); };
             historyLayout.Controls.Add(Flow(refresh, Label("记录表示传书已入库；玩家需在游戏内领取。")), 0, 0);
             historyGrid.AutoGenerateColumns = true; historyLayout.Controls.Add(historyGrid, 0, 1); historyTab.Controls.Add(historyLayout);
             workspace.Controls.Add(tabs); shell.Controls.Add(workspace, 0, 2);
+            bool measuring = false;
+            Action fitWorkspace = delegate
+            {
+                if (measuring || !IsHandleCreated) return;
+                measuring = true;
+                try
+                {
+                    int reserved = 0;
+                    int[] rows = right.GetRowHeights();
+                    for (int i = 0; i < rows.Length; i++) if (i != 3) reserved += rows[i];
+                    // 小窗口通过滚动展示完整表单，不能把发放清单压成几像素。
+                    var minimum = new Size(900, Math.Max(430, reserved + cartGrid.MinimumSize.Height + 44));
+                    if (tabs.MinimumSize != minimum) tabs.MinimumSize = minimum;
+                    if (workspace.AutoScrollMinSize != minimum) workspace.AutoScrollMinSize = minimum;
+                    var contentSize = new Size(
+                        Math.Max(minimum.Width, workspace.ClientSize.Width - (workspace.VerticalScroll.Visible ? SystemInformation.VerticalScrollBarWidth : 0)),
+                        Math.Max(minimum.Height, workspace.ClientSize.Height - (workspace.HorizontalScroll.Visible ? SystemInformation.HorizontalScrollBarHeight : 0)));
+                    if (tabs.Size != contentSize) tabs.Size = contentSize;
+                }
+                finally { measuring = false; }
+            };
+            right.Layout += delegate { fitWorkspace(); };
+            workspace.ClientSizeChanged += delegate { fitWorkspace(); };
+            Shown += delegate { fitWorkspace(); };
+            result.Height = Math.Max(64, Font.Height * 3 + 14);
+            result.Margin = new Padding(3, 8, 3, 3);
             result.Text = "先启动服务端，再登录管理账号。"; shell.Controls.Add(result, 0, 3);
             Controls.Add(shell);
         }
