@@ -24,6 +24,9 @@ NRB-Test-game/
 ├─ .github/workflows/      GitHub Actions
 ├─ 启动服务.cmd
 ├─ 停止服务.cmd
+├─ 启动网页外网.cmd
+├─ 停止网页外网.cmd
+├─ 查看网页外网.cmd
 └─ NRB游戏管理.exe
 ```
 

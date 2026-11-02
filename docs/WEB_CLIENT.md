@@ -53,13 +53,52 @@ python3 client/web/build.py --jobs 2
 
 ## 公网网址
 
-默认入口适合同一局域网。外网需要 HTTPS 反向代理或隧道，将**整个站点**代理到本机网页端口，并支持 WebSocket Upgrade。例如把一个固定的 `https://game.example.com` 转发到 `http://127.0.0.1:18084` 后，先停止现有受管服务，再执行：
+个人测试可以直接双击根目录 **`启动网页外网.cmd`**。首次会自动部署并启动服务端；缺少完整 Web 包时自动下载工具链并编译，已有包直接复用。随后下载固定版本的 cloudflared，建立 Quick Tunnel，自动配置 HTTPS 域名并启动网页网关。
+
+窗口会显示：
+
+```text
+Web HTTPS URL: https://本次生成的名称.trycloudflare.com/
+URL saved: 项目目录\runtime\server\web-external-url.txt
+Public readiness: confirmed at ...
+```
+
+将 **Web HTTPS URL** 发给玩家，浏览器直接打开即可；不需要安装游戏包或填写 iOS 邀请码。电脑保持开机联网。关闭命令窗口后服务仍在后台运行。
+
+- **`查看网页外网.cmd`**：显示当前网址、进程状态，并重新检查公网连接。
+- **`停止网页外网.cmd`**：只关闭这条 Web 外网入口，删除已失效的网址文件，保留游戏服、数据库及局域网/iOS 入口。
+- 根目录 **`停止服务.cmd`**：同时关闭本部署的全部入口和服务端。
+
+外网网页网关默认从本机回环端口 **18085** 选择可用端口；局域网网页入口仍可使用 18084，二者共用同一游戏服与数据库。重复启动会复用仍在运行的隧道和网址；更换构建包时只重启网页网关，尽量保留隧道。更新客户端源码后，仍需重新运行 `deployment/build-web.cmd` 生成新包；一键入口不会自动覆盖已有完整包。
+
+脚本会比较本机与公网 `/web/config` 的实例标识、协议和构建版本。若显示 **`Public readiness: NOT confirmed`**，表示本机网关已启动、域名已分配，但尚未确认公网能访问；进程会保留，供网络恢复后重试。公网用户是否能顺利加载和游玩，仍取决于各自网络。
+
+Quick Tunnel 免费、无需自有域名，定位为临时测试；隧道进程重启后会更换域名。**当前游客 Cookie 与网址关联，域名变化可能进入新游客角色，原角色仍在数据库中。** 不要把临时网址视为固定账号入口。
+
+也可在仓库根目录运行相同入口，所有相对路径均按项目目录解析：
 
 ```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Start-Web.ps1 -External
+powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Start-Web.ps1 -External -Action status
+powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Start-Web.ps1 -External -Action stop
+```
+
+可加 `-Port 18086` 指定端口，`-TunnelProtocol auto` 或 `quic` 切换隧道传输，`-InstallDir` 指定部署目录，`-BuildDir` 指定已有网页包。默认使用 `http2`。`-SkipBuild` 禁止缺包时自动编译；`-Offline` 只复用已缓存的运行时、工具和完整网页包，建立隧道本身仍需联网。
+
+日志在运行目录 `logs/web_tunnel.stderr.log`、`logs/web_external.stderr.log`。只有网页网关端口通过隧道对外提供服务，不转发数据库、管理工具或裸 TCP 游戏端口。原有 `deployment/external.cmd` 仍用于 iOS 专用外网入口。
+
+本次已使用当前电脑的已有 Web 包实际启动外网入口，下载隧道工具，取得 HTTPS 地址，并确认公网就绪响应与本机网关一致。没有重新编译客户端，也没有执行全新 Windows 初始化或公网浏览器玩法测试；此前玩法实测使用本地浏览器入口。
+
+### 自有固定域名或其他 HTTPS 代理
+
+外网需要 HTTPS 反向代理或隧道，将**整个站点**代理到本机网页端口，并支持 WebSocket Upgrade。例如把一个固定的 `https://game.example.com` 转发到 `http://127.0.0.1:18084` 后，先停止局域网网页网关，再执行：
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Start-Web.ps1 -Action stop
 powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Start-Web.ps1 -PublicOrigin https://game.example.com -BindAddress 127.0.0.1
 ```
 
-代理保留原来的 `Host` 和 `Origin`，透传 Cookie，不能剥掉 `/web/` 路径。此时用户统一访问配置的 HTTPS 域名；网关只接受已配置来源。HTTPS 页面使用 WSS，资源同源下载。随机隧道地址改变后，应停服并用新的 `-PublicOrigin` 重新启动，浏览器身份也可能随网址改变。
+代理保留原来的 `Host` 和 `Origin`，透传 Cookie，不能剥掉 `/web/` 路径。此时用户统一访问配置的 HTTPS 域名；网关只接受已配置来源。HTTPS 页面使用 WSS，资源同源下载。手工管理的随机隧道地址改变后，应停止该网页网关，再用新的 `-PublicOrigin` 重新启动，浏览器身份也可能随网址改变。
 
 现有 iOS 外网入口的邀请鉴权保持独立；不要用其 `/game` 地址替换网页的 `/web/game`。
 
@@ -85,6 +124,8 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Start-Web.ps1 -
 | `client/web/generated` | 临时源码、资源、编译对象及日志；不提交 |
 | `outputs/web` | 发布文件；不提交，可从 Actions 下载 |
 | `deployment/web_client.py` | 同源 HTTP、浏览器会话、WebSocket→本地 TCP |
+| `deployment/web_external.py` | Web 免费隧道、网址发现、就绪检查与进程管理 |
+| `runtime/server/web-external-url.txt` | 当前 Web 外网网址；停止外网入口后删除 |
 | `runtime/server/private/web-session.key` | 本机游客 Cookie 签名密钥；保留在当前部署，不提交或公开 |
 | `runtime/server/logs/browser.*.log` | 网页网关运行日志 |
 

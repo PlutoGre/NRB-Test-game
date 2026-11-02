@@ -473,7 +473,7 @@ class Deployment:
                 raise RuntimeError("Clone or copy the full project; missing " + name)
         requested = {"host": args.host, "webPort": args.web_port, "gamePort": args.game_port,
                      "dbPort": args.db_port, "resourceVersion": args.resource_version, "channel": args.channel}
-        if self.state and any(self.owned(name) for name in ("database", "web", "game", "gateway", "tunnel", "browser")):
+        if self.state and any(self.owned(name) for name in ("database", "web", "game", "gateway", "tunnel", "browser", "web_external", "web_tunnel")):
             if all(self.state.get(key) == value for key, value in requested.items()) and self.state.get("installed"):
                 self.start()
                 return
@@ -641,6 +641,11 @@ class Deployment:
 
     def stop(self):
         self.require_installed()
+        self.terminate_owned("web_tunnel")
+        self.terminate_owned("web_external")
+        self.state.pop("webExternal", None)
+        (self.root / "web-external-url.txt").unlink(missing_ok=True)
+        self.save()
         self.terminate_owned("tunnel")
         self.terminate_owned("browser")
         self.terminate_owned("gateway")
@@ -682,10 +687,16 @@ class Deployment:
             browser = self.state["browser"]
             print("browser:", "owned/running" if self.owned("browser") else "not running", "port", browser["port"])
             print("Browser URL:", browser["origin"] + "/")
+        if self.state.get("webExternal"):
+            active = self.owned("web_external") and self.owned("web_tunnel")
+            print("External Web:", "owned/running" if active else "not running")
+            if active and self.state["webExternal"].get("origin"):
+                print("Web HTTPS URL:", self.state["webExternal"]["origin"] + "/")
+            print("External Web status: use the root external Web status shortcut")
 
     def backup(self):
         self.require_installed()
-        if any(self.owned(name) for name in ("game", "gateway", "tunnel", "browser")):
+        if any(self.owned(name) for name in ("game", "gateway", "tunnel", "browser", "web_external", "web_tunnel")):
             raise RuntimeError("Stop the deployment before backup so gameplay writes cannot change during export")
         self.ensure_db()
         folder = self.root / "backups"
@@ -719,7 +730,7 @@ class Deployment:
         checksum = source.with_suffix(source.suffix + ".sha256")
         if not checksum.is_file() or digest(source) != checksum.read_text().split()[0]:
             raise RuntimeError("Restore backup is missing its checksum file or is corrupted")
-        if any(self.owned(name) for name in ("game", "web", "gateway", "tunnel", "browser")):
+        if any(self.owned(name) for name in ("game", "web", "gateway", "tunnel", "browser", "web_external", "web_tunnel")):
             raise RuntimeError("Stop game and web before restore")
         self.ensure_db()
         self.backup()

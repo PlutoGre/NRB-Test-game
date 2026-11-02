@@ -149,7 +149,8 @@ class WebHandler(Handler):
         if path == "/web/config":
             self.ready()
             return self.reply(200, {"serverName": "男人帮1区", "protocol": PROTOCOL,
-                                    "build": self.server.manifest.get("sourceRevision", "unknown")})
+                                    "build": self.server.manifest.get("sourceRevision", "unknown"),
+                                    "instanceId": hashlib.sha256(self.server.key).hexdigest()[:24]})
         if path == "/web/game":
             if self.headers.get("Origin") not in self.server.origins or not self.identity():
                 return self.reply(403, {"error": "Browser session required"})
@@ -182,26 +183,43 @@ def main():
     parser.add_argument("--port", type=int, default=18084)
     parser.add_argument("--bind", default="0.0.0.0")
     parser.add_argument("--public-origin")
-    parser.add_argument("--managed-start", action="store_true")
+    managed = parser.add_mutually_exclusive_group()
+    managed.add_argument("--managed-start", action="store_true")
+    managed.add_argument("--managed-stop", action="store_true")
+    managed.add_argument("--managed-status", action="store_true")
     args = parser.parse_args()
     root, build = project_path(args.install_dir).resolve(), project_path(args.build_dir).resolve()
     if not 1024 <= args.port <= 65535:
         parser.error("Port must be between 1024 and 65535")
+    if args.managed_stop or args.managed_status:
+        from server import Deployment, operation_lock
+        with operation_lock(root):
+            deployment = Deployment(root)
+            deployment.require_installed()
+            if args.managed_stop:
+                deployment.terminate_owned("browser")
+                print("LAN browser gateway stopped; game server and other entries retained.")
+            else:
+                print("LAN browser gateway:", "owned/running" if deployment.owned("browser") else "not running")
+                if deployment.owned("browser"):
+                    print("Open this URL: " + deployment.state["browser"]["origin"] + "/")
+        return
     state = check_runtime(root)
     origin = public_origin(args.public_origin or "http://" + state["host"] + ":" + str(args.port))
     if args.managed_start:
-        from server import Deployment
-        deployment = Deployment(root)
-        deployment.require_installed()
-        previous = state.get("browser", {})
-        settings = {"port": args.port, "origin": origin, "build": str(build), "bind": args.bind}
-        if deployment.owned("browser") and previous != settings:
-            raise RuntimeError("Stop the running browser gateway before changing its settings")
-        deployment.state["browser"] = settings
-        deployment.save()
-        deployment.launch("browser", [sys.executable, Path(__file__).resolve(), "--install-dir", root,
-            "--build-dir", build, "--port", args.port, "--bind", args.bind, "--public-origin", origin], root, args.port)
-        print("Open this URL: " + origin + "/")
+        from server import Deployment, operation_lock
+        with operation_lock(root):
+            deployment = Deployment(root)
+            deployment.require_installed()
+            previous = deployment.state.get("browser", {})
+            settings = {"port": args.port, "origin": origin, "build": str(build), "bind": args.bind}
+            if deployment.owned("browser") and previous != settings:
+                raise RuntimeError("Stop the running browser gateway before changing its settings")
+            deployment.state["browser"] = settings
+            deployment.save()
+            deployment.launch("browser", [sys.executable, Path(__file__).resolve(), "--install-dir", root,
+                "--build-dir", build, "--port", args.port, "--bind", args.bind, "--public-origin", origin], root, args.port)
+            print("Open this URL: " + origin + "/")
         return
     with WebGateway(root, build, args.bind, args.port, origin) as gateway:
         print("Web client listening: " + origin, flush=True)

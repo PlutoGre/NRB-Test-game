@@ -41,6 +41,8 @@ Get-Content .\runtime\server\client-config\deployment.json
 
 网页客户端使用独立入口：先运行 `deployment/build-web.cmd` 构建，再运行 `deployment/start-web.cmd`，浏览器访问窗口显示的网址。也可在 GitHub Actions 手动运行 **Build Web client**，下载产物放到 `outputs/web` 后启动。已完成本机编译、部署和浏览器游玩，详见 [网页客户端流程](docs/WEB_CLIENT.md) 和 [玩法实测记录](docs/reference/WEB_GAMEPLAY_VALIDATION.md)；部分原项目缺失的玩法仍不可用。
 
+**网页免费外网一键入口：双击根目录 `启动网页外网.cmd`**，首次自动部署服务端、准备缺少的 Web 包并建立隧道；窗口显示可直接访问的 HTTPS 网址，也保存到 `runtime/server/web-external-url.txt`。再次查看用 `查看网页外网.cmd`，只关闭网页外网用 `停止网页外网.cmd`。临时隧道重建会换域名，当前游客身份可能随之变化；详见 [公网使用说明](docs/WEB_CLIENT.md#公网网址)。
+
 ### 仅在部署遇到问题时使用
 
 | 情况 | 处理 |
