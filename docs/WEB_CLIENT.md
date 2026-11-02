@@ -2,7 +2,7 @@
 
 网页版复用 `client/source` 的 C++ 游戏、Lua、Protobuf、CCBI 布局及 `resources/client` 资源，使用 WebAssembly + WebGL 绘制原有游戏画面。浏览器通过同源 WebSocket 网关连接已有 Java 游戏服，玩家数据仍保存在当前部署的数据库中。
 
-**当前状态：已加入源码适配、构建入口和部署入口；本轮遵照 AGENTS.md，未执行编译、GitHub Actions、部署或浏览器游玩。尚无经过验证的 Web 构建产物，不能据此认定已经可玩或与手游完全一致。首次构建及运行结果需按下文确认。**
+**当前状态（2026-11-02）：已在 Windows 本地完成编译、部署和真实 Chromium 浏览器游玩，并修复点击输入、经验同步、上阵重试及经验道具保存问题。普通/精英类型关卡、卡牌升级、装备、海鲜饭、抽卡、黑胡子、勇闯和现有活动的具体结果见[实测记录](reference/WEB_GAMEPLAY_VALIDATION.md)。运宝、All Blue 和转盘缺少完整实现，不能认定全部玩法已可用。**
 
 ## Windows 最短操作流程
 
@@ -25,7 +25,7 @@
 3. 成功后下载 **nrb-web-client**，解压到部署电脑的 `outputs/web`。该目录下应直接包含 `index.html`、`game.js`、`game.wasm`、`game.data`、`web.js`、`style.css`、`web-client.json`，不要再多套一层目录。
 4. 部署电脑执行 `deployment/start-web.cmd`。
 
-网页包不绑定电脑 IP，可以复用到其他已部署好同一版本服务端的电脑。构建失败时下载 **web-build-logs**，对应本地的 `client/web/generated/logs`。工作流仅支持手工触发，本次没有触发云端构建。
+网页包不绑定电脑 IP，可以复用到其他已部署好同一版本服务端的电脑。构建失败时下载 **web-build-logs**，对应本地的 `client/web/generated/logs`。工作流仅支持手工触发；本次验证使用本地构建，没有触发云端构建。
 
 ## 可选参数和其他构建环境
 
@@ -94,7 +94,7 @@ Web 构建复用 `client/ios/Sources.cmake` 中的引擎和 Protobuf 文件清�
 
 ## 首次验证顺序
 
-本次没有执行以下步骤；由维护者构建后逐项确认，记录浏览器、操作系统、源码版本和具体报错。
+换电脑、浏览器或服务端配置后，建议按以下顺序复查；本机已验证的范围及未覆盖项见[实测记录](reference/WEB_GAMEPLAY_VALIDATION.md)。
 
 1. 构建结束产生完整的 `outputs/web`，启动网页服务后 `/web/config` 返回就绪。
 2. 点击进入，确认资源下载、WebAssembly 初始化和游戏原始登录页显示。

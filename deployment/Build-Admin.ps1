@@ -24,6 +24,7 @@ $sources = @((Get-ChildItem -LiteralPath $serverAdminSource -Filter '*.java' -Fi
 $sources += Join-Path $repo 'server/source/src/com/oldmountain/dzm/net/packet/PacketHandler.java'
 $sources += Join-Path $repo 'server/source/src/com/oldmountain/dzm/packethandler/DisposeSysMsgInfoHandler.java'
 $sources += Join-Path $repo 'server/source/src/com/oldmountain/dzm/packethandler/AdventureContinueLoginHandler.java'
+$sources += Join-Path $repo 'server/source/src/com/oldmountain/dzm/packethandler/UseToolHandler.java'
 $sources += Join-Path $repo 'server/source/src/com/oldmountain/dzm/services/RewardServices.java'
 # Build only the explicitly listed overlay classes against the original self-contained JAR.
 $emptySources = Join-Path $buildDir 'empty-sourcepath'

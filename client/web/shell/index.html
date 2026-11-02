@@ -10,7 +10,8 @@
 </head>
 <body>
   <main id="game-frame">
-    <canvas id="game" width="640" height="960" tabindex="0" aria-label="男人帮游戏画面"></canvas>
+    <!-- SDL2's Emscripten backend binds its input handlers to #canvas. -->
+    <canvas id="canvas" width="640" height="960" tabindex="0" aria-label="男人帮游戏画面"></canvas>
     <section id="boot" class="cover" aria-live="polite">
       <h1>男人帮</h1>
       <p id="status">正在检查服务端…</p>

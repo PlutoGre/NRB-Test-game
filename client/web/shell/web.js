@@ -3,7 +3,7 @@
 // gameplay, item logic or simulated login screens.
 (() => {
   const $ = id => document.getElementById(id);
-  const status = $('status'), start = $('start'), canvas = $('game');
+  const status = $('status'), start = $('start'), canvas = $('canvas');
   let gameModule, flushTimer, boardTimer, boardGeneration = 0, messageQueue = [];
   const nativeString = (module, name, value, extra = []) => module.ccall(name, null,
     ['string', ...extra.map(() => 'number')], [value, ...extra]);
@@ -202,6 +202,7 @@
         onRuntimeInitialized() { $('boot').hidden = true; canvas.focus(); }
       });
       gameModule = module;
+      NRB.module = module; // Read-only scene diagnostics and browser support tooling.
     } catch (error) { fatal(error); }
   };
   if (!window.WebAssembly || !window.WebSocket) { fatal('请使用支持 WebAssembly、WebGL 和 WebSocket 的浏览器。'); return; }

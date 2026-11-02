@@ -10,6 +10,7 @@
 #include "Language.h"
 #include "GameMessages.h"
 #include "DisciplePage.h"
+#include "PackageLogic.h"
 
 #include <set>
 
@@ -74,6 +75,7 @@ private:
 
 class DiscipleChangePage
 	: public CustomPage
+	, public PacketHandlerGeneral
 	, public State<MainFrame>
 	, public CCBContainer::CCBContainerListener
 {
@@ -111,7 +113,15 @@ public:
 
 	void setSellectedContent(DiscipleChangeContent* member);
 
+	virtual void onPacketError(const int opcode);
+	virtual void onTimeout(const int opcode) { onPacketError(opcode); }
+	virtual void onSendPacketFailed(const int opcode) {
+		if (opcode == OPCODE_CHANGE_DISCIPLE_C) confirmFlag = true;
+	}
+
+
 private:
+	virtual int _getOpcode() { return OPCODE_CHANGE_DISCIPLERET_S; }
 
 	typedef std::vector<ContentBase * > ContentList;
 

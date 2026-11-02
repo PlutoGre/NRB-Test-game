@@ -46,8 +46,10 @@ import com.oldmountain.dzm.util.UserToolConst;
 import com.oldmountain.dzm.util.Util;
 import com.oldmountain.dzm.util.XMLTemplateService;
 
+/** @brief 处理背包道具使用，并将经验、阵容和道具消耗登记到保存队列。 */
 public class UseToolHandler {
 	private static final Logger logger2 = LoggerFactory.getLogger("ToolInfo");
+	/** 使用当前角色持有的背包道具，响应客户端并登记资产变化。 */
 	public static void useTool(Packet packet,IoSession session) {
         final int OPTYPE_ADD_POWER = 1;
         final int OPTYPE_ADD_VATALITY = 2;
@@ -731,9 +733,12 @@ public class UseToolHandler {
 			int itemID = disciple.getItemid();
 			DiscipleXmlTemplate discipleInfo = XMLTemplateService.getDiscipleTemplate(itemID);
 			int exp_limited=(int) (discipleInfo.getDefaultExp()*XMLTemplateService.getDiscipleLevelConfig(level_max - 1));
-			amount=((disciple.getExp()+amount)>exp_limited)?(exp_limited-disciple.getExp()):amount;
-			if(amount>0){
-				int addLevel=Util.getlevelByExp(disciple, amount);
+			// 每名船员独立计算剩余空间，前一人的等级上限不能减少后续船员所得经验。
+			int grantedExp = Math.max(0, Math.min(amount, exp_limited - disciple.getExp()));
+			if(grantedExp>0){
+				int addLevel=Util.getlevelByExp(disciple, grantedExp);
+				// 经验未达到升级阈值时也必须保存，避免消耗道具后重启丢失经验。
+				player.updateOneDisciple(disciple);
 				if (addLevel > 0) {//弟子升级
 					BattleUtil.resetBattleProperty(battle, disciple,player,null,0);
 					OPUserBattleArrayRet.BattleArrayInfo.Builder battleBuilder = OPUserBattleArrayRet.BattleArrayInfo.newBuilder();
@@ -744,8 +749,9 @@ public class UseToolHandler {
 				OPUserDiscipleInfoRet.DiscipleInfo.Builder discipleBuilder = DiscipleUtil.buildDiscipleBuilder(disciple);
 				builder.addDiscipleInfo(discipleBuilder);
 			}
-			sum_amount+=amount;
+			sum_amount+=grantedExp;
 		}
+		logger2.debug("addAllDiscipleExp: playerId={}, totalGranted={}", new Object[]{player.getId(), sum_amount});
 		if(sum_amount>0){
 			return true;
 		}else {
@@ -788,6 +794,7 @@ public class UseToolHandler {
 		if(amount>0)
 		{
 			int addLevel=Util.getlevelByExp(lowest_disciple, amount);
+			player.updateOneDisciple(lowest_disciple);
 			if (addLevel > 0) {//弟子升级
 				BattleUtil.resetBattleProperty(lowest_battel, lowest_disciple,player,null,0);
 				OPUserBattleArrayRet.BattleArrayInfo.Builder battleBuilder = OPUserBattleArrayRet.BattleArrayInfo.newBuilder();

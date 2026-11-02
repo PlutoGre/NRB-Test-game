@@ -13,6 +13,8 @@ import org.slf4j.LoggerFactory;
 import com.oldmountain.dzm.DZM;
 import com.oldmountain.dzm.entity.*;
 import com.oldmountain.dzm.message.DisposeSysMsgInfo.OPDisposeSysMsgRet;
+import com.oldmountain.dzm.message.OP;
+import com.oldmountain.dzm.message.UserBattleArray.OPUserBattleArrayRet;
 import com.oldmountain.dzm.services.*;
 import com.oldmountain.dzm.util.*;
 
@@ -36,12 +38,24 @@ public final class AdminRewards {
         DZM.getEntityManager().updateSync(reward);
         Set<Object> changed = new HashSet<Object>();
         changed.add(player);
+        boolean refreshBattleArray = false;
         for (int i = 0; i < items.size(); i++) {
             JSONObject item = items.getJSONObject(i);
             int type = item.getInt("t"), id = item.getInt("i"), quantity = item.getInt("q");
             switch (type) {
             case 11001:
-                UserPropertyServices.changeProperty(player, id, quantity);
+                if (id == UserToolConst.USER_PROPERTY_EXP || id == UserToolConst.USER_LEVEL_PROPERTY_EXP) {
+                    // 仅增加经验会造成客户端等级与服务端上阵/玩法门槛不一致，必须执行正常升级流程。
+                    int previousLevel = player.getLevel();
+                    Util.getUserLevelByExp(player, quantity);
+                    changed.addAll(player.getBattlearray().values());
+                    if (player.getChallenge() != null) changed.add(player.getChallenge());
+                    refreshBattleArray = true;
+                    LOG.info("claim: experience applied, playerId={}, previousLevel={}, level={}",
+                            new Object[]{player.getId(), previousLevel, player.getLevel()});
+                } else {
+                    UserPropertyServices.changeProperty(player, id, quantity);
+                }
                 reply.setGoldcoins(player.getGoldCoins());
                 reply.setSilvercoins(player.getSilvercoins());
                 reply.setExp(player.getExp());
@@ -98,7 +112,23 @@ public final class AdminRewards {
             LOG.error("claim: persistence failed; inspect assets before retry, playerId=" + player.getId() + ", rewardId=" + reward.getId(), e);
             throw e;
         }
+        if (refreshBattleArray) syncBattleArray(player);
         LOG.info("claim: reward saved, playerId={}, rewardId={}", new Object[]{player.getId(), reward.getId()});
+    }
+
+    /** 一次经验附件可能连升多级，原升级通知只携带最后一个新阵位，需要补发完整阵容。 */
+    private static void syncBattleArray(Player player) {
+        OPUserBattleArrayRet.Builder reply = OPUserBattleArrayRet.newBuilder();
+        String[] ids = player.getBattleids().split(",");
+        int limit = BattleUtil.getBattleCountByLevel(player.getLevel());
+        for (int position = 0; position < limit; position++) {
+            Battle battle = player.getBattlearray().get(Integer.parseInt(ids[position]));
+            OPUserBattleArrayRet.BattleArrayInfo.Builder slot = OPUserBattleArrayRet.BattleArrayInfo.newBuilder();
+            BattleUtil.buildBattleBuilder(slot, battle, position);
+            reply.addBattle(slot);
+        }
+        reply.setServertime(Util.getServerTime());
+        player.sendPacket(OP.code.OPCODE_GET_USER_BATTLE_ARRAY_INFORET_S_VALUE, reply);
     }
 
     private static void validate(Player player, JSONArray items) {

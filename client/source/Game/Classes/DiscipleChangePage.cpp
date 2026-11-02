@@ -136,6 +136,7 @@ DiscipleChangePage::~DiscipleChangePage(void)
 void DiscipleChangePage::Enter( MainFrame* frame)
 {
 	confirmFlag = true;
+	PacketManager::Get()->regisiterPacketHandler(OPCODE_CHANGE_DISCIPLERET_S, this);
 	isDesOrder=true;
 	rebuildAllItem();
 	mCurSellectedContent = NULL;
@@ -144,6 +145,7 @@ void DiscipleChangePage::Enter( MainFrame* frame)
 
 void DiscipleChangePage::Exit( MainFrame* frame)
 {
+	PacketManager::Get()->removePacketHandler(OPCODE_CHANGE_DISCIPLERET_S, this);
 	clearAllItem();
 #ifdef Macro_TestUseCCReViScrollViewFacade
 	delete m_pScrollViewFacade;
@@ -512,8 +514,8 @@ void DiscipleChangePage::onMenuItemAction( const std::string& itemName, cocos2d:
 					OPChangeDisciple changeDisciple;
 					changeDisciple.set_discipleid( mCurSellectedContent->getContentID() );
 					changeDisciple.set_position( BlackBoard::Get()->CurBattlePosition );
-					PacketManager::Get()->sendPakcet(OPCODE_CHANGE_DISCIPLE_C,&changeDisciple);
 					confirmFlag = false;
+					PacketManager::Get()->sendPakcet(OPCODE_CHANGE_DISCIPLE_C,&changeDisciple);
 				}
 			}
 		}
@@ -594,4 +596,12 @@ void DiscipleChangePage::refreshPage( void )
 		else
 			funcLable->setString(Language::Get()->getString("@OrderByDesc").c_str());
 	}
+}
+
+void DiscipleChangePage::onPacketError(const int opcode)
+{
+	if (opcode != OPCODE_CHANGE_DISCIPLERET_S) return;
+	// A rejected or timed-out request must allow selecting and confirming again.
+	confirmFlag = true;
+	CCLOG("DiscipleChangePage: change request failed or timed out; retry enabled");
 }

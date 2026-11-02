@@ -39,7 +39,7 @@ Get-Content .\runtime\server\client-config\deployment.json
 
 记下 `host`、`webPort`、`gamePort`、`resourceVersion`，接着打开 **[客户端打包流程](docs/CLIENT_BUILD.md)**。
 
-网页客户端新增独立入口：先运行 `deployment/build-web.cmd` 构建，再运行 `deployment/start-web.cmd`，浏览器访问窗口显示的网址。也可在 GitHub Actions 手动运行 **Build Web client**，下载产物放到 `outputs/web` 后启动。详见 [网页客户端流程及验证状态](docs/WEB_CLIENT.md)。本次未执行 Web 编译或浏览器验证。
+网页客户端使用独立入口：先运行 `deployment/build-web.cmd` 构建，再运行 `deployment/start-web.cmd`，浏览器访问窗口显示的网址。也可在 GitHub Actions 手动运行 **Build Web client**，下载产物放到 `outputs/web` 后启动。已完成本机编译、部署和浏览器游玩，详见 [网页客户端流程](docs/WEB_CLIENT.md) 和 [玩法实测记录](docs/reference/WEB_GAMEPLAY_VALIDATION.md)；部分原项目缺失的玩法仍不可用。
 
 ### 仅在部署遇到问题时使用
 
