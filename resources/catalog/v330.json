@@ -1,6 +1,6 @@
 {
-  "id": "apk-v330-basic-1",
-  "resourceVersion": "1.78.7",
+  "id": "apk-v330-basic-2",
+  "resourceVersion": "1.78.8",
   "sourceApkSha256": "f62a45209d80a5e8df0b38e81b14b11e5e4a2a9fc91beef35d16dec1760cb1f6",
   "sourceTableSha256": {
     "Disciples.txt": "9165c15d413a8646a4b71fd9005dd8c9ed0a9ea29a832edd101504070a7cf627",
@@ -3899,9 +3899,9 @@
         "化敌为友",
         "1",
         "19#200019#300019#400019",
-        "none",
         "3",
-        "26"
+        "26",
+        "与艾斯齐上阵，防御提升26%"
       ],
       [
         "938",
@@ -3931,6 +3931,19 @@
         "装备雷鸣龙牙棒,攻击增加35%"
       ]
     ]
+  },
+  "clientPreviousRows": {
+    "Yuanfens.txt": {
+      "937": [
+        "937",
+        "化敌为友",
+        "1",
+        "19#200019#300019#400019",
+        "none",
+        "3",
+        "26"
+      ]
+    }
   },
   "serverTemplates": {
     "disciple.xml": {
@@ -6938,8 +6951,8 @@
           "id": "937",
           "type": "1",
           "require": "19#200019#300019#400019",
-          "upgradeType": "",
-          "quantity": "0.03"
+          "upgradeType": "3",
+          "quantity": "0.26"
         },
         {
           "id": "938",
@@ -6962,7 +6975,16 @@
           "upgradeType": "2",
           "quantity": "0.35"
         }
-      ]
+      ],
+      "previousRows": {
+        "937": {
+          "id": "937",
+          "type": "1",
+          "require": "19#200019#300019#400019",
+          "upgradeType": "",
+          "quantity": "0.03"
+        }
+      }
     }
   },
   "fateIdMap": {
@@ -7676,6 +7698,11 @@
       "source": "gongbuff.mp3",
       "replacement": "ported/v330/audio/gongbuff.mp3",
       "reason": "correct filename or case"
+    },
+    {
+      "kind": "table",
+      "sourceFateId": 1026,
+      "reason": "remove the extra empty column before upgrade type"
     }
   ],
   "pendingCards": [

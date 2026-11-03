@@ -17,6 +17,7 @@
 
 //
 #include "AppDelegate.h"
+#include "SceneInspection.h"
 
 //
 #define  LOG_TAG    "GameMain"
@@ -79,6 +80,7 @@ extern "C"
 
 			g_pAppDelegate = new AppDelegate();
 			CCApplication::sharedApplication()->run();
+            nrb_scene_inspection::start(env);
 		}
 
 	}

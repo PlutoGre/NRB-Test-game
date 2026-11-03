@@ -21,7 +21,7 @@ on:
       resource_version:
         description: Resource version matching the server deployment
         required: true
-        default: '1.78.7'
+        default: '1.78.8'
         type: string
       bundle_id:
         description: Bundle identifier (no Apple signing required for this build)

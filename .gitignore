@@ -53,6 +53,15 @@ Thumbs.db
 **/local.properties
 **/SDK.properties
 
+# Android channel mirrors and newly generated ABI output are recreated by the
+# build wrapper; canonical Java sources and JNI prebuilt inputs stay tracked.
+/client/source/Game/proj.android/antbuild/anzhi/src/
+/client/source/Game/proj.android/antbuild/anzhi/project.properties
+/client/source/Game/proj.android/antbuild/anzhi/libs/armeabi-v7a/
+/client/source/Game/proj.android/antbuild/anzhi/libs/x86/
+/client/source/Game/proj.android/libs/armeabi-v7a/
+/client/source/Game/proj.android/libs/x86/
+
 # Client output and signing material are not source dependencies.
 *.apk
 *.aab

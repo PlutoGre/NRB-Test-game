@@ -12,6 +12,7 @@
 | iPhone 外网接入 | [外网部署](EXTERNAL_DEPLOYMENT.md) |
 | 扩展卡牌、装备、奥义和玩法 | [代码逻辑与扩展指南](extension/README.md) |
 | 更新首批44张卡牌、29件装备和9个奥义 | [首批内容移植](extension/08_PORTED_BASIC_CONTENT.md) |
+| 查首批内容的Android构建、雷电试玩及保存验证 | [本批实测记录](reference/PORTED_CONTENT_ANDROID_VALIDATION.md) |
 | 查迁移和排错细节 | [参考资料目录](reference) |
 
 `legacy` 中的原始说明、数据库设计和旧引擎文档只作历史参考，日常操作以本页链接的当前说明为准。

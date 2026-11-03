@@ -6,7 +6,7 @@ param(
     [Nullable[int]]$WebPort = $null,
     [Nullable[int]]$GamePort = $null,
     [Nullable[int]]$DatabasePort = $null,
-    [string]$ResourceVersion = '1.78.7',
+    [string]$ResourceVersion = '1.78.8',
     [ValidateSet('anzhi', 'all')]
     [string]$Channel = 'anzhi',
     [switch]$Offline,

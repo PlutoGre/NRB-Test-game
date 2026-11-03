@@ -6,6 +6,7 @@ param(
     [string]$JavaHome = '',
     [string]$OutputDir = 'outputs/android',
     [ValidateRange(1, 16)][int]$Jobs = 2,
+    [switch]$SceneInspection,
     [switch]$Offline,
     [switch]$PrepareToolsOnly
 )
@@ -14,6 +15,8 @@ $ErrorActionPreference = 'Stop'
 $originalLocation = Get-Location
 $createdMappings = New-Object 'System.Collections.Generic.List[object]'
 $savedEnvironment = @{}
+$inspectionManifest = ''
+$inspectionOriginal = $null
 foreach ($name in @('PATH', 'JAVA_HOME', 'ANDROID_HOME', 'ANDROID_SDK_ROOT', 'ANT_HOME',
                     'NDK_ROOT', 'NDK_MODULE_PATH', 'NRB_PROJECT_ROOT', 'PYTHONIOENCODING', 'TEMP', 'TMP')) {
     $savedEnvironment[$name] = [Environment]::GetEnvironmentVariable($name, 'Process')
@@ -142,12 +145,41 @@ namespace Nrb {
     if ($LASTEXITCODE -ne 0) { throw 'Deployment overlay preparation failed.' }
     & $python $prepare --sdk $sdk --skip-native-sync
     if ($LASTEXITCODE -ne 0) { throw 'Android source preparation failed.' }
+    # r8e dependency files contain absolute paths. Keep incomplete work reusable,
+    # but never load caches from a different checkout/alias or the legacy layout.
+    $contextPath = Join-Path $script:NrbProjectRoot 'runtime/android/native-build-context.json'
+    $context = [ordered]@{ project = $script:NrbProjectRoot; buildRoot = $script:NrbBuildRoot; ndk = $ndk; sdk = $sdk }
+    $contextText = $context | ConvertTo-Json -Compress
+    $previousContext = if (Test-Path -LiteralPath $contextPath) { [IO.File]::ReadAllText($contextPath).Trim() } else { '' }
+    $nativeObjects = [IO.Path]::GetFullPath((Join-Path $project 'obj'))
+    if ((Test-Path -LiteralPath $nativeObjects) -and $previousContext -ne $contextText) {
+        $physicalObjects = [IO.Path]::GetFullPath((Join-Path $script:NrbProjectRoot 'client/source/Game/proj.android/obj'))
+        $backupRoot = [IO.Path]::GetFullPath((Join-Path $script:NrbProjectRoot 'runtime/android/native-cache-backups'))
+        $backupObjects = [IO.Path]::GetFullPath((Join-Path $backupRoot ([Guid]::NewGuid().ToString('N'))))
+        if (-not $physicalObjects.StartsWith($script:NrbProjectRoot + '\', [StringComparison]::OrdinalIgnoreCase) `
+            -or -not $backupObjects.StartsWith($backupRoot + '\', [StringComparison]::OrdinalIgnoreCase)) {
+            throw 'Native cache backup must remain inside this project.'
+        }
+        New-Item -ItemType Directory -Path $backupRoot -Force | Out-Null
+        Move-Item -LiteralPath $physicalObjects -Destination $backupObjects
+        Write-Host "Backed up native cache from an older build location: $backupObjects"
+    }
+    New-Item -ItemType Directory -Path (Split-Path -Parent $contextPath) -Force | Out-Null
+    [IO.File]::WriteAllText($contextPath, $contextText, (New-Object Text.UTF8Encoding($false)))
     Write-Host 'Building native game libraries...'
     & (Join-Path $ndk 'ndk-build.cmd') '-C' $project "-j$Jobs"
     if ($LASTEXITCODE -ne 0) { throw 'NDK compilation failed; APK packaging was not started.' }
     & $python $prepare --sdk $sdk
     if ($LASTEXITCODE -ne 0) { throw 'Native library synchronization failed.' }
     Set-Location $channel
+    if ($SceneInspection) {
+        $inspectionManifest = Join-Path $channel 'AndroidManifest.xml'
+        $inspectionOriginal = [IO.File]::ReadAllBytes($inspectionManifest)
+        $manifestText = [IO.File]::ReadAllText($inspectionManifest)
+        if (-not $manifestText.Contains('android:debuggable="false"')) { throw 'Unexpected debug flag in Android manifest.' }
+        [IO.File]::WriteAllText($inspectionManifest, $manifestText.Replace('android:debuggable="false"', 'android:debuggable="true"'), (New-Object Text.UTF8Encoding($false)))
+        Write-Host 'Scene inspection build: local file opt-in is required; no game actions are exposed.'
+    }
     # Avoid selecting a newer installed Build Tools version that no longer has dx.
     $buildTools = Join-Path $sdk ($toolchain.'build-tools'.destination.Substring(4))
     # Command-line properties keep the same absolute SDK path in every Ant subproject.
@@ -186,6 +218,9 @@ namespace Nrb {
     Write-Host $_.Exception.Message -ForegroundColor Red
     exit 1
 } finally {
+    if ($inspectionOriginal -ne $null -and $inspectionManifest) {
+        [IO.File]::WriteAllBytes($inspectionManifest, $inspectionOriginal)
+    }
     Set-Location $originalLocation
     foreach ($name in $savedEnvironment.Keys) {
         [Environment]::SetEnvironmentVariable($name, $savedEnvironment[$name], 'Process')

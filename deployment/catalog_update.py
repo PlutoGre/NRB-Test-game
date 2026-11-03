@@ -59,7 +59,7 @@ def apply(root, state):
         for name, spec in catalog["serverTemplates"].items():
             merge_xml(copy_for_update(Path("server/xml") / name), spec)
         for name, additions in catalog["clientTables"].items():
-            merge_table(copy_for_update(public / name), additions)
+            merge_table(copy_for_update(public / name), additions, catalog.get("clientPreviousRows", {}).get(name))
         for name, expected in catalog["assets"].items():
             source = REPO / "resources/client" / name
             if hashlib.sha256(source.read_bytes()).hexdigest() != expected:

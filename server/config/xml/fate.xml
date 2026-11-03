@@ -937,7 +937,7 @@
 		<Fate id="934" type="1" require="205#200205#300205#400205" upgradeType="2" quantity="0.27"/>
 		<Fate id="935" type="1" require="249#200249#300249#400249" upgradeType="2" quantity="0.33"/>
 		<Fate id="936" type="1" require="0" upgradeType="4" quantity="0.27"/>
-		<Fate id="937" type="1" require="19#200019#300019#400019" upgradeType="" quantity="0.03"/>
+		<Fate id="937" type="1" require="19#200019#300019#400019" upgradeType="3" quantity="0.26"/>
 		<Fate id="938" type="1" require="7#200007#300007#400007" upgradeType="1" quantity="0.27"/>
 		<Fate id="939" type="1" require="41#210#200210#300210#400210" upgradeType="2" quantity="0.2"/>
 		<Fate id="940" type="3" require="107#1107#2107#3107#4107#5107#6107#7107#8107#9107#10107#11107#17107#18107#19107#27107#28107#29107" upgradeType="2" quantity="0.35"/>

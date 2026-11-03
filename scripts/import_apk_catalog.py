@@ -47,24 +47,32 @@ def rows(path):
             if row and row[0].isdigit()}
 
 
-def merge_table(path, additions):
+def merge_table(path, additions, previous_rows=None):
     """Preserve every original row; reject a conflicting existing ID."""
     original = path.read_bytes()
     text = decode(original)
     existing = {int(line.split()[0]): line.split() for line in text.splitlines()[1:]
                 if line.split() and line.split()[0].isdigit()}
-    added = []
+    added, replaced = [], False
     for row in additions:
         item_id = int(row[0])
         if item_id in existing:
             if existing[item_id] != row:
-                raise ValueError("Conflicting client template: %s #%s" % (path, item_id))
+                if existing[item_id] != (previous_rows or {}).get(str(item_id)):
+                    raise ValueError("Conflicting client template: %s #%s" % (path, item_id))
+                lines = text.splitlines(keepends=True)
+                for index, line in enumerate(lines):
+                    fields = line.split()
+                    if fields and fields[0] == str(item_id):
+                        ending = "\r\n" if line.endswith("\r\n") else "\n"
+                        lines[index] = "\t".join(row) + ending
+                text, replaced = "".join(lines), True
         else:
             added.append("\t".join(row))
-    if not added:
+    if not added and not replaced:
         return
     ending = "\r\n" if "\r\n" in text else "\n"
-    plain = (text.rstrip("\r\n") + ending + ending.join(added) + ending).encode("utf-8")
+    plain = (text.rstrip("\r\n") + ending + (ending.join(added) + ending if added else "")).encode("utf-8")
     if original.startswith(b"\xef\xfe"):
         blocks = len(plain) // 8192 + 1
         if blocks > 255:
@@ -83,20 +91,28 @@ def merge_xml(path, spec):
     ending = "\r\n" if "\r\n" in data else "\n"
     tree = ET.fromstring(data)
     existing = {node.get("id"): node for node in tree.findall(spec["container"] + "/" + spec["tag"])}
-    added = []
+    added, replaced = [], False
     for attrs in spec["rows"]:
         node = existing.get(attrs["id"])
         if node is not None:
             if node.attrib != attrs:
-                raise ValueError("Conflicting server template: %s #%s" % (path, attrs["id"]))
+                if node.attrib != spec.get("previousRows", {}).get(attrs["id"]):
+                    raise ValueError("Conflicting server template: %s #%s" % (path, attrs["id"]))
+                replacement = "<%s %s/>" % (spec["tag"], " ".join(k + "=" + quoteattr(v) for k, v in attrs.items()))
+                pattern = r"<" + re.escape(spec["tag"]) + r"\b[^>]*\bid=[\"']" + re.escape(attrs["id"]) + r"[\"'][^>]*/>"
+                data, count = re.subn(pattern, lambda match: replacement, data)
+                if count != 1:
+                    raise ValueError("Cannot replace the known malformed template: " + str(path))
+                replaced = True
         else:
             added.append("\t\t<%s %s/>" % (spec["tag"], " ".join(k + "=" + quoteattr(v) for k, v in attrs.items())))
     if added:
         end = "\t</" + spec["container"] + ">"
         if data.count(end) != 1:
             raise ValueError("Unexpected XML container: " + str(path))
-        result = data.replace(end, ending.join(added) + ending + end).encode("utf-8")
-        path.write_bytes((b"\xef\xbb\xbf" if original.startswith(b"\xef\xbb\xbf") else b"") + result)
+        data = data.replace(end, ending.join(added) + ending + end)
+    if added or replaced:
+        path.write_bytes((b"\xef\xbb\xbf" if original.startswith(b"\xef\xbb\xbf") else b"") + data.encode("utf-8"))
 
 
 def compact(row):
@@ -179,16 +195,26 @@ def main():
         # Reuse the existing buff CCBI; attack/defence/will are calculated server-side.
         tables["Skills.txt"].append(compact(r[:7] + [art(r[7]), body, art(r[9], body)] + r[10:14] + [art(r[14])]))
         server["skill.xml"]["rows"].append(dict(zip(("id", "quality", "type", "quantity", "growth", "rate"), r[:1] + r[2:4] + r[5:7] + ["1"])))
+    previous_tables = {}
     for item_id in fate_ids:
-        r = source["Yuanfens.txt"][item_id]
+        r = list(source["Yuanfens.txt"][item_id])
+        if item_id == 1026 and len(r) == 8 and r[4] == "":
+            previous_tables["Yuanfens.txt"] = {str(fate_map[item_id]): compact([str(fate_map[item_id])] + r[1:7])}
+            server["fate.xml"]["previousRows"] = {str(fate_map[item_id]): {
+                "id": str(fate_map[item_id]), "type": "1", "require": r[3], "upgradeType": "", "quantity": "0.03"}}
+            r.pop(4)
+            adjustments.append({"kind": "table", "sourceFateId": 1026,
+                                "reason": "remove the extra empty column before upgrade type"})
+        if int(r[2]) not in (1, 2, 3) or int(r[4]) not in (1, 2, 3, 4):
+            raise ValueError("Unsupported fate columns: " + str(item_id))
         row = compact([str(fate_map[item_id])] + r[1:7])
         tables["Yuanfens.txt"].append(row)
         quantity = format(int(r[5]) / 100, ".4f").rstrip("0").rstrip(".")
         server["fate.xml"]["rows"].append(dict(zip(("id", "type", "require", "upgradeType", "quantity"), [row[0], r[2], r[3], r[4], quantity])))
-    catalog = {"id": "apk-v330-basic-1", "resourceVersion": "1.78.7",
+    catalog = {"id": "apk-v330-basic-2", "resourceVersion": "1.78.8",
                "sourceApkSha256": "f62a45209d80a5e8df0b38e81b14b11e5e4a2a9fc91beef35d16dec1760cb1f6",
                "sourceTableSha256": {name: hashlib.sha256((assets / "txt" / name).read_bytes()).hexdigest() for name in source},
-               "clientTables": tables, "serverTemplates": server,
+               "clientTables": tables, "clientPreviousRows": previous_tables, "serverTemplates": server,
                "fateIdMap": {str(k): v for k, v in fate_map.items()}, "assetAdjustments": adjustments,
                "pendingCards": [{"id": i, "name": source["Disciples.txt"][i][1],
                                  "reason": "missing growth" + (" and source fates 1058-1063" if i == 343 else ""),
@@ -224,7 +250,7 @@ def main():
         catalog["sharedAssets"][name] = {"beforeSha256": baseline, "afterSha256": result_hash}
     for name, additions in tables.items():
         for directory in ("archive/client-resources", "resources/client"):
-            merge_table(ROOT / directory / name, additions)
+            merge_table(ROOT / directory / name, additions, previous_tables.get(name))
     for name, spec in server.items():
         merge_xml(ROOT / "server/config/xml" / name, spec)
     CATALOG.parent.mkdir(parents=True, exist_ok=True)

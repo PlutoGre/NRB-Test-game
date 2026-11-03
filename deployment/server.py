@@ -782,7 +782,7 @@ def main():
     parser.add_argument("--web-port", type=int, help="Use a fixed port; omitted: reuse saved port or choose an available port")
     parser.add_argument("--game-port", type=int, help="Use a fixed port; omitted: reuse saved port or choose an available port")
     parser.add_argument("--db-port", type=int, help="Use a fixed loopback port; omitted: reuse saved port or choose an available port")
-    parser.add_argument("--resource-version", default="1.78.7")
+    parser.add_argument("--resource-version", default="1.78.8")
     parser.add_argument("--channel", choices=("anzhi", "all"), default="anzhi")
     parser.add_argument("--offline", action="store_true")
     parser.add_argument("--restore-file", type=Path)
