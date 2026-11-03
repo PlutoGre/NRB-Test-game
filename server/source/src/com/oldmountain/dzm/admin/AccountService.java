@@ -11,6 +11,7 @@ import javax.crypto.spec.PBEKeySpec;
 import net.sf.json.JSONObject;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.Hibernate;
 import org.hibernate.exception.ConstraintViolationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -146,7 +147,11 @@ public final class AccountService {
         Session db = DZM.getEntityManager().getSessionFactory();
         Transaction tx = db.beginTransaction();
         try {
+            // 旧 Hibernate 将未显式指定类型的 CHAR(32/64) 当成 Character，
+            // 必须按完整字符串读取盐和摘要，避免已注册账号密码登录报错。
             Object[] row = (Object[]) db.createSQLQuery("SELECT uid,salt,passwordHash,iterations FROM nrb_accounts WHERE username=:name")
+                    .addScalar("uid", Hibernate.STRING).addScalar("salt", Hibernate.STRING)
+                    .addScalar("passwordHash", Hibernate.STRING).addScalar("iterations", Hibernate.INTEGER)
                     .setString("name", username).uniqueResult();
             tx.commit(); return row;
         } catch (RuntimeException error) { tx.rollback(); throw error; }
@@ -195,6 +200,7 @@ public final class AccountService {
             long now = System.currentTimeMillis();
             Object[] row = (Object[]) db.createSQLQuery("SELECT a.uid,a.username FROM nrb_account_sessions s "
                     + "JOIN nrb_accounts a ON a.uid=s.uid WHERE s.tokenHash=:hash AND s.expiresAt>:now")
+                    .addScalar("uid", Hibernate.STRING).addScalar("username", Hibernate.STRING)
                     .setString("hash", digest(token)).setLong("now", now).uniqueResult();
             if (row != null && extend) db.createSQLQuery("UPDATE nrb_account_sessions SET expiresAt=:expires WHERE tokenHash=:hash")
                     .setLong("expires", now + LIFETIME).setString("hash", digest(token)).executeUpdate();

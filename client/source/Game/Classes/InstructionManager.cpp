@@ -586,9 +586,13 @@ void InstructionManager::start( MainFrame* frame)
 	CCLOG("loaclStep:%d",loaclStep);
 
 	UserBasicInfo& basicinfo = ServerDateManager::Get()->getUserBasicInfo();
-	if(basicinfo.level>2)
+	if(basicinfo.level>2 || (mServerInstructionDone &&
+		(loaclStep>=TOTAL_INSTRUCTION || !loadMessage())))
 	{
 		mCurrentStep = TOTAL_INSTRUCTION+1;
+		// 服务端确认无需新手引导时，同步当前账号的本地进度。
+		// 新设备没有本地引导包，不能重新建角；完成标记也用于远航引导效果。
+		saveLoaclInstructionStep();
 		return;
 	}
 	else if(!mServerInstructionDone && loaclStep<=NAME_STEP)
@@ -629,6 +633,9 @@ void InstructionManager::start( MainFrame* frame)
 	{
 		//jump instruction
 		mCurrentStep = TOTAL_INSTRUCTION+1;
+		// 服务端确认无需新手引导时，同步当前账号的本地进度。
+		// 新设备没有本地引导包，不能重新建角；完成标记也用于远航引导效果。
+		saveLoaclInstructionStep();
 		return;
 	}
 	else if(mServerInstructionDone && loaclStep>START_ISNTRUCTION && loaclStep<=NAME_STEP)
