@@ -44,8 +44,16 @@ def prepare():
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(path, target)
     # Relative URLs are resolved against the current browser origin at runtime.
+    # The version must describe the bundled release, otherwise every fresh Web
+    # build asks for an obsolete full-client update after a catalog upgrade.
+    releases = [json.loads(path.read_text(encoding="utf-8")).get("resourceVersion")
+                for path in (REPO / "resources/catalog").glob("*.json")]
+    versions = [value for value in releases if value]
+    if not versions:
+        raise RuntimeError("No client resource release version found")
+    bundled_version = max(versions, key=lambda value: tuple(int(part) for part in value.split(".")))
     (assets / "version_web.cfg").write_text(json.dumps({
-        "version": 1, "localVerson": "1.79.0",
+        "version": 1, "localVerson": bundled_version,
         "sever": "/gameserver/dzm/1.8/servers_list.php",
         "severBackup": "/gameserver/dzm/1.8/servers_list.php",
         "inStoreUpdate": "/", "branch": "MAIN",

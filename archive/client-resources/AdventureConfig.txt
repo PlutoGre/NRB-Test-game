@@ -24,3 +24,9 @@
 26	定额返利	114	mainScene/u_icoqyjsjliwu.png	RechargeFeedback	1
 9001	All_Blue	90	mainScene/u_icoqyqixi.png	none	1
 9002	幸运转盘	91	mainScene/u_icoqy03.png	none	1
+9010	运宝	92	mainScene/u_icoqy03.png	none	1
+9011	装备养成	93	mainScene/u_icoqy03.png	none	1
+9012	奥义扩展	94	mainScene/u_icoqy03.png	none	1
+9013	船员养成	95	mainScene/u_icoqy03.png	none	1
+9014	潜能训练	96	mainScene/u_icoqy03.png	none	1
+9015	船舱	97	mainScene/u_icoqy03.png	none	1

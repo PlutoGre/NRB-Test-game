@@ -22,6 +22,7 @@ import com.oldmountain.dzm.net.ObjectAccessor;
  */
 public class BattleUtil {
 	public static void resetBattleProperty(Battle battle,Disciple disciple,Player player,ArrayList<Integer> battleDiscipleItems,int checkFate){
+		battleDiscipleItems = com.oldmountain.dzm.admin.GrowthSystems.prepareBattle(player,battle,battleDiscipleItems);
 		int health = disciple.getHealthToInt();
 		int attack = disciple.getAttackToInt();
 		int defence = disciple.getDefenceToInt();
@@ -176,6 +177,7 @@ public class BattleUtil {
 		battle.setAttack(attack);
 		battle.setDefence(defence);
 		battle.setRp(rp);
+        com.oldmountain.dzm.admin.GrowthSystems.applyStats(battle, disciple, player);
 	}
 	
 	public static void buildBattleBuilder(OPUserBattleArrayRet.BattleArrayInfo.Builder builder,Battle battle,int position){

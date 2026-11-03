@@ -568,6 +568,13 @@ class Deployment:
             else:
                 catalog_update.apply(self.root, self.state, permanent, marker)
                 self.save()
+        expansion = REPO / "resources/catalog/expansion-systems-v1.json"
+        if catalog_update.pending(self.root, expansion, "expansion-systems-v1.json"):
+            if self.owned("game"):
+                print("Expansion update pending: stop this deployment, then start again.", flush=True)
+            else:
+                catalog_update.apply(self.root, self.state, expansion, "expansion-systems-v1.json")
+                self.save()
         self.ensure_db()
         account_migration.apply(self)
         directory = self.runtime_directory()
@@ -618,9 +625,11 @@ class Deployment:
                 raise RuntimeError("No free local administration port is available")
         self.state["adminPort"] = port
         self.state.setdefault("adminInstanceId", secrets.token_hex(16))
+        self.state.setdefault("adminStopToken", secrets.token_hex(32))
         shutil.copy2(source / "NRBAdminServer.jar", self.root / "server/NRBAdminServer.jar")
         (self.root / "private/admin.properties").write_text(
-            "port=" + str(port) + "\ninstanceId=" + self.state["adminInstanceId"] + "\n", encoding="ascii")
+            "port=" + str(port) + "\ninstanceId=" + self.state["adminInstanceId"]
+            + "\nstopToken=" + self.state["adminStopToken"] + "\n", encoding="ascii")
         self.save()
         print("Local administration endpoint: 127.0.0.1:" + str(port), flush=True)
         return True
@@ -673,6 +682,38 @@ class Deployment:
         self.state["processes"].pop(name, None)
         self.save()
 
+    def stop_game(self):
+        """Ask this instance to save and exit before its database is stopped."""
+        if not self.owned("game"):
+            return
+        if not self.state.get("adminStopToken"):
+            # Upgrade compatibility: only pre-existing overlays lack this key.
+            print("Legacy server has no graceful stop endpoint; enabling it on the next start.", flush=True)
+            self.terminate_owned("game")
+            return
+        body = json.dumps({"instanceId": self.state["adminInstanceId"],
+                           "token": self.state["adminStopToken"]}).encode("utf-8")
+        request = urllib.request.Request(
+            "http://127.0.0.1:" + str(self.state["adminPort"]) + "/admin/v1/deployment-stop",
+            data=body, headers={"Content-Type": "application/json"}, method="POST")
+        opener = urllib.request.build_opener(urllib.request.ProxyHandler({}))
+        try:
+            with opener.open(request, timeout=20) as response:
+                reply = json.loads(response.read(4096).decode("utf-8"))
+            if not reply.get("ok") or reply.get("instanceId") != self.state["adminInstanceId"]:
+                raise ValueError("Unexpected shutdown receipt")
+        except (OSError, ValueError) as error:
+            raise RuntimeError("Graceful game stop was not confirmed; game and database retained: " + str(error)) from error
+        print("Saving players and waiting for the owned game server to exit...", flush=True)
+        deadline = time.monotonic() + 90
+        while self.owned("game") and time.monotonic() < deadline:
+            time.sleep(0.5)
+        if self.owned("game"):
+            raise RuntimeError("Game shutdown is still pending; database retained for player saving")
+        self.state["processes"].pop("game", None)
+        self.save()
+        print("Game server exited after saving players.", flush=True)
+
     def stop(self):
         self.require_installed()
         self.terminate_owned("web_tunnel")
@@ -683,7 +724,7 @@ class Deployment:
         self.terminate_owned("tunnel")
         self.terminate_owned("browser")
         self.terminate_owned("gateway")
-        self.terminate_owned("game")
+        self.stop_game()
         self.terminate_owned("web")
         if self.owned("database"):
             self.run(self.database_command("mariadb-admin.exe") + ["shutdown"], "Shut down owned database", timeout=60)

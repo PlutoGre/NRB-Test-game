@@ -1,0 +1,113 @@
+{
+  "transport": {
+    "enabled": true,
+    "name": "运宝",
+    "durationSeconds": 60,
+    "dailyRuns": 3,
+    "refreshGold": 10,
+    "finishGold": 10,
+    "qualityWeights": [
+      60,
+      30,
+      10
+    ],
+    "silverRewards": [
+      5000,
+      10000,
+      20000
+    ],
+    "toolRewards": [
+      5,
+      10,
+      15
+    ],
+    "goldRewards": [
+      0,
+      5,
+      10
+    ]
+  },
+  "equipment": {
+    "enabled": true,
+    "name": "装备养成",
+    "maxTemper": 20,
+    "temperSilver": 1000,
+    "temperFlat": 5,
+    "maxRank": 10,
+    "rankGold": 20,
+    "rankPercent": 2,
+    "decomposeShards": 10,
+    "decomposeSilver": 3000,
+    "craftShards": 30,
+    "craftSilver": 20000,
+    "recipes": [
+      107,
+      94,
+      96
+    ]
+  },
+  "skills": {
+    "enabled": true,
+    "name": "奥义扩展",
+    "maxRank": 10,
+    "rankGold": 20,
+    "rankSilver": 1000,
+    "rankPercent": 5,
+    "replaceGold": 100,
+    "inbornChoices": [
+      41,
+      44,
+      88
+    ]
+  },
+  "crew": {
+    "enabled": true,
+    "name": "船员养成",
+    "maxRank": 10,
+    "rankGold": 30,
+    "rankSilver": 2000,
+    "rankPercent": 3,
+    "maxSuper": 5,
+    "superGold": 100,
+    "superSilver": 10000,
+    "superPercent": 5,
+    "superRequires": 3,
+    "refundPercent": 80
+  },
+  "training": {
+    "enabled": true,
+    "name": "潜能训练",
+    "toolId": 1502001,
+    "toolCount": 5,
+    "potentialCost": 1,
+    "maxGain": 3,
+    "attributeUnits": [
+      4,
+      1,
+      1,
+      2
+    ]
+  },
+  "cabin": {
+    "enabled": true,
+    "name": "船舱",
+    "ships": [
+      "梅丽号",
+      "桑尼号"
+    ],
+    "shipGold": 100,
+    "slots": 7,
+    "unlockGold": 20,
+    "maxSeat": 10,
+    "seatSilver": 1000,
+    "seatPercent": 1,
+    "maxHull": 20,
+    "hullSilver": 5000,
+    "hullBonus": [
+      4,
+      2,
+      1,
+      1
+    ]
+  }
+}

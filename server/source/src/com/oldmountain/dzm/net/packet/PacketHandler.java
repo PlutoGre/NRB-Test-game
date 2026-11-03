@@ -15,6 +15,12 @@ import com.oldmountain.dzm.packethandler.*;
 /** @brief 按操作码分发游戏请求，并在同一主循环执行已鉴权的本机管理任务。 */
 public class PacketHandler extends Thread{ 
 	static BlockingQueue<Packet> inqueue =  new LinkedBlockingQueue<Packet>(); 
+    private static volatile boolean shuttingDown;
+
+    /** 停服保存前停止接受新玩法请求。 */
+    public static void beginShutdown() { shuttingDown = true; }
+    /** 登录工作线程在获得账号锁后复核停服状态。 @return 是否正在停服 */
+    public static boolean isShuttingDown() { return shuttingDown; }
 	
 	public static void RecvPacket( Packet packet )
 	{
@@ -41,6 +47,7 @@ public class PacketHandler extends Thread{
             ((AdminTask) packet).execute();
             return;
         }
+        if (shuttingDown) { if (packet.session != null) packet.session.close(); return; }
         // 登录和无玩家信息的心跳以外，网络请求必须来自已认证并加载角色的连接。
         // 保留旧激活码流程，但激活码中的 UID 必须与已经验证的账号一致。
         if (packet.opcode != OP.code.OPCODE_PLAYER_LOGIN_C_VALUE
@@ -55,10 +62,14 @@ public class PacketHandler extends Thread{
         }
         if (packet.session != null && packet.session.getAttribute("playerid") != null) {
             com.oldmountain.dzm.entity.Player player = com.oldmountain.dzm.net.ObjectAccessor.getOnlineUser((Integer) packet.session.getAttribute("playerid"));
-            if (!com.oldmountain.dzm.admin.PermanentActivities.reconcileBalance(player)) { packet.session.close(); return; }
+            if (!com.oldmountain.dzm.admin.ExpansionSystems.ready(player) || !com.oldmountain.dzm.admin.ExpansionSystems.synchronizeCabin(player,true) || !com.oldmountain.dzm.admin.PermanentActivities.reconcileBalance(player)) { packet.session.close(); return; }
         }
         if (packet.opcode == com.oldmountain.dzm.admin.PermanentActivities.REQUEST) {
             com.oldmountain.dzm.admin.PermanentActivities.handle(packet);
+            return;
+        }
+        if (packet.opcode == com.oldmountain.dzm.admin.ExpansionSystems.REQUEST) {
+            com.oldmountain.dzm.admin.ExpansionSystems.handle(packet);
             return;
         }
         //TODO:非法请求判断

@@ -32,6 +32,7 @@ public final class AdminServer implements HttpHandler {
     private static final SecureRandom RANDOM = new SecureRandom();
     private final String instance;
     private final int port;
+    private final String stopToken;
     private final Properties auth = new Properties();
     private final ConcurrentMap<String, Long> sessions = new ConcurrentHashMap<String, Long>();
     private final ConcurrentMap<String, Preview> previews = new ConcurrentHashMap<String, Preview>();
@@ -57,6 +58,7 @@ public final class AdminServer implements HttpHandler {
     public AdminServer(Properties config) throws Exception {
         instance = config.getProperty("instanceId");
         port = Integer.parseInt(config.getProperty("port"));
+        stopToken = config.getProperty("stopToken", "");
         if (instance == null || !instance.matches("[a-f0-9]{32}")) throw new IllegalArgumentException("Invalid instance ID");
         try (InputStream in = AdminServer.class.getResourceAsStream("/admin-auth.properties")) {
             if (in == null) throw new IllegalStateException("Missing administrator authentication resource");
@@ -84,6 +86,7 @@ public final class AdminServer implements HttpHandler {
         LOG.info("initialize: administration catalog loaded, items={}", catalog.size());
         AccountService.initialize();
         PermanentActivities.initialize(catalog);
+        ExpansionSystems.initialize(catalog);
     }
 
     /** 开放本机接口；生命周期随游戏 JVM 结束。 @throws IOException 端口无法监听 */
@@ -103,6 +106,7 @@ public final class AdminServer implements HttpHandler {
      */
     public void handle(final HttpExchange exchange) throws IOException {
         int status = 200;
+        boolean stopRequested = false;
         JSONObject response;
         try {
             if (!exchange.getRemoteAddress().getAddress().isLoopbackAddress()) throw new SecurityException("仅允许本机访问");
@@ -118,7 +122,22 @@ public final class AdminServer implements HttpHandler {
                     throw new IllegalArgumentException("请求必须使用 application/json");
                 }
                 final JSONObject request = readJson(exchange.getRequestBody());
-                if ("login".equals(route)) {
+                if ("deployment-stop".equals(route)) {
+                    if (!stopToken.matches("[a-f0-9]{64}") || !MessageDigest.isEqual(
+                            stopToken.getBytes(StandardCharsets.US_ASCII), request.optString("token").getBytes(StandardCharsets.US_ASCII))
+                            || !instance.equals(request.optString("instanceId"))) throw new SecurityException("无效部署凭据");
+                    response = (JSONObject) AdminTask.call(new Callable<Object>() {
+                        public Object call() {
+                            pingDatabase();
+                            synchronized (AccountService.GAME_LOGIN_LOCK) {
+                                com.oldmountain.dzm.net.packet.PacketHandler.beginShutdown();
+                            }
+                            LOG.info("handle: owned deployment requested graceful shutdown");
+                            return health();
+                        }
+                    }, 10);
+                    stopRequested = true;
+                } else if ("login".equals(route)) {
                     response = login(request);
                 } else {
                     final String token = requireSession(exchange);
@@ -146,7 +165,11 @@ public final class AdminServer implements HttpHandler {
         exchange.getResponseHeaders().set("Cache-Control", "no-store");
         exchange.sendResponseHeaders(status, bytes.length);
         try (OutputStream output = exchange.getResponseBody()) { output.write(bytes); }
-        finally { exchange.close(); }
+        finally {
+            exchange.close();
+            // 先返回停服回执，再触发原 JVM shutdown hook 完成玩家保存。
+            if (stopRequested) new Thread(new Runnable() { public void run() { System.exit(0); } }, "owned-deployment-stop").start();
+        }
     }
 
     private JSONObject health() {

@@ -75,7 +75,10 @@ class LoginRunable implements Runnable{
 	}
 	/** 串行处理同账号的首次建角与重新连接，避免重复存档。 */
 	public void run(){
-        synchronized (AccountService.GAME_LOGIN_LOCK) { runAuthenticated(); }
+        synchronized (AccountService.GAME_LOGIN_LOCK) {
+            if (com.oldmountain.dzm.net.packet.PacketHandler.isShuttingDown()) { session.close(); return; }
+            runAuthenticated();
+        }
     }
 
     private void runAuthenticated(){
@@ -516,13 +519,14 @@ class LoginRunable implements Runnable{
 	        DaoManager.getRewardDao().addReward(reward);
 		}
 		
-        if (!com.oldmountain.dzm.admin.PermanentActivities.reconcileBalance(player)) { session.close(); return; }
+        if (!com.oldmountain.dzm.admin.ExpansionSystems.ready(player) || !com.oldmountain.dzm.admin.ExpansionSystems.synchronizeCabin(player,false) || !com.oldmountain.dzm.admin.PermanentActivities.reconcileBalance(player)) { session.close(); return; }
 		Util.dailyFirstLogin(player);
 		
 		session.setAttribute("playerid", player.getId());
 		player.setSession(session);
 		player.setLastlogin(time);
 		ObjectAccessor.addOnlineUser(player);
+        com.oldmountain.dzm.admin.GrowthSystems.restore(player);
 
 		if (login.hasClientGuideFinished()) {
 			boolean clientGuideFinished = login.getClientGuideFinished();

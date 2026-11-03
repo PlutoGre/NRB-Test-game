@@ -4,6 +4,7 @@
 #include "AdventurePage.h"
 #include "AdventureContinuePage.h"
 #include "PermanentActivityPage.h"
+#include "ExpansionSystemsPage.h"
 #include "FightEndPopupPage.h"
 REGISTER_PAGE("AdventurePage",AdventurePage);
 USING_NS_CC;
@@ -77,7 +78,16 @@ void NavContent::refreshContent( void )
 				}
 				else
 				{
-					name->setString(adventureItem->adventureType==90 ? "All Blue" : adventureItem->name.c_str());
+					if(adventureItem->adventureType>=92 && adventureItem->adventureType<=97) {
+                            CCLabelTTF* title=dynamic_cast<CCLabelTTF*>(name->getUserObject());
+                            if(!title) {
+                                title=CCLabelTTF::create(adventureItem->name.c_str(),"Arial",20);
+                                title->setAnchorPoint(name->getAnchorPoint());title->setPosition(name->getPosition());
+                                title->setScaleX(name->getScaleX());title->setScaleY(name->getScaleY());title->setColor(name->getColor());
+                                name->getParent()->addChild(title,name->getZOrder()+1);name->setUserObject(title);
+                            } else title->setString(adventureItem->name.c_str());
+                            name->setVisible(false);
+                        } else name->setString(adventureItem->adventureType==90 ? "All Blue" : adventureItem->name.c_str());
 				}
 			}
 		}
@@ -341,7 +351,12 @@ void AdventurePage::buildItem( void )
 				item->init();
 				addContentItem(i,id,item);
 			}
-			else if(adventureItem->adventureType>=LuaScriptStart)
+			else if(adventureItem->adventureType>=92 && adventureItem->adventureType<=97)
+            {
+                AdventureBase* item=new ExpansionSystemsPage(id,adventureItem->adventureType-92);
+                item->init();addContentItem(i,id,item);
+            }
+            else if(adventureItem->adventureType>=LuaScriptStart)
 			{
 				AdventureBase* item=new AdventureScriptBase(id, adventureItem->ccbi);
 				item->init();
@@ -836,6 +851,8 @@ void AdventurePage::changePage(const unsigned int index,bool isDuration/*=true*/
     for (ContentList::iterator item = mContentList.begin(); item != mContentList.end(); ++item) {
         PermanentActivityPage* activity = dynamic_cast<PermanentActivityPage*>(item->second);
         if (activity && activity != contentPage) activity->exitPage();
+        ExpansionSystemsPage* expansion = dynamic_cast<ExpansionSystemsPage*>(item->second);
+        if (expansion && expansion != contentPage) expansion->exitPage();
     }
 	if(contentPage)
 	{

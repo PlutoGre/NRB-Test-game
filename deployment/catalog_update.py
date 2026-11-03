@@ -184,6 +184,8 @@ def apply(root, state, catalog_path=None, marker_name="catalog-v330.json"):
         print("Applied basic content catalog: %s cards, %s equipment, %s skills; resource version %s" % (
             len(catalog["clientTables"]["Disciples.txt"]), len(catalog["clientTables"]["Equips.txt"]),
             len(catalog["clientTables"]["Skills.txt"]), version), flush=True)
+    elif catalog["id"] == "expansion-systems-v1":
+        print("Applied treasure transport and growth systems; resource version " + version, flush=True)
     else:
         print("Applied permanent activities: All Blue and Fortune Wheel; resource version " + version, flush=True)
     return True

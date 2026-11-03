@@ -300,6 +300,7 @@ public class AdventureInfoHandler {
 
         }
         com.oldmountain.dzm.admin.PermanentActivities.appendEntries(builder);
+        com.oldmountain.dzm.admin.ExpansionSystems.appendEntries(builder);
         player.setLastVerifyTime(time);
         builder.setServertime(time);
 		player.sendPacket(OP.code.OPCODE_GET_ADVENTURE_INFORET_S_VALUE, builder);// 发送返回包
