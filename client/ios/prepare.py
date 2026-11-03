@@ -54,7 +54,7 @@ def main():
     parser.add_argument("--host", help="IPv4/DNS address reachable from the phone")
     parser.add_argument("--web-port", type=int, default=18081)
     parser.add_argument("--game-port", type=int, default=25524)
-    parser.add_argument("--resource-version", default="1.78.6")
+    parser.add_argument("--resource-version", default="1.78.7")
     parser.add_argument("--output", type=Path, default=ROOT / "generated")
     parser.add_argument("--web-root", type=Path, help="Dedicated public resource directory")
     parser.add_argument("--server-dir", type=Path, help="Optional server XML directory to update")

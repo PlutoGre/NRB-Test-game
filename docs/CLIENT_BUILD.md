@@ -16,7 +16,7 @@ $gameRuntime = '.\runtime\server'
 Get-Content (Join-Path $gameRuntime 'client-config\deployment.json')
 ```
 
-若安装时指定了其他运行目录，将 `$gameRuntime` 改成对应路径。下列命令在仓库根目录执行；脚本参数里的相对路径也统一以仓库根目录为基准。记下输出值；后续以 `host=192.168.1.100`、`webPort=18081`、`gamePort=25524`、`resourceVersion=1.78.6` 为例，按自己的输出替换。
+若安装时指定了其他运行目录，将 `$gameRuntime` 改成对应路径。下列命令在仓库根目录执行；脚本参数里的相对路径也统一以仓库根目录为基准。记下输出值；后续以 `host=192.168.1.100`、`webPort=18081`、`gamePort=25524`、`resourceVersion=1.78.7` 为例，按自己的输出替换。
 
 首次部署会避开已占用的端口，实际端口可能与示例不同，务必以 `deployment.json` 为准。新旧服务并存时，旧安装包仍使用旧配置；连接新部署需使用对应参数重新打包。
 
@@ -35,7 +35,7 @@ Get-Content (Join-Path $gameRuntime 'client-config\deployment.json')
 | `server_host` | `host`，例如 `192.168.1.100`；这是局域网后备地址，不填 HTTPS URL |
 | `web_port` | `webPort`，默认 `18081` |
 | `game_port` | `gamePort`，默认 `25524` |
-| `resource_version` | `resourceVersion`，默认 `1.78.6` |
+| `resource_version` | `resourceVersion`，默认 `1.78.7` |
 | `bundle_id` | 自己的应用标识，例如 `com.yourname.nrbgame` |
 
 构建成功后，打开该次运行 → **Summary → Artifacts → ios-unsigned-app**，下载并解压，取得 `onepiece-unsigned-for-resigning.ipa`。失败时下载 **ios-build-logs**，从第一条实际构建错误排查。

@@ -115,36 +115,19 @@ public class BattleUtil {
 			for (int i = 0; i < fates.size(); i++) {
 				int fateId = fates.get(i);
 				FateXmlTemplate fateXmlTemplate = XMLTemplateService.getFateTemplate(fateId);
-				String[] requires = fateXmlTemplate.getRequire().split("_");
-				ArrayList<Integer> requireList = new ArrayList<Integer>();
-				if (fateXmlTemplate.getType() == 1 && (checkFate == 1 || checkFate == 4)) {
-					for (int j2 = 0; j2 < requires.length; j2++) {
-						requireList.add(Integer.parseInt(requires[j2]));
-					}
-					requireList.retainAll(battleDiscipleItems);
-					if (requireList.size() == requires.length) {
-						fatestatus.set(i, 1);
-					}
-					else {
-						fatestatus.set(i, 0);
-					}
-				}
-				else if (fateXmlTemplate.getType() == 2 && (checkFate == 1 || checkFate == 3 || checkFate == 5)) {
-					if (battleSkills.contains(Integer.parseInt(requires[0]))) {
-						fatestatus.set(i, 1);
-					}
-					else {
-						fatestatus.set(i, 0);
-					}
-				}
-				else if (fateXmlTemplate.getType() == 3 && (checkFate == 1 || checkFate == 2 || checkFate == 5)){
-					if (battleEquips.contains(Integer.parseInt(requires[0]))) {
-						fatestatus.set(i, 1);
-					}
-					else {
-						fatestatus.set(i, 0);
-					}
-				}
+                if (fateXmlTemplate == null) {
+                    fatestatus.set(i, 0);
+                    continue;
+                }
+                if (fateXmlTemplate.getType() == 1 && (checkFate == 1 || checkFate == 4)) {
+                    fatestatus.set(i, FateRequirement.matches(fateXmlTemplate.getRequire(), battleDiscipleItems) ? 1 : 0);
+                }
+                else if (fateXmlTemplate.getType() == 2 && (checkFate == 1 || checkFate == 3 || checkFate == 5)) {
+                    fatestatus.set(i, FateRequirement.matches(fateXmlTemplate.getRequire(), battleSkills) ? 1 : 0);
+                }
+                else if (fateXmlTemplate.getType() == 3 && (checkFate == 1 || checkFate == 2 || checkFate == 5)) {
+                    fatestatus.set(i, FateRequirement.matches(fateXmlTemplate.getRequire(), battleEquips) ? 1 : 0);
+                }
 			}
 			String newFateStatus = "" + fatestatus.get(0);
 			for (int k = 1; k < fatestatus.size(); k++) {

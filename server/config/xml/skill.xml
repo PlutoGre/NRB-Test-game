@@ -78,5 +78,14 @@
 		<Skill id="75" quality="2" type="1" rate="0.1" quantity="22.5" growth="12.74"/>
 		<Skill id="76" quality="2" type="2" rate="0.1" quantity="7" growth="4.08"/>
 		<Skill id="77" quality="2" type="1" rate="0.1" quantity="22.95" growth="12.74"/>
+		<Skill id="78" quality="1" type="5" quantity="0.09" growth="0.032" rate="1"/>
+		<Skill id="79" quality="1" type="4" quantity="0.08" growth="0.028" rate="1"/>
+		<Skill id="83" quality="1" type="4" quantity="0.08" growth="0.03" rate="1"/>
+		<Skill id="84" quality="1" type="4" quantity="0.085" growth="0.035" rate="1"/>
+		<Skill id="85" quality="1" type="4" quantity="0.13" growth="0.051" rate="1"/>
+		<Skill id="86" quality="1" type="6" quantity="0.13" growth="0.047" rate="1"/>
+		<Skill id="87" quality="1" type="5" quantity="0.11" growth="0.069" rate="1"/>
+		<Skill id="88" quality="1" type="4" quantity="0.10" growth="0.061" rate="1"/>
+		<Skill id="89" quality="1" type="5" quantity="0.09" growth="0.034" rate="1"/>
 	</Skills>
 </root>

@@ -45,7 +45,7 @@ def main():
     parser.add_argument("--platform", choices=("android", "ios"), default="android")
     parser.add_argument("--ios-overlay", type=Path, help="iOS asset overlay output directory")
     parser.add_argument("--local-login", action="store_true", help="Explicitly enable local device login")
-    parser.add_argument("--resource-version", default="1.78.6", help="Bump when replacing cached APK assets")
+    parser.add_argument("--resource-version", default="1.78.7", help="Bump when replacing cached APK assets")
     parser.add_argument("--server-dir", type=Path, help="Optional game server directory to configure")
     args = parser.parse_args()
     if args.server_dir:

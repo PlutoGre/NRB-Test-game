@@ -1,6 +1,7 @@
 """Portable Windows deployment for the bundled Java game server. Standard library only.
 
-Never builds source, imports SQL into an unrelated database, or stops an unowned process.
+Builds the small server overlay on a stopped deployment when its sources change.
+Never imports SQL into an unrelated database or stops an unowned process.
 """
 import argparse
 from contextlib import contextmanager
@@ -32,6 +33,8 @@ sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(REPO / "scripts"))
 from project_paths import DEFAULT_INSTALL_DIR, project_path
 from runtime_paths import ensure_alias, release_alias
+from admin.source_inputs import fingerprint as admin_source_fingerprint
+import catalog_update
 MANIFEST = json.loads((HERE / "runtime-manifest.json").read_text(encoding="utf-8"))
 CACHE = HERE / "download-cache"
 STATE_NAME = ".onepiece-server.json"
@@ -550,6 +553,12 @@ class Deployment:
         self.upgrade_default_server_name()
         self.upgrade_legacy_continue_login()
         admin_current = self.prepare_admin()
+        if catalog_update.pending(self.root):
+            if self.owned("game"):
+                print("Content catalog update pending: stop this deployment, then start again.", flush=True)
+            else:
+                catalog_update.apply(self.root, self.state)
+                self.save()
         self.ensure_db()
         directory = self.runtime_directory()
         self.launch("web", [sys.executable, "-m", "http.server", str(self.state["webPort"]),
@@ -562,16 +571,31 @@ class Deployment:
         self.status()
 
     def prepare_admin(self):
-        """Install the prebuilt local admin module only while the game is stopped."""
+        """Refresh the server overlay only while this game's process is stopped."""
         source = HERE / "admin"
         manifest = read_json(source / "artifacts.json")
+        expected_source = admin_source_fingerprint()
+        generated = self.root / "private/server-overlay"
+        if (generated / "artifacts.json").is_file():
+            generated_manifest = read_json(generated / "artifacts.json")
+            if generated_manifest.get("sourceSha256") == expected_source:
+                source, manifest = generated, generated_manifest
         if self.owned("game"):
             destination = self.root / "server/NRBAdminServer.jar"
             if (not destination.is_file() or digest(destination) != manifest["serverJarSha256"]
-                    or "adminPort" not in self.state):
+                    or "adminPort" not in self.state or manifest.get("sourceSha256") != expected_source):
                 print("Local administration update pending: stop this deployment, then start again.", flush=True)
                 return False
             return True
+        if manifest.get("sourceSha256") != expected_source:
+            self.run(["powershell.exe", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File",
+                      HERE / "Build-Admin.ps1", "-JavaHome", self.root / "runtimes/java", "-ServerOnly",
+                      "-OutputDir", generated],
+                     "Update server overlay and item names from repository sources", timeout=300)
+            source = generated
+            manifest = read_json(source / "artifacts.json")
+            if manifest.get("sourceSha256") != expected_source:
+                raise RuntimeError("Server overlay sources changed during packaging; retry while stopped")
         if digest(source / "NRBAdminServer.jar") != manifest["serverJarSha256"]:
             raise RuntimeError("Administration package checksum mismatch; update the complete repository")
         if digest(self.root / "server/DZM.jar") != manifest["baseJarSha256"]:
@@ -758,7 +782,7 @@ def main():
     parser.add_argument("--web-port", type=int, help="Use a fixed port; omitted: reuse saved port or choose an available port")
     parser.add_argument("--game-port", type=int, help="Use a fixed port; omitted: reuse saved port or choose an available port")
     parser.add_argument("--db-port", type=int, help="Use a fixed loopback port; omitted: reuse saved port or choose an available port")
-    parser.add_argument("--resource-version", default="1.78.6")
+    parser.add_argument("--resource-version", default="1.78.7")
     parser.add_argument("--channel", choices=("anzhi", "all"), default="anzhi")
     parser.add_argument("--offline", action="store_true")
     parser.add_argument("--restore-file", type=Path)

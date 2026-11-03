@@ -1,8 +1,14 @@
-﻿param([string]$JavaHome = '')
+﻿param([string]$JavaHome = '', [switch]$ServerOnly, [string]$OutputDir = '')
 $ErrorActionPreference = 'Stop'
 $repo = Split-Path -Parent $PSScriptRoot
 $admin = Join-Path $PSScriptRoot 'admin'
-$buildDir = Join-Path $admin '.build'
+$artifactDir = $admin
+if ($OutputDir) {
+    if (-not [IO.Path]::IsPathRooted($OutputDir)) { $OutputDir = Join-Path $repo $OutputDir }
+    $artifactDir = [IO.Path]::GetFullPath($OutputDir)
+    New-Item -ItemType Directory -Path $artifactDir -Force | Out-Null
+}
+$buildDir = Join-Path $artifactDir '.build'
 $classes = Join-Path $buildDir ('classes-' + [Guid]::NewGuid().ToString('N'))
 New-Item -ItemType Directory -Path $classes -Force | Out-Null
 if (-not $JavaHome) {
@@ -19,40 +25,41 @@ if (-not (Test-Path -LiteralPath $python)) { throw 'Run the server deployment on
 & $python (Join-Path $admin 'export_names.py') --output $classes
 if ($LASTEXITCODE -ne 0) { throw 'Administration resource generation failed.' }
 $originalJar = Join-Path $repo 'server/distribution/DZM.jar'
-$serverAdminSource = Join-Path $repo 'server/source/src/com/oldmountain/dzm/admin'
-$sources = @((Get-ChildItem -LiteralPath $serverAdminSource -Filter '*.java' -File).FullName)
-$sources += Join-Path $repo 'server/source/src/com/oldmountain/dzm/net/packet/PacketHandler.java'
-$sources += Join-Path $repo 'server/source/src/com/oldmountain/dzm/packethandler/DisposeSysMsgInfoHandler.java'
-$sources += Join-Path $repo 'server/source/src/com/oldmountain/dzm/packethandler/AdventureContinueLoginHandler.java'
-$sources += Join-Path $repo 'server/source/src/com/oldmountain/dzm/packethandler/UseToolHandler.java'
-$sources += Join-Path $repo 'server/source/src/com/oldmountain/dzm/services/RewardServices.java'
+$inputTool = Join-Path $admin 'source_inputs.py'
+$sources = @(& $python $inputTool --sources)
+if ($LASTEXITCODE -ne 0) { throw 'Server overlay source enumeration failed.' }
 # Build only the explicitly listed overlay classes against the original self-contained JAR.
 $emptySources = Join-Path $buildDir 'empty-sourcepath'
 New-Item -ItemType Directory -Path $emptySources -Force | Out-Null
 & (Join-Path $JavaHome 'bin/javac.exe') '-J-Duser.language=en' '-J-Duser.country=US' -encoding UTF-8 -source 8 -target 8 -cp $originalJar -sourcepath $emptySources -d $classes @sources
 if ($LASTEXITCODE -ne 0) { throw 'Administration server compilation failed.' }
-$jarFile = Join-Path $admin 'NRBAdminServer.jar'
+$jarFile = Join-Path $artifactDir 'NRBAdminServer.jar'
 & (Join-Path $JavaHome 'bin/jar.exe') cf ($jarFile + '.writing') -C $classes .
 if ($LASTEXITCODE -ne 0) { throw 'Administration server packaging failed.' }
 Move-Item -LiteralPath ($jarFile + '.writing') -Destination $jarFile -Force
-$compiler = Join-Path $env:WINDIR 'Microsoft.NET/Framework/v4.0.30319/csc.exe'
-if (-not (Test-Path -LiteralPath $compiler)) { throw 'Windows .NET Framework C# compiler is unavailable.' }
 $exe = Join-Path $repo 'NRB游戏管理.exe'
 $exeWriting = Join-Path $buildDir 'NRBAdmin.exe'
-& $compiler /nologo /utf8output /target:winexe /platform:anycpu /optimize+ /codepage:65001 /langversion:5 `
-    "/out:$exeWriting" "/win32manifest:$(Join-Path $admin 'app.manifest')" `
-    /reference:System.dll /reference:System.Core.dll /reference:System.Drawing.dll `
-    /reference:System.Windows.Forms.dll /reference:System.Web.Extensions.dll (Join-Path $admin 'AdminTool.cs')
-if ($LASTEXITCODE -ne 0) { throw 'Windows administration EXE compilation failed.' }
-Copy-Item -LiteralPath $exeWriting -Destination $exe -Force
+if (-not $ServerOnly) {
+    $compiler = Join-Path $env:WINDIR 'Microsoft.NET/Framework/v4.0.30319/csc.exe'
+    if (-not (Test-Path -LiteralPath $compiler)) { throw 'Windows .NET Framework C# compiler is unavailable.' }
+    & $compiler /nologo /utf8output /target:winexe /platform:anycpu /optimize+ /codepage:65001 /langversion:5 `
+        "/out:$exeWriting" "/win32manifest:$(Join-Path $admin 'app.manifest')" `
+        /reference:System.dll /reference:System.Core.dll /reference:System.Drawing.dll `
+        /reference:System.Windows.Forms.dll /reference:System.Web.Extensions.dll (Join-Path $admin 'AdminTool.cs')
+    if ($LASTEXITCODE -ne 0) { throw 'Windows administration EXE compilation failed.' }
+    Copy-Item -LiteralPath $exeWriting -Destination $exe -Force
+}
+$sourceFingerprint = (& $python $inputTool).Trim()
+if ($LASTEXITCODE -ne 0) { throw 'Server overlay fingerprint generation failed.' }
 $metadata = [ordered]@{
     protocol = 1
     baseJarSha256 = (Get-FileHash -LiteralPath $originalJar -Algorithm SHA256).Hash.ToLowerInvariant()
     serverJarSha256 = (Get-FileHash -LiteralPath $jarFile -Algorithm SHA256).Hash.ToLowerInvariant()
     exeSha256 = (Get-FileHash -LiteralPath $exe -Algorithm SHA256).Hash.ToLowerInvariant()
+    sourceSha256 = $sourceFingerprint
 }
 $json = ($metadata | ConvertTo-Json) + "`n"
-[IO.File]::WriteAllText((Join-Path $admin 'artifacts.json'), $json, (New-Object Text.UTF8Encoding($false)))
-Write-Host "Generated EXE: $exe"
+[IO.File]::WriteAllText((Join-Path $artifactDir 'artifacts.json'), $json, (New-Object Text.UTF8Encoding($false)))
+if (-not $ServerOnly) { Write-Host "Generated EXE: $exe" }
 Write-Host "Generated server companion: $jarFile"
 Write-Host 'Artifact generation only. No server startup, login, grant or gameplay test was executed.'

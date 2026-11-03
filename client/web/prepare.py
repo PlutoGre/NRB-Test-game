@@ -45,7 +45,7 @@ def prepare():
             shutil.copy2(path, target)
     # Relative URLs are resolved against the current browser origin at runtime.
     (assets / "version_web.cfg").write_text(json.dumps({
-        "version": 1, "localVerson": "1.78.6",
+        "version": 1, "localVerson": "1.78.7",
         "sever": "/gameserver/dzm/1.8/servers_list.php",
         "severBackup": "/gameserver/dzm/1.8/servers_list.php",
         "inStoreUpdate": "/", "branch": "MAIN",

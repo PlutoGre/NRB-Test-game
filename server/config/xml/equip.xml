@@ -92,5 +92,34 @@
 		<Equip id="89" quality="4" type="3" quantity="63" growth="3.9"/>
 		<Equip id="90" quality="4" type="3" quantity="59" growth="3.9"/>
 		<Equip id="91" quality="4" type="3" quantity="58" growth="3.9"/>
+		<Equip id="92" type="1" quality="2" quantity="220" growth="16"/>
+		<Equip id="93" type="1" quality="2" quantity="180" growth="14"/>
+		<Equip id="94" type="2" quality="2" quantity="120" growth="9"/>
+		<Equip id="95" type="2" quality="2" quantity="120" growth="9"/>
+		<Equip id="96" type="3" quality="2" quantity="340" growth="27"/>
+		<Equip id="98" type="2" quality="2" quantity="120" growth="9"/>
+		<Equip id="101" type="2" quality="2" quantity="110" growth="8"/>
+		<Equip id="102" type="3" quality="2" quantity="340" growth="27"/>
+		<Equip id="103" type="1" quality="2" quantity="180" growth="14"/>
+		<Equip id="106" type="1" quality="2" quantity="150" growth="13"/>
+		<Equip id="107" type="1" quality="2" quantity="220" growth="16"/>
+		<Equip id="108" type="1" quality="2" quantity="180" growth="14"/>
+		<Equip id="109" type="1" quality="2" quantity="180" growth="14"/>
+		<Equip id="110" type="1" quality="2" quantity="180" growth="14"/>
+		<Equip id="112" type="2" quality="2" quantity="120" growth="9"/>
+		<Equip id="113" type="2" quality="2" quantity="110" growth="8"/>
+		<Equip id="114" type="2" quality="2" quantity="110" growth="8"/>
+		<Equip id="115" type="2" quality="2" quantity="110" growth="8"/>
+		<Equip id="116" type="3" quality="2" quantity="340" growth="27"/>
+		<Equip id="117" type="1" quality="2" quantity="150" growth="13"/>
+		<Equip id="118" type="3" quality="2" quantity="340" growth="27"/>
+		<Equip id="119" type="2" quality="2" quantity="110" growth="8"/>
+		<Equip id="120" type="1" quality="2" quantity="180" growth="14"/>
+		<Equip id="121" type="1" quality="2" quantity="220" growth="16"/>
+		<Equip id="122" type="1" quality="2" quantity="220" growth="16"/>
+		<Equip id="123" type="1" quality="2" quantity="180" growth="14"/>
+		<Equip id="124" type="3" quality="2" quantity="340" growth="27"/>
+		<Equip id="125" type="1" quality="2" quantity="220" growth="16"/>
+		<Equip id="126" type="3" quality="1" quantity="350" growth="30"/>
 	</Equips>
 </root>
