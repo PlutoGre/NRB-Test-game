@@ -188,7 +188,8 @@ def main():
     except OSError:
         revision = "unknown"  # A downloaded source ZIP may not have Git installed.
     manifest = {"platform": "web", "buildComplete": True, "accountAuth": 1, "sourceRevision": revision, "emscripten": VERSION,
-                "resourceVersion": "1.78.6", "builtAt": int(time.time()), "browserVerified": False,
+                "resourceVersion": json.loads((assets / "version_web.cfg").read_text(encoding="utf-8"))["localVerson"],
+                "builtAt": int(time.time()), "browserVerified": False,
                 "files": {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in package.iterdir() if p.is_file() and p.name != "web-client.json"}}
     output = args.output if args.output.is_absolute() else REPO / args.output
     if output.resolve() in {REPO.resolve(), ROOT.resolve(), GENERATED.resolve()}:

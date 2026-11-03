@@ -14,11 +14,66 @@ USING_NS_CC_EXT;
 
 namespace {
 const int RequestOpcode = 48001, ResponseOpcode = 48002;
+// 菜单可能在触摸回调内创建；注册时指定优先级，不能修改尚在待注册队列中的处理器。
+class ActivityMenu : public CCMenu {
+    bool mScrollable;
+public:
+    explicit ActivityMenu(bool scrollable) : mScrollable(scrollable) { }
+    static ActivityMenu* create(bool scrollable) {
+        ActivityMenu* result = new ActivityMenu(scrollable);
+        if (!result->init()) { delete result; return NULL; }
+        result->setScrollViewChild(scrollable); result->autorelease(); return result;
+    }
+    virtual void registerWithTouchDispatcher() {
+        CCDirector::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(this, kCCMenuHandlerPriority - 3, !mScrollable);
+    }
+};
+class ActivityScrollView : public CCScrollView {
+public:
+    static ActivityScrollView* create(CCSize size) {
+        ActivityScrollView* result = new ActivityScrollView();
+        if (!result->initWithViewSize(size)) { delete result; return NULL; }
+        result->autorelease(); return result;
+    }
+    virtual void registerWithTouchDispatcher() {
+        CCDirector::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(this, kCCMenuHandlerPriority - 2, true);
+    }
+};
 std::string number(int value) { return StringConverter::toString(value); }
 std::string prizeText(const Json::Value& prize) { return prize["name"].asString() + " ×" + number(prize["count"].asInt()); }
 CCLabelTTF* label(const std::string& value, float size, float width = 0) {
     return width > 0 ? CCLabelTTF::create(value.c_str(), "Arial", size, CCSizeMake(width, 0), kCCTextAlignmentLeft)
                      : CCLabelTTF::create(value.c_str(), "Arial", size);
+}
+bool needsSystemFont(const std::string& value) {
+    for (unsigned int i = 0; i < value.size(); i++) if (static_cast<unsigned char>(value[i]) >= 128) return true;
+    return false;
+}
+void bitmapText(CCLabelBMFont* target, const std::string& value) {
+    CCLabelTTF* replacement = dynamic_cast<CCLabelTTF*>(target->getUserObject());
+    if (!replacement) {
+        // 新活动文字不一定在旧位图字库中；沿用节点布局，使用三端系统字体补齐。
+        CCBMFontConfiguration* font = FNTConfigLoadFile(target->getFntFile());
+        const float height = font ? font->m_nCommonHeight / CC_CONTENT_SCALE_FACTOR() : target->getContentSize().height;
+        replacement = label(value, std::max(12.0f, height * 0.8f));
+        replacement->setVisible(target->isVisible());
+        replacement->setAnchorPoint(target->getAnchorPoint()); replacement->setPosition(target->getPosition());
+        replacement->setScaleX(target->getScaleX()); replacement->setScaleY(target->getScaleY());
+        replacement->setRotation(target->getRotation()); replacement->setColor(target->getColor());
+        replacement->setOpacity(target->getOpacity());
+        target->getParent()->addChild(replacement, target->getZOrder() + 1);
+        target->setUserObject(replacement);
+    } else replacement->setString(value.c_str());
+    target->setVisible(false);
+}
+void localizeLabels(CCNode* node) {
+    if (CCLabelBMFont* target = dynamic_cast<CCLabelBMFont*>(node)) {
+        if (!target->getUserObject() && needsSystemFont(target->getString())) bitmapText(target, target->getString());
+        return;
+    }
+    CCArray* children = node->getChildren();
+    const unsigned int count = children ? children->count() : 0;
+    for (unsigned int i = 0; i < count; i++) localizeLabels(static_cast<CCNode*>(children->objectAtIndex(i)));
 }
 }
 
@@ -55,6 +110,7 @@ void PermanentActivityPage::init() {
         delete[] data;
     }
     AdventureBase::init();
+    localizeLabels(mContentContainer);
     // 新旧 CCB 的设计尺寸不同，保留内部坐标和动画，将整页适配到当前活动视口。
     BasePage* adventure = CCBManager::Get()->getPage("AdventurePage");
     CCScrollView* view = adventure ? dynamic_cast<CCScrollView*>(adventure->getVariable("mContent")) : NULL;
@@ -70,7 +126,10 @@ void PermanentActivityPage::init() {
 
 void PermanentActivityPage::text(const std::string& variable, const std::string& value) {
     CCObject* object = mContentContainer->getVariable(variable);
-    if (CCLabelBMFont* target = dynamic_cast<CCLabelBMFont*>(object)) target->setString(value.c_str());
+    if (CCLabelBMFont* target = dynamic_cast<CCLabelBMFont*>(object)) {
+        if (target->getUserObject() || needsSystemFont(value)) bitmapText(target, value);
+        else target->setString(value.c_str());
+    }
     else if (CCLabelTTF* target = dynamic_cast<CCLabelTTF*>(object)) target->setString(value.c_str());
 }
 
@@ -82,7 +141,7 @@ void PermanentActivityPage::refreshContent() {
     const bool ready = mState.isObject();
     const int free = ready ? mState["freeRemaining"].asInt() : 0;
     if (!mWheel) {
-        text("mRemainingTimeText", "永久开放"); text("mRemainingTime", "永久开放");
+        text("mRemainingTimeText", "永久开放"); text("mRemainingTime", "活动：");
         text("mHaveDiamond", "钻石"); text("mHaveIntegral", "积分");
         text("mHaveDiamondNum", ready ? number(mState["goldcoins"].asInt()) : "--");
         text("mHaveIntegralNum", ready ? number(mState["points"].asInt()) : "--");
@@ -93,7 +152,7 @@ void PermanentActivityPage::refreshContent() {
         text("mGoodsContent", "奖励通过传书领取");
         text("mCurrentCondition", ready ? "今日剩余免费 " + number(free) + " 次" : "正在读取活动…");
     } else {
-        text("mCountdown", "永久开放"); text("mTimeCountdown", "永久开放");
+        text("mCountdown", "永久开放"); text("mTimeCountdown", "活动：");
         int collected = 0;
         if (ready) for (int i = 0; i < 8; i++) if ((mState["mask"].asInt() & (1 << i)) != 0) ++collected;
         text("mPoints", ready ? number(mState["points"].asInt()) : "--");
@@ -102,7 +161,7 @@ void PermanentActivityPage::refreshContent() {
         text("mFreeNum", ready ? number(free > 0 ? free : mState["singleCost"].asInt()) : "--");
         text("mResetCostNum", ready ? number(mState["resetCost"].asInt()) : "--");
         text("mResetCostTex", "重置消耗"); text("mUlTimesReset", "重置转盘");
-        text("mResidueDegree", "集齐本轮后可免费重置"); text("mProbability", "查看奖池概率");
+        text("mResidueDegree", "集齐本轮后可免费重置"); text("mProbability", "点击奖励查看概率");
         text("mDrawSuccessTex", "奖励已发送至传书"); text("mDrawFailTex", "重复位置获得保底奖励");
         visible("mDrawGoldBanner", free <= 0); visible("mResetGoldBanner", true);
         visible("mSuccessNode", false); visible("mFailNode", false); visible("mAni", false);
@@ -111,9 +170,13 @@ void PermanentActivityPage::refreshContent() {
             const Json::Value& prize = mState["pool"][i];
             text("mRewardName" + suffix, prizeText(prize));
             visible("mPicBG" + suffix, (mState["mask"].asInt() & 1 << i) != 0);
-            visible("mStar" + suffix, (mState["mask"].asInt() & 1 << i) != 0);
+            if (CCSprite* star = dynamic_cast<CCSprite*>(mContentContainer->getVariable("mStar" + suffix))) {
+                star->setVisible(true); star->setOpacity((mState["mask"].asInt() & (1 << i)) != 0 ? 255 : 90);
+            }
             if (CCSprite* icon = dynamic_cast<CCSprite*>(mContentContainer->getVariable("mRewardPic" + suffix))) {
-                const CCSize previous = icon->boundingBox().size;
+                CCMenuItem* rewardButton = mContentContainer->getMenuItemByAction("onRewardBtn" + suffix);
+                const CCSize frameSize = rewardButton ? rewardButton->boundingBox().size : CCSizeMake(70, 70);
+                const CCSize previous = CCSizeMake(frameSize.width * 0.68f, frameSize.height * 0.68f);
                 std::string file = prize["icon"].asString();
                 CCSpriteFrame* frame = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName(file.c_str());
                 CCTexture2D* texture = frame ? NULL : CCTextureCache::sharedTextureCache()->addImage(file.c_str());
@@ -318,19 +381,22 @@ void PermanentActivityPage::showHelp() {
 
 void PermanentActivityPage::modal(const std::string& title, const std::vector<std::string>& rows, int buttonType) {
     closeModal();
-    const CCSize size = mContentContainer->getContentSize();
+    // 活动 CCB 留有旧版导航空白区，弹窗直接使用屏幕坐标，避免按钮落在裁剪区外。
+    const CCSize size = CCDirector::sharedDirector()->getWinSize();
     const float unit = size.width / 320.0f;
     mModal = CCLayerColor::create(ccc4(12, 22, 38, 248), size.width, size.height);
-    mContentContainer->addChild(mModal, 1000);
+    mModal->setTouchMode(kCCTouchesOneByOne); mModal->setTouchPriority(kCCMenuHandlerPriority - 1);
+    mModal->setTouchEnabled(true);
+    CCDirector::sharedDirector()->getRunningScene()->addChild(mModal, 100000);
     CCLabelTTF* heading = label(title, 14 * unit, size.width - 28 * unit);
     heading->setPosition(ccp(size.width / 2, size.height - 22 * unit)); mModal->addChild(heading);
     const float rowHeight = (buttonType == BUY || buttonType == CLAIM ? 48 : 37) * unit;
     const float viewHeight = std::max(30.0f * unit, size.height - 100 * unit);
-    CCScrollView* scroll = CCScrollView::create(CCSizeMake(size.width - 20 * unit, viewHeight));
+    CCScrollView* scroll = ActivityScrollView::create(CCSizeMake(size.width - 20 * unit, viewHeight));
     scroll->setDirection(kCCScrollViewDirectionVertical); scroll->setPosition(ccp(10 * unit, 62 * unit));
     CCNode* content = CCNode::create(); const float contentHeight = std::max(viewHeight, rowHeight * rows.size());
     content->setContentSize(CCSizeMake(size.width - 20 * unit, contentHeight)); scroll->setContainer(content);
-    CCMenu* menu = CCMenu::create(); menu->setPosition(CCPointZero); menu->setScrollViewChild(true); content->addChild(menu);
+    CCMenu* menu = ActivityMenu::create(true); menu->setPosition(CCPointZero); content->addChild(menu);
     for (unsigned int i = 0; i < rows.size(); i++) {
         const bool operation = buttonType == BUY || buttonType == CLAIM;
         CCLabelTTF* caption = label(rows[i], 11 * unit, size.width - (operation ? 102 : 36) * unit);
@@ -347,7 +413,7 @@ void PermanentActivityPage::modal(const std::string& title, const std::vector<st
         }
     }
     scroll->setContentOffset(ccp(0, viewHeight - contentHeight)); mModal->addChild(scroll);
-    CCMenu* footer = CCMenu::create(); footer->setPosition(CCPointZero); mModal->addChild(footer);
+    CCMenu* footer = ActivityMenu::create(false); footer->setPosition(CCPointZero); mModal->addChild(footer);
     CCMenuItemLabel* close = CCMenuItemLabel::create(label("关闭", 14 * unit), this, menu_selector(PermanentActivityPage::onModalButton));
     close->setTag(CLOSE); close->setPosition(ccp(size.width * 0.25f, 30 * unit)); footer->addChild(close);
     if (buttonType == MAIL || buttonType == RETRY) {
@@ -371,7 +437,7 @@ void PermanentActivityPage::onModalButton(CCObject* sender) {
     else {
         closeModal(); controls();
         if (tag == CLOSE && (!mPending.isNull() || !mState.isObject())) { sendInfo(); return; }
-        if (tag == MAIL) { MsgMainFramePushPage message; message.pageName = "SysMsgPage"; MessageManager::Get()->sendMessage(&message); }
+        if (tag == MAIL) { MsgMainFrameChangePage message; message.pageName = "SysMsgPage"; MessageManager::Get()->sendMessage(&message); }
     }
 }
 

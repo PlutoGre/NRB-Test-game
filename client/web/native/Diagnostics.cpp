@@ -1,10 +1,24 @@
 #include "cocos2d.h"
 #include "GUI/CCControlExtension/CCControlButton.h"
 #include "json/json.h"
+#include "CCBContainer.h"
 #include <emscripten.h>
+#include <sstream>
 #include <typeinfo>
 
 namespace {
+std::string action(cocos2d::CCMenuItem* item) {
+    for (cocos2d::CCNode* parent = item->getParent(); parent; parent = parent->getParent()) {
+        CCBContainer* container = dynamic_cast<CCBContainer*>(parent);
+        if (!container) continue;
+        std::istringstream description(container->dumpInfo()); std::string line; bool menus = false;
+        while (std::getline(description, line)) {
+            if (line.find("menuitems name info") != std::string::npos) { menus = true; continue; }
+            if (menus && container->getMenuItemByAction(line) == item) return line;
+        }
+    }
+    return "";
+}
 // Read-only scene inspection supports real canvas clicks during browser QA.
 // It never dispatches game packets or invokes a button's action directly.
 Json::Value snapshot(cocos2d::CCNode* node, int& remaining, int depth) {
@@ -14,7 +28,9 @@ Json::Value snapshot(cocos2d::CCNode* node, int& remaining, int depth) {
     value["tag"] = node->getTag();
     if (cocos2d::CCLabelBMFont* text = dynamic_cast<cocos2d::CCLabelBMFont*>(node)) value["text"] = text->getString();
     if (cocos2d::CCLabelTTF* text = dynamic_cast<cocos2d::CCLabelTTF*>(node)) value["text"] = text->getString();
-    if (cocos2d::CCMenuItem* button = dynamic_cast<cocos2d::CCMenuItem*>(node)) value["enabled"] = button->isEnabled();
+    if (cocos2d::CCMenuItem* button = dynamic_cast<cocos2d::CCMenuItem*>(node)) {
+        value["enabled"] = button->isEnabled(); value["action"] = action(button);
+    }
     if (cocos2d::extension::CCControlButton* button = dynamic_cast<cocos2d::extension::CCControlButton*>(node)) value["enabled"] = button->isEnabled();
     cocos2d::CCSize size = node->getContentSize();
     cocos2d::CCPoint corners[] = {cocos2d::CCPoint(0, 0), cocos2d::CCPoint(size.width, 0),
@@ -43,6 +59,8 @@ extern "C" EMSCRIPTEN_KEEPALIVE const char* nrb_scene_snapshot() {
     cocos2d::CCSize size = director->getWinSize();
     int budget = 8000;
     Json::Value root(Json::objectValue);
+    root["frames"] = static_cast<unsigned int>(director->getTotalFrames());
+    root["paused"] = director->isPaused();
     root["width"] = size.width; root["height"] = size.height;
     root["scene"] = snapshot(director->getRunningScene(), budget, 0);
     result = Json::FastWriter().write(root);

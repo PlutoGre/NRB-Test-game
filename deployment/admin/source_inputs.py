@@ -12,7 +12,7 @@ def sources():
         "net/packet/PacketHandler.java", "packethandler/LoginHandler.java", "packethandler/DisposeSysMsgInfoHandler.java",
         "packethandler/AdventureContinueLoginHandler.java", "packethandler/UseToolHandler.java",
         "services/RewardServices.java", "util/BattleUtil.java", "util/FateRequirement.java",
-        "packethandler/AdventureInfoHandler.java", "persist/DataLander.java")]
+        "packethandler/AdventureInfoHandler.java", "persist/DataLander.java", "net/coderc/Encoder.java")]
 
 
 def fingerprint():

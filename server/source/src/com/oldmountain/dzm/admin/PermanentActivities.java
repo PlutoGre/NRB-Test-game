@@ -163,7 +163,10 @@ public final class PermanentActivities {
             reply = failure(request, "请求结果尚未确认，请重试查询；已发送的操作会按原编号核对");
             reply.put("uncertain", true);
         }
-        packet.session.write(new Packet(RESPONSE, reply.toString().getBytes(StandardCharsets.UTF_8)));
+        Packet response = new Packet(RESPONSE, reply.toString().getBytes(StandardCharsets.UTF_8));
+        // MINA 可能分配更大的池化缓冲区；限定实际 JSON 长度，不能把尾部补零一并发送。
+        response.data.flip();
+        packet.session.write(response);
     }
 
     private static JSONObject dispatch(Player player, JSONObject request) {

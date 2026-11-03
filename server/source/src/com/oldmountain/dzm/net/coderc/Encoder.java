@@ -8,7 +8,7 @@ import org.apache.mina.filter.codec.ProtocolEncoderOutput;
 
 import com.oldmountain.dzm.net.packet.Packet;
 /**
- * 下发包
+ * @brief 下发游戏网络包，按有效数据长度封装并加密。
  * 客户端解析需要注意：
  * 	1、 short(16) = 包头识别id  CodecFactory.PACKET_HEAD
  * 	2、 int(32)opcode
@@ -19,6 +19,13 @@ import com.oldmountain.dzm.net.packet.Packet;
  */
 public final class Encoder extends ProtocolEncoderAdapter {
 	
+	/**
+	 * 按数据有效长度编码，池化缓冲区容量可能大于实际消息。
+	 * @param session 当前游戏连接
+	 * @param message 待发送的游戏包
+	 * @param out 网络编码输出
+	 * @throws Exception 编码或发送失败
+	 */
 	@Override
 	public void encode(IoSession session, Object message, ProtocolEncoderOutput out) throws Exception {
 		if (message instanceof Packet) {
@@ -34,7 +41,7 @@ public final class Encoder extends ProtocolEncoderAdapter {
 				byte info = (byte) (datasrc.get() ^ 0xA5);
 				data.put(info);
 			}
-			data.rewind();
+			data.flip();
 			
 			int len = 10 + data.remaining();
 			ByteBuffer buf = ByteBuffer.allocate(len);

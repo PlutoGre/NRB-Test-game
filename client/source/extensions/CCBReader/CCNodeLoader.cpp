@@ -948,6 +948,12 @@ void CCNodeLoader::onHandlePropTypePosition(CCNode * pNode, CCNode * pParent, co
 void CCNodeLoader::onHandlePropTypePoint(CCNode * pNode, CCNode * pParent, const char* pPropertyName, CCPoint pPoint, CCBReader * pCCBReader) {
     if(strcmp(pPropertyName, PROPERTY_ANCHORPOINT) == 0) {
         pNode->setAnchorPoint(pPoint);
+    } else if ((strcmp(pPropertyName, "shadowOffset") == 0 || strcmp(pPropertyName, "shadowOffset2") == 0
+                   || strcmp(pPropertyName, "shadowOffset3") == 0 || strcmp(pPropertyName, "shadowOffset4") == 0)
+               && (dynamic_cast<CCLabelTTF*>(pNode) || dynamic_cast<CCLabelBMFont*>(pNode))) {
+        // Optional newer CCB text styling; keep the legacy font rendering.
+        // Other unknown properties still fail explicitly.
+        return;
     } else {
         ASSERT_FAIL_UNEXPECTED_PROPERTY(pPropertyName);
     }
