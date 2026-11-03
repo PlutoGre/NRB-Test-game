@@ -22,6 +22,7 @@ import com.oldmountain.dzm.entity.Disciple;
 import com.oldmountain.dzm.entity.Equip;
 import com.oldmountain.dzm.entity.Handbook;
 import com.oldmountain.dzm.entity.Mapping;
+import com.oldmountain.dzm.admin.AccountService;
 import com.oldmountain.dzm.entity.Player;
 import com.oldmountain.dzm.entity.PlayerFrom;
 import com.oldmountain.dzm.entity.RelationShip;
@@ -44,7 +45,7 @@ import com.oldmountain.dzm.util.HandbookUtil;
 import com.oldmountain.dzm.util.Util;
 import com.oldmountain.dzm.util.XMLTemplateService;
 /**
- * 登陆包
+ * @brief 验证服务端账号凭证后加载或创建角色，建立在线状态并下发登录结果。
  * 1， 解析数据包
  * 2， 查找数据库
  * 3， 设置在线状态
@@ -54,22 +55,30 @@ import com.oldmountain.dzm.util.XMLTemplateService;
  * @author miaoshengli
  */
 public class LoginHandler {
+    /** 将登录请求交给原游戏工作线程；认证失败不得加载玩家。 */
 	public static void login(Packet packet, IoSession session) {
 		LoginRunable loginRunable = new LoginRunable(packet, session);
 		DZM.getThreadPool().execute(loginRunable);
 	}
 }
 
+/** @brief 处理经过账号认证的角色登录，保持原有存档和新手流程。 */
 class LoginRunable implements Runnable{
 	private static final Logger log = LoggerFactory.getLogger(LoginHandler.class);
 	private static final org.slf4j.Logger logoutinfo_log = LoggerFactory.getLogger("PlayerLogoutInfo");
 	private Packet packet;
 	private IoSession session;
+    /** 保存当前网络请求和连接，交由工作线程认证后处理。 */
 	public LoginRunable(Packet packet,IoSession session){
 		this.packet = packet;
 		this.session = session;
 	}
+	/** 串行处理同账号的首次建角与重新连接，避免重复存档。 */
 	public void run(){
+        synchronized (AccountService.GAME_LOGIN_LOCK) { runAuthenticated(); }
+    }
+
+    private void runAuthenticated(){
 		OPLogin login = null;
 		OPLoginRet.Builder builder = OPLoginRet.newBuilder();
 		builder.setResourceVersion(DZM.resource_version);
@@ -81,7 +90,15 @@ class LoginRunable implements Runnable{
 		}
 		
 		String puid = login.getPuid();
-		String password = login.getPwd();
+        if (!AccountService.authenticate(puid, login.getPwd())) {
+            builder.setStatus(6);
+            session.write(new Packet(OP.code.OPCODE_PLAYER_LOGINRET_S_VALUE, builder.build().toByteArray()));
+            log.warn("runAuthenticated: game login rejected; account authentication required");
+            return;
+        }
+        // 玩家旧密码列不再承担认证，不能把可复用的会话凭证写入角色存档。
+        String password = "managed-account";
+        session.setAttribute("nrb.account.uid", puid);
         String platName = login.getPlatform().toLowerCase();
         String[] platArr = platName.split("_");
         int arrLen = platArr.length;
@@ -112,7 +129,7 @@ class LoginRunable implements Runnable{
 		
 		int version = login.getVersion();//version default = 1;
 		
-		log.info("login handler received: {}, {}, {}", new Object[]{puid, password, version});
+        log.info("runAuthenticated: managed account accepted, version={}", version);
 		if(version < DZM.CURRENT_VERSION) {
 			//notify need update;
 		}

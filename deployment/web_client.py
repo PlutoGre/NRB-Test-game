@@ -1,7 +1,7 @@
 """Serve the WebAssembly client and a same-origin, cookie-gated game bridge.
 
-This is a personal-testing gateway, not an account/password authentication system.
-The existing invitation-protected iOS gateway remains separate.
+Game accounts are verified by the shared Java account service. The signed cookie
+only gates browser transport; every game login also requires its account token.
 """
 import argparse
 import hashlib
@@ -23,12 +23,15 @@ from urllib.parse import unquote, urlsplit
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from websocket_gateway import Gateway, Handler, PREFIX, PROTOCOL, check_runtime
 from web_assets import WebAssets, accepts_gzip, unchanged
+from account_proxy import ACCOUNT_ROUTES, account_request
+from account_proxy import OPENER
+from urllib.request import Request
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 from project_paths import DEFAULT_INSTALL_DIR, project_path
 
 COOKIE = "nrb_web_identity"
-MAX_AGE = 365 * 86400
-FILES = {"index.html", "web.js", "style.css", "game.js", "game.wasm", "game.data", "web-client.json"}
+MAX_AGE = 30 * 86400
+FILES = {"index.html", "web.js", "accounts.js", "style.css", "game.js", "game.wasm", "game.data", "web-client.json"}
 
 
 def public_origin(value):
@@ -56,7 +59,7 @@ class WebGateway(Gateway):
             self.origins.update({"http://localhost:" + str(port), "http://127.0.0.1:" + str(port)})
         self.hosts = {urlsplit(item).netloc.lower() for item in self.origins}
         manifest = json.loads((build / "web-client.json").read_text(encoding="utf-8"))
-        if manifest.get("platform") != "web" or manifest.get("buildComplete") is not True:
+        if manifest.get("platform") != "web" or manifest.get("buildComplete") is not True or manifest.get("accountAuth") != 1:
             raise ValueError("Web build is incomplete; run deployment/build-web.cmd first")
         self.manifest = manifest
         for name in FILES:
@@ -99,7 +102,7 @@ class WebHandler(Handler):
             cookies.load(self.headers.get("Cookie", ""))
             value = cookies[COOKIE].value
             uid, issued, signature = value.split(".")
-            if not re.fullmatch(r"web_[0-9a-f]{32}", uid):
+            if not re.fullmatch(r"acct_[0-9a-f]{32}", uid):
                 return None
             if not 0 <= time.time() - int(issued) <= MAX_AGE:
                 return None
@@ -114,6 +117,9 @@ class WebHandler(Handler):
         for name in ("webPort", "gamePort"):
             with socket.create_connection(("127.0.0.1", state[name]), timeout=2):
                 pass
+        with OPENER.open(Request('http://127.0.0.1:' + str(state['adminPort']) + '/admin/v1/health'), timeout=5) as response:
+            if json.loads(response.read(8192)).get('accountAuth') != 1:
+                raise ValueError('Restart the updated game server to enable managed accounts')
         return state
 
     def empty_request_body(self):
@@ -140,18 +146,25 @@ class WebHandler(Handler):
         self.close_connection = True
         if not self.valid_host() or self.headers.get("Origin") not in self.server.origins:
             return self.reply(403, {"error": "Origin rejected"})
-        if self.path != "/web/session" or not self.empty_request_body():
-            return self.reply(400, {"error": "Empty session request required"})
+        if self.path not in ACCOUNT_ROUTES:
+            return self.reply(400, {"error": "请更新网页客户端后使用账号登录"})
         try:
             self.ready()
-            uid = self.identity() or "web_" + secrets.token_hex(16)
-            issued = str(int(time.time()))
-            signed = uid + "." + issued
-            value = signed + "." + hmac.new(self.server.key, signed.encode(), hashlib.sha256).hexdigest()
-            payload = json.dumps({"uid": uid, "protocol": PROTOCOL}).encode()
-            self.send_response(200)
-            self.send_header("Set-Cookie", COOKIE + "=" + value + "; Path=/; HttpOnly; SameSite=Strict; Max-Age=" + str(MAX_AGE)
-                             + ("; Secure" if self.request_origin().startswith("https:") else ""))
+            status, result = account_request(self, self.server.root)
+            cookie = None
+            if status == 200 and self.path != "/account/v1/logout":
+                uid = result.get("uid", "")
+                if not re.fullmatch(r"acct_[0-9a-f]{32}", uid):
+                    raise ValueError("Invalid account response")
+                signed = uid + "." + str(int(time.time()))
+                value = signed + "." + hmac.new(self.server.key, signed.encode(), hashlib.sha256).hexdigest()
+                cookie = COOKIE + "=" + value + "; Path=/; HttpOnly; SameSite=Strict; Max-Age=" + str(MAX_AGE)
+            elif self.path == "/account/v1/logout" or status == 401:
+                cookie = COOKIE + "=; Path=/; HttpOnly; SameSite=Strict; Max-Age=0"
+            payload = json.dumps(result).encode()
+            self.send_response(status)
+            if cookie:
+                self.send_header("Set-Cookie", cookie + ("; Secure" if self.request_origin().startswith("https:") else ""))
             self.send_header("Content-Type", "application/json; charset=utf-8")
             self.send_header("Content-Length", str(len(payload)))
             self.send_header("Cache-Control", "no-store")
@@ -170,6 +183,7 @@ class WebHandler(Handler):
         if path == "/web/config":
             self.ready()
             return self.reply(200, {"serverName": "男人帮1区", "protocol": PROTOCOL,
+                                    "accountAuth": 1,
                                     "build": self.server.manifest.get("sourceRevision", "unknown"),
                                     "instanceId": hashlib.sha256(self.server.key).hexdigest()[:24],
                                     "downloads": self.server.assets.summary})

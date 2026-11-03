@@ -44,16 +44,17 @@ void LoginPacket::_sendPacket()
 	if(!mEnable)
 		return;
 
+    if (!libPlatformManager::getPlatform()->getLogined() || libPlatformManager::getPlatform()->sessionID().empty()) return;
 	ThreadSocket::Get()->reconnect();
 
 	OPLogin loginPack;
-	loginPack.set_pwd("pswd");
+	loginPack.set_pwd(libPlatformManager::getPlatform()->sessionID());
 	loginPack.set_version(1);
 	std::string uin = libPlatformManager::getPlatform()->loginUin();
 	if(!uin.empty())
 		loginPack.set_puid(uin);
 	else
-		loginPack.set_puid("111");
+		return; // Never substitute a shared guest identity for a missing account.
 
 	std::string platformInfo = libPlatformManager::getPlatform()->getPlatformInfo();
 	std::string deviceID = libOS::getInstance()->getDeviceID();

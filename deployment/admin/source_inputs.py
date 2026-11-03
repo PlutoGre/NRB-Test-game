@@ -9,7 +9,7 @@ JAVA = REPO / "server/source/src/com/oldmountain/dzm"
 
 def sources():
     return sorted((JAVA / "admin").glob("*.java")) + [JAVA / name for name in (
-        "net/packet/PacketHandler.java", "packethandler/DisposeSysMsgInfoHandler.java",
+        "net/packet/PacketHandler.java", "packethandler/LoginHandler.java", "packethandler/DisposeSysMsgInfoHandler.java",
         "packethandler/AdventureContinueLoginHandler.java", "packethandler/UseToolHandler.java",
         "services/RewardServices.java", "util/BattleUtil.java", "util/FateRequirement.java")]
 

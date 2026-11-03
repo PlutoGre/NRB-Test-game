@@ -12,6 +12,8 @@
 
 `server/database/dzm.sql` 是新部署的初始库快照，修改它不会改变已经运行的数据库。`runtime/server/dbdata` 才是本机 MariaDB 数据目录，不应直接编辑其中的数据文件。`dzm_stat` 用于统计记录，不是玩家资产主库。
 
+账号体系更新后，注册账号及登录会话分别保存在 `nrb_accounts`、`nrb_account_sessions`，通过稳定 UID 连接原 `mapping` 和 `player`。密码不再由旧玩家密码列校验；认证、游客清理和三端迁移见 [09 游戏账号体系](09_GAME_ACCOUNTS.md)。
+
 默认部署资料在 `runtime/server/client-config/deployment.json`，进程/端口状态在 `runtime/server/.onepiece-server.json`。数据库登录参数由部署脚本放在 `runtime/server/private/db-client.ini`；维护工具引用该文件，不要把密码复制到文档或仓库。数据库端口应以本机配置为准。
 
 ## 2. 请求、内存修改和落库链路

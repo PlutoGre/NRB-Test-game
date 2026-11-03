@@ -45,8 +45,8 @@ try {
         if (Test-Path -LiteralPath $manifestPath) {
             try {
                 $manifest = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
-                $complete = $manifest.platform -eq 'web' -and $manifest.buildComplete -eq $true
-                foreach ($name in @('index.html', 'web.js', 'style.css', 'game.js', 'game.wasm', 'game.data')) {
+                $complete = $manifest.platform -eq 'web' -and $manifest.buildComplete -eq $true -and $manifest.accountAuth -eq 1
+                foreach ($name in @('index.html', 'web.js', 'accounts.js', 'style.css', 'game.js', 'game.wasm', 'game.data')) {
                     $path = Join-Path $resolvedBuild $name
                     if (-not (Test-Path -LiteralPath $path -PathType Leaf) -or (Get-Item -LiteralPath $path).Length -eq 0) { $complete = $false }
                 }

@@ -22,6 +22,7 @@ COMMON_SOURCES = (
     "com/youai/dreamonepiece/GameLogoState.java",
     "com/youai/dreamonepiece/GameAnnounceDialog.java",
     "com/youai/dreamonepiece/platform/defaultplatform/PlatformDefaultLoginAndPay.java",
+    "com/youai/dreamonepiece/platform/defaultplatform/AccountLogin.java",
 )
 MACHINES = {"armeabi": 40, "armeabi-v7a": 40, "arm64-v8a": 183,
             "x86": 3, "x86_64": 62}

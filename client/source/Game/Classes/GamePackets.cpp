@@ -354,9 +354,9 @@ void _gamePacketsCreatePackets()
 
 	{
 		OPLogin *msg = new OPLogin;
-		msg->set_pwd("pswd");
+		msg->set_pwd(""); // Credentials are supplied by the authenticated platform at send time.
 		msg->set_version(1);
-		msg->set_puid("dylan");
+		msg->set_puid("");
 		PacketManager::Get()->_buildDefaultMessage(OPCODE_PLAYER_LOGIN_C,msg);
 	}
 

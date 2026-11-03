@@ -3,6 +3,7 @@
 
 #include "PacketManager.h"
 #include "PacketBase.h"
+#include "OP.pb.h"
 #include "GameMaths.h"
 #include "cocos2d.h"
 #include "ThreadSocket.h"
@@ -123,10 +124,14 @@ void PacketManager::sendPakcet( int opcode, ::google::protobuf::Message* msg, bo
 		LoginPacket::Get()->forceSentPacket();
 	}
 #endif
-	std::string debugstr = msg->DebugString();
-	std::string outStr;
-	GameMaths::replaceStringWithCharacter(debugstr,'\n',' ',outStr);
-	CCLOG("send packet! opcode:%d message:%s",opcode,outStr.c_str());
+    if (opcode == OPCODE_PLAYER_LOGIN_C) {
+        CCLOG("send packet! opcode:%d account credentials redacted", opcode);
+    } else {
+        std::string debugstr = msg->DebugString();
+        std::string outStr;
+        GameMaths::replaceStringWithCharacter(debugstr,'\n',' ',outStr);
+        CCLOG("send packet! opcode:%d message:%s",opcode,outStr.c_str());
+    }
 	PacketBase* pack = createPacket(opcode);
 	int size;
 	void* buffer = pack->PackPacket(size,msg);

@@ -346,31 +346,33 @@ public class GameActivity extends Cocos2dxActivity implements IDreamOnePiece {
 			return false;
 	}
 
+    /** 返回服务端验证后的账号 UID；未登录时不再退回设备游客身份。 */
 	@Override
 	public String getPlatformLoginUin() {
 
 		if (mPlatform == null) {
-			return DeviceUtil.getDeviceUUID(this);
+			return "";
 		}
 
 		LoginInfo login_info = mPlatform.getLoginInfo();
 		if (login_info == null) {
-			return DeviceUtil.getDeviceUUID(this);
+			return "";
 		}
 
 		return login_info.account_uid_str;
 	}
 
+    /** 返回账号会话凭证，未认证时返回空值，由游戏登录流程阻止进入。 */
 	@Override
 	public String getPlatformLoginSessionId() {
 
 		if (mPlatform == null) {
-			return DeviceUtil.generateUUID();
+			return "";
 		}
 
 		LoginInfo login_info = mPlatform.getLoginInfo();
 		if (login_info == null) {
-			return DeviceUtil.generateUUID();
+			return "";
 		}
 
 		return login_info.login_session;
@@ -630,7 +632,7 @@ public class GameActivity extends Cocos2dxActivity implements IDreamOnePiece {
 		 * 平台账号登录成功�?允许玩家进入游戏
 		 */
         // Cocos 节点和自动释放池只能在 GL 线程修改，避免与绘制并发。
-        final String accountUid = String.valueOf(result.account_uid);
+        final String accountUid = result.account_uid_str;
         final String session = result.login_session;
         final String nickname = result.account_nick_name;
         runOnGLThread(new Runnable() {

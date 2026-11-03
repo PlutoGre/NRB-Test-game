@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#12223b">
   <title>男人帮 · 网页客户端</title>
   <link rel="stylesheet" href="/style.css">
+  <script src="/accounts.js" defer></script>
   <script src="/web.js" defer></script>
 </head>
 <body>
@@ -17,12 +18,24 @@
       <p id="status">正在检查服务端…</p>
       <progress id="progress" max="100" value="0"></progress>
       <button id="start" disabled>进入男人帮1区</button>
-      <p class="hint">首次进入需要下载游戏资源。游戏进度保存在服务端。<br>请使用固定网址和浏览器，保留当前游客角色。</p>
+      <button id="switch-account" class="secondary" hidden>切换账号</button>
+      <p class="hint">首次进入需要下载游戏资源。角色进度与账号绑定并保存在服务端。<br>换设备或换浏览器后，使用同一账号登录即可继续。</p>
       <pre id="error" hidden></pre>
     </section>
     <div id="waiting" role="status" hidden>正在与服务端通信…</div>
   </main>
   <dialog id="message"><p></p><button>确定</button></dialog>
+  <dialog id="account" aria-labelledby="account-title">
+    <form id="account-form">
+      <h2 id="account-title">登录游戏账号</h2>
+      <label>账号<input id="account-name" autocomplete="username" autocapitalize="none" spellcheck="false" minlength="3" maxlength="32" pattern="[A-Za-z0-9]{3,32}" required placeholder="3–32 位英文字母或数字"></label>
+      <label>密码<input id="account-password" type="password" autocomplete="current-password" minlength="6" maxlength="64" required placeholder="6–64 个字符"></label>
+      <label id="account-confirm-row" hidden>确认密码<input id="account-confirm" type="password" autocomplete="new-password" maxlength="64"></label>
+      <p id="account-error" role="alert"></p>
+      <div class="account-actions"><button id="account-submit" type="submit">登录</button><button id="account-toggle" type="button" class="secondary">注册账号</button><button id="account-cancel" type="button" class="secondary">取消</button></div>
+      <p class="hint">账号不区分大小写；请记住账号密码。本机只保存登录凭证。</p>
+    </form>
+  </dialog>
   <dialog id="input"><form method="dialog"><label>请输入内容</label><div id="input-control"></div><button value="ok">确定</button></form></dialog>
   <dialog id="board"><button id="close-board">关闭公告</button><iframe title="游戏公告" sandbox="allow-same-origin"></iframe></dialog>
   <noscript>需要启用 JavaScript 和 WebAssembly 才能运行游戏。</noscript>

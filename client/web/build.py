@@ -163,7 +163,7 @@ def main():
             if index % 25 == 0: print("Compiled", index, "/", len(sources), flush=True)
     package = GENERATED / "package"
     package.mkdir(exist_ok=True)
-    exports = ["_main", "_malloc", "_free", "_nrb_message", "_nrb_input", "_nrb_edit", "_nrb_board", "_nrb_ime", "_nrb_backspace", "_nrb_visibility"]
+    exports = ["_main", "_malloc", "_free", "_nrb_message", "_nrb_input", "_nrb_edit", "_nrb_board", "_nrb_ime", "_nrb_backspace", "_nrb_visibility", "_nrb_account_result"]
     link = [str(p) for p in sorted(objects)] + ["-O2", "-fexceptions", "-sDISABLE_EXCEPTION_CATCHING=0", "-sALLOW_MEMORY_GROWTH=1",
         "-sINITIAL_MEMORY=134217728", "-sMAXIMUM_MEMORY=1073741824", "-sSTACK_SIZE=5242880",
         "-sMODULARIZE=1", "-sEXPORT_NAME=createNRBGame", "-sENVIRONMENT=web", "-sEXIT_RUNTIME=0",
@@ -181,13 +181,13 @@ def main():
     for name in ("game.js", "game.wasm", "game.data"):
         if not (package / name).is_file() or not (package / name).stat().st_size:
             raise RuntimeError("Linker did not produce a complete Web distribution: " + name)
-    for name in ("index.html", "web.js", "style.css"):
+    for name in ("index.html", "web.js", "accounts.js", "style.css"):
         shutil.copy2(ROOT / "shell" / name, package / name)
     try:
         revision = subprocess.run(["git", "rev-parse", "HEAD"], cwd=REPO, capture_output=True, text=True).stdout.strip() or "unknown"
     except OSError:
         revision = "unknown"  # A downloaded source ZIP may not have Git installed.
-    manifest = {"platform": "web", "buildComplete": True, "sourceRevision": revision, "emscripten": VERSION,
+    manifest = {"platform": "web", "buildComplete": True, "accountAuth": 1, "sourceRevision": revision, "emscripten": VERSION,
                 "resourceVersion": "1.78.6", "builtAt": int(time.time()), "browserVerified": False,
                 "files": {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in package.iterdir() if p.is_file() and p.name != "web-client.json"}}
     output = args.output if args.output.is_absolute() else REPO / args.output

@@ -41,6 +41,18 @@ public class PacketHandler extends Thread{
             ((AdminTask) packet).execute();
             return;
         }
+        // 登录和无玩家信息的心跳以外，网络请求必须来自已认证并加载角色的连接。
+        // 保留旧激活码流程，但激活码中的 UID 必须与已经验证的账号一致。
+        if (packet.opcode != OP.code.OPCODE_PLAYER_LOGIN_C_VALUE
+                && packet.opcode != OP.code.OPCODE_HEARTBEAT_C_VALUE) {
+            if (packet.session == null || packet.session.getAttribute("nrb.account.uid") == null) return;
+            if (packet.opcode == OP.code.OPCODE_ACTIVE_CODE_C_VALUE) {
+                try {
+                    String uid = com.oldmountain.dzm.message.ActiveCode.OPActiveCode.parseFrom(packet.data.array()).getUid();
+                    if (!uid.equals(packet.session.getAttribute("nrb.account.uid"))) return;
+                } catch (com.google.protobuf.InvalidProtocolBufferException error) { return; }
+            } else if (packet.session.getAttribute("playerid") == null) return;
+        }
         //TODO:非法请求判断
 		switch (packet.opcode)
         {

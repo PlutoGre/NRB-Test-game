@@ -1,6 +1,6 @@
 'use strict';
 // This shell hosts the original Cocos scene graph. It contains no duplicate
-// gameplay, item logic or simulated login screens.
+// gameplay or item logic. Account forms call the shared server authentication API.
 (() => {
   const $ = id => document.getElementById(id);
   const status = $('status'), start = $('start'), canvas = $('canvas');
@@ -100,6 +100,17 @@
   };
   const NRB = window.NRB = {
     audio, editing: 0, identity: '', message,
+    async loginPlatform(module, switching = false) {
+      if (this.accountLoginBusy) return;
+      this.accountLoginBusy = true;
+      try {
+        if (switching) await NRBAccounts.forget();
+        const value = await NRBAccounts.ensure();
+        nativeString(module, 'nrb_account_result', value?.uid || '');
+      } catch (error) { message(error.message); }
+      finally { this.accountLoginBusy = false; }
+    },
+    logoutPlatform() { NRBAccounts.forget().catch(() => console.warn('[NRB Account] Logout unavailable')); },
     waiting(value) { $('waiting').hidden = !value; },
     closeInput() { if ($('input').open) $('input').close('cancel'); },
     input(module, multiline) {
@@ -173,9 +184,10 @@
     return value;
   }
   start.onclick = async () => {
-    start.disabled = true; audio.unlock(); status.textContent = '正在建立浏览器身份…';
+    start.disabled = true; audio.unlock(); status.textContent = '正在验证账号…';
     try {
-      const identity = await request('/web/session', {method: 'POST'}); NRB.identity = identity.uid;
+      if (!await NRBAccounts.ensure()) { start.disabled = false; status.textContent = '请登录游戏账号'; return; }
+      $('switch-account').hidden = true;
       status.textContent = '正在下载原版游戏和资源…';
       await new Promise((resolve, reject) => {
         const script = document.createElement('script'); script.src = '/game.js'; script.onload = resolve;
@@ -206,7 +218,15 @@
     } catch (error) { fatal(error); }
   };
   if (!window.WebAssembly || !window.WebSocket) { fatal('请使用支持 WebAssembly、WebGL 和 WebSocket 的浏览器。'); return; }
-  request('/web/config').then(config => {
-    status.textContent = config.serverName + '已就绪'; start.disabled = false;
+  $('switch-account').onclick = async () => {
+    start.disabled = true;
+    try { await NRBAccounts.forget(); await NRBAccounts.ensure(); }
+    finally { start.disabled = false; }
+  };
+  request('/web/config').then(async config => {
+    if (config.accountAuth !== 1) throw new Error('请先更新并重新启动服务端，再使用账号登录');
+    NRBAccounts.configure(config.instanceId);
+    status.textContent = config.serverName + '已就绪';
+    await NRBAccounts.ensure(); start.disabled = false;
   }).catch(fatal);
 })();

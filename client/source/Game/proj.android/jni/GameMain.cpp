@@ -17,6 +17,7 @@
 
 //
 #include "AppDelegate.h"
+#include "SeverConsts.h"
 #include "SceneInspection.h"
 
 //
@@ -49,6 +50,11 @@ AppDelegate* g_pAppDelegate = NULL;
 //
 extern "C"
 {
+    JNIEXPORT jstring JNICALL Java_com_youai_dreamonepiece_platform_defaultplatform_AccountLogin_nativeAccountBaseURL(JNIEnv* env, jclass) {
+        std::string base = SeverConsts::Get()->getAccountBaseURL();
+        return env->NewStringUTF(base.c_str());
+    }
+
 
 	/*
 		java端：static {System.load(Game.so)}

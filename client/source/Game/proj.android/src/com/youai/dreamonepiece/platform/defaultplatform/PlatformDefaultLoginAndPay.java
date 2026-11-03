@@ -2,10 +2,7 @@ package com.youai.dreamonepiece.platform.defaultplatform;
 
 import android.app.Activity;
 
-import com.youai.DeviceUtil;
 import com.youai.LogUtils;
-import java.util.UUID;
-import android.content.SharedPreferences;
 import com.youai.IGameActivity;
 import com.youai.IPlatformLoginAndPay;
 import com.youai.PlatformAndGameInfo;
@@ -18,7 +15,7 @@ import com.youai.dreamonepiece.GameInterface.IGameAppStateCallback;
 import com.youai.dreamonepiece.GameInterface.IGameUpdateStateCallback;
 import com.youai.dreamonepiece.GameInterface.IPlatformSDKStateCallback;
 
-/** @brief 本地部署使用的设备身份登录，不连接第三方账号或支付服务。 */
+/** @brief 自建服务端账号渠道，不依赖第三方账号或设备游客身份。 */
 public class PlatformDefaultLoginAndPay implements IPlatformLoginAndPay {
 
 	
@@ -32,6 +29,7 @@ private static final String TAG = "PlatformDefaultLoginAndPay";
 	private Activity 					game_ctx = null;
 	private GameInfo 					game_info = null;
 	private LoginInfo 					login_info = null;
+    private AccountLogin accounts;
 	private VersionInfo 				version_info = null;
 	private PayInfo 					pay_info = null;
 	
@@ -101,8 +99,12 @@ private static final String TAG = "PlatformDefaultLoginAndPay";
 		return 0;
 	}
 
+    /** 释放账号窗口并使在途回调失效。 */
 	@Override
 	public void unInit() {
+        LogUtils.d(TAG, "unInit: 释放账号窗口");
+        if (accounts != null) accounts.close();
+        accounts = null;
 		// TODO Auto-generated method stub
 		mGameActivity = null;
 		mCallback1 = null;
@@ -123,54 +125,38 @@ private static final String TAG = "PlatformDefaultLoginAndPay";
 		return this.game_info;
 	}
 
-    /** 使用稳定的本地设备身份登录，读取设备信息失败时使用持久化随机标识。 */
+    /** 使用缓存凭证恢复登录，首次登录时显示服务端账号窗口。 */
     @Override
     public void callLogin() {
-        LogUtils.d(TAG, "callLogin: 开始本地登录");
+        LogUtils.d(TAG, "callLogin: 开始服务端账号认证");
         if (mCallback3 == null || game_ctx == null) {
             LogUtils.w(TAG, "callLogin: 登录回调或上下文尚未就绪");
             return;
         }
-        LoginInfo result = new LoginInfo();
-        result.login_result = PlatformAndGameInfo.enLoginResult_Success;
-        result.login_session = "";
-        result.account_uid_str = localIdentity();
-        result.account_uid = 0L;
-        result.account_nick_name = "Local";
-        notifyLoginResult(result);
-        mCallback3.showWaitingViewImp(false, -1, "已登录");
-        LogUtils.i(TAG, "callLogin: 本地登录完成");
+        mCallback3.showWaitingViewImp(false, -1, "账号登录");
+        if (accounts == null) {
+            accounts = new AccountLogin(game_ctx, new AccountLogin.Listener() {
+                public void accepted(String uid, String username, String token) {
+                    if (mCallback3 == null) return;
+                    LoginInfo result = new LoginInfo();
+                    result.login_result = PlatformAndGameInfo.enLoginResult_Success;
+                    result.login_session = token;
+                    result.account_uid_str = uid;
+                    result.account_uid = 0L;
+                    result.account_nick_name = username;
+                    notifyLoginResult(result);
+                }
+            });
+        }
+        accounts.login();
     }
 
-    private String localIdentity() {
-        // 不以固定账号代替设备身份，避免多台手机共用同一个角色。
-        String id = null;
-        try {
-            id = DeviceUtil.getDeviceUUID(game_ctx);
-        } catch (RuntimeException error) {
-            LogUtils.e(TAG, "localIdentity: 设备标识读取失败，使用本地标识", error);
-        }
-        if (id == null || id.length() == 0) {
-            SharedPreferences preferences = game_ctx.getSharedPreferences("local_login", 0);
-            id = preferences.getString("identity", "");
-            if (id.length() == 0) {
-                id = UUID.randomUUID().toString();
-                preferences.edit().putString("identity", id).commit();
-            }
-        }
-        return id;
-    }
-
-    /** 保存登录结果并通知游戏层，重复通知不重复追加渠道前缀。 */
+    /** 保存服务器身份并通知游戏层，三端使用同一个 UID，不追加渠道前缀。 */
     @Override
     public void notifyLoginResult(LoginInfo result) {
         if (result == null || result.account_uid_str == null || mCallback3 == null) {
             LogUtils.w(TAG, "notifyLoginResult: 登录结果或回调为空");
             return;
-        }
-        String prefix = PlatformAndGameInfo.enPlatformShort_Default;
-        if (!result.account_uid_str.startsWith(prefix)) {
-            result.account_uid_str = prefix + result.account_uid_str;
         }
         login_info = result;
         mCallback3.notifyLoginResut(result);
@@ -186,6 +172,7 @@ private static final String TAG = "PlatformDefaultLoginAndPay";
 	@Override
 	public void callLogout() {
         login_info = null;
+        if (accounts != null) accounts.logout();
         LogUtils.i(TAG, "callLogout: 已清除本地登录状态");
 
 	}
@@ -214,10 +201,12 @@ private static final String TAG = "PlatformDefaultLoginAndPay";
 
 	}
 
+    /** 登录页切换账号，清除当前平台状态后重新输入账号密码。 */
 	@Override
 	public void callAccountManage() {
-		// TODO Auto-generated method stub
-
+        LogUtils.d(TAG, "callAccountManage: 切换服务端账号");
+        login_info = null;
+        if (accounts == null) callLogin(); else accounts.switchAccount();
 	}
 
 	@Override

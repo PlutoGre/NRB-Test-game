@@ -35,6 +35,7 @@ from project_paths import DEFAULT_INSTALL_DIR, project_path
 from runtime_paths import ensure_alias, release_alias
 from admin.source_inputs import fingerprint as admin_source_fingerprint
 import catalog_update
+import account_migration
 MANIFEST = json.loads((HERE / "runtime-manifest.json").read_text(encoding="utf-8"))
 CACHE = HERE / "download-cache"
 STATE_NAME = ".onepiece-server.json"
@@ -560,9 +561,10 @@ class Deployment:
                 catalog_update.apply(self.root, self.state)
                 self.save()
         self.ensure_db()
+        account_migration.apply(self)
         directory = self.runtime_directory()
-        self.launch("web", [sys.executable, "-m", "http.server", str(self.state["webPort"]),
-                            "--bind", "0.0.0.0", "--directory", self.root / "web"], self.root, self.state["webPort"])
+        self.launch("web", [sys.executable, "-u", HERE / "resource_server.py", "--port", str(self.state["webPort"]),
+                            "--install-dir", self.root], self.root, self.state["webPort"])
         self.launch("game", [directory / "runtimes/java/bin/java.exe", "-Xms64m", "-Xmx512m",
                              "-Dfile.encoding=UTF-8", "-cp", "NRBAdminServer.jar;DZM.jar",
                              "com.oldmountain.dzm.admin.AdminLauncher"], directory / "server", self.state["gamePort"])

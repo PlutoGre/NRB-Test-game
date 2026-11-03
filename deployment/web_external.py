@@ -28,7 +28,8 @@ ORIGIN = re.compile(r"https://[a-z0-9]+(?:-[a-z0-9]+)*\.trycloudflare\.com\b")
 
 def build_manifest(build):
     manifest = server.read_json(build / "web-client.json")
-    if not isinstance(manifest, dict) or manifest.get("platform") != "web" or manifest.get("buildComplete") is not True:
+    if (not isinstance(manifest, dict) or manifest.get("platform") != "web"
+            or manifest.get("buildComplete") is not True or manifest.get("accountAuth") != 1):
         raise RuntimeError("Web build is incomplete; run deployment/build-web.cmd")
     for name in FILES:
         path = build / name
@@ -220,7 +221,7 @@ def start(deployment, args):
              and previous.get("protocol") == args.protocol)
     fingerprint = server.digest(args.build_dir / "web-client.json")
     gateway_digest = hashlib.sha256()
-    for source in (HERE / "web_client.py", HERE / "web_assets.py", HERE / "websocket_gateway.py", HERE / "server.py",
+    for source in (HERE / "web_client.py", HERE / "web_assets.py", HERE / "websocket_gateway.py", HERE / "account_proxy.py", HERE / "server.py",
                    HERE.parent / "scripts/project_paths.py"):
         gateway_digest.update(source.read_bytes())
     gateway_fingerprint = gateway_digest.hexdigest()

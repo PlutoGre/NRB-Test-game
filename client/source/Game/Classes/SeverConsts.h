@@ -157,6 +157,13 @@ public://not used for client
 	FILELIST& _lockFileList();
 	void _unlockFileList();
 	void _notifyFileCheckDone();
+    // Account API follows the current resource origin, including relocated LAN deployments.
+    std::string getAccountBaseURL() const {
+        size_t scheme = mUpdateRootAddress.find("://");
+        if (scheme == std::string::npos) return "";
+        size_t end = mUpdateRootAddress.find('/', scheme + 3);
+        return mUpdateRootAddress.substr(0, end);
+    }
 	const std::string& getVersion(){return mLocalVerson;}
 	void clearVersion();
 	void checkVersion( const std::string& versionStr ,int &GameVersion, int &appVersion, int& resVersion);

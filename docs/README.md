@@ -9,6 +9,7 @@
 | 打包 Android、iOS | [客户端打包流程](CLIENT_BUILD.md) |
 | 构建、部署网页客户端 | [Web 客户端](WEB_CLIENT.md) |
 | 发测试物品 | [Windows 管理工具](ADMIN_TOOL.md) |
+| 注册登录、切换账号与找回角色 | [游戏账号体系](extension/09_GAME_ACCOUNTS.md) |
 | iPhone 外网接入 | [外网部署](EXTERNAL_DEPLOYMENT.md) |
 | 扩展卡牌、装备、奥义和玩法 | [代码逻辑与扩展指南](extension/README.md) |
 | 更新首批44张卡牌、29件装备和9个奥义 | [首批内容移植](extension/08_PORTED_BASIC_CONTENT.md) |

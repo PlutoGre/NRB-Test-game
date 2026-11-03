@@ -382,7 +382,7 @@ void LoadingFrame::onMenuItemAction( const std::string& itemName ,cocos2d::CCObj
 	}
 	else if(itemName =="onEnter")
 	{
-        if(!libPlatformManager::getPlatform()->getLogined())
+        if(!mLogined || !libPlatformManager::getPlatform()->getLogined())
         {
             libPlatformManager::getPlatform()->login();
             return;
@@ -408,7 +408,7 @@ void LoadingFrame::onMenuItemAction( const std::string& itemName ,cocos2d::CCObj
 			ServerDateManager::Get()->setSeverID(mSelectedSeverID);
 			PacketManager::Get()->regisiterPacketHandler(OPCODE_PLAYER_LOGINRET_S,this);
 			OPLogin loginPack;
-			loginPack.set_pwd("pswd");
+			loginPack.set_pwd(libPlatformManager::getPlatform()->sessionID());
 			loginPack.set_version(1);
 			
 			GamePrecedure::Get()->setServerID(mSelectedSeverID);
@@ -449,7 +449,7 @@ void LoadingFrame::onMenuItemAction( const std::string& itemName ,cocos2d::CCObj
 			if(!uin.empty())
                 loginPack.set_puid(uin);
             else
-                loginPack.set_puid("111");
+                return; // Never substitute a shared guest identity for a missing account.
             
 			if(!deviceID.empty())
 				loginPack.set_deviceid(deviceID);
@@ -467,9 +467,7 @@ void LoadingFrame::onMenuItemAction( const std::string& itemName ,cocos2d::CCObj
 	}
     else if(itemName =="onLogin")
 	{
-		CCLOG("onLogin clicked");
-        mLogined = false;
-        libPlatformManager::getPlatform()->switchUsers();
+        onAccountSwitch(sender);
 	}
 	CCLOG("LoadingFrame::onMenuItemAction %s: ", itemName.c_str());
 }
@@ -732,6 +730,7 @@ void LoadingFrame::showEnter()
 	//平台登录结果回来了，可选区 进入游戏
 	CCLOG("LoadingFrame::showEnter");
 	configureLoginButtons();
+    CCB_FUNC(this, "mWaitingNode", CCNode, setVisible(false));
 	if(getVariable("mLoginNode"))
 	{
 		CCNode* sever = dynamic_cast<CCNode*>(getVariable("mLoginNode"));
@@ -807,8 +806,43 @@ int LoadingFrame::getDefaultSeverID()
 	return cocos2d::CCUserDefault::sharedUserDefault()->getIntegerForKey("DefaultSeverID",SeverConsts::Get()->getSeverDefaultID());
 }
 
+void LoadingFrame::onAccountSwitch(cocos2d::CCObject*)
+{
+    mLogined = false;
+    libPlatformManager::getPlatform()->switchUsers();
+}
+
 void LoadingFrame::configureLoginButtons()
 {
+    CCNode* loginNode = dynamic_cast<CCNode*>(getVariable("mLoginNode"));
+    if (loginNode) {
+        const int accountMenuTag = 90051;
+        CCMenu* menu = dynamic_cast<CCMenu*>(loginNode->getChildByTag(accountMenuTag));
+        CCLabelTTF* label = 0;
+        if (!menu) {
+            label = CCLabelTTF::create("", "Arial", 24);
+            label->setTag(1);
+            CCMenuItemLabel* item = CCMenuItemLabel::create(label, this, menu_selector(LoadingFrame::onAccountSwitch));
+            item->setAnchorPoint(ccp(1, 1));
+            menu = CCMenu::create(item, NULL);
+            loginNode->addChild(menu, 100, accountMenuTag);
+            CCDirector* director = CCDirector::sharedDirector();
+            CCPoint corner = director->getVisibleOrigin();
+            CCSize visible = director->getVisibleSize();
+            menu->setPosition(loginNode->convertToNodeSpace(ccp(corner.x + visible.width - 18, corner.y + visible.height - 24)));
+        } else {
+            CCNode* item = dynamic_cast<CCNode*>(menu->getChildren()->objectAtIndex(0));
+            label = dynamic_cast<CCLabelTTF*>(item->getChildByTag(1));
+        }
+        if (label) {
+            std::string caption = libPlatformManager::getPlatform()->nickName();
+            if (!caption.empty()) caption += " | ";
+            caption += "\xe5\x88\x87\xe6\x8d\xa2\xe8\xb4\xa6\xe5\x8f\xb7";
+            CCMenuItemLabel* item = dynamic_cast<CCMenuItemLabel*>(label->getParent());
+            if (item) item->setString(caption.c_str());
+        }
+    }
+
 	// 本地账号已自动登录，保留 onEnter 的登录重试，避免把账号昵称误认为区服。
 	CCMenuItem* loginButton = getMenuItemByAction("onLogin");
 	if(loginButton)
@@ -895,6 +929,12 @@ void LoadingFrame::onReceivePacket( const int opcode, const ::google::protobuf::
 			libPlatformManager::getPlatform()->notifyEnterGame();
 #endif
 		}
+        else if(logret && logret->status() == 6)
+        {
+            PacketManager::Get()->disconnect();
+            showEnter();
+            onAccountSwitch(NULL);
+        }
 		else if(logret && logret->status() == 3)
 		{
 			std::string out = Language::Get()->getString("@LoadingFrameSeversFull");

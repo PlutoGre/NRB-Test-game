@@ -82,12 +82,14 @@ public final class AdminServer implements HttpHandler {
             throw e;
         }
         LOG.info("initialize: administration catalog loaded, items={}", catalog.size());
+        AccountService.initialize();
     }
 
     /** 开放本机接口；生命周期随游戏 JVM 结束。 @throws IOException 端口无法监听 */
     public void start() throws IOException {
         HttpServer server = HttpServer.create(new InetSocketAddress("127.0.0.1", port), 16);
         server.createContext("/admin/v1/", this);
+        server.createContext("/account/v1/", new AccountHandler());
         server.setExecutor(new ThreadPoolExecutor(2, 4, 30, TimeUnit.SECONDS,
                 new ArrayBlockingQueue<Runnable>(24), new ThreadPoolExecutor.AbortPolicy()));
         server.start();
@@ -150,6 +152,7 @@ public final class AdminServer implements HttpHandler {
         JSONObject value = ok();
         value.put("instanceId", instance);
         value.put("protocol", 1);
+        value.put("accountAuth", 1);
         value.put("catalogCount", catalog.size());
         return value;
     }

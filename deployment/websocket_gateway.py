@@ -21,7 +21,9 @@ from urllib.parse import unquote, urlsplit
 import xml.etree.ElementTree as ET
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from project_paths import DEFAULT_INSTALL_DIR, project_path
+from account_proxy import account_request
 
 PREFIX = "/gameserver/dzm/1.8/"
 PROTOCOL = "nrb-tcp-v1"
@@ -256,6 +258,18 @@ class Handler(BaseHTTPRequestHandler):
             self.get_request()
         except (OSError, ValueError, KeyError, ET.ParseError):
             self.reply(503, {"error": "Gateway configuration or backend unavailable"})
+
+    def do_POST(self):
+        self.close_connection = True
+        try:
+            config = configuration(self.server.root)
+            expected = "Bearer " + config["invite"]
+            if not secrets.compare_digest(self.headers.get("Authorization", "").encode(), expected.encode()):
+                return self.reply(401, {"ok": False, "message": "服务器邀请码无效"})
+            status, value = account_request(self, self.server.root)
+            self.reply(status, value)
+        except (OSError, ValueError, KeyError):
+            self.reply(503, {"ok": False, "message": "账号服务尚未就绪"})
 
     def get_request(self):
         path = urlsplit(self.path).path

@@ -99,6 +99,9 @@ private:
 
 	/** 隐藏自动登录模式下多余的账号入口，并将区服入口居中。 */
 	void configureLoginButtons();
+public:
+    void onAccountSwitch(cocos2d::CCObject* sender);
+private:
 	void updateSeverName();
 	void updateLoginName();
 	

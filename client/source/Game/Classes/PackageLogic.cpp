@@ -94,6 +94,15 @@ public:
 					return;
 				}
 			}
+            if(loginRet && loginRet->status() == 6) {
+                if (!GamePrecedure::Get()->isInLoadingScene()) {
+                    LoginPacket::Get()->setEnabled(false);
+                    ThreadSocket::Get()->disconnect();
+                    libPlatformManager::getPlatform()->logout();
+                    libOS::getInstance()->showMessagebox("\xe7\x99\xbb\xe5\xbd\x95\xe5\xb7\xb2\xe8\xbf\x87\xe6\x9c\x9f\xef\xbc\x8c\xe8\xaf\xb7\xe9\x87\x8d\xe5\x90\xaf\xe6\xb8\xb8\xe6\x88\x8f\xe5\x90\x8e\xe9\x87\x8d\xe6\x96\xb0\xe7\x99\xbb\xe5\xbd\x95\xe3\x80\x82");
+                }
+                return;
+            }
 			if(loginRet && loginRet->status() == 5)
 			{
 				std::string out = Language::Get()->getString("@LoadingFrameSeversConnectionIsGray");
@@ -104,7 +113,7 @@ public:
 			{
 				return;
 			}
-			if(loginRet && !GamePrecedure::Get()->isInLoadingScene())
+			if(loginRet && loginRet->status() == 1 && !GamePrecedure::Get()->isInLoadingScene())
 			{
 				GamePrecedure::Get()->reRequestPackages();
 			}

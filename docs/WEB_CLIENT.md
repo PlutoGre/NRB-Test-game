@@ -2,6 +2,8 @@
 
 网页版复用 `client/source` 的 C++ 游戏、Lua、Protobuf、CCBI 布局及 `resources/client` 资源，使用 WebAssembly + WebGL 绘制原有游戏画面。浏览器通过同源 WebSocket 网关连接已有 Java 游戏服，玩家数据仍保存在当前部署的数据库中。
 
+**2026-11-03 账号更新：** 新代码使用服务端注册账号，支持账号密码认证、保存凭证自动登录和切换账号；换浏览器或隧道域名后，用同一账号找回同一服务端的角色。已有部署需完整停服、更新服务端并重新构建 Web 包。首次升级会先备份再清理未绑定的测试游客；本次未构建或实测，详见 [账号体系与升级](extension/09_GAME_ACCOUNTS.md)。下方历史试玩记录对应更新前的客户端。
+
 **当前状态（2026-11-02）：已在 Windows 本地完成编译、部署和真实 Chromium 浏览器游玩，并修复点击输入、经验同步、上阵重试及经验道具保存问题。普通/精英类型关卡、卡牌升级、装备、海鲜饭、抽卡、黑胡子、勇闯和现有活动的具体结果见[实测记录](reference/WEB_GAMEPLAY_VALIDATION.md)。运宝、All Blue 和转盘缺少完整实现，不能认定全部玩法已可用。**
 
 ## Windows 最短操作流程
@@ -11,7 +13,7 @@
 1. 双击根目录 `启动服务.cmd`，等待数据库、资源服务及游戏服启动成功。
 2. 双击 `deployment/build-web.cmd`。第一次自动在 `tools/emsdk` 下载固定版本 Emscripten 3.1.74，并编译共享游戏源码。下载和首次编译可能较久，需要联网及足够的磁盘空间。无需 Android SDK 或 Mac。
 3. 构建成功后双击 `deployment/start-web.cmd`，窗口会显示 `Open this URL: http://本机局域网IP:18084/`。
-4. 在电脑或同一局域网手机浏览器打开该网址，点击“进入男人帮1区”。首次进入需要下载完整游戏资源；之后使用游戏原有登录、建角和玩法界面。
+4. 在电脑或同一局域网手机浏览器打开该网址，首次先注册或输入游戏账号密码，再点击“进入男人帮1区”。首次进入需要下载完整游戏资源；之后使用原有建角和玩法界面。成功登录后，下次自动恢复账号。
 5. 关闭服务仍双击根目录 `停止服务.cmd`，会一起停止本项目管理的网页网关、游戏服、资源服务及数据库，保留玩家进度。
 
 网页服务与游戏服可以共用当前部署。重复执行网页启动入口会复用同一个受管进程；端口被其他程序占用时会报错，避免覆盖其他服务。关闭启动窗口不会关闭后台服务。
@@ -73,7 +75,7 @@ Public readiness: confirmed at ...
 
 脚本会比较本机与公网 `/web/config` 的实例标识、协议和构建版本。若显示 **`Public readiness: NOT confirmed`**，表示本机网关已启动、域名已分配，但尚未确认公网能访问；进程会保留，供网络恢复后重试。公网用户是否能顺利加载和游玩，仍取决于各自网络。
 
-Quick Tunnel 免费、无需自有域名，定位为临时测试；隧道进程重启后会更换域名。**当前游客 Cookie 与网址关联，域名变化可能进入新游客角色，原角色仍在数据库中。** 不要把临时网址视为固定账号入口。
+Quick Tunnel 免费、无需自有域名，定位为临时测试；隧道进程重启后会更换域名。**新网址需重新输入账号密码，服务端会找到该账号原有角色。** 网址和浏览器缓存不是角色身份；请记住注册账号和密码。
 
 也可在仓库根目录运行相同入口，所有相对路径均按项目目录解析：
 
@@ -152,16 +154,16 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Start-Web.ps1 -
 powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Start-Web.ps1 -PublicOrigin https://game.example.com -BindAddress 127.0.0.1
 ```
 
-代理保留原来的 `Host` 和 `Origin`，透传 Cookie，不能剥掉 `/web/` 路径。此时用户统一访问配置的 HTTPS 域名；网关只接受已配置来源。HTTPS 页面使用 WSS，资源同源下载。手工管理的随机隧道地址改变后，应停止该网页网关，再用新的 `-PublicOrigin` 重新启动，浏览器身份也可能随网址改变。
+代理保留原来的 `Host` 和 `Origin`，透传 Cookie，不能剥掉 `/web/` 或 `/account/` 路径。此时用户统一访问配置的 HTTPS 域名；网关只接受已配置来源。HTTPS 页面使用 WSS，资源同源下载。手工管理的随机隧道地址改变后，应停止该网页网关，再用新的 `-PublicOrigin` 重新启动；新网址输入原账号即可继续。
 
 现有 iOS 外网入口的邀请鉴权保持独立；不要用其 `/game` 地址替换网页的 `/web/game`。
 
-## 游客身份、进度和支持边界
+## 账号、进度和支持边界
 
-- 第一次进入时，网关生成 `web_...` 游客 ID，使用签名的 HttpOnly Cookie 保存在该浏览器，游戏服按该 ID 保存角色。页面只有服务端就绪后才建立游戏会话。
-- 同一网址、同一浏览器再次进入会沿用角色。浏览器 Cookie 清除、隐身窗口、换浏览器或换域名可能变成新游客；不同电脑不会自动共享角色。当前没有新增手机号/密码登录，也没有把 Android、iOS 游客角色自动合并。
+- 第一次进入时显示账号密码窗口，支持注册。服务器分配稳定的 `acct_...` UID；游戏服再次校验凭证后才加载或新建角色。
+- 同一网址保存账号凭证并自动恢复登录；清除浏览器数据、隐身访问、换浏览器或换域名后重新输入账号密码即可继续。Android、iOS、Web 的自建账号共用角色；旧游客不合并，首次升级先备份再清理。
 - IndexedDB 保存客户端设置及更新资源；浏览器不允许持久化时会记录控制台提示。角色进度在服务端，不在 IndexedDB 中。不要把游戏管理工具账号当作玩家账号。
-- 网关的签名 Cookie 只管理个人测试入口及游客标识；原游戏协议仍是原来的游客登录协议，不是可直接用于公开商业运营的账号认证体系。
+- 网关的签名 HttpOnly Cookie 保护资源和 WebSocket 入口；localStorage 保存账号名与登录凭证，不保存密码。Java 游戏服独立验证 `OPLogin` 中的 UID/凭证，无法仅靠伪造本地 UID 登录。账号接口见 [账号体系](extension/09_GAME_ACCOUNTS.md)。
 - 原游戏界面、战斗、卡牌、装备、远航和活动逻辑继续使用共享源码。鼠标点击/拖动和手机触摸进入原来的触控系统；中文输入使用浏览器输入框，文字显示使用原有位图字体或浏览器系统字体。动态系统字体的字形和原生平台可能有差异。
 - 背景音乐和音效使用 Web Audio，“进入”按钮的用户手势用于解锁播放。未接入充值、第三方渠道 SDK、系统定时推送及体感权限。旧公告地址可能已失效；公告层保留关闭按钮和超时处理。
 - 建议先使用较新的桌面 Chrome/Edge 验证，再验证手机 Safari/Chrome。浏览器后台冻结、图形上下文丢失及网络切换需要实际确认；上下文丢失时页面显示刷新提示。
@@ -170,7 +172,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Start-Web.ps1 -
 
 | 目录/文件 | 用途 |
 |---|---|
-| `client/web/native` | 浏览器平台、WebSocket、下载、图片/文字、音频、输入、游客渠道 |
+| `client/web/native` | 浏览器平台、WebSocket、下载、图片/文字、音频、输入、账号渠道 |
 | `client/web/shell` | 画布宿主页、启动进度、错误提示、浏览器交互桥 |
 | `client/web/prepare.py` | 生成 UTF-8 副本，应用仅 Web 生效的适配；原 GBK 移动端源码保持原编码 |
 | `client/web/build.py` | 编译共享游戏及引擎，打包公共资源；首次初始化 SDK 后并行编译 |
@@ -178,11 +180,13 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\deployment\Start-Web.ps1 -
 | `client/web/generated` | 临时源码、资源、编译对象及日志；不提交 |
 | `outputs/web` | 发布文件；不提交，可从 Actions 下载 |
 | `deployment/web_client.py` | 同源 HTTP、浏览器会话、WebSocket→本地 TCP |
+| `client/web/shell/accounts.js` | 注册、账号登录、凭证恢复和切换账号窗口 |
+| `deployment/account_proxy.py` | 将受限账号 JSON 请求转给本机 Java 账号服务 |
 | `deployment/web_assets.py` | 静态网页包的预压缩、内容哈希与浏览器缓存校验 |
 | `deployment/web_external.py` | Web 免费隧道、网址发现、就绪检查与进程管理 |
 | `runtime/server/cache/web-assets` | 当前及历史网页包的 gzip 副本，可在停止网页网关后删除并由下次启动重建 |
 | `runtime/server/web-external-url.txt` | 当前 Web 外网网址；停止外网入口后删除 |
-| `runtime/server/private/web-session.key` | 本机游客 Cookie 签名密钥；保留在当前部署，不提交或公开 |
+| `runtime/server/private/web-session.key` | 本机 Web 传输 Cookie 签名密钥；保留在当前部署，不提交或公开 |
 | `runtime/server/logs/browser.*.log` | 网页网关运行日志 |
 
 图片、布局、Lua 和配置仍修改 `resources/client`，C++ 玩法仍修改 `client/source/Game/Classes`。更改后重新构建 Web 客户端；服务端资源/数值更新按现有部署文档操作。不要长期编辑 `generated` 或 `outputs` 内的副本。

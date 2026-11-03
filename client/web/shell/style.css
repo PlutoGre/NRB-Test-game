@@ -21,3 +21,11 @@ input, textarea { width: 100%; padding: 12px; margin: 0 0 18px; border-radius: 5
 textarea { min-height: 110px; resize: vertical; }
 #board { height: 75dvh; max-width: 600px; }
 #board iframe { width: 100%; height: calc(100% - 60px); margin-top: 12px; background: white; border: 0; }
+.secondary { background: transparent; color: #f5e5bf; }
+#switch-account { margin-top: 12px; }
+#account { max-height: 90dvh; overflow: auto; }
+#account label { margin-bottom: 8px; }
+#account input { margin: 4px 0 8px; }
+#account-error { color: #ffd2bd; min-height: 1.6em; }
+.account-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.account-actions button { float: none; flex: 1; padding: 8px 12px; white-space: nowrap; }
