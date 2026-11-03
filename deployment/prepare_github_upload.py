@@ -64,7 +64,7 @@ def main():
         if count != 1:
             raise RuntimeError("Workflow template input missing: " + name)
     workflow.write_text(text, encoding="utf-8")
-    shutil.copy2(REPO / "docs/CLIENT_BUILD.md", output / "CLIENT_BUILD.md")
+    shutil.copy2(REPO / "docs/客户端打包流程.md", output / "客户端打包流程.md")
     print("Prepared GitHub upload folder:", output)
     print("Upload source/ and create .github/workflows/ios-build.yml in the repository default branch.")
     print("No remote upload, build, signing or workflow run was performed.")

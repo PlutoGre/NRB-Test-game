@@ -1,4 +1,4 @@
-param(
+﻿param(
     [string]$InstallDir = 'runtime/server',
     [string]$AndroidSdk = 'tools/android-sdk',
     [string]$AndroidNdk = 'tools/android-ndk-r8e',
@@ -93,7 +93,7 @@ try {
                         (Join-Path (Resolve-NrbProjectPath $AndroidNdk) 'ndk-build.cmd'),
                         (Join-Path (Resolve-NrbProjectPath $AntDir) 'bin/ant.bat'),
                         (Join-Path (Resolve-NrbProjectPath $JavaHome) 'bin/javac.exe'))) {
-        if (-not (Test-Path -LiteralPath $tool)) { throw "Required tool missing: $tool. See docs/CLIENT_BUILD.md." }
+        if (-not (Test-Path -LiteralPath $tool)) { throw "Required tool missing: $tool. See docs/客户端打包流程.md." }
     }
     if ($PrepareToolsOnly) {
         Write-Host 'Android tools are ready. No compilation or APK packaging was started.'

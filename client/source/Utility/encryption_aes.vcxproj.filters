@@ -21,7 +21,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ReadMe.txt" />
+    <None Include="&#x52a0;&#x5bc6;&#x5de5;&#x5177;&#x5de5;&#x7a0b;&#x8bf4;&#x660e;.txt" />
     <None Include="..\Game\Protobuf\playerInfo.proto" />
     <None Include="..\Game\Protobuf\protobufTest.proto" />
   </ItemGroup>

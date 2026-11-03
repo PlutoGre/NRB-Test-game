@@ -223,8 +223,8 @@ RunUnitTests = ActionFactory(runUnitTests_action, runUnitTests_string )
 
 env.Alias( 'check' )
 
-srcdist_cmd = env['SRCDIST_ADD']( source = """
-    AUTHORS README.txt SConstruct
+srcdist_cmd = env['SRCDIST_ADD']( source = u"""
+    \u4f5c\u8005\u540d\u5355 \u4f7f\u7528\u8bf4\u660e.txt SConstruct
     """.split() )
 env.Alias( 'src-dist', srcdist_cmd )
 

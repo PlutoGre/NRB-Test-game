@@ -126,7 +126,7 @@ def build_doc( options,  make_release=False ):
         print 'Generating doc tarball to', tarball_path
         tarball_sources = [
             output_dir,
-            'README.txt',
+            u'\u4f7f\u7528\u8bf4\u660e.txt',
             'version'
             ]
         tarball_basedir = os.path.join( output_dir, html_output_dirname )

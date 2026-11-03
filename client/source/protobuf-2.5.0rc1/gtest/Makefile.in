@@ -46,11 +46,11 @@ check_PROGRAMS = samples/sample1_unittest$(EXEEXT) \
 	samples/sample10_unittest$(EXEEXT) \
 	test/gtest_all_test$(EXEEXT) test/fused_gtest_test$(EXEEXT)
 subdir = .
-DIST_COMMON = README $(am__configure_deps) $(pkginclude_HEADERS) \
+DIST_COMMON = 使用说明 $(am__configure_deps) $(pkginclude_HEADERS) \
 	$(pkginclude_internal_HEADERS) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in $(top_srcdir)/build-aux/config.h.in \
 	$(top_srcdir)/configure $(top_srcdir)/scripts/gtest-config.in \
-	COPYING build-aux/config.guess build-aux/config.sub \
+	许可协议 build-aux/config.guess build-aux/config.sub \
 	build-aux/depcomp build-aux/install-sh build-aux/ltmain.sh \
 	build-aux/missing
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -326,7 +326,7 @@ top_srcdir = @top_srcdir@
 # xcode sample files
 
 # C++Builder project files
-EXTRA_DIST = CHANGES CONTRIBUTORS \
+EXTRA_DIST = 更新记录 贡献者名单 \
 	include/gtest/gtest-param-test.h.pump \
 	include/gtest/internal/gtest-tuple.h.pump \
 	include/gtest/internal/gtest-type-util.h.pump \

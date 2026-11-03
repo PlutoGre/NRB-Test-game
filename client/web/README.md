@@ -1,5 +1,0 @@
-# NRB Web 平台
-
-构建：仓库根目录执行 `deployment/build-web.cmd`；运行：`deployment/start-web.cmd`。首次先按根目录说明部署服务端。
-
-完整流程、源码边界与尚未验证的内容见 [网页客户端说明](../../docs/WEB_CLIENT.md)。当前提交未执行构建或浏览器游玩。

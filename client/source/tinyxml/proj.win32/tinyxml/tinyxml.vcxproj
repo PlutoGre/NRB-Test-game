@@ -77,7 +77,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="..\..\tinyxml.suo" />
-    <None Include="ReadMe.txt" />
+    <None Include="&#x8f7b;&#x91cf;&#x89e3;&#x6790;&#x5e93;&#x5de5;&#x7a0b;&#x8bf4;&#x660e;.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\tinystr.cpp" />

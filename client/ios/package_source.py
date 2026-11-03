@@ -40,7 +40,7 @@ def main():
             archive.write(script, "scripts/" + name)
             count += 1
         # Keep the moved handoff instructions available in the portable archive.
-        for name in ("docs/reference/IOS_HANDOFF.txt", "docs/CLIENT_BUILD.md"):
+        for name in ("docs/reference/苹果客户端构建交接.txt", "docs/客户端打包流程.md"):
             archive.write(ROOT.parents[1] / name, name)
             count += 1
     checksum = hashlib.sha256(output.read_bytes()).hexdigest()

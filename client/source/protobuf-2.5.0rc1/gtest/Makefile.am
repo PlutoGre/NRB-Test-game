@@ -2,8 +2,8 @@
 
 # Nonstandard package files for distribution
 EXTRA_DIST = \
-  CHANGES \
-  CONTRIBUTORS \
+  更新记录 \
+  贡献者名单 \
   include/gtest/gtest-param-test.h.pump \
   include/gtest/internal/gtest-tuple.h.pump \
   include/gtest/internal/gtest-type-util.h.pump \

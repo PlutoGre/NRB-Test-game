@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ReadMe.txt" />
+    <None Include="&#x811a;&#x672c;&#x8f85;&#x52a9;&#x5de5;&#x5177;&#x5de5;&#x7a0b;&#x8bf4;&#x660e;.txt" />
     <None Include="app.ico">
       <Filter>Resource Files</Filter>
     </None>

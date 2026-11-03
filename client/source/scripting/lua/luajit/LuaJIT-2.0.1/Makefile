@@ -1,7 +1,7 @@
 ##############################################################################
 # LuaJIT top level Makefile for installation. Requires GNU Make.
 #
-# Please read doc/install.html before changing any variables!
+# Please read doc/安装说明.html before changing any variables!
 #
 # Suitable for POSIX platforms (Linux, *BSD, OSX etc.).
 # Note: src/Makefile has many more configurable options.
@@ -78,7 +78,7 @@ SED_PC= sed -e "s|^prefix=.*|prefix=$(PREFIX)|"
 FILE_T= luajit
 FILE_A= libluajit.a
 FILE_SO= libluajit.so
-FILE_MAN= luajit.1
+FILE_MAN= LuaJIT命令手册.1
 FILE_PC= luajit.pc
 FILES_INC= lua.h lualib.h lauxlib.h luaconf.h lua.hpp luajit.h
 FILES_JITLIB= bc.lua v.lua dump.lua dis_x86.lua dis_x64.lua dis_arm.lua \

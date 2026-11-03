@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ReadMe.txt" />
+    <None Include="&#x5e73;&#x53f0;&#x5e93;&#x5de5;&#x7a0b;&#x8bf4;&#x660e;.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\lib91.h">

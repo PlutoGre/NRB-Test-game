@@ -59,7 +59,7 @@ def main():
                 "deployment/setup_android.py", "deployment/android-toolchain.json",
                 "deployment/runtime_paths.py", "scripts/project_paths.py",
                 "deployment/Start-External.ps1", "deployment/external.cmd", "deployment/external.py", "deployment/websocket_gateway.py",
-                "deployment/tunnel-manifest.json", "docs/EXTERNAL_DEPLOYMENT.md",
+                "deployment/tunnel-manifest.json", "docs/外网部署步骤.md",
                 "client/ios/native/ConnectionSettings.h", "client/ios/native/ConnectionSettings.mm",
                 "client/ios/native/RemoteSocket.h", "client/ios/native/RemoteSocket.mm",
                 "deployment/runtime-manifest.json", "server/distribution/DZM.jar", "server/database/dzm.sql",

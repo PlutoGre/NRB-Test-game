@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ReadMe.txt" />
+    <None Include="&#x52a8;&#x753b;&#x8f6c;&#x6362;&#x5de5;&#x5177;&#x5de5;&#x7a0b;&#x8bf4;&#x660e;.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\CArmatureAniData.h">
