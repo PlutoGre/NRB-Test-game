@@ -1,0 +1,10 @@
+ported/activities/v1/Imagesetfile/AllBlue.plist
+ported/activities/v1/Imagesetfile/PeronaTurntable1.plist
+ported/activities/v1/Imagesetfile/PeronaTurntable2.plist
+ported/activities/v1/Imagesetfile/mainScene01_a_8888_32_blz.plist
+ported/activities/v1/Imagesetfile/mainScene04_a_8888_32_blz.plist
+ported/activities/v1/Imagesetfile/mainScene05_a_8888_32_blz.plist
+ported/activities/v1/Imagesetfile/mainScene06_a_8888_32_blz.plist
+ported/activities/v1/Imagesetfile/mainScene08_a_8888_32_blz.plist
+ported/activities/v1/Imagesetfile/mainScene09_a_8888_32_blz.plist
+ported/activities/v1/Imagesetfile/mainScene15_a_8888_32_blz.plist

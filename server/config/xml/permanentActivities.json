@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "timezone": "Asia/Shanghai",
+  "rewards": [
+    {
+      "key": "property:1002",
+      "name": "贝里",
+      "count": 5000,
+      "weight": 4000,
+      "icon": "members/m2.png"
+    },
+    {
+      "key": "property:1001",
+      "name": "钻石",
+      "count": 20,
+      "weight": 2000,
+      "icon": "members/m1.png"
+    },
+    {
+      "key": "tool:1502001",
+      "name": "潜能药剂",
+      "count": 10,
+      "weight": 1500,
+      "icon": "itemposter/poster_item_qiannengyaoji.png"
+    },
+    {
+      "key": "tool:1501002",
+      "name": "葡萄酒",
+      "count": 1,
+      "weight": 1000,
+      "icon": "itemposter/poster_item_langmujiu.png"
+    },
+    {
+      "key": "skill:88",
+      "name": "霸王色缠绕",
+      "count": 1,
+      "weight": 600,
+      "icon": "ported/v330/skillposter/poster_skill_bawangse.png"
+    },
+    {
+      "key": "equip:107",
+      "name": "雷鸣龙牙棒",
+      "count": 1,
+      "weight": 400,
+      "icon": "ported/v330/equipposter/poster_weapon_leimingbagua.png"
+    },
+    {
+      "key": "card:249",
+      "name": "乌塔",
+      "count": 1,
+      "weight": 300,
+      "icon": "ported/v330/members/head_char_UTA.png"
+    },
+    {
+      "key": "card:250",
+      "name": "大和",
+      "count": 1,
+      "weight": 200,
+      "icon": "ported/v330/members/head_char_dahe.png"
+    }
+  ],
+  "allBlue": {
+    "name": "All Blue",
+    "adventureId": 9001,
+    "dailyFree": 1,
+    "singleCost": 30,
+    "tenCost": 270,
+    "pointsPerDraw": 10,
+    "shop": [
+      {
+        "id": 1,
+        "reward": 6,
+        "points": 500
+      },
+      {
+        "id": 2,
+        "reward": 7,
+        "points": 500
+      },
+      {
+        "id": 3,
+        "reward": 5,
+        "points": 200
+      },
+      {
+        "id": 4,
+        "reward": 4,
+        "points": 150
+      }
+    ]
+  },
+  "fortuneWheel": {
+    "name": "幸运转盘",
+    "adventureId": 9002,
+    "dailyFree": 1,
+    "singleCost": 20,
+    "resetCost": 30,
+    "pointsPerDraw": 1,
+    "duplicateReward": {
+      "key": "property:1002",
+      "name": "贝里",
+      "count": 1000,
+      "icon": "members/m2.png"
+    },
+    "shop": [
+      {
+        "id": 1,
+        "reward": 6,
+        "points": 50
+      },
+      {
+        "id": 2,
+        "reward": 7,
+        "points": 50
+      },
+      {
+        "id": 3,
+        "reward": 5,
+        "points": 20
+      },
+      {
+        "id": 4,
+        "reward": 4,
+        "points": 15
+      }
+    ],
+    "milestones": [
+      {
+        "id": 1,
+        "draws": 10,
+        "reward": 2
+      },
+      {
+        "id": 2,
+        "draws": 30,
+        "reward": 4
+      },
+      {
+        "id": 3,
+        "draws": 100,
+        "reward": 7
+      }
+    ]
+  }
+}

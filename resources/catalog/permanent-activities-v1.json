@@ -1,0 +1,61 @@
+{
+  "id": "permanent-activities-v1",
+  "resourceVersion": "1.79.0",
+  "serverTemplates": {},
+  "serverFiles": {
+    "permanentActivities.json": {
+      "sha256": "352cfa1d804e2026bfb8e3f6529b909f8b857058b74a67cdada228fcf368b8f5",
+      "preserveExisting": true,
+      "allowLocalOverride": true
+    }
+  },
+  "clientTables": {
+    "AdventureConfig.txt": [
+      [
+        "9001",
+        "All_Blue",
+        "90",
+        "mainScene/u_icoqyqixi.png",
+        "none",
+        "1"
+      ],
+      [
+        "9002",
+        "幸运转盘",
+        "91",
+        "mainScene/u_icoqy03.png",
+        "none",
+        "1"
+      ]
+    ]
+  },
+  "assets": {
+    "ported/activities/v1/ccbi/AllBluePage.ccbi": "3a644dd9e99ddc2b0a49b363db9b58287ea465737ca7e525d68213ca95816887",
+    "ported/activities/v1/Imagesetfile/AllBlue.plist": "d49d00ab84497f6c9111b7f1919c05fb11f0c735dfaa0e4f5b435ab75ac0457e",
+    "ported/activities/v1/Imagesetfile/AllBlue.png": "8974f015ef46d7a01434d4c511b25fc1b38d508f27dec78324736260ba45faf8",
+    "ported/activities/v1/Imagesetfile/mainScene01_a_8888_32_blz.plist": "b1b77e4a8b1042605744fa557d01c85bbd9d83660cdea5e92cadf5e1cb603b1d",
+    "ported/activities/v1/Imagesetfile/mainScene01_a_8888_32_blz.png": "67e3d4f1d4be0c0ba444ea750e22f5e17f5545d5265f41b66058818e6de03b45",
+    "ported/activities/v1/Imagesetfile/mainScene08_a_8888_32_blz.plist": "3bf09f63437d32788b0dcc4f3248dc108192fa2ad5758f624a11a4d0e91fe3b7",
+    "ported/activities/v1/Imagesetfile/mainScene08_a_8888_32_blz.png": "e2e7c33acf30dfb0d293e95711c7f6acc41f7fb47daf7269da9b254d4aba1bdb",
+    "ported/activities/v1/mainScene/u_backgroundB.png": "0820e8f4b13c5d18dfea982301ab77ed2e53225311411c97055534eb8920e9e7",
+    "ported/activities/v1/Imagesetfile/mainScene09_a_8888_32_blz.plist": "55ed19b270c4390c32ef8b0991971b7e8215b12787ab724e63ee88a46fb9701d",
+    "ported/activities/v1/Imagesetfile/mainScene09_a_8888_32_blz.png": "050bb0f65dc82ada6d007f410466662d4429d33e2f9c19d1602564d74cc81fd5",
+    "ported/activities/v1/mainScene/u_AllBlueBG01.jpg": "0c042265ffc5465e51f438c4feb99d55f6fa5c9904de6da41bee522a147f9df6",
+    "ported/activities/v1/ccbi/empty.ccbi": "75408d2749b0491749bf781c93e309528b3b6b25df912a8806649b75e7d3ecd6",
+    "ported/activities/v1/ccbi/PeronaTurntable.ccbi": "ee8c5a304dc7cb6b24d8fc190fc809c82c6b2179dddd56b026bcbd13c9c3e41f",
+    "ported/activities/v1/Imagesetfile/PeronaTurntable2.plist": "cb6b61e3f1d419094a82a86ae9922f8e52b7a3e071642f1120dabfbbb6996f50",
+    "ported/activities/v1/Imagesetfile/PeronaTurntable2.png": "5979bf6bc31bff74affce415f3301f2791a204f9e57981d7b90ae85d74c4e25d",
+    "ported/activities/v1/Imagesetfile/PeronaTurntable1.plist": "c6a56c637879f71a08a08cef2d8125dd74125c0bf9f5a8a2d96c76284a9dd353",
+    "ported/activities/v1/Imagesetfile/PeronaTurntable1.png": "f86cb25ac992106c997e5e5da9bd39b1fdd9b2a689e729e35ced39f3e122b63e",
+    "ported/activities/v1/Imagesetfile/mainScene06_a_8888_32_blz.plist": "641a44901a5972bc085049d10c6f0d07dd0be014907d6eec747b51c893a364a3",
+    "ported/activities/v1/Imagesetfile/mainScene06_a_8888_32_blz.png": "ec8ea58fcb268e8a6c7324bdbb88b6f8c1556859700d056d9ae4a6c4db2f539b",
+    "ported/activities/v1/Imagesetfile/mainScene05_a_8888_32_blz.plist": "7e6df766c6e32cdb118b797b4b3b65f2171575770bfb1c2eb072243fbff7151c",
+    "ported/activities/v1/Imagesetfile/mainScene05_a_8888_32_blz.png": "e0f203c6aaf3f45b4d3b75d2a2e3c5b25e75fbec9eac552b3f851e05bf7cdbad",
+    "ported/activities/v1/Imagesetfile/mainScene04_a_8888_32_blz.plist": "27fc58b682c0bbd178ff86263a6533fce4744c6d4ca305842aa864f94311f4ee",
+    "ported/activities/v1/Imagesetfile/mainScene04_a_8888_32_blz.png": "73f8091c9dd777d9f5e3ac0218985cf8557307d3ab6fbb0766ddc949a96fae3a",
+    "ported/activities/v1/mainScene/u_PeronaTurntableBG01.jpg": "5d0a2c5fb6a4b5c4e40815b94433cf9d5fda3448ba5562d2c45283139a69ca95",
+    "ported/activities/v1/Imagesetfile/mainScene15_a_8888_32_blz.plist": "12c48be1f97b3ff517b26ae4b33215139851f0830bbd98e0748c04ba50cb638c",
+    "ported/activities/v1/Imagesetfile/mainScene15_a_8888_32_blz.png": "7de97bab7d1ba3705b260146d9195f1e66b4f310ebe093fb1234b455daf59b1a",
+    "ported/activities/v1/atlases.txt": "44ec0b9ecd45df2875b9e45715e97ea3a86b5d1c35c8f360c02cbfeba25d9e3f"
+  }
+}

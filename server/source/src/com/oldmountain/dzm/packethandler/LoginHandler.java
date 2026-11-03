@@ -516,6 +516,7 @@ class LoginRunable implements Runnable{
 	        DaoManager.getRewardDao().addReward(reward);
 		}
 		
+        if (!com.oldmountain.dzm.admin.PermanentActivities.reconcileBalance(player)) { session.close(); return; }
 		Util.dailyFirstLogin(player);
 		
 		session.setAttribute("playerid", player.getId());

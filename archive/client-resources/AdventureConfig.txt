@@ -22,3 +22,5 @@
 21	路飞的召唤	109	mainScene/u_icoqyjiaoshijie.png	CallOfLufei	1
 22	超级兑换	110	mainScene/u_icoqyMAduihuan.png	AdventureConvert	1
 26	定额返利	114	mainScene/u_icoqyjsjliwu.png	RechargeFeedback	1
+9001	All_Blue	90	mainScene/u_icoqyqixi.png	none	1
+9002	幸运转盘	91	mainScene/u_icoqy03.png	none	1

@@ -224,6 +224,7 @@ BulletinBoardPage.cpp \
 		../../Classes/WorldBossPage.cpp \
 		../../Classes/WorldBossRankPage.cpp \
 		../../Classes/ActivityPopPage.cpp \
+		../../Classes/PermanentActivityPage.cpp \
 		../../Protobuf/ActiveCode.pb.cc \
 		../../Protobuf/AddArenaNum.pb.cc \
 		../../Protobuf/AddBoundlessHole.pb.cc \

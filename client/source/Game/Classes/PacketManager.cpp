@@ -158,7 +158,7 @@ void PacketManager::sendPakcet( int opcode, char* buff, int length, bool needWai
 	((char*)data.buffer)[data.length]=0;
 	CCLOG("send packet! opcode:%d message is in lua",opcode);
 	ThreadSocket::Get()->sendPacket(data,opcode);
-	delete buffGen;
+	delete[] static_cast<char*>(buffGen);
 #ifndef _UTILITY_USE_
 	if(needWaiting)
 		waitingManager::Get()->startWaiting(opcode+1);

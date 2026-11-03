@@ -3,6 +3,7 @@
 
 #include "AdventurePage.h"
 #include "AdventureContinuePage.h"
+#include "PermanentActivityPage.h"
 #include "FightEndPopupPage.h"
 REGISTER_PAGE("AdventurePage",AdventurePage);
 USING_NS_CC;
@@ -76,7 +77,7 @@ void NavContent::refreshContent( void )
 				}
 				else
 				{
-					name->setString(adventureItem->name.c_str());
+					name->setString(adventureItem->adventureType==90 ? "All Blue" : adventureItem->name.c_str());
 				}
 			}
 		}
@@ -331,6 +332,12 @@ void AdventurePage::buildItem( void )
 			else if(adventureItem->adventureType==FortuneCome)
 			{
 				AdventureBase* item=new FortuneComePage(id);
+				item->init();
+				addContentItem(i,id,item);
+			}
+			else if(adventureItem->adventureType==90 || adventureItem->adventureType==91)
+			{
+				AdventureBase* item=new PermanentActivityPage(id, adventureItem->adventureType==91);
 				item->init();
 				addContentItem(i,id,item);
 			}
@@ -826,6 +833,10 @@ void AdventurePage::changePage(const unsigned int index,bool isDuration/*=true*/
 	else
 		mPageContent->setContentOffset(ccp(offsetX, mPageContent->getContentOffset().y));
 	AdventureBase* contentPage=getAdventureBaseByIndex(index);
+    for (ContentList::iterator item = mContentList.begin(); item != mContentList.end(); ++item) {
+        PermanentActivityPage* activity = dynamic_cast<PermanentActivityPage*>(item->second);
+        if (activity && activity != contentPage) activity->exitPage();
+    }
 	if(contentPage)
 	{
 		contentPage->loadData();

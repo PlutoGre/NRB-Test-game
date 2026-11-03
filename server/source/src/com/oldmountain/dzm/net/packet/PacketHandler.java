@@ -53,6 +53,14 @@ public class PacketHandler extends Thread{
                 } catch (com.google.protobuf.InvalidProtocolBufferException error) { return; }
             } else if (packet.session.getAttribute("playerid") == null) return;
         }
+        if (packet.session != null && packet.session.getAttribute("playerid") != null) {
+            com.oldmountain.dzm.entity.Player player = com.oldmountain.dzm.net.ObjectAccessor.getOnlineUser((Integer) packet.session.getAttribute("playerid"));
+            if (!com.oldmountain.dzm.admin.PermanentActivities.reconcileBalance(player)) { packet.session.close(); return; }
+        }
+        if (packet.opcode == com.oldmountain.dzm.admin.PermanentActivities.REQUEST) {
+            com.oldmountain.dzm.admin.PermanentActivities.handle(packet);
+            return;
+        }
         //TODO:非法请求判断
 		switch (packet.opcode)
         {

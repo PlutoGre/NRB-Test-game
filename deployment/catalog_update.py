@@ -16,13 +16,14 @@ from import_apk_catalog import merge_table, merge_xml
 CATALOG = REPO / "resources/catalog/v330.json"
 
 
-def release_digest():
-    return hashlib.sha256(CATALOG.read_bytes()).hexdigest()
+def release_digest(catalog_path=None):
+    catalog_path = catalog_path or CATALOG
+    return hashlib.sha256(catalog_path.read_bytes()).hexdigest()
 
 
-def pending(root):
-    marker = root / "private/catalog-v330.json"
-    return not marker.is_file() or json.loads(marker.read_text(encoding="utf-8")).get("sha256") != release_digest()
+def pending(root, catalog_path=None, marker_name="catalog-v330.json"):
+    marker = root / "private" / marker_name
+    return not marker.is_file() or json.loads(marker.read_text(encoding="utf-8")).get("sha256") != release_digest(catalog_path)
 
 
 def write_json(path, value):
@@ -30,16 +31,17 @@ def write_json(path, value):
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def apply(root, state):
+def apply(root, state, catalog_path=None, marker_name="catalog-v330.json"):
     """Stage and conflict-check all changes before replacing runtime files.
 
     Caller must hold the deployment lock and ensure the game is stopped. An
     interrupted update is reapplied before launch; no player rows are touched.
     """
-    if not pending(root):
+    catalog_path = catalog_path or CATALOG
+    if not pending(root, catalog_path, marker_name):
         return False
-    catalog = json.loads(CATALOG.read_text(encoding="utf-8"))
-    release = release_digest()
+    catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
+    release = release_digest(catalog_path)
     private = root / "private"
     private.mkdir(exist_ok=True)
     public = Path("web/gameserver/dzm/1.8")
@@ -58,6 +60,21 @@ def apply(root, state):
 
         for name, spec in catalog["serverTemplates"].items():
             merge_xml(copy_for_update(Path("server/xml") / name), spec)
+        for name, spec in catalog.get("serverFiles", {}).items():
+            if Path(name).name != name:
+                raise RuntimeError("Invalid server release filename: " + name)
+            source = REPO / "server/config/xml" / name
+            if not spec.get("allowLocalOverride") and hashlib.sha256(source.read_bytes()).hexdigest() != spec["sha256"]:
+                raise RuntimeError("Server activity configuration differs from release: " + name)
+            relative = Path("server/xml") / name
+            # Probability and reward rules may be edited for this deployment.
+            # An upgrade only supplies the default when no local config exists.
+            if spec.get("preserveExisting") and (root / relative).is_file():
+                continue
+            destination = stage / relative
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(source, destination)
+            destinations.append(relative)
         for name, additions in catalog["clientTables"].items():
             merge_table(copy_for_update(public / name), additions, catalog.get("clientPreviousRows", {}).get(name))
         for name, expected in catalog["assets"].items():
@@ -159,11 +176,14 @@ def apply(root, state):
     temporary = state_path.with_name(state_path.name + ".catalog-writing")
     write_json(temporary, state)
     os.replace(temporary, state_path)
-    marker = private / "catalog-v330.json"
+    marker = private / marker_name
     temporary = marker.with_name(marker.name + ".writing")
     write_json(temporary, {"sha256": release, "resourceVersion": version, "release": catalog["id"]})
     os.replace(temporary, marker)
-    print("Applied basic content catalog: %s cards, %s equipment, %s skills; resource version %s" % (
-        len(catalog["clientTables"]["Disciples.txt"]), len(catalog["clientTables"]["Equips.txt"]),
-        len(catalog["clientTables"]["Skills.txt"]), version), flush=True)
+    if "Disciples.txt" in catalog["clientTables"]:
+        print("Applied basic content catalog: %s cards, %s equipment, %s skills; resource version %s" % (
+            len(catalog["clientTables"]["Disciples.txt"]), len(catalog["clientTables"]["Equips.txt"]),
+            len(catalog["clientTables"]["Skills.txt"]), version), flush=True)
+    else:
+        print("Applied permanent activities: All Blue and Fortune Wheel; resource version " + version, flush=True)
     return True

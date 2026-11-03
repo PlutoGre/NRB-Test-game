@@ -299,6 +299,7 @@ public class AdventureInfoHandler {
             }
 
         }
+        com.oldmountain.dzm.admin.PermanentActivities.appendEntries(builder);
         player.setLastVerifyTime(time);
         builder.setServertime(time);
 		player.sendPacket(OP.code.OPCODE_GET_ADVENTURE_INFORET_S_VALUE, builder);// 发送返回包

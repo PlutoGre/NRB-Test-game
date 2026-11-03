@@ -560,6 +560,14 @@ class Deployment:
             else:
                 catalog_update.apply(self.root, self.state)
                 self.save()
+        permanent = REPO / "resources/catalog/permanent-activities-v1.json"
+        marker = "permanent-activities-v1.json"
+        if catalog_update.pending(self.root, permanent, marker):
+            if self.owned("game"):
+                print("Permanent activities update pending: stop this deployment, then start again.", flush=True)
+            else:
+                catalog_update.apply(self.root, self.state, permanent, marker)
+                self.save()
         self.ensure_db()
         account_migration.apply(self)
         directory = self.runtime_directory()
@@ -784,7 +792,7 @@ def main():
     parser.add_argument("--web-port", type=int, help="Use a fixed port; omitted: reuse saved port or choose an available port")
     parser.add_argument("--game-port", type=int, help="Use a fixed port; omitted: reuse saved port or choose an available port")
     parser.add_argument("--db-port", type=int, help="Use a fixed loopback port; omitted: reuse saved port or choose an available port")
-    parser.add_argument("--resource-version", default="1.78.8")
+    parser.add_argument("--resource-version", default="1.79.0")
     parser.add_argument("--channel", choices=("anzhi", "all"), default="anzhi")
     parser.add_argument("--offline", action="store_true")
     parser.add_argument("--restore-file", type=Path)

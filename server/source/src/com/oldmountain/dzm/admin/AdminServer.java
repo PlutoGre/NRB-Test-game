@@ -83,6 +83,7 @@ public final class AdminServer implements HttpHandler {
         }
         LOG.info("initialize: administration catalog loaded, items={}", catalog.size());
         AccountService.initialize();
+        PermanentActivities.initialize(catalog);
     }
 
     /** 开放本机接口；生命周期随游戏 JVM 结束。 @throws IOException 端口无法监听 */

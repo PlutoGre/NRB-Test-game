@@ -35,6 +35,9 @@ public class DataLander implements Runnable{
 		int count = 0;
 		while(it.hasNext()){
 			Player p = it.next();
+            // 活动扣费与定时保存使用同一角色锁，避免旧资产覆盖活动事务。
+            synchronized (p) {
+                if (!com.oldmountain.dzm.admin.PermanentActivities.reconcileBalance(p)) continue;
 			try {
 				if(p.getIsDirty()){
                     //modify by dylan 目前只有传书类有非实时插入 不需要同步玩家的数据 
@@ -83,6 +86,7 @@ public class DataLander implements Runnable{
 				logger2.info("Landing data error for playerid:{},message:{}",new Object[]{p.getId(),e.getMessage()});
 				e.printStackTrace();
 			}
+            }
 		}
 		landLeaugData();
 		long endTime = System.currentTimeMillis();
