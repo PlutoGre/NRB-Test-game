@@ -575,6 +575,13 @@ class Deployment:
             else:
                 catalog_update.apply(self.root, self.state, expansion, "expansion-systems-v1.json")
                 self.save()
+        home = REPO / "resources/catalog/home-ui-v1.json"
+        if catalog_update.pending(self.root, home, "home-ui-v1.json"):
+            if self.owned("game"):
+                print("Home UI update pending: stop this deployment, then start again.", flush=True)
+            else:
+                catalog_update.apply(self.root, self.state, home, "home-ui-v1.json")
+                self.save()
         self.ensure_db()
         account_migration.apply(self)
         directory = self.runtime_directory()

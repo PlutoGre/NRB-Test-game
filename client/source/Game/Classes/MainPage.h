@@ -10,6 +10,7 @@
 #include "CCBManager.h"
 #include "CustomPage.h"
 
+/** 首页：参考版海面布局、实时角色信息与现有功能入口。 */
 class MainPage
 	: public CustomPage
 	, public State<MainFrame>
@@ -31,6 +32,14 @@ private:
 	void clearAllFrameBtn();
 
 	float mExpbarInitScale;
+	// 新首页保留旧 CCB 变量及回调，角色数据仍由现有消息同步。
+	std::string mHomeHeaderSignature;
+	int mHomePopup;
+	void _buildReferenceHome();
+	void _refreshReferenceTitle();
+	void _refreshReferenceBattle();
+	void _refreshReferenceShortcuts();
+	void onReferenceHomeClick(cocos2d::CCObject* sender);
 public:
 	MainPage(void);
 	~MainPage(void);

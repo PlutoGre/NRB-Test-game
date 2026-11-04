@@ -186,6 +186,8 @@ def apply(root, state, catalog_path=None, marker_name="catalog-v330.json"):
             len(catalog["clientTables"]["Skills.txt"]), version), flush=True)
     elif catalog["id"] == "expansion-systems-v1":
         print("Applied treasure transport and growth systems; resource version " + version, flush=True)
+    elif catalog["id"] == "home-ui-v1":
+        print("Applied reference home interface art; resource version " + version, flush=True)
     else:
         print("Applied permanent activities: All Blue and Fortune Wheel; resource version " + version, flush=True)
     return True

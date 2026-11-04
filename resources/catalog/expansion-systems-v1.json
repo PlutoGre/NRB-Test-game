@@ -1,6 +1,6 @@
 {
   "id": "expansion-systems-v1",
-  "resourceVersion": "1.80.0",
+  "resourceVersion": "1.81.0",
   "serverTemplates": {},
   "serverFiles": {
     "expansionSystems.json": {
@@ -61,5 +61,35 @@
       ]
     ]
   },
-  "assets": {}
+  "assets": {
+    "ported/growth/v1/nrb_growth_u_backgroundB.png": "65f1c93d84294abba15a125fb8c352b44a0298b5e3efce0fbf08d30740746a50",
+    "ported/growth/v1/nrb_growth_u_buttenB01.png": "312fc6fb1e479ce402bd0bf71bbf5db5e4ef6928e81903b3ba4e53a98ff34236",
+    "ported/growth/v1/nrb_growth_u_buttenB03.png": "a95dc4f6b7488c6c2a0ac8b100ae364a062f0d07314d8a51a2a317491d35e30a",
+    "ported/growth/v1/nrb_growth_u_buttenA01.png": "3863fedd34f99f725aa3f49a1e9bc17cf45bec3381c25e2614dbfb2fde427bb3",
+    "ported/growth/v1/nrb_growth_u_buttenA03.png": "22baac363a57b5819f02e2e34adda2a184a4b8d97780df148ea77201d7a3adab",
+    "ported/growth/v1/nrb_growth_u_buttenC01.png": "ff8c9bafa1b03c93c52972ffe46488eeebb550e4fe636efa296a475619dda11c",
+    "ported/growth/v1/nrb_growth_u_flbg01.png": "bda6c37cd15c7ebb2f14be04b27dc16854129861ce2e53c3a9e0245eb2f15fd1",
+    "ported/growth/v1/nrb_growth_u_frameA.png": "76b4b9869d127f4cf18eabb38a466965f0cf026675e410e8b4b4362f1ab8434c",
+    "ported/growth/v1/nrb_growth_u_icobg01.png": "98348ac6a1c7282ae4f26e417569963299496b13e07b81a07d4086e3974fa9f0",
+    "ported/growth/v1/nrb_growth_u_texbg01.png": "1ce4c6e86171406c928f68e92120318145749cefd3437fa5508b8c040baffe97",
+    "ported/growth/v1/nrb_growth_u_banner01.png": "762e28e8f5c17eadbe07564f85a4987582e992d4f35c4a69ae3893bddb020785",
+    "ported/growth/v1/nrb_growth_u_duanzaoHelp.png": "bc8573afa7a5d9bee59ebd7acf46d9fb679f707b37af99b503b4d76d272d982b",
+    "ported/growth/v1/nrb_growth_u_pgong.png": "947211ec1e83b7ec486c4656a56db238a5576e99878ed244484005ca43f82a9c",
+    "ported/growth/v1/nrb_growth_u_pfang.png": "7e85e6aff8e24f8b1ef816d7d768c77a992ae0e940912a3372171e77a4454726",
+    "ported/growth/v1/nrb_growth_u_pti.png": "d10a9f8e10b02742f810966cf31a60c4e40f6097af78b7590dda7bb4a0d1c864",
+    "ported/growth/v1/nrb_growth_u_pyi.png": "3f278f4976e6836fb0af687f4f736ba1f9cb3e871d8842c3d9970b1857b6e61f",
+    "ported/growth/v1/nrb_growth_u_yunbaobg1.png": "5915b51855fb424f364713b13365a524c74d419bc333a4dff63a3624c8d0650b",
+    "ported/growth/v1/nrb_growth_u_yunbao_xiang2.png": "501efbe4b7d11b7fba15210c5b12daaae6be15b4bcc5b29dd1f868f1bd22d19c",
+    "ported/growth/v1/nrb_growth_u_yunbao_xiang3.png": "4e8d95f575a693e74266799d428dc41f9c70251bcff7b88703dda474c524a71d",
+    "ported/growth/v1/nrb_growth_u_yunbao_xiang4.png": "5efe638a5b9984816042fbc063c818dd0d18ccc54abe013c0b8aae4d3dcaca61",
+    "ported/growth/v1/nrb_growth_u_EquipQuenchBG.png": "d4cc8d81b6bfefbe7765edaef1f15c863f775cd324535d917461f9b8d8913802",
+    "ported/growth/v1/nrb_growth_u_EquipFrameBG1.png": "534feb7b6f3f53d81ca6648bafbf99ab9559d04d501b1b0d69118d309db6834e",
+    "ported/growth/v1/nrb_growth_u_SkillEvolutionBG01.png": "d549b36f5114fe7665b5b8f369b99e5b820e030aa643ab751aabe016c65a9a80",
+    "ported/growth/v1/nrb_growth_u_SkillEvolutionPic.png": "a3ccbca1db1f5ffe2132a27e28708a264ee93b5743d39c39bbc068d59ae4cca0",
+    "ported/growth/v1/nrb_growth_u_SuperEvolutionBG02.png": "adca700a61a52b10360af6c6b291cf4e8fa0ff9f6f5fec8a2e33d6a47d2a712f",
+    "ported/growth/v1/nrb_growth_u_MemTrainingbg01.png": "2a898f81d1dd55cbe7a0fed8a2a96c1262da1da8203ed331f50b07fa1fcc2a65",
+    "ported/growth/v1/nrb_growth_u_MemTrainingIco.png": "fb878290e65550e46dc3d239d51bce3ecda8892d5fc70bcfe8127237f6680a3b",
+    "ported/growth/v1/nrb_growth_u_icoqyyunbao.png": "9ef4ebf641ed63ad8015c1545792b33b5053f34dfb75e1ffef4e560707be8c39",
+    "ported/growth/v1/nrb_growth_u_icoqyMemTraining.png": "3e3eede605b3ffa9894a9fbdb7a4115e1a7c069e760d91864f58378060fa6db4"
+  }
 }

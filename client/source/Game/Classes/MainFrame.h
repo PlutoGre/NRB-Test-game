@@ -42,6 +42,7 @@ private:
 
 	void showCover(const std::string& pagename);
 	void hideCover();
+	void applyReferenceNavigationArt();
 
 	void showMsg();
 public:

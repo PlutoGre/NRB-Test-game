@@ -255,6 +255,8 @@ public final class ExpansionSystems {
                 action(actions,"开始运输（"+rule.getInt("durationSeconds")+" 秒）","start",0).put("enabled",used<rule.getInt("dailyRuns"));
             }
         } else GrowthSystems.view(mode,request,ctx,lines,actions);
+        // 兼容旧版文字列表，同时提供新版界面的对象、数值预览和舱位快照。
+        out.put("presentation",ExpansionPresentation.snapshot(mode,request,ctx,actions));
         out.put("lines",lines);out.put("actions",actions);return out;
     }
     private static void transport(String action,Context ctx) {

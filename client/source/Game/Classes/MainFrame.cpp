@@ -628,6 +628,7 @@ void MainFrame::onMenuItemAction( const std::string& itemName ,cocos2d::CCObject
 void MainFrame::load( void )
 {
 	loadCcbiFile("MainFrame.ccbi");
+	applyReferenceNavigationArt();
 	mNodeMid = dynamic_cast<CCNode*>(getVariable("mNodeMid"));
 	mNodeBack = dynamic_cast<CCNode*>(getVariable("mNodeBack"));
 	mNodeFront = dynamic_cast<CCNode*>(getVariable("mNodeFront"));
@@ -641,6 +642,26 @@ void MainFrame::load( void )
 	mNoTouch->setTouchEnabled(false);
 	mNoTouch->setVisible(false);
 	mNoTouch->setTouchMode(cocos2d::kCCTouchesOneByOne);
+}
+
+// 仅替换主导航图标，保留原按钮、标签、通知角标、位置及点击回调。
+void MainFrame::applyReferenceNavigationArt()
+{
+	const char* icons[]={"u_framebutten01","u_framebutten02","u_framebutten04","u_framebutten03","u_framebutten05","u_framebutten06"};
+	for(int i=0;i<6;i++){
+		CCMenuItemSprite* item=dynamic_cast<CCMenuItemSprite*>(getMenuItemByAction("onButton"+StringConverter::toString(i+1)));
+		std::string path=std::string("ported/home/v1/nrb_home_")+icons[i]+".png";
+		if(!item||!CCFileUtils::sharedFileUtils()->isFileExist(CCFileUtils::sharedFileUtils()->fullPathForFilename(path.c_str())))continue;
+		CCSize size=item->getContentSize();
+		for(int state=0;state<2;state++){
+			CCSprite* sprite=CCSprite::create(path.c_str());if(!sprite)continue;
+			CCSize original=sprite->getContentSize();sprite->setScaleX(size.width/original.width);sprite->setScaleY(size.height/original.height);sprite->setPosition(ccp(size.width/2,size.height/2));
+			if(state)sprite->setColor(ccc3(190,190,170));
+			CCNode* image=CCNode::create();image->setContentSize(size);image->addChild(sprite);
+			if(state)item->setSelectedImage(image);else item->setNormalImage(image);
+		}
+		item->setContentSize(size);
+	}
 }
 
 void MainFrame::showCover(const std::string& pagename)
